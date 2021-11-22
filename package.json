@@ -1,0 +1,10 @@
+{
+    "name": "de.gematik.isik-medikation",
+    "version": "0.0.1",
+    "dependencies": {
+        "hl7.fhir.r4.core": "4.0.1"
+    },
+    "fhirVersions": [
+        "4.0.1"
+    ]
+}
