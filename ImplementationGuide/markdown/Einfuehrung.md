@@ -1,11 +1,11 @@
-<img src="https://www.gematik.de/fileadmin/user_upload/MediaUploads/Gematik_Logo_Flag.jpg" alt="gematik logo" width="400"/>
+<img src="https://raw.githubusercontent.com/gematik/api-ISiK/master/images/Gematik_Logo_Flag.jpg" alt="gematik logo" width="400"/>
 
 ----
-Version: -
+Version: 1.0.0 CC1
 
 Datum: -
 
-Status: Arbeitsversion
+Status: Release-Kandidat zur Besprechung in den Arbeitsgruppen.
 
 Realm: Deutschland
 
