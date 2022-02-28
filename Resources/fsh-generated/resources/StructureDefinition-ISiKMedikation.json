@@ -49,8 +49,9 @@
   "differential": {
     "element": [
       {
-        "id": "Medication",
-        "path": "Medication"
+        "id": "Medication.status",
+        "path": "Medication.status",
+        "mustSupport": true
       }
     ]
   }
