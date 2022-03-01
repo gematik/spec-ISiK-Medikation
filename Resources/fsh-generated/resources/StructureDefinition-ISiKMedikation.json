@@ -16,8 +16,9 @@
   "name": "ISiKMedikation",
   "status": "draft",
   "experimental": false,
-  "date": "2022-02-17",
+  "date": "2022-03-01",
   "publisher": "gematik GmbH",
+  "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -49,8 +50,393 @@
   "differential": {
     "element": [
       {
+        "id": "Medication.id",
+        "path": "Medication.id",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension",
+        "path": "Medication.extension",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code",
+        "path": "Medication.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding",
+        "path": "Medication.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:PZN",
+        "path": "Medication.code.coding",
+        "sliceName": "PZN",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:PZN.system",
+        "path": "Medication.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:PZN.code",
+        "path": "Medication.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:ATC-DE",
+        "path": "Medication.code.coding",
+        "sliceName": "ATC-DE",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:ATC-DE.system",
+        "path": "Medication.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:ATC-DE.code",
+        "path": "Medication.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.text",
+        "path": "Medication.code.text",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.status",
         "path": "Medication.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form",
+        "path": "Medication.form",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ISiK/ValueSet/EdqmDoseForm"
+        }
+      },
+      {
+        "id": "Medication.form.coding",
+        "path": "Medication.form.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding.system",
+        "path": "Medication.form.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding.code",
+        "path": "Medication.form.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount",
+        "path": "Medication.amount",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.numerator",
+        "path": "Medication.amount.numerator",
+        "min": 1,
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.numerator.value",
+        "path": "Medication.amount.numerator.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.numerator.unit",
+        "path": "Medication.amount.numerator.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.numerator.system",
+        "path": "Medication.amount.numerator.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.numerator.code",
+        "path": "Medication.amount.numerator.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.denominator",
+        "path": "Medication.amount.denominator",
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.denominator.value",
+        "path": "Medication.amount.denominator.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.denominator.unit",
+        "path": "Medication.amount.denominator.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.denominator.system",
+        "path": "Medication.amount.denominator.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.denominator.code",
+        "path": "Medication.amount.denominator.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient",
+        "path": "Medication.ingredient",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept",
+        "path": "Medication.ingredient.itemCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding",
+        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK",
+        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "sliceName": "ASK",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/ask"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK.system",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK.code",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE",
+        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "sliceName": "ATC-DE",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE.system",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE.code",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN",
+        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "sliceName": "PZN",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.system",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.code",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.text",
+        "path": "Medication.ingredient.itemCodeableConcept.text",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemReference",
+        "path": "Medication.ingredient.itemReference",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Substance",
+              "http://hl7.org/fhir/StructureDefinition/Medication"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemReference.reference",
+        "path": "Medication.ingredient.itemReference.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.isActive",
+        "path": "Medication.ingredient.isActive",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength",
+        "path": "Medication.ingredient.strength",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator",
+        "path": "Medication.ingredient.strength.numerator",
+        "min": 1,
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.value",
+        "path": "Medication.ingredient.strength.numerator.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.unit",
+        "path": "Medication.ingredient.strength.numerator.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.system",
+        "path": "Medication.ingredient.strength.numerator.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator.code",
+        "path": "Medication.ingredient.strength.numerator.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator",
+        "path": "Medication.ingredient.strength.denominator",
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.value",
+        "path": "Medication.ingredient.strength.denominator.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.unit",
+        "path": "Medication.ingredient.strength.denominator.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.system",
+        "path": "Medication.ingredient.strength.denominator.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator.code",
+        "path": "Medication.ingredient.strength.denominator.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.batch",
+        "path": "Medication.batch",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.batch.lotNumber",
+        "path": "Medication.batch.lotNumber",
         "mustSupport": true
       }
     ]

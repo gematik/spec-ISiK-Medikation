@@ -1,0 +1,18 @@
+{
+  "resourceType": "Medication",
+  "id": "ExampleISikMedikation",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikation"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/ifa/pzn",
+        "code": "03470864"
+      }
+    ]
+  },
+  "status": "active"
+}
