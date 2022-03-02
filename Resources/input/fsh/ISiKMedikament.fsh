@@ -1,6 +1,6 @@
-Profile: ISiKMedikation
+Profile: ISiKMedikament
 Parent: Medication
-Id: ISiKMedikation
+Id: ISiKMedikament
 Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien."
 * insert Meta
 * id MS
@@ -84,8 +84,8 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
 * batch MS
   * lotNumber MS
 
-Instance: ExampleISikMedikation
-InstanceOf: ISiKMedikation
+Instance: ExampleISikMedikament
+InstanceOf: ISiKMedikament
 Usage: #example
 * code.coding
   * system = "http://fhir.de/CodeSystem/ifa/pzn"

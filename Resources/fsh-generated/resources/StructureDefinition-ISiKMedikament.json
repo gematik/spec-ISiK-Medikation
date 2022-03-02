@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ISiKMedikation",
+  "id": "ISiKMedikament",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,9 +11,9 @@
       "valueCode": "business"
     }
   ],
-  "url": "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikation",
+  "url": "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikament",
   "version": "2.0.0",
-  "name": "ISiKMedikation",
+  "name": "ISiKMedikament",
   "status": "draft",
   "experimental": false,
   "date": "2022-03-01",
@@ -57,6 +57,32 @@
       {
         "id": "Medication.extension",
         "path": "Medication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.extension:wirkstofftyp",
+        "path": "Medication.extension",
+        "sliceName": "wirkstofftyp",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {

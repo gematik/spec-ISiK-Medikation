@@ -1,9 +1,9 @@
 {
   "resourceType": "Medication",
-  "id": "ExampleISikMedikation",
+  "id": "ExampleISikMedikament",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikation"
+      "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikament"
     ]
   },
   "code": {

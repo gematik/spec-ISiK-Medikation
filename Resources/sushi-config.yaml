@@ -11,5 +11,5 @@ publisher:
   url: https://www.gematik.de/
   email: ISiK@gematik.de
 dependencies:
-  hl7.fhir.r4.core: 4.0.1
   de.medizininformatikinitiative.kerndatensatz.medikation: 1.0.10
+  hl7.fhir.r4.core: 4.0.1
