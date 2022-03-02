@@ -1,0 +1,10 @@
+{
+  "updated": "2022-03-02T11:28:18.615516+01:00",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "de.medizininformatikinitiative.kerndatensatz.medikation": "1.0.10",
+    "de.medizininformatikinitiative.kerndatensatz.meta": "1.0.3",
+    "hl7.fhir.uv.ips": "1.0.0"
+  },
+  "missing": {}
+}
