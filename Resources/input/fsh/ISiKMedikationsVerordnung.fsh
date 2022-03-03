@@ -1,11 +1,11 @@
-Profile: ISiKMedikationsInformation
-Parent: MedicationStatement
-Id: ISiKMedikationsInformation
-Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien."
+Profile: ISiKMedikationsVerordnung
+Parent: MedicationRequest
+Id: ISiKMedikationsVerordnung
+Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien."
 * insert Meta
 * id MS
-* partOf MS
 * status MS
+* intent MS
 * medicationCodeableConcept MS
   * coding MS
     * ^slicing.discriminator.type = #pattern
@@ -28,23 +28,14 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
 * subject MS
 * subject only Reference(Patient)
   * reference 1..1 MS
-* context MS
+* encounter MS
   * reference 1..1 MS
-* effectiveDateTime MS
-* effectivePeriod MS
-  * start MS
-  * end MS
-* dateAsserted MS
-* reasonCode MS
-  * coding MS
-    * system 1..1 MS
-    * code 1..1 MS
-  * text MS
-* reasonReference MS
+* authoredOn MS
+* requester MS
   * reference 1..1 MS
 * note MS
   * text MS
-* dosage MS
+* dosageInstruction MS
   * text MS
   * patientInstruction MS
   * timing MS
@@ -187,3 +178,12 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     * unit MS
     * system 1..1 MS
     * code 1..1 MS
+* dispenseRequest MS
+  * quantity MS
+    * ^patternQuantity.system = $cs-ucum
+    * value 1..1 MS
+    * unit MS
+    * system 1..1 MS
+    * code 1..1 MS
+* substitution MS
+  * allowedBoolean MS
