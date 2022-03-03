@@ -23,3 +23,21 @@ Description: "Dieses Profil ermöglicht die Zusammenführung einzelner Medikatio
   * item MS
   * item only Reference(MedicationStatement)
     * reference 1..1 MS
+
+Instance: ExampleISikMedikationsListe
+InstanceOf: ISiKMedikationsListe
+Usage: #example
+* status = #current
+* mode = #snapshot
+* code.coding
+  * system = "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
+  * code = #medications
+* subject.reference = "Patient/PatientinMusterfrau"
+* encounter.reference = "Encounter/Einrichtungskontakt"
+* date = 2021-07-04
+* entry[0]
+  * date = 2021-07-01
+  * item.reference = "MedicationStatement/ExampleISikMedikationsInformation1"
+* entry[1]
+  * date = 2021-07-04
+  * item.reference = "MedicationStatement/ExampleISikMedikationsInformation2"

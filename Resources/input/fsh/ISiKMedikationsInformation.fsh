@@ -187,3 +187,45 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     * unit MS
     * system 1..1 MS
     * code 1..1 MS
+
+Instance: ExampleISikMedikationsInformation1
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationReference.reference = "Medication/ExampleISikMedikament1"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Einrichtungskontakt"
+* effectivePeriod.start = 2021-07-01
+* dateAsserted = 2021-07-01
+* reasonReference.reference = "Condition/BehandlungsDiagnoseFreitext"
+* dosage
+  * timing.repeat
+    * when[0] = #MORN
+    * when[1] = #NOON
+    * when[2] = #EVE
+  * doseAndRate.doseQuantity
+    * value = 1
+    * unit = "Brausetablette"
+    * system = $cs-ucum
+    * code = #1
+
+Instance: ExampleISikMedikationsInformation2
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationReference.reference = "Medication/ExampleISikMedikament2"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Einrichtungskontakt"
+* effectivePeriod.start = 2021-07-04
+* dateAsserted = 2021-07-03
+* dosage
+  * timing.repeat
+    * count = 6
+    * frequency = 1
+    * period = 3
+    * periodUnit = #wk
+  * doseAndRate.doseQuantity
+    * value = 100
+    * unit = "mg"
+    * system = $cs-ucum
+    * code = #mg
