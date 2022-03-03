@@ -50,6 +50,19 @@
   "differential": {
     "element": [
       {
+        "id": "Medication",
+        "path": "Medication",
+        "constraint": [
+          {
+            "key": "isik-med-1",
+            "severity": "error",
+            "human": "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden.",
+            "expression": "code.exists() or ingredient.exists()",
+            "source": "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikament"
+          }
+        ]
+      },
+      {
         "id": "Medication.id",
         "path": "Medication.id",
         "mustSupport": true
@@ -78,7 +91,6 @@
       {
         "id": "Medication.code",
         "path": "Medication.code",
-        "min": 1,
         "mustSupport": true
       },
       {
