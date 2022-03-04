@@ -3,10 +3,11 @@ Parent: Medication
 Id: ISiKMedikament
 Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien."
 * insert Meta
+* obeys isik-med-1
 * id MS
 * extension MS
 * extension contains $ext-mii-wirkstofftyp named wirkstofftyp 0..1 MS
-* code 1..1 MS
+* code MS
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -84,10 +85,50 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
 * batch MS
   * lotNumber MS
 
-Instance: ExampleISikMedikament
+Invariant: isik-med-1
+Description: "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden."
+Severity: #error
+Expression: "code.exists() or ingredient.exists()"
+
+Instance: ExampleISikMedikament1
 InstanceOf: ISiKMedikament
 Usage: #example
+* extension[wirkstofftyp]
+  * valueCoding
+    * system = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp"
+    * code = #IN
 * code.coding
-  * system = "http://fhir.de/CodeSystem/ifa/pzn"
-  * code = #03470864
+  * system = $cs-atc-de
+  * code = #V03AB23
+  * display = "Acetylcystein"
 * status = #active
+
+Instance: ExampleISikMedikament2
+InstanceOf: ISiKMedikament
+Usage: #example
+* code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
+* status = #active
+* form.coding
+  * system = $cs-edqm
+  * code = #11210000
+  * display = "Solution for infusion"
+* ingredient
+  * itemCodeableConcept.coding
+    * system = $cs-atc-de
+    * code = #L01DB01
+    * display = "Doxorubicin"
+  * isActive = true
+  * strength
+    * numerator
+      * value = 85
+      * unit = "mg"
+      * system = $cs-ucum
+      * code = #mg
+    * denominator
+      * value = 250
+      * unit = "Milliliter"
+      * system = $cs-ucum
+      * code = #mL
+* ingredient
+  * itemReference.reference = "Medication/7f27cb8d-940b-43fd-ab8b-fee5b7a9b060"
+  * isActive = true
