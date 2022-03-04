@@ -93,3 +93,18 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * unit MS
     * system 1..1 MS
     * code 1..1 MS
+
+Instance: ExampleISiKMedikationsVerabreichung
+InstanceOf: ISiKMedikationsVerabreichung
+Usage: #example
+* status = #completed
+* medicationReference.reference = "Medication/ExampleISikMedikament1"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Einrichtungskontakt"
+* effectiveDateTime = 2021-07-01
+* dosage
+  * dose
+    * value = 1
+    * unit = "Brausetablette"
+    * system = $cs-ucum
+    * code = #1

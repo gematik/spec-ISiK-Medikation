@@ -187,3 +187,25 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
     * code 1..1 MS
 * substitution MS
   * allowedBoolean MS
+
+Instance: ExampleISiKMedikationsVerordnung
+InstanceOf: ISiKMedikationsVerordnung
+Usage: #example
+* status = #active
+* intent = #order
+* medicationReference.reference = "Medication/ExampleISikMedikament1"
+* subject.reference = "Patient/PatientinMusterfrau"
+* encounter.reference = "Encounter/Einrichtungskontakt"
+* authoredOn = 2021-07-01
+* requester.reference = "Practitioner/PractitionerWalterArzt"
+* reasonReference.reference = "Condition/BehandlungsDiagnoseFreitext"
+* dosageInstruction
+  * timing.repeat
+    * when[0] = #MORN
+    * when[1] = #NOON
+    * when[2] = #EVE
+  * doseAndRate.doseQuantity
+    * value = 1
+    * unit = "Brausetablette"
+    * system = $cs-ucum
+    * code = #1
