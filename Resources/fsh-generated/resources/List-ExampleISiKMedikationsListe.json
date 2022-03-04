@@ -1,6 +1,6 @@
 {
   "resourceType": "List",
-  "id": "ExampleISikMedikationsListe",
+  "id": "ExampleISiKMedikationsListe",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikationsListe"
@@ -27,13 +27,13 @@
     {
       "date": "2021-07-01",
       "item": {
-        "reference": "MedicationStatement/ExampleISikMedikationsInformation1"
+        "reference": "MedicationStatement/ExampleISiKMedikationsInformation1"
       }
     },
     {
       "date": "2021-07-04",
       "item": {
-        "reference": "MedicationStatement/ExampleISikMedikationsInformation2"
+        "reference": "MedicationStatement/ExampleISiKMedikationsInformation2"
       }
     }
   ]

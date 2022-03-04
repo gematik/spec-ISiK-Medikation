@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationStatement",
-  "id": "ExampleISikMedikationsInformation1",
+  "id": "ExampleISiKMedikationsInformation2",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikationsInformation"
@@ -12,26 +12,25 @@
         {
           "doseQuantity": {
             "system": "http://unitsofmeasure.org",
-            "value": 1,
-            "unit": "Brausetablette",
-            "code": "1"
+            "value": 100,
+            "unit": "mg",
+            "code": "mg"
           }
         }
       ],
       "timing": {
         "repeat": {
-          "when": [
-            "MORN",
-            "NOON",
-            "EVE"
-          ]
+          "count": 6,
+          "frequency": 1,
+          "period": 3,
+          "periodUnit": "wk"
         }
       }
     }
   ],
   "status": "active",
   "medicationReference": {
-    "reference": "Medication/ExampleISikMedikament1"
+    "reference": "Medication/ExampleISiKMedikament2"
   },
   "subject": {
     "reference": "Patient/PatientinMusterfrau"
@@ -40,12 +39,7 @@
     "reference": "Encounter/Einrichtungskontakt"
   },
   "effectivePeriod": {
-    "start": "2021-07-01"
+    "start": "2021-07-04"
   },
-  "dateAsserted": "2021-07-01",
-  "reasonReference": [
-    {
-      "reference": "Condition/BehandlungsDiagnoseFreitext"
-    }
-  ]
+  "dateAsserted": "2021-07-03"
 }

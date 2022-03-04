@@ -90,7 +90,7 @@ Description: "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeb
 Severity: #error
 Expression: "code.exists() or ingredient.exists()"
 
-Instance: ExampleISikMedikament1
+Instance: ExampleISiKMedikament1
 InstanceOf: ISiKMedikament
 Usage: #example
 * extension[wirkstofftyp]
@@ -103,7 +103,7 @@ Usage: #example
   * display = "Acetylcystein"
 * status = #active
 
-Instance: ExampleISikMedikament2
+Instance: ExampleISiKMedikament2
 InstanceOf: ISiKMedikament
 Usage: #example
 * code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"

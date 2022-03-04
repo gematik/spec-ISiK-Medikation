@@ -24,7 +24,7 @@ Description: "Dieses Profil ermöglicht die Zusammenführung einzelner Medikatio
   * item only Reference(MedicationStatement)
     * reference 1..1 MS
 
-Instance: ExampleISikMedikationsListe
+Instance: ExampleISiKMedikationsListe
 InstanceOf: ISiKMedikationsListe
 Usage: #example
 * status = #current
@@ -37,7 +37,7 @@ Usage: #example
 * date = 2021-07-04
 * entry[0]
   * date = 2021-07-01
-  * item.reference = "MedicationStatement/ExampleISikMedikationsInformation1"
+  * item.reference = "MedicationStatement/ExampleISiKMedikationsInformation1"
 * entry[1]
   * date = 2021-07-04
-  * item.reference = "MedicationStatement/ExampleISikMedikationsInformation2"
+  * item.reference = "MedicationStatement/ExampleISiKMedikationsInformation2"

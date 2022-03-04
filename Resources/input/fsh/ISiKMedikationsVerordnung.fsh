@@ -193,7 +193,7 @@ InstanceOf: ISiKMedikationsVerordnung
 Usage: #example
 * status = #active
 * intent = #order
-* medicationReference.reference = "Medication/ExampleISikMedikament1"
+* medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
 * encounter.reference = "Encounter/Einrichtungskontakt"
 * authoredOn = 2021-07-01
