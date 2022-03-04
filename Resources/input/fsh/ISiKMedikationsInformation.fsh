@@ -188,11 +188,11 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     * system 1..1 MS
     * code 1..1 MS
 
-Instance: ExampleISikMedikationsInformation1
+Instance: ExampleISiKMedikationsInformation1
 InstanceOf: ISiKMedikationsInformation
 Usage: #example
 * status = #active
-* medicationReference.reference = "Medication/ExampleISikMedikament1"
+* medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Einrichtungskontakt"
 * effectivePeriod.start = 2021-07-01
@@ -209,11 +209,11 @@ Usage: #example
     * system = $cs-ucum
     * code = #1
 
-Instance: ExampleISikMedikationsInformation2
+Instance: ExampleISiKMedikationsInformation2
 InstanceOf: ISiKMedikationsInformation
 Usage: #example
 * status = #active
-* medicationReference.reference = "Medication/ExampleISikMedikament2"
+* medicationReference.reference = "Medication/ExampleISiKMedikament2"
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Einrichtungskontakt"
 * effectivePeriod.start = 2021-07-04

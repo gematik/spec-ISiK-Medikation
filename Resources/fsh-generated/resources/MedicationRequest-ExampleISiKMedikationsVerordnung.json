@@ -32,7 +32,7 @@
   "status": "active",
   "intent": "order",
   "medicationReference": {
-    "reference": "Medication/ExampleISikMedikament1"
+    "reference": "Medication/ExampleISiKMedikament1"
   },
   "subject": {
     "reference": "Patient/PatientinMusterfrau"

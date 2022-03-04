@@ -98,7 +98,7 @@ Instance: ExampleISiKMedikationsVerabreichung
 InstanceOf: ISiKMedikationsVerabreichung
 Usage: #example
 * status = #completed
-* medicationReference.reference = "Medication/ExampleISikMedikament1"
+* medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Einrichtungskontakt"
 * effectiveDateTime = 2021-07-01
