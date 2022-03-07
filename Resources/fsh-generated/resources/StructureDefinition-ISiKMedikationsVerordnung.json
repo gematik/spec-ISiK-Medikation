@@ -16,7 +16,7 @@
   "name": "ISiKMedikationsVerordnung",
   "status": "draft",
   "experimental": false,
-  "date": "2022-03-03",
+  "date": "2022-03-07",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -68,6 +68,11 @@
         "id": "MedicationRequest.intent",
         "path": "MedicationRequest.intent",
         "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.doNotPerform",
+        "path": "MedicationRequest.doNotPerform",
+        "max": "0"
       },
       {
         "id": "MedicationRequest.medicationCodeableConcept",
@@ -263,7 +268,7 @@
             "code": "Duration"
           }
         ],
-        "patternQuantity": {
+        "patternDuration": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true

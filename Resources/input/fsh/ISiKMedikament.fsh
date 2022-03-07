@@ -5,8 +5,6 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
 * insert Meta
 * obeys isik-med-1
 * id MS
-* extension MS
-* extension contains $ext-mii-wirkstofftyp named wirkstofftyp 0..1 MS
 * code MS
   * coding MS
     * ^slicing.discriminator.type = #pattern
@@ -44,6 +42,8 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * system 1..1 MS
     * code 1..1 MS
 * ingredient MS
+  * extension MS
+  * extension contains $ext-mii-wirkstofftyp named wirkstofftyp 0..1 MS
   * itemCodeableConcept MS
     * coding MS
       * ^slicing.discriminator.type = #pattern
@@ -93,10 +93,6 @@ Expression: "code.exists() or ingredient.exists()"
 Instance: ExampleISiKMedikament1
 InstanceOf: ISiKMedikament
 Usage: #example
-* extension[wirkstofftyp]
-  * valueCoding
-    * system = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp"
-    * code = #IN
 * code.coding
   * system = $cs-atc-de
   * code = #V03AB23
@@ -112,7 +108,11 @@ Usage: #example
   * system = $cs-edqm
   * code = #11210000
   * display = "Solution for infusion"
-* ingredient
+* ingredient[0]
+  * extension[wirkstofftyp]
+    * valueCoding
+      * system = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp"
+      * code = #IN
   * itemCodeableConcept.coding
     * system = $cs-atc-de
     * code = #L01DB01
@@ -129,6 +129,6 @@ Usage: #example
       * unit = "Milliliter"
       * system = $cs-ucum
       * code = #mL
-* ingredient
+* ingredient[1]
   * itemReference.reference = "Medication/7f27cb8d-940b-43fd-ab8b-fee5b7a9b060"
   * isActive = true

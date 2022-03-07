@@ -33,6 +33,9 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
 * effectivePeriod MS
   * start MS
   * end MS
+* performer MS
+  * actor MS
+    * reference 1..1 MS
 * reasonReference MS
   * reference 1..1 MS
 * note MS

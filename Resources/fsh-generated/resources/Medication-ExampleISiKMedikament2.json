@@ -8,6 +8,15 @@
   },
   "ingredient": [
     {
+      "extension": [
+        {
+          "valueCoding": {
+            "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp",
+            "code": "IN"
+          },
+          "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp"
+        }
+      ],
       "strength": {
         "numerator": {
           "system": "http://unitsofmeasure.org",
@@ -31,10 +40,13 @@
           }
         ]
       },
-      "isActive": true,
+      "isActive": true
+    },
+    {
       "itemReference": {
         "reference": "Medication/7f27cb8d-940b-43fd-ab8b-fee5b7a9b060"
-      }
+      },
+      "isActive": true
     }
   ],
   "code": {
