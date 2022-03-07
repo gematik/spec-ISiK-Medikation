@@ -6,6 +6,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
 * id MS
 * status MS
 * intent MS
+* doNotPerform ..0
 * medicationCodeableConcept MS
   * coding MS
     * ^slicing.discriminator.type = #pattern
