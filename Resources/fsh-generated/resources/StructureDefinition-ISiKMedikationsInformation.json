@@ -319,7 +319,7 @@
             "code": "Duration"
           }
         ],
-        "patternQuantity": {
+        "patternDuration": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true

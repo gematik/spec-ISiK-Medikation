@@ -108,7 +108,7 @@ Usage: #example
   * system = $cs-edqm
   * code = #11210000
   * display = "Solution for infusion"
-* ingredient
+* ingredient[0]
   * extension[wirkstofftyp]
     * valueCoding
       * system = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp"
@@ -129,6 +129,6 @@ Usage: #example
       * unit = "Milliliter"
       * system = $cs-ucum
       * code = #mL
-* ingredient
+* ingredient[1]
   * itemReference.reference = "Medication/7f27cb8d-940b-43fd-ab8b-fee5b7a9b060"
   * isActive = true

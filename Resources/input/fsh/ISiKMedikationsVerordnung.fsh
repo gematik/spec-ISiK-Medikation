@@ -43,7 +43,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
     * event MS
     * repeat MS
       * boundsDuration MS
-        * ^patternQuantity.system = $cs-ucum
+        * ^patternDuration.system = $cs-ucum
         * value 1..1 MS
         * unit MS
         * system 1..1 MS

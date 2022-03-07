@@ -15,7 +15,7 @@
     ]
   },
   "status": "current",
-  "mode": "snapshot",
+  "mode": "working",
   "subject": {
     "reference": "Patient/PatientinMusterfrau"
   },

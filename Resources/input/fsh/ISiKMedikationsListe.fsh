@@ -28,7 +28,7 @@ Instance: ExampleISiKMedikationsListe
 InstanceOf: ISiKMedikationsListe
 Usage: #example
 * status = #current
-* mode = #snapshot
+* mode = #working
 * code.coding
   * system = "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
   * code = #medications

@@ -40,10 +40,13 @@
           }
         ]
       },
-      "isActive": true,
+      "isActive": true
+    },
+    {
       "itemReference": {
         "reference": "Medication/7f27cb8d-940b-43fd-ab8b-fee5b7a9b060"
-      }
+      },
+      "isActive": true
     }
   ],
   "code": {
