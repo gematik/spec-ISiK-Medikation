@@ -110,6 +110,11 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.code.coding:PZN.display",
+        "path": "Medication.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.code.coding:ATC-DE",
         "path": "Medication.code.coding",
         "sliceName": "ATC-DE",
@@ -130,6 +135,11 @@
         "id": "Medication.code.coding:ATC-DE.code",
         "path": "Medication.code.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:ATC-DE.display",
+        "path": "Medication.code.coding.display",
         "mustSupport": true
       },
       {
@@ -166,6 +176,11 @@
         "id": "Medication.form.coding.code",
         "path": "Medication.form.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding.display",
+        "path": "Medication.form.coding.display",
         "mustSupport": true
       },
       {
@@ -312,6 +327,11 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK.display",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE",
         "path": "Medication.ingredient.itemCodeableConcept.coding",
         "sliceName": "ATC-DE",
@@ -335,6 +355,11 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE.display",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.ingredient.itemCodeableConcept.coding:PZN",
         "path": "Medication.ingredient.itemCodeableConcept.coding",
         "sliceName": "PZN",
@@ -355,6 +380,11 @@
         "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.code",
         "path": "Medication.ingredient.itemCodeableConcept.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.display",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
         "mustSupport": true
       },
       {

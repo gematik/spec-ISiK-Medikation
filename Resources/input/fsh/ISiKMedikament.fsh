@@ -17,10 +17,12 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * ^patternCoding.system = $cs-pzn
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * text MS
 * status MS
 * form MS
@@ -28,6 +30,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * coding MS
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
 * amount MS
   * numerator 1..1 MS
     * ^patternQuantity.system = $cs-ucum
@@ -57,14 +60,17 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
       * ^patternCoding.system = $cs-ask
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * coding[ATC-DE]
       * ^patternCoding.system = $cs-atc-de
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * coding[PZN]
       * ^patternCoding.system = $cs-pzn
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * itemReference MS
     * reference 1..1 MS

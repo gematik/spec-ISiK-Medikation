@@ -17,10 +17,12 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * ^patternCoding.system = $cs-pzn
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * text MS
 * medicationReference MS
   * reference 1..1 MS
@@ -53,6 +55,7 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * route MS
     * coding MS
@@ -66,10 +69,12 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
       * ^patternCoding.system = $cs-edqm
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * coding[SNOMED-CT]
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * dose MS
     * ^patternQuantity.system = $cs-ucum

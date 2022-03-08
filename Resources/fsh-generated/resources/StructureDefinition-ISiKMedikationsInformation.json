@@ -114,6 +114,11 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.medicationCodeableConcept.coding:PZN.display",
+        "path": "MedicationStatement.medicationCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationStatement.medicationCodeableConcept.coding:ATC-DE",
         "path": "MedicationStatement.medicationCodeableConcept.coding",
         "sliceName": "ATC-DE",
@@ -134,6 +139,11 @@
         "id": "MedicationStatement.medicationCodeableConcept.coding:ATC-DE.code",
         "path": "MedicationStatement.medicationCodeableConcept.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.medicationCodeableConcept.coding:ATC-DE.display",
+        "path": "MedicationStatement.medicationCodeableConcept.coding.display",
         "mustSupport": true
       },
       {
@@ -251,6 +261,11 @@
         "id": "MedicationStatement.reasonCode.coding.code",
         "path": "MedicationStatement.reasonCode.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.reasonCode.coding.display",
+        "path": "MedicationStatement.reasonCode.coding.display",
         "mustSupport": true
       },
       {
@@ -568,6 +583,11 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.dosage.site.coding:SNOMED-CT.display",
+        "path": "MedicationStatement.dosage.site.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationStatement.dosage.site.text",
         "path": "MedicationStatement.dosage.site.text",
         "mustSupport": true
@@ -615,6 +635,11 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.dosage.route.coding:EDQM.display",
+        "path": "MedicationStatement.dosage.route.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationStatement.dosage.route.coding:SNOMED-CT",
         "path": "MedicationStatement.dosage.route.coding",
         "sliceName": "SNOMED-CT",
@@ -635,6 +660,11 @@
         "id": "MedicationStatement.dosage.route.coding:SNOMED-CT.code",
         "path": "MedicationStatement.dosage.route.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.dosage.route.coding:SNOMED-CT.display",
+        "path": "MedicationStatement.dosage.route.coding.display",
         "mustSupport": true
       },
       {

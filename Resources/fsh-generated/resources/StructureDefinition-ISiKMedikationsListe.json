@@ -100,6 +100,11 @@
         "mustSupport": true
       },
       {
+        "id": "List.code.coding:medications.display",
+        "path": "List.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "List.subject",
         "path": "List.subject",
         "min": 1,

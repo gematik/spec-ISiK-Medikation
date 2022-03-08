@@ -18,6 +18,7 @@ Description: "Dieses Profil ermöglicht die Zusammenführung einzelner Medikatio
     * ^patternCoding.code = #medications
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
 * subject 1..1 MS
 * subject only Reference(Patient)
   * reference 1..1 MS
