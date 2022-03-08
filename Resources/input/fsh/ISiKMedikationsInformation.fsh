@@ -32,6 +32,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * reference 1..1 MS
 * context MS
   * reference 1..1 MS
+* effective[x] 1..1 MS
 * effectiveDateTime MS
 * effectivePeriod MS
   * start MS
