@@ -24,7 +24,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * code 1..1 MS
     * display MS
   * text MS
-* status MS
+* status 1..1 MS
 * form MS
 * form from EdqmDoseForm (required)
   * coding MS
