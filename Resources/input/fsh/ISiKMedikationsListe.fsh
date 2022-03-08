@@ -7,7 +7,13 @@ Description: "Dieses Profil ermöglicht die Zusammenführung einzelner Medikatio
 * status MS
 * mode MS
 * code 1..1 MS
-  * coding 1..1 MS
+  * coding MS
+    * ^slicing.discriminator.type = #pattern
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * coding contains
+      medications 1..1 MS
+  * coding[medications]
     * ^patternCoding.system = "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
     * ^patternCoding.code = #medications
     * system 1..1 MS
