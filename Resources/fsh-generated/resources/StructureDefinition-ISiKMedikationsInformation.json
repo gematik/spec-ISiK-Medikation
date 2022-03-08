@@ -664,7 +664,11 @@
         "patternCoding": {
           "system": "http://snomed.info/sct"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ISiK/ValueSet/SctRouteOfAdministration"
+        }
       },
       {
         "id": "MedicationStatement.dosage.route.coding:SNOMED-CT.system",

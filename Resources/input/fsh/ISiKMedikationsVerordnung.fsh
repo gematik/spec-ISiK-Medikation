@@ -107,7 +107,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * system 1..1 MS
       * code 1..1 MS
       * display MS
-    * coding[SNOMED-CT]
+    * coding[SNOMED-CT] from SctRouteOfAdministration (required)
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
