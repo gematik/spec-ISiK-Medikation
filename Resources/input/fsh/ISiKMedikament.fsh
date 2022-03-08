@@ -26,8 +26,14 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * text MS
 * status 1..1 MS
 * form MS
-* form from EdqmDoseForm (required)
+* form
   * coding MS
+    * ^slicing.discriminator.type = #pattern
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * coding contains
+      EDQM 0..1 MS
+  * coding[EDQM] from EdqmDoseForm (required)
     * system 1..1 MS
     * code 1..1 MS
     * display MS

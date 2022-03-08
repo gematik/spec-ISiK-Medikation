@@ -156,6 +156,28 @@
       {
         "id": "Medication.form",
         "path": "Medication.form",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding",
+        "path": "Medication.form.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding:EDQM",
+        "path": "Medication.form.coding",
+        "sliceName": "EDQM",
+        "min": 0,
+        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -163,24 +185,19 @@
         }
       },
       {
-        "id": "Medication.form.coding",
-        "path": "Medication.form.coding",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.form.coding.system",
+        "id": "Medication.form.coding:EDQM.system",
         "path": "Medication.form.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.form.coding.code",
+        "id": "Medication.form.coding:EDQM.code",
         "path": "Medication.form.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.form.coding.display",
+        "id": "Medication.form.coding:EDQM.display",
         "path": "Medication.form.coding.display",
         "mustSupport": true
       },
