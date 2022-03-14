@@ -17,10 +17,12 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * ^patternCoding.system = $cs-pzn
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * text MS
 * medicationReference MS
   * reference 1..1 MS
@@ -53,6 +55,7 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * route MS
     * coding MS
@@ -66,10 +69,12 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
       * ^patternCoding.system = $cs-edqm
       * system 1..1 MS
       * code 1..1 MS
-    * coding[SNOMED-CT]
+      * display MS
+    * coding[SNOMED-CT] from SctRouteOfAdministration (required)
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * dose MS
     * ^patternQuantity.system = $cs-ucum
@@ -103,7 +108,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Einrichtungskontakt"
+* context.reference = "Encounter/Versorgungsstellenkontakt"
 * effectiveDateTime = 2021-07-01
 * dosage
   * dose

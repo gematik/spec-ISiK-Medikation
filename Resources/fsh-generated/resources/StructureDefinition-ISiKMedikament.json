@@ -110,6 +110,11 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.code.coding:PZN.display",
+        "path": "Medication.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.code.coding:ATC-DE",
         "path": "Medication.code.coding",
         "sliceName": "ATC-DE",
@@ -133,6 +138,11 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.code.coding:ATC-DE.display",
+        "path": "Medication.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.code.text",
         "path": "Medication.code.text",
         "mustSupport": true
@@ -140,11 +150,34 @@
       {
         "id": "Medication.status",
         "path": "Medication.status",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Medication.form",
         "path": "Medication.form",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding",
+        "path": "Medication.form.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding:EDQM",
+        "path": "Medication.form.coding",
+        "sliceName": "EDQM",
+        "min": 0,
+        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -152,20 +185,20 @@
         }
       },
       {
-        "id": "Medication.form.coding",
-        "path": "Medication.form.coding",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.form.coding.system",
+        "id": "Medication.form.coding:EDQM.system",
         "path": "Medication.form.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.form.coding.code",
+        "id": "Medication.form.coding:EDQM.code",
         "path": "Medication.form.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding:EDQM.display",
+        "path": "Medication.form.coding.display",
         "mustSupport": true
       },
       {
@@ -312,6 +345,11 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK.display",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE",
         "path": "Medication.ingredient.itemCodeableConcept.coding",
         "sliceName": "ATC-DE",
@@ -335,6 +373,11 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE.display",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.ingredient.itemCodeableConcept.coding:PZN",
         "path": "Medication.ingredient.itemCodeableConcept.coding",
         "sliceName": "PZN",
@@ -355,6 +398,11 @@
         "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.code",
         "path": "Medication.ingredient.itemCodeableConcept.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.display",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
         "mustSupport": true
       },
       {

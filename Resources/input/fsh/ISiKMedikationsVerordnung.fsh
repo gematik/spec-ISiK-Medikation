@@ -19,10 +19,12 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
     * ^patternCoding.system = $cs-pzn
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * text MS
 * medicationReference MS
   * reference 1..1 MS
@@ -90,6 +92,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * route MS
     * coding MS
@@ -103,10 +106,12 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * ^patternCoding.system = $cs-edqm
       * system 1..1 MS
       * code 1..1 MS
-    * coding[SNOMED-CT]
+      * display MS
+    * coding[SNOMED-CT] from SctRouteOfAdministration (required)
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * doseAndRate MS
     * doseRange MS
@@ -196,7 +201,7 @@ Usage: #example
 * intent = #order
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
-* encounter.reference = "Encounter/Einrichtungskontakt"
+* encounter.reference = "Encounter/Versorgungsstellenkontakt"
 * authoredOn = 2021-07-01
 * requester.reference = "Practitioner/PractitionerWalterArzt"
 * reasonReference.reference = "Condition/BehandlungsDiagnoseFreitext"

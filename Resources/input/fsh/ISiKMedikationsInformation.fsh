@@ -18,10 +18,12 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     * ^patternCoding.system = $cs-pzn
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * text MS
 * medicationReference MS
   * reference 1..1 MS
@@ -30,6 +32,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * reference 1..1 MS
 * context MS
   * reference 1..1 MS
+* effective[x] 1..1 MS
 * effectiveDateTime MS
 * effectivePeriod MS
   * start MS
@@ -39,6 +42,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * coding MS
     * system 1..1 MS
     * code 1..1 MS
+    * display MS
   * text MS
 * reasonReference MS
   * reference 1..1 MS
@@ -98,6 +102,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * route MS
     * coding MS
@@ -111,10 +116,12 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
       * ^patternCoding.system = $cs-edqm
       * system 1..1 MS
       * code 1..1 MS
-    * coding[SNOMED-CT]
+      * display MS
+    * coding[SNOMED-CT] from SctRouteOfAdministration (required)
       * ^patternCoding.system = $cs-sct
       * system 1..1 MS
       * code 1..1 MS
+      * display MS
     * text MS
   * doseAndRate MS
     * doseRange MS
@@ -194,7 +201,7 @@ Usage: #example
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Einrichtungskontakt"
+* context.reference = "Encounter/Versorgungsstellenkontakt"
 * effectivePeriod.start = 2021-07-01
 * dateAsserted = 2021-07-01
 * reasonReference.reference = "Condition/BehandlungsDiagnoseFreitext"
@@ -215,7 +222,7 @@ Usage: #example
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament2"
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Einrichtungskontakt"
+* context.reference = "Encounter/Versorgungsstellenkontakt"
 * effectivePeriod.start = 2021-07-04
 * dateAsserted = 2021-07-03
 * dosage

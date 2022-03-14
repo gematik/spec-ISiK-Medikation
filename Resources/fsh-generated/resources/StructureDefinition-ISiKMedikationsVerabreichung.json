@@ -114,6 +114,11 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN.display",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE",
         "path": "MedicationAdministration.medicationCodeableConcept.coding",
         "sliceName": "ATC-DE",
@@ -134,6 +139,11 @@
         "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE.code",
         "path": "MedicationAdministration.medicationCodeableConcept.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE.display",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.display",
         "mustSupport": true
       },
       {
@@ -316,6 +326,11 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationAdministration.dosage.site.coding:SNOMED-CT.display",
+        "path": "MedicationAdministration.dosage.site.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationAdministration.dosage.site.text",
         "path": "MedicationAdministration.dosage.site.text",
         "mustSupport": true
@@ -363,6 +378,11 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationAdministration.dosage.route.coding:EDQM.display",
+        "path": "MedicationAdministration.dosage.route.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT",
         "path": "MedicationAdministration.dosage.route.coding",
         "sliceName": "SNOMED-CT",
@@ -371,7 +391,11 @@
         "patternCoding": {
           "system": "http://snomed.info/sct"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/ISiK/ValueSet/SctRouteOfAdministration"
+        }
       },
       {
         "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.system",
@@ -383,6 +407,11 @@
         "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.code",
         "path": "MedicationAdministration.dosage.route.coding.code",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.display",
+        "path": "MedicationAdministration.dosage.route.coding.display",
         "mustSupport": true
       },
       {
