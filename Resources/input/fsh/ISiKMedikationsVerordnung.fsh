@@ -201,7 +201,7 @@ Usage: #example
 * intent = #order
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
-* encounter.reference = "Encounter/Einrichtungskontakt"
+* encounter.reference = "Encounter/Versorgungsstellenkontakt"
 * authoredOn = 2021-07-01
 * requester.reference = "Practitioner/PractitionerWalterArzt"
 * reasonReference.reference = "Condition/BehandlungsDiagnoseFreitext"

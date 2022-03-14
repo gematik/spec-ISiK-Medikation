@@ -40,7 +40,7 @@ Usage: #example
   * system = "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
   * code = #medications
 * subject.reference = "Patient/PatientinMusterfrau"
-* encounter.reference = "Encounter/Einrichtungskontakt"
+* encounter.reference = "Encounter/Versorgungsstellenkontakt"
 * date = 2021-07-04
 * entry[0]
   * date = 2021-07-01

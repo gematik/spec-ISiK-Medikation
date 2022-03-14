@@ -108,7 +108,7 @@ Usage: #example
 * status = #completed
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Einrichtungskontakt"
+* context.reference = "Encounter/Versorgungsstellenkontakt"
 * effectiveDateTime = 2021-07-01
 * dosage
   * dose
