@@ -11,7 +11,7 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikationTransaction",
+  "url": "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction",
   "version": "2.0.0",
   "name": "ISiKMedikationTransaction",
   "status": "draft",

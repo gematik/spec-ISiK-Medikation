@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationTransactionResponse",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikationTransactionResponse"
+      "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransactionResponse"
     ]
   },
   "type": "transaction-response",
@@ -15,7 +15,7 @@
         "id": "ExampleISiKMedikationsInformation1",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikationsInformation"
+            "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsInformation"
           ]
         },
         "dosage": [
@@ -73,7 +73,7 @@
         "id": "ExampleISiKMedikament1",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikament"
+            "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikament"
           ]
         },
         "code": {

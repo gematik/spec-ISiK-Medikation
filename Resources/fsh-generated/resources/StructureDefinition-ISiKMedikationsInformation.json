@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikationsInformation",
+  "url": "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsInformation",
   "version": "2.0.0",
   "name": "ISiKMedikationsInformation",
   "status": "draft",
@@ -667,7 +667,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ISiK/ValueSet/SctRouteOfAdministration"
+          "valueSet": "https://gematik.de/fhir/ISiK/v2/ValueSet/SctRouteOfAdministration"
         }
       },
       {
