@@ -6,7 +6,7 @@
   "fhirVersion": [
     "4.0.1"
   ],
-  "packageId": "de.gematik.isik-medikation",
+  "packageId": "0.0.1",
   "definition": {
     "resource": [
       {
@@ -36,11 +36,6 @@
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "ImplementationGuide/markdown/Methodik.md",
-              "title": "Methodik",
-              "generation": "markdown"
-            },
-            {
               "nameUrl": "ImplementationGuide/markdown/BestaetigungsrelevanteSysteme.md",
               "title": "Bestätigungsrelevante Systeme",
               "generation": "markdown"
@@ -51,28 +46,8 @@
               "generation": "markdown"
             },
             {
-              "nameUrl": "ImplementationGuide/markdown/MustSupportFlags.md",
-              "title": "Must-Support-Flags",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "ImplementationGuide/markdown/Repraesentationsformate.md",
-              "title": "Repräsentationsformate",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "ImplementationGuide/markdown/Suchparameter.md",
-              "title": "Suchparameter",
-              "generation": "markdown"
-            },
-            {
               "nameUrl": "ImplementationGuide/markdown/RestApi.md",
               "title": "REST-API",
-              "generation": "markdown"
-            },
-           {
-              "nameUrl": "ImplementationGuide/markdown/AnmerkungenMS.md",
-              "title": "Anmerkungen zu Must-Support-Feldern",
               "generation": "markdown"
             },
             {
@@ -91,8 +66,48 @@
               "nameUrl": "ImplementationGuide/markdown/CapabilityStatement.md",
               "title": "CapabilityStatement",
               "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_MedikationsInformation.md",
+              "title": "MedikationsInformation",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_MedikationsListe.md",
+              "title": "MedikationsListe",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_MedikationsVerordnung.md",
+              "title": "MedikationsVerordnung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_MedikationsVerabreichung.md",
+              "title": "MedikationsVerabreichung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_Medikament.md",
+              "title": "Medikament",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_BundleMedikationTransaction.md",
+              "title": "Bundle MedikationTransaction",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_BundleMedikationTransactionResponse.md",
+              "title": "Bundle MedikationTransactionResponse",
+              "generation": "markdown"
             }
           ]
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "ImplementationGuide/markdown/Terminologie.md",
+          "title": "Terminologie"
         }
       ]
     }

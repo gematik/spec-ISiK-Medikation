@@ -11,7 +11,7 @@
       "valueCode": "business"
     }
   ],
-  "url": "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikament",
+  "url": "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikament",
   "version": "2.0.0",
   "name": "ISiKMedikament",
   "status": "draft",
@@ -58,7 +58,7 @@
             "severity": "error",
             "human": "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden.",
             "expression": "code.exists() or ingredient.exists()",
-            "source": "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikament"
+            "source": "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikament"
           }
         ]
       },
@@ -181,7 +181,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ISiK/ValueSet/EdqmDoseForm"
+          "valueSet": "https://gematik.de/fhir/ISiK/v2/ValueSet/EdqmDoseForm"
         }
       },
       {

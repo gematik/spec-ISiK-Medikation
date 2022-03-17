@@ -5,7 +5,7 @@
   "id": "EdqmDoseForm",
   "description": "Enthaelt alle EDQM-Darreichungsformen",
   "version": "2.0.0",
-  "url": "https://gematik.de/fhir/ISiK/ValueSet/EdqmDoseForm",
+  "url": "https://gematik.de/fhir/ISiK/v2/ValueSet/EdqmDoseForm",
   "experimental": false,
   "publisher": "gematik GmbH",
   "date": "2022-03-08",

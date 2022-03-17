@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationsVerordnung",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikationsVerordnung"
+      "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerordnung"
     ]
   },
   "dosageInstruction": [

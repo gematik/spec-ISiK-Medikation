@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationsListe",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ISiK/StructureDefinition/ISiKMedikationsListe"
+      "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsListe"
     ]
   },
   "code": {
