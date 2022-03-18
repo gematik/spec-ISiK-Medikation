@@ -9,6 +9,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * ^short = "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
 * status MS
   * ^short = "Status der Medikationsinformation"
+* medication[x] MS
 * medicationCodeableConcept MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
   * ^comment = "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
