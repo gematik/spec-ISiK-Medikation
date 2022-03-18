@@ -57,16 +57,20 @@
       {
         "id": "MedicationAdministration.id",
         "path": "MedicationAdministration.id",
+        "short": "eindeutige ID der Ressource auf dem Server",
         "mustSupport": true
       },
       {
         "id": "MedicationAdministration.status",
         "path": "MedicationAdministration.status",
+        "short": "Status der Verabreichungsinformation",
         "mustSupport": true
       },
       {
         "id": "MedicationAdministration.medicationCodeableConcept",
         "path": "MedicationAdministration.medicationCodeableConcept",
+        "short": "Medikament in codierter Form oder ggf. als Freitext",
+        "comment": "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren.",
         "min": 0,
         "max": "1",
         "type": [
@@ -154,6 +158,8 @@
       {
         "id": "MedicationAdministration.medicationReference",
         "path": "MedicationAdministration.medicationReference",
+        "short": "Referenz auf das Medikament (Medication-Ressource)",
+        "comment": "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen",
         "min": 0,
         "max": "1",
         "type": [
@@ -175,6 +181,7 @@
       {
         "id": "MedicationAdministration.subject",
         "path": "MedicationAdministration.subject",
+        "short": "Referenz auf den Patienten",
         "type": [
           {
             "code": "Reference",
@@ -194,6 +201,7 @@
       {
         "id": "MedicationAdministration.context",
         "path": "MedicationAdministration.context",
+        "short": "Referenz auf den Abteilungskontakt",
         "mustSupport": true
       },
       {
@@ -205,6 +213,7 @@
       {
         "id": "MedicationAdministration.effectiveDateTime",
         "path": "MedicationAdministration.effectiveDateTime",
+        "short": "Zeitpunkt der Verabreichung",
         "min": 0,
         "max": "1",
         "type": [
@@ -217,6 +226,7 @@
       {
         "id": "MedicationAdministration.effectivePeriod",
         "path": "MedicationAdministration.effectivePeriod",
+        "short": "Zeitraum der Verabreichung",
         "min": 0,
         "max": "1",
         "type": [
@@ -244,6 +254,7 @@
       {
         "id": "MedicationAdministration.performer.actor",
         "path": "MedicationAdministration.performer.actor",
+        "short": "Referenz auf die verabreichende Person",
         "mustSupport": true
       },
       {
@@ -255,6 +266,7 @@
       {
         "id": "MedicationAdministration.reasonReference",
         "path": "MedicationAdministration.reasonReference",
+        "short": "Grund der Medikation (Referenz)",
         "mustSupport": true
       },
       {
@@ -271,21 +283,25 @@
       {
         "id": "MedicationAdministration.note.text",
         "path": "MedicationAdministration.note.text",
+        "short": "Freitext-Notiz",
         "mustSupport": true
       },
       {
         "id": "MedicationAdministration.dosage",
         "path": "MedicationAdministration.dosage",
+        "short": "Dosierungsangaben",
         "mustSupport": true
       },
       {
         "id": "MedicationAdministration.dosage.text",
         "path": "MedicationAdministration.dosage.text",
+        "short": "Freitext-Dosierungsangabe",
         "mustSupport": true
       },
       {
         "id": "MedicationAdministration.dosage.site",
         "path": "MedicationAdministration.dosage.site",
+        "short": "Körperstelle der Verabreichung",
         "mustSupport": true
       },
       {
@@ -338,6 +354,7 @@
       {
         "id": "MedicationAdministration.dosage.route",
         "path": "MedicationAdministration.dosage.route",
+        "short": "Route",
         "mustSupport": true
       },
       {
@@ -422,6 +439,7 @@
       {
         "id": "MedicationAdministration.dosage.dose",
         "path": "MedicationAdministration.dosage.dose",
+        "short": "verabreichte Dosis",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
@@ -453,6 +471,7 @@
       {
         "id": "MedicationAdministration.dosage.rateRatio",
         "path": "MedicationAdministration.dosage.rateRatio",
+        "short": "Verabreichungs-Rate (Verhältnis)",
         "min": 0,
         "max": "1",
         "type": [
@@ -527,6 +546,7 @@
       {
         "id": "MedicationAdministration.dosage.rateQuantity",
         "path": "MedicationAdministration.dosage.rateQuantity",
+        "short": "Verabreichungs-Rate",
         "min": 0,
         "max": "1",
         "type": [

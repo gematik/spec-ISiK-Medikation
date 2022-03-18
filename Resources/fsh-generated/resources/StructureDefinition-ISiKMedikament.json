@@ -65,11 +65,13 @@
       {
         "id": "Medication.id",
         "path": "Medication.id",
+        "short": "eindeutige ID der Ressource auf dem Server",
         "mustSupport": true
       },
       {
         "id": "Medication.code",
         "path": "Medication.code",
+        "short": "Medikament in codierter Form oder ggf. als Freitext",
         "mustSupport": true
       },
       {
@@ -150,12 +152,14 @@
       {
         "id": "Medication.status",
         "path": "Medication.status",
+        "short": "Status der Medikamenteninformation",
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "Medication.form",
         "path": "Medication.form",
+        "short": "Abgabeform",
         "mustSupport": true
       },
       {
@@ -204,6 +208,7 @@
       {
         "id": "Medication.amount",
         "path": "Medication.amount",
+        "short": "Menge",
         "mustSupport": true
       },
       {
@@ -272,11 +277,14 @@
       {
         "id": "Medication.ingredient",
         "path": "Medication.ingredient",
+        "short": "Informationen zu Bestandteilen (Rezeptur)",
         "mustSupport": true
       },
       {
         "id": "Medication.ingredient.extension",
         "path": "Medication.ingredient.extension",
+        "short": "Wirkstofftyp",
+        "comment": "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?",
         "mustSupport": true
       },
       {
@@ -298,6 +306,7 @@
       {
         "id": "Medication.ingredient.itemCodeableConcept",
         "path": "Medication.ingredient.itemCodeableConcept",
+        "short": "Bestandteil in codierter Form oder ggf. als Freitext",
         "min": 0,
         "max": "1",
         "type": [
@@ -413,6 +422,7 @@
       {
         "id": "Medication.ingredient.itemReference",
         "path": "Medication.ingredient.itemReference",
+        "short": "Bestandteil (Referenz auf ein anderes Medikament)",
         "min": 0,
         "max": "1",
         "type": [
@@ -435,11 +445,13 @@
       {
         "id": "Medication.ingredient.isActive",
         "path": "Medication.ingredient.isActive",
+        "short": "handelt es sich um einen aktiven Bestandteil?",
         "mustSupport": true
       },
       {
         "id": "Medication.ingredient.strength",
         "path": "Medication.ingredient.strength",
+        "short": "Stärke",
         "mustSupport": true
       },
       {
@@ -508,11 +520,13 @@
       {
         "id": "Medication.batch",
         "path": "Medication.batch",
+        "short": "Angaben zur Charge",
         "mustSupport": true
       },
       {
         "id": "Medication.batch.lotNumber",
         "path": "Medication.batch.lotNumber",
+        "short": "Chargennummer",
         "mustSupport": true
       }
     ]
