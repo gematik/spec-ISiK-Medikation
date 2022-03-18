@@ -68,6 +68,21 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.medication[x]",
+        "path": "MedicationStatement.medication[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
         "id": "MedicationStatement.medicationCodeableConcept",
         "path": "MedicationStatement.medicationCodeableConcept",
         "short": "Medikament in codierter Form oder ggf. als Freitext",
