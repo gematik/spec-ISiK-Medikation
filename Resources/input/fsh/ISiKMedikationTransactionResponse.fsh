@@ -4,17 +4,27 @@ Id: ISiKMedikationTransactionResponse
 Description: "Dieses Profil definiert die Server-Antwort auf Transaktions-Bundles im Rahmen von ISiK-Medikations-Szenarien."
 * insert Meta
 * type MS
+  * ^short = "Type des Bundles"
+  * ^comment = "fix: transaction-response"
   * ^fixedCode = #transaction-response
 * entry 1..* MS
+  * ^short = "Der einzelne Eintrag zur Interaktion"
   * link 0..0
   * fullUrl MS
+    * ^short = "vollständige URL der Ressource"
   * resource MS
+    * ^short = "Die Ressourcen-Instanz der Interaktion"
   * search 0..0
   * request 0..0
   * response 1..1 MS
+    * ^short = "HTTP-Response des Servers innerhalb der Transaktions-Antwort"
     * status MS
+      * ^short = "HTTP-Statuscode"
     * location MS
+      * ^short = "Location der Ressource (URL) auf dem Server"
+      * ^comment = "Gemäß FHIR-Spezifikation MUSS hier der Pfad zur exakten Version (History) enthalten sein, wenn der Server History unterstützt."
     * outcome MS
+      * ^short = "OperationOutcome-Ressource zur Rückgabe von Fehler-Details sowie Informationen."
 
 Instance: ExampleISiKMedikationTransactionResponse
 InstanceOf: ISiKMedikationTransactionResponse

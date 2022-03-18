@@ -4,15 +4,24 @@ Id: ISiKMedikationTransaction
 Description: "Dieses Profil definiert die Transaktions-Bundles im Rahmen von ISiK-Medikations-Szenarien."
 * insert Meta
 * type MS
+  * ^short = "Type des Bundles"
+  * ^comment = "fix: transaction"
   * ^fixedCode = #transaction
 * entry 1..* MS
+  * ^short = "Der einzelne Eintrag zur Interaktion"
   * link 0..0
   * fullUrl MS
+    * ^short = "vollständige URL der Ressource"
+    * ^comment = "auch die Verwendung von UUIDs in der Form ';urn:uuid:.....' ist möglich."
   * resource MS
+    * ^short = "Die Ressourcen-Instanz der Interaktion"
   * search 0..0
   * request 1..1 MS
+    * ^short = "HTTP-Request innerhalb der Transaktion"
     * method MS
+      * ^short = "HTTP-Verb"
     * url MS
+      * ^short = "Request-URL"
   * response 0..0
 
 Instance: ExampleISiKMedikationTransaction

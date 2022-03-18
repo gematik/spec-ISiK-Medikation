@@ -5,7 +5,9 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
 * insert Meta
 * obeys isik-med-1
 * id MS
+  * ^short = "eindeutige ID der Ressource auf dem Server"
 * code MS
+  * ^short = "Medikament in codierter Form oder ggf. als Freitext"
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -25,7 +27,9 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * display MS
   * text MS
 * status 1..1 MS
+  * ^short = "Status der Medikamenteninformation"
 * form MS
+  * ^short = "Abgabeform"
 * form
   * coding MS
     * ^slicing.discriminator.type = #pattern
@@ -38,6 +42,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * code 1..1 MS
     * display MS
 * amount MS
+  * ^short = "Menge"
   * numerator 1..1 MS
     * ^patternQuantity.system = $cs-ucum
     * value 1..1 MS
@@ -51,9 +56,13 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * system 1..1 MS
     * code 1..1 MS
 * ingredient MS
+  * ^short = "Informationen zu Bestandteilen (Rezeptur)"
   * extension MS
   * extension contains $ext-mii-wirkstofftyp named wirkstofftyp 0..1 MS
+    * ^short = "Wirkstofftyp"
+    * ^comment = "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?"
   * itemCodeableConcept MS
+    * ^short = "Bestandteil in codierter Form oder ggf. als Freitext"
     * coding MS
       * ^slicing.discriminator.type = #pattern
       * ^slicing.discriminator.path = "$this"
@@ -79,9 +88,12 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
       * display MS
     * text MS
   * itemReference MS
+    * ^short = "Bestandteil (Referenz auf ein anderes Medikament)"
     * reference 1..1 MS
   * isActive MS
+    * ^short = "handelt es sich um einen aktiven Bestandteil?"
   * strength MS
+    * ^short = "Stärke"
     * numerator 1..1 MS
       * ^patternQuantity.system = $cs-ucum
       * value 1..1 MS
@@ -95,7 +107,9 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
       * system 1..1 MS
       * code 1..1 MS
 * batch MS
+  * ^short = "Angaben zur Charge"
   * lotNumber MS
+    * ^short = "Chargennummer"
 
 Invariant: isik-med-1
 Description: "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden."

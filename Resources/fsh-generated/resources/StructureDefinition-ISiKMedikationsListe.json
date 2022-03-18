@@ -42,21 +42,27 @@
       {
         "id": "List.id",
         "path": "List.id",
+        "short": "eindeutige ID der Ressource auf dem Server",
         "mustSupport": true
       },
       {
         "id": "List.status",
         "path": "List.status",
+        "short": "(Aktualitäts-)Status der Liste",
         "mustSupport": true
       },
       {
         "id": "List.mode",
         "path": "List.mode",
+        "short": "Listenmodus",
+        "comment": "Beispiel: eingelesene Medikationspläne werden als snapshot repräsentiert. Kontinuierlich fortgeschriebene Listen, z.B. im Rahmen der hausinternen Behandlung, sind als 'working' codiert.",
         "mustSupport": true
       },
       {
         "id": "List.code",
         "path": "List.code",
+        "short": "Art der Liste.",
+        "comment": "Es ist mindestens ein Coding mit dem Code 'medications' anzugeben. Weitere Codes, z.B. im Kontext anderer Spezifikationen oder Hauscodierungen sind zulässig.",
         "min": 1,
         "mustSupport": true
       },
@@ -107,6 +113,7 @@
       {
         "id": "List.subject",
         "path": "List.subject",
+        "short": "Referenz auf den Patienten",
         "min": 1,
         "type": [
           {
@@ -127,6 +134,7 @@
       {
         "id": "List.encounter",
         "path": "List.encounter",
+        "short": "Referenz auf den Abteilungskontakt",
         "mustSupport": true
       },
       {
@@ -138,21 +146,26 @@
       {
         "id": "List.date",
         "path": "List.date",
+        "short": "Erstellungsdatum der Liste",
         "mustSupport": true
       },
       {
         "id": "List.entry",
         "path": "List.entry",
+        "short": "Listeneintrag",
         "mustSupport": true
       },
       {
         "id": "List.entry.date",
         "path": "List.entry.date",
+        "short": "Datum des Listeneintrags",
+        "comment": "nur zulässig im Listenmodus 'working'",
         "mustSupport": true
       },
       {
         "id": "List.entry.item",
         "path": "List.entry.item",
+        "short": "Referenz auf die MedikationsInformation",
         "type": [
           {
             "code": "Reference",
