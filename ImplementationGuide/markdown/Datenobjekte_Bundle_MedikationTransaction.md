@@ -8,8 +8,20 @@
 
 [Link Simplifier Profil Übersicht](https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction)
 
+## Anmerkungen zu Must-Support-Feldern
+
+@```from
+	StructureDefinition
+where
+    url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction'
+for differential.element
+where mustSupport = true
+select
+	Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+```
+
 ## Beispiele
 
-Valides Minimalbeispiel für das Profil MedikationTransaction:
+Valides Beispiel für das Profil MedikationTransaction:
 
-{{json:Bundle-ExampleISiKMedikationTransaction}}
+{{json:ExampleISiKMedikationTransaction}}

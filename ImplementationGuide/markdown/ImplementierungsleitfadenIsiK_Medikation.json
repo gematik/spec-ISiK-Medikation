@@ -93,12 +93,12 @@
               "generation": "markdown"
             },
             {
-              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_BundleMedikationTransaction.md",
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_Bundle_MedikationTransaction.md",
               "title": "Bundle MedikationTransaction",
               "generation": "markdown"
             },
             {
-              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_BundleMedikationTransactionResponse.md",
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_Bundle_MedikationTransactionResponse.md",
               "title": "Bundle MedikationTransactionResponse",
               "generation": "markdown"
             }

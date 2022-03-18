@@ -8,10 +8,22 @@
 
 [Link Simplifier Profil Übersicht](https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsInformation)
 
+## Anmerkungen zu Must-Support-Feldern
+
+@```from
+	StructureDefinition
+where
+    url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsInformation'
+for differential.element
+where mustSupport = true
+select
+	Feldname: id, Kurzbeschreibung: short, Hinweise: comment
+```
+
 ## Beispiele
 
 Valide Beispiele für das Profil MedikationsInformation:
 
-{{json:MedicationStatement-ExampleISiKMedikationsInformation1}}
+{{json:ExampleISiKMedikationsInformation1}}
 
-{{json:MedicationStatement-ExampleISiKMedikationsInformation2}}
+{{json:ExampleISiKMedikationsInformation2}}
