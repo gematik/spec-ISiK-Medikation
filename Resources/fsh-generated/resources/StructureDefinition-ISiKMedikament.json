@@ -145,6 +145,34 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.code.coding:WG14",
+        "path": "Medication.code.coding",
+        "sliceName": "WG14",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/abdata/wg14"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:WG14.system",
+        "path": "Medication.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:WG14.code",
+        "path": "Medication.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:WG14.display",
+        "path": "Medication.code.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "Medication.code.text",
         "path": "Medication.code.text",
         "mustSupport": true
@@ -411,6 +439,34 @@
       },
       {
         "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.display",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:WG14",
+        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "sliceName": "WG14",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/abdata/wg14"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:WG14.system",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:WG14.code",
+        "path": "Medication.ingredient.itemCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.itemCodeableConcept.coding:WG14.display",
         "path": "Medication.ingredient.itemCodeableConcept.coding.display",
         "mustSupport": true
       },

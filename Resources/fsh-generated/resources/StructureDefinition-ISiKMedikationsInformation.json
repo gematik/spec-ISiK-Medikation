@@ -152,6 +152,34 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.medicationCodeableConcept.coding:WG14",
+        "path": "MedicationStatement.medicationCodeableConcept.coding",
+        "sliceName": "WG14",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/abdata/wg14"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.medicationCodeableConcept.coding:WG14.system",
+        "path": "MedicationStatement.medicationCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.medicationCodeableConcept.coding:WG14.code",
+        "path": "MedicationStatement.medicationCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.medicationCodeableConcept.coding:WG14.display",
+        "path": "MedicationStatement.medicationCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationStatement.medicationCodeableConcept.text",
         "path": "MedicationStatement.medicationCodeableConcept.text",
         "mustSupport": true
