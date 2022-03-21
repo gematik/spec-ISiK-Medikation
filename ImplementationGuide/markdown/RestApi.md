@@ -18,7 +18,7 @@ Für jede schreibende Gesamt-Interaktion (Create, Update sowie ggf. Delete), bei
 
 Wird nur eine oder keine Ressourcen-Instanz modifiziert, kann ebenfalls eine Transaktion verwendet werden. Der Server MUSS auch solche Transaktionen verarbeiten. Die obigen Anforderungen bezüglich der Interaktionen außerhalb von Transaktionen bleiben unbeschadet.
 
-Der Server MUSS als Antwort hierauf eine FHIR TransactionResponse senden wie in diesem Leitfaden profiliert.
+Der Server MUSS als Antwort auf ein FHIR Transaktions-Bundle ein FHIR TransactionResponse-Bundle senden wie in diesem Leitfaden profiliert und in der FHIR-Spezifikation beschrieben.
 
 ## Historie
 
