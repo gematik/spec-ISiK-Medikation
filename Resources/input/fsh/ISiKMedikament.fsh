@@ -47,7 +47,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * ^slicing.rules = #open
   * coding contains
       EDQM 0..1 MS
-  * coding[EDQM] from EdqmDoseForm (required)
+  * coding[EDQM] from $vs-edqm-doseform (required)
     * system 1..1 MS
     * code 1..1 MS
     * display MS

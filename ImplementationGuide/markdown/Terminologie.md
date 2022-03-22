@@ -8,9 +8,6 @@ Es sei ausdrücklich darauf hingewiesen, dass im Rahmen der weiteren Entwicklung
 
 ## Spezifische ValueSets
 
-Die folgenden ValueSets werden im Rahmen dieses ISiK-Moduls definiert und verwendet:
-
-{{render:EdqmDoseForm}}
-
+Das folgende ValueSet wird im Rahmen dieses ISiK-Moduls definiert und verwendet:
 
 {{render:SctRouteOfAdministration}}

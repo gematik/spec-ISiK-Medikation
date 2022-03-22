@@ -16,7 +16,7 @@
   "name": "ISiKMedikament",
   "status": "draft",
   "experimental": false,
-  "date": "2022-03-08",
+  "date": "2022-03-22",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -226,7 +226,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ISiK/v2/ValueSet/EdqmDoseForm"
+          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform"
         }
       },
       {
