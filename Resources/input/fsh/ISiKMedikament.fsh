@@ -34,6 +34,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * text MS
 * status 1..1 MS
   * ^short = "Status der Medikamenteninformation"
+* manufacturer MS
+  * ^short = "Hersteller des Medikaments"
+  * ^comment = "Hier kann der tatsächliche Hersteller des Medikaments benannt werden, vornehmlich im Fall von Wirkstoffmischungen (Rezepturen), beispielsweise die Krankenhausapotheke. Zu beachten ist, dass die zulassende Organisation, wie sie z.B. in den Daten zur PZN benannt ist, nicht als Hersteller gilt."
+  * display 1..1 MS
 * form MS
   * ^short = "Abgabeform"
 * form
@@ -43,7 +47,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * ^slicing.rules = #open
   * coding contains
       EDQM 0..1 MS
-  * coding[EDQM] from EdqmDoseForm (required)
+  * coding[EDQM] from $vs-edqm-doseform (required)
     * system 1..1 MS
     * code 1..1 MS
     * display MS

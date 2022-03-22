@@ -1,5 +1,5 @@
 {
-  "updated": "2022-03-18T09:00:36.2911706+01:00",
+  "updated": "2022-03-22T10:31:07.8779646+01:00",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
     "de.medizininformatikinitiative.kerndatensatz.medikation": "1.0.10",

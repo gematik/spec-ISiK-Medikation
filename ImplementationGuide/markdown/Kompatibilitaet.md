@@ -10,6 +10,8 @@ Die Medikations-Spezifikationen der Medizininformatik-Initiative sowie in ISiK s
 
 Dies trifft auch für die verwendeten Terminologien zu, mit Ausnahme der Medikamenten-Codierung. Hier erlaubt ISiK die Verwendung von ABDATA WG14, jedoch nicht ATC-WHO. Unter Umständen muss hier also ein Mapping vorgenommen werden.
 
+Weiterhin erlaubt die Medizininformatik-Initiative derzeit mehrfache Slices der einzelnen Codesysteme zum Medikament (z.B. PZN), während im vorliegenden Implementierungsleitfaden gemäß Abstimmung mit dem BfArm und in Übereinstimmung mit den Regeln für den FHIR CodeableConcept Datentyp jedes Codesystem jeweils nur ein Mal vorkommen darf. Im (bei bestimmungsgemäßer Verwendung der Codesysteme nicht zu erwartenden) Fall einer Instanz mit zwei unterschiedlichen Medikamenten-Codes aus dem selben Codesystem muss also eine Einzelfallentscheidung getroffen werden.
+
 ## Kompatibilität zum KBV eRezept
 
 Die eRezept-Spezifikation enthält zahlreiche Datenelemente, die ausschließlich im Kontext der Rezept-Verordnungen sowie des Abrechnungswesens Relevanz besitzen. Solche Datenelemente, die in der eRezept-Spezifikation zum großen Teil als FHIR-Extensions repräsentiert sind, werden in ISiK nicht explizit spezifiziert. Dennoch ist die Verwendung dieser Extensions in ISiK möglich und zulässig, sofern hierfür im konkreten Anwendungsfall ein Bedarf besteht.

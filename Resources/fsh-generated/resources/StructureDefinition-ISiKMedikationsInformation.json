@@ -16,7 +16,7 @@
   "name": "ISiKMedikationsInformation",
   "status": "draft",
   "experimental": false,
-  "date": "2022-03-08",
+  "date": "2022-03-22",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -721,7 +721,11 @@
         "patternCoding": {
           "system": "http://standardterms.edqm.eu"
         },
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration"
+        }
       },
       {
         "id": "MedicationStatement.dosage.route.coding:EDQM.system",

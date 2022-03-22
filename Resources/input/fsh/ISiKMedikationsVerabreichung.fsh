@@ -88,7 +88,7 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * coding contains
         EDQM 0..1 MS and
         SNOMED-CT 0..1 MS
-    * coding[EDQM]
+    * coding[EDQM] from $vs-edqm-route (required)
       * ^patternCoding.system = $cs-edqm
       * system 1..1 MS
       * code 1..1 MS
