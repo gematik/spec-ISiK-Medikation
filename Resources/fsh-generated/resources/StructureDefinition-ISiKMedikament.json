@@ -185,6 +185,19 @@
         "mustSupport": true
       },
       {
+        "id": "Medication.manufacturer",
+        "path": "Medication.manufacturer",
+        "short": "Hersteller des Medikaments",
+        "comment": "Hier kann der tatsächliche Hersteller des Medikaments benannt werden, vornehmlich im Fall von Wirkstoffmischungen (Rezepturen), beispielsweise die Krankenhausapotheke. Zu beachten ist, dass die zulassende Organisation, wie sie z.B. in den Daten zur PZN benannt ist, nicht als Hersteller gilt.",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.manufacturer.display",
+        "path": "Medication.manufacturer.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Medication.form",
         "path": "Medication.form",
         "short": "Abgabeform",
