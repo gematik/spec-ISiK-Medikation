@@ -25,3 +25,7 @@ select
 Valides Beispiel für das Profil MedikationTransactionResponse:
 
 {{json:ExampleISiKMedikationTransactionResponse}}
+
+## Interaktionen
+
+TransactionResponse-Bundles werden nicht persistiert, sondern ausschließlich im Kontext von FHIR-Transaktionen verwendet, vgl. [FHIR RESTful API - Batch/Transaction](http://www.hl7.org/fhir/http.html#transaction).
