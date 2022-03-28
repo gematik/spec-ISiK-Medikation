@@ -8,3 +8,7 @@ Folgende Datenobjekte und Interaktionen aus dem Modul [ISiK Basis Stufe 2](https
 Darüber hinaus gelten in diesem Modul folgende Datenobjekt-spezifische Festlegungen:
 
 {{index:current}}
+
+Die Kern-Zusammenhänge der Datenobjekte zeigt das (stark vereinfacht dargestellte) Diagramm:
+
+{{render:Klassendiagramm}}
