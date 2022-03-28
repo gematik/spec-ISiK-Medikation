@@ -1,9 +1,9 @@
 <img src="https://raw.githubusercontent.com/gematik/api-ISiK/master/images/Gematik_Logo_Flag.jpg" alt="gematik logo" width="400"/>
 
 ----
-Version: -
+Version: 1.0.0-ballot1
 
-Datum: -
+Datum: 31.03.2022
 
 Status: Arbeitsversion
 
