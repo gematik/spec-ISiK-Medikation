@@ -52,17 +52,17 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
   Beispiele:
 
-   ```GET [base]/MedicationAdministration?context=Encounter/123```
+    ```GET [base]/MedicationAdministration?context=Encounter/123```
 
-   Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
+  Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
 
 1. Der verkettete Suchparameter "context.identifier" MUSS unterstützt werden:
 
   Beispiele:
 
-  ```GET [base]/MedicationAdministration?context.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
+    ```GET [base]/MedicationAdministration?context.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
 
-  ```GET [base]/MedicationAdministration?context.identifier=7567867```
+    ```GET [base]/MedicationAdministration?context.identifier=7567867```
 
   Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
 
@@ -116,7 +116,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "performer" MUSS unterstützt werden:
 
- Beispiele:
+  Beispiele:
 
   ```GET [base]/MedicationAdministration?performer=Practitioner/101112```
 
@@ -132,11 +132,11 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
   Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](http://hl7.org/fhir/search.html#chaining).
+  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](http://hl7.org/fhir/search.html#chaining).
 
 1. Der Suchparameter "status" MUSS unterstützt werden:
 
-    Beispiele
+  Beispiele
 
     ```GET [base]/MedicationRequest.status=completed```
 

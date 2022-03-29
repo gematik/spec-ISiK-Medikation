@@ -40,11 +40,11 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](http://hl7.org/fhir/R4/search.html#all).
 
- 1. Der Suchparameter "authored-on" MUSS unterstützt werden:
+ 1. Der Suchparameter "authoredon" MUSS unterstützt werden:
 
      Beispiele
 
-     ```GET [base]/MedicationRequest.authored-on=2022-03-21```
+     ```GET [base]/MedicationRequest.authoredon=2022-03-21```
 
      Anwendungshinweise: Weitere Informationen zur Suche nach Date-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date"](http://hl7.org/fhir/R4/search.html#date).
 
@@ -112,29 +112,29 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "patient" MUSS unterstützt werden:
 
-   Beispiele:
+  Beispiele:
 
     ```GET [base]/MedicationRequest?patient=Patient/123```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
+  Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
 
 1. Der verkettete Suchparameter "patient.identifier" MUSS unterstützt werden:
 
-    Beispiele:
+  Beispiele:
 
     ```GET [base]/MedicationRequest?patient.identifier=http://mein-krankenhaus.example/fhir/sid/patienten|1032702```
 
     ```GET [base]/MedicationRequest?patient.identifier=1032702```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+  Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
 	Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](http://hl7.org/fhir/search.html#chaining).
 
 1. Der Suchparameter "requester" MUSS unterstützt werden:
 
- Beispiele:
+  Beispiele:
 
-  ```GET [base]/MedicationRequest?requester=Practitioner/101112```
+    ```GET [base]/MedicationRequest?requester=Practitioner/101112```
 
   Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/search.html#reference).
 
@@ -142,18 +142,18 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
   Beispiele:
 
-  ```GET [base]/MedicationRequest?requester.identifier=http://fhir.de/sid/bundesaerztekammer/efn|123456789123456```
+    ```GET [base]/MedicationRequest?requester.identifier=http://fhir.de/sid/bundesaerztekammer/efn|123456789123456```
 
-  ```GET [base]/MedicationRequest?requester.identifier=123456789123456```
+    ```GET [base]/MedicationRequest?requester.identifier=123456789123456```
 
   Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
 
-Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](http://hl7.org/fhir/search.html#chaining).
+  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](http://hl7.org/fhir/search.html#chaining).
 
 1. Der Suchparameter "status" MUSS unterstützt werden:
 
-    Beispiele
+  Beispiele
 
     ```GET [base]/MedicationRequest.status=active```
 
-    Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
+  Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](http://hl7.org/fhir/R4/search.html#token).
