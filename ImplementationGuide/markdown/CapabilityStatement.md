@@ -5,24 +5,38 @@ Jede Instanz eines bestätigungsrelevanten Systems MUSS an ihrem Endpunkt eine [
 Hierzu MUSS die [capabilities-Interaktion gemäß FHIR-Spezifikation](http://hl7.org/fhir/http.html#capabilities) unterstützt werden.
 Der MODE-Parameter kann ignoriert werden.
 
-Das CapabilityStatement in dieser Spezifikation stellt die Anforderungen seitens der gematik dar. (`kind` = "requirements"). Zur Unterscheidung von Anforderungen, die erfüllt werden MÜSSEN gegenüber jenen, die erfüllt werden KÖNNEN, wird die [CapabilityStatement-Expectation](http://hl7.org/fhir/extension-capabilitystatement-expectation.html)-Extension mit den möglichen Werten "SHALL" (=MUSS) und "MAY" (=KANN) verwendet.
+Die CapabilityStatements in dieser Spezifikation stellen die Anforderungen seitens der gematik für den jeweiligen Bereich dieser Spezifikation dar. (`kind` = "requirements"). Zur Unterscheidung von Anforderungen, die erfüllt werden MÜSSEN gegenüber jenen, die erfüllt werden KÖNNEN, wird die [CapabilityStatement-Expectation](http://hl7.org/fhir/extension-capabilitystatement-expectation.html)-Extension mit den möglichen Werten "SHALL" (=MUSS) und "MAY" (=KANN) verwendet.
 
 Eine Server-Instanz MUSS ihrerseits ein CapabilityStatement vom `kind`= "instance" liefern und im Element `software` den Namen und die Versionsnummer angeben.
 
-Das CapabilityStatement der Instanz MUSS alle Funktionalitäten auflisten, die im folgenden CapabilityStatement mit "SHALL" gekennzeichnet sind. Das CapabilityStatement KANN darüber hinaus die mit "MAY" gekennzeichneten Funktionalitäten, sowie weitere Funktionalitäten auflisten, sofern diese in der Instanz implementiert wurden.
+Das CapabilityStatement der Instanz MUSS alle Funktionalitäten auflisten, die in dem folgenden, für den zu bestätigenden Bereich relevanten, CapabilityStatement mit "SHALL" gekennzeichnet sind. Das CapabilityStatement KANN darüber hinaus die mit "MAY" gekennzeichneten Funktionalitäten, sowie weitere Funktionalitäten auflisten, sofern diese in der Instanz implementiert wurden.
+
+Implementiert ein System mehr als einen der drei Bereiche dieser Spezifikation, so MUSS dessen CapabilityStatement die Vereinigung der Funktionalitäten der betreffenden CapabilityStatements dieses Implementierungsleitfadens enthalten. Bei gleichartigen Elementen mit unterschiedlicher Anforderungsstärke (expectation) MUSS die stärkere Anforderung umgesetzt werden ("SHALL" gilt vor "MAY").
 
 Die Verwendung der [CapabilityStatement-Expectation](http://hl7.org/fhir/extension-capabilitystatement-expectation.html)-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.
 
-## CapabilityStatement (Requirement) ISiK-Medikation
+Die für dieses Modul bestätigungsrelevanten Teile des [Moduls "Basis"](https://simplifier.net/guide/ImplementierungsleitfadenISiK-Basismodul/Einfuehrung) sind in den CapabilityStatements ebenfalls enthalten.
 
-Die Bereitstellung des CapabilityStatments für das Modul "Medikation" erfolgt zusammen mit der Festlegung der bestätigungsrelevanten Systeme in Stufe 2
+## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsinformation
 
-Für Systeme, die das Modul "Medikation" implementieren, ist außerdem die Erfüllung der Mindestanforderungen des [Moduls "Basis"](https://simplifier.net/guide/ImplementierungsleitfadenISiK-Basismodul/Einfuehrung) erforderlich:
+Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/information
 
-Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/core-server
+[Link Simplifier Profil Übersicht](https://simplifier.net/isik/isik-capabilitystatement-medikation-server-information)
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/isik/isik-capabilitystatement-medikation-server)
+{{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/information}}
 
-{{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server}}
+## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverordnung
 
+Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verordnung
 
+[Link Simplifier Profil Übersicht](https://simplifier.net/isik/isik-capabilitystatement-medikation-server-verordnung)
+
+{{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verordnung}}
+
+## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverabreichung
+
+Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verabreichung
+
+[Link Simplifier Profil Übersicht](https://simplifier.net/isik/isik-capabilitystatement-medikation-server-verabreichung)
+
+{{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verabreichung}}

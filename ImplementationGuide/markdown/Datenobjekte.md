@@ -11,4 +11,4 @@ Darüber hinaus gelten in diesem Modul folgende Datenobjekt-spezifische Festlegu
 
 Die Kern-Zusammenhänge der Datenobjekte zeigt das (stark vereinfacht dargestellte) Diagramm:
 
-{{render:Klassendiagramm}}
+{{render:implementationguide-images-klassendiagramm}}
