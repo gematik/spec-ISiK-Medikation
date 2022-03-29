@@ -279,7 +279,7 @@ Usage: #definition
       * valueCode = #SHALL
     * code = #transaction
     * documentation = "Transaktions-Bundle gemäß Profil https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction - Transaktions-Antwort-Bundle gemäß Profil https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransactionResponse"
-* rest.resource[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].type = #Patient
 * rest.resource[=].supportedProfile = "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKPatient"
