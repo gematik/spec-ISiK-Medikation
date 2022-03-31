@@ -16,6 +16,7 @@ where
     url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsListe'
 for differential.element
 where mustSupport = true
+  and short.exists()
 select
 	Feldname: id, Kurzbeschreibung: short, Hinweise: comment
 ```
