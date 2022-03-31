@@ -103,7 +103,7 @@ Usage: #definition
         * valueCode = #SHALL
       * name = "intent"
       * definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-intent"
-      * type = #reference
+      * type = #token
     * searchParam[+]
       * extension
         * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
