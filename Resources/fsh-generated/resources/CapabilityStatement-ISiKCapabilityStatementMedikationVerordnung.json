@@ -198,7 +198,7 @@
               ],
               "name": "intent",
               "definition": "http://hl7.org/fhir/SearchParameter/MedicationRequest-intent",
-              "type": "reference"
+              "type": "token"
             },
             {
               "extension": [
