@@ -2,7 +2,7 @@
 
 Der vorliegende Implementierungsleitfaden wurde aus der Analyse verschiedener in Deutschland bestehender Spezifikationen im Bereich Medikation heraus entwickelt.
 
-Überwiegend wurde dabei eine Vereinigungsmenge aus diesen, teilweise mit stark unterschiedlicher Ausrichtung verfassten, Spezifikationen hergestellt. Allerdings wurde auch zum einen der Entwicklung der letzten Jahre Rechnung getragen, zum anderen wurde sehr spezifische Datenelemente, die für die Medikations-Kommunikation im stationären Bereich nicht von Bedeutung sind, nicht berücksichtigt.
+Überwiegend wurde dabei eine Vereinigungsmenge aus diesen, teilweise mit stark unterschiedlicher Ausrichtung verfassten, Spezifikationen hergestellt. Allerdings wurde auch zum einen der Entwicklung der letzten Jahre Rechnung getragen, zum anderen wurden sehr spezifische Datenelemente, die für die Medikations-Kommunikation im stationären Bereich nicht von Bedeutung sind, nicht berücksichtigt.
 
 ## Kompatibilität zum Medizininformatik-Initiative Kerndatensatz Modul Medikation
 
@@ -35,6 +35,6 @@ Eine Übernahme von Daten aus dem Medikationsplan Plus nach ISiK sollte probleml
 
 ## Kompatibilität zu eMDAF
 
-Der vorliegende Implementierungsleitfaden spezifiziert in Bezug auf die in der eMDAF-Spezifikation verwenden FHIR-Ressourcentypen eine äquivalente Repräsentation.
+Der vorliegende Implementierungsleitfaden spezifiziert in Bezug auf die in der eMDAF-Spezifikation verwendeten FHIR-Ressourcentypen eine äquivalente Repräsentation.
 
 Die bidirektionale Kompatibilität ist weitgehend gegeben. Abweichend von eMDAF wird jedoch ein bundeseinheitlicher Namensraum für das ABDATA WG14 Codesystem verwendet. Weiterhin ist die Verwendung des Codesystems für die KBV-BMP-Darreichungsform in ISiK nicht spezifiziert.

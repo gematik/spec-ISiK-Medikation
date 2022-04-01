@@ -43,7 +43,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "code" MUSS unterstützt werden:
 
-   Beispiele
+   Beispiele:
 
    ```GET [base]/List.code=http://terminology.hl7.org/CodeSystem/list-example-use-codes|medications```
 
@@ -51,11 +51,11 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
  1. Der Suchparameter "date" MUSS unterstützt werden:
 
-     Beispiele
+    Beispiele:
 
-     ```GET [base]/List.date=2022-03-21```
+    ```GET [base]/List.date=2022-03-21```
 
-     Anwendungshinweise: Weitere Informationen zur Suche nach Date-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date"](http://hl7.org/fhir/R4/search.html#date).
+    Anwendungshinweise: Weitere Informationen zur Suche nach Date-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date"](http://hl7.org/fhir/R4/search.html#date).
 
 1. Der Suchparameter "encounter" MUSS unterstützt werden:
 
@@ -79,7 +79,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "item" MUSS unterstützt werden:
 
-    Beispiele
+    Beispiele:
 
      ```GET [base]/List?item=MedicationStatement/131415```
 
@@ -108,7 +108,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "status" MUSS unterstützt werden:
 
-    Beispiele
+    Beispiele:
 
     ```GET [base]/List.status=current```
 

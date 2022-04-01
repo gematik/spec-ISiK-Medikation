@@ -14,12 +14,12 @@ Abweichend hiervon bzw. ergänzend hierzu gilt:
 
 FHIR-Transaktionen MÜSSEN unterstützt werden, vgl. [FHIR RESTful API - Batch/Transaction](http://www.hl7.org/fhir/http.html#transaction). Es MÜSSEN die dort im Bereich "transaction" genannten Punkte unterstüzt werden. Eine reine Batch-Verarbeitung ist nicht ausreichend.
 
-Für jede schreibende Gesamt-Interaktion (Create, Update sowie ggf. Delete), bei der mehr als eine Ressourcen-Instanz erzeugt, geändert oder gelöscht wird, MUSS ein FHIR-Transaktions-Bundle verwendet werden wie in diesem Leitfaden profiliert.
+Für jede schreibende Gesamt-Interaktion (Create, Update sowie ggf. Delete), bei der mehr als eine Ressourcen-Instanz erzeugt, geändert oder gelöscht wird, MUSS ein FHIR Transaktions-Bundle, wie in diesem Leitfaden profiliert, verwendet werden.
 
-Wird nur eine oder keine Ressourcen-Instanz modifiziert, kann ebenfalls eine Transaktion verwendet werden. Der Server MUSS auch solche Transaktionen verarbeiten. Die obigen Anforderungen bezüglich der Interaktionen außerhalb von Transaktionen bleiben unbeschadet.
+Wird keine oder nur eine Ressourcen-Instanz modifiziert, kann ebenfalls eine Transaktion verwendet werden. Der Server MUSS auch solche Transaktionen verarbeiten. Die obigen Anforderungen bezüglich der Interaktionen außerhalb von Transaktionen bleiben unbeschadet.
 
-Der Server MUSS als Antwort auf ein FHIR Transaktions-Bundle ein FHIR TransactionResponse-Bundle senden wie in diesem Leitfaden profiliert und in der FHIR-Spezifikation beschrieben.
+Der Server MUSS als Antwort auf ein FHIR Transaktions-Bundle ein FHIR TransactionResponse-Bundle, wie in diesem Leitfaden profiliert und in der FHIR-Spezifikation beschrieben, senden.
 
 ## Historie
 
-Die Historisierung/Versionierung von FHIR-Ressourcen-Instanzen (vgl.[FHIR RESTful API - History](http://www.hl7.org/fhir/http.html#history)) KANN unterstützt werden, ist aber nicht Gegenstand weiterer Ausarbeitung dieses Implementierungsleitfadens.
+Die Historisierung/Versionierung von FHIR Ressourcen-Instanzen (vgl. [FHIR RESTful API - History](http://www.hl7.org/fhir/http.html#history)) KANN unterstützt werden, ist aber nicht Gegenstand weiterer Ausarbeitung dieses Implementierungsleitfadens.

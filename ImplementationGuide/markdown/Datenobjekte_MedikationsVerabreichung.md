@@ -43,7 +43,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "code" MUSS unterstützt werden:
 
-    Beispiele
+    Beispiele:
 
     ```GET [base]/MedicationAdministration.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
 
@@ -71,7 +71,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "effective-time" MUSS unterstützt werden:
 
-    Beispiele
+    Beispiele:
 
     ```GET [base]/MedicationAdministration.effective-time=2022-03-23```
 
@@ -79,7 +79,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "medication" MUSS unterstützt werden:
 
-    Beispiele
+    Beispiele:
 
     ```GET [base]/MedicationAdministration?medication=Medication/123```
 
@@ -87,7 +87,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der verkettete Suchparameter "medication.code" MUSS unterstützt werden:
 
-    Beispiele
+    Beispiele:
 
     ```GET [base]/MedicationAdministration?medication.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
 
@@ -137,7 +137,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der Suchparameter "status" MUSS unterstützt werden:
 
-    Beispiele
+    Beispiele:
 
     ```GET [base]/MedicationRequest.status=completed```
 

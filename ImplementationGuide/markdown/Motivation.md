@@ -6,7 +6,7 @@ Eine möglichst medienbruch-freie Kommunikation innerhalb dieses Workflows zwisc
 
 Dies gilt ebenso für die Dokumentation und Weiterverarbeitung der Aufnahme- bzw. Entlass-Medikation (Medikationsplan), die derzeit noch häufig in Form von manueller und somit fehleranfälliger Übertragung der Medikationsangaben umgesetzt wird.
 
-Das ISiK-Modul "Medikation" möchte diese Daten-Integration ermöglichen und stellt in dieser Ausbaustufe strukturierte Kommunikationsmöglichkeiten auf Basis einer RESTful API zum Austausch von Medikationsinformationen ("Medikationsplan") sowie von Verordnungs- und Verabreichungsdaten zur Verfügung. Derzeit nicht berücksichtigt ist das Apothekenwesen.
+Das ISiK-Modul "Medikation" möchte diese Daten-Integration ermöglichen und stellt in dieser Ausbaustufe strukturierte Kommunikationsmöglichkeiten auf Basis einer RESTful API zum Austausch von Medikationsinformationen ("Medikationsplan") sowie Verordnungs- und Verabreichungsdaten zur Verfügung. Derzeit nicht berücksichtigt ist das Apothekenwesen.
 
 Diese Spezifikation lehnt sich an die entsprechenden Teile des IHE-Profils HMW (Hospital Medication Workflow) sowie partiell auch
 an das IHE-Profil CMPD (Community Medication Prescription and Dispense) an.
