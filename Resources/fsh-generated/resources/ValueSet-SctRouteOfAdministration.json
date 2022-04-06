@@ -1,14 +1,14 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "SctRouteOfAdministration",
   "id": "SctRouteOfAdministration",
   "description": "Enthaelt alle SNOMED CT Administrationsarten",
-  "version": "1.0.0-ballot1",
+  "version": "2.0.0-ballot",
   "url": "https://gematik.de/fhir/ISiK/v2/ValueSet/SctRouteOfAdministration",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2022-03-31",
+  "date": "2022-04-08",
   "compose": {
     "include": [
       {
