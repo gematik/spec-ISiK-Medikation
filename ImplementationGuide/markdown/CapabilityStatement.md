@@ -15,7 +15,8 @@ Implementiert ein System mehr als einen der drei Bereiche dieser Spezifikation, 
 
 Die Verwendung der [CapabilityStatement-Expectation](http://hl7.org/fhir/extension-capabilitystatement-expectation.html)-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.
 
-Die für dieses Modul bestätigungsrelevanten Teile des [Moduls "Basis"](https://simplifier.net/guide/ImplementierungsleitfadenISiK-Basismodul/Einfuehrung) sind in den CapabilityStatements ebenfalls enthalten.
+Die für dieses Modul bestätigungsrelevanten Teile des [Moduls "Basis"](https://simplifier.net/guide/implementierungsleitfadenisik-basismodul/ImplementationGuide-markdown-Einfuehrung?version=current) sind in den CapabilityStatements ebenfalls enthalten.
+
 
 ## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsinformation
 

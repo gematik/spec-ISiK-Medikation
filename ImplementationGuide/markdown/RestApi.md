@@ -1,6 +1,6 @@
 # REST-API
 
-Es gelten grundsätzlich die [Allgemeinen Hinweise zur REST API aus dem Basismodul](https://simplifier.net/guide/ImplementierungsleitfadenISiK-Basismodul/UebergreifendeFestlegungenRest).
+Es gelten grundsätzlich die [Allgemeinen Hinweise zur REST API aus dem Basismodul](https://simplifier.net/guide/implementierungsleitfadenisik-basismodul/I-markdown-UebergreifendeFestlegungen-UebergreifendeFestlegungen-Rest?version=current).
 
 Abweichend hiervon bzw. ergänzend hierzu gilt:
 
