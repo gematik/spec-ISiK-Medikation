@@ -9,9 +9,11 @@ Die CapabilityStatements in dieser Spezifikation stellen die Anforderungen seite
 
 Eine Server-Instanz MUSS ihrerseits ein CapabilityStatement vom `kind`= "instance" liefern und im Element `software` den Namen und die Versionsnummer angeben.
 
+Darüber hinaus MUSS in 'CapabilityStatement.instantiates' die Canonical URL des nachfolgenden CapabilityStatement in der jeweiligen CapabilityStatement Instanz angegeben werden.
+
 Das CapabilityStatement der Instanz MUSS alle Funktionalitäten auflisten, die in dem folgenden, für den zu bestätigenden Bereich relevanten, CapabilityStatement mit "SHALL" gekennzeichnet sind. Das CapabilityStatement KANN darüber hinaus die mit "MAY" gekennzeichneten Funktionalitäten, sowie weitere Funktionalitäten auflisten, sofern diese in der Instanz implementiert wurden.
 
-Implementiert ein System mehr als einen der drei Bereiche dieser Spezifikation, so MUSS dessen CapabilityStatement die Vereinigung der Funktionalitäten der betreffenden CapabilityStatements dieses Implementierungsleitfadens enthalten. Bei gleichartigen Elementen mit unterschiedlicher Anforderungsstärke (expectation) MUSS die stärkere Anforderung umgesetzt werden ("SHALL" gilt vor "MAY").
+Implementiert ein System mehr als einen der drei Bereiche dieser Spezifikation, so MUSS dessen CapabilityStatement die Vereinigung der Funktionalitäten der betreffenden CapabilityStatements dieses Implementierungsleitfadens enthalten. Bei gleichartigen Elementen mit unterschiedlicher Anforderungsstärke (expectation) MUSS die stärkere Anforderung umgesetzt werden ("SHALL" gilt vor "MAY"). Ebenso MÜSSEN in diesem Fall die Canonical URLs der CapabilityStatements aller unten genannter implementierter Bereiche in 'CapabilityStatement.instantiates' angegeben werden.
 
 Die Verwendung der [CapabilityStatement-Expectation](http://hl7.org/fhir/extension-capabilitystatement-expectation.html)-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.
 
