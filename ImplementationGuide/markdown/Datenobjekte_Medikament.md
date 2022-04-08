@@ -1,4 +1,6 @@
-# Medikament
+## Medikament [(Medication)](https://www.hl7.org/fhir/medication.html)
+
+---
 
 ### Profil
 
@@ -28,7 +30,7 @@ join binding.where(valueSet.exists())
 
 ---
 
-## Anmerkungen zu Must-Support-Feldern
+### Anmerkungen zu Must-Support-Feldern
 
 @```from
 	StructureDefinition
