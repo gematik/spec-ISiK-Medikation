@@ -24,22 +24,16 @@ Die für dieses Modul bestätigungsrelevanten Teile des [Moduls "Basis"](https:/
 
 Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/information
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/isik/isik-capabilitystatement-medikation-server-information)
-
 {{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/information}}
 
 ## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverordnung
 
 Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verordnung
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/isik/isik-capabilitystatement-medikation-server-verordnung)
-
 {{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verordnung}}
 
 ## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverabreichung
 
 Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verabreichung
-
-[Link Simplifier Profil Übersicht](https://simplifier.net/isik/isik-capabilitystatement-medikation-server-verabreichung)
 
 {{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verabreichung}}

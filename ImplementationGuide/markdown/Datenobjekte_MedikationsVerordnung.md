@@ -6,8 +6,6 @@
 
 {{tree:https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerordnung, hybrid}}
 
-[Link Simplifier Profil Übersicht](https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerordnung)
-
 ## Anmerkungen zu Must-Support-Feldern
 
 @```from
