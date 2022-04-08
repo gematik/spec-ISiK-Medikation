@@ -1,6 +1,8 @@
-# MedikationsListe
+## MedikationsListe [(List)](https://www.hl7.org/fhir/list.html)
 
-## Profil
+---
+
+### Profil
 
 @```
 from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsListe' select Name: name, Canonical: url
@@ -21,13 +23,13 @@ select
 	Feldname: id, Kurzbeschreibung: short, Hinweise: comment
 ```
 
-## Beispiele
+### Beispiele
 
 Valides Beispiel für das Profil MedikationsListe:
 
 {{json:ExampleISiKMedikationsListe}}
 
-## Interaktionen
+### Interaktionen
 
 Für die Ressource List MÜSSEN die REST-Interaktionen "READ", "CREATE" und "UPDATE" implementiert werden.
 

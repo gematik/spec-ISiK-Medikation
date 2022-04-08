@@ -1,4 +1,4 @@
-# Konformitätserklärung [(CapabilityStatement)](http://hl7.org/fhir/capabilitystatement.html)
+## Konformitätserklärung [(CapabilityStatement)](http://hl7.org/fhir/capabilitystatement.html)
 
 Jede Instanz eines bestätigungsrelevanten Systems MUSS an ihrem Endpunkt eine [CapabilityStatement](http://hl7.org/fhir/capabilitystatement.html)-Ressource bereitstellen.
 
@@ -20,19 +20,19 @@ Die Verwendung der [CapabilityStatement-Expectation](http://hl7.org/fhir/extensi
 Die für dieses Modul bestätigungsrelevanten Teile des [Moduls "Basis"](https://simplifier.net/guide/implementierungsleitfadenisik-basismodul/ImplementationGuide-markdown-Einfuehrung?version=current) sind in den CapabilityStatements ebenfalls enthalten.
 
 
-## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsinformation
+### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsinformation
 
 Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/information
 
 {{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/information}}
 
-## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverordnung
+### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverordnung
 
 Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verordnung
 
 {{render:https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verordnung}}
 
-## CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverabreichung
+### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverabreichung
 
 Canonical: https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/verabreichung
 

@@ -1,6 +1,8 @@
-# Medikament
+## Medikament [(Medication)](https://www.hl7.org/fhir/medication.html)
 
-## Profil
+---
+
+### Profil
 
 @```
 from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikament' select Name: name, Canonical: url
@@ -28,7 +30,7 @@ join binding.where(valueSet.exists())
 
 ---
 
-## Anmerkungen zu Must-Support-Feldern
+### Anmerkungen zu Must-Support-Feldern
 
 @```from
 	StructureDefinition
