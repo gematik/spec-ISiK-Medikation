@@ -1,6 +1,6 @@
 # Medikament
 
-## Profil
+### Profil
 
 @```
 from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikament' select Name: name, Canonical: url

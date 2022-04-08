@@ -1,6 +1,6 @@
 # Bundle MedikationTransaction
 
-## Profil
+### Profil
 
 @```
 from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction' select Name: name, Canonical: url
@@ -8,7 +8,7 @@ from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureD
 
 {{tree:https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction, hybrid}}
 
-## Anmerkungen zu Must-Support-Feldern
+### Anmerkungen zu Must-Support-Feldern
 
 @```from
 	StructureDefinition
@@ -21,12 +21,12 @@ select
 	Feldname: id, Kurzbeschreibung: short, Hinweise: comment
 ```
 
-## Beispiele
+### Beispiele
 
 Valides Beispiel für das Profil MedikationTransaction:
 
 {{json:ExampleISiKMedikationTransaction}}
 
-## Interaktionen
+### Interaktionen
 
 Transaction-Bundles werden nicht persistiert, sondern ausschließlich im Kontext von FHIR-Transaktionen verwendet, vgl. [FHIR RESTful API - Batch/Transaction](http://www.hl7.org/fhir/http.html#transaction).
