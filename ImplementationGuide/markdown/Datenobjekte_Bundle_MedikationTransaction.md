@@ -2,7 +2,9 @@
 
 ## Profil
 
-**Canonical URL**: https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction
+@```
+from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction' select Name: name, Canonical: url
+```
 
 {{tree:https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction, hybrid}}
 
