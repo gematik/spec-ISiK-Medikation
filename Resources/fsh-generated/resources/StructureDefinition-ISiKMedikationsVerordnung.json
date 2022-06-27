@@ -11,7 +11,7 @@
       "valueCode": "patient"
     }
   ],
-  "url": "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerordnung",
+  "url": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsVerordnung",
   "version": "2.0.0-ballot",
   "name": "ISiKMedikationsVerordnung",
   "status": "active",
@@ -666,7 +666,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/ISiK/v2/ValueSet/SctRouteOfAdministration"
+          "valueSet": "https://gematik.de/fhir/isik/v2/Medikation/ValueSet/SctRouteOfAdministration"
         }
       },
       {

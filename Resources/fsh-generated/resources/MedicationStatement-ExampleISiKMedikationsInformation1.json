@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationsInformation1",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsInformation"
+      "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsInformation"
     ]
   },
   "dosage": [

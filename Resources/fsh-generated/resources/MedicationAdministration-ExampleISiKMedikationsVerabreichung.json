@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationsVerabreichung",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerabreichung"
+      "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsVerabreichung"
     ]
   },
   "dosage": {
