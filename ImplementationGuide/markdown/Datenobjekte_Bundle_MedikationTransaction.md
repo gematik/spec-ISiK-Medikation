@@ -5,17 +5,17 @@
 ### Profil
 
 @```
-from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction' select Name: name, Canonical: url
+from StructureDefinition where url = 'https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransaction' select Name: name, Canonical: url
 ```
 
-{{tree:https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction, hybrid}}
+{{tree:https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransaction, hybrid}}
 
 ### Anmerkungen zu Must-Support-Feldern
 
 @```from
 	StructureDefinition
 where
-    url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction'
+    url = 'https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransaction'
 for differential.element
 where mustSupport = true
   and short.exists()

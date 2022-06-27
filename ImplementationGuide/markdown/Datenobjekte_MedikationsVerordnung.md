@@ -5,10 +5,10 @@
 ### Profil
 
 @```
-from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerordnung' select Name: name, Canonical: url
+from StructureDefinition where url = 'https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsVerordnung' select Name: name, Canonical: url
 ```
 
-{{tree:https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerordnung, hybrid}}
+{{tree:https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsVerordnung, hybrid}}
 
 ---
 
@@ -16,7 +16,7 @@ from StructureDefinition where url = 'https://gematik.de/fhir/ISiK/v2/StructureD
 
 @```
 from StructureDefinition
-where url in ('https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerordnung')
+where url in ('https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsVerordnung')
 for differential.element
 select
 Path: path,
@@ -35,7 +35,7 @@ join binding.where(valueSet.exists())
 @```from
 	StructureDefinition
 where
-    url = 'https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsVerordnung'
+    url = 'https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsVerordnung'
 for differential.element
 where mustSupport = true
   and short.exists()
