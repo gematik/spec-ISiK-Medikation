@@ -515,7 +515,7 @@
           ],
           "type": "Patient",
           "supportedProfile": [
-            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKPatient"
+            "https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKPatient"
           ],
           "interaction": [
             {
@@ -725,7 +725,7 @@
           ],
           "type": "Encounter",
           "supportedProfile": [
-            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKKontaktGesundheitseinrichtung"
+            "https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKKontaktGesundheitseinrichtung"
           ],
           "interaction": [
             {
@@ -935,7 +935,7 @@
           ],
           "type": "Practitioner",
           "supportedProfile": [
-            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKPersonImGesundheitsberuf"
+            "https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKPersonImGesundheitsberuf"
           ],
           "interaction": [
             {
