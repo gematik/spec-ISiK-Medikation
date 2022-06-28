@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "ISiKCapabilityStatementMedikationInformation",
-  "url": "https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/information",
+  "url": "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/information",
   "version": "2.0.0",
   "name": "ISiKCapabilityStatementMedikationInformation",
   "title": "ISiK CapabilityStatement Medikation Server - Medikationsinformation",
@@ -38,7 +38,7 @@
     "application/fhir+json"
   ],
   "instantiates": [
-    "https://gematik.de/fhir/ISiK/v2/CapabilityStatement/medikation-server/information"
+    "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/information"
   ],
   "rest": [
     {
@@ -53,7 +53,7 @@
           ],
           "type": "MedicationStatement",
           "supportedProfile": [
-            "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsInformation"
+            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsInformation"
           ],
           "interaction": [
             {
@@ -224,7 +224,7 @@
           ],
           "type": "List",
           "supportedProfile": [
-            "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationsListe"
+            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsListe"
           ],
           "interaction": [
             {
@@ -384,7 +384,7 @@
           ],
           "type": "Medication",
           "supportedProfile": [
-            "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikament"
+            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikament"
           ],
           "interaction": [
             {
@@ -515,7 +515,7 @@
           ],
           "type": "Patient",
           "supportedProfile": [
-            "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKPatient"
+            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKPatient"
           ],
           "interaction": [
             {
@@ -725,7 +725,7 @@
           ],
           "type": "Encounter",
           "supportedProfile": [
-            "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKKontaktGesundheitseinrichtung"
+            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKKontaktGesundheitseinrichtung"
           ],
           "interaction": [
             {
@@ -935,7 +935,7 @@
           ],
           "type": "Practitioner",
           "supportedProfile": [
-            "https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKPersonImGesundheitsberuf"
+            "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKPersonImGesundheitsberuf"
           ],
           "interaction": [
             {
@@ -1058,7 +1058,7 @@
             }
           ],
           "code": "transaction",
-          "documentation": "Transaktions-Bundle gemäß Profil https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransaction - Transaktions-Antwort-Bundle gemäß Profil https://gematik.de/fhir/ISiK/v2/StructureDefinition/ISiKMedikationTransactionResponse"
+          "documentation": "Transaktions-Bundle gemäß Profil https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransaction - Transaktions-Antwort-Bundle gemäß Profil https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransactionResponse"
         }
       ]
     }
