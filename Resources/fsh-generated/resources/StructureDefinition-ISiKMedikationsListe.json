@@ -12,11 +12,9 @@
     }
   ],
   "url": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsListe",
-  "version": "2.0.0-ballot",
+  "version": "2.0.0",
   "name": "ISiKMedikationsListe",
   "status": "active",
-  "experimental": false,
-  "date": "2022-04-08",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Zusammenführung einzelner MedikationsInformationen eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",

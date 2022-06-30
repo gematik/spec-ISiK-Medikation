@@ -12,11 +12,9 @@
     }
   ],
   "url": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikament",
-  "version": "2.0.0-ballot",
+  "version": "2.0.0",
   "name": "ISiKMedikament",
   "status": "active",
-  "experimental": false,
-  "date": "2022-04-08",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
