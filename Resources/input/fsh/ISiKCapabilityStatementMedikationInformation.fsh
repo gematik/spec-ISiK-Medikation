@@ -2,7 +2,7 @@ Instance: ISiKCapabilityStatementMedikationInformation
 InstanceOf: CapabilityStatement
 Usage: #definition
 * url = "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/information"
-* version = "2.0.0"
+* version = "2.0.1"
 * name = "ISiKCapabilityStatementMedikationInformation"
 * title = "ISiK CapabilityStatement Medikation Server - Medikationsinformation"
 * status = #active
