@@ -45,3 +45,5 @@ Festlegungen keine Umsetzung des ISIK-Datenobjekts MedikationsVerabreichung notw
 ISiK-Modul Terminplanung [z.B. für die Umsetzung von KHZG Fördertatbestand 2]
 - KIS
 - Patientenportal-Terminmodul
+
+Hinweise und Rückfragen zu den bestätigungsrelevante Systemen können an die [DKG-Geschäftsstelle](https://www.dkgev.de/dkg/verband-auf-einen-blick/geschaeftsstelle/) gerichtet werden.
