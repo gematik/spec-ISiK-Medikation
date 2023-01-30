@@ -13,4 +13,4 @@ publisher:
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.medikation: 1.0.10
   hl7.fhir.r4.core: 4.0.1
-  de.gematik.isik-basismodul: 2.0.4
+  de.gematik.isik-basismodul: 2.0.3
