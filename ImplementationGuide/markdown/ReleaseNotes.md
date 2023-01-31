@@ -11,7 +11,12 @@ Datum: 31.01.2023
 
 - Update Basismodul Dependency -> 2.0.4
 - weitere Änderungen an Implmentierungsleitfaden (informativ)
+----
+Version: 2.0.1
 
+Datum: 31.10.2022
+
+- Update Basismodul Dependency -> 2.0.2
 ----
 Version: 2.0.0
 
