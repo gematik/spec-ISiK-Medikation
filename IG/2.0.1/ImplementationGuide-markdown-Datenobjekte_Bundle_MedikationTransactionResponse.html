@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Implementierungsleitfaden ISiK-Modul Medikation</title>
+
+        <link rel="icon" href="static/styles/common/favicon.ico" />
+
+        <script src="static/styles/common/jquery/jquery.min.js"></script>
+        <script src="static/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="static/styles/common/main.min.css" />
+        <link rel="stylesheet" href="static/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="static/styles/common/rendering/rendering.min.css" />
+
+        <script src="static/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="static/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="static/project/ImplementationGuide/style/style.css?v=1d8ead1c6b14780" />
+
+    </head>
+
+    <body>
+
+        <div id="ig-viewer">
+
+            <div class="ig-view-content">
+
+                <div id="ig-view-twolevelmenu">
+
+                    <div class="header" role="banner" aria-label="Header">
+                        
+
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="ImplementationGuide-markdown-Einfuehrung.html">
+                Implementierungsleitfaden ISiK-Modul Medikation
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ImplementationGuide-markdown-Einfuehrung.html">
+                            Einf&#xFC;hrung
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ImplementationGuide-markdown-ReleaseNotes.html">
+                                Release Notes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ImplementationGuide-markdown-Motivation.html">
+                                Motivation
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Festlegungen <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen.html">
+                                            &#xDC;bergreifende Festlegungen
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-BestaetigungsrelevanteSysteme.html">
+                                            Best&#xE4;tigungsrelevante Systeme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Kompatibilitaet.html">
+                                            Kompatibilit&#xE4;t
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-RestApi.html">
+                                            REST-API
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-AkteureUndInteraktionen.html">
+                                            Akteure und Interaktionen
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Datenobjekte <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte.html">
+                                            Datenobjekte
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-CapabilityStatement.html">
+                                            CapabilityStatement
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_MedikationsInformation.html">
+                                            MedikationsInformation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_MedikationsListe.html">
+                                            MedikationsListe
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_MedikationsVerordnung.html">
+                                            MedikationsVerordnung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_MedikationsVerabreichung.html">
+                                            MedikationsVerabreichung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_Medikament.html">
+                                            Medikament
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_Bundle_MedikationTransaction.html">
+                                            Bundle MedikationTransaction
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_Bundle_MedikationTransactionResponse.html">
+                                            Bundle MedikationTransactionResponse
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ImplementationGuide-markdown-Terminologie.html">
+                                Terminologie
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                    </div>
+
+                    <div class="content container" role="main" aria-label="Main content">
+                        
+
+    <div class="row">
+
+
+        <div class="col-md-24">
+
+            <div id="preview-content">
+
+                <h2 id="bundle-medikationtransactionresponse-bundle">Bundle MedikationTransactionResponse <a href="https://www.hl7.org/fhir/bundle.html">(Bundle)</a></h2>
+<hr />
+<h3 id="profil">Profil</h3>
+<table class='table table-bordered '><thead><tr><th>Name</th><th>Canonical</th></tr></thead><tbody><tr><td>ISiKMedikationTransactionResponse</td><td><a target='_blank' href='https://simplifier.net/resolve?canonical=https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransactionResponse&scope=spec-isik-medikation@current'>https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransactionResponse</a></td></tr>
+</tbody></table>
+<p><div id="2e9d5f16daf449b6b8be55ed447ac750" data-level="1" class="stu3-treetable"><div class="treetable-wrapper hybrid"><div class="treetable-left-panel"><table class="treetable"><tr data-id="91ca8545-8e34-404e-84bb-2c7527cf3291" class="collapsed constraints"><td class="profile"><span class="baseIcon resource"></span><span class="constraints">Bundle</span></td><td class="profile"><span title="This element has or is affected by some invariants">I</span></td><td></td><td class="profile"><a title="Bundle
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Bundle.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-bundle.json" >Bundle</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle</pre></p></div><span><b>Short description </b></span><p><span>Contains a collection of resources</span></p><span><b>Definition </b></span><div class="markdown"><p>A container for a collection of resources.</p>
+</div><span><b>Data Type </b></span><p><a title="Bundle
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Bundle.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-bundle.json" >Bundle</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>bdl-7:</b>FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundles)<br/><code>(type = 'history') or entry.where(fullUrl.exists()).select(fullUrl&resource.meta.versionId).isDistinct()</code></li><li class=""><b>bdl-9:</b>A document must have an identifier with a system and a value<br/><code>type = 'document' implies (identifier.system.exists() and identifier.value.exists())</code></li><li class=""><b>bdl-3:</b>entry.request mandatory for batch/transaction/history, otherwise prohibited<br/><code>entry.all(request.exists() = (%resource.type = 'batch' or %resource.type = 'transaction' or %resource.type = 'history'))</code></li><li class=""><b>bdl-4:</b>entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited<br/><code>entry.all(response.exists() = (%resource.type = 'batch-response' or %resource.type = 'transaction-response' or %resource.type = 'history'))</code></li><li class=""><b>bdl-12:</b>A message must have a MessageHeader as the first resource<br/><code>type = 'message' implies entry.first().resource.is(MessageHeader)</code></li><li class=""><b>bdl-1:</b>total only when a search or history<br/><code>total.empty() or (type = 'searchset') or (type = 'history')</code></li><li class=""><b>bdl-2:</b>entry.search only when a search<br/><code>entry.search.empty() or (type = 'searchset')</code></li><li class=""><b>bdl-11:</b>A document must have a Composition as the first resource<br/><code>type = 'document' implies entry.first().resource.is(Composition)</code></li><li class=""><b>bdl-10:</b>A document must have a date<br/><code>type = 'document' implies (timestamp.hasValue())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>Entity. Role, or Act</li><li class=""><b>v2:</b>N/A</li><li class=""><b>rim:</b>N/A</li><li class=""><b>cda:</b>ClinicalDocument, if bundle.type = document</li></ul></td></tr><tr id="Bundle.identifier" data-id="737f5b4e-2ec4-4895-b811-15b1c5fae942" data-parentId="91ca8545-8e34-404e-84bb-2c7527cf3291" class=""><td class="profile"><span class="baseIcon datatype"></span><span>identifier</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Identifier
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Identifier.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-identifier.json" >Identifier</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.identifier</pre></p></div><span><b>Short description </b></span><p><span>Persistent identifier for the bundle</span></p><span><b>Definition </b></span><div class="markdown"><p>A persistent identifier for the bundle that won't change as a bundle is copied from server to server.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Persistent identity generally only matters for batches of type Document, Message, and Collection. It would not normally be populated for search and history results and servers ignore Bundle.identifier when processing batches and transactions. For Documents  the .identifier SHALL be populated such that the .identifier is globally unique.</p>
+</div><span><b>Data Type </b></span><p><a title="Identifier
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Identifier.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-identifier.json" >Identifier</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>CX / EI (occasionally, more often EI maps to a resource id or a URL)</li><li class=""><b>rim:</b>II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]</li><li class=""><b>servd:</b>Identifier</li><li class=""><b>w5:</b>FiveWs.identifier</li><li class=""><b>cda:</b>ClinicalDocument.id</li></ul></td></tr><tr id="Bundle.type" data-id="c4ff5f30-0963-4940-9fe9-367f187b0506" data-parentId="91ca8545-8e34-404e-84bb-2c7527cf3291" class="constraints"><td class="profile"><span class="baseIcon primitive"></span><span class="constraints">type</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-code.json" >code</a><span class="binding-label">Binding</span><span class="fixed-label constraints">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.type</pre></p></div><span class="constraints"><b>Short description </b></span><p><span class="constraints">Type des Bundles</span></p><span><b>Definition </b></span><div class="markdown"><p>Indicates the purpose of this bundle - how it is intended to be used.</p>
+</div><span class="constraints"><b>Comments </b></span><div class="markdown constraints"><p>fix: transaction-response</p>
+</div><span><b>Data Type </b></span><p><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-code.json" >code</a></p><span><b>Binding </b></span><p><p><span>Indicates the purpose of a bundle - how it is intended to be used.</span></p><a title="BundleType
+hl7.fhir.r4.core 4.0.1
+ValueSet-bundle-type.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/valueset-bundle-type.json" >BundleType</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/r4/terminologies.html#required" >required</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span class="constraints"><b>Fixed Value </b></span><div>
+<p><pre class=" constraints">transaction-response</pre></p></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>w5:</b>FiveWs.class</li></ul></td></tr><tr id="Bundle.timestamp" data-id="c8a70f2b-3266-4b0f-b4fa-d51b8854175f" data-parentId="91ca8545-8e34-404e-84bb-2c7527cf3291" class=""><td class="profile"><span class="baseIcon primitive"></span><span>timestamp</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-instant.json" >instant</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.timestamp</pre></p></div><span><b>Short description </b></span><p><span>When the bundle was assembled</span></p><span><b>Definition </b></span><div class="markdown"><p>The date/time that the bundle was assembled - i.e. when the resources were placed in the bundle.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>For many bundles, the timestamp is equal to .meta.lastUpdated, because they are not stored (e.g. search results). When a bundle is placed in a persistent store, .meta.lastUpdated will be usually be changed by the server. When the bundle is a message, a middleware agent altering the message (even if not stored) SHOULD update .meta.lastUpdated. .timestamp is used to track the original time of the Bundle, and SHOULD be populated.</p>
+<p>Usage:</p>
+<ul>
+<li>document : the date the document was created. Note: the composition may predate the document, or be associated with multiple documents. The date of the composition - the authoring time - may be earlier than the document assembly time</li>
+<li>message : the date that the content of the message was assembled. This date is not changed by middleware engines unless they add additional data that changes the meaning of the time of the message</li>
+<li>history : the date that the history was assembled. This time would be used as the _since time to ask for subsequent updates</li>
+<li>searchset : the time that the search set was assembled. Note that different pages MAY have different timestamps but need not. Having different timestamps does not imply that subsequent pages will represent or include changes made since the initial query</li>
+<li>transaction | transaction-response | batch | batch-response | collection : no particular assigned meaning</li>
+</ul>
+<p>The timestamp value should be greater than the lastUpdated and other timestamps in the resources in the bundle, and it should be equal or earlier than the .meta.lastUpdated on the Bundle itself.</p>
+</div><span><b>Data Type </b></span><p><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-instant.json" >instant</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>w5:</b>FiveWs.init</li><li class=""><b>cda:</b>ClinicalDocument.effectiveTime</li></ul></td></tr><tr id="Bundle.total" data-id="5fae4ff2-3847-4848-aed9-dd5426f9c53b" data-parentId="91ca8545-8e34-404e-84bb-2c7527cf3291" class=""><td class="profile"><span class="baseIcon primitive"></span><span>total</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span> <span title="This element has or is affected by some invariants">I</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="unsignedInt
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-unsignedInt.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-unsignedint.json" >unsignedInt</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.total</pre></p></div><span><b>Short description </b></span><p><span>If search, the total number of matches</span></p><span><b>Definition </b></span><div class="markdown"><p>If a set of search matches, this is the total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Only used if the bundle is a search result set. The total does not include resources such as OperationOutcome and included resources, only the total number of matching resources.</p>
+</div><span><b>Data Type </b></span><p><a title="unsignedInt
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-unsignedInt.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-unsignedint.json" >unsignedInt</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.link" data-id="fc710929-d5b3-4757-900d-74f64d87a3d6" data-parentId="91ca8545-8e34-404e-84bb-2c7527cf3291" class="collapsed"><td class="profile"><span class="baseIcon backboneElement"></span><span>link</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.link</pre></p></div><span><b>Short description </b></span><p><span>Links related to this Bundle</span></p><span><b>Definition </b></span><div class="markdown"><p>A series of links that provide context to this bundle.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. <a href="http://en.wikipedia.org/wiki/HATEOAS">HATEOAS</a>).</p>
+<p>Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was <a href="http.html#read">read</a> directly.</p>
+<p>This specification defines some specific uses of Bundle.link for <a href="search.html#conformance">searching</a> and <a href="http.html#paging">paging</a>, but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.link.relation" data-id="f727c50b-a0c6-489d-b645-e213245f30aa" data-parentId="fc710929-d5b3-4757-900d-74f64d87a3d6" class=""><td class="profile"><span class="baseIcon primitive"></span><span>relation</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-string.json" >string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.link.relation</pre></p></div><span><b>Short description </b></span><p><span>See http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1</span></p><span><b>Definition </b></span><div class="markdown"><p>A name which details the functional use for this link - see <a href="http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1">http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1</a>.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-string.json" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.link.url" data-id="613326e8-26f2-4cbe-8ceb-89aa74164b53" data-parentId="fc710929-d5b3-4757-900d-74f64d87a3d6" class=""><td class="profile"><span class="baseIcon primitive"></span><span>url</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-uri.json" >uri</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.link.url</pre></p></div><span><b>Short description </b></span><p><span>Reference details for the link</span></p><span><b>Definition </b></span><div class="markdown"><p>The reference details for the link.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>see http://en.wikipedia.org/wiki/Uniform_resource_identifier</p>
+</div><span><b>Data Type </b></span><p><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-uri.json" >uri</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry" data-id="f65bfc28-ece8-4316-b76f-0205e95fb8cb" data-parentId="91ca8545-8e34-404e-84bb-2c7527cf3291" class="collapsed constraints"><td class="profile"><span class="baseIcon backboneElement"></span><span class="constraints">entry</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span> <span title="This element has or is affected by some invariants">I</span></td><td class="profile"><span class="constraints">1</span><span class="constraints">..</span><span>*</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.entry</pre></p></div><span class="constraints"><b>Short description </b></span><p><span class="constraints">Der einzelne Eintrag zur Interaktion</span></p><span><b>Definition </b></span><div class="markdown"><p>An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>bdl-8:</b>fullUrl cannot be a version specific reference<br/><code>fullUrl.contains('/_history/').not()</code></li><li class=""><b>bdl-5:</b>must be a resource unless there&#39;s a request or response<br/><code>resource.exists() or request.exists() or response.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.link" data-id="255ac66b-6497-4e7a-9a34-dc1bec728c62" data-parentId="f65bfc28-ece8-4316-b76f-0205e95fb8cb" class="striped constraints"><td class="profile"><span class="baseIcon nameReference"></span><span class="constraints">link</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">0</span></td><td class="profile">see (<a  href="#http://hl7.org/fhir/StructureDefinition/Bundle#Bundle.link" >link</a>)</td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.link</pre></p></div><span><b>Short description </b></span><p><span>Links related to this entry</span></p><span><b>Definition </b></span><div class="markdown"><p>A series of links that provide context to this entry.</p>
+</div></td></tr><tr id="Bundle.entry.fullUrl" data-id="7c9e8aa1-e3d0-4fbe-8489-64fe3629cb48" data-parentId="f65bfc28-ece8-4316-b76f-0205e95fb8cb" class="constraints"><td class="profile"><span class="baseIcon primitive"></span><span class="constraints">fullUrl</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-uri.json" >uri</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.entry.fullUrl</pre></p></div><span class="constraints"><b>Short description </b></span><p><span class="constraints">vollst&#228;ndige URL der Ressource</span></p><span><b>Definition </b></span><div class="markdown"><p>The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that:</p>
+<ul>
+<li>fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)</li>
+<li>Results from operations might involve resources that are not identified.</li>
+</ul>
+</div><span><b>Comments </b></span><div class="markdown"><p>fullUrl might not be <a href="bundle.html#bundle-unique">unique in the context of a resource</a>. Note that since <a href="references.html">FHIR resources do not need to be served through the FHIR API</a>, the fullURL might be a URN or an absolute URL that does not end with the logical id of the resource (Resource.id). However, but if the fullUrl does look like a RESTful server URL (e.g. meets the <a href="references.html#regex">regex</a>, then the 'id' portion of the fullUrl SHALL end with the Resource.id.</p>
+<p>Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).</p>
+</div><span><b>Data Type </b></span><p><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-uri.json" >uri</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.resource" data-id="aecb1844-55a9-430d-916e-c9e33d7f12c5" data-parentId="f65bfc28-ece8-4316-b76f-0205e95fb8cb" class="constraints"><td class="profile"><span class="baseIcon datatype"></span><span class="constraints">resource</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Resource
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Resource.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-resource.json" >Resource</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.entry.resource</pre></p></div><span class="constraints"><b>Short description </b></span><p><span class="constraints">Die Ressourcen-Instanz der Interaktion</span></p><span><b>Definition </b></span><div class="markdown"><p>The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.</p>
+</div><span><b>Data Type </b></span><p><a title="Resource
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Resource.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-resource.json" >Resource</a></p><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>Entity. Role, or Act</li></ul></td></tr><tr id="Bundle.entry.search" data-id="5e8656d5-5fd8-4474-b891-2e9a7bb062e5" data-parentId="f65bfc28-ece8-4316-b76f-0205e95fb8cb" class="collapsed striped constraints"><td class="profile"><span class="baseIcon backboneElement"></span><span class="constraints">search</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span> <span title="This element has or is affected by some invariants">I</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">0</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.search</pre></p></div><span><b>Short description </b></span><p><span>Search related information</span></p><span><b>Definition </b></span><div class="markdown"><p>Information about the search process that lead to the creation of this entry.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.request" data-id="1cb42c67-10d7-482d-9b22-d926e23c89e8" data-parentId="f65bfc28-ece8-4316-b76f-0205e95fb8cb" class="collapsed striped constraints"><td class="profile"><span class="baseIcon backboneElement"></span><span class="constraints">request</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span> <span title="This element has or is affected by some invariants">I</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">0</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.request</pre></p></div><span><b>Short description </b></span><p><span>Additional execution information (transaction/batch/history)</span></p><span><b>Definition </b></span><div class="markdown"><p>Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response" data-id="8384571d-368c-4334-b98e-1a1596739df2" data-parentId="f65bfc28-ece8-4316-b76f-0205e95fb8cb" class="collapsed constraints"><td class="profile"><span class="baseIcon backboneElement"></span><span class="constraints">response</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span> <span title="This element has or is affected by some invariants">I</span></td><td class="profile"><span class="constraints">1</span><span class="constraints">..</span><span>1</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response</pre></p></div><span class="constraints"><b>Short description </b></span><p><span class="constraints">HTTP-Response des Servers innerhalb der Transaktions-Antwort</span></p><span><b>Definition </b></span><div class="markdown"><p>Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-backboneelement.json" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.status" data-id="8f08f1ef-b3c4-46d8-8a15-707ed3bc5bfd" data-parentId="8384571d-368c-4334-b98e-1a1596739df2" class="constraints"><td class="profile"><span class="baseIcon primitive"></span><span class="constraints">status</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-string.json" >string</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.status</pre></p></div><span class="constraints"><b>Short description </b></span><p><span class="constraints">HTTP-Statuscode</span></p><span><b>Definition </b></span><div class="markdown"><p>The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-string.json" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.location" data-id="b496f167-3bf7-4416-8dc3-eee72f133213" data-parentId="8384571d-368c-4334-b98e-1a1596739df2" class="constraints"><td class="profile"><span class="baseIcon primitive"></span><span class="constraints">location</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-uri.json" >uri</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.location</pre></p></div><span class="constraints"><b>Short description </b></span><p><span class="constraints">Location der Ressource (URL) auf dem Server</span></p><span><b>Definition </b></span><div class="markdown"><p>The location header created by processing this operation, populated if the operation returns a location.</p>
+</div><span class="constraints"><b>Comments </b></span><div class="markdown constraints"><p>Gemäß FHIR-Spezifikation MUSS hier der Pfad zur exakten Version (History) enthalten sein, wenn der Server History unterstützt.</p>
+</div><span><b>Data Type </b></span><p><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-uri.json" >uri</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.etag" data-id="4a2f05b8-dfa1-4f98-b3f2-777f1e5bad0a" data-parentId="8384571d-368c-4334-b98e-1a1596739df2" class=""><td class="profile"><span class="baseIcon primitive"></span><span>etag</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-string.json" >string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.etag</pre></p></div><span><b>Short description </b></span><p><span>The Etag for the resource (if relevant)</span></p><span><b>Definition </b></span><div class="markdown"><p>The Etag for the resource, if the operation for the entry produced a versioned resource (see <a href="http.html#versioning">Resource Metadata and Versioning</a> and <a href="http.html#concurrency">Managing Resource Contention</a>).</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Etags match the Resource.meta.versionId. The ETag has to match the version id in the header if a resource is included.</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-string.json" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.lastModified" data-id="7e09f080-62ad-4f9e-a5f8-b1b9a99468c0" data-parentId="8384571d-368c-4334-b98e-1a1596739df2" class=""><td class="profile"><span class="baseIcon primitive"></span><span>lastModified</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-instant.json" >instant</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.lastModified</pre></p></div><span><b>Short description </b></span><p><span>Server&#39;s date time modified</span></p><span><b>Definition </b></span><div class="markdown"><p>The date/time that the resource was modified on the server.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>This has to match the same time in the meta header (meta.lastUpdated) if a resource is included.</p>
+</div><span><b>Data Type </b></span><p><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-instant.json" >instant</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.outcome" data-id="adc03b9c-8dfc-4e0a-b868-f0ce3dab3fef" data-parentId="8384571d-368c-4334-b98e-1a1596739df2" class="constraints"><td class="profile"><span class="baseIcon datatype"></span><span class="constraints">outcome</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Resource
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Resource.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-resource.json" >Resource</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.outcome</pre></p></div><span class="constraints"><b>Short description </b></span><p><span class="constraints">OperationOutcome-Ressource zur R&#252;ckgabe von Fehler-Details sowie Informationen.</span></p><span><b>Definition </b></span><div class="markdown"><p>An OperationOutcome containing hints and warnings produced as part of processing this entry in a batch or transaction.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>For a POST/PUT operation, this is the equivalent outcome that would be returned for prefer = operationoutcome - except that the resource is always returned whether or not the outcome is returned.</p>
+<p>This outcome is not used for error responses in batch/transaction, only for hints and warnings. In a batch operation, the error will be in Bundle.entry.response, and for transaction, there will be a single OperationOutcome instead of a bundle in the case of an error.</p>
+</div><span><b>Data Type </b></span><p><a title="Resource
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Resource.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-resource.json" >Resource</a></p><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>Entity. Role, or Act</li></ul></td></tr><tr id="Bundle.signature" data-id="e50777cf-1e3e-4c87-ad15-3d4c1e28a4e3" data-parentId="91ca8545-8e34-404e-84bb-2c7527cf3291" class=""><td class="profile"><span class="baseIcon datatype"></span><span>signature</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Signature
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Signature.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-signature.json" >Signature</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.signature</pre></p></div><span><b>Short description </b></span><p><span>Digital Signature</span></p><span><b>Definition </b></span><div class="markdown"><p>Digital Signature - base64 encoded. XML-DSig or a JWT.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>A Signature holds an electronic representation of a signature and its supporting context in a FHIR accessible form. The signature may either be a cryptographic type (XML DigSig or a JWS), which is able to provide non-repudiation proof, or it may be a graphical image that represents a signature or a signature process. This element allows capturing signatures on documents, messages, transactions or even search responses, to support content-authentication, non-repudiation or other business cases. This is primarily relevant where the bundle may travel through multiple hops or via other mechanisms where HTTPS non-repudiation is insufficient.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>The signature could be created by the &quot;author&quot; of the bundle or by the originating device.   Requirements around inclusion of a signature, verification of signatures and treatment of signed/non-signed bundles is implementation-environment specific.</p>
+</div><span><b>Data Type </b></span><p><a title="Signature
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Signature.json" href="/packages/hl7.fhir.r4.core/4.0.1/files/package/structuredefinition-signature.json" >Signature</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>N/A</li></ul></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable2e9d5f16daf449b6b8be55ed447ac750 = new Stu3TreeTable(false);
+resourceTreeTable2e9d5f16daf449b6b8be55ed447ac750.init("2e9d5f16daf449b6b8be55ed447ac750");
+}
+})();
+</script></p>
+<h3 id="anmerkungen-zu-must-support-feldern">Anmerkungen zu Must-Support-Feldern</h3>
+<table class='table table-bordered '><thead><tr><th>Feldname</th><th>Kurzbeschreibung</th><th>Hinweise</th></tr></thead><tbody><tr><td>Bundle.type</td><td>Type des Bundles</td><td><p>fix: transaction-response</p>
+</td></tr>
+<tr><td>Bundle.entry</td><td>Der einzelne Eintrag zur Interaktion</td><td></td></tr>
+<tr><td>Bundle.entry.fullUrl</td><td>vollständige URL der Ressource</td><td></td></tr>
+<tr><td>Bundle.entry.resource</td><td>Die Ressourcen-Instanz der Interaktion</td><td></td></tr>
+<tr><td>Bundle.entry.response</td><td>HTTP-Response des Servers innerhalb der Transaktions-Antwort</td><td></td></tr>
+<tr><td>Bundle.entry.response.status</td><td>HTTP-Statuscode</td><td></td></tr>
+<tr><td>Bundle.entry.response.location</td><td>Location der Ressource (URL) auf dem Server</td><td><p>Gemäß FHIR-Spezifikation MUSS hier der Pfad zur exakten Version (History) enthalten sein, wenn der Server History unterstützt.</p>
+</td></tr>
+<tr><td>Bundle.entry.response.outcome</td><td>OperationOutcome-Ressource zur Rückgabe von Fehler-Details sowie Informationen.</td><td></td></tr>
+</tbody></table>
+<h3 id="beispiele">Beispiele</h3>
+<p>Valides Beispiel für das Profil MedikationTransactionResponse:</p>
+<p><pre class="resource-validation-xml"><pre><span class="brace">{</span>
+    <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Bundle</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ExampleISiKMedikationTransactionResponse</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+            <span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransactionResponse</span><span class="string">&quot;</span>
+        <span class="brace">]</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">type</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">transaction-response</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">entry</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">fullUrl</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://my.target.fhir.server.local/MedicationStatement/ExampleISiKMedikationsInformation1</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">resource</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">MedicationStatement</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ExampleISiKMedikationsInformation1</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsInformation</span><span class="string">&quot;</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">dosage</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                    <span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">doseAndRate</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                            <span class="brace">{</span>
+                                <span class="element">&quot;</span><span class="element">doseQuantity</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                                    <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                    <span class="element">&quot;</span><span class="element">value</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">1</span><span class="symbol">,</span>
+                                    <span class="element">&quot;</span><span class="element">unit</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Brausetablette</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                    <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">1</span><span class="string">&quot;</span>
+                                <span class="brace">}</span>
+                            <span class="brace">}</span>
+                        <span class="brace">]</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">timing</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">repeat</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                                <span class="element">&quot;</span><span class="element">when</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                                    <span class="string">&quot;</span><span class="string">MORN</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                    <span class="string">&quot;</span><span class="string">NOON</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                    <span class="string">&quot;</span><span class="string">EVE</span><span class="string">&quot;</span>
+                                <span class="brace">]</span>
+                            <span class="brace">}</span>
+                        <span class="brace">}</span>
+                    <span class="brace">}</span>
+                <span class="brace">]</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">status</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">active</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">medicationReference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Medication/ExampleISiKMedikament1</span><span class="string">&quot;</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">subject</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/PatientinMusterfrau</span><span class="string">&quot;</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">context</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Encounter/Versorgungsstellenkontakt</span><span class="string">&quot;</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">effectivePeriod</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">start</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2021-07-01</span><span class="string">&quot;</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">dateAsserted</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2021-07-01</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">reasonReference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                    <span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition/BehandlungsDiagnoseFreitext</span><span class="string">&quot;</span>
+                    <span class="brace">}</span>
+                <span class="brace">]</span>
+            <span class="brace">}</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">response</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">status</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">201</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">location</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://my.fhir.server.local/MedicationStatement/ExampleISiKMedikationsInformation1</span><span class="string">&quot;</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span><span class="symbol">,</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">fullUrl</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://my.target.fhir.server.local/Medication/ExampleISiKMedikament1</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">resource</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Medication</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ExampleISiKMedikament1</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikament</span><span class="string">&quot;</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://fhir.de/CodeSystem/bfarm/atc</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">V03AB23</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Acetylcystein</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">status</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">active</span><span class="string">&quot;</span>
+            <span class="brace">}</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">response</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">status</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">201</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">location</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://my.fhir.server.local/Medication/ExampleISiKMedikament1</span><span class="string">&quot;</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span>
+    <span class="brace">]</span>
+<span class="brace">}</span></pre></pre></p>
+<h3 id="interaktionen">Interaktionen</h3>
+<p>TransactionResponse-Bundles werden nicht persistiert, sondern ausschließlich im Kontext von FHIR-Transaktionen verwendet, vgl. <a href="http://www.hl7.org/fhir/http.html#transaction">FHIR RESTful API - Batch/Transaction</a>.</p>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+                
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
