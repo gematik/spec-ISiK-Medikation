@@ -24,7 +24,7 @@ RuleSet: Meta-CapabilityStatementVerordnung
 * url = "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/verordnung"
 
 RuleSet: Meta-CapabilityStatementVerabreichung
-* status = #active
+* status = #draft
 * experimental = false
 * version = "3.0.0-rc"
 * publisher = "gematik GmbH"
