@@ -4,8 +4,8 @@ FSHOnly: true
 applyExtensionMetadataToRoot: false
 id: Implementierungsleitfaden ISiK-Modul Medikation
 name: Implementierungsleitfaden ISiK-Modul Medikation
-status: active
-version: 2.0.2
+status: draft
+version: 3.0.0-rc
 publisher:
   name: Gematik GmbH
   url: https://www.gematik.de/

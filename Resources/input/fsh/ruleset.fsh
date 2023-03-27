@@ -1,33 +1,33 @@
 RuleSet: Meta
-* ^status = #active
+* ^status = #draft
 * ^experimental = false
 * ^publisher = "gematik GmbH"
-* ^version = "2.0.2"
-* ^date = "2023-01-31"
+* ^version = "3.0.0-rc"
+* ^date = "2023-03-27"
 
 RuleSet: Meta-CapabilityStatementInformation
-* status = #active
+* status = #draft
 * experimental = false
-* version = "2.0.2"
+* version = "3.0.0-rc"
 * publisher = "gematik GmbH"
-* date = "2023-01-31"
-* implementationGuide = "https://gematik.de/fhir/isik/v2/Medikation/ImplementationGuide|2.0.2"
+* date = "2023-03-27"
+* implementationGuide = "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.0-rc"
 * url = "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/information"
 
 RuleSet: Meta-CapabilityStatementVerordnung
-* status = #active
+* status = #draft
 * experimental = false
-* version = "2.0.2"
+* version = "3.0.0-rc"
 * publisher = "gematik GmbH"
-* date = "2023-01-31"
-* implementationGuide = "https://gematik.de/fhir/isik/v2/Medikation/ImplementationGuide|2.0.2"
+* date = "2023-03-27"
+* implementationGuide = "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.0-rc"
 * url = "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/verordnung"
 
 RuleSet: Meta-CapabilityStatementVerabreichung
 * status = #active
 * experimental = false
-* version = "2.0.2"
+* version = "3.0.0-rc"
 * publisher = "gematik GmbH"
-* date = "2023-01-31"
-* implementationGuide = "https://gematik.de/fhir/isik/v2/Medikation/ImplementationGuide|2.0.2"
+* date = "2023-03-27"
+* implementationGuide = "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.0-rc"
 * url = "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/verabreichung"
