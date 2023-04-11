@@ -12,7 +12,7 @@ RuleSet: Meta-CapabilityStatementInformation
 * publisher = "gematik GmbH"
 * date = "2023-03-27"
 * implementationGuide = "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.0-rc"
-* url = "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/information"
+* url = "https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/information"
 
 RuleSet: Meta-CapabilityStatementVerordnung
 * status = #draft
@@ -21,7 +21,7 @@ RuleSet: Meta-CapabilityStatementVerordnung
 * publisher = "gematik GmbH"
 * date = "2023-03-27"
 * implementationGuide = "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.0-rc"
-* url = "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/verordnung"
+* url = "https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verordnung"
 
 RuleSet: Meta-CapabilityStatementVerabreichung
 * status = #draft
@@ -30,4 +30,4 @@ RuleSet: Meta-CapabilityStatementVerabreichung
 * publisher = "gematik GmbH"
 * date = "2023-03-27"
 * implementationGuide = "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.0-rc"
-* url = "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/verabreichung"
+* url = "https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verabreichung"
