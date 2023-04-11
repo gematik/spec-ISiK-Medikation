@@ -16,7 +16,7 @@
   "name": "ISiKMedikament",
   "status": "draft",
   "experimental": false,
-  "date": "2023-03-27",
+  "date": "2023-04-11",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
