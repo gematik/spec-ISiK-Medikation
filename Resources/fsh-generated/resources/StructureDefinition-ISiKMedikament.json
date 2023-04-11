@@ -11,12 +11,12 @@
       "valueCode": "business"
     }
   ],
-  "url": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikament",
-  "version": "2.0.2",
+  "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikament",
+  "version": "3.0.0-rc",
   "name": "ISiKMedikament",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
-  "date": "2023-01-31",
+  "date": "2023-03-27",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -58,7 +58,7 @@
             "severity": "error",
             "human": "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden.",
             "expression": "code.exists() or ingredient.exists()",
-            "source": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikament"
+            "source": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikament"
           }
         ]
       },
