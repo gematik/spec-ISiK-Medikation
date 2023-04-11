@@ -11,12 +11,12 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationTransaction",
-  "version": "2.0.2",
+  "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransaction",
+  "version": "3.0.0-rc",
   "name": "ISiKMedikationTransaction",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
-  "date": "2023-01-31",
+  "date": "2023-04-11",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil definiert die Transaktions-Bundles im Rahmen von ISiK-Medikations-Szenarien.",
   "fhirVersion": "4.0.1",
