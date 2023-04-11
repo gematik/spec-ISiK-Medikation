@@ -1,0 +1,622 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ISiKMedikationsVerabreichung",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Medications"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsVerabreichung",
+  "version": "3.0.0-rc",
+  "name": "ISiKMedikationsVerabreichung",
+  "status": "draft",
+  "experimental": false,
+  "date": "2023-04-11",
+  "publisher": "gematik GmbH",
+  "description": "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "w3c.prov",
+      "uri": "http://www.w3.org/ns/prov",
+      "name": "W3C PROV"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationAdministration",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationAdministration.id",
+        "path": "MedicationAdministration.id",
+        "short": "eindeutige ID der Ressource auf dem Server",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.status",
+        "path": "MedicationAdministration.status",
+        "short": "Status der Verabreichungsinformation",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept",
+        "path": "MedicationAdministration.medicationCodeableConcept",
+        "short": "Medikament in codierter Form oder ggf. als Freitext",
+        "comment": "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding",
+        "sliceName": "PZN",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN.system",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN.code",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN.display",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding",
+        "sliceName": "ATC-DE",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE.system",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE.code",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE.display",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:WG14",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding",
+        "sliceName": "WG14",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/abdata/wg14"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:WG14.system",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:WG14.code",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:WG14.display",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationCodeableConcept.text",
+        "path": "MedicationAdministration.medicationCodeableConcept.text",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationReference",
+        "path": "MedicationAdministration.medicationReference",
+        "short": "Referenz auf das Medikament (Medication-Ressource)",
+        "comment": "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Medication"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medicationReference.reference",
+        "path": "MedicationAdministration.medicationReference.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.subject",
+        "path": "MedicationAdministration.subject",
+        "short": "Referenz auf den Patienten",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.subject.reference",
+        "path": "MedicationAdministration.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.context",
+        "path": "MedicationAdministration.context",
+        "short": "Referenz auf den Abteilungskontakt",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.context.reference",
+        "path": "MedicationAdministration.context.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.effectiveDateTime",
+        "path": "MedicationAdministration.effectiveDateTime",
+        "short": "Zeitpunkt der Verabreichung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.effectivePeriod",
+        "path": "MedicationAdministration.effectivePeriod",
+        "short": "Zeitraum der Verabreichung",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.effectivePeriod.start",
+        "path": "MedicationAdministration.effectivePeriod.start",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.effectivePeriod.end",
+        "path": "MedicationAdministration.effectivePeriod.end",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.performer",
+        "path": "MedicationAdministration.performer",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.performer.actor",
+        "path": "MedicationAdministration.performer.actor",
+        "short": "Referenz auf die verabreichende Person",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.performer.actor.reference",
+        "path": "MedicationAdministration.performer.actor.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.reasonReference",
+        "path": "MedicationAdministration.reasonReference",
+        "short": "Grund der Medikation (Referenz)",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.reasonReference.reference",
+        "path": "MedicationAdministration.reasonReference.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.note",
+        "path": "MedicationAdministration.note",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.note.text",
+        "path": "MedicationAdministration.note.text",
+        "short": "Freitext-Notiz",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage",
+        "path": "MedicationAdministration.dosage",
+        "short": "Dosierungsangaben",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.text",
+        "path": "MedicationAdministration.dosage.text",
+        "short": "Freitext-Dosierungsangabe",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.site",
+        "path": "MedicationAdministration.dosage.site",
+        "short": "Körperstelle der Verabreichung",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.site.coding",
+        "path": "MedicationAdministration.dosage.site.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.site.coding:SNOMED-CT",
+        "path": "MedicationAdministration.dosage.site.coding",
+        "sliceName": "SNOMED-CT",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.site.coding:SNOMED-CT.system",
+        "path": "MedicationAdministration.dosage.site.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.site.coding:SNOMED-CT.code",
+        "path": "MedicationAdministration.dosage.site.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.site.coding:SNOMED-CT.display",
+        "path": "MedicationAdministration.dosage.site.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.site.text",
+        "path": "MedicationAdministration.dosage.site.text",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route",
+        "path": "MedicationAdministration.dosage.route",
+        "short": "Route",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding",
+        "path": "MedicationAdministration.dosage.route.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:EDQM",
+        "path": "MedicationAdministration.dosage.route.coding",
+        "sliceName": "EDQM",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://standardterms.edqm.eu"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration"
+        }
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:EDQM.system",
+        "path": "MedicationAdministration.dosage.route.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:EDQM.code",
+        "path": "MedicationAdministration.dosage.route.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:EDQM.display",
+        "path": "MedicationAdministration.dosage.route.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT",
+        "path": "MedicationAdministration.dosage.route.coding",
+        "sliceName": "SNOMED-CT",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/isik/v3/Medikation/ValueSet/SctRouteOfAdministration"
+        }
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.system",
+        "path": "MedicationAdministration.dosage.route.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.code",
+        "path": "MedicationAdministration.dosage.route.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.display",
+        "path": "MedicationAdministration.dosage.route.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.route.text",
+        "path": "MedicationAdministration.dosage.route.text",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.dose",
+        "path": "MedicationAdministration.dosage.dose",
+        "short": "verabreichte Dosis",
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.dose.value",
+        "path": "MedicationAdministration.dosage.dose.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.dose.unit",
+        "path": "MedicationAdministration.dosage.dose.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.dose.system",
+        "path": "MedicationAdministration.dosage.dose.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.dose.code",
+        "path": "MedicationAdministration.dosage.dose.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio",
+        "path": "MedicationAdministration.dosage.rateRatio",
+        "short": "Verabreichungs-Rate (Verhältnis)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.numerator",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator",
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.numerator.value",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.numerator.unit",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.numerator.system",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.numerator.code",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.denominator",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator",
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.denominator.value",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.denominator.unit",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.denominator.system",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateRatio.denominator.code",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateQuantity",
+        "path": "MedicationAdministration.dosage.rateQuantity",
+        "short": "Verabreichungs-Rate",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
+          }
+        ],
+        "patternQuantity": {
+          "system": "http://unitsofmeasure.org"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateQuantity.value",
+        "path": "MedicationAdministration.dosage.rateQuantity.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateQuantity.unit",
+        "path": "MedicationAdministration.dosage.rateQuantity.unit",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateQuantity.system",
+        "path": "MedicationAdministration.dosage.rateQuantity.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.dosage.rateQuantity.code",
+        "path": "MedicationAdministration.dosage.rateQuantity.code",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

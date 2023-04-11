@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Implementierungsleitfaden ISiK-Modul Medikation</title>
+
+        <link rel="icon" href="static/styles/common/favicon.ico" />
+
+        <script src="static/styles/common/jquery/jquery.min.js"></script>
+        <script src="static/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="static/styles/common/main.min.css" />
+        <link rel="stylesheet" href="static/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="static/styles/common/rendering/rendering.min.css" />
+
+        <script src="static/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="static/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="static/styles/twolevelmenu/style.css?v=1d96c808b21c080" />
+
+    </head>
+
+    <body>
+
+        <div id="ig-viewer">
+
+            <div class="ig-view-content">
+
+                <div id="ig-view-twolevelmenu">
+
+                    <div class="header" role="banner" aria-label="Header">
+                        
+
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="ImplementationGuide-markdown-Einfuehrung.html">
+                Implementierungsleitfaden ISiK-Modul Medikation
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ImplementationGuide-markdown-Einfuehrung.html">
+                            Einf&#xFC;hrung
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ImplementationGuide-markdown-ReleaseNotes.html">
+                                Release Notes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ImplementationGuide-markdown-ReleaseMatrix.html">
+                                Release Matrix
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ImplementationGuide-markdown-Motivation.html">
+                                Motivation
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Festlegungen <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen.html">
+                                            &#xDC;bergreifende Festlegungen
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-BestaetigungsrelevanteSysteme.html">
+                                            Best&#xE4;tigungsrelevante Systeme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Kompatibilitaet.html">
+                                            Kompatibilit&#xE4;t
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-RestApi.html">
+                                            REST-API
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-AkteureUndInteraktionen.html">
+                                            Akteure und Interaktionen
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Datenobjekte <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte.html">
+                                            Datenobjekte
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-CapabilityStatement.html">
+                                            CapabilityStatement
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_MedikationsInformation.html">
+                                            MedikationsInformation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_MedikationsListe.html">
+                                            MedikationsListe
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_MedikationsVerordnung.html">
+                                            MedikationsVerordnung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_MedikationsVerabreichung.html">
+                                            MedikationsVerabreichung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_Medikament.html">
+                                            Medikament
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_Bundle_MedikationTransaction.html">
+                                            Bundle MedikationTransaction
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte_Bundle_MedikationTransactionResponse.html">
+                                            Bundle MedikationTransactionResponse
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ImplementationGuide-markdown-Terminologie.html">
+                                Terminologie
+                            </a>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                    </div>
+
+                    <div class="content container" role="main" aria-label="Main content">
+                        
+
+    <div class="row">
+
+
+        <div class="col-md-24">
+
+            <div id="preview-content">
+
+                <h2 id="konformitatserklarung-capabilitystatement">Konformitätserklärung <a href="http://hl7.org/fhir/capabilitystatement.html">(CapabilityStatement)</a></h2>
+<p>Jede Instanz eines bestätigungsrelevanten Systems MUSS an ihrem Endpunkt eine <a href="http://hl7.org/fhir/capabilitystatement.html">CapabilityStatement</a>-Ressource bereitstellen.</p>
+<p>Hierzu MUSS die <a href="http://hl7.org/fhir/http.html#capabilities">capabilities-Interaktion gemäß FHIR-Spezifikation</a> unterstützt werden.
+Der MODE-Parameter kann ignoriert werden.</p>
+<p>Die CapabilityStatements in dieser Spezifikation stellen die Anforderungen seitens der gematik für den jeweiligen Bereich dieser Spezifikation dar. (<code>kind</code> = &quot;requirements&quot;). Zur Unterscheidung von Anforderungen, die erfüllt werden MÜSSEN gegenüber jenen, die erfüllt werden KÖNNEN, wird die <a href="http://hl7.org/fhir/extension-capabilitystatement-expectation.html">CapabilityStatement-Expectation</a>-Extension mit den möglichen Werten &quot;SHALL&quot; (=MUSS) und &quot;MAY&quot; (=KANN) verwendet.</p>
+<p>Eine Server-Instanz MUSS ihrerseits ein CapabilityStatement vom <code>kind</code>= &quot;instance&quot; liefern und im Element <code>software</code> den Namen und die Versionsnummer angeben.</p>
+<p>Darüber hinaus MUSS in 'CapabilityStatement.instantiates' die Canonical URL des nachfolgenden CapabilityStatement in der jeweiligen CapabilityStatement Instanz angegeben werden.</p>
+<p>Das CapabilityStatement der Instanz MUSS alle Funktionalitäten auflisten, die in dem folgenden, für den zu bestätigenden Bereich relevanten, CapabilityStatement mit &quot;SHALL&quot; gekennzeichnet sind. Das CapabilityStatement KANN darüber hinaus die mit &quot;MAY&quot; gekennzeichneten Funktionalitäten, sowie weitere Funktionalitäten auflisten, sofern diese in der Instanz implementiert wurden.</p>
+<p>Implementiert ein System mehr als einen der drei Bereiche dieser Spezifikation, so MUSS dessen CapabilityStatement die Vereinigung der Funktionalitäten der betreffenden CapabilityStatements dieses Implementierungsleitfadens enthalten. Bei gleichartigen Elementen mit unterschiedlicher Anforderungsstärke (expectation) MUSS die stärkere Anforderung umgesetzt werden (&quot;SHALL&quot; gilt vor &quot;MAY&quot;). Ebenso MÜSSEN in diesem Fall die Canonical URLs der CapabilityStatements aller unten genannter implementierter Bereiche in 'CapabilityStatement.instantiates' angegeben werden.</p>
+<p>Die Verwendung der <a href="http://hl7.org/fhir/extension-capabilitystatement-expectation.html">CapabilityStatement-Expectation</a>-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.</p>
+<p>Die für dieses Modul bestätigungsrelevanten Teile des <a href="https://simplifier.net/guide/implementierungsleitfadenisik-basismodul/ImplementationGuide-markdown-Einfuehrung?version=current">Moduls &quot;Basis&quot;</a> sind in den CapabilityStatements ebenfalls enthalten.</p>
+<h3 id="capabilitystatement-requirement-isik-medikation-bereich-medikationsinformation">CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsinformation</h3>
+<p>Canonical: <a href="https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/information">https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/information</a></p>
+<p><div xmlns="http://www.w3.org/1999/xhtml"><p><h3>REST Capabilities</h3></p><table class="regular"><tr><td>Mode</td><td>Server</td></tr><tr><td>transaction</td><td>SHALL</td><td><div><p xmlns="">Transaktions-Bundle gemäß Profil https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransaction - Transaktions-Antwort-Bundle gemäß Profil https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransactionResponse</p></div></td></tr></table><p><h4>Resource Interactions</h4></p><p><table class="small"><tr><th><b>Resource Type</b></th><th><b>Supported Profiles</b></th><th><b>Create</b></th><th><b>Read</b></th><th><b>Update</b></th><th><b>SearchType</b></th></tr><tr><td>MedicationStatement</td><td><ul /><li /><a href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsInformation.json" title="Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien.">ISiKMedikationsInformation</a></td><td>SHALL</td><td>SHALL</td><td>SHALL</td><td>SHALL</td></tr><tr><td>List</td><td><ul /><li /><a href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsListe.json" title="Dieses Profil ermöglicht die Zusammenführung einzelner MedikationsInformationen eines Patienten in ISiK Szenarien.">ISiKMedikationsListe</a></td><td>SHALL</td><td>SHALL</td><td>SHALL</td><td>SHALL</td></tr><tr><td>Medication</td><td><ul /><li /><a href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikament.json" title="Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.">ISiKMedikament</a></td><td>SHALL</td><td>SHALL</td><td>SHALL</td><td>SHALL</td></tr><tr><td>Patient</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKPatient.json" title="ISiKPatient&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKPatient.json">ISiKPatient</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr><tr><td>Encounter</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKKontaktGesundheitseinrichtung.json" title="ISiKKontaktGesundheitseinrichtung&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKKontaktGesundheitseinrichtung.json">ISiKKontaktGesundheitseinrichtung</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr><tr><td>Practitioner</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKPersonImGesundheitsberuf.json" title="ISiKPersonImGesundheitsberuf&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKPersonImGesundheitsberuf.json">ISiKPersonImGesundheitsberuf</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr></table></p><p><h4>Search Parameters per resource type</h4></p><p><b>MedicationStatement</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>context</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>effective</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>SHALL</td></tr><tr><td>medication</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>part-of</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr></table><p>Supported Includes:</p><ul><li>MedicationStatement:medication</li><li>MedicationStatement:patient</li><li>MedicationStatement:context</li></ul><p><b>List</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>date</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>SHALL</td></tr><tr><td>encounter</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>item</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr></table><p>Supported Includes:</p><ul><li>List:patient</li><li>List:encounter</li><li>List:item</li></ul><p><b>Medication</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>form</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>ingredient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>ingredient-code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr></table><p>Supported Includes:</p><ul><li>Medication:ingredient</li></ul><p><b>Patient</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>family</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>given</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>birthdate</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>SHALL</td></tr><tr><td>gender</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-city</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-country</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-postalcode</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>active</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr><tr><td>telecom</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr></table><p>Supported Reverse Includes:</p><ul><li>Encounter:patient</li><li>Encounter:subject</li></ul><p><b>Encounter</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>class</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>type</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>subject</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>account</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>date</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>MAY</td></tr><tr><td>location</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>MAY</td></tr><tr><td>service-provider</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr></table><p>Supported Includes:</p><ul><li>Encounter:patient</li><li>Encounter:subject</li><li>Encounter:part-of</li></ul><p>Supported Reverse Includes:</p><ul><li>Encounter:part-of</li></ul><p><b>Practitioner</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>family</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>given</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>gender</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr></table></div></p>
+<h3 id="capabilitystatement-requirement-isik-medikation-bereich-medikationsverordnung">CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverordnung</h3>
+<p>Canonical: <a href="https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verordnung">https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verordnung</a></p>
+<p><div xmlns="http://www.w3.org/1999/xhtml"><p><h3>REST Capabilities</h3></p><table class="regular"><tr><td>Mode</td><td>Server</td></tr><tr><td>transaction</td><td>SHALL</td><td><div><p xmlns="">Transaktions-Bundle gemäß Profil https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransaction - Transaktions-Antwort-Bundle gemäß Profil https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransactionResponse</p></div></td></tr></table><p><h4>Resource Interactions</h4></p><p><table class="small"><tr><th><b>Resource Type</b></th><th><b>Supported Profiles</b></th><th><b>Create</b></th><th><b>Read</b></th><th><b>Update</b></th><th><b>SearchType</b></th></tr><tr><td>MedicationRequest</td><td><ul /><li /><a href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json" title="Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien.">ISiKMedikationsVerordnung</a></td><td>SHALL</td><td>SHALL</td><td>SHALL</td><td>SHALL</td></tr><tr><td>Medication</td><td><ul /><li /><a href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikament.json" title="Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.">ISiKMedikament</a></td><td>SHALL</td><td>SHALL</td><td>SHALL</td><td>SHALL</td></tr><tr><td>Patient</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKPatient.json" title="ISiKPatient&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKPatient.json">ISiKPatient</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr><tr><td>Encounter</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKKontaktGesundheitseinrichtung.json" title="ISiKKontaktGesundheitseinrichtung&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKKontaktGesundheitseinrichtung.json">ISiKKontaktGesundheitseinrichtung</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr><tr><td>Practitioner</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKPersonImGesundheitsberuf.json" title="ISiKPersonImGesundheitsberuf&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKPersonImGesundheitsberuf.json">ISiKPersonImGesundheitsberuf</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr></table></p><p><h4>Search Parameters per resource type</h4></p><p><b>MedicationRequest</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>authoredon</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>SHALL</td></tr><tr><td>code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>date</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>SHALL</td></tr><tr><td>encounter</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>intent</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>medication</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>requester</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr></table><p>Supported Includes:</p><ul><li>MedicationRequest:medication</li><li>MedicationRequest:patient</li><li>MedicationRequest:encounter</li><li>MedicationRequest:requester</li></ul><p><b>Medication</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>form</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>ingredient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>ingredient-code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr></table><p>Supported Includes:</p><ul><li>Medication:ingredient</li></ul><p><b>Patient</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>family</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>given</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>birthdate</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>SHALL</td></tr><tr><td>gender</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-city</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-country</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-postalcode</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>active</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr><tr><td>telecom</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr></table><p>Supported Reverse Includes:</p><ul><li>Encounter:patient</li><li>Encounter:subject</li></ul><p><b>Encounter</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>class</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>type</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>subject</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>account</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>date</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>MAY</td></tr><tr><td>location</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>MAY</td></tr><tr><td>service-provider</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr></table><p>Supported Includes:</p><ul><li>Encounter:patient</li><li>Encounter:subject</li><li>Encounter:part-of</li></ul><p>Supported Reverse Includes:</p><ul><li>Encounter:part-of</li></ul><p><b>Practitioner</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>family</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>given</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>gender</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr></table></div></p>
+<h3 id="capabilitystatement-requirement-isik-medikation-bereich-medikationsverabreichung">CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverabreichung</h3>
+<p>Canonical: <a href="https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verabreichung">https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verabreichung</a></p>
+<p><div xmlns="http://www.w3.org/1999/xhtml"><p><h3>REST Capabilities</h3></p><table class="regular"><tr><td>Mode</td><td>Server</td></tr><tr><td>transaction</td><td>SHALL</td><td><div><p xmlns="">Transaktions-Bundle gemäß Profil https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransaction - Transaktions-Antwort-Bundle gemäß Profil https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransactionResponse</p></div></td></tr></table><p><h4>Resource Interactions</h4></p><p><table class="small"><tr><th><b>Resource Type</b></th><th><b>Supported Profiles</b></th><th><b>Create</b></th><th><b>Read</b></th><th><b>Update</b></th><th><b>SearchType</b></th></tr><tr><td>MedicationAdministration</td><td><ul /><li /><a href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerabreichung.json" title="Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien.">ISiKMedikationsVerabreichung</a></td><td>SHALL</td><td>SHALL</td><td>SHALL</td><td>SHALL</td></tr><tr><td>Medication</td><td><ul /><li /><a href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikament.json" title="Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.">ISiKMedikament</a></td><td>SHALL</td><td>SHALL</td><td>SHALL</td><td>SHALL</td></tr><tr><td>Patient</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKPatient.json" title="ISiKPatient&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKPatient.json">ISiKPatient</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr><tr><td>Encounter</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKKontaktGesundheitseinrichtung.json" title="ISiKKontaktGesundheitseinrichtung&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKKontaktGesundheitseinrichtung.json">ISiKKontaktGesundheitseinrichtung</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr><tr><td>Practitioner</td><td><ul /><li /><a href="https://simplifier.net/resolve?scope=de.gematik.isik-basismodul@3.0.0-rc2&amp;filepath=package/StructureDefinition-ISiKPersonImGesundheitsberuf.json" title="ISiKPersonImGesundheitsberuf&#xA;de.gematik.isik-basismodul 3.0.0-rc2&#xA;StructureDefinition-ISiKPersonImGesundheitsberuf.json">ISiKPersonImGesundheitsberuf</a></td><td></td><td>SHALL</td><td></td><td>SHALL</td></tr></table></p><p><h4>Search Parameters per resource type</h4></p><p><b>MedicationAdministration</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>context</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>effective-time</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>SHALL</td></tr><tr><td>medication</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>performer</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr></table><p>Supported Includes:</p><ul><li>MedicationAdministration:medication</li><li>MedicationAdministration:patient</li><li>MedicationAdministration:context</li><li>MedicationAdministration:performer</li></ul><p><b>Medication</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>form</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>ingredient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>ingredient-code</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr></table><p>Supported Includes:</p><ul><li>Medication:ingredient</li></ul><p><b>Patient</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>family</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>given</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>birthdate</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>SHALL</td></tr><tr><td>gender</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-city</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-country</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>address-postalcode</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>active</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr><tr><td>telecom</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr></table><p>Supported Reverse Includes:</p><ul><li>Encounter:patient</li><li>Encounter:subject</li></ul><p><b>Encounter</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>status</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>class</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>type</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>patient</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>subject</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>account</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>SHALL</td></tr><tr><td>date</td><td><a href="http://hl7.org/fhir/r4/search.html#date" target="_blank">date</a></td><td>MAY</td></tr><tr><td>location</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>MAY</td></tr><tr><td>service-provider</td><td><a href="http://hl7.org/fhir/r4/search.html#reference" target="_blank">reference</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr></table><p>Supported Includes:</p><ul><li>Encounter:patient</li><li>Encounter:subject</li><li>Encounter:part-of</li></ul><p>Supported Reverse Includes:</p><ul><li>Encounter:part-of</li></ul><p><b>Practitioner</b></p><table class="small"><tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Level</b></th></tr><tr><td>_id</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>identifier</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>SHALL</td></tr><tr><td>family</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>given</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>SHALL</td></tr><tr><td>address</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr><tr><td>gender</td><td><a href="http://hl7.org/fhir/r4/search.html#token" target="_blank">token</a></td><td>MAY</td></tr><tr><td>_profile</td><td><a href="http://hl7.org/fhir/r4/search.html#uri" target="_blank">uri</a></td><td>MAY</td></tr><tr><td>name</td><td><a href="http://hl7.org/fhir/r4/search.html#string" target="_blank">string</a></td><td>MAY</td></tr></table></div></p>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+                
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
