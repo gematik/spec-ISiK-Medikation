@@ -4,11 +4,11 @@
   "name": "SctRouteOfAdministration",
   "id": "SctRouteOfAdministration",
   "description": "Enthaelt alle SNOMED CT Administrationsarten",
-  "version": "3.0.0-rc",
+  "version": "3.0.0-rc2",
   "url": "https://gematik.de/fhir/isik/v3/Medikation/ValueSet/SctRouteOfAdministration",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2023-04-11",
+  "date": "2023-05-30",
   "compose": {
     "include": [
       {
