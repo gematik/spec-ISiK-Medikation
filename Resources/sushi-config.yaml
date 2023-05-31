@@ -5,7 +5,7 @@ applyExtensionMetadataToRoot: false
 id: Implementierungsleitfaden ISiK-Modul Medikation
 name: Implementierungsleitfaden ISiK-Modul Medikation
 status: draft
-version: 3.0.0-rc
+version: 3.0.0-rc2
 publisher:
   name: Gematik GmbH
   url: https://www.gematik.de/
@@ -13,4 +13,4 @@ publisher:
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.medikation: 1.0.11
   hl7.fhir.r4.core: 4.0.1
-  de.gematik.isik-basismodul: 3.0.0-rc2
+  de.gematik.isik-basismodul: 3.0.0-rc3
