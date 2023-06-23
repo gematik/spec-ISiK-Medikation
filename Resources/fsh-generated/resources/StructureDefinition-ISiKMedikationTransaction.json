@@ -1,22 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationTransaction",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Foundation.Other"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "not-classified"
-    }
-  ],
   "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransaction",
-  "version": "3.0.0-rc2",
+  "version": "3.0.0",
   "name": "ISiKMedikationTransaction",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2023-05-30",
+  "date": "2023-07-01",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil definiert die Transaktions-Bundles im Rahmen von ISiK-Medikations-Szenarien.",
   "fhirVersion": "4.0.1",
