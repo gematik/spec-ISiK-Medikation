@@ -1,6 +1,4 @@
 ## Modul "Medikation" 
 
 
-Dieser Branch enthält .html Versionen der ImplementationGuides vorangegangener Versionen. 
-
-- Stufe 1: https://gematik.github.io/spec-ISiK-Medikation/index.html
+Dieser Branch enthält zwecks Archivierung ImplementationGuides vorangegangener Versionen: https://gematik.github.io/spec-ISiK-Medikation/index.html
