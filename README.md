@@ -1,3 +1,3 @@
 # ISiK-Medikation
 
-Siehe https://simplifier.net/spec-isik-medikation/isikmedikation
+Siehe [Simplifier Projekt-Seite zu Medikation Stufe 3](https://simplifier.net/isik-medikation-v3)
