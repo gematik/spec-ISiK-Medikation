@@ -1,22 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsVerordnung",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Medications"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsVerordnung",
-  "version": "3.0.0-rc2",
+  "version": "3.0.0",
   "name": "ISiKMedikationsVerordnung",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2023-05-30",
+  "date": "2023-07-01",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",

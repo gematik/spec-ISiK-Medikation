@@ -2,13 +2,13 @@
   "resourceType": "CapabilityStatement",
   "id": "ISiKCapabilityStatementMedikationVerordnung",
   "url": "https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verordnung",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "version": "3.0.0-rc2",
+  "version": "3.0.0",
   "publisher": "gematik GmbH",
-  "date": "2023-05-30",
+  "date": "2023-07-01",
   "implementationGuide": [
-    "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.0-rc2"
+    "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.0"
   ],
   "name": "ISiKCapabilityStatementMedikationVerordnung",
   "title": "ISiK CapabilityStatement Medikation Server - Medikationsverordnung",
