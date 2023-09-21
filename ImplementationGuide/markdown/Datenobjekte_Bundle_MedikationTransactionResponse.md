@@ -1,4 +1,4 @@
-## Bundle MedikationTransactionResponse [(Bundle)](https://www.hl7.org/fhir/R4/R4/bundle.html)
+## Bundle MedikationTransactionResponse [(Bundle)](https://www.hl7.org/fhir/R4/bundle.html)
 
 ---
 
