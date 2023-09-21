@@ -1,4 +1,4 @@
-## Bundle MedikationTransactionResponse [(Bundle)](https://www.hl7.org/fhir/bundle.html)
+## Bundle MedikationTransactionResponse [(Bundle)](https://www.hl7.org/fhir/R4/bundle.html)
 
 ---
 
@@ -31,4 +31,4 @@ Valides Beispiel für das Profil MedikationTransactionResponse:
 
 ### Interaktionen
 
-TransactionResponse-Bundles werden nicht persistiert, sondern ausschließlich im Kontext von FHIR-Transaktionen verwendet, vgl. [FHIR RESTful API - Batch/Transaction](http://www.hl7.org/fhir/http.html#transaction).
+TransactionResponse-Bundles werden nicht persistiert, sondern ausschließlich im Kontext von FHIR-Transaktionen verwendet, vgl. [FHIR RESTful API - Batch/Transaction](https://www.hl7.org/fhir/R4/http.html#transaction).
