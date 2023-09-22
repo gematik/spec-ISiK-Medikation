@@ -8,11 +8,11 @@ Abweichend hiervon bzw. ergänzend hierzu gilt:
 
 * Das Update einer Ressource per HTTP PUT (Update-Interaktion) MUSS unterstützt werden.
 
-* Das Löschen einer Ressource per HTTP DELETE (Delete-Interaktion, vgl. [FHIR RESTful API - Delete](http://www.hl7.org/fhir/http.html#delete)) KANN unterstützt werden, ist aber nicht Gegenstand weiterer Ausarbeitung dieses Implementierungsleitfadens. Als Alternative zur Delete-Interaktion kann das Setzen eines entsprechenden Ressourcen-Status (beispielsweise "entered-in-error") dienen.
+* Das Löschen einer Ressource per HTTP DELETE (Delete-Interaktion, vgl. [FHIR RESTful API - Delete](https://www.hl7.org/fhir/R4/http.html#delete)) KANN unterstützt werden, ist aber nicht Gegenstand weiterer Ausarbeitung dieses Implementierungsleitfadens. Als Alternative zur Delete-Interaktion kann das Setzen eines entsprechenden Ressourcen-Status (beispielsweise "entered-in-error") dienen.
 
 ## Transaktionen
 
-FHIR-Transaktionen MÜSSEN unterstützt werden, vgl. [FHIR RESTful API - Batch/Transaction](http://www.hl7.org/fhir/http.html#transaction). Es MÜSSEN die dort im Bereich "transaction" genannten Punkte unterstüzt werden. Eine reine Batch-Verarbeitung ist nicht ausreichend.
+FHIR-Transaktionen MÜSSEN unterstützt werden, vgl. [FHIR RESTful API - Batch/Transaction](https://www.hl7.org/fhir/R4/http.html#transaction). Es MÜSSEN die dort im Bereich "transaction" genannten Punkte unterstüzt werden. Eine reine Batch-Verarbeitung ist nicht ausreichend.
 
 Für jede schreibende Gesamt-Interaktion (Create, Update sowie ggf. Delete), bei der mehr als eine Ressourcen-Instanz erzeugt, geändert oder gelöscht wird, MUSS ein FHIR Transaktions-Bundle, wie in diesem Leitfaden profiliert, verwendet werden.
 
@@ -22,4 +22,4 @@ Der Server MUSS als Antwort auf ein FHIR Transaktions-Bundle ein FHIR Transactio
 
 ## Historie
 
-Die Historisierung/Versionierung von FHIR Ressourcen-Instanzen (vgl. [FHIR RESTful API - History](http://www.hl7.org/fhir/http.html#history)) KANN unterstützt werden, ist aber nicht Gegenstand weiterer Ausarbeitung dieses Implementierungsleitfadens.
+Die Historisierung/Versionierung von FHIR Ressourcen-Instanzen (vgl. [FHIR RESTful API - History](https://www.hl7.org/fhir/R4/http.html#history)) KANN unterstützt werden, ist aber nicht Gegenstand weiterer Ausarbeitung dieses Implementierungsleitfadens.
