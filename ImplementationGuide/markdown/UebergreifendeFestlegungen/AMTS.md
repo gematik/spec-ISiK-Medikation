@@ -22,9 +22,9 @@
   - [7.5. Fazit zu User Stories](#75-fazit-zu-user-stories)
   - [7.6. Use Cases - Technisch](#76-use-cases---technisch)
   - [7.7. Exemplarische Abläufe](#77-exemplarische-abläufe)
-  - [7.8. Nebenbedingungen DUMMY](#78-nebenbedingungen-dummy)
+  - [7.8. Nebenbedingungen und weitere Informationen](#78-nebenbedingungen-und-weitere-informationen)
 - [8. Liste weiterer Bedarfe an die Spezifikation](#8-liste-weiterer-bedarfe-an-die-spezifikation)
-- [9. Annex I - Patient Journey](#9-annex-i---patient-journey)
+- [9. Annex I - Klassen- und Datendiagramm](#9-annex-i---klassen--und-datendiagramm)
 
 ## 1. Motivation und Hintergrund
 
@@ -65,10 +65,11 @@ Da mit dem [MIO Medikationsplan](https://mio.kbv.de/display/EMP1X0X0/Inhalte+des
 Grundsätzlich stellt sich die Frage welche AMT-relevante Information
 gruppiert und zugeordnet werden können:
 
-* **Informationen mit Bezug zum Patienten** - Allergien usw...
-* **Informationen mit Bezug zur Medikation** - Wechselwirkung usw...
-* **Informationen mit Bezug zu Diagnose, Indikation oder Co-Morbiditäten** - Diese Kategorie betrifft vor allem chronische Erkrankungen (z.B. Niereninsuffizienz), Lebensumstände (z.B. Schwangerschaft) und Lebensgewohnheiten (z.B. Leistungssport). eine zentrale Kontraindikation, Nebenwirkungen, Prädisposition 
+* **Informationen mit Bezug zum Patienten** - Diese Kategorie betrifft Allergien und Unverträglichkeiten aber auch pyhsiologische relevante Merkmale wie z.B. Alter und Gewicht.
+* **Informationen mit Bezug zur Medikation** - Diese Kategorie liefert Information zur aktuellen Medikation (z.B. Blutdruck-Senker) mit dem Ziel Wechselwirkung zu weiteren Verordnungen oder Vehandlungen zu itendtifizieren und zu bewerten.
+* **Informationen mit Bezug zu Diagnose, Indikation oder Co-Morbiditäten** - Diese Kategorie betrifft chronische Erkrankungen (z.B. Niereninsuffizienz), Lebensumstände (z.B. Schwangerschaft) und Lebensgewohnheiten (z.B. Leistungssport). eine zentrale Kontraindikation, Nebenwirkungen, Prädisposition 
 
+Eine entsprechende gruppierte Visualisierung der Informationsobjekte findet sich in  [Anhang 1](#9-annex-i---klassen--und-datendiagramm)
 
 ### 4.3. Organisatorische Randbedingungen
 Es gelten die Fristen wie in anderen Modulen.
@@ -95,16 +96,18 @@ Zu berücksichtigende User sind
 
 Beteiligte Systeme sind prinzipiell alle bestätigungsrelevanten Systeme (siehe [DKG Festlegung](https://www.dkgev.de/themen/digitalisierung-daten/elektronische-datenuebermittlung/datenuebermittlung-nach-373-sgb-v-informationssysteme-im-krankenhaus/)). Hervorzuheben sind dabei:
 
-* KIS
-* KIS-Submodul Medikation
+* KIS, auch fokussierte KIS der Dentalklinik oder der Mund-, Kiefer- und Gesichtschirurgie.
+* KIS-Submodule der Medikation
 * Eigenständige Systeme der Krankenhausapotheke (AVS)
 
 Zudem sind hervorzuheben als mögliche Clients oder Subsysteme auch Datenbanken oder Services außerhalb der Krankenhauslandschaft, die Informationen bereitstellen über:
 * Wirkstoffe und Wechselwirkungen
 * Nebenwirkungen
-* Substitutionen
+* Substitutionsmöglichkeiten und Generika
 
 ### 5.2. Patient Data Journey
+
+Es ist kein spezieller Weg der Patientendaten mit Einfluss auf AMTS bekannt.
 
 ## 6. Lösungsstrategie
 Vor der Entwicklung einer Lösungsstrategie, die eine Auswahl konkreter Bedarfe benennt, müssen zunächst Ziel- und Problemdefinition besser ausgearbeitet werden. Dennoch lassen sich grundsätzliche Lösungsszenarien nennen.
@@ -136,7 +139,7 @@ Die User Stories beschreiben die grundlegenden Kontexte, in denen der Bedarf nac
 - US-02 - Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
    - Bei der stationären Aufnahme eines Patienten soll die bestehenden (häusliche oder ambulante) Medikation mit in das geänderte Versorgungsumfeld übersetzte und angepasst werden, um eine gleichwertige und sichere stationäre Verordnung zu gewährleisten.
 - US-03 - Entlassung mit Medikationsumstellung (Medication Reconciliation)
-   - Bei der Entlassung eines Patienten aus der stationären Versorgung soll die initiale Medikation mit in das sich ändernde Umfeld übersetzte und angepasst werden, um eine gleichwertige und sichere Weiterführung der Medikation zu gewährleisten.
+   - Bei der Entlassung eines Patienten aus der stationären Versorgung soll die initiale Medikation mit in das sich ändernde Umfeld übersetzt und angepasst werden, um eine gleichwertige und sichere Weiterführung der Medikation zu gewährleisten.
 
 ### 7.2. US-01: AMTS Prüfung bei neuer Informationslage
 
@@ -145,92 +148,96 @@ Die User Stories beschreiben die grundlegenden Kontexte, in denen der Bedarf nac
 
 ### 7.3. US-02: Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
 
+**REQ-002**: Im Rahmen der Patientenaufnahme MUSS der Nutzer auf AMTS hin prüfen können.
 
 ### 7.4. US-03: Entlassung mit Medikationsumstellung (Medication Reconciliation)
 
+**REQ-003**: Im Rahmen der Entlassung MUSS der Nutzer auf AMTS hin prüfen können.
 
 ### 7.5. Fazit zu User Stories
 
-Wir nehmen an, dass für US-02 und US-03 es in der Regel dem KIS intern überlassen ist wie es einen Merge regelt oder nicht. Daher wären diese User Stories aus ISiK-Sicht nicht prioritär. Z.B. wenn im KIS händisch eine Aufnahme erfolgt, muss das System entscheiden, wie die Patient-Ressource erstellt wird. Wenn das KIS intern merged und direkt die richtige Ressource herausgibt, besteht keine Notwendigkeit für einen Merge oder ein Merge-Event.
-
-In diesem Sinne wäre US-01 für die folgende Entwicklung technischer Use Cases zum Patient merge zu priorisieren, wobei als externer Client nicht nur ein Patientenportal zu berücksichtigen ist, sondern auch sonstige Client-Systeme die auf ISiK-Schnittstellen zugreifen.
+Der zentrale Auslöser einer AMTS-Prüfung und damit auch für die Nutzung der Schnittstellen ist eine vorher unbekannte Informationslage. Die Informationen können initial neu sein, durch den Patienten später in den Prozess hinzugegeben werden, oder sich im Zuge einer Behandlung ergeben.
 
 ### 7.6. Use Cases - Technisch
 Aus einer Perspektive der Workflows lassen sich folgenden Use Cases (UCs) ausdifferenzieren:
 
-* **UC-00: TBD**
+* **UC-01: Konsolidieren AMTS relevanter Informationen** zur Durchführung einer AMTS-Prüfung
    * *Beschreibung:* 
    * *Akteure:* 
-* **UC-01: TBD**
+* **UC-02: TBD**
    * *Beschreibung:* 
    * *Akteure:* 
 
-![Use Case Diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/gematik/spec-ISiK-Basismodul/Nachbereitung-AG/ImplementationGuide/markdown/UebergreifendeFestlegungen/Use-Case-Diagram.iuml)
-
-Die im UC Diagram grün gekennzeichneten UCs sind besonders zu priorisieren, daher in Folge eine schematische Analyse.
 
 ### 7.7. Exemplarische Abläufe
 
-**Beispiel-Sequenz DUMMY** Angenommen es ist ein weiteres Subsystem inklusive einer Schnittstelle (hier bspw. PDMS) beteiligt, so lässt sich eine exemplarische Sequenz für User Story 01 ableiten:
-* Eine Ärztin gibt über eine Suchanfrage in der Maske Vor- und Nachnamen des Patienten an (Max Mustermann). Es erscheinen zwei Patienteninstanzen mit identischen Stammdaten (bis auf einen offensichtlichen Tippfehler).
-* Die Ärztin führt die Patientendaten über einen Clearingmechanismus zusammen.
-* Das KIS sendet über einen Kommunikationsserver eine PUSH-Nachricht (Hl7 v2) an alle Subsysteme (inklusive des PDMS), um den Update-Status der Patienten-Ressource und den geschehenen merge zu informieren.
-* Die Subsysteme verarbeiten die merge-informationen und updaten die entsprechende organisationsinterne Patienten-ID (PID).
-* Die Ärztin stellt eine Anfrage mit der nun bekannten Patientenintanz (oder über den Namen) für sämtliche Körpertemperaturmessungen der letzten Tage.
-* Das KIS leitet diese Anfrage über eine REST-Schnittstelle weiter an das PDMS (über Suchparameter "Patient" nach https://simplifier.net/guide/Implementierungsleitfaden-ISiK-Modul-Vitalparameter-Stufe-3/ImplementationGuide-markdown-Interaktionen?version=current ) und gibt den entsprechenden Datensatz zurück.
+**Beispiel-Sequenz Geplanter operativer mit stationärem Aufenthalt**
+
+Ein geriatrischer Patient unterzieht sich einer geplanten Hüftersatzoperation:
+* Der Patient kommt am Tag vor dem Eingriff wie verainbart zur stationäre Aufnahme.
+* Das Krankenhauspersonal erfasst den relevanten Krankheits- bzw. Versorungsverlauf.
+* Das Krankenhauspersonal erhebt relevante klinische Daten: Anamese, Untersusuchung, Vitalparameter, Allergien, Laborbefunde, Blutbild u.ä.
+* Das Krankenhauspersonal erhebt seinen umfassenden Medikationsstatus: Anamnese, Medikationsplan, Einweisung & Begleitdokumentation u.ä.
+* Das Krankenhauspersonal erarbeitet einen Vorschlag zur Umstellung auf Krankenhaus Medikation
+* Mit Hilfe der Schnittstellen werden alle **AMTS relevanten Informationen konsolidiert** und ein AMTS-Check durchgeführt.
+* Der Patienten bekommt ein Hüftprothese und wird beobachtet.
+* Klinische Daten werden nach dem Eingriff aktualisiert bzw. neu erhoben.
+* Zur Entzündungsvermeidung ist eine weitere Verodnung notwendig.
+* Im Rahmen des Entlassprozesses erarbeitet das Krankenhauspersonal einen Vorschlag zur Umstellung auf häusliche Gesamtmedikation.
+* Mit Hilfe der Schnittstellen werden alle **AMTS relevanten Informationen konsolidiert** und ein AMTS-Check durchgeführt.
+* Im Entlassgespräch werdenden Veränderungen kommuniziert und erklärt.
+* Der Patient wird mit einem neuen Medikationsplan entlassen.
 
 
-**Beispiel-Sequenz DUMMY:** Angenommen es ist die Komponente Patientenportal inklusive einer Schnittstelle beteiligt, so lässt sich eine exemplarische Sequenz für User Story 01 ableiten:
-* Das Patientenportal erzeugt aufgrund der von der Patientin angegeben Fall- und Anamnese-Daten verschiedene FHIR-Ressourcen, die einer FHIR Patient Ressource (PatientMustermannPatientenportal) zugeordnet werden.
-* Nach dem Synchronisierungsprozess der Terminbuchung zwischen Patientenportal und KIS des KHs wird die FHIR-Instanz PatientMustermannPatientenportal mit der im KIS vorhandenen Instance PatientMustermannKH im Rahmen eines Clearing-Prozesses unter Beteiligung einer KH-Mitarbeitern im KIS zusammengeführt zu PatientMustermannMerge.
-* (extends) Die Referenzierten Ressourcen (FHIR Observations) werden (extrahiert und) mit den zusammengeführten Daten von PatientMustermannMerge verknüpft
-* Das Patientenportal erkennt (query-getrieben) eine Änderung von Patienten-Ressource nach einem Patient-merge im KIS (dies wäre anzusiedeln bei **UC-03:)
-
-
-### 7.8. Nebenbedingungen DUMMY
+### 7.8. Nebenbedingungen und weitere Informationen
 
 
 *Annahmen:* 
-* Das KIS-System verfügt über die erforderlichen Funktionen zur Durchführung der Zusammenführung von Patientenakten.
-* Das Krankenhauspersonal, das die Zusammenführung initiiert oder tätigt, verfügt über die entsprechenden Berechtigungen und Schulungen.
+* Ein Beteiligtes System verfügt über die grundlegende Funktion zur Durchführung eines AMTS-Checks.
 
 *Vorbedingungen:* 
+* Keine Speziellen
 
-*Nachbedingungen:* 
-
-Die Patientenakten werden zusammengeführt, und eine vereinheitlichte, genaue Akte wird erstellt.
+*Nachbedingungen:*
+* Keine Speziellen 
 
 *Nutzungshäufigkeit:* 
-Gelegentlich
+* Keine Einschräknungen
 
 *Alternative Abläufe:*
-
-Wenn keine identifizierten Duplikate vorhanden sind, benachrichtigt das System den Benutzer, und der Prozess endet.
+* Keine Speziellen 
 
 *Ausnahmen:*
-
-Bei technischen Problemen, die den Zusammenführungsprozess verhindern, wird eine Fehlermeldung generiert, und der Prozess wird abgebrochen.
+* TBD
 
 *Includes (weitere UCs):* 
-   * vollautomatisiertes matching und merging
-   * vollautomatisiertes matching mit manuellem merge
-   * (halb)automatisiertes matching mit vollautomatisiertem merge
-   * Notification über match/merge durch ein Subsystem
+* TBD
 
 *Extends (weitere UCs):*
-* tbd.
+* Erneute AMTS-Prüfung nach Arzneimittelsubstition.
 
 *Anmerkungen und Probleme:* 
-* Patient merges sollten protokolliert werden, um technische Verantwortlichkeit und Rückverfolgbarkeit zu gewährleisten.
-on 
+* AMTS-Checks sollten protokolliert werden, um Verantwortlichkeit und Rückverfolgbarkeit zu gewährleisten. Dies gilt sowohl für den positiven Fall der Veträglichkeit, als auch für den negativen Fall in dem eine Anpassung der Medikation durchgeführt wird.
+* AMTS-Checks könnten protokolliert werden, um redundante Prüfungen und Mehrarbeit zu vermeiden.
 
 
 ## 8. Liste weiterer Bedarfe an die Spezifikation
 Hier werden Bedarfe an die Spezifikation vorgehalten, die nicht unmittelbar über die oben priorisierten UCs abgedeckt sind.
 
-1. 
-2. 
+1. Information darüber, ob ein beteiligten System selbst AMTS (Teil-Prüfungen) vornehmen kann.
+2. TBD
 
-## 9. Annex I - Patient Journey
+## 9. Annex I - Klassen- und Datendiagramm
 
+![IncludePlantUML](/ImplementationGuide/diagrams/amts_data_objects.puml)
 
+```plantuml
+@startuml component
+actor client
+node app
+database db
+
+db -> app
+app -> client
+@enduml
+```
