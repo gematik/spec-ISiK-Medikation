@@ -1,6 +1,6 @@
 # Konzept Arzneitmitteltherapiesicherheit - AMTS (WIP)
 
-## Table of Contents <!-- omit from toc --> 
+## Table of Contents <!-- omit from toc -->
 - [1. Motivation und Hintergrund](#1-motivation-und-hintergrund)
 - [2. Ziele](#2-ziele)
 - [3. Stakeholder und User](#3-stakeholder-und-user)
@@ -33,7 +33,7 @@ Dieser Implementierungsleitfaden beschreibt die an der Schnittstelle verfügbare
 Im Zuge der Ausbaustufe 4 des Moduls ISiK-Medikation werden die bereitgestellten Ressourcen erweitert, so dass nun eine Vielzahl an Funktionen möglich ist, mit denen eine Medikation individuell durch die Informationssysteme beurteilt oder angepasst werden kann.
 Die bedeutendsten abzudenken Use Cases sind Wechselwirkungen, Allergien und Kontraindikationen, die vor einer Abgabe identifziert werden sollten. So lässt sich dann z.B. erkennen, ob ein Medikament in einem bestimmten Behandlungsfall nicht als sicher einzustufen ist. Mit den verfügbaren Informationen könnte potenziell auch ein individuell besser geeignetes Medikament vorgeschlagen werden.
 
-Bisher trifft ISiK-Medikation keine Festlegung zur AMTS. Aus diesem Grund ist die das Thema 'AMTS' als zentral in der AG zur Stufe 4 etabliert worden. Änderungs- oder Erweiterungsvorschläge am Dokument per Pull Request sind willkommen. 
+Bisher trifft ISiK-Medikation keine Festlegung zur AMTS. Aus diesem Grund ist die das Thema 'AMTS' als zentral in der AG zur Stufe 4 etabliert worden. Änderungs- oder Erweiterungsvorschläge am Dokument per Pull Request sind willkommen.
 
 ## 2. Ziele
 Ziel der Arbeiten im Rahmen der Ausbaustufe 4 ist:
@@ -67,7 +67,7 @@ gruppiert und zugeordnet werden können:
 
 * **Informationen mit Bezug zum Patienten** - Diese Kategorie betrifft Allergien und Unverträglichkeiten aber auch pyhsiologische relevante Merkmale wie z.B. Alter und Gewicht.
 * **Informationen mit Bezug zur Medikation** - Diese Kategorie liefert Information zur aktuellen Medikation (z.B. Blutdruck-Senker) mit dem Ziel Wechselwirkung zu weiteren Verordnungen oder Vehandlungen zu itendtifizieren und zu bewerten.
-* **Informationen mit Bezug zu Diagnose, Indikation oder Co-Morbiditäten** - Diese Kategorie betrifft chronische Erkrankungen (z.B. Niereninsuffizienz), Lebensumstände (z.B. Schwangerschaft) und Lebensgewohnheiten (z.B. Leistungssport). eine zentrale Kontraindikation, Nebenwirkungen, Prädisposition 
+* **Informationen mit Bezug zu Diagnose, Indikation oder Co-Morbiditäten** - Diese Kategorie betrifft chronische Erkrankungen (z.B. Niereninsuffizienz), Lebensumstände (z.B. Schwangerschaft) und Lebensgewohnheiten (z.B. Leistungssport). eine zentrale Kontraindikation, Nebenwirkungen, Prädisposition
 
 Eine entsprechende gruppierte Visualisierung der Informationsobjekte findet sich in  [Anhang 1](#9-annex-i---klassen--und-datendiagramm)
 
@@ -77,7 +77,7 @@ Es gelten die Fristen wie in anderen Modulen.
 Die Konsentierung der Use Cases soll auch eine rein asynchrone Mitarbeit erlauben. Dies schließt eine asynchrone Entscheidungsfindung ein.
 
 ### 4.4. Konventionen
-Die Draft-Dokumente werden auf github zur Diskussion gestellt.
+Die Draft-Dokumente werden auf GitHub zur Diskussion gestellt.
 
 Pull Requests, die grundsätzliche Änderungen bewirken, sollten in der Regel im Rahmen der AG angekündigt und ggf. diskutiert werden.
 
@@ -91,7 +91,7 @@ Auch wenn eine Kompatibilität zum [MIO Medikationsplan](https://mio.kbv.de/disp
 
 Zu berücksichtigende User sind
 * Krankenhausmitarbeiter (MFAs, Ärzte etc.)
-* Pharamzeutisches Personal (Apotheker, PTAs etc.) 
+* Pharmazeutisches Personal (Apotheker, PTAs etc.)
 * Patienten (bei Aufnahme, Entlassunge, stationärer Medikation usw.)
 
 Beteiligte Systeme sind prinzipiell alle bestätigungsrelevanten Systeme (siehe [DKG Festlegung](https://www.dkgev.de/themen/digitalisierung-daten/elektronische-datenuebermittlung/datenuebermittlung-nach-373-sgb-v-informationssysteme-im-krankenhaus/)). Hervorzuheben sind dabei:
@@ -114,13 +114,13 @@ Vor der Entwicklung einer Lösungsstrategie, die eine Auswahl konkreter Bedarfe 
 
 Zunächst sollte für jedes bestätigungsrelevante System der Umfang des Festzulegenden einzeln bestimmt werden.
 
-
 ### 6.1. Bestehende Standards
-Neben allgmein geltenden Festlegungen in FHIR und HL7v2 sind bei der weiteren Problemdefinition folgenden Festlegungen zu beachten:
+Neben allgemein geltenden Festlegungen in FHIR und HL7v2 sind bei der weiteren Problemdefinition folgenden Festlegungen zu beachten:
 
-- Das Allergie Profil aus der Paitentenkurzakte, [ Allergy Intolerance (IPS) ](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-AllergyIntolerance-uv-ips.html)
+- Das Allergie Profil aus der Patientenkurzakte, [ Allergy Intolerance (IPS) ](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-AllergyIntolerance-uv-ips.html)
 - Die Bereiche *CAVE*, *Interaktionen* sowie *Indikationen und Nebenwirkungen* des AMTS-Modul der [ABDADatenbank²](https://abdata.de/produkte/abdadatenbank2/amts-modul/)
-
+- Das AllergyIntolerance-Profil der KBV-Basisprofile [KBV_PR_Base_AllergyIntolerance](https://simplifier.net/base1x0/kbv_pr_base_allergyintolerance)
+- Das AllergyIntolerance-Profil von GEVKO eMDAF [eMDAF Allergien und Unverträglichkeiten](https://simplifier.net/emdaf/emdafprallergyintolerance)
 
 ## 7. User Stories und Use Cases
 
@@ -143,7 +143,6 @@ Die User Stories beschreiben die grundlegenden Kontexte, in denen der Bedarf nac
 
 ### 7.2. US-01: AMTS Prüfung bei neuer Informationslage
 
-
 **REQ-001**: Im Rahmen der Medikationsausgabe MUSS der Nutzer auf AMTS hin prüfen können.
 
 ### 7.3. US-02: Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
@@ -162,12 +161,11 @@ Der zentrale Auslöser einer AMTS-Prüfung und damit auch für die Nutzung der S
 Aus einer Perspektive der Workflows lassen sich folgenden Use Cases (UCs) ausdifferenzieren:
 
 * **UC-01: Konsolidieren AMTS relevanter Informationen** zur Durchführung einer AMTS-Prüfung
-   * *Beschreibung:* 
-   * *Akteure:* 
+   * *Beschreibung:*
+   * *Akteure:*
 * **UC-02: TBD**
-   * *Beschreibung:* 
-   * *Akteure:* 
-
+   * *Beschreibung:*
+   * *Akteure:*
 
 ### 7.7. Exemplarische Abläufe
 
@@ -188,24 +186,22 @@ Ein geriatrischer Patient unterzieht sich einer geplanten Hüftersatzoperation:
 * Im Entlassgespräch werdenden Veränderungen kommuniziert und erklärt.
 * Der Patient wird mit einem neuen Medikationsplan entlassen.
 
-
 ### 7.8. Nebenbedingungen und weitere Informationen
 
-
-*Annahmen:* 
+*Annahmen:*
 * Ein Beteiligtes System verfügt über die grundlegende Funktion zur Durchführung eines AMTS-Checks.
 
-*Vorbedingungen:* 
+*Vorbedingungen:*
 * Keine Speziellen
 
 *Nachbedingungen:*
-* Keine Speziellen 
+* Keine Speziellen
 
-*Nutzungshäufigkeit:* 
+*Nutzungshäufigkeit:*
 * Keine Einschräknungen
 
 *Alternative Abläufe:*
-* Keine Speziellen 
+* Keine Speziellen
 
 *Ausnahmen:*
 * TBD
@@ -216,10 +212,9 @@ Ein geriatrischer Patient unterzieht sich einer geplanten Hüftersatzoperation:
 *Extends (weitere UCs):*
 * Erneute AMTS-Prüfung nach Arzneimittelsubstition.
 
-*Anmerkungen und Probleme:* 
+*Anmerkungen und Probleme:*
 * AMTS-Checks sollten protokolliert werden, um Verantwortlichkeit und Rückverfolgbarkeit zu gewährleisten. Dies gilt sowohl für den positiven Fall der Veträglichkeit, als auch für den negativen Fall in dem eine Anpassung der Medikation durchgeführt wird.
 * AMTS-Checks könnten protokolliert werden, um redundante Prüfungen und Mehrarbeit zu vermeiden.
-
 
 ## 8. Liste weiterer Bedarfe an die Spezifikation
 Hier werden Bedarfe an die Spezifikation vorgehalten, die nicht unmittelbar über die oben priorisierten UCs abgedeckt sind.
