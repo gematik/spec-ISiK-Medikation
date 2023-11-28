@@ -28,10 +28,10 @@
 
 ## 1. Motivation und Hintergrund
 
-Dieser Implementierungsleitfaden beschreibt die an der Schnittstelle verfügbaren Informationen für eine sichere Arzneimitteltherapie. Das beinhaltet die Vermeidung sämtlicher unerwünschter und potenziell gefährlicher Reaktionen eines indivuellen Patienten im Zuge der Einnahme einer verordneten Medikation. Ein intuitives Beispiel dafür ist eine Penicillinallergie des Patienten.
+Dieser Implementierungsleitfaden beschreibt die an der Schnittstelle verfügbaren Informationen für eine sichere Arzneimitteltherapie. Das beinhaltet die Vermeidung sämtlicher unerwünschter und potenziell gefährlicher Reaktionen eines individuellen Patienten im Zuge der Einnahme einer verordneten Medikation. Ein intuitives Beispiel dafür ist eine Penicillinallergie des Patienten.
 
 Im Zuge der Ausbaustufe 4 des Moduls ISiK-Medikation werden die bereitgestellten Ressourcen erweitert, so dass nun eine Vielzahl an Funktionen möglich ist, mit denen eine Medikation individuell durch die Informationssysteme beurteilt oder angepasst werden kann.
-Die bedeutendsten abzudenken Use Cases sind Wechselwirkungen, Allergien und Kontraindikationen, die vor einer Abgabe identifziert werden sollten. So lässt sich dann z.B. erkennen, ob ein Medikament in einem bestimmten Behandlungsfall nicht als sicher einzustufen ist. Mit den verfügbaren Informationen könnte potenziell auch ein individuell besser geeignetes Medikament vorgeschlagen werden.
+Die bedeutendsten abzudeckenden Use Cases sind Wechselwirkungen, Allergien und Kontraindikationen, die vor einer Abgabe identifziert werden sollten. So lässt sich dann z.B. erkennen, ob ein Medikament in einem bestimmten Behandlungsfall nicht als sicher einzustufen ist. Mit den verfügbaren Informationen könnte potenziell auch ein individuell besser geeignetes Medikament vorgeschlagen werden.
 
 Bisher trifft ISiK-Medikation keine Festlegung zur AMTS. Aus diesem Grund ist die das Thema 'AMTS' als zentral in der AG zur Stufe 4 etabliert worden. Änderungs- oder Erweiterungsvorschläge am Dokument per Pull Request sind willkommen.
 
@@ -62,11 +62,11 @@ Da mit dem [MIO Medikationsplan](https://mio.kbv.de/display/EMP1X0X0/Inhalte+des
 
 ### 4.2. Fachliche Randbedingungen
 
-Grundsätzlich stellt sich die Frage welche AMT-relevante Information
+Grundsätzlich stellt sich die Frage welche AMTS-relevante Information
 gruppiert und zugeordnet werden können:
 
 * **Informationen mit Bezug zum Patienten** - Diese Kategorie betrifft Allergien und Unverträglichkeiten aber auch pyhsiologische relevante Merkmale wie z.B. Alter und Gewicht.
-* **Informationen mit Bezug zur Medikation** - Diese Kategorie liefert Information zur aktuellen Medikation (z.B. Blutdruck-Senker) mit dem Ziel Wechselwirkung zu weiteren Verordnungen oder Vehandlungen zu itendtifizieren und zu bewerten.
+* **Informationen mit Bezug zur Medikation** - Diese Kategorie liefert Information zur aktuellen Medikation (z.B. Blutdruck-Senker) mit dem Ziel Wechselwirkung zu weiteren Verordnungen oder Behandlungen zu itendtifizieren und zu bewerten.
 * **Informationen mit Bezug zu Diagnose, Indikation oder Co-Morbiditäten** - Diese Kategorie betrifft chronische Erkrankungen (z.B. Niereninsuffizienz), Lebensumstände (z.B. Schwangerschaft) und Lebensgewohnheiten (z.B. Leistungssport). eine zentrale Kontraindikation, Nebenwirkungen, Prädisposition
 
 Eine entsprechende gruppierte Visualisierung der Informationsobjekte findet sich in  [Anhang 1](#9-annex-i---klassen--und-datendiagramm)
