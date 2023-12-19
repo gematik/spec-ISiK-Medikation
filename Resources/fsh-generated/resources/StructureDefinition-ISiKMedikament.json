@@ -335,8 +335,23 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept",
-        "path": "Medication.ingredient.itemCodeableConcept",
+        "id": "Medication.ingredient.item[x]",
+        "path": "Medication.ingredient.item[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemCodeableConcept",
         "short": "Bestandteil in codierter Form oder ggf. als Freitext",
         "min": 0,
         "max": "1",
@@ -348,8 +363,8 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding",
-        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding",
+        "path": "Medication.ingredient.item[x].coding",
         "slicing": {
           "discriminator": [
             {
@@ -362,8 +377,8 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK",
-        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK",
+        "path": "Medication.ingredient.item[x].coding",
         "sliceName": "ASK",
         "min": 0,
         "max": "1",
@@ -373,25 +388,25 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK.system",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.system",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK.system",
+        "path": "Medication.ingredient.item[x].coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK.code",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.code",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK.code",
+        "path": "Medication.ingredient.item[x].coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:ASK.display",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK.display",
+        "path": "Medication.ingredient.item[x].coding.display",
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE",
-        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE",
+        "path": "Medication.ingredient.item[x].coding",
         "sliceName": "ATC-DE",
         "min": 0,
         "max": "1",
@@ -401,25 +416,25 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE.system",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.system",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE.system",
+        "path": "Medication.ingredient.item[x].coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE.code",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.code",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE.code",
+        "path": "Medication.ingredient.item[x].coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:ATC-DE.display",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE.display",
+        "path": "Medication.ingredient.item[x].coding.display",
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN",
-        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN",
+        "path": "Medication.ingredient.item[x].coding",
         "sliceName": "PZN",
         "min": 0,
         "max": "1",
@@ -429,25 +444,25 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.system",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.system",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN.system",
+        "path": "Medication.ingredient.item[x].coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.code",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.code",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN.code",
+        "path": "Medication.ingredient.item[x].coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:PZN.display",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN.display",
+        "path": "Medication.ingredient.item[x].coding.display",
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:WG14",
-        "path": "Medication.ingredient.itemCodeableConcept.coding",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14",
+        "path": "Medication.ingredient.item[x].coding",
         "sliceName": "WG14",
         "min": 0,
         "max": "1",
@@ -457,30 +472,31 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:WG14.system",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.system",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14.system",
+        "path": "Medication.ingredient.item[x].coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:WG14.code",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.code",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14.code",
+        "path": "Medication.ingredient.item[x].coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.coding:WG14.display",
-        "path": "Medication.ingredient.itemCodeableConcept.coding.display",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14.display",
+        "path": "Medication.ingredient.item[x].coding.display",
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemCodeableConcept.text",
-        "path": "Medication.ingredient.itemCodeableConcept.text",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.text",
+        "path": "Medication.ingredient.item[x].text",
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemReference",
-        "path": "Medication.ingredient.itemReference",
+        "id": "Medication.ingredient.item[x]:itemReference",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemReference",
         "short": "Bestandteil (Referenz auf ein anderes Medikament)",
         "min": 0,
         "max": "1",
@@ -496,8 +512,8 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.itemReference.reference",
-        "path": "Medication.ingredient.itemReference.reference",
+        "id": "Medication.ingredient.item[x]:itemReference.reference",
+        "path": "Medication.ingredient.item[x].reference",
         "min": 1,
         "mustSupport": true
       },
