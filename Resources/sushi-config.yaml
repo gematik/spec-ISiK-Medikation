@@ -2,14 +2,7 @@ canonical: https://gematik.de/fhir/isik/v3/Medikation
 fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false
-id: Implementierungsleitfaden ISiK-Modul Medikation
-name: Implementierungsleitfaden ISiK-Modul Medikation
-status: active
 version: 3.0.0
-publisher:
-  name: gematik GmbH
-  url: https://www.gematik.de/
-  email: ISiK@gematik.de
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.medikation: 1.0.11
   hl7.fhir.r4.core: 4.0.1
