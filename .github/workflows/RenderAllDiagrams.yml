@@ -94,5 +94,4 @@ jobs:
         with:
           commit_user_name: GitHub Actions Bot
           commit_user_email: ActionBot@github.com
-          commit_author: ${{ github.actor }}
           commit_message: auto-generated diagrams by GitHub Action after source code change
