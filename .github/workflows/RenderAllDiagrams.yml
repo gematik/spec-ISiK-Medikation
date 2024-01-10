@@ -1,0 +1,96 @@
+name: Render All Diagrams
+
+on:
+  push:
+    paths:
+    - '**/Material/imgsrc/**/*.puml'
+    - '**/Material/imgsrc/**/*.drawio'
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Installs Java distribution for running the plantUML jar
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          check-latest: true
+      
+      # Install graphviz for plantuml     
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
+      
+      # Download plantUML jar 
+      - name: Download plantuml file
+        run: |
+          wget -O plantuml.jar "https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar" 
+                                
+       # Clean Folder
+      - name: Ensure and clean folder
+        run: |
+          img_dir=ImplementationGuide/images/diagrams
+          mkdir -p $img_dir
+          rm -rf ImplementationGuide/images/diagrams/*.svg
+
+      # Generate the SVGs from PUML
+      - name: Render PUML to SVG and Move files
+        run: |
+          FileNamePaths=$(find . -path "*/imgsrc/*/*.puml" -exec dirname {} \; | sort -u)
+          for dir in $FileNamePaths
+          do
+            # Render SVGs from PUMLs
+            find $dir -name "*.puml" -exec java -jar plantuml.jar -tsvg {} \;
+          done
+
+      # Generate the SVGs from DrawIO
+      - name: Render DrawIO to SVG with predefined action
+        uses: rlespinasse/drawio-export-action@v2
+        with:
+          path: ./Material/imgsrc/drawio/ 
+          remove-page-suffix: true
+          output: .
+          format: svg
+          action-mode: all
+
+      # copies the created png & svg files to the images/diagrams folder and deletes the drawio files
+      - name: Move SVGs to target image folder
+        run: |
+          img_dir=ImplementationGuide/images/diagrams
+          # Find all unique directories containing *.svg files under any /imgsrc/ folder
+          FileNamePaths=$(find . -path "*/imgsrc/*/*.svg" -exec dirname {} \; | sort -u)
+          for dir in $FileNamePaths
+          do
+            # Move SVGs to out directory
+            find $dir -name "*.svg" -exec mv {} $img_dir \;
+          done
+      
+      ## add and commit the new generated files
+      #- name: Create Pull Request
+      #  uses: peter-evans/create-pull-request@v5
+      #  with:
+      #    branch: auto/images-generation
+      #    commit-message: Generated Images from source Code by GitHub Action
+      #    title: Generated Images from GitHub Action
+      #    assignees: ${{ github.actor }}
+      #    reviewers: ${{ github.actor }}
+      #    delete-branch: true
+      #    labels: automated pr
+
+      - name: Commit rendered files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_user_name: GitHub Actions Bot
+          commit_user_email: ActionBot@github.com
+          commit_author: ${{ github.actor }}
+          commit_message: auto-generated diagrams by GitHub Action after source code change
