@@ -16,4 +16,4 @@ Für jeden dieser Bereiche wurden jeweils drei Akteure identifiziert, die in ein
 
 Die Interaktionen sind somit in allen drei Bereichen äquivalent:
 
-{{render:implementationguide-images-interaktionen}}
+{{render:implementationguide-images-diagrams-interaktionen}}
