@@ -58,6 +58,18 @@
           ]
         },
         {
+          "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/UebergreifendeUseCases.md",
+          "title": "Übergreifende Use Cases",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS.md",
+              "title": "Arzneimitteltherapiesicherheit (AMTS)",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
           "generation": "markdown",
           "nameUrl": "ImplementationGuide/markdown/Datenobjekte.md",
           "title": "Datenobjekte",
