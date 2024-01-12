@@ -8,7 +8,7 @@
   "experimental": false,
   "publisher": "gematik GmbH",
   "version": "3.0.1",
-  "date": "2024-01-08",
+  "date": "2024-01-12",
   "compose": {
     "include": [
       {
