@@ -54,6 +54,11 @@ jobs:
             # Render SVGs from PUMLs
             find $dir -name "*.puml" -exec java -jar plantuml.jar -tsvg {} \;
           done
+      
+      # Remove plantUML jar 
+      - name: remove plantuml file
+        run: |
+          rm -f plantuml.jar
 
       # Generate the SVGs from DrawIO
       - name: Render DrawIO to SVG with predefined action
