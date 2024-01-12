@@ -15,5 +15,4 @@ Für jeden dieser Bereiche wurden jeweils drei Akteure identifiziert, die in ein
 * **Consumer:** Liest die Informationen aus dem Repository, beispielsweise um sie dem Benutzer anzuzeigen oder anderweitig zu verarbeiten.
 
 Die Interaktionen sind somit in allen drei Bereichen äquivalent:
-
-{{render:implementationguide-images-interaktionen}}
+<img src="https://github.com/gematik/spec-ISiK-Medikation/blob/main-stufe-3/Material/images/diagrams/Interaktionen.png" alt="Interkationen" width="90%"/>
