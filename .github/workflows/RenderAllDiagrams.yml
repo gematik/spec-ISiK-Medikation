@@ -43,16 +43,16 @@ jobs:
         run: |
           img_dir=Material/images/diagrams
           mkdir -p $img_dir
-          rm -rf Material/images/diagrams/*.svg
+          rm -rf Material/images/diagrams/*.png
 
-      # Generate the SVGs from PUML
-      - name: Render PUML to SVG and Move files
+      # Generate the PNGs from PUML
+      - name: Render PUML to PNG and Move files
         run: |
           FileNamePaths=$(find . -path "*/images/src/*/*.puml" -exec dirname {} \; | sort -u)
           for dir in $FileNamePaths
           do
-            # Render SVGs from PUMLs
-            find $dir -name "*.puml" -exec java -jar plantuml.jar -tsvg {} \;
+            # Render PNGs from PUMLs
+            find $dir -name "*.puml" -exec java -jar plantuml.jar -png {} \;
           done
       
       # Remove plantUML jar 
@@ -60,26 +60,26 @@ jobs:
         run: |
           rm -f plantuml.jar
 
-      # Generate the SVGs from DrawIO
-      - name: Render DrawIO to SVG with predefined action
+      # Generate the PNGs from DrawIO
+      - name: Render DrawIO to PNG with predefined action
         uses: rlespinasse/drawio-export-action@v2
         with:
           path: ./Material/images/src/drawio/ 
           remove-page-suffix: true
           output: .
-          format: svg
+          format: png
           action-mode: all
 
-      # copies the created svg files to the images/diagrams folder and deletes the drawio files
-      - name: Move SVGs to target image folder
+      # copies the created png files to the images/diagrams folder and deletes the drawio files
+      - name: Move PNGs to target image folder
         run: |
           img_dir=Material/images/diagrams
-          # Find all unique directories containing *.SVG files under any /imgsrc/ folder
-          FileNamePaths=$(find . -path "*/images/src/*/*.svg" -exec dirname {} \; | sort -u)
+          # Find all unique directories containing *.PNGs files under any /imgsrc/ folder
+          FileNamePaths=$(find . -path "*/images/src/*/*.png" -exec dirname {} \; | sort -u)
           for dir in $FileNamePaths
           do
-            # Move SVGs to out directory
-            find $dir -name "*.svg" -exec mv {} $img_dir \;
+            # Move PNGs to out directory
+            find $dir -name "*.png" -exec mv {} $img_dir \;
           done
       
       ## add and commit the new generated files
