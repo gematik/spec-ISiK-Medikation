@@ -70,7 +70,7 @@ jobs:
         run: |
           img_dir=Material/images/diagrams
           # Find all unique directories containing *.SVG files under any /imgsrc/ folder
-          FileNamePaths=$(find . -path "*/images/src/*/*.SVG" -exec dirname {} \; | sort -u)
+          FileNamePaths=$(find . -path "*/images/src/*/*.svg" -exec dirname {} \; | sort -u)
           for dir in $FileNamePaths
           do
             # Move SVGs to out directory
