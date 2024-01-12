@@ -3,8 +3,8 @@ name: Render All Diagrams
 on:
   push:
     paths:
-    - '**/Material/imgsrc/**/*.puml'
-    - '**/Material/imgsrc/**/*.drawio'
+    - '**/Material/images/src/**/*.puml'
+    - '**/Material/images/src/**/*.drawio'
     branches-ignore:
     - 'main**'
   
@@ -41,36 +41,41 @@ jobs:
        # Clean Folder
       - name: Ensure and clean folder
         run: |
-          img_dir=ImplementationGuide/images/diagrams
+          img_dir=Material/images/diagrams
           mkdir -p $img_dir
-          rm -rf ImplementationGuide/images/diagrams/*.svg
+          rm -rf Material/images/diagrams/*.svg
 
       # Generate the SVGs from PUML
       - name: Render PUML to SVG and Move files
         run: |
-          FileNamePaths=$(find . -path "*/imgsrc/*/*.puml" -exec dirname {} \; | sort -u)
+          FileNamePaths=$(find . -path "*/images/src/*/*.puml" -exec dirname {} \; | sort -u)
           for dir in $FileNamePaths
           do
             # Render SVGs from PUMLs
             find $dir -name "*.puml" -exec java -jar plantuml.jar -tsvg {} \;
           done
+      
+      # Remove plantUML jar 
+      - name: remove plantuml file
+        run: |
+          rm -f plantuml.jar
 
       # Generate the SVGs from DrawIO
       - name: Render DrawIO to SVG with predefined action
         uses: rlespinasse/drawio-export-action@v2
         with:
-          path: ./Material/imgsrc/drawio/ 
+          path: ./Material/images/src/drawio/ 
           remove-page-suffix: true
           output: .
           format: svg
           action-mode: all
 
-      # copies the created png & svg files to the images/diagrams folder and deletes the drawio files
+      # copies the created svg files to the images/diagrams folder and deletes the drawio files
       - name: Move SVGs to target image folder
         run: |
-          img_dir=ImplementationGuide/images/diagrams
-          # Find all unique directories containing *.svg files under any /imgsrc/ folder
-          FileNamePaths=$(find . -path "*/imgsrc/*/*.svg" -exec dirname {} \; | sort -u)
+          img_dir=Material/images/diagrams
+          # Find all unique directories containing *.SVG files under any /imgsrc/ folder
+          FileNamePaths=$(find . -path "*/images/src/*/*.svg" -exec dirname {} \; | sort -u)
           for dir in $FileNamePaths
           do
             # Move SVGs to out directory
