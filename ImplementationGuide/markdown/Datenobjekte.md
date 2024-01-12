@@ -14,4 +14,5 @@ Darüber hinaus gelten in diesem Modul folgende Datenobjekt-spezifische Festlegu
 {{index:current}}
 
 Die Kern-Zusammenhänge der Datenobjekte zeigt das (stark vereinfacht dargestellte) Diagramm:
-<img src="https://github.com/gematik/spec-ISiK-Medikation/blob/main-stufe-3/Material/images/diagrams/Klassendiagramm.png" alt="Klassendiagramm" width="90%"/>
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-3/Material/images/diagrams/Klassendiagramm.svg" class="center" alt="Klassendiagramm" width="90%"/>
