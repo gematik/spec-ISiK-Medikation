@@ -224,15 +224,4 @@ Hier werden Bedarfe an die Spezifikation vorgehalten, die nicht unmittelbar übe
 
 ## 9. Annex I - Klassen- und Datendiagramm
 
-![IncludePlantUML](/ImplementationGuide/diagrams/amts_data_objects.puml)
-
-```plantuml
-@startuml component
-actor client
-node app
-database db
-
-db -> app
-app -> client
-@enduml
-```
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_Infomodell.svg" alt="AMTS Infomodell" width="90%"/>

@@ -1,0 +1,22 @@
+@startuml
+
+' verhindere Probleme mit gewinkelten Krähenfüßen
+skinparam linetype ortho
+
+entity Entität01 {
+   optionales Attribut
+   **optionales fettes Attribut**
+   * **vorgeschriebens fettes Attribut**
+}
+
+entity Entität01 {
+   optionales Attribut : text
+   **optionales fettes Attribut** nummer <<auto>>
+   * **vorgeschriebens fettes Attribut**
+}
+Entität01 }|..|| Entität02
+Entität03 }o..o| Entität04
+Entität05 ||--o{ Entität06
+Entität07 |o--|| Entität08
+
+@enduml
