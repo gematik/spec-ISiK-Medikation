@@ -2,21 +2,80 @@
 
 ' verhindere Probleme mit gewinkelten Krähenfüßen
 skinparam linetype ortho
+ 
+' package Dummy{
+' entity Entität01 {
+'    optionales Attribut
+'    **optionales fettes Attribut**
+'    * **vorgeschriebens fettes Attribut**
+' }
+' 
+' entity Entität01 {
+'    optionales Attribut : text
+'    **optionales fettes Attribut** nummer <<auto>>
+'    * **vorgeschriebens fettes Attribut**
+' }
+' Entität01 }|..|| Entität02
+' Entität03 }o..o| Entität04
+' Entität05 ||--o{ Entität06
+' Entität07 |o--|| Entität08
+' }
+ 
+ ' TODO:
+ ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
 
-entity Entität01 {
-   optionales Attribut
-   **optionales fettes Attribut**
-   * **vorgeschriebens fettes Attribut**
+package ISiK-Basis {
+class  ISiKPatient <Patient><<(P,#CCCCFF)>>{
+   id
+   identifier
+   --
+   --
+   **Geschlecht**
+   **Alter**
+   **Körpergewicht**
+   ...
+}
+class  ISiKAllergie <AllergyIntolerance><<(P,#CCCCFF)>>{
+   TBD
+
+   **Beginn**
+   **Abklingen**
+   **Lebensphase**
+}
+class  ISiKDiagnose <Condition><<(P,#CCCCFF)>>{
+   --
+   --
+   **klinischer Status**
+   **Verifikationsstatus**
+   **Typ**
+   **Kategorie**
+   **Kritikalität**
+   **Code**
+}
 }
 
-entity Entität01 {
-   optionales Attribut : text
-   **optionales fettes Attribut** nummer <<auto>>
-   * **vorgeschriebens fettes Attribut**
+package ISiK-Medikation {
+class  ISiKMedikation <Medication><<(P,#CCCCFF)>>{
+   id
+   identifier
+   --
+   --
+   **Name**
+   **Stoff**
+   code.coding:**PZN**
+   **Applikationsweg**
 }
-Entität01 }|..|| Entität02
-Entität03 }o..o| Entität04
-Entität05 ||--o{ Entität06
-Entität07 |o--|| Entität08
+}
+
+package "ISiK-Labor (MVP)"{
+class  ISiKLaborErgebnis <Observation><<(P,#CCCCFF)>>{
+   TBD
+   ..Nierenfunktion..
+      **GFR**
+      **Serumkreation**
+      **Risikomeldung**
+   ..
+}
+}
 
 @enduml
