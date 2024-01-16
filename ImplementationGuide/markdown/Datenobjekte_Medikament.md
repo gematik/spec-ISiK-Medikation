@@ -43,7 +43,7 @@ select
 	Feldname: id, Kurzbeschreibung: short, Hinweise: comment
 ```
 
-## Beispiele
+### Beispiele
 
 Valide Beispiele für das Profil Medikament:
 
@@ -51,7 +51,22 @@ Valide Beispiele für das Profil Medikament:
 
 {{json:ExampleISiKMedikament2}}
 
-## Interaktionen
+### Übergangslösung für die Chargendokumentation beim Verblistern
+
+Für eine Einführung in den Sachverhalt, siehe [Chargendokumentation: Lösung für Verblisterer gefunden](https://www.deutsche-apotheker-zeitung.de/news/artikel/2023/11/13/chargendokumentation-loesung-fuer-verblisterer-gefunden).
+Die dort angesprochene Lösung kann auch auf den stationären Sektor übertragen werden und im Modul ISiK Mdeikation Anwendung finden.
+
+#### `Medication.lot-number`
+
+**Bedeutung:** Chargennummer
+
+**Hinweise:** Bitte beachten Sie die Regelungen der Bundesmantelvertragspartner für den [Bereich der Apotheken](https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp) . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung, [Stand der Veröffentlichung](https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/apotheken/technische_anlagen_aktuell/TA7_004_20231017.pdf). 
+
+**Relevanter Passus:** Soweit die Übermittlung der Chargenbezeichnung beim „Stellen“ von Arzneimitteln technisch nicht möglich ist, wird bis zur Schaffung entsprechender technischer Möglichkeiten analog § 312 Absatz 1 Nummer 3 SGB V ausnahmsweise bis zum 30. Juni 2025 von der Verpflichtung zur Chargendokumentation abgesehen. 
+Anstelle der tatsächlichen Chargenbezeichnungen ist „STELLEN“ in das entsprechende Datenfeld einzutragen. 
+Dabei sind die Abrechnungs- und rahmenvertraglichen Regelungen im Übrigen einzuhalten, insbesondere ist sicherzustellen, dass die in Anlage 9 § 2 Satz 1 des Rahmenvertrages nach § 129 Absatz 2 SGB V beschriebenen Mitwirkungspflichten auf Nachfrage erfüllt werden. Siehe: [Ergänzung in der Anlage 1 zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Abs. 3 SGB V](https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/apotheken/technische_anlagen_aktuell/FAQ-Liste_TA7-V004_001_20231127.pdf)
+
+### Interaktionen
 
 Für die Ressource Medication MÜSSEN die REST-Interaktionen "READ", "CREATE" und "UPDATE" implementiert werden.
 

@@ -124,8 +124,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
       * code 1..1 MS
 * batch MS
   * ^short = "Angaben zur Charge"
+  * ^comment = "Bitte beachten Sie die Regelungen der Bundesmantelvertragspartner: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung."
   * lotNumber MS
     * ^short = "Chargennummer"
+    * ^comment = "Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (\"STELLEN\") eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen \"STELLEN\" in das hierbeschirebene Datenfeld eingetragen werden."
 
 Invariant: isik-med-1
 Description: "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden."
