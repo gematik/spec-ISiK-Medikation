@@ -1,8 +1,4 @@
-@startuml
-
-' verhindere Probleme mit gewinkelten Krähenfüßen
-skinparam linetype ortho
- 
+@startuml dummy
 ' package Dummy{
 ' entity Entität01 {
 '    optionales Attribut
@@ -20,68 +16,369 @@ skinparam linetype ortho
 ' Entität05 ||--o{ Entität06
 ' Entität07 |o--|| Entität08
 ' }
- 
- ' TODO:
- ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
+@enduml
 
-package ISiK-Medikation {
-class  ISiKMedikation <Medication><<(P,#8DA5C4)>>{
-   id
-   identifier
-}
-class  ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
-   id
-   identifier
-}
-class  ISiKMedikationsListe <List><<(P,#8DA5C4)>>{
-   id
-   identifier
-}
-class  ISiKMedikationsVerabreichung <MedicationAdministration><<(P,#8DA5C4)>>{
-   id
-   identifier
-}
-class  ISiKMedikationsVerordnung <MedicationRequest><<(P,#8DA5C4)>>{
-   id
-   identifier
-}
-class  ISiKMedikationTransaction <Bundle><<(P,#8DA5C4)>>{
-   id
-   identifier
-}
-class  ISiKMedikationTransactionResponse <Bundle><<(P,#8DA5C4)>>{
-   id
-   identifier
-}
-}
-package "hl7.fhir.r4.core" {
-class  Bundle <<(P,#FFAAAA)>>{
-   id
-   identifier
+
+' TODO:
+' Vervollständigen im Sinne  von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
+
+@startuml infomodell
+'verhindere Probleme mit gewinkelten Krähenfüßen
+'skinparam linetype ortho
+
+'Namespace enhancement
+set separator none
+   class Foo {
+   **Bar (Model)**
+   |_ prop
+      |_ **Bom (Model)**
+         |_ prop2
+         |_ propprop
+   |_ prop4
+      |_ prop3.1
+   |_ prop4 :(
    --
-   --
-   ...
-   struct e {
-      eintrag }
    }
-class  List <<(P,#FFAAAA)>>{
-   id
-   identifier
-   --
-   --
-   ...
+namespace ISiK_Medikation {
+   class  ISiKMedikament <Medication><<(P,#8DA5C4)>>{
+      id
+      code
+      |_ coding­
+         |_ PZN : **Pattern**
+         |_ ATC-DE : **Pattern**
+         |_ WG14 : **Pattern**
+      |_ text
+      status
+      manufacturer : Reference (**Organization**)
+      |_ display
+      form 
+      |_ coding
+         |_ EDQM : **Binding**
+      amount
+      |_ numerator : **Pattern**
+         |_ value
+         |_ unit
+         |_ system
+         |_ code
+      |_ denominator : **Pattern**
+         |_ value
+         |_ unit
+         |_ system
+         |_ code
+      ingredient
+      |_ extension
+         |_ Wirkstofftyp : **Extension**
+      |_ item[x]
+         |_ itemCodeableConcept
+            |_ coding­
+               |_ ASK : **Pattern**
+               |_ PZN : **Pattern**
+               |_ ATC-DE : **Pattern**
+               |_ WG14 : **Pattern**
+            |_ text
+         |_ itemReference : Reference (**Substance** | **Medication**)
+            |_ referencd
+      |_ isActive
+      |_ strength
+         |_ numerator : **Pattern**
+         '   |_ value
+         '   |_ unit
+         '   |_ system
+         '   |_ code
+         |_ denominator : **Pattern**
+         '   |_ value
+         '   |_ unit
+         '   |_ system
+         '   |_ code
+      batch
+      |_ lotNumber
+
+   }
+   'ISiKMedikation::itemReference --> ISiKMedikation
+
+   class ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
+      id	
+      identifier
+      basedOn : Reference(**MedicationRequest** | CarePlan | ServiceRequest)
+      partOf : Reference(**MedicationAdministration** | **MedicationDispense** |\n **MedicationStatement** | **Procedure** | Observation)
+      ...
+      --medication[x].--
+      medicationCodeableConcept
+      medicationReference (**Medication**)
+      --
+      subject : Reference(**Patient**)
+      context : Reference(**Encounter** | EpisodeOfCare)
+      --effective[x].--
+      effectiveDateTime
+      effectivePeriod
+      --
+      ...
+      reasonCode
+      reasonReference : Reference (**Condition** | Observation | DiagnosticReport)
+      note : Annotation
+      --dosage.--
+      ...
+      patientInstruction
+      timing	
+      asNeeded[x]
+      site	
+      route
+      method	
+      doseAndRate	
+      maxDosePerPeriod	
+      maxDosePerAdministration	
+      maxDosePerLifetime
+      --
+   }
+   'ISiKMedikationsInformation::medicationReference ---> ISiKMedikation
+   
+   class  ISiKMedikationsListe <List><<(P,#8DA5C4)>>{
+      id
+      identifier
+      status : ListStatus
+      mode : ListMode
+      title 
+      code
+      subject : Reference (**Patient**)
+      encounter : Reference (**Encounter**)
+      source : Reference (**Practitioner** |\n PractitionerRole | **Patient** | Device)
+      ...
+      --entry.--
+      flap
+      deleted
+      date
+      item : Reference (**MedicationStatement**)
+      --
+      emptyReason
+   }
+   'ISiKMedikationsListe::item --> ISiKMedikationsInformation
+
+   class ISiKMedikationsVerabreichung <MedicationAdministration><<(P,#8DA5C4)>>{
+      id
+      identifier 
+      partOf : Reference (**MedicationAdministration** | **Procedure**)
+      ...
+      --medication[x].--
+      medicationCodeableConcept
+      medicationReference (**Medication**)
+      --
+      subject : Reference (**Patient**)
+      context : Reference **Encounter** | EpisodeOfCare)
+      --effective[x].--
+      effectiveDateTime
+      effectivePeriod
+      --
+      ...
+      reasonCode
+      reasonReference : Reference (**Condition** | Observation |\n DiagnosticReport)
+      request : Reference (**MedicationRequest**)
+      device : Reference (Device)
+      note : Annotation
+      --dosage.--
+      text
+      site
+      route
+      method
+      ..dosage.dose...
+      value
+      <s>comparator</s>
+      unit
+      system : uri.**[[https://unitsofmeasure.org UnitsOfMeasure]]**
+      code
+      ..dosage.rate[x]...
+      rateRatio : **Ratio**
+      rateQuantity : **SimpleQuantity**
+      ..dosage.rate[x].rateRatio...
+      numerator
+      denominator
+      --
+      eventHistory
+   }
+
+   class ISiKMedikationsVerordnung <MedicationRequest><<(P,#8DA5C4)>>{
+      id
+      identifier
+      intent
+      ...
+      <s>doNotPerform<\s>
+      reported[x]
+      --medication[x].--
+      medicationCodeableConcept
+      medicationReference (**Medication**)
+      --
+      subject : Reference (**Patient**)
+      encounter : Reference (**Encounter**)
+      ...
+      requester : Reference (**Practitioner** | PractitionerRole |\n Organization | **Patient** | **RelatedPerson** | Device)
+      reasonCode
+      reasonReference : Reference (**Condition** | Observation)
+      basedOn : Reference (CarePlan | **MedicationRequest** |\n ServiceRequest | ImmunizationRecommendation)
+      ...
+      note : Annotation
+      --dosageInstruction.--
+      ...
+      patientInstruction
+      timing	
+      asNeeded[x]
+      site	
+      route
+      method	
+      doseAndRate	
+      maxDosePerPeriod	
+      maxDosePerAdministration	
+      maxDosePerLifetime
+      --
+      dispenseRequest
+      --dispenseRequest.quantity.--
+      value
+      comparator
+      unit
+      system : uri.**[[https://unitsofmeasure.org UnitsOfMeasure]]**
+      code
+      --substitution.--
+      allowed[x]
+      reason
+      --
+      priorPrescription : Reference (**MedicationRequest**)
+      detectedIssue : Reference (DetectedIssue)
+      eventHistory : Reference (Provenance)
+   }
+
+   class ISiKMedikationTransaction <Bundle><<(P,#8DA5C4)>>{
+      identifier
+      type : BundleType.**Transaction**
+      ...
+      --entry.--
+      <s>link</s>
+      fullUrl
+      resource
+      <s>search</s>
+      **request**
+      <s>response</s>
+      --
+      ...
+   }
+   class ISiKMedikationTransactionResponse <Bundle><<(P,#8DA5C4)>>{
+      identifier
+      type : BundleType.**Response**
+      ...
+      --entry.--
+      <s>link</s>
+      fullURL
+      resource : Resource
+      <s>search</s>
+      <s>request</s>
+      **response**
+      --
+      ...
+   }
 }
-}
-package ISiK-Basis {
-class  ISiKPatient <Patient><<(P,#CCCCFF)>>{
-   id
-   identifier
-   --
-   --
-   ...
-}
+'ISiK_Medikation.ISiKMedikationsListe::subject --> ISiK_Basis.ISiKPatient
+'ISiK_Medikation.ISiKMedikationTransaction --> R4_Core.Bundle
+'ISiK_Medikation.ISiKMedikationTransactionResponse --|> R4_Core.Bundle
+
+namespace MII_Kerndatensatz {
+   class Extension_Wirkstofftyp <<(E,#7A8495)>>{
+      Dokumentation auf Simplifier 
+      [[https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp MII Wirkstofftyp]]
+   }
 }
 
+namespace R4_Core {
+   class Foundation_Modul <<(M,#FFAAAA)>>{
+      Dokumentation auf HL7 Org
+      [[https://hl7.org/fhir/R4/ HL7 FHIR R4 Core Foundation]]
+   }
+   class Bundle <<(P,#FFAAAA)>>{
+      Dokumentation [[https://hl7.org/fhir/R4/bundle.html R4 Bundle]]
+      --
+      identifier
+      type : BundleType
+      ...
+      --entry.--
+      ...
+      resource : Resource
+      ..entry.search...
+      mode
+      score
+      ..entry.request...
+      methode
+      url
+      ifNoneMatch
+      ifMatch
+      ifNoneExist
+      ..entry.response...
+      status
+      location
+      etag
+      lastModified
+      outcome
+      --
+      signature
+   }
+   class List <<(P,#FFAAAA)>>{
+      Dokumentation [[https://hl7.org/fhir/R4/list.html R4 List]]
+      --
+      identifier
+      status : ListStatus
+      mode : ListMode
+      title 
+      code
+      subject : Reference (**Patient** |\n Group | Device | Location)
+      encounter : Reference (**Encounter**)
+      source : Reference (**Practitioner** |\n PractitionerRole | **Patient** | Device)
+      ...
+      --entry.--
+      flap
+      deleted
+      date
+      item : Reference(Any)
+      --
+      emptyReason
+   }
+}
 
+namespace ISiK_Basis {
+   class Basismodul_Stufe_3 <<(M,#FFDC36)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/~introduction ISiK Basis Stufe 3]]
+   }
+   class ISiKPatient <Patient><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikpatient ISiK Patient]]
+   }
+   class ISiKKontaktGesundheitseinrichtung <Encounter><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikkontaktgesundheitseinrichtung ISiK Kontakt Gesundheitseinrichtung]]
+   }
+   class ISiKPractitioner <Practitioner><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikpersonimgesundheitsberuf ISiK Person im Gesundheitsberuf]]
+   }
+   class ISiKDiagnose <Condition><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikdiagnose ISiK Diagnose]]
+   }
+   class ISiKProzedur <Procedure><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikprozedur ISiK Prozedur]]
+   }
+   class ISiKAngehoeriger <RelatedPerson><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikangehoeriger ISiK Angehoeriger]]
+   }
+}
 
+'namespace dummy {
+'   class Foo {
+'   + field1
+'   + field2
+'   }
+'   class Bar {
+'   + field3
+'   + field4
+'   }
+'   Foo::field1 --> Bar::field3 : foo
+'   Foo::field2 --> Bar::field4 : bar
+'}
 @enduml
