@@ -16,15 +16,16 @@
   - [6.1. Bestehende Standards](#61-bestehende-standards)
 - [7. User Stories und Use Cases](#7-user-stories-und-use-cases)
   - [7.1. User Stories - Business](#71-user-stories---business)
-  - [7.2. US-01: AMTS Prüfung bei neuer Informationslage](#72-us-01-amts-prüfung-bei-neuer-informationslage)
-  - [7.3. US-02: Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)](#73-us-02-stationäre-aufnahme-mit-medikationsumstellung-medication-reconciliation)
-  - [7.4. US-03: Entlassung mit Medikationsumstellung (Medication Reconciliation)](#74-us-03-entlassung-mit-medikationsumstellung-medication-reconciliation)
-  - [7.5. Fazit zu User Stories](#75-fazit-zu-user-stories)
-  - [7.6. Use Cases - Technisch](#76-use-cases---technisch)
-  - [7.7. Exemplarische Abläufe](#77-exemplarische-abläufe)
-  - [7.8. Nebenbedingungen und weitere Informationen](#78-nebenbedingungen-und-weitere-informationen)
+  - [7.2. US-01: AMTS Prüfung bei Verordnung und Abgabe](#72-us-01-amts-prüfung-bei-verordnung-und-abgabe)
+  - [7.3. US-02: AMTS Prüfung bei neuer Informationslage](#73-us-02-amts-prüfung-bei-neuer-informationslage)
+  - [7.4. US-02: Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)](#74-us-02-stationäre-aufnahme-mit-medikationsumstellung-medication-reconciliation)
+  - [7.5. US-03: Entlassung mit Medikationsumstellung (Medication Reconciliation)](#75-us-03-entlassung-mit-medikationsumstellung-medication-reconciliation)
+  - [7.6. Fazit zu User Stories](#76-fazit-zu-user-stories)
+  - [7.7. Use Cases - Technisch](#77-use-cases---technisch)
+  - [7.8. Exemplarische Abläufe](#78-exemplarische-abläufe)
+  - [7.9. Nebenbedingungen und weitere Informationen](#79-nebenbedingungen-und-weitere-informationen)
 - [8. Liste weiterer Bedarfe an die Spezifikation](#8-liste-weiterer-bedarfe-an-die-spezifikation)
-- [9. Annex I - Klassen- und Datendiagramm](#9-annex-i---klassen--und-datendiagramm)
+- [9. Annex I - Diagramme](#9-annex-i---diagramme)
 
 ## 1. Motivation und Hintergrund
 
@@ -134,31 +135,39 @@ Use Cases sind eher technisch orientiert und fokussieren verschiedene Einsatzsze
 
 Die User Stories beschreiben die grundlegenden Kontexte, in denen der Bedarf nach einem AMTS entsteht – mit potenziell unterschiedliche Komponenten für die User-System Interaktion:
 
-- US-01 - AMTS Prüfung bei neuer Informationslage
-   - Ein Pharmazeutischer Mitarbeiter möchte AMTS-relevante Informationen abrufen, um eine sichere Abgabe von Medikation zu gewährleisten.
-- US-02 - Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
+- US-01 - AMTS Prüfung bei Verordnung, Änderung der Verordnung und Abgabe
+   - Ein Heilberufler möchte AMTS-relevante Informationen abrufen, um eine sichere Verordnung, Änderung einer Verordnung (z.B. Substitution) oder Abgabe einer Medikation zu gewährleisten.
+- US-02 - AMTS Prüfung bei neuer Informationslage
+   - Ein Pharmazeutischer Mitarbeiter möchte AMTS-relevante Informationen abrufen, um eine sichere Abgabe einer Medikation zu gewährleisten.
+- US-03 - Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
    - Bei der stationären Aufnahme eines Patienten soll die bestehenden (häusliche oder ambulante) Medikation mit in das geänderte Versorgungsumfeld übersetzte und angepasst werden, um eine gleichwertige und sichere stationäre Verordnung zu gewährleisten.
-- US-03 - Entlassung mit Medikationsumstellung (Medication Reconciliation)
+- US-04 - Entlassung mit Medikationsumstellung (Medication Reconciliation)
    - Bei der Entlassung eines Patienten aus der stationären Versorgung soll die initiale Medikation mit in das sich ändernde Umfeld übersetzt und angepasst werden, um eine gleichwertige und sichere Weiterführung der Medikation zu gewährleisten.
 
-### 7.2. US-01: AMTS Prüfung bei neuer Informationslage
+### 7.2. US-01: AMTS Prüfung bei Verordnung und Abgabe
 
-**REQ-001**: Im Rahmen der Medikationsausgabe MUSS der Nutzer auf AMTS hin prüfen können.
+**REQ-001**: Im Rahmen der Medikationsverordnung, -Änderung oder -Ausgabe MUSS der Nutzer auf AMTS hin prüfen können.
 
-### 7.3. US-02: Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
+### 7.3. US-02: AMTS Prüfung bei neuer Informationslage
 
-**REQ-002**: Im Rahmen der Patientenaufnahme MUSS der Nutzer auf AMTS hin prüfen können.
+**REQ-002**: Im Rahmen neu bekanntgewordener Informationen MUSS der Nutzer auf AMTS hin prüfen können.
 
-### 7.4. US-03: Entlassung mit Medikationsumstellung (Medication Reconciliation)
+### 7.4. US-02: Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
 
-**REQ-003**: Im Rahmen der Entlassung MUSS der Nutzer auf AMTS hin prüfen können.
+**REQ-003**: Im Rahmen der Patientenaufnahme MUSS der Nutzer auf AMTS hin prüfen können.
 
-### 7.5. Fazit zu User Stories
+### 7.5. US-03: Entlassung mit Medikationsumstellung (Medication Reconciliation)
+
+**REQ-004**: Im Rahmen der Entlassung MUSS der Nutzer auf AMTS hin prüfen können.
+
+### 7.6. Fazit zu User Stories
 
 Der zentrale Auslöser einer AMTS-Prüfung und damit auch für die Nutzung der Schnittstellen ist eine vorher unbekannte Informationslage. Die Informationen können initial neu sein, durch den Patienten später in den Prozess hinzugegeben werden, oder sich im Zuge einer Behandlung ergeben.
 
-### 7.6. Use Cases - Technisch
-Aus einer Perspektive der Workflows lassen sich folgenden Use Cases (UCs) ausdifferenzieren:
+### 7.7. Use Cases - Technisch
+Aus einer Perspektive der Workflows lassen sich folgenden Unter Use Cases (UCs) ausdifferenzieren und darstellen:
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_usecases.svg" alt="AMTS Use Cases" width="90%"/>
 
 * **UC-01: Konsolidieren AMTS relevanter Informationen** zur Durchführung einer AMTS-Prüfung
    * *Beschreibung:*
@@ -167,7 +176,7 @@ Aus einer Perspektive der Workflows lassen sich folgenden Use Cases (UCs) ausdif
    * *Beschreibung:*
    * *Akteure:*
 
-### 7.7. Exemplarische Abläufe
+### 7.8. Exemplarische Abläufe
 
 **Beispiel-Sequenz Geplanter operativer mit stationärem Aufenthalt**
 
@@ -186,7 +195,7 @@ Ein geriatrischer Patient unterzieht sich einer geplanten Hüftersatzoperation:
 * Im Entlassgespräch werdenden Veränderungen kommuniziert und erklärt.
 * Der Patient wird mit einem neuen Medikationsplan entlassen.
 
-### 7.8. Nebenbedingungen und weitere Informationen
+### 7.9. Nebenbedingungen und weitere Informationen
 
 *Annahmen:*
 * Ein Beteiligtes System verfügt über die grundlegende Funktion zur Durchführung eines AMTS-Checks.
@@ -219,9 +228,11 @@ Ein geriatrischer Patient unterzieht sich einer geplanten Hüftersatzoperation:
 ## 8. Liste weiterer Bedarfe an die Spezifikation
 Hier werden Bedarfe an die Spezifikation vorgehalten, die nicht unmittelbar über die oben priorisierten UCs abgedeckt sind.
 
-1. Information darüber, ob ein beteiligten System selbst AMTS (Teil-Prüfungen) vornehmen kann.
+1. Information darüber, ob ein beteiligtes System selbst AMTS-Checks (oder Teil-Prüfungen) vornehmen kann.
 2. TBD
 
-## 9. Annex I - Klassen- und Datendiagramm
+## 9. Annex I - Diagramme
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_usecases.svg" alt="AMTS Use Cases" width="90%"/>
 
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_Infomodell.svg" alt="AMTS Infomodell" width="90%"/>

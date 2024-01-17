@@ -2,21 +2,86 @@
 
 ' verhindere Probleme mit gewinkelten Krähenfüßen
 skinparam linetype ortho
+ 
+' package Dummy{
+' entity Entität01 {
+'    optionales Attribut
+'    **optionales fettes Attribut**
+'    * **vorgeschriebens fettes Attribut**
+' }
+' 
+' entity Entität01 {
+'    optionales Attribut : text
+'    **optionales fettes Attribut** nummer <<auto>>
+'    * **vorgeschriebens fettes Attribut**
+' }
+' Entität01 }|..|| Entität02
+' Entität03 }o..o| Entität04
+' Entität05 ||--o{ Entität06
+' Entität07 |o--|| Entität08
+' }
+ 
+ ' TODO:
+ ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
 
-entity Entität01 {
-   optionales Attribut
-   **optionales fettes Attribut**
-   * **vorgeschriebens fettes Attribut**
+package ISiK-Medikation {
+class  ISiKMedikation <Medication><<(P,#8DA5C4)>>{
+   id
+   identifier
+}
+class  ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
+   id
+   identifier
+}
+class  ISiKMedikationsListe <List><<(P,#8DA5C4)>>{
+   id
+   identifier
+}
+class  ISiKMedikationsVerabreichung <MedicationAdministration><<(P,#8DA5C4)>>{
+   id
+   identifier
+}
+class  ISiKMedikationsVerordnung <MedicationRequest><<(P,#8DA5C4)>>{
+   id
+   identifier
+}
+class  ISiKMedikationTransaction <Bundle><<(P,#8DA5C4)>>{
+   id
+   identifier
+}
+class  ISiKMedikationTransactionResponse <Bundle><<(P,#8DA5C4)>>{
+   id
+   identifier
+}
+}
+package "hl7.fhir.r4.core" {
+class  Bundle <<(P,#FFAAAA)>>{
+   id
+   identifier
+   --
+   --
+   ...
+   struct e {
+      eintrag }
+   }
+class  List <<(P,#FFAAAA)>>{
+   id
+   identifier
+   --
+   --
+   ...
+}
+}
+package ISiK-Basis {
+class  ISiKPatient <Patient><<(P,#CCCCFF)>>{
+   id
+   identifier
+   --
+   --
+   ...
+}
 }
 
-entity Entität01 {
-   optionales Attribut : text
-   **optionales fettes Attribut** nummer <<auto>>
-   * **vorgeschriebens fettes Attribut**
-}
-Entität01 }|..|| Entität02
-Entität03 }o..o| Entität04
-Entität05 ||--o{ Entität06
-Entität07 |o--|| Entität08
+
 
 @enduml

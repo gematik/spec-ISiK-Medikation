@@ -25,7 +25,7 @@ skinparam linetype ortho
  ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
 
 package ISiK-Basis {
-class  ISiKPatient <Patient><<(P,#CCCCFF)>>{
+class  ISiKPatient <Patient><<(P,#8DA5C4)>>{
    id
    identifier
    --
@@ -35,14 +35,14 @@ class  ISiKPatient <Patient><<(P,#CCCCFF)>>{
    **Körpergewicht**
    ...
 }
-class  ISiKAllergie <AllergyIntolerance><<(P,#CCCCFF)>>{
+class  ISiKAllergie <AllergyIntolerance><<(P,#8DA5C4)>>{
    TBD
 
    **Beginn**
    **Abklingen**
    **Lebensphase**
 }
-class  ISiKDiagnose <Condition><<(P,#CCCCFF)>>{
+class  ISiKDiagnose <Condition><<(P,#8DA5C4)>>{
    --
    --
    **klinischer Status**
@@ -55,7 +55,7 @@ class  ISiKDiagnose <Condition><<(P,#CCCCFF)>>{
 }
 
 package ISiK-Medikation {
-class  ISiKMedikation <Medication><<(P,#CCCCFF)>>{
+class  ISiKMedikation <Medication><<(P,#8DA5C4)>>{
    id
    identifier
    --
@@ -68,7 +68,7 @@ class  ISiKMedikation <Medication><<(P,#CCCCFF)>>{
 }
 
 package "ISiK-Labor (MVP)"{
-class  ISiKLaborErgebnis <Observation><<(P,#CCCCFF)>>{
+class  ISiKLaborErgebnis <Observation><<(P,#8DA5C4)>>{
    TBD
    ..Nierenfunktion..
       **GFR**
