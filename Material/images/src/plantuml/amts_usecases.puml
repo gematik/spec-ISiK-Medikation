@@ -1,4 +1,4 @@
-'@startuml
+'@startuml dummy
 'usecase Medikation as "
 '    = Medikation
 '    
@@ -12,7 +12,7 @@
 '"
 '@enduml
 
-@startuml
+@startuml amts_usecases
 left to right direction
 skinparam packageStyle storage
 actor :Heilberufler:
