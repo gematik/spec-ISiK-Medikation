@@ -5,7 +5,7 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Feld
 * Profile und Extenstion, die im Modul Medikation zwingend benötigt werden. In vereinfachter Form, mit Verweis auf den Ursprung.
 * Felder, die unterstüzt werden MÜSSEN (Must Support).
 * Die Elemente (Unterfelder) haben, die unterstüzt werden MÜSSEN (Must Support).
-* 
+* Nur Unter-Elemente (MS) bis zu zweiten oder dritten Tiefe, abhängig von Umfang und Systematik. D.h. Keine bedingten Wiederholungen (repeat) oder Rekursionen (part-of).
 
 
 ## Informationsmodell

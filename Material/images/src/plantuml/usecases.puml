@@ -120,7 +120,7 @@ cloud "Search Functions() For" as fncts {
         * Encounter ** via ** subject
     ]
     component CStAll_KontaktGesundheitseinrichtung [
-        **ISiK Patient**
+        **ISiK Kontakt Gesundheitseinrichtung**
         ====
         Suche anhand von
         * ** : ** patient
