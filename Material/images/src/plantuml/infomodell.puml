@@ -28,36 +28,71 @@
 
 'Namespace enhancement
 set separator none
-
+   class Foo {
+   **Bar (Model)**
+   |_ prop
+      |_ **Bom (Model)**
+         |_ prop2
+         |_ propprop
+   |_ prop4
+      |_ prop3.1
+   |_ prop4 :(
+   --
+   }
 namespace ISiK_Medikation {
-   class  ISiKMedikation <Medication><<(P,#8DA5C4)>>{
+   class  ISiKMedikament <Medication><<(P,#8DA5C4)>>{
       id
-      identifier
       code
-      --code.coding.--
-      PZN : **Pattern**
-      ATC-DE : **Pattern**
-      WG14 : **Pattern**
-      --
-      ...
+      |_ coding­
+         |_ PZN : **Pattern**
+         |_ ATC-DE : **Pattern**
+         |_ WG14 : **Pattern**
+      |_ text
+      status
       manufacturer : Reference (**Organization**)
+      |_ display
       form 
-      --form.coding.--
-      EDQM : **Binding**
-      --
+      |_ coding
+         |_ EDQM : **Binding**
       amount
-      --ingredient.--
-      extension : **Wirkstofftyp**
-      ..ingredient.item[x]...
-      itemCodeableConcept
-      itemReference (**Substance** | **Medication**)
-      ..
-      isActive
-      strength
-      --batch.--
-      lotNumber
-      expirationDate
-      --
+      |_ numerator : **Pattern**
+         |_ value
+         |_ unit
+         |_ system
+         |_ code
+      |_ denominator : **Pattern**
+         |_ value
+         |_ unit
+         |_ system
+         |_ code
+      ingredient
+      |_ extension
+         |_ Wirkstofftyp : **Extension**
+      |_ item[x]
+         |_ itemCodeableConcept
+            |_ coding­
+               |_ ASK : **Pattern**
+               |_ PZN : **Pattern**
+               |_ ATC-DE : **Pattern**
+               |_ WG14 : **Pattern**
+            |_ text
+         |_ itemReference : Reference (**Substance** | **Medication**)
+            |_ referencd
+      |_ isActive
+      |_ strength
+         |_ numerator : **Pattern**
+         '   |_ value
+         '   |_ unit
+         '   |_ system
+         '   |_ code
+         |_ denominator : **Pattern**
+         '   |_ value
+         '   |_ unit
+         '   |_ system
+         '   |_ code
+      batch
+      |_ lotNumber
+
    }
    'ISiKMedikation::itemReference --> ISiKMedikation
 
@@ -241,6 +276,13 @@ namespace ISiK_Medikation {
 'ISiK_Medikation.ISiKMedikationsListe::subject --> ISiK_Basis.ISiKPatient
 'ISiK_Medikation.ISiKMedikationTransaction --> R4_Core.Bundle
 'ISiK_Medikation.ISiKMedikationTransactionResponse --|> R4_Core.Bundle
+
+namespace MII_Kerndatensatz {
+   class Extension_Wirkstofftyp <<(E,#7A8495)>>{
+      Dokumentation auf Simplifier 
+      [[https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp MII Wirkstofftyp]]
+   }
+}
 
 namespace R4_Core {
    class Foundation_Modul <<(M,#FFAAAA)>>{
