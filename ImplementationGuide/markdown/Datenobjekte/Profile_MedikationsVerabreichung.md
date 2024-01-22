@@ -45,9 +45,13 @@ select
 
 ## Beispiele
 
-Valides Beispiel für das Profil MedikationsVerabreichung:
+Valide Beispiele für das Profil MedikationsVerabreichung:
 
+Einfache Einnahme:
 {{json:ExampleISiKMedikationsVerabreichung}}
+
+Zytostaka-Infusion:
+{{json:ExampleISiKMedikationsVerabreichung2}}
 
 ## Interaktionen
 
