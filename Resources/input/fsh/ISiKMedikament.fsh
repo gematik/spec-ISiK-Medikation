@@ -146,7 +146,7 @@ Usage: #example
 Instance: ExampleISiKMedikament2
 InstanceOf: ISiKMedikament
 Usage: #example
-* code.text = "Infusion bestehend aus 85mg Doxorubicin aufgeloest zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionsloesung"
+* code.text = "Infusion bestehend aus 85mg Doxorubicin aufgelöst zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionslösung"
 * status = #active
 * form.coding
   * system = $cs-edqm
@@ -176,3 +176,219 @@ Usage: #example
 * ingredient[1]
   * itemReference.reference = "Medication/7f27cb8d-940b-43fd-ab8b-fee5b7a9b060"
   * isActive = true
+
+Instance: ExampleISiKMedikament3
+InstanceOf: ISiKMedikament
+Usage: #example
+* code.coding
+  * system = $cs-pzn
+  * code = #07265233
+  * display = "Pantozol® 40 mg 98 St."
+* status = #active
+
+Instance: ExampleISiKMedikament4
+InstanceOf: ISiKMedikament
+Usage: #example
+* status = #active
+* form.text = "Tabletten"
+* ingredient[0]
+  * itemCodeableConcept.coding
+    * system = $cs-pzn
+    * code = #00266040
+    * display = "IBU-ratiopharm® 400 mg akut Schmerztabletten 20 St."
+  * isActive = true
+  * strength
+    * numerator
+      * value = 1
+      * unit = "St."
+      * system = $cs-ucum
+      * code = #1
+    * denominator
+      * value = 1
+      * system = $cs-ucum
+      * code = #1
+* ingredient[1]
+  * itemCodeableConcept.coding
+    * system = $cs-pzn
+    * code = #01126111
+    * display = "Paracetamol-ratiopharm® 500 mg 20 St."
+  * isActive = true
+  * strength
+    * numerator
+      * value = 1
+      * unit = "St."
+      * system = $cs-ucum
+      * code = #1
+    * denominator
+      * value = 1
+      * system = $cs-ucum
+      * code = #1
+
+Instance: ExampleISiKMedikament5
+InstanceOf: ISiKMedikament
+Usage: #example
+* status = #active
+* form.text = "Tabletten"
+* ingredient[0]
+  * itemCodeableConcept.coding
+    * system = $cs-atc-de
+    * code = #M02AA13
+    * display = "Ibuprofen"
+  * isActive = true
+  * strength
+    * numerator
+      * value = 400
+      * unit = "mg"
+      * system = $cs-ucum
+      * code = #mg
+    * denominator
+      * value = 1
+      * unit = "St."
+      * system = $cs-ucum
+      * code = #1
+* ingredient[1]
+  * itemCodeableConcept.coding
+    * system = $cs-atc-de
+    * code = #N02BE01
+    * display = "Paracetamol"
+  * isActive = true
+  * strength
+    * numerator
+      * value = 500
+      * unit = "mg"
+      * system = $cs-ucum
+      * code = #mg
+    * denominator
+      * value = 1
+      * unit = "St."
+      * system = $cs-ucum
+      * code = #1
+
+Instance: ExampleISiKMedikament6
+InstanceOf: ISiKMedikament
+Usage: #example
+* code.text = "Enoxaparin-Natrium 40 mg"
+* status = #active
+
+Instance: ExampleISiKMedikament7
+InstanceOf: ISiKMedikament
+Usage: #example
+* code.text = "Paracetamol gelöst in Wasser"
+* status = #active
+* ingredient[0]
+  * itemCodeableConcept.coding
+    * system = $cs-atc-de
+    * code = #N02BE01
+    * display = "Paracetamol"
+  * isActive = true
+  * strength
+    * numerator
+      * value = 500
+      * unit = "mg"
+      * system = $cs-ucum
+      * code = #mg
+    * denominator
+      * value = 1
+      * system = $cs-ucum
+      * code = #1
+* ingredient[1]
+  * itemCodeableConcept.text = "Wasser"
+  * isActive = false
+  * strength
+    * numerator
+      * value = 1
+      * unit = "Esslöffel"
+      * system = $cs-ucum
+      * code = #1
+    * denominator
+      * value = 1
+      * system = $cs-ucum
+      * code = #1
+
+Instance: ExampleISiKMedikament8
+InstanceOf: ISiKMedikament
+Usage: #example
+* code.text = "Infusion bestehend aus 80 mg/m² KOF Paclitaxel aufgelöst zur Verabreichung in 5-%iger (50 mg/ml) Glucose-Infusionslösung"
+* status = #active
+* form.coding
+  * system = $cs-edqm
+  * code = #11210000
+  * display = "Solution for infusion"
+* ingredient[0]
+  * itemCodeableConcept.coding
+    * system = $cs-atc-de
+    * code = #L01CD01
+    * display = "Paclitaxel"
+  * isActive = true
+  * strength
+    * numerator
+      * value = 80
+      * unit = "mg"
+      * system = $cs-ucum
+      * code = #mg
+    * denominator
+      * value = 1
+      * unit = "m² KOF"
+      * system = $cs-ucum
+      * code = #m2
+* ingredient[1]
+  * itemCodeableConcept.coding
+    * system = $cs-atc-de
+    * code = #B05BA11
+    * display = "Glucose"
+  * isActive = false
+  * strength
+    * numerator
+      * value = 50
+      * unit = "mg"
+      * system = $cs-ucum
+      * code = #mg
+    * denominator
+      * value = 1
+      * unit = "Milliliter"
+      * system = $cs-ucum
+      * code = #mL
+
+Instance: ExampleISiKMedikament9
+InstanceOf: ISiKMedikament
+Usage: #example
+* code.text = "Infusion bestehend aus 142 mg Paclitaxel aufgelöst zur Verabreichung in 500 ml 5-%iger (50 mg/ml) Glucose-Infusionslösung"
+* status = #active
+* form.coding
+  * system = $cs-edqm
+  * code = #11210000
+  * display = "Solution for infusion"
+* ingredient[0]
+  * itemCodeableConcept.coding
+    * system = $cs-atc-de
+    * code = #L01CD01
+    * display = "Paclitaxel"
+  * isActive = true
+  * strength
+    * numerator
+      * value = 142
+      * unit = "mg"
+      * system = $cs-ucum
+      * code = #mg
+    * denominator
+      * value = 500
+      * unit = "Milliliter"
+      * system = $cs-ucum
+      * code = #mL
+* ingredient[1]
+  * itemCodeableConcept.coding
+    * system = $cs-atc-de
+    * code = #B05BA11
+    * display = "Glucose"
+  * isActive = false
+  * strength
+    * numerator
+      * value = 50
+      * unit = "mg"
+      * system = $cs-ucum
+      * code = #mg
+    * denominator
+      * value = 1
+      * unit = "Milliliter"
+      * system = $cs-ucum
+      * code = #mL

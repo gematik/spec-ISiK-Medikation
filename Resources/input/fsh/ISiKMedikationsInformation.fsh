@@ -293,3 +293,28 @@ Usage: #example
     * unit = "mg"
     * system = $cs-ucum
     * code = #mg
+
+Instance: ExampleISiKMedikationsInformation3
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationReference = Reference(ExampleISiKMedikament8)
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Versorgungsstellenkontakt"
+* effectivePeriod
+  * start = 2024-01-22
+  * end = 2024-02-26
+* dateAsserted = 2024-01-17
+* dosage
+  * timing.repeat
+    * count = 6
+    * frequency = 1
+    * duration = 6
+    * durationUnit = #wk
+    * period = 1
+    * periodUnit = #wk
+  * doseAndRate.doseQuantity
+    * value = 500
+    * unit = "ml Infusionslösung"
+    * system = $cs-ucum
+    * code = #mL

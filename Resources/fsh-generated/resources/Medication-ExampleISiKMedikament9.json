@@ -1,6 +1,6 @@
 {
   "resourceType": "Medication",
-  "id": "ExampleISiKMedikament2",
+  "id": "ExampleISiKMedikament9",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikament"
@@ -11,46 +11,57 @@
       "strength": {
         "numerator": {
           "system": "http://unitsofmeasure.org",
-          "value": 85,
+          "value": 142,
           "unit": "mg",
           "code": "mg"
         },
         "denominator": {
           "system": "http://unitsofmeasure.org",
-          "value": 250,
+          "value": 500,
           "unit": "Milliliter",
           "code": "mL"
         }
       },
-      "extension": [
-        {
-          "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp",
-          "valueCoding": {
-            "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp",
-            "code": "IN"
-          }
-        }
-      ],
       "itemCodeableConcept": {
         "coding": [
           {
             "system": "http://fhir.de/CodeSystem/bfarm/atc",
-            "code": "L01DB01",
-            "display": "Doxorubicin"
+            "code": "L01CD01",
+            "display": "Paclitaxel"
           }
         ]
       },
       "isActive": true
     },
     {
-      "itemReference": {
-        "reference": "Medication/7f27cb8d-940b-43fd-ab8b-fee5b7a9b060"
+      "strength": {
+        "numerator": {
+          "system": "http://unitsofmeasure.org",
+          "value": 50,
+          "unit": "mg",
+          "code": "mg"
+        },
+        "denominator": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "unit": "Milliliter",
+          "code": "mL"
+        }
       },
-      "isActive": true
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://fhir.de/CodeSystem/bfarm/atc",
+            "code": "B05BA11",
+            "display": "Glucose"
+          }
+        ]
+      },
+      "isActive": false
     }
   ],
   "code": {
-    "text": "Infusion bestehend aus 85mg Doxorubicin aufgelöst zur Verabreichung in 250ml 5-%iger (50 mg/ml) Glucose-Infusionslösung"
+    "text": "Infusion bestehend aus 142 mg Paclitaxel aufgelöst zur Verabreichung in 500 ml 5-%iger (50 mg/ml) Glucose-Infusionslösung"
   },
   "status": "active",
   "form": {

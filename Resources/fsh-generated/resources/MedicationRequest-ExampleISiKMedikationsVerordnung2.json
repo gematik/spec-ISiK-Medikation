@@ -1,0 +1,48 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "ExampleISiKMedikationsVerordnung2",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsVerordnung"
+    ]
+  },
+  "dosageInstruction": [
+    {
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "system": "http://unitsofmeasure.org",
+            "value": 500,
+            "unit": "ml Infusionslösung",
+            "code": "mL"
+          }
+        }
+      ],
+      "timing": {
+        "repeat": {
+          "count": 6,
+          "frequency": 1,
+          "duration": 6,
+          "durationUnit": "wk",
+          "period": 1,
+          "periodUnit": "wk"
+        }
+      }
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "medicationReference": {
+    "reference": "Medication/ExampleISiKMedikament8"
+  },
+  "subject": {
+    "reference": "Patient/PatientinMusterfrau"
+  },
+  "encounter": {
+    "reference": "Encounter/Versorgungsstellenkontakt"
+  },
+  "authoredOn": "2024-01-17",
+  "requester": {
+    "reference": "Practitioner/PractitionerWalterArzt"
+  }
+}

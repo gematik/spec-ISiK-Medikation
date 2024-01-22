@@ -270,3 +270,27 @@ Usage: #example
     * unit = "Brausetablette"
     * system = $cs-ucum
     * code = #1
+
+Instance: ExampleISiKMedikationsVerordnung2
+InstanceOf: ISiKMedikationsVerordnung
+Usage: #example
+* status = #active
+* intent = #order
+* medicationReference = Reference(ExampleISiKMedikament8)
+* subject.reference = "Patient/PatientinMusterfrau"
+* encounter.reference = "Encounter/Versorgungsstellenkontakt"
+* authoredOn = 2024-01-17
+* requester.reference = "Practitioner/PractitionerWalterArzt"
+* dosageInstruction
+  * timing.repeat
+    * count = 6
+    * frequency = 1
+    * duration = 6
+    * durationUnit = #wk
+    * period = 1
+    * periodUnit = #wk
+  * doseAndRate.doseQuantity
+    * value = 500
+    * unit = "ml Infusionslösung"
+    * system = $cs-ucum
+    * code = #mL
