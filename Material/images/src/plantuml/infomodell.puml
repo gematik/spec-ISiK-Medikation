@@ -105,7 +105,7 @@ namespace ISiK_Medikation {
             |_ ATC-DE : **Pattern**
             |_ WG14 : **Pattern**
          text
-      |_ medicationReference Reference (**Medication**)
+      |_ medicationReference : Reference (**Medication**)
          |_ reference
       subject : Reference (**Patient**)
          |_ reference
@@ -312,7 +312,7 @@ namespace ISiK_Medikation {
       Beeinhaltet Codes aus SNOMED CT bei denen das \nConcept 284009009 (Route Of Administration) ist
       [[https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80147 SNOMED_CT 284009009]]
       --
-      codes : **$CS-SCT** 
+      codes : **$CS-SCT** is-a **284009009**
    }
 }
 

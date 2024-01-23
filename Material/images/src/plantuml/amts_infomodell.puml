@@ -1,20 +1,9 @@
-@startuml
+@startuml amts_infomodell
 
 ' verhindere Probleme mit gewinkelten Krähenfüßen
-skinparam linetype ortho
+'skinparam linetype ortho
  
 ' package Dummy{
-' entity Entität01 {
-'    optionales Attribut
-'    **optionales fettes Attribut**
-'    * **vorgeschriebens fettes Attribut**
-' }
-' 
-' entity Entität01 {
-'    optionales Attribut : text
-'    **optionales fettes Attribut** nummer <<auto>>
-'    * **vorgeschriebens fettes Attribut**
-' }
 ' Entität01 }|..|| Entität02
 ' Entität03 }o..o| Entität04
 ' Entität05 ||--o{ Entität06
@@ -37,69 +26,59 @@ namespace ISiK_Basis {
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v3/isikkontaktgesundheitseinrichtung ISiK Kontakt Gesundheitseinrichtung]]
    }
-   class ISiKPractitioner <Practitioner><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v3/isikpersonimgesundheitsberuf ISiK Person im Gesundheitsberuf]]
-   }
-   class ISiKDiagnose <Condition><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v3/isikdiagnose ISiK Diagnose]]
-   }
-   class ISiKProzedur <Procedure><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v3/isikprozedur ISiK Prozedur]]
-   }
-   class ISiKAngehoeriger <RelatedPerson><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v3/isikangehoeriger ISiK Angehoeriger]]
-   }  
+   
    class  ISiKAllergie <AllergyIntolerance><<(P,#8DA5C4)>>{
-      TBD
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/allergyintolerance.html Allergy Intolerance]]
+      --
+      id
+      identifier           \n\t// External ids for this item
+      clinicalStatus : **AllergyIntoleranceClinicalStatus**       \n\t// active | inactive | resolved
+      verificationStatus : **AllergyIntoleranceVerificationStatus**  \n\t// unconfirmed | confirmed | refuted | entered-in-error
+      type : **AllergyIntoleranceType** \n\t// allergy | intolerance - Underlying mechanism (if known)
+      category : **AllergyIntoleranceCategory** \n\t// food | medication | environment | biologic
+      criticality: **AllergyIntoleranceCriticality** \n\t// low | high | unable-to-assess
+      code : **AllergyIntoleranceSubstance** \n\t// Code that identifies the allergy or intolerance
+      patient : Reference (**Patient**) \n\t// Who the sensitivity is for
+      encounter : Reference (**Encounter**) \n\t// Encounter when the allergy or intolerance was asserted
+      onset[x] \n\t\t// When allergy or intolerance was identified. One of these 5
+      |_ onsetDateTime
+      |_ onsetAge
+      |_ onsetPeriod
+      |_ onsetRange
+      |_ onsetString
+      recordedDate \n\t\t// Date first version of the resource instance was recorded
+      recorder : Reference ( **Practitioner** | PractitionerRole | **Patient** | **RelatedPerson** )	
+      asserter : Reference ( **Patient** | **RelatedPerson** | **Practitioner** | PractitionerRole )
+      lastOccurrence
+      note 
+      reaction \t//Adverse Reaction Events linked to exposure to substance
+      |_ substance : **Substance Code** \n\t// Specific substance or pharmaceutical product considered \n\t// to be responsible for event
+      |_ manifestation : **SNOMED CT Clinical Findings**
+      |_ description
+      |_ onset
+      |_ severity : **AllergyIntoleranceSeverity**	\n\t// mild | moderate | severe (of event as a whole)
+      |_ exposureRoute : **SctRouteOfAdministration**
+      |_ note
+   }
 
-      **Beginn**
-      **Abklingen**
-      **Lebensphase**
-   }
-   class  ISiKDiagnose <Condition><<(P,#8DA5C4)>>{
-      --
-      --
-      **klinischer Status**
-      **Verifikationsstatus**
-      **Typ**
-      **Kategorie**
-      **Kritikalität**
-      **Code**
-   }
 }
-
 
 namespace ISiK_Medikation {
    class  ISiKMedikament <Medication><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/isikmedikament ISiK Medikament]]
+      --
       id
+      This is <color:blue>Blue</color>
+      This is <back:orange>Orange background</back>
       code
-      |_ coding­
+      |_ <back:LightGreen>coding­</back>
          |_ PZN : **Pattern**
          |_ ATC-DE : **Pattern**
          |_ WG14 : **Pattern**
       |_ text
-      status
-      manufacturer : Reference (**Organization**)
-      |_ display
-      form 
-      |_ coding
-         |_ EDQM : **Binding**
-      amount
-      |_ numerator : **Pattern**
-         |_ value
-         |_ unit
-         |_ system
-         |_ code
-      |_ denominator : **Pattern**
-         |_ value
-         |_ unit
-         |_ system
-         |_ code
-      ingredient
+      <back:LightGreen>ingredient</back>
       |_ extension
          |_ Wirkstofftyp : **Extension**
       |_ item[x]
@@ -110,27 +89,15 @@ namespace ISiK_Medikation {
                |_ ATC-DE : **Pattern**
                |_ WG14 : **Pattern**
             |_ text
-         |_ itemReference : Reference (**Substance** | **Medication**)
+            |_ <back:LightGreen> itemReference : Reference (**Substance** | **Medication**)</back>
             |_ reference
-      |_ isActive
-      |_ strength
-         |_ numerator : **Pattern**
-         '   |_ value
-         '   |_ unit
-         '   |_ system
-         '   |_ code
-         |_ denominator : **Pattern**
-         '   |_ value
-         '   |_ unit
-         '   |_ system
-         '   |_ code
-      batch
-      |_ lotNumber
-
    }
    'ISiKMedikation::itemReference --> ISiKMedikation
 
    class ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
+       Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/isikmedikationsinformation ISiK Medikationsinformation]]
+      --
       id	
       partOf : Reference (**MedicationAdministration** | **MedicationDispense** |\n **MedicationStatement** | **Procedure** | Observation)
       status
@@ -141,225 +108,57 @@ namespace ISiK_Medikation {
             |_ ATC-DE : **Pattern**
             |_ WG14 : **Pattern**
          text
-      |_ medicationReference Reference (**Medication**)
+      |_ medicationReference : Reference (**Medication**)
          |_ reference
-      subject : Reference (**Patient**)
-         |_ reference
-      context : Reference (**Encounter** | EpisodeOfCare)
-         |_ reference
-      effective[x]
-      |_ effectiveDateTime
-      |_ effectivePeriod
-         |_ start
-         |_ end
-      dateAsserted
-      reasonCode
-      |_ coding
-         '|_ system
-         '|_ code
-         '|_ display
-      |_ text
-      reasonReference : Reference (**Condition** | Observation | DiagnosticReport)
-      |_ reference
-      note
-      |_ text
-      dosage
-      |_ text
-      |_ patientInstruction
-      |_ timing
-         |_ event
-         |_ repeat
-      |_ site
-      |_	coding
-      |_ text
-      |_route
+      |_ <back:LightGreen>route</back>
          |_	coding
             |_	EDQM : **Pattern**
             |_	SNOMED-CT : **Pattern**
-         |_ text	
-      |_ doseAndRate
-         '|_ dose[x]
-         '   |_ doseRange
-         '   |_ doseQuantity
-         '|_ rate[x]
-         '   |_ rateRatio
-         '   |_ rateRange
-         '   |_ rateQuantity
-      |_ maxDosePerPeriod
-         |_ numerator : **Pattern**
-         |_ denominator : **Pattern**
-      |_ maxDosePerAdministration : **SimpleQuantity**
-         '|_ value
-         '|_ unit
-         '|_ system
-         '|_ code
+         |_ text
    }
    'ISiKMedikationsInformation::medicationReference ---> ISiKMedikation
    
-   class  ISiKMedikationsListe <List><<(P,#8DA5C4)>>{
-      id
-      status : **Binding**
-      mode : **Binding**
-      code
-      |_ coding
-         |_ medications : **Pattern**
-            |_ system
-            |_ code
-            |_ display
-      subject : Reference (**Patient**)
-      |_ reference
-      encounter : Reference (**Encounter**)
-      |_ reference
-      date
-      entry
-      |_ date
-      |_ item : Reference (**MedicationStatement**)
-         |_ reference
-   }
-   'ISiKMedikationsListe::item --> ISiKMedikationsInformation
-
-   class ISiKMedikationsVerabreichung <MedicationAdministration><<(P,#8DA5C4)>>{
-      id
-      status
-      subject : Reference (**Patient**)
-      |_ reference
-      context : Reference (**Encounter** | EpisodeOfCare)
-      |_ reference
-      effective[x]
-      |_ effectiveDateTime
-      |_ effectivePeriod
-         |_ start
-         |_ end
-      peformer
-      |_ actor
-         |_ reference
-      reasonReference : Reference (**Condition** | Observation |\n DiagnosticReport)
-      |_ reference
-      note : **Annotation**
-      |_ text
-      dosage
-      |_ text
-      |_ site
-         |_	coding
-            |_	SNOMED-CT : **Pattern**
-         |_ text	
-      |_ route
-         |_	coding
-            |_	EDQM : **Pattern**
-            |_	SNOMED-CT : **Pattern**
-         |_ text	
-      |_ dose
-      |_ rate[x]
-         |_ rateRatio : **Ratio**
-            |_ numerator : **Pattern**
-            |_ denominator : **Pattern**
-         |_ rateQuantity : **SimpleQuantity**
-   }
-
-   class ISiKMedikationsVerordnung <MedicationRequest><<(P,#8DA5C4)>>{
-      id
-      status
-      intent
-      <s>doNotPerform</s>
-      medication[x]
-      |_ medicationCodeableConcept
-          |_ coding­
-               |_ PZN : **Pattern**
-               |_ ATC-DE : **Pattern**
-               |_ WG14 : **Pattern**
-            |_ text
-      |_ medicationReference (**Medication**)
-         |_ reference
-      subject : Reference (**Patient**)
-      |_ reference
-      encounter : Reference (**Encounter**)
-      |_ reference
-      authoredOn
-      requester : Reference (**Practitioner** | PractitionerRole |\n Organization | **Patient** | **RelatedPerson** | Device)
-      |_ reference
-      note : **Annotation**
-      |_ text
-      dosageInstruction
-      |_ text
-      |_ patientInstruction
-      |_ timing	
-         |_ event
-         |_ repeat
-      |_ site
-         |_	coding
-            |_	SNOMED-CT : **Pattern**
-         |_ text	
-      |_ route
-         |_	coding
-            |_	EDQM : **Pattern**
-            |_	SNOMED-CT : **Pattern**
-         |_ text	
-      |_ doseAndRate
-         '|_ dose[x]
-         '   |_ doseRange
-         '   |_ doseQuantity
-         '|_ rate[x]
-         '   |_ rateRatio
-         '   |_ rateRange
-         '   |_ rateQuantity
-      |_ maxDosePerPeriod
-         |_ numerator : **Pattern**
-         |_ denominator : **Pattern**
-      |_ maxDosePerAdministration : **SimpleQuantity**
-         '|_ value
-         '|_ unit
-         '|_ system
-         '|_ code
-      dispenseRequest
-      |_ quantity
-      substitution
-      |_ allowed[x]
-         |_ allowedBoolean
-   }
-
-   class ISiKMedikationTransaction <Bundle><<(P,#8DA5C4)>>{
-      type : BundleType.**Transaction**
-      entry
-      |_ <s>link</s>
-      |_ fullUrl
-      |_ resource
-      |_ <s>search</s>
-      |_ **request**
-         |_ method
-         |_ url
-      |_ <s>response</s>
-   }
-   class ISiKMedikationTransactionResponse <Bundle><<(P,#8DA5C4)>>{
-      type : BundleType.**Response**
-      entry
-      |_ <s>link</s>
-      |_ fullUrl
-      |_ resource
-      |_ <s>search</s>
-      |_ <s>request</s>
-      |_ **response**
-         |_ status
-         |_ location
-         |_ outcome
-   }
-   class SctRouteOfAdministration <ValueSet><<(V,#8DA5C4)>>{
+   class SctRouteOfAdministration <ValueSet><<(V,#8DA5C4)>> #LightGreen{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-medikation-v3/sctrouteofadministration SNOMED CT Route Of Administration]]
       Beeinhaltet Codes aus SNOMED CT bei denen das \nConcept 284009009 (Route Of Administration) ist
       [[https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80147 SNOMED_CT 284009009]]
       --
-      codes : **$CS-SCT** 
+      codes : **$CS-SCT** is-a **284009009**
    }
 }
 
 package "ISiK-Labor (MVP)"{
-   class  ISiKLaborErgebnis <Observation><<(P,#8DA5C4)>>{
-      TBD
-      ..Nierenfunktion..
-         **GFR**
-         **Serumkreation**
-         **Risikomeldung**
-      ..
+   class  ISiKLaborBefunde <DiagnosticReport><<(P,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[http://hl7.org/fhir/R4/diagnosticreport.html DiagnosticReport]]
+      --
+      id
+      identifier \n\t // Business identifier for report
+      basedOn : Reference (CarePlan | ImmunizationRecommendation | **MedicationRequest** | NutritionOrder | **ServiceRequest**) \n\t // What was requested
+      status : **DiagnosticReportStatus**   \n\t // z.B. amended | unknow | registered | final +
+      category \n\t // vernachlässigbar 
+      code	: **FixedValue** \n\t // SNOMED Report Name Labor Befunde
+      |_ coding 
+         |_ system : **$CS-SCT**
+         |_ version 
+         |_ code : **4241000179101**
+         |_ display : **Laboratory report (record artifact)**
+      subject : Reference (**Patient** | Group | Device | Location)  \n\t // The subject of the report - usually, the patient
+      encounter : Reference (**Encounter**)  \n\t // Health care event when test ordered
+      effective[x] \n\t // Clinically relevant time/time-period for report
+      |_ effectiveDateTime
+      |_ effectivePeriod
+      issued : \n\t // vernachlässigbar
+      performer : Reference (**Practitioner** | PractitionerRole | Organization | CareTeam)  \n\t // Responsible Diagnostic Service
+      resultsInterpreter : Reference (**Practitioner** | PractitionerRole | Organization | CareTeam)  \n\t // vernachlässigbar
+      specimen	: Reference (Specimen)  \n\t // vernachlässigbar
+      result :	Reference (Observation)  \n\t // Observations
+      <s>imagingStudy :	Reference (ImagingStudy)</s>  \n\t // vernachlässigbar
+      <s> media : BackboneElement</s>  \n\t // vernachlässigbar
+      conclusion \n\t // Clinical conclusion (interpretation) of test results
+      conclusionCode	: **SNOMED CT Clinical Findings**  \n\t // Codes for the clinical conclusion of test results z.B. **AllergyIntolerance.reaction.manifestation**
+      presentedForm : **Attachment**  \n\t // Entire report as issued (PDF)
    }
 }
 
@@ -368,26 +167,54 @@ namespace R4_Core {
       Dokumentation auf HL7 Org
       [[https://hl7.org/fhir/R4/ HL7 FHIR R4 Core Foundation]]
    }
-   
+
+   class AllergyIntoleranceType <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-type.html Allergy Intolerance Type]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-type.html Code System of Type]]
+   }
+
    class AllergyIntoleranceCategory <ValueSet><<(V,#8DA5C4)>>{
       Dokumentation auf HL7 Org 
       [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html Allergy Intolerance Category]]
-      Das ValueSet entsprechende Standardset und beeinhatet das komplette Code System der Allergy Intolerance Category
-      [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-category.html Zugehöriges Code System of Category]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-category.html Code System of Category]]
    }
+
+   class AllergyIntoleranceSubstance <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-code.html AllergyIntolerance Substance, Product Condition and Negation Codes]]
+      Beeinhaltet alle [[https://www.hl7.org/fhir/R4/valueset-substance-code.html Substance Codes]] sowie weitere Codes aus [[http://www.snomed.org/ SNOMED CT]] \nbei denen Allergien und Unvertraeglichkeiten auftreten. 
+      --
+      codes : [[http://hl7.org/fhir/ValueSet/substance-code Contained in Substance-Code]]
+      codes : **$CS-SCT** is-a **18038007** (Propensity to adverse reactions to substance)
+      codes : **$CS-SCT** is-a **267425008** (Lactose intolerance)
+      codes : **$CS-SCT** is-a **29736007** (Syndrome of carbohydrate intolerance)
+      codes : **$CS-SCT** is-a **340519003** (Lysine intolerance)
+      codes : **$CS-SCT** is-a **190753003** (Sucrose intolerance)
+      codes : **$CS-SCT** is-a **413427002** (Acquired fructose intolerance)
+      codes : **$CS-SCT** is-a **716186003** (No known allergy) 
+   }
+
    class AllergyIntoleranceCriticality <ValueSet><<(V,#8DA5C4)>>{
       Dokumentation auf HL7 Org 
       [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html Allergy Intolerance Criticality]]
-      Das ValueSet entsprechende Standardset und beeinhatet das komplette Code System der Allergy Intolerance Criticality
-      [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-criticality.html Zugehöriges Code System of Criticality]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-criticality.html Code System of Criticality]]
    }
-   class ReactionEventSeverity <ValueSet><<(V,#8DA5C4)>>{
+   class AllergyIntoleranceVerificationStatus <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-verification.html Allergy Intolerance Verification Status]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://www.hl7.org/fhir/R4/codesystem-allergyintolerance-verification.html Code System of Verification Status]]
+   }
+   class AllergyIntoleranceClinicalStatus <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html Allergy Intolerance Clinical Status]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://www.hl7.org/fhir/R4/codesystem-allergyintolerance-clinical.html Code System of Clinical Status]]
+   }
+   class ReactionEventSeverity <ValueSet><<(V,#8DA5C4)>> {
       Dokumentation auf HL7 Org 
       [[https://hl7.org/fhir/R4/valueset-reaction-event-severity.html Reaction Eventu Severity]]
-      Das ValueSet entsprechende Standardset und beeinhatet das komplette Code System der Allergy Intolerance Severity
-      [[https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html Zugehöriges Code System of Severity]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html Code System of Severity]]
    }
 }
-
 
 @enduml
