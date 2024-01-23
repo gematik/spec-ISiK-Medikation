@@ -13,6 +13,26 @@
  ' TODO:
  ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
 
+namespace ISiK_VitalparameterUndKoerpermasze {
+   class ModulVitalparameterUndKoerpermasze_Stufe_3 <<(M,#FFDC36)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v3/~introduction ISiK VitalparameterUndKoerpermasze Stufe 3]]
+   }
+   class ISiKKoerpergewicht <Observation><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v3/isikkoerpergewicht ISiK Körpergewicht]]
+      ---
+      subject : Reference (**Patient** | Group)
+      encounter : Reference (**Encounter**)
+      <back:LightGreen>value[x]</back>
+      |_ valueQuantity
+         |_ <back:LightGreen>value</back>
+         |_ unit
+         |_ system
+         |_ code
+   }
+}
+
 namespace ISiK_Basis {
    class Basismodul_Stufe_3 <<(M,#FFDC36)>>{
       Dokumentation auf Simplifier 
@@ -21,16 +41,28 @@ namespace ISiK_Basis {
    class ISiKPatient <Patient><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v3/isikpatient ISiK Patient]]
+      ---
+      id
+      <back:LightGreen>birthDate</back> \n\t// relevant fürs Alter
+      <back:LightGreen>gender</back> \n\t// relevant für Kontraindikation, Schwangerschaft
    }
    class ISiKKontaktGesundheitseinrichtung <Encounter><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v3/isikkontaktgesundheitseinrichtung ISiK Kontakt Gesundheitseinrichtung]]
    }
+   class ISiKKDiagnose <Condition><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikdiagnose ISiK Diagnose]]
+      ---
+      id
+      <back:LightGreen>clinicalStatus</back> \n\t// relevant für chronische Erkrakungen
+      <back:LightGreen>code</back> \n\t// relevant für Kontraindikation, Schwangerschaft
+   }
    
    class  ISiKAllergie <AllergyIntolerance><<(P,#8DA5C4)>>{
       Dokumentation auf HL7 Org 
       [[https://www.hl7.org/fhir/R4/allergyintolerance.html Allergy Intolerance]]
-      --
+      ---
       id
       identifier           \n\t// External ids for this item
       clinicalStatus : **AllergyIntoleranceClinicalStatus**       \n\t// active | inactive | resolved
@@ -60,18 +92,83 @@ namespace ISiK_Basis {
       |_ severity : **AllergyIntoleranceSeverity**	\n\t// mild | moderate | severe (of event as a whole)
       |_ exposureRoute : **SctRouteOfAdministration**
       |_ note
+
+   class  ISiKChronischeNierenerkrankung <Condotion><<(P,#8DA5C4)>>{
+      Beispielhafte Profilierung der US-Core Condition im Rahmen der \n Multiple Chronic Conditions (MCC) eCare Plan, veröffentlicht mit HL7 
+      [[https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/MCC-IG/StructureDefinition-ChronicKidneyDisease.html Chronic Kidney Disease Condition]]
+      [[https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/MCC-IG/Condition-f202.html Chronic Kidney Disease Beispiel]]
+      ---
    }
 
 }
 
 namespace ISiK_Medikation {
-   class  ISiKMedikament <Medication><<(P,#8DA5C4)>>{
+
+   class  ISiKAMTSUseDefinition <ClinicalUseDefinition><<(P,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://build.fhir.org/clinicalusedefinition.html Cinical Use Definiton]]
+      ---
+      identifier  \n\t// Business identifier for this issue
+'  "type" : "<code>", // R!  indication | contraindication | interaction | undesirable-effect | warning
+'  "category" : [{ CodeableConcept }], // A categorisation of the issue, primarily for dividing warnings into subject heading areas such as "Pregnancy", "Overdose"
+'  "subject" : [{ Reference(ActivityDefinition|BiologicallyDerivedProduct|
+'   Device|DeviceDefinition|Medication|MedicinalProductDefinition|
+'   NutritionProduct|PlanDefinition|Substance) }], // The medication, product, substance, device, procedure etc. for which this is an indication, contraindication, interaction, undesirable effect, or warning
+'  "status" : { CodeableConcept }, // Whether this is a current issue or one that has been retired etc
+'  "contraindication" : { // I Specifics for when this is a contraindication
+'    "diseaseSymptomProcedure" : { CodeableReference(ObservationDefinition) }, // The situation that is being documented as contraindicating against this item
+'    "diseaseStatus" : { CodeableReference(ObservationDefinition) }, // The status of the disease or symptom for the contraindication
+'    "comorbidity" : [{ CodeableReference(ObservationDefinition) }], // A comorbidity (concurrent condition) or coinfection
+'    "indication" : [{ Reference(ClinicalUseDefinition) }], // The indication which this is a contraidication for
+'    "applicability" : { Expression }, // An expression that returns true or false, indicating whether the indication is applicable or not, after having applied its other elements
+'    "otherTherapy" : [{ // Information about use of the product in relation to other therapies described as part of the contraindication
+'      "relationshipType" : { CodeableConcept }, // R!  The type of relationship between the product indication/contraindication and another therapy
+'      "treatment" : { CodeableReference(ActivityDefinition|
+'     BiologicallyDerivedProduct|Medication|MedicinalProductDefinition|
+'     NutritionProduct|Substance|SubstanceDefinition) } // R!  Reference to a specific medication, substance etc. as part of an indication or contraindication
+'    }]
+'  },
+'  "indication" : { // I Specifics for when this is an indication
+'    "diseaseSymptomProcedure" : { CodeableReference(ObservationDefinition) }, // The situation that is being documented as an indicaton for this item
+'    "diseaseStatus" : { CodeableReference(ObservationDefinition) }, // The status of the disease or symptom for the indication
+'    "comorbidity" : [{ CodeableReference(ObservationDefinition) }], // A comorbidity or coinfection as part of the indication
+'    "intendedEffect" : { CodeableReference(ObservationDefinition) }, // The intended effect, aim or strategy to be achieved
+'    // duration[x]: Timing or duration information. One of these 2:
+'    "durationRange" : { Range },
+'    "durationString" : "<string>",
+'    "undesirableEffect" : [{ Reference(ClinicalUseDefinition) }], // An unwanted side effect or negative outcome of the subject of this resource when being used for this indication
+'    "applicability" : { Expression }, // An expression that returns true or false, indicating whether the indication is applicable or not, after having applied its other elements
+'    "otherTherapy" : [{ Content as for ClinicalUseDefinition.contraindication.otherTherapy }] // The use of the medicinal product in relation to other therapies described as part of the indication
+'  },
+'  "interaction" : { // I Specifics for when this is an interaction
+'    "interactant" : [{ // The specific medication, product, food etc. or laboratory test that interacts
+'      // item[x]: The specific medication, product, food etc. or laboratory test that interacts. One of these 2:
+'      "itemReference" : { Reference(BiologicallyDerivedProduct|Medication|
+'     MedicinalProductDefinition|NutritionProduct|ObservationDefinition|Substance) },
+'      "itemCodeableConcept" : { CodeableConcept }
+'    }],
+'    "type" : { CodeableConcept }, // The type of the interaction e.g. drug-drug interaction, drug-lab test interaction
+'    "effect" : { CodeableReference(ObservationDefinition) }, // The effect of the interaction, for example "reduced gastric absorption of primary medication"
+'    "incidence" : { CodeableConcept }, // The incidence of the interaction, e.g. theoretical, observed
+'    "management" : [{ CodeableConcept }] // Actions for managing the interaction
+'  },
+'  "population" : [{ Reference(Group) }], // The population group to which this applies
+'  "library" : ["<canonical(Library)>"], // Logic used by the clinical use definition
+'  "undesirableEffect" : { // I A possible negative outcome from the use of this treatment
+'    "symptomConditionEffect" : { CodeableReference(ObservationDefinition) }, // The situation in which the undesirable effect may manifest
+'    "classification" : { CodeableConcept }, // High level classification of the effect
+'    "frequencyOfOccurrence" : { CodeableConcept } // How often the effect is seen
+'  },
+'  "warning" : { // I Critical environmental, health or physical risks or hazards. For example 'Do not operate heavy machinery', 'May cause drowsiness'
+'    "description" : "<markdown>", // A textual definition of this warning, with formatting
+'    "code" : { CodeableConcept } // A coded or unformatted textual definition of this warning
+'   }
+   }
+   class ISiKMedikament <Medication><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-medikation-v3/isikmedikament ISiK Medikament]]
       --
       id
-      This is <color:blue>Blue</color>
-      This is <back:orange>Orange background</back>
       code
       |_ <back:LightGreen>coding­</back>
          |_ PZN : **Pattern**
@@ -99,15 +196,7 @@ namespace ISiK_Medikation {
       [[https://simplifier.net/isik-medikation-v3/isikmedikationsinformation ISiK Medikationsinformation]]
       --
       id	
-      partOf : Reference (**MedicationAdministration** | **MedicationDispense** |\n **MedicationStatement** | **Procedure** | Observation)
-      status
       medication[x]
-      |_ medicationCodeableConcept
-         |_ coding­
-            |_ PZN : **Pattern**
-            |_ ATC-DE : **Pattern**
-            |_ WG14 : **Pattern**
-         text
       |_ medicationReference : Reference (**Medication**)
          |_ reference
       |_ <back:LightGreen>route</back>
@@ -129,9 +218,10 @@ namespace ISiK_Medikation {
 }
 
 package "ISiK-Labor (MVP)"{
-   class  ISiKLaborBefunde <DiagnosticReport><<(P,#8DA5C4)>>{
+
+   class  ISiKLaborBefund <DiagnosticReport><<(P,#8DA5C4)>>{
       Dokumentation auf HL7 Org 
-      [[http://hl7.org/fhir/R4/diagnosticreport.html DiagnosticReport]]
+      [[http://hl7.org/fhir/R4/diagnosticreport.html Diagnostic Report]]
       --
       id
       identifier \n\t // Business identifier for report
