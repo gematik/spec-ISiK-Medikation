@@ -45,9 +45,13 @@ select
 
 ## Beispiele
 
-Valides Beispiel für das Profil MedikationsVerordnung:
+Valide Beispiele für das Profil MedikationsVerordnung:
 
+Dauermedikation morgens/mittags/abends:
 {{json:ExampleISiKMedikationsVerordnung}}
+
+Einfaches Zytostatikum-Therapieschema (Chemotherapie):
+{{json:ExampleISiKMedikationsVerordnung2}}
 
 ## Interaktionen
 

@@ -47,9 +47,14 @@ select
 
 Valide Beispiele für das Profil MedikationsInformation:
 
+Dauermedikation:
 {{json:ExampleISiKMedikationsInformation1}}
 
+Zeitlich begrenzte Medikation:
 {{json:ExampleISiKMedikationsInformation2}}
+
+Einfaches Zytostatikum-Therapieschema (Chemotherapie):
+{{json:ExampleISiKMedikationsInformation3}}
 
 ## Interaktionen
 

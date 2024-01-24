@@ -28,17 +28,15 @@
 
 'Namespace enhancement
 set separator none
-   class Foo {
-   **Bar (Model)**
-   |_ prop
-      |_ **Bom (Model)**
-         |_ prop2
-         |_ propprop
-   |_ prop4
-      |_ prop3.1
-   |_ prop4 :(
-   --
-   }
+
+
+
+'ISiK_Medikation.ISiKMedikationsListe::subject --> ISiK_Basis.ISiKPatient
+'ISiK_Medikation.ISiKMedikationTransaction --> R4_Core.Bundle
+'ISiK_Medikation.ISiKMedikationTransactionResponse --|> R4_Core.Bundle
+
+
+
 namespace ISiK_Medikation {
    class  ISiKMedikament <Medication><<(P,#8DA5C4)>>{
       id
@@ -77,7 +75,7 @@ namespace ISiK_Medikation {
                |_ WG14 : **Pattern**
             |_ text
          |_ itemReference : Reference (**Substance** | **Medication**)
-            |_ referencd
+            |_ reference
       |_ isActive
       |_ strength
          |_ numerator : **Pattern**
@@ -98,184 +96,225 @@ namespace ISiK_Medikation {
 
    class ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
       id	
-      identifier
-      basedOn : Reference(**MedicationRequest** | CarePlan | ServiceRequest)
-      partOf : Reference(**MedicationAdministration** | **MedicationDispense** |\n **MedicationStatement** | **Procedure** | Observation)
-      ...
-      --medication[x].--
-      medicationCodeableConcept
-      medicationReference (**Medication**)
-      --
-      subject : Reference(**Patient**)
-      context : Reference(**Encounter** | EpisodeOfCare)
-      --effective[x].--
-      effectiveDateTime
-      effectivePeriod
-      --
-      ...
+      partOf : Reference (**MedicationAdministration** | **MedicationDispense** |\n **MedicationStatement** | **Procedure** | Observation)
+      status
+      medication[x]
+      |_ medicationCodeableConcept
+         |_ coding­
+            |_ PZN : **Pattern**
+            |_ ATC-DE : **Pattern**
+            |_ WG14 : **Pattern**
+         text
+      |_ medicationReference : Reference (**Medication**)
+         |_ reference
+      subject : Reference (**Patient**)
+         |_ reference
+      context : Reference (**Encounter** | EpisodeOfCare)
+         |_ reference
+      effective[x]
+      |_ effectiveDateTime
+      |_ effectivePeriod
+         |_ start
+         |_ end
+      dateAsserted
       reasonCode
+      |_ coding
+         '|_ system
+         '|_ code
+         '|_ display
+      |_ text
       reasonReference : Reference (**Condition** | Observation | DiagnosticReport)
-      note : Annotation
-      --dosage.--
-      ...
-      patientInstruction
-      timing	
-      asNeeded[x]
-      site	
-      route
-      method	
-      doseAndRate	
-      maxDosePerPeriod	
-      maxDosePerAdministration	
-      maxDosePerLifetime
-      --
+      |_ reference
+      note
+      |_ text
+      dosage
+      |_ text
+      |_ patientInstruction
+      |_ timing
+         |_ event
+         |_ repeat
+      |_ site
+      |_	coding
+      |_ text
+      |_route
+         |_	coding
+            |_	EDQM : **Pattern**
+            |_	SNOMED-CT : **Pattern**
+         |_ text	
+      |_ doseAndRate
+         '|_ dose[x]
+         '   |_ doseRange
+         '   |_ doseQuantity
+         '|_ rate[x]
+         '   |_ rateRatio
+         '   |_ rateRange
+         '   |_ rateQuantity
+      |_ maxDosePerPeriod
+         |_ numerator : **Pattern**
+         |_ denominator : **Pattern**
+      |_ maxDosePerAdministration : **SimpleQuantity**
+         '|_ value
+         '|_ unit
+         '|_ system
+         '|_ code
    }
    'ISiKMedikationsInformation::medicationReference ---> ISiKMedikation
    
    class  ISiKMedikationsListe <List><<(P,#8DA5C4)>>{
       id
-      identifier
-      status : ListStatus
-      mode : ListMode
-      title 
+      status : **Binding**
+      mode : **Binding**
       code
+      |_ coding
+         |_ medications : **Pattern**
+            |_ system
+            |_ code
+            |_ display
       subject : Reference (**Patient**)
+      |_ reference
       encounter : Reference (**Encounter**)
-      source : Reference (**Practitioner** |\n PractitionerRole | **Patient** | Device)
-      ...
-      --entry.--
-      flap
-      deleted
+      |_ reference
       date
-      item : Reference (**MedicationStatement**)
-      --
-      emptyReason
+      entry
+      |_ date
+      |_ item : Reference (**MedicationStatement**)
+         |_ reference
    }
    'ISiKMedikationsListe::item --> ISiKMedikationsInformation
 
    class ISiKMedikationsVerabreichung <MedicationAdministration><<(P,#8DA5C4)>>{
       id
-      identifier 
-      partOf : Reference (**MedicationAdministration** | **Procedure**)
-      ...
-      --medication[x].--
-      medicationCodeableConcept
-      medicationReference (**Medication**)
-      --
+      status
       subject : Reference (**Patient**)
-      context : Reference **Encounter** | EpisodeOfCare)
-      --effective[x].--
-      effectiveDateTime
-      effectivePeriod
-      --
-      ...
-      reasonCode
+      |_ reference
+      context : Reference (**Encounter** | EpisodeOfCare)
+      |_ reference
+      effective[x]
+      |_ effectiveDateTime
+      |_ effectivePeriod
+         |_ start
+         |_ end
+      peformer
+      |_ actor
+         |_ reference
       reasonReference : Reference (**Condition** | Observation |\n DiagnosticReport)
-      request : Reference (**MedicationRequest**)
-      device : Reference (Device)
-      note : Annotation
-      --dosage.--
-      text
-      site
-      route
-      method
-      ..dosage.dose...
-      value
-      <s>comparator</s>
-      unit
-      system : uri.**[[https://unitsofmeasure.org UnitsOfMeasure]]**
-      code
-      ..dosage.rate[x]...
-      rateRatio : **Ratio**
-      rateQuantity : **SimpleQuantity**
-      ..dosage.rate[x].rateRatio...
-      numerator
-      denominator
-      --
-      eventHistory
+      |_ reference
+      note : **Annotation**
+      |_ text
+      dosage
+      |_ text
+      |_ site
+         |_	coding
+            |_	SNOMED-CT : **Pattern**
+         |_ text	
+      |_ route
+         |_	coding
+            |_	EDQM : **Pattern**
+            |_	SNOMED-CT : **Pattern**
+         |_ text	
+      |_ dose
+      |_ rate[x]
+         |_ rateRatio : **Ratio**
+            |_ numerator : **Pattern**
+            |_ denominator : **Pattern**
+         |_ rateQuantity : **SimpleQuantity**
    }
 
    class ISiKMedikationsVerordnung <MedicationRequest><<(P,#8DA5C4)>>{
       id
-      identifier
+      status
       intent
-      ...
-      <s>doNotPerform<\s>
-      reported[x]
-      --medication[x].--
-      medicationCodeableConcept
-      medicationReference (**Medication**)
-      --
+      <s>doNotPerform</s>
+      medication[x]
+      |_ medicationCodeableConcept
+          |_ coding­
+               |_ PZN : **Pattern**
+               |_ ATC-DE : **Pattern**
+               |_ WG14 : **Pattern**
+            |_ text
+      |_ medicationReference (**Medication**)
+         |_ reference
       subject : Reference (**Patient**)
+      |_ reference
       encounter : Reference (**Encounter**)
-      ...
+      |_ reference
+      authoredOn
       requester : Reference (**Practitioner** | PractitionerRole |\n Organization | **Patient** | **RelatedPerson** | Device)
-      reasonCode
-      reasonReference : Reference (**Condition** | Observation)
-      basedOn : Reference (CarePlan | **MedicationRequest** |\n ServiceRequest | ImmunizationRecommendation)
-      ...
-      note : Annotation
-      --dosageInstruction.--
-      ...
-      patientInstruction
-      timing	
-      asNeeded[x]
-      site	
-      route
-      method	
-      doseAndRate	
-      maxDosePerPeriod	
-      maxDosePerAdministration	
-      maxDosePerLifetime
-      --
+      |_ reference
+      note : **Annotation**
+      |_ text
+      dosageInstruction
+      |_ text
+      |_ patientInstruction
+      |_ timing	
+         |_ event
+         |_ repeat
+      |_ site
+         |_	coding
+            |_	SNOMED-CT : **Pattern**
+         |_ text	
+      |_ route
+         |_	coding
+            |_	EDQM : **Pattern**
+            |_	SNOMED-CT : **Pattern**
+         |_ text	
+      |_ doseAndRate
+         '|_ dose[x]
+         '   |_ doseRange
+         '   |_ doseQuantity
+         '|_ rate[x]
+         '   |_ rateRatio
+         '   |_ rateRange
+         '   |_ rateQuantity
+      |_ maxDosePerPeriod
+         |_ numerator : **Pattern**
+         |_ denominator : **Pattern**
+      |_ maxDosePerAdministration : **SimpleQuantity**
+         '|_ value
+         '|_ unit
+         '|_ system
+         '|_ code
       dispenseRequest
-      --dispenseRequest.quantity.--
-      value
-      comparator
-      unit
-      system : uri.**[[https://unitsofmeasure.org UnitsOfMeasure]]**
-      code
-      --substitution.--
-      allowed[x]
-      reason
-      --
-      priorPrescription : Reference (**MedicationRequest**)
-      detectedIssue : Reference (DetectedIssue)
-      eventHistory : Reference (Provenance)
+      |_ quantity
+      substitution
+      |_ allowed[x]
+         |_ allowedBoolean
    }
 
    class ISiKMedikationTransaction <Bundle><<(P,#8DA5C4)>>{
-      identifier
       type : BundleType.**Transaction**
-      ...
-      --entry.--
-      <s>link</s>
-      fullUrl
-      resource
-      <s>search</s>
-      **request**
-      <s>response</s>
-      --
-      ...
+      entry
+      |_ <s>link</s>
+      |_ fullUrl
+      |_ resource
+      |_ <s>search</s>
+      |_ **request**
+         |_ method
+         |_ url
+      |_ <s>response</s>
    }
    class ISiKMedikationTransactionResponse <Bundle><<(P,#8DA5C4)>>{
-      identifier
       type : BundleType.**Response**
-      ...
-      --entry.--
-      <s>link</s>
-      fullURL
-      resource : Resource
-      <s>search</s>
-      <s>request</s>
-      **response**
+      entry
+      |_ <s>link</s>
+      |_ fullUrl
+      |_ resource
+      |_ <s>search</s>
+      |_ <s>request</s>
+      |_ **response**
+         |_ status
+         |_ location
+         |_ outcome
+   }
+   class SctRouteOfAdministration <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/sctrouteofadministration SNOMED CT Route Of Administration]]
+      Beeinhaltet Codes aus SNOMED CT bei denen das \nConcept 284009009 (Route Of Administration) ist
+      [[https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80147 SNOMED_CT 284009009]]
       --
-      ...
+      codes : **$CS-SCT** is-a **284009009**
    }
 }
-'ISiK_Medikation.ISiKMedikationsListe::subject --> ISiK_Basis.ISiKPatient
-'ISiK_Medikation.ISiKMedikationTransaction --> R4_Core.Bundle
-'ISiK_Medikation.ISiKMedikationTransactionResponse --|> R4_Core.Bundle
 
 namespace MII_Kerndatensatz {
    class Extension_Wirkstofftyp <<(E,#7A8495)>>{
@@ -294,27 +333,31 @@ namespace R4_Core {
       --
       identifier
       type : BundleType
-      ...
-      --entry.--
-      ...
-      resource : Resource
-      ..entry.search...
-      mode
-      score
-      ..entry.request...
-      methode
-      url
-      ifNoneMatch
-      ifMatch
-      ifNoneExist
-      ..entry.response...
-      status
-      location
-      etag
-      lastModified
-      outcome
-      --
-      signature
+      timestamp
+      total
+      link
+      |_ relation
+      |_ url
+      entry
+      |_ link
+      |_ fullUrl
+      |_ resource : ** Resource **
+      |_ search
+         |_ mode
+         |_ score
+      |_ request
+         |_ method
+         |_ url
+         |_ ifNoneMatch
+         |_ ifModifiedSince
+         |_ ifMatch
+         |_ ifNoneExist
+      |_ response
+         |_ status
+         |_ location
+         |_ etag
+         |_ lastModified
+         |_ outcome
    }
    class List <<(P,#FFAAAA)>>{
       Dokumentation [[https://hl7.org/fhir/R4/list.html R4 List]]
@@ -326,14 +369,15 @@ namespace R4_Core {
       code
       subject : Reference (**Patient** |\n Group | Device | Location)
       encounter : Reference (**Encounter**)
-      source : Reference (**Practitioner** |\n PractitionerRole | **Patient** | Device)
-      ...
-      --entry.--
-      flap
-      deleted
       date
-      item : Reference(Any)
-      --
+      source : Reference (**Practitioner** |\n PractitionerRole | **Patient** | Device)
+      orderedBy
+      note
+      entry
+      |_ flag
+      |_ deleted
+      |_ date
+      |_ item : Reference(Any)
       emptyReason
    }
 }
@@ -366,8 +410,9 @@ namespace ISiK_Basis {
    class ISiKAngehoeriger <RelatedPerson><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v3/isikangehoeriger ISiK Angehoeriger]]
-   }
+   }  
 }
+
 
 'namespace dummy {
 '   class Foo {

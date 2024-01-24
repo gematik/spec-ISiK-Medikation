@@ -1,20 +1,9 @@
-@startuml
+@startuml amts_infomodell
 
 ' verhindere Probleme mit gewinkelten Krähenfüßen
-skinparam linetype ortho
+'skinparam linetype ortho
  
 ' package Dummy{
-' entity Entität01 {
-'    optionales Attribut
-'    **optionales fettes Attribut**
-'    * **vorgeschriebens fettes Attribut**
-' }
-' 
-' entity Entität01 {
-'    optionales Attribut : text
-'    **optionales fettes Attribut** nummer <<auto>>
-'    * **vorgeschriebens fettes Attribut**
-' }
 ' Entität01 }|..|| Entität02
 ' Entität03 }o..o| Entität04
 ' Entität05 ||--o{ Entität06
@@ -24,58 +13,298 @@ skinparam linetype ortho
  ' TODO:
  ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
 
-package ISiK-Basis {
-class  ISiKPatient <Patient><<(P,#8DA5C4)>>{
-   id
-   identifier
-   --
-   --
-   **Geschlecht**
-   **Alter**
-   **Körpergewicht**
-   ...
-}
-class  ISiKAllergie <AllergyIntolerance><<(P,#8DA5C4)>>{
-   TBD
-
-   **Beginn**
-   **Abklingen**
-   **Lebensphase**
-}
-class  ISiKDiagnose <Condition><<(P,#8DA5C4)>>{
-   --
-   --
-   **klinischer Status**
-   **Verifikationsstatus**
-   **Typ**
-   **Kategorie**
-   **Kritikalität**
-   **Code**
-}
+namespace ISiK_VitalparameterUndKoerpermasze {
+   class ModulVitalparameterUndKoerpermasze_Stufe_3 <<(M,#FFDC36)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v3/~introduction ISiK VitalparameterUndKoerpermasze Stufe 3]]
+   }
+   class ISiKKoerpergewicht <Observation><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v3/isikkoerpergewicht ISiK Körpergewicht]]
+      ---
+      subject : Reference (**Patient** | Group)
+      encounter : Reference (**Encounter**)
+      <back:LightGreen>value[x]</back>
+      |_ valueQuantity
+         |_ <back:LightGreen>value</back>
+         |_ unit
+         |_ system
+         |_ code
+   }
 }
 
-package ISiK-Medikation {
-class  ISiKMedikation <Medication><<(P,#8DA5C4)>>{
-   id
-   identifier
-   --
-   --
-   **Name**
-   **Stoff**
-   code.coding:**PZN**
-   **Applikationsweg**
+namespace ISiK_Basis {
+   class Basismodul_Stufe_3 <<(M,#FFDC36)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/~introduction ISiK Basis Stufe 3]]
+   }
+   class ISiKPatient <Patient><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikpatient ISiK Patient]]
+      ---
+      id
+      <back:LightGreen>birthDate</back> \n\t// relevant fürs Alter
+      <back:LightGreen>gender</back> \n\t// relevant für Kontraindikation, Schwangerschaft
+   }
+   class ISiKKontaktGesundheitseinrichtung <Encounter><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikkontaktgesundheitseinrichtung ISiK Kontakt Gesundheitseinrichtung]]
+   }
+   class ISiKKDiagnose <Condition><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikdiagnose ISiK Diagnose]]
+      ---
+      id
+      <back:LightGreen>clinicalStatus</back> \n\t// relevant für chronische Erkrakungen
+      <back:LightGreen>code</back> \n\t// relevant für Kontraindikation, Schwangerschaft
+   }
+   
+   class  ISiKAllergie <AllergyIntolerance><<(P,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/allergyintolerance.html Allergy Intolerance]]
+      ---
+      id
+      identifier           \n\t// External ids for this item
+      clinicalStatus : **AllergyIntoleranceClinicalStatus**       \n\t// active | inactive | resolved
+      verificationStatus : **AllergyIntoleranceVerificationStatus**  \n\t// unconfirmed | confirmed | refuted | entered-in-error
+      type : **AllergyIntoleranceType** \n\t// allergy | intolerance - Underlying mechanism (if known)
+      category : **AllergyIntoleranceCategory** \n\t// food | medication | environment | biologic
+      criticality: **AllergyIntoleranceCriticality** \n\t// low | high | unable-to-assess
+      code : **AllergyIntoleranceSubstance** \n\t// Code that identifies the allergy or intolerance
+      patient : Reference (**Patient**) \n\t// Who the sensitivity is for
+      encounter : Reference (**Encounter**) \n\t// Encounter when the allergy or intolerance was asserted
+      onset[x] \n\t\t// When allergy or intolerance was identified. One of these 5
+      |_ onsetDateTime
+      |_ onsetAge
+      |_ onsetPeriod
+      |_ onsetRange
+      |_ onsetString
+      recordedDate \n\t\t// Date first version of the resource instance was recorded
+      recorder : Reference ( **Practitioner** | PractitionerRole | **Patient** | **RelatedPerson** )	
+      asserter : Reference ( **Patient** | **RelatedPerson** | **Practitioner** | PractitionerRole )
+      lastOccurrence
+      note 
+      reaction \t//Adverse Reaction Events linked to exposure to substance
+      |_ substance : **Substance Code** \n\t// Specific substance or pharmaceutical product considered \n\t// to be responsible for event
+      |_ manifestation : **SNOMED CT Clinical Findings**
+      |_ description
+      |_ onset
+      |_ severity : **AllergyIntoleranceSeverity**	\n\t// mild | moderate | severe (of event as a whole)
+      |_ exposureRoute : **SctRouteOfAdministration**
+      |_ note
+
+   class  ISiKChronischeNierenerkrankung <Condotion><<(P,#8DA5C4)>>{
+      Beispielhafte Profilierung der US-Core Condition im Rahmen der \n Multiple Chronic Conditions (MCC) eCare Plan, veröffentlicht mit HL7 
+      [[https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/MCC-IG/StructureDefinition-ChronicKidneyDisease.html Chronic Kidney Disease Condition]]
+      [[https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/MCC-IG/Condition-f202.html Chronic Kidney Disease Beispiel]]
+      ---
+   }
+
 }
+
+namespace ISiK_Medikation {
+
+   class  ISiKAMTSUseDefinition <ClinicalUseDefinition><<(P,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://build.fhir.org/clinicalusedefinition.html Cinical Use Definiton]]
+      ---
+      identifier  \n\t// Business identifier for this issue
+'  "type" : "<code>", // R!  indication | contraindication | interaction | undesirable-effect | warning
+'  "category" : [{ CodeableConcept }], // A categorisation of the issue, primarily for dividing warnings into subject heading areas such as "Pregnancy", "Overdose"
+'  "subject" : [{ Reference(ActivityDefinition|BiologicallyDerivedProduct|
+'   Device|DeviceDefinition|Medication|MedicinalProductDefinition|
+'   NutritionProduct|PlanDefinition|Substance) }], // The medication, product, substance, device, procedure etc. for which this is an indication, contraindication, interaction, undesirable effect, or warning
+'  "status" : { CodeableConcept }, // Whether this is a current issue or one that has been retired etc
+'  "contraindication" : { // I Specifics for when this is a contraindication
+'    "diseaseSymptomProcedure" : { CodeableReference(ObservationDefinition) }, // The situation that is being documented as contraindicating against this item
+'    "diseaseStatus" : { CodeableReference(ObservationDefinition) }, // The status of the disease or symptom for the contraindication
+'    "comorbidity" : [{ CodeableReference(ObservationDefinition) }], // A comorbidity (concurrent condition) or coinfection
+'    "indication" : [{ Reference(ClinicalUseDefinition) }], // The indication which this is a contraidication for
+'    "applicability" : { Expression }, // An expression that returns true or false, indicating whether the indication is applicable or not, after having applied its other elements
+'    "otherTherapy" : [{ // Information about use of the product in relation to other therapies described as part of the contraindication
+'      "relationshipType" : { CodeableConcept }, // R!  The type of relationship between the product indication/contraindication and another therapy
+'      "treatment" : { CodeableReference(ActivityDefinition|
+'     BiologicallyDerivedProduct|Medication|MedicinalProductDefinition|
+'     NutritionProduct|Substance|SubstanceDefinition) } // R!  Reference to a specific medication, substance etc. as part of an indication or contraindication
+'    }]
+'  },
+'  "indication" : { // I Specifics for when this is an indication
+'    "diseaseSymptomProcedure" : { CodeableReference(ObservationDefinition) }, // The situation that is being documented as an indicaton for this item
+'    "diseaseStatus" : { CodeableReference(ObservationDefinition) }, // The status of the disease or symptom for the indication
+'    "comorbidity" : [{ CodeableReference(ObservationDefinition) }], // A comorbidity or coinfection as part of the indication
+'    "intendedEffect" : { CodeableReference(ObservationDefinition) }, // The intended effect, aim or strategy to be achieved
+'    // duration[x]: Timing or duration information. One of these 2:
+'    "durationRange" : { Range },
+'    "durationString" : "<string>",
+'    "undesirableEffect" : [{ Reference(ClinicalUseDefinition) }], // An unwanted side effect or negative outcome of the subject of this resource when being used for this indication
+'    "applicability" : { Expression }, // An expression that returns true or false, indicating whether the indication is applicable or not, after having applied its other elements
+'    "otherTherapy" : [{ Content as for ClinicalUseDefinition.contraindication.otherTherapy }] // The use of the medicinal product in relation to other therapies described as part of the indication
+'  },
+'  "interaction" : { // I Specifics for when this is an interaction
+'    "interactant" : [{ // The specific medication, product, food etc. or laboratory test that interacts
+'      // item[x]: The specific medication, product, food etc. or laboratory test that interacts. One of these 2:
+'      "itemReference" : { Reference(BiologicallyDerivedProduct|Medication|
+'     MedicinalProductDefinition|NutritionProduct|ObservationDefinition|Substance) },
+'      "itemCodeableConcept" : { CodeableConcept }
+'    }],
+'    "type" : { CodeableConcept }, // The type of the interaction e.g. drug-drug interaction, drug-lab test interaction
+'    "effect" : { CodeableReference(ObservationDefinition) }, // The effect of the interaction, for example "reduced gastric absorption of primary medication"
+'    "incidence" : { CodeableConcept }, // The incidence of the interaction, e.g. theoretical, observed
+'    "management" : [{ CodeableConcept }] // Actions for managing the interaction
+'  },
+'  "population" : [{ Reference(Group) }], // The population group to which this applies
+'  "library" : ["<canonical(Library)>"], // Logic used by the clinical use definition
+'  "undesirableEffect" : { // I A possible negative outcome from the use of this treatment
+'    "symptomConditionEffect" : { CodeableReference(ObservationDefinition) }, // The situation in which the undesirable effect may manifest
+'    "classification" : { CodeableConcept }, // High level classification of the effect
+'    "frequencyOfOccurrence" : { CodeableConcept } // How often the effect is seen
+'  },
+'  "warning" : { // I Critical environmental, health or physical risks or hazards. For example 'Do not operate heavy machinery', 'May cause drowsiness'
+'    "description" : "<markdown>", // A textual definition of this warning, with formatting
+'    "code" : { CodeableConcept } // A coded or unformatted textual definition of this warning
+'   }
+   }
+   class ISiKMedikament <Medication><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/isikmedikament ISiK Medikament]]
+      --
+      id
+      code
+      |_ <back:LightGreen>coding­</back>
+         |_ PZN : **Pattern**
+         |_ ATC-DE : **Pattern**
+         |_ WG14 : **Pattern**
+      |_ text
+      <back:LightGreen>ingredient</back>
+      |_ extension
+         |_ Wirkstofftyp : **Extension**
+      |_ item[x]
+         |_ itemCodeableConcept
+            |_ coding­
+               |_ ASK : **Pattern**
+               |_ PZN : **Pattern**
+               |_ ATC-DE : **Pattern**
+               |_ WG14 : **Pattern**
+            |_ text
+            |_ <back:LightGreen> itemReference : Reference (**Substance** | **Medication**)</back>
+            |_ reference
+   }
+   'ISiKMedikation::itemReference --> ISiKMedikation
+
+   class ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
+       Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/isikmedikationsinformation ISiK Medikationsinformation]]
+      --
+      id	
+      medication[x]
+      |_ medicationReference : Reference (**Medication**)
+         |_ reference
+      |_ <back:LightGreen>route</back>
+         |_	coding
+            |_	EDQM : **Pattern**
+            |_	SNOMED-CT : **Pattern**
+         |_ text
+   }
+   'ISiKMedikationsInformation::medicationReference ---> ISiKMedikation
+   
+   class SctRouteOfAdministration <ValueSet><<(V,#8DA5C4)>> #LightGreen{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/sctrouteofadministration SNOMED CT Route Of Administration]]
+      Beeinhaltet Codes aus SNOMED CT bei denen das \nConcept 284009009 (Route Of Administration) ist
+      [[https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80147 SNOMED_CT 284009009]]
+      --
+      codes : **$CS-SCT** is-a **284009009**
+   }
 }
 
 package "ISiK-Labor (MVP)"{
-class  ISiKLaborErgebnis <Observation><<(P,#8DA5C4)>>{
-   TBD
-   ..Nierenfunktion..
-      **GFR**
-      **Serumkreation**
-      **Risikomeldung**
-   ..
+
+   class  ISiKLaborBefund <DiagnosticReport><<(P,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[http://hl7.org/fhir/R4/diagnosticreport.html Diagnostic Report]]
+      --
+      id
+      identifier \n\t // Business identifier for report
+      basedOn : Reference (CarePlan | ImmunizationRecommendation | **MedicationRequest** | NutritionOrder | **ServiceRequest**) \n\t // What was requested
+      status : **DiagnosticReportStatus**   \n\t // z.B. amended | unknow | registered | final +
+      category \n\t // vernachlässigbar 
+      code	: **FixedValue** \n\t // SNOMED Report Name Labor Befunde
+      |_ coding 
+         |_ system : **$CS-SCT**
+         |_ version 
+         |_ code : **4241000179101**
+         |_ display : **Laboratory report (record artifact)**
+      subject : Reference (**Patient** | Group | Device | Location)  \n\t // The subject of the report - usually, the patient
+      encounter : Reference (**Encounter**)  \n\t // Health care event when test ordered
+      effective[x] \n\t // Clinically relevant time/time-period for report
+      |_ effectiveDateTime
+      |_ effectivePeriod
+      issued : \n\t // vernachlässigbar
+      performer : Reference (**Practitioner** | PractitionerRole | Organization | CareTeam)  \n\t // Responsible Diagnostic Service
+      resultsInterpreter : Reference (**Practitioner** | PractitionerRole | Organization | CareTeam)  \n\t // vernachlässigbar
+      specimen	: Reference (Specimen)  \n\t // vernachlässigbar
+      result :	Reference (Observation)  \n\t // Observations
+      <s>imagingStudy :	Reference (ImagingStudy)</s>  \n\t // vernachlässigbar
+      <s> media : BackboneElement</s>  \n\t // vernachlässigbar
+      conclusion \n\t // Clinical conclusion (interpretation) of test results
+      conclusionCode	: **SNOMED CT Clinical Findings**  \n\t // Codes for the clinical conclusion of test results z.B. **AllergyIntolerance.reaction.manifestation**
+      presentedForm : **Attachment**  \n\t // Entire report as issued (PDF)
+   }
 }
+
+namespace R4_Core {
+   class Foundation_Modul <<(M,#FFAAAA)>>{
+      Dokumentation auf HL7 Org
+      [[https://hl7.org/fhir/R4/ HL7 FHIR R4 Core Foundation]]
+   }
+
+   class AllergyIntoleranceType <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-type.html Allergy Intolerance Type]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-type.html Code System of Type]]
+   }
+
+   class AllergyIntoleranceCategory <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html Allergy Intolerance Category]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-category.html Code System of Category]]
+   }
+
+   class AllergyIntoleranceSubstance <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-code.html AllergyIntolerance Substance, Product Condition and Negation Codes]]
+      Beeinhaltet alle [[https://www.hl7.org/fhir/R4/valueset-substance-code.html Substance Codes]] sowie weitere Codes aus [[http://www.snomed.org/ SNOMED CT]] \nbei denen Allergien und Unvertraeglichkeiten auftreten. 
+      --
+      codes : [[http://hl7.org/fhir/ValueSet/substance-code Contained in Substance-Code]]
+      codes : **$CS-SCT** is-a **18038007** (Propensity to adverse reactions to substance)
+      codes : **$CS-SCT** is-a **267425008** (Lactose intolerance)
+      codes : **$CS-SCT** is-a **29736007** (Syndrome of carbohydrate intolerance)
+      codes : **$CS-SCT** is-a **340519003** (Lysine intolerance)
+      codes : **$CS-SCT** is-a **190753003** (Sucrose intolerance)
+      codes : **$CS-SCT** is-a **413427002** (Acquired fructose intolerance)
+      codes : **$CS-SCT** is-a **716186003** (No known allergy) 
+   }
+
+   class AllergyIntoleranceCriticality <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html Allergy Intolerance Criticality]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-criticality.html Code System of Criticality]]
+   }
+   class AllergyIntoleranceVerificationStatus <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-verification.html Allergy Intolerance Verification Status]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://www.hl7.org/fhir/R4/codesystem-allergyintolerance-verification.html Code System of Verification Status]]
+   }
+   class AllergyIntoleranceClinicalStatus <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html Allergy Intolerance Clinical Status]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://www.hl7.org/fhir/R4/codesystem-allergyintolerance-clinical.html Code System of Clinical Status]]
+   }
+   class ReactionEventSeverity <ValueSet><<(V,#8DA5C4)>> {
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-reaction-event-severity.html Reaction Eventu Severity]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html Code System of Severity]]
+   }
 }
 
 @enduml

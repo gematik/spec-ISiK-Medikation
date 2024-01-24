@@ -15,21 +15,36 @@
 @startuml usecases
 left to right direction
 'skinparam packageStyle cloud
+skinparam linetype ortho
+
+actor :FHIR Repository: as DB << Application >>
 actor :Heilberufler:
 actor :Versicherter:
-actor :FHIR Repository: as DB << Application >>
 
-storage gnrl as "Allgemein" {
+storage adverseUC as "Adverse Use Case" {
+    storage (Verwechslung){
+        (Patient)
+        (Fall, Kontakt)
+        (Verordnung )
+        (Intensität, Dauer)
+    }
+    (Mehrfachverordnung)
+    (Informationslücke)
+    (Kontraindikation)
+    (Wechselwirkung)
+}
+storage gnrlUC as "Allgemein" {
     (Information)
     (Verordnung)
     (Verabreichung)
     (Abgabe)
     (Einstellung)
+    (Rezeptierung)
     storage (AMTS){
         (Prüfung)
         (Reconcillation)
     }
-    storage (Liste){
+    storage (Medikations-Liste){
         (Zusammenstellen)
         (Aufteilen)
         (Verändern)
@@ -37,58 +52,91 @@ storage gnrl as "Allgemein" {
 }
 
 cloud "Search Functions() For" as fncts {
-    folder CapStmtMedInfo as "Medikations Information" {
-        component MedState [
-        **MedicationStatement**
+    folder CSt_MedInfo as "Systeme mit dem Charakter der \n Medikationsinformation" {
+        component _MedInfo [
+        **ISiK MedikationsInformation**
         ====
-        Suche anhand von:
-        * MedicationStatement:medication
-        * MedicationStatement:patient
-        * MedicationStatement:context
+        Suche anhand von
+        * ** :** medication
+        * ** :** patient
+        * ** :** context
         ]
+        component "ISiK Medikament"
+        component "ISiK Patient"
+        component "ISiK Kontakt Gesundheitseinrichtung"
+        component "ISiK Person im Gesundheitsberuf"
+        component "ISiK MedikationsListe"
     }
-    folder CapStmtMedVerAb as "Medikations Verabreichung" {
-        component Some1 [
-        **MedicationAdministration**
+    'CSt_MedInfo --> CStAll_MedikationsListe
+    folder CSt_MedVerab as "Systeme mit dem Charakter der \n Medikationsverabreichung" {
+        component _MedVerab [
+        **ISiK MedikationsVerabreichung**
         ====
-        Suche anhand von:
-        * MedicationStatement:medication
-        * MedicationStatement:patient
-        * MedicationStatement:context
+        Suche anhand von
+        * ** :** medication
+        * ** :** patient
+        * ** :** context
+        * ** :** performer
         ]
+        component "ISiK Medikament "
+        component "ISiK Patient "
+        component "ISiK Kontakt Gesundheitseinrichtung "
+        component "ISiK Person im Gesundheitsberuf "
     }
-    folder CapStmtMedVerOrd as "Medikations Verordnung" {
-        component Some2 [
-        **L**
+    folder CSt_MedVerord as "Systeme mit dem Charakter der \n Medikationsverordnung" {
+        component _MedVerord [
+        **ISiK MedikationsVerordnung**
         ====
-        Suche anhand von:
-        * MedicationStatement:medication
-        * MedicationStatement:patient
-        * MedicationStatement:context
+        Suche anhand von
+        * ** :** medication
+        * ** :** patient
+        * ** :** encounter
+        * ** :** requester
         ]
+        component "ISiK Medikament  "
+        component "ISiK Patient  "
+        component "ISiK Kontakt Gesundheitseinrichtung  "
+        component "ISiK Person im Gesundheitsberuf  "
     }
-    component Some3 [
-        **List**
+    component CStAll_MedikationsListe [
+        **ISiK MedikationsListe**
         ====
-        Suche anhand von:
-        * MedicationStatement:medication
-        * MedicationStatement:patient
-        * MedicationStatement:context
+        Suche anhand von
+        * ** : ** medication
+        * ** : ** patient
+        * ** : ** context
+    ]
+    component CStAll_Medikament [
+        **ISiK Medikament**
+        ====
+        Suche anhand von
+        * ** : ** ingredient
+    ]
+    component CStAll_Patient [
+        **ISiK Patient**
+        ====
+        Finde alle zugehörigen
+        * Encounter ** via ** patient
+        * Encounter ** via ** subject
+    ]
+    component CStAll_KontaktGesundheitseinrichtung [
+        **ISiK Kontakt Gesundheitseinrichtung**
+        ====
+        Suche anhand von
+        * ** : ** patient
+        * ** : ** subject
+        * ** : ** part-of
+        Finde alle zugehörigen
+        * Encounter ** via ** part-of
+    ]
+    component CStAll_PersonImGesundheitsberuf [
+        **ISiK Person im Gesundheitsberuf**
+        ====
     ]
 }
-storage adverseUC as "Adverse Use Case" {
-    storage (Verwechslung){
-        (Patient)
-        (Fall)
-        (Verordnung)
-    }
-    (Mehrfachverordnung)
-    (Informationslücke)
-}
-Heilberufler --> gnrl
-'Versicherter <-- Medikation
+Heilberufler --> gnrlUC
 Versicherter --> Information
-DB --> fncts
-fncts --> adverseUC : mitigates
-fncts --> gnrl : enables
+DB ----> fncts
+'fncts --> adverseUC : mitigates
+'fncts --> gnrlUC : enables
 @enduml

@@ -142,3 +142,18 @@ Usage: #example
     * unit = "Brausetablette"
     * system = $cs-ucum
     * code = #1
+
+Instance: ExampleISiKMedikationsVerabreichung2
+InstanceOf: ISiKMedikationsVerabreichung
+Usage: #example
+* status = #completed
+* medicationReference = Reference(ExampleISiKMedikament9)
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Versorgungsstellenkontakt"
+* effectiveDateTime = 2024-01-22
+* dosage
+  * dose
+    * value = 1
+    * unit = "Infusionsbeutel"
+    * system = $cs-ucum
+    * code = #1
