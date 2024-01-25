@@ -84,14 +84,14 @@ namespace ISiK_Basis {
       asserter : Reference ( **Patient** | **RelatedPerson** | **Practitioner** | PractitionerRole )
       lastOccurrence
       note 
-      <back:Salmon> reaction //Adverse Reaction Events linked to exposure to substance
-      |_ substance : **Substance Code** \n\t// Specific substance or pharmaceutical product considered \n\t// to be responsible for event
-      |_ manifestation : **SNOMED CT Clinical Findings**
-      |_ description
-      |_ onset
-      |_ severity : **AllergyIntoleranceSeverity**	\n\t// mild | moderate | severe (of event as a whole)
-      |_ exposureRoute : **SctRouteOfAdministration**
-      |_ note
+'      <back:Salmon> reaction //Adverse Reaction Events linked to exposure to substance
+'      |_ substance : **Substance Code** \n\t// Specific substance or pharmaceutical product considered \n\t// to be responsible for event
+'      |_ manifestation : **SNOMED CT Clinical Findings**
+'      |_ description
+'      |_ onset
+'      |_ severity : **AllergyIntoleranceSeverity**	\n\t// mild | moderate | severe (of event as a whole)
+'      |_ exposureRoute : **SctRouteOfAdministration**
+'      |_ note
    }
 
    'class  ISiKChronischeNierenerkrankung <Condotion><<(P,#8DA5C4)>>{
@@ -105,51 +105,33 @@ namespace ISiK_Basis {
 
 namespace ISiK_Medikation {
 
-   class  ISiKAMTSAnwendungsDefinition <ClinicalUseDefinition><<(P,#8DA5C4)>>{
+   class  ISiKAMTSRiskAssessment <RiskAssessment><<(P,#8DA5C4)>>{
       <back:Salmon>Dokumentation auf HL7 Org
-      <back:Salmon>[[https://hl7.org/fhir/R4B/clinicalusedefinition.html Cinical Use Definiton]]
+      <back:Salmon>[[https://hl7.org/fhir/R4/riskassessment.html RiskAssessment]]
       ---
-      identifier  \n\t// Business identifier for this issue
-      type : **ClinicalUseDefinitionType** \n\t//  indication | contraindication | interaction | undesirable-effect | warning
-      category : **ClinicalUseDefinitionCategory** \n\t// A categorisation of the issue, primarily for dividing \n\twarnings into subject heading areas such as Pregnancy, Overdose ,,,
-      subject : Reference Reference (<s>MedicinalProductDefinition</s> | **Medication** | **Substance** | ActivityDefinition | \n\tPlanDefinition | Device | DeviceDefinition) \n\t// The medication, product, substance, device, procedure etc. for which this is an \n\tindication, contraindication, interaction, undesirable effect, or warning
-      status : CodeableConcept \n\t// Whether this is a current issue or one that has been retired etc
-      <back:Salmon> contraindication // Specifics for when this is a contraindication
-      |_ diseaseSymptomProcedure : CodeableReference (ObservationDefinition) \n\t// The situation that is being documented as contraindicating against this item
-      |_ diseaseStatus : CodeableReference (ObservationDefinition) \n\t// The status of the disease or symptom for the contraindication
-      |_ comorbidity : CodeableReference (ObservationDefinition) \n\t// A comorbidity (concurrent condition) or coinfection
-      |_ indication : Reference (**ClinicalUseDefinition**) \n\t// The indication which this is a contraidication for
-      |_ applicability : Expression \n\t// An expression that returns true or false, indicating whether the indication is applicable \n\tor not, after having applied its other elements
-      |_ otherTherapy : \n\t// Information about use of the product in relation to other therapies \n\tdescribed as part of the contraindication
-      |_   relationshipType : CodeableConcept \n\t// R!  The type of relationship between the product indication/contraindication and another therapy
-      |_   therapy : CodeableReference (<s>MedicinalProductDefinition</s> | **Medication** \n\t| **Substance** | **SubstanceDefinition** | ActivityDefinition) \n\t//   Reference to a specific medication, substance etc. as part of an indication or contraindication
-      <back:Salmon> indication  // Specifics for when this is an indication
-      |_ diseaseSymptomProcedure : CodeableReference(ObservationDefinition) \n\t// The situation that is \n\tbeing documented as an indicaton for this item
-      |_ diseaseStatus : CodeableReference(ObservationDefinition) \n\t// The status of the disease or symptom for the indication
-      |_ comorbidity : CodeableReference(ObservationDefinition) \n\t// A comorbidity or coinfection as part of the indication
-      |_ intendedEffect : CodeableReference(ObservationDefinition) \n\t// The intended effect, aim or strategy to be achieved
-      |_ duration[x]: Timing or duration information. One of these 2
-      |_ undesirableEffect : Reference(**ClinicalUseDefinition**) \n\t// An unwanted side effect or negative outcome of the \n\tsubject of this resource when being used for this indication
-      |_ applicability  \n\t// An expression that returns true or false, indicating whether the indication is applicable \n\tor not, after having applied its other elements
-      |_ otherTherapy : **ClinicalUseDefinition.contraindication.otherTherapy**  \n\t// The use of the medicinal product in relation to other therapies described as part of the indication
-      <back:Salmon>interaction : // Specifics for when this is an interaction
-      |_ interactant : \n\t// The specific medication, product, food etc. or laboratory test that interacts
-         |_ item[x]: The specific medication, product, food etc. or laboratory test that interacts. One of these 2:
-            |_ itemReference : Reference( <s>MedicinalProductDefinition</s> | **Medication** | **Substance** | \n\tNutritionProduct |  BiologicallyDerivedProduct | ObservationDefinition|Substance)
-            |_ itemCodeableConcept  
-         |_ type  // The type of the interaction e.g. drug-drug interaction, drug-lab test interaction
-         |_ effect : CodeableReference(ObservationDefinition) \n\t// The effect of the interaction, e.g. reduced gastric absorption of primary medication
-         |_ incidence // The incidence of the interaction, e.g. theoretical, observed
-         |_ management // Actions for managing the interaction
-      |_ population : Reference(Group) // vernachlässligbar? The population group to which this applies
-      |_ library :  <back:Salmon>canonical(Library)</back> // Logic used by the clinical use definition
-      <back:Salmon>undesirableEffect : // I A possible negative outcome from the use of this treatment
-      |_ symptomConditionEffect : CodeableReference(ObservationDefinition) \n\t// The situation in which the undesirable effect may manifest
-      |_ classification  // High level classification of the effect
-      |_ frequencyOfOccurrence  // How often the effect is seen
-      <back:Salmon>warning : // I Critical environmental, health or physical risks or hazards. \n\tFor example 'Do not operate heavy machinery', 'May cause drowsiness'
-      |_ description :  <back:Salmon> markdown </back> \n\t// A textual definition of this warning, with formatting
-      |_ code : CodeableConcept \n\t// A coded or unformatted textual definition of this warning
+      identifier: Identifier
+      basedOn: Reference(**any**)
+      parent: Reference(**any**)
+      status: code
+      method: CodeableConcept
+      code: CodeableConcept
+      subject: Reference(**Patient**)
+      encounter: Reference(**Encounter**)
+      occurrenceDateTime: dateTime
+      condition: Reference(**Condition**)
+      performer: Reference(**Practitioner|PractitionerRole|Device**)
+      reasonCode: CodeableConcept
+      basis: Reference(**any**) // \n\t Referenziert auf die Medicationstatement und/oder MedicationRequest)
+      prediction
+      |_ outcome: CodeableConcept
+      |_ probability[x]:  (decimal|Range)
+      |_qualitativeRisk: CodeableConcept
+      |_relativeRisk: decimal
+      |_when[x]: (Period|Range)
+      |_rationale: string
+      mitigation: string
+      note: Annotation
+
    
    }
    class ISiKMedikament <Medication><<(P,#8DA5C4)>>{
@@ -211,22 +193,26 @@ package "ISiK-Labor (MVP)" #Salmon{
       [[https://simplifier.net/isik-labor-v3/~introduction ISiK Labor MVP]]
    }
 
-   class ISiK_SerumKreatin <Observation><<(P,#8DA5C4)>>{
+   class ISiK_LaborUntersuchung <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier Projekt TBD
-      <back:LightGreen>Grün ist fürs Mapping schon vorhaden</back>
-      <back:Salmon>Lachs ist fürs Mapping noch zu erstellen</back>
-      **Bold Face** ist für im ISiK Kosmos bereits profiliert / genutzt, inkl. Stufe-4
+'      <back:LightGreen>Grün ist fürs Mapping schon vorhanden</back>
+'      <back:Salmon>Lachs ist fürs Mapping noch zu erstellen</back>
+'      **Bold Face** ist für im ISiK Kosmos bereits profiliert / genutzt, inkl. Stufe-4
       ---
-      Dummy Values ->
-
-      subject : Reference (**Patient** | Group)
+      identifier: Identifier
+      status: code
+      category: CodeableConcept
+      code: CodeableConcept \n\t (Binding: auf VS mit: GFR, Serumkreatinin, HB, Thrombozyten, TSH)
+      subject : Reference (**Patient**)
       encounter : Reference (**Encounter**)
-      <back:LightGreen>value[x]</back>
-      |_ valueQuantity
-         |_ <back:LightGreen>value</back>
-         |_ unit
-         |_ system
-         |_ code
+      effectiveDateTime: dateTime
+      issued: instant
+      valueQuantity: Quantity
+      dataAbsentReason: CodeableConcept
+      interpretation: CodeableConcept
+      note: Annotation
+      method: CodeableConcept
+      referenceRange: BackboneElement
    }
    'class  ISiKLaborBefund <DiagnosticReport><<(P,#8DA5C4)>>{
    '   Dokumentation auf HL7 Org 
