@@ -136,9 +136,9 @@ Use Cases sind eher technisch orientiert und fokussieren verschiedene Einsatzsze
 Die User Stories beschreiben die grundlegenden Kontexte, in denen der Bedarf nach einem AMTS entsteht – mit potenziell unterschiedliche Komponenten für die User-System Interaktion:
 
 - US-01 - AMTS Prüfung bei Verordnung, Änderung der Verordnung und Abgabe
-   - Ein Heilberufler möchte AMTS-relevante Informationen abrufen, um eine sichere Verordnung, Änderung einer Verordnung (z.B. Substitution) oder Abgabe einer Medikation zu gewährleisten.
+   - Ein Heilberufler (insb. Ärzte, Apotheker)  möchte AMTS-relevante Informationen abrufen, um eine sichere Verordnung, Änderung einer Verordnung (z.B. Substitution) oder Abgabe einer Medikation zu gewährleisten.
 - US-02 - AMTS Prüfung bei neuer Informationslage
-   - Ein Pharmazeutischer Mitarbeiter möchte AMTS-relevante Informationen abrufen, um eine sichere Abgabe einer Medikation zu gewährleisten.
+   - Ein Heilberufler (insb. Ärzte, Apotheker)  möchte AMTS-relevante Informationen abrufen, um eine sichere Abgabe einer Medikation zu gewährleisten.
 - US-03 - Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
    - Bei der stationären Aufnahme eines Patienten soll die bestehenden (häusliche oder ambulante) Medikation mit in das geänderte Versorgungsumfeld übersetzte und angepasst werden, um eine gleichwertige und sichere stationäre Verordnung zu gewährleisten.
 - US-04 - Entlassung mit Medikationsumstellung (Medication Reconciliation)
