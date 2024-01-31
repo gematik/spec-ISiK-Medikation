@@ -105,7 +105,7 @@ namespace ISiK_Basis {
 
 namespace ISiK_Medikation {
 
-   class  ISiKAMTSRiskAssessment <RiskAssessment><<(P,#8DA5C4)>>{
+   class  ISiKMedikationsRisiko <RiskAssessment><<(P,#8DA5C4)>>{
       <back:Salmon>Dokumentation auf HL7 Org
       <back:Salmon>[[https://hl7.org/fhir/R4/riskassessment.html RiskAssessment]]
       ---
@@ -131,10 +131,9 @@ namespace ISiK_Medikation {
       |_ when[x] // (Period|Range)
       |_ rationale \n\t // Explanation of prediction (Kontraindikation, Wechselwirkung etc.)
       mitigation \n\t // How to reduce risk (Substitution, Abgabeform etc)
-      note Annotation
-
-   
+      note Annotation   
    }
+   
    class ISiKMedikament <Medication><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-medikation-v3/isikmedikament ISiK Medikament]]
@@ -216,6 +215,7 @@ package "ISiK-Labor (MVP)" #Salmon{
       method : **Obersation Methods**
       referenceRange
    }
+   
    class ISiK_LaborWerteCodes <ValueSet><<(V,#8DA5C4)>>{
       Dokumentation auf HL7 Org 
       [[hhttps://hl7.org/fhir/R4/valueset-observation-codes.html Observation Codes]]
@@ -224,6 +224,8 @@ package "ISiK-Labor (MVP)" #Salmon{
       codes : [[http://hl7.org/fhir/ValueSet/substance-code Contained in Substance-Code]]
       codes : **$CS-LOINC** is-a **98979-8** (Creatinine-based formula (CKD-EPI 2021))
       codes : **$CS-LOINC** is-a **98980-6** (Creatinine and Cystatin C-based formula (CKD-EPI 2))
+      codes : **$CS-LOINC** is-a **35591-7** (Creatinine renal clearance predicted by Cockcroft-Gault formula)
+      codes : **$CS-LOINC** is-a **35592-5** (Creatinine renal clearance/1.73 sq M.predicted by Cockcroft-Gault formula, BSA formula)
       codes : **$CS-LOINC** is-a **2160-0** (Creatinine [Mass/volume] in Serum or Plasma)
       codes : **$CS-LOINC** is-a **14682-9** (Creatinine [Moles/volume] in Serum or Plasma)
       codes : **$CS-LOINC** is-a **77140-2** (Creatinine [Moles/volume] in Serum, Plasma or Blood)
@@ -240,8 +242,8 @@ package "ISiK-Labor (MVP)" #Salmon{
       codes : **$CS-LOINC** is-a **20452-9** (Thyrotropin [Presence] in Blood)
       codes : **$CS-LOINC** is-a **11579-0** (Thyrotropin [Units/volume] in Serum or Plasma by Detection limit <= 0.05 mIU/L) 
       codes : **$CS-LOINC** is-a **11580-8** (Thyrotropin [Units/volume] in Serum or Plasma by Detection limit <= 0.005 mIU/L) 
-
    }
+
    'class  ISiKLaborBefund <DiagnosticReport><<(P,#8DA5C4)>>{
    '   Dokumentation auf HL7 Org 
    '   [[http://hl7.org/fhir/R4/diagnosticreport.html Diagnostic Report]]
