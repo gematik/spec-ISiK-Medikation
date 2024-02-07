@@ -18,7 +18,7 @@
 
 ## About The Project
 
-Siehe [Simplifier Projekt-Seite zu Medikation Stufe 4](https://simplifier.net/isik-medikation-v4)
+Siehe [Simplifier Projekt-Seite zu Medikation Stufe 3](https://simplifier.net/isik-medikation-v3)
 
 ### Release Notes
 See [ReleaseNotes.md](/ImplementationGuide/markdown/ReleaseNotes.md) for all information regarding the (newest) releases.
