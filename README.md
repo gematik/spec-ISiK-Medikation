@@ -18,7 +18,7 @@
 
 ## About The Project
 
-Siehe [Simplifier Projekt-Seite zu Medikation Stufe 3](https://simplifier.net/isik-medikation-v3)
+For full information and details, see [Simplifier Project Page for ISiK Medikation Stufe 3](https://simplifier.net/isik-medikation-v3)
 
 ### Release Notes
 See [ReleaseNotes.md](/ImplementationGuide/markdown/ReleaseNotes.md) for all information regarding the (newest) releases.
@@ -39,7 +39,7 @@ Gematik may remove published results temporarily or permanently from the place o
 
 ## Contact
 
-**Team Data – ISiK und ISiP**
+**Team Data – ISiK and ISiP**
 
-Anfragen bitte an :
+For issues and requests please refer to: 
 https://service.gematik.de/servicedesk/customer/portal/16 
