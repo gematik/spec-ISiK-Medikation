@@ -7,6 +7,9 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Feld
 * Die Elemente (Unterfelder) haben, die unterstüzt werden MÜSSEN (Must Support).
 * Nur Unter-Elemente (MS) bis zu zweiten oder dritten Tiefe, abhängig von Umfang und Systematik. D.h. Keine bedingten Wiederholungen (repeat) oder Rekursionen (part-of).
 
+## Ressourcen Diagramm
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/resourcediagram.svg" alt="Ressourcen Diagram" width="90%"/>
 
 ## Informationsmodell
 

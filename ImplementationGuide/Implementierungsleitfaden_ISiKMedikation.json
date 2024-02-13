@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "url": "https://gematik.de/fhir/ISiK/v4/Medikation/ImplementationGuide/ISiK-Medikation",
-  "name": "Implementierungsleitfaden ISiK-Modul Medikation",
+  "name": "Implementierungsleitfaden ISiK-Medikation",
   "status": "active",
   "fhirVersion": [
     "4.0.1"

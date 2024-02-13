@@ -1,4 +1,4 @@
-# Akteure und Interaktionen
+# Interaktionen und Search Types
 
 Innerhalb des ISiK-Moduls Medikation kann ein beteiligtes System verschiedene Rollen einnehmen und somit unterschiedliche Aufgaben übernehmen. In Anlehnung an IHE HMW werden im Folgenden diese Rollen mithilfe der Definition von Akteuren formalisiert und die Interaktionen zugeordnet.
 
@@ -18,6 +18,12 @@ Die Interaktionen sind somit in allen drei Bereichen äquivalent:
 
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-3/Material/images/diagrams/Interaktionen.svg" class="center" alt="Interkationen" width="90%"/>
 
-# Searchtypes
+# Search Includes and Reverse Includes
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-3/Material/images/diagrams/searchtypes_interaction.svg" class="center" alt="Searchtypes" width="90%"/>
+Damit diese Akteure sinnvoll miteinander kommunizieren, wird im Folgenden ein grafischer Überblick über die in diesem Modul zu inlduierenden Suchparameter und Operationen gegeben.
+Da es sich um eine Zusammenfassung handelt, gelten Bedingungen für die gezeigten Inhalte:
+* Alle Must-Support Elemente einer Componente müssen von den entsprechenden Systemen suchbar sein. Diese sind hier nicht erneut aufgezählt.
+* Ein Doppelpunkt meint den Zugriff auf ein Element des beinhaltenden Profils.
+* Das Elemente hinter einem Doppelpunkt besitzt wiederum die Sucharameter (alle Must-Support Elemente!), die hier in die Suchsyntax zu inkludieren sind.
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-3/Material/images/diagrams/search_includes.svg" class="center" alt="Searchtypes" width="90%"/>

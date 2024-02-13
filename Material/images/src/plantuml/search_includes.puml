@@ -19,9 +19,9 @@ folder CSt_MedInfo as "Systeme mit dem Charakter der \n Medikationsinformation" 
         **ISiK MedikationsListe**
         ====
         Suche anhand von
-        * ** : ** medication
-        * ** : ** patient
-        * ** : ** context
+        * ** :** medication
+        * ** :** patient
+        * ** :** context
     ]
     'component "ISiK MedikationsListe"
     component "ISiK Medikament"
@@ -36,29 +36,26 @@ folder CSt_MedAll as "Alle Systeme mit MedikationsCharakter" {
         **ISiK Medikament**
         ====
         Suche anhand von
-        * ** : ** ingredient
+        * ** :** ingredient
     ]
     component CStAll_Patient [
         **ISiK Patient**
         ====
         Finde alle zugehörigen
-        * Encounter ** via ** patient
+        * Encounter ** via ** :patient
         * Encounter ** via ** subject
     ]
     component CStAll_KontaktGesundheitseinrichtung [
         **ISiK Kontakt Gesundheitseinrichtung**
         ====
         Suche anhand von
-        * ** : ** patient
-        * ** : ** subject
-        * ** : ** part-of
+        * ** :** patient
+        * ** :** subject
+        * ** :** part-of
         Finde alle zugehörigen
         * Encounter ** via ** part-of
     ]
-    component CStAll_PersonImGesundheitsberuf [
-        **ISiK Person im Gesundheitsberuf**
-        ====
-    ]
+    component "ISiK Person im Gesundheitsberuf"
 }
 'CSt_MedInfo --> CStAll_MedikationsListe
 folder CSt_MedVerab as "Systeme mit dem Charakter der \n Medikationsverabreichung" {
