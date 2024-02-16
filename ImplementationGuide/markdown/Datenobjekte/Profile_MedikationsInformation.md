@@ -56,6 +56,9 @@ Zeitlich begrenzte Medikation:
 Einfaches Zytostatikum-Therapieschema (Chemotherapie):
 {{json:ExampleISiKMedikationsInformation3}}
 
+Einnahme zu allen Mahlzeiten incl. Zwischenmahlzeiten:
+{{json:ExampleISiKMedikationsInformation4}}
+
 ## Interaktionen
 
 Für die Ressource MedicationStatement MÜSSEN die REST-Interaktionen "READ", "CREATE" und "UPDATE" implementiert werden.
