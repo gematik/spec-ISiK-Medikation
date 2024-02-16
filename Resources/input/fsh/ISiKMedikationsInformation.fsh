@@ -340,3 +340,28 @@ Usage: #example
     * unit = "Tabl."
     * system = $cs-ucum
     * code = #1
+
+// Einnahme am ersten Dienstag jedes dritten Monats
+Instance: ExampleISiKMedikationsInformation5
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#07260796 "Vitamin-B12-ratiopharm® N Ampullen zur Injektion"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod
+  * start = 2024-01-22
+* dateAsserted = 2024-02-16
+* dosage
+  * timing
+    * repeat
+      * frequency = 1
+      * period = 3
+      * periodUnit = #mo
+      * dayOfWeek = #tue
+  * patientInstruction = "alle 3 Monate am 1. Dienstag"
+  * doseAndRate.doseQuantity
+    * value = 1
+    * unit = "Tabl."
+    * system = $cs-ucum
+    * code = #1
