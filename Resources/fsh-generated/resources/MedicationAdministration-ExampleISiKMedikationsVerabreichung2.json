@@ -22,7 +22,7 @@
     "reference": "Patient/PatientinMusterfrau"
   },
   "context": {
-    "reference": "Encounter/Absteilungskontakt"
+    "reference": "Encounter/Fachabteilungskontakt"
   },
   "effectiveDateTime": "2024-01-22"
 }

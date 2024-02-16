@@ -37,7 +37,7 @@
     "reference": "Patient/PatientinMusterfrau"
   },
   "context": {
-    "reference": "Encounter/Absteilungskontakt"
+    "reference": "Encounter/Fachabteilungskontakt"
   },
   "effectivePeriod": {
     "start": "2021-07-01"

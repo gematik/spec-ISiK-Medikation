@@ -258,7 +258,7 @@ Usage: #example
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Absteilungskontakt"
+* context.reference = "Encounter/Fachabteilungskontakt"
 * effectivePeriod.start = 2021-07-01
 * dateAsserted = 2021-07-01
 * reasonReference.reference = "Condition/BehandlungsDiagnoseFreitext"
@@ -279,7 +279,7 @@ Usage: #example
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament2"
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Absteilungskontakt"
+* context.reference = "Encounter/Fachabteilungskontakt"
 * effectivePeriod.start = 2021-07-04
 * dateAsserted = 2021-07-03
 * dosage
@@ -300,7 +300,7 @@ Usage: #example
 * status = #active
 * medicationReference = Reference(ExampleISiKMedikament8)
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Absteilungskontakt"
+* context.reference = "Encounter/Fachabteilungskontakt"
 * effectivePeriod
   * start = 2024-01-22
   * end = 2024-02-26

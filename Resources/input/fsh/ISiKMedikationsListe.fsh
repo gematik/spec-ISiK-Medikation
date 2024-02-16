@@ -50,7 +50,7 @@ Usage: #example
 * status = #current
 * mode = #working
 * subject.reference = "Patient/PatientinMusterfrau"
-* encounter.reference = "Encounter/Versorgungsstellenkontakt"
+* encounter.reference = "Encounter/Fachabteilungskontakt"
 * date = 2021-07-04
 * entry[+]
   * date = 2021-07-01
