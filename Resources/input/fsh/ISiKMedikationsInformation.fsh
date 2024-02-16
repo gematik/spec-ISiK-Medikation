@@ -318,3 +318,25 @@ Usage: #example
     * unit = "ml Infusionslösung"
     * system = $cs-ucum
     * code = #mL
+
+// Einnahme zu jeder Mahlzeit (auch Zwischenmahlzeiten)
+Instance: ExampleISiKMedikationsInformation4
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#10557318 "Sevelamercarbonat AL 800 mg"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod
+  * start = 2024-01-22
+* dateAsserted = 2024-02-16
+* dosage
+  * timing
+    * repeat
+      * when = $cs-v4-event-timing#C
+  * patientInstruction = "auch zu Zwischenmahlzeiten"
+  * doseAndRate.doseQuantity
+    * value = 1
+    * unit = "Tabl."
+    * system = $cs-ucum
+    * code = #1
