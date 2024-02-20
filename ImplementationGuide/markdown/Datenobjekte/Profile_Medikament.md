@@ -128,10 +128,12 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
 1. Der verkettete Suchparameter "ingredient.code" MUSS unterstützt werden:
-
+    
     Beispiele:
 
     ```GET [base]/Medication?ingredient.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
+
+    Use Case Zusammenhang: Um eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Wechselwirkung}} zwischen Medikamenten auf Basis des Wirkstoffes zu vermeiden.
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 

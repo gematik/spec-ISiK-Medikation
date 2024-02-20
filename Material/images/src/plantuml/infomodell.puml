@@ -22,7 +22,7 @@
 ' TODO:
 ' Vervollständigen im Sinne  von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
 
-@startuml resourcediagram
+@startuml infomodell
 'verhindere Probleme mit gewinkelten Krähenfüßen
 'skinparam linetype ortho
 

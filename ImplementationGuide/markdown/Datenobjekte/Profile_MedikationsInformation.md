@@ -88,15 +88,17 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
 1. Der verkettete Suchparameter "context.identifier" MUSS unterstützt werden:
 
-   Beispiele:
+    Beispiele:
 
-   ```GET [base]/MedicationStatement?context.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
+    ```GET [base]/MedicationStatement?context.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
 
-	 ```GET [base]/MedicationStatement?context.identifier=7567867```
+    ```GET [base]/MedicationStatement?context.identifier=7567867```
 
-   Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
+    Use Case Zusammenhang: Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Medikation zu vermeiden.
 
-	 Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
+    Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
+
+	  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
 
 1. Der Suchparameter "effective" MUSS unterstützt werden:
 
@@ -119,6 +121,8 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     Beispiele:
 
     ```GET [base]/MedicationStatement?medication.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
+
+    Use Case Zusammenhang: Um eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Wechselwirkung}} zwischen Medikamenten auf Basis des Wirkstoffes zu vermeiden.
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
@@ -148,9 +152,11 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     ```GET [base]/MedicationStatement?patient.identifier=1032702```
 
+    Use Case Zusammenhang: Um bei den Informationen zur Medikation eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
+
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
-	Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
+	  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
 
 1. Der Suchparameter "status" MUSS unterstützt werden:
 
