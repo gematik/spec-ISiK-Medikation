@@ -60,11 +60,6 @@
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen.md",
-              "title": "Festlegungen der Basis",
-              "generation": "markdown"
-            },
-            {
               "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/BestaetigungsrelevanteSysteme.md",
               "title": "Bestätigungsrelevante Systeme",
               "generation": "markdown"
@@ -98,11 +93,6 @@
           "nameUrl": "ImplementationGuide/markdown/Datenobjekte.md",
           "title": "Datenobjekte",
           "page": [
-            {
-              "nameUrl": "ImplementationGuide/markdown/Datenobjekte.md",
-              "title": "Objekte der Basis",
-              "generation": "markdown"
-            },
             {
               "nameUrl": "ImplementationGuide/markdown/Datenobjekte/CapabilityStatement.md",
               "title": "Capability Statement",
