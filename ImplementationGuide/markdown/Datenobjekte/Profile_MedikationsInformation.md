@@ -59,6 +59,20 @@ Einfaches Zytostatikum-Therapieschema (Chemotherapie):
 Einnahme zu allen Mahlzeiten incl. Zwischenmahlzeiten:
 {{json:ExampleISiKMedikationsInformation4}}
 
+Komplexes Beispiel: Medikation zur Behandlung von Morbus Parkinson; Medikationsliste und zugehörige Einzelmedikationen.
+
+{{json:ExampleISiKMedikationsListeParkinson}}
+
+{{json:ExampleISiKMedikationsInformationParkinson1}}
+
+{{json:ExampleISiKMedikationsInformationParkinson2}}
+
+{{json:ExampleISiKMedikationsInformationParkinson3}}
+
+{{json:ExampleISiKMedikationsInformationParkinson4}}
+
+{{json:ExampleISiKMedikationsInformationParkinson5}}
+
 ## Interaktionen
 
 Für die Ressource MedicationStatement MÜSSEN die REST-Interaktionen "READ", "CREATE" und "UPDATE" implementiert werden.

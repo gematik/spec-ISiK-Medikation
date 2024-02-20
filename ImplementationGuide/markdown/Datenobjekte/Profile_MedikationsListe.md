@@ -29,6 +29,10 @@ Valides Beispiel für das Profil MedikationsListe:
 
 {{json:ExampleISiKMedikationsListe}}
 
+Beispiel für eine Medikationsliste zur Behandlung von Morbus Parkinson (vgl. auch die vollständige Darstellung unter {{pagelink:ImplementationGuide/markdown/Datenobjekte/Profile_MedikationsInformation.md}}):
+
+{{json:ExampleISiKMedikationsListeParkinson}}
+
 ### Interaktionen
 
 Für die Ressource List MÜSSEN die REST-Interaktionen "READ", "CREATE" und "UPDATE" implementiert werden.

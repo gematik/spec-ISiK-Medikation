@@ -58,3 +58,27 @@ Usage: #example
 * entry[+]
   * date = 2021-07-04
   * item.reference = "MedicationStatement/ExampleISiKMedikationsInformation2"
+
+Instance: ExampleISiKMedikationsListeParkinson
+InstanceOf: ISiKMedikationsListe
+Usage: #example
+* status = #current
+* mode = #working
+* subject.reference = "Patient/PatientinMusterfrau"
+* encounter.reference = "Encounter/Fachabteilungskontakt"
+* date = 2024-02-20
+* entry[+]
+  * date = 2024-02-20
+  * item.reference = "MedicationStatement/ExampleISiKMedikationsInformationParkinson1"
+* entry[+]
+  * date = 2024-02-20
+  * item.reference = "MedicationStatement/ExampleISiKMedikationsInformationParkinson2"
+* entry[+]
+  * date = 2024-02-20
+  * item.reference = "MedicationStatement/ExampleISiKMedikationsInformationParkinson3"
+* entry[+]
+  * date = 2024-02-20
+  * item.reference = "MedicationStatement/ExampleISiKMedikationsInformationParkinson4"
+* entry[+]
+  * date = 2024-02-20
+  * item.reference = "MedicationStatement/ExampleISiKMedikationsInformationParkinson5"

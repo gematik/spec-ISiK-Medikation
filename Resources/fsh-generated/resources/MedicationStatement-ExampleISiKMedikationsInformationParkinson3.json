@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationStatement",
-  "id": "ExampleISiKMedikationsInformation5",
+  "id": "ExampleISiKMedikationsInformationParkinson3",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsInformation"
@@ -13,31 +13,27 @@
           "doseQuantity": {
             "system": "http://unitsofmeasure.org",
             "value": 1,
-            "unit": "Tabl.",
+            "unit": "FTbl.",
             "code": "1"
           }
         }
       ],
       "timing": {
         "repeat": {
-          "frequency": 1,
-          "period": 3,
-          "periodUnit": "mo",
-          "dayOfWeek": [
-            "tue"
+          "timeOfDay": [
+            "18:00:00"
           ]
         }
-      },
-      "patientInstruction": "alle 3 Monate am 1. Dienstag"
+      }
     }
   ],
   "status": "active",
   "medicationCodeableConcept": {
     "coding": [
       {
-        "code": "07260796",
+        "code": "03395803",
         "system": "http://fhir.de/CodeSystem/ifa/pzn",
-        "display": "Vitamin-B12-ratiopharm® N Ampullen zur Injektion"
+        "display": "Madopar® 125 mg"
       }
     ]
   },
@@ -48,7 +44,12 @@
     "reference": "Encounter/Fachabteilungskontakt"
   },
   "effectivePeriod": {
-    "start": "2024-02-16"
+    "start": "2024-02-20"
   },
-  "dateAsserted": "2024-02-16"
+  "dateAsserted": "2024-02-20",
+  "reasonReference": [
+    {
+      "reference": "Condition/DiagnoseParkinson"
+    }
+  ]
 }
