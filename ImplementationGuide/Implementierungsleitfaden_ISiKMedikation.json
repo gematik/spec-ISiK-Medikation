@@ -132,6 +132,11 @@
               "generation": "markdown"
             },
             {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/Profile_AMTSBewertung.md",
+              "title": "AMTS-Bewertung",
+              "generation": "markdown"
+            },
+            {
               "nameUrl": "ImplementationGuide/markdown/Datenobjekte/Bundle_MedikationTransaction.md",
               "title": "Bundle MedikationTransaction",
               "generation": "markdown"

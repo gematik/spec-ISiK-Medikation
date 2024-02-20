@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikament",
-  "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikament",
+  "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikament",
   "version": "3.0.1",
   "name": "ISiKMedikament",
   "status": "active",
@@ -48,7 +48,7 @@
             "severity": "error",
             "human": "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden.",
             "expression": "code.exists() or ingredient.exists()",
-            "source": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikament"
+            "source": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikament"
           }
         ]
       },

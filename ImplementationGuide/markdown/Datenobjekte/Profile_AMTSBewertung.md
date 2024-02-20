@@ -1,21 +1,41 @@
-## MedikationsListe [(List)](https://www.hl7.org/fhir/R4/list.html)
+## AMTSBewertung [(RiskAssessment)](https://www.hl7.org/fhir/R4/riskassessment.html)
 
 ---
 
 ### Profil
 
 @```
-from StructureDefinition where url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsListe' select Name: name, Canonical: url
+from StructureDefinition where url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKAMTSBewertung' select Name: name, Canonical: url
 ```
 
-{{tree:https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsListe, hybrid}}
+{{tree:https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKAMTSBewertung, hybrid}}
 
-## Anmerkungen zu Must-Support-Feldern
+---
+
+**Terminology Bindings**
+
+@```
+from StructureDefinition
+where url in ('https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKAMTSBewertung')
+for differential.element
+select
+Path: path,
+join binding.where(valueSet.exists())
+{
+  Name: valueSet.substring((9 + valueSet.indexOf('ValueSet/'))),
+  Strength: strength,
+  URL: valueSet
+}
+```
+
+---
+
+### Anmerkungen zu Must-Support-Feldern
 
 @```from
 	StructureDefinition
 where
-    url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsListe'
+    url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKAMTSBewertung'
 for differential.element
 where mustSupport = true
   and short.exists()
@@ -25,17 +45,14 @@ select
 
 ### Beispiele
 
-Valides Beispiel für das Profil MedikationsListe:
+Valide Beispiele für das Profil Medikament:
 
-{{json:ExampleISiKMedikationsListe}}
-
-Beispiel für eine Medikationsliste zur Behandlung von Morbus Parkinson (vgl. auch die vollständige Darstellung unter {{pagelink:ImplementationGuide/markdown/Datenobjekte/Profile_MedikationsInformation.md}}):
-
-{{json:ExampleISiKMedikationsListeParkinson}}
+TODO:
+{{json:ExampleISiKAMTSBewertung1}}
 
 ### Interaktionen
 
-Für die Ressource List MÜSSEN die REST-Interaktionen "READ", "CREATE" und "UPDATE" implementiert werden.
+Für die Ressource Medication MÜSSEN die REST-Interaktionen "READ", "CREATE" und "UPDATE" implementiert werden.
 
 Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Kombination:
 
@@ -43,23 +60,25 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Beispiele:
 
-    ```GET [base]/List?_id=103270```
+    ```GET [base]/RiskAssessment?_id=103270```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach "_id" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Parameters for all resources"](https://hl7.org/fhir/R4/search.html#all).
 
-1. Der Suchparameter "code" MUSS unterstützt werden:
-
-   Beispiele:
-
-   ```GET [base]/List.code=http://terminology.hl7.org/CodeSystem/list-example-use-codes|medications```
-
-   Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
- 1. Der Suchparameter "date" MUSS unterstützt werden:
+1. Der verkettete Suchparameter "condition.code" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/List.date=2022-03-21```
+    ```GET [base]/RiskAssessment?condition.code=http://fhir.de/CodeSystem/bfarm/icd-10-gm|F71.0```
+
+    Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+	  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
+
+1. Der Suchparameter "date" MUSS unterstützt werden:
+
+    Beispiele:
+
+    ```GET [base]/RiskAssessment.date=2022-03-21```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Date-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date"](https://hl7.org/fhir/R4/search.html#date).
 
@@ -67,7 +86,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
    Beispiele:
 
-    ```GET [base]/List?encounter=Encounter/123```
+    ```GET [base]/RiskAssessment?encounter=Encounter/123```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
@@ -75,28 +94,19 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
    Beispiele:
 
-   ```GET [base]/List?encounter.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
+   ```GET [base]/RiskAssessment?encounter.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
 
-	 ```GET [base]/List?encounter.identifier=7567867```
+	 ```GET [base]/RiskAssessment?encounter.identifier=7567867```
 
    Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
 	 Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
 
-1. Der Suchparameter "item" MUSS unterstützt werden:
-
-    Beispiele:
-
-     ```GET [base]/List?item=MedicationStatement/131415```
-
-     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
-
-
 1. Der Suchparameter "patient" MUSS unterstützt werden:
 
    Beispiele:
 
-    ```GET [base]/List?patient=Patient/123```
+    ```GET [base]/RiskAssessment?patient=Patient/123```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
@@ -104,18 +114,18 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Beispiele:
 
-    ```GET [base]/List?patient.identifier=http://mein-krankenhaus.example/fhir/sid/patienten|1032702```
+    ```GET [base]/RiskAssessment?patient.identifier=http://mein-krankenhaus.example/fhir/sid/patienten|1032702```
 
-    ```GET [base]/List?patient.identifier=1032702```
+    ```GET [base]/RiskAssessment?patient.identifier=1032702```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
 	Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
-
-1. Der Suchparameter "status" MUSS unterstützt werden:
+-
+1. Der Suchparameter "risk" MUSS unterstützt werden:
 
     Beispiele:
 
-    ```GET [base]/List.status=current```
+    ```GET [base]/RiskAssessment.risk=http://terminology.hl7.org/CodeSystem/risk-probability|high```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
