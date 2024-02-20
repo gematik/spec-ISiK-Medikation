@@ -21,20 +21,22 @@
       "generation": "markdown",
       "page": [
         {
-          "nameUrl": "ImplementationGuide/markdown/ReleaseNotes.md",
-          "title": "Release Notes",
-          "generation": "markdown"
+          "nameUrl": "ImplementationGuide/markdown/Motivation.md",
+          "title": "Motivation",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide/markdown/ReleaseNotes.md",
+              "title": "ReleaseNotes",
+              "generation": "markdown"
+            }
+          ]
         },
         {
           "nameUrl": "ImplementationGuide/markdown/Zusammenfassung.md",
           "title": "Zusammenfassung",
           "generation": "markdown",
           "page": [
-            {
-              "nameUrl": "ImplementationGuide/markdown/Zusammenfassung.md",
-              "title": "Motivation",
-              "generation": "markdown"
-            },
             {
               "nameUrl": "ImplementationGuide/markdown/Zusammenfassung/UseCases.md",
               "title": "Anwendungsfälle (Use Cases)",
