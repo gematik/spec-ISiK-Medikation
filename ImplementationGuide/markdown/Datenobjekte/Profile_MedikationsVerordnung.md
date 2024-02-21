@@ -179,7 +179,8 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     ```GET [base]/MedicationRequest?requester.identifier=123456789123456```
 
-    Use Case Zusammenhang: Um bei der Veordnungsanfrage die notwendige {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Expertise}} eines entsprechend spezialisierten Facharztes (z.B. Onkologie) zu gewährleisten.
+    Use Case Zusammenhang: Um mich als Heilberufler über die {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Historie}} meiner Medikationsverordnungen zur informieren.
+    <!-- Use Case Zusammenhang: Um bei der Veordnungsanfrage die notwendige {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Expertise}} eines entsprechend spezialisierten Facharztes (z.B. Onkologie) zu gewährleisten. -->
     
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 

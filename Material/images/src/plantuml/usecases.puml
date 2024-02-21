@@ -34,13 +34,13 @@ storage adverseUC as "Adverse Use Case" {
 }
 
 storage gnrlUC as "Allgemein" {
-    (Information)
+    (Fach-Expertise \nsicherstellen)
+    (Information &\nHistorie)
     (Verordnung)
     (Verabreichung)
     (Abgabe)
-    (Einstellung)
+    (Medikations-\nEinstellung)
     (Rezeptierung)
-    (Fach-Expertise \nsicherstellen)
     storage (AMTS){
         (Prüfung)
         (Reconcillation)
@@ -53,7 +53,7 @@ storage gnrlUC as "Allgemein" {
 }
 
 Heilberufler --> gnrlUC
-Versicherter --> Information
+Versicherter --> (Information &\nHistorie)
 
 'fncts --> adverseUC : mitigates
 'fncts --> gnrlUC : enables
