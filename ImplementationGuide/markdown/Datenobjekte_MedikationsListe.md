@@ -47,7 +47,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
    Beispiele:
 
-   ```GET [base]/List.code=http://terminology.hl7.org/CodeSystem/list-example-use-codes|medications```
+   ```GET [base]/List?code=http://terminology.hl7.org/CodeSystem/list-example-use-codes|medications```
 
    Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
@@ -55,7 +55,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Beispiele:
 
-    ```GET [base]/List.date=2022-03-21```
+    ```GET [base]/List?date=2022-03-21```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Date-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Date"](https://hl7.org/fhir/R4/search.html#date).
 
@@ -112,6 +112,6 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Beispiele:
 
-    ```GET [base]/List.status=current```
+    ```GET [base]/List?status=current```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
