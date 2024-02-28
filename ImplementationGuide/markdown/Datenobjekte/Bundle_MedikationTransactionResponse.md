@@ -1,5 +1,7 @@
 ## Bundle MedikationTransactionResponse [(Bundle)](https://www.hl7.org/fhir/R4/bundle.html)
 
+Hinweis: Die Regeln aus dem Modul [ISiK Basis Stufe 4](https://simplifier.net/guide/basis-v4?version=current) für die Verarbeitung Document-Bundles, treffen hier nicht zu, da es sich um den Bundle-Typ Transaction handelt.
+
 ---
 
 ### Profil
