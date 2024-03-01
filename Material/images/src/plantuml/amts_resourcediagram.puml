@@ -1,0 +1,377 @@
+@startuml amts_resourcediagram
+
+' verhindere Probleme mit gewinkelten Krähenfüßen
+'skinparam linetype ortho
+ 
+' package Dummy{
+' Entität01 }|..|| Entität02
+' Entität03 }o..o| Entität04
+' Entität05 ||--o{ Entität06
+' Entität07 |o--|| Entität08
+' }
+ 
+ ' TODO:
+ ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
+
+namespace ISiK_VitalparameterUndKoerpermasze {
+   class ModulVitalparameterUndKoerpermasze_Stufe_3 <<(M,#FFDC36)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v3/~introduction ISiK VitalparameterUndKoerpermasze Stufe 3]]
+   }
+   class ISiKKoerpergewicht <Observation><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v3/isikkoerpergewicht ISiK Körpergewicht]]
+      ---
+      subject : Reference (**Patient** | Group)
+      encounter : Reference (**Encounter**)
+      <back:LightGreen>value[x]</back>
+      |_ valueQuantity
+         |_ <back:LightGreen>value</back>
+         |_ unit
+         |_ system
+         |_ code
+   }
+}
+
+namespace ISiK_Basis {
+   class Basismodul_Stufe_3 <<(M,#FFDC36)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/~introduction ISiK Basis Stufe 3]]
+   }
+   class ISiKPatient <Patient><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikpatient ISiK Patient]]
+      ---
+      id
+      <back:LightGreen>birthDate</back> \n\t// relevant fürs Alter
+      <back:LightGreen>gender</back> \n\t// relevant für Kontraindikation, Schwangerschaft
+   }
+   class ISiKKontaktGesundheitseinrichtung <Encounter><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikkontaktgesundheitseinrichtung ISiK Kontakt Gesundheitseinrichtung]]
+   }
+   class ISiKKDiagnose <Condition><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v3/isikdiagnose ISiK Diagnose]]
+      ---
+      id
+      <back:LightGreen>clinicalStatus</back> \n\t// relevant für chronische Erkrakungen
+      <back:LightGreen>code</back> \n\t// allgemeine relevante Erkrakungen aber auch für \n\t// Kontraindikation, Indikation (Schwangerschaft)
+   }
+   
+   class ISiKAllergieUnvertraeglichkeit <AllergyIntolerance><<(P,#8DA5C4)>>{
+      clinicalStatus : **AllergyIntoleranceClinicalStatusCodes**
+      |_ coding
+         |_ system
+         |_ code
+      verificationStatus : **AllergyIntoleranceVerificationStatusCodes**
+      |_ coding
+         |_ system
+         |_ code
+      type : **AllergyIntoleranceType**
+      category : **AllergyIntoleranceCategory**
+      criticality : **AllergyIntoleranceCriticality**
+      code
+      |_ coding
+         |_ snomed-ct
+            |_ system : http://snomed.info/sct
+            |_ code
+            |_ display
+         |_ ask : http://fhir.de/StructureDefinition/**CodingASK**
+            |_ system
+            |_ code
+            |_ display
+         |_ atc : http://fhir.de/StructureDefinition/**CodingATC**
+            |_ system
+            |_ version
+            |_ code
+            |_ display      
+      |_ text
+      patient : Reference (**Patient**)
+      encounter : Reference (**Encounter**)
+      onset[x]
+      |_ onsetDateTime
+      |_ onsetAge
+      |_ onsetString
+      recordedDate : dateTime
+      recorder : Reference (**Practitioner** | PractitionerRole | \n**Patient** | RelatedPerson)
+      |_ reference
+      |_ display
+      asserter	: Reference (**Patient** | **RelatedPerson** | \n**Practitioner** | PractitionerRole)
+      |_ reference
+      |_ display      
+      note : Annotation
+      |_ author[x]
+         |_ reference
+         |_ display
+      |_ time
+      |_ text
+      reaction
+      |_ manifestation
+         |_ coding
+            |_ snomed-ct
+               |_ system : http://snomed.info/sct
+               |_ code
+         |_ text      
+      |_ severity	
+      |_ exposureRoute
+         |_ coding
+            |_ snomed-ct
+               |_ system : http://snomed.info/sct
+               |_ code
+         |_ text
+   }
+
+   'class  ISiKChronischeNierenerkrankung <Condotion><<(P,#8DA5C4)>>{
+   '   Beispielhafte Profilierung der US-Core Condition im Rahmen der \n Multiple Chronic Conditions (MCC) eCare Plan, veröffentlicht mit HL7 
+   '   [[https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/MCC-IG/StructureDefinition-ChronicKidneyDisease.html Chronic Kidney Disease Condition]]
+   '   [[https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/MCC-IG/Condition-f202.html Chronic Kidney Disease Beispiel]]
+   '   ---
+   '}
+
+}
+
+namespace ISiK_Medikation {
+
+   class  ISiKMedikationsRisiko <RiskAssessment><<(P,#8DA5C4)>>{
+      <back:Salmon>Dokumentation auf HL7 Org
+      <back:Salmon>[[https://hl7.org/fhir/R4/riskassessment.html RiskAssessment]]
+      ---
+      identifier: Identifier
+      basedOn : Reference (**Any**)
+      parent : Reference (**Any**)
+      status : **ObservationStatus**
+      method
+      code
+      subject : Reference (**Patient**)
+      encounter : Reference (**Encounter**)
+      occurence[x] // When was is made?
+      |_ occurrenceDateTime
+      condition : Reference (**Condition**) // Condition assessed
+      performer : Reference (**Practitioner** | PractitionerRole | Device)
+      reasonCode
+      basis : Reference (**Any**) \n\t // Referenziert auf die Medicationstatement und/oder MedicationRequest
+      prediction
+      |_ outcome
+      |_ probability[x]  // (decimal|Range)
+      |_ qualitativeRisk
+      |_ relativeRisk
+      |_ when[x] // (Period|Range)
+      |_ rationale \n\t // Explanation of prediction (Kontraindikation, Wechselwirkung etc.)
+      mitigation \n\t // How to reduce risk (Substitution, Abgabeform etc)
+      note Annotation   
+   }
+   
+   class ISiKMedikament <Medication><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/isikmedikament ISiK Medikament]]
+      --
+      id
+      code
+      |_ <back:LightGreen>coding­</back>
+         |_ PZN : **Pattern**
+         |_ ATC-DE : **Pattern**
+         |_ WG14 : **Pattern**
+      |_ text
+      <back:LightGreen>ingredient</back>
+      |_ extension
+         |_ Wirkstofftyp : **Extension**
+      |_ item[x]
+         |_ itemCodeableConcept
+            |_ coding­
+               |_ ASK : **Pattern**
+               |_ PZN : **Pattern**
+               |_ ATC-DE : **Pattern**
+               |_ WG14 : **Pattern**
+            |_ text
+            |_ <back:LightGreen> itemReference : Reference (**Substance** | **Medication**)</back>
+            |_ reference
+   }
+   'ISiKMedikation::itemReference --> ISiKMedikation
+
+   class ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
+       Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/isikmedikationsinformation ISiK Medikationsinformation]]
+      --
+      id	
+      medication[x]
+      |_ medicationReference : Reference (**Medication**)
+         |_ reference
+      |_ <back:LightGreen>route</back>
+         |_	coding
+            |_	EDQM : **Pattern**
+            |_	SNOMED-CT : **Pattern**
+         |_ text
+   }
+   'ISiKMedikationsInformation::medicationReference ---> ISiKMedikation
+   
+   class SctRouteOfAdministration <ValueSet><<(V,#8DA5C4)>> #LightGreen{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-medikation-v3/sctrouteofadministration SNOMED CT Route Of Administration]]
+      Beeinhaltet Codes aus SNOMED CT bei denen das \nConcept 284009009 (Route Of Administration) ist
+      [[https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80147 SNOMED_CT 284009009]]
+      --
+      codes : **$CS-SCT** is-a **284009009**
+   }
+}
+
+package "ISiK-Labor (MVP)" #Salmon{
+    class ModulLabor_MVP <<(M,#FFDC36)>>{
+      Dokumentation auf Simplifier Projekt TBD
+      [[https://simplifier.net/isik-labor-v3/~introduction ISiK Labor MVP]]
+   }
+
+   class ISiK_LaborBeobachtung <Observation><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier Projekt TBD
+'      <back:LightGreen>Grün ist fürs Mapping schon vorhanden</back>
+'      <back:Salmon>Lachs ist fürs Mapping noch zu erstellen</back>
+'      **Bold Face** ist für im ISiK Kosmos bereits profiliert / genutzt, inkl. Stufe-4
+      ---
+      identifier
+      status : **ObservationStatus**
+      category : **Observation Category Codes** \n\t \\\ Category Code "Laboratory"
+      code : ** \n\t \\\ (Binding: auf VS mit: GFR, Serumkreatinin, HB, Thrombozyten, TSH)
+      subject : Reference (**Patient**)
+      encounter : Reference (**Encounter**)
+      effectiveDateTime:
+      issued
+      value
+      |_ valueQuantity
+      dataAbsentReason
+      interpretation
+      note : Annotation
+      method : **Obersation Methods**
+      referenceRange
+   }
+   
+   class ISiK_LaborWerteCodes <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[hhttps://hl7.org/fhir/R4/valueset-observation-codes.html Observation Codes]]
+      Beeinhaltet die AMTS abgestimmten Codes aus [[https://loinc.org/ LOINC]] \n für GFR, Serumkreatinin, HB, Thrombozyten, TSH. 
+      --
+      codes : [[http://hl7.org/fhir/ValueSet/substance-code Contained in Substance-Code]]
+      codes : **$CS-LOINC** is-a **98979-8** (Creatinine-based formula (CKD-EPI 2021))
+      codes : **$CS-LOINC** is-a **98980-6** (Creatinine and Cystatin C-based formula (CKD-EPI 2))
+      codes : **$CS-LOINC** is-a **35591-7** (Creatinine renal clearance predicted by Cockcroft-Gault formula)
+      codes : **$CS-LOINC** is-a **35592-5** (Creatinine renal clearance/1.73 sq M.predicted by Cockcroft-Gault formula, BSA formula)
+      codes : **$CS-LOINC** is-a **2160-0** (Creatinine [Mass/volume] in Serum or Plasma)
+      codes : **$CS-LOINC** is-a **14682-9** (Creatinine [Moles/volume] in Serum or Plasma)
+      codes : **$CS-LOINC** is-a **77140-2** (Creatinine [Moles/volume] in Serum, Plasma or Blood)
+      codes : **$CS-LOINC** is-a **718-7** (Hemoglobin [Mass/volume] in Blood)
+      codes : **$CS-LOINC** is-a **30313-1** (Hemoglobin [Mass/volume] in Arterial blood)
+      codes : **$CS-LOINC** is-a **30350-3** (Hemoglobin [Mass/volume] in Venous blood) 
+      codes : **$CS-LOINC** is-a **20509-6** (Hemoglobin [Mass/volume] in Blood by calculation) 
+      codes : **$CS-LOINC** is-a **26515-7** (Platelets [#/volume] in Blood)
+      codes : **$CS-LOINC** is-a **49497-1** (Platelets [#/volume] in Blood by Estimate) 
+      codes : **$CS-LOINC** is-a **32623-1** (Platelet mean volume [Entitic volume] in Blood by Automated count) 
+      codes : **$CS-LOINC** is-a **51631-0** (Platelet distribution width [Ratio] in Blood)
+      codes : **$CS-LOINC** is-a **3016-3** (Thyrotropin [Units/volume] in Serum or Plasma) 
+      codes : **$CS-LOINC** is-a **3015-5** (Thyrotropin [Units/volume] in Blood) 
+      codes : **$CS-LOINC** is-a **20452-9** (Thyrotropin [Presence] in Blood)
+      codes : **$CS-LOINC** is-a **11579-0** (Thyrotropin [Units/volume] in Serum or Plasma by Detection limit <= 0.05 mIU/L) 
+      codes : **$CS-LOINC** is-a **11580-8** (Thyrotropin [Units/volume] in Serum or Plasma by Detection limit <= 0.005 mIU/L) 
+   }
+
+   'class  ISiKLaborBefund <DiagnosticReport><<(P,#8DA5C4)>>{
+   '   Dokumentation auf HL7 Org 
+   '   [[http://hl7.org/fhir/R4/diagnosticreport.html Diagnostic Report]]
+   '   --
+   '   id
+   '   identifier \n\t // Business identifier for report
+   '   basedOn : Reference (CarePlan | ImmunizationRecommendation | **MedicationRequest** | NutritionOrder | **ServiceRequest**) \n\t // What was requested
+   '   status : **DiagnosticReportStatus**   \n\t // z.B. amended | unknow | registered | final +
+   '   category \n\t // vernachlässigbar 
+   '   code	: **FixedValue** \n\t // SNOMED Report Name Labor Befunde
+   '   |_ coding 
+   '      |_ system : **$CS-SCT**
+   '      |_ version 
+   '      |_ code : **4241000179101**
+   '      |_ display : **Laboratory report (record artifact)**
+   '   subject : Reference (**Patient** | Group | Device | Location)  \n\t // The subject of the report - usually, the patient
+   '   encounter : Reference (**Encounter**)  \n\t // Health care event when test ordered
+   '   effective[x] \n\t // Clinically relevant time/time-period for report
+   '   |_ effectiveDateTime
+   '   |_ effectivePeriod
+   '   issued : \n\t // vernachlässigbar
+   '   performer : Reference (**Practitioner** | PractitionerRole | Organization | CareTeam)  \n\t // Responsible Diagnostic Service
+   '   resultsInterpreter : Reference (**Practitioner** | PractitionerRole | Organization | CareTeam)  \n\t // vernachlässigbar
+   '   specimen : Reference (Specimen)  \n\t // vernachlässigbar
+   '   <back:Salmon>result : Reference (Observation) </back> \n\t // Observations
+   '   <s>imagingStudy :	Reference (ImagingStudy)</s>  \n\t // vernachlässigbar
+   '   <s> media : BackboneElement</s>  \n\t // vernachlässigbar
+   '   conclusion \n\t // Clinical conclusion (interpretation) of test results
+   '   conclusionCode	: **SNOMED CT Clinical Findings**  \n\t // Codes for the clinical conclusion of test results z.B. **AllergyIntolerance.reaction.manifestation**
+   '   presentedForm : **Attachment**  \n\t // Entire report as issued (PDF)
+   '}
+}
+
+namespace HL7_FHIR_R4_Core #Salmon {
+   class Foundation_Modul <<(M,#FFAAAA)>>{
+      Dokumentation auf HL7 Org
+      [[https://hl7.org/fhir/R4/ HL7 FHIR R4 Core Foundation]]
+   }
+
+   class AllergyIntoleranceType <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-type.html Allergy Intolerance Type]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-type.html Code System of Type]]
+   }
+
+   class AllergyIntoleranceCategory <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html Allergy Intolerance Category]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-category.html Code System of Category]]
+   }
+
+   class AllergyIntoleranceSubstance <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-code.html AllergyIntolerance Substance, Product Condition and Negation Codes]]
+      Beeinhaltet alle [[https://www.hl7.org/fhir/R4/valueset-substance-code.html Substance Codes]] sowie weitere Codes aus [[http://www.snomed.org/ SNOMED CT]] \nbei denen Allergien und Unvertraeglichkeiten auftreten. 
+      --
+      codes : [[http://hl7.org/fhir/ValueSet/substance-code Contained in Substance-Code]]
+      codes : **$CS-SCT** is-a **18038007** (Propensity to adverse reactions to substance)
+      codes : **$CS-SCT** is-a **267425008** (Lactose intolerance)
+      codes : **$CS-SCT** is-a **29736007** (Syndrome of carbohydrate intolerance)
+      codes : **$CS-SCT** is-a **340519003** (Lysine intolerance)
+      codes : **$CS-SCT** is-a **190753003** (Sucrose intolerance)
+      codes : **$CS-SCT** is-a **413427002** (Acquired fructose intolerance)
+      codes : **$CS-SCT** is-a **716186003** (No known allergy) 
+   }
+
+   class AllergyIntoleranceCriticality <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html Allergy Intolerance Criticality]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-criticality.html Code System of Criticality]]
+   }
+   class AllergyIntoleranceVerificationStatus <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-verification.html Allergy Intolerance Verification Status]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://www.hl7.org/fhir/R4/codesystem-allergyintolerance-verification.html Code System of Verification Status]]
+   }
+   class AllergyIntoleranceClinicalStatus <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html Allergy Intolerance Clinical Status]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://www.hl7.org/fhir/R4/codesystem-allergyintolerance-clinical.html Code System of Clinical Status]]
+   }
+   class ReactionEventSeverity <ValueSet><<(V,#8DA5C4)>> {
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-reaction-event-severity.html Reaction Eventu Severity]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html Code System of Severity]]
+   }
+   class ObservationCategory <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-observation-category.html Observation Category]]
+      Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-observation-category.html Code System of Observation Category]]
+   }
+   class SctObservationMethods <ValueSet><<(V,#8DA5C4)>>{
+      Dokumentation auf HL7 Org 
+      [[https://hl7.org/fhir/R4/valueset-observation-methods.html SNONMED CT Observation Methods]]
+       Beeinhaltet Codes aus SNOMED CT bei denen das \nConcept Technique (272394005), Action oder Patient evaluation procedure ist. [[http://snomed.info/id/272394005 SNOMED_CT 272394005]]
+      --
+      codes : **$CS-SCT** is-a **272394005** (Technique)
+      codes : **$CS-SCT** is-a **129264002** (Action)
+      codes : **$CS-SCT** is-a **386053000** (Patient evaluation procedure)
+   }
+}
+
+@enduml
