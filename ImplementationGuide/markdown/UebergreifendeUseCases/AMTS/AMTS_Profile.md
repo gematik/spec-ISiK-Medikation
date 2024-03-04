@@ -1,6 +1,6 @@
 ### FHIR-Profile des Anwendungsfalls AMTS
 
-#### Profil ISiKAllergie
+#### Profil ISiKAllergie der Basis
 
 @```
 from StructureDefinition where url = 'https://gematik.de/fhir/isik/StructureDefinition/ISiKAllergieUnvertraeglichkeit' select Name: name, Canonical: url
@@ -37,3 +37,7 @@ from StructureDefinition where url = 'https://gematik.de/fhir/isik/v3/Basismodul
 {{tree:https://gematik.de/fhir/isik/v3/Basismodul/StructureDefinition/ISiKVersicherungsverhaeltnisSelbstzahler, hybrid}}
 
 ---
+
+#### Observation Profile der Basis
+
+#### Observation Profile des Support-Moduls Labor
