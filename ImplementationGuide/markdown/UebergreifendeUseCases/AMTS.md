@@ -1,4 +1,4 @@
-# Konzept Arzneitmitteltherapiesicherheit - AMTS (WIP)
+# Arzneitmitteltherapiesicherheit im Krankenhaus - AMTS
 
 ## Table of Contents <!-- omit from toc -->
 - [1. Motivation und Hintergrund](#1-motivation-und-hintergrund)
@@ -7,9 +7,7 @@
 - [4. Randbedingungen](#4-randbedingungen)
   - [4.1. Technische Ranbedingungen](#41-technische-ranbedingungen)
   - [4.2. Fachliche Randbedingungen](#42-fachliche-randbedingungen)
-  - [4.3. Organisatorische Randbedingungen](#43-organisatorische-randbedingungen)
-  - [4.4. Konventionen](#44-konventionen)
-- [5. Kontextabgrenzung](#5-kontextabgrenzung)
+- [5. Anwendungsfälle und Versorgungsprozesse](#5-anwendungsfälle-und-versorgungsprozesse)
   - [5.1. User und Systeme](#51-user-und-systeme)
   - [5.2. Patient Data Journey](#52-patient-data-journey)
 - [6. Lösungsstrategie](#6-lösungsstrategie)
@@ -37,7 +35,7 @@ Die bedeutendsten abzudeckenden Use Cases sind Wechselwirkungen, Allergien und K
 Bisher trifft ISiK-Medikation keine Festlegung zur AMTS. Aus diesem Grund ist die das Thema 'AMTS' als zentral in der AG zur Stufe 4 etabliert worden. Änderungs- oder Erweiterungsvorschläge am Dokument per Pull Request sind willkommen.
 
 ## 2. Ziele
-Ziel der Arbeiten im Rahmen der Ausbaustufe 4 ist:
+Ziele des vorliegenden IG ist es:
 
 1. Die Identifikation und Beschreibung zentral relevanter Anwendungsfälle.
 2. Die Identifikation und nachfolgende Spezifikation neuer notwendiger (oder zu erweiternder) Ressourcen als Informationsträger für die AMTS Bewertung.
@@ -70,19 +68,7 @@ gruppiert und zugeordnet werden können:
 * **Informationen mit Bezug zur Medikation** - Diese Kategorie liefert Information zur aktuellen Medikation (z.B. Blutdruck-Senker) mit dem Ziel Wechselwirkung zu weiteren Verordnungen oder Behandlungen zu itendtifizieren und zu bewerten.
 * **Informationen mit Bezug zu Diagnose, Indikation oder Co-Morbiditäten** - Diese Kategorie betrifft chronische Erkrankungen (z.B. Niereninsuffizienz), Lebensumstände (z.B. Schwangerschaft) und Lebensgewohnheiten (z.B. Leistungssport). eine zentrale Kontraindikation, Nebenwirkungen, Prädisposition
 
-Eine entsprechende gruppierte Visualisierung der Informationsobjekte findet sich in  [Anhang 1](#9-annex-i---klassen--und-datendiagramm)
-
-### 4.3. Organisatorische Randbedingungen
-Es gelten die Fristen wie in anderen Modulen.
-
-Die Konsentierung der Use Cases soll auch eine rein asynchrone Mitarbeit erlauben. Dies schließt eine asynchrone Entscheidungsfindung ein.
-
-### 4.4. Konventionen
-Die Draft-Dokumente werden auf GitHub zur Diskussion gestellt.
-
-Pull Requests, die grundsätzliche Änderungen bewirken, sollten in der Regel im Rahmen der AG angekündigt und ggf. diskutiert werden.
-
-## 5. Kontextabgrenzung
+## 5. Anwendungsfälle und Versorgungsprozesse
 
 Wie alle ISiK Spezifikation dürfen sich die Neuerungen am ISiK Modul Medikation nur auf die Kommunikation innerhalb des Krankenhauses (d.h. zwischen KIS und Subsystemen) beziehen.
 

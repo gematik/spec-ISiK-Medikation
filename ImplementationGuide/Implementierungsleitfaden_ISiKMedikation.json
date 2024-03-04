@@ -85,7 +85,34 @@
             {
               "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS.md",
               "title": "Arzneimitteltherapiesicherheit (AMTS)",
-              "generation": "markdown"
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS_Motivation.md",
+                  "title": "Motivation",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS_Narrativ.md",
+                  "title": "Anwendung im Krankenhaus",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS_Diagramme.md",
+                  "title": "Grafische Zusammenfassung",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS_Profile.md",
+                  "title": "Profile",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS_Apx_AuszugAK.md",
+                  "title": "Anhang I - Auszug ",
+                  "generation": "markdown"
+                }
+              ]
             }
           ]
         },
