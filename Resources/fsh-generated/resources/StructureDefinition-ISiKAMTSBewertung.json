@@ -1,0 +1,356 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ISiKAMTSBewertung",
+  "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKAMTSBewertung",
+  "version": "3.0.1",
+  "name": "ISiKAMTSBewertung",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-01-12",
+  "publisher": "gematik GmbH",
+  "description": "Dieses Profil ermöglicht die Abbildung von Informationen zur Risikobeurteilung im Rahmen der Arzneimitteltherapiesicherheit (AMTS).",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "openehr",
+      "uri": "http://openehr.org",
+      "name": "Open EHR Archetype Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "RiskAssessment",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RiskAssessment.id",
+        "path": "RiskAssessment.id",
+        "short": "eindeutige ID der Ressource auf dem Server",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.status",
+        "path": "RiskAssessment.status",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.method",
+        "path": "RiskAssessment.method",
+        "short": "Methode der Risikobeurteilung",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.method.coding",
+        "path": "RiskAssessment.method.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.method.coding.system",
+        "path": "RiskAssessment.method.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.method.coding.code",
+        "path": "RiskAssessment.method.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.method.coding.display",
+        "path": "RiskAssessment.method.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.method.text",
+        "path": "RiskAssessment.method.text",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.code",
+        "path": "RiskAssessment.code",
+        "short": "Art der Risikobeurteilung",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.code.coding",
+        "path": "RiskAssessment.code.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.code.coding.system",
+        "path": "RiskAssessment.code.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.code.coding.code",
+        "path": "RiskAssessment.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.code.coding.display",
+        "path": "RiskAssessment.code.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.code.text",
+        "path": "RiskAssessment.code.text",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.subject",
+        "path": "RiskAssessment.subject",
+        "short": "Referenz auf den Patienten",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.subject.reference",
+        "path": "RiskAssessment.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.encounter",
+        "path": "RiskAssessment.encounter",
+        "short": "Referenz auf den Abteilungskontakt",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.encounter.reference",
+        "path": "RiskAssessment.encounter.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.occurrence[x]",
+        "path": "RiskAssessment.occurrence[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Zeitpunkt oder Zeitraum der Beurteilung",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.occurrence[x]:occurrenceDateTime",
+        "path": "RiskAssessment.occurrence[x]",
+        "sliceName": "occurrenceDateTime",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.occurrence[x]:occurrencePeriod",
+        "path": "RiskAssessment.occurrence[x]",
+        "sliceName": "occurrencePeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.condition",
+        "path": "RiskAssessment.condition",
+        "short": "Bezugsdiagnose (Referenz)",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.condition.reference",
+        "path": "RiskAssessment.condition.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.reasonCode",
+        "path": "RiskAssessment.reasonCode",
+        "short": "Grund der Risikobewertung (codiert)",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.reasonCode.coding",
+        "path": "RiskAssessment.reasonCode.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.reasonCode.coding.system",
+        "path": "RiskAssessment.reasonCode.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.reasonCode.coding.code",
+        "path": "RiskAssessment.reasonCode.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.reasonCode.coding.display",
+        "path": "RiskAssessment.reasonCode.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.reasonCode.text",
+        "path": "RiskAssessment.reasonCode.text",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.reasonReference",
+        "path": "RiskAssessment.reasonReference",
+        "short": "Grund der Risikobewertung (Referenz)",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.reasonReference.reference",
+        "path": "RiskAssessment.reasonReference.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.basis",
+        "path": "RiskAssessment.basis",
+        "short": "Entscheidungsgrundlagen der Risikobewertung (Referenz)",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.basis.reference",
+        "path": "RiskAssessment.basis.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction",
+        "path": "RiskAssessment.prediction",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.outcome",
+        "path": "RiskAssessment.prediction.outcome",
+        "short": "Mögliches Outcome für den Patienten",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.outcome.coding",
+        "path": "RiskAssessment.prediction.outcome.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.outcome.coding.system",
+        "path": "RiskAssessment.prediction.outcome.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.outcome.coding.code",
+        "path": "RiskAssessment.prediction.outcome.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.outcome.coding.display",
+        "path": "RiskAssessment.prediction.outcome.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.outcome.text",
+        "path": "RiskAssessment.prediction.outcome.text",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.qualitativeRisk",
+        "path": "RiskAssessment.prediction.qualitativeRisk",
+        "short": "Risikowahrscheinlichkeit (qualitativ, codiert)",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/risk-probability"
+        }
+      },
+      {
+        "id": "RiskAssessment.prediction.qualitativeRisk.coding",
+        "path": "RiskAssessment.prediction.qualitativeRisk.coding",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.qualitativeRisk.coding.system",
+        "path": "RiskAssessment.prediction.qualitativeRisk.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.qualitativeRisk.coding.code",
+        "path": "RiskAssessment.prediction.qualitativeRisk.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.qualitativeRisk.coding.display",
+        "path": "RiskAssessment.prediction.qualitativeRisk.coding.display",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.prediction.qualitativeRisk.text",
+        "path": "RiskAssessment.prediction.qualitativeRisk.text",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.mitigation",
+        "path": "RiskAssessment.mitigation",
+        "short": "Hinweis zur Risikovermeidung",
+        "mustSupport": true
+      },
+      {
+        "id": "RiskAssessment.note",
+        "path": "RiskAssessment.note",
+        "short": "Anmerkung zur Risikobewertung",
+        "mustSupport": true
+      }
+    ]
+  }
+}

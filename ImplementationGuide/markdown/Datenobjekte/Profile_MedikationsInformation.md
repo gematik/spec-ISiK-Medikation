@@ -5,10 +5,10 @@
 ### Profil
 
 @```
-from StructureDefinition where url = 'https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsInformation' select Name: name, Canonical: url
+from StructureDefinition where url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation' select Name: name, Canonical: url
 ```
 
-{{tree:https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsInformation, hybrid}}
+{{tree:https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation, hybrid}}
 
 ---
 
@@ -16,7 +16,7 @@ from StructureDefinition where url = 'https://gematik.de/fhir/isik/v3/Medikation
 
 @```
 from StructureDefinition
-where url in ('https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsInformation' )
+where url in ('https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation' )
 for differential.element
 select
 Path: path,
@@ -35,7 +35,7 @@ join binding.where(valueSet.exists())
 @```from
 	StructureDefinition
 where
-    url = 'https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsInformation'
+    url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation'
 for differential.element
 where mustSupport = true
   and short.exists()
@@ -55,6 +55,23 @@ Zeitlich begrenzte Medikation:
 
 Einfaches Zytostatikum-Therapieschema (Chemotherapie):
 {{json:ExampleISiKMedikationsInformation3}}
+
+Einnahme zu allen Mahlzeiten incl. Zwischenmahlzeiten:
+{{json:ExampleISiKMedikationsInformation4}}
+
+Komplexes Beispiel: Medikation zur Behandlung von Morbus Parkinson; Medikationsliste und zugehörige Einzelmedikationen.
+
+{{json:ExampleISiKMedikationsListeParkinson}}
+
+{{json:ExampleISiKMedikationsInformationParkinson1}}
+
+{{json:ExampleISiKMedikationsInformationParkinson2}}
+
+{{json:ExampleISiKMedikationsInformationParkinson3}}
+
+{{json:ExampleISiKMedikationsInformationParkinson4}}
+
+{{json:ExampleISiKMedikationsInformationParkinson5}}
 
 ## Interaktionen
 

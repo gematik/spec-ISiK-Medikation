@@ -22,18 +22,18 @@ Die für dieses Modul bestätigungsrelevanten Teile des [Moduls "Basis"](https:/
 
 ### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsinformation
 
-Canonical: https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/information
+Canonical: https://gematik.de/fhir/isik/v4/Medikation/CapabilityStatement/medikation-server/information
 
-{{render:https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/information}}
+{{render:https://gematik.de/fhir/isik/v4/Medikation/CapabilityStatement/medikation-server/information}}
 
 ### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverordnung
 
-Canonical: https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verordnung
+Canonical: https://gematik.de/fhir/isik/v4/Medikation/CapabilityStatement/medikation-server/verordnung
 
-{{render:https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verordnung}}
+{{render:https://gematik.de/fhir/isik/v4/Medikation/CapabilityStatement/medikation-server/verordnung}}
 
 ### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverabreichung
 
-Canonical: https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verabreichung
+Canonical: https://gematik.de/fhir/isik/v4/Medikation/CapabilityStatement/medikation-server/verabreichung
 
-{{render:https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verabreichung}}
+{{render:https://gematik.de/fhir/isik/v4/Medikation/CapabilityStatement/medikation-server/verabreichung}}

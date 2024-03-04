@@ -50,7 +50,7 @@ Usage: #example
 * address[=].postalCode = "98764"
 * address[=].country = "DE"
 
-Instance: Versorgungsstellenkontakt
+Instance: Fachabteilungskontakt
 InstanceOf: Encounter
 Usage: #example
 * extension.url = "http://fhir.de/StructureDefinition/Aufnahmegrund"
@@ -66,7 +66,7 @@ Usage: #example
 * status = #finished
 * class = $v3-ActCode#IMP
 * type[0] = $kontaktart-de#operation
-* type[+] = $Kontaktebene#versorgungsstellenkontakt
+* type[+] = $Kontaktebene#abteilungskontakt
 * serviceType = $FachabteilungsschluesselCS#0100
 * subject = Reference(PatientinMusterfrau)
 * period.start = "2021-02-12"
@@ -85,4 +85,3 @@ Usage: #example
 * serviceProvider.identifier.system = "https://test.krankenhaus.de/fhir/sid/fachabteilungsid"
 * serviceProvider.identifier.value = "XYZ"
 * serviceProvider.display = "Fachabteilung XYZ"
-* partOf = Reference(Einrichtungskontakt)

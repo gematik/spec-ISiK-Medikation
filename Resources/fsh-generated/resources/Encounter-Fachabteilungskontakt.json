@@ -1,6 +1,6 @@
 {
   "resourceType": "Encounter",
-  "id": "Versorgungsstellenkontakt",
+  "id": "Fachabteilungskontakt",
   "extension": [
     {
       "url": "http://fhir.de/StructureDefinition/Aufnahmegrund",
@@ -63,7 +63,7 @@
     {
       "coding": [
         {
-          "code": "versorgungsstellenkontakt",
+          "code": "abteilungskontakt",
           "system": "http://fhir.de/CodeSystem/Kontaktebene"
         }
       ]
@@ -150,8 +150,5 @@
       "value": "XYZ"
     },
     "display": "Fachabteilung XYZ"
-  },
-  "partOf": {
-    "reference": "Einrichtungskontakt"
   }
 }

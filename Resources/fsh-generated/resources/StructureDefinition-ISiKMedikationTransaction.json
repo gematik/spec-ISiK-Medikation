@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationTransaction",
-  "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationTransaction",
+  "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationTransaction",
   "version": "3.0.1",
   "name": "ISiKMedikationTransaction",
   "status": "active",

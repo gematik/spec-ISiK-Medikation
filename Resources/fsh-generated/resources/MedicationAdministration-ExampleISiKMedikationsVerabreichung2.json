@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationsVerabreichung2",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsVerabreichung"
+      "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsVerabreichung"
     ]
   },
   "dosage": {
@@ -22,7 +22,7 @@
     "reference": "Patient/PatientinMusterfrau"
   },
   "context": {
-    "reference": "Encounter/Versorgungsstellenkontakt"
+    "reference": "Encounter/Fachabteilungskontakt"
   },
   "effectiveDateTime": "2024-01-22"
 }

@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationStatement",
-  "id": "ExampleISiKMedikationsInformation2",
+  "id": "ExampleISiKMedikationsInformation4",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation"
@@ -12,25 +12,31 @@
         {
           "doseQuantity": {
             "system": "http://unitsofmeasure.org",
-            "value": 100,
-            "unit": "mg",
-            "code": "mg"
+            "value": 1,
+            "unit": "Tabl.",
+            "code": "1"
           }
         }
       ],
       "timing": {
         "repeat": {
-          "count": 6,
-          "frequency": 1,
-          "period": 3,
-          "periodUnit": "wk"
+          "when": [
+            "C"
+          ]
         }
-      }
+      },
+      "patientInstruction": "auch zu Zwischenmahlzeiten"
     }
   ],
   "status": "active",
-  "medicationReference": {
-    "reference": "Medication/ExampleISiKMedikament2"
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "code": "10557318",
+        "system": "http://fhir.de/CodeSystem/ifa/pzn",
+        "display": "Sevelamercarbonat AL 800 mg"
+      }
+    ]
   },
   "subject": {
     "reference": "Patient/PatientinMusterfrau"
@@ -39,7 +45,7 @@
     "reference": "Encounter/Fachabteilungskontakt"
   },
   "effectivePeriod": {
-    "start": "2021-07-04"
+    "start": "2024-01-22"
   },
-  "dateAsserted": "2021-07-03"
+  "dateAsserted": "2024-02-16"
 }

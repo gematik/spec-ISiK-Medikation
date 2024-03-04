@@ -258,7 +258,7 @@ Usage: #example
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Versorgungsstellenkontakt"
+* context.reference = "Encounter/Fachabteilungskontakt"
 * effectivePeriod.start = 2021-07-01
 * dateAsserted = 2021-07-01
 * reasonReference.reference = "Condition/BehandlungsDiagnoseFreitext"
@@ -279,7 +279,7 @@ Usage: #example
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament2"
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Versorgungsstellenkontakt"
+* context.reference = "Encounter/Fachabteilungskontakt"
 * effectivePeriod.start = 2021-07-04
 * dateAsserted = 2021-07-03
 * dosage
@@ -300,7 +300,7 @@ Usage: #example
 * status = #active
 * medicationReference = Reference(ExampleISiKMedikament8)
 * subject.reference = "Patient/PatientinMusterfrau"
-* context.reference = "Encounter/Versorgungsstellenkontakt"
+* context.reference = "Encounter/Fachabteilungskontakt"
 * effectivePeriod
   * start = 2024-01-22
   * end = 2024-02-26
@@ -318,3 +318,175 @@ Usage: #example
     * unit = "ml Infusionslösung"
     * system = $cs-ucum
     * code = #mL
+
+// Einnahme zu jeder Mahlzeit (auch Zwischenmahlzeiten)
+Instance: ExampleISiKMedikationsInformation4
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#10557318 "Sevelamercarbonat AL 800 mg"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod
+  * start = 2024-01-22
+* dateAsserted = 2024-02-16
+* dosage
+  * timing
+    * repeat
+      * when = $cs-v4-event-timing#C
+  * patientInstruction = "auch zu Zwischenmahlzeiten"
+  * doseAndRate.doseQuantity
+    * value = 1
+    * unit = "Tabl."
+    * system = $cs-ucum
+    * code = #1
+
+// Einnahme am ersten Dienstag jedes dritten Monats
+Instance: ExampleISiKMedikationsInformation5
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#07260796 "Vitamin-B12-ratiopharm® N Ampullen zur Injektion"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod
+  * start = 2024-02-16
+* dateAsserted = 2024-02-16
+* dosage
+  * timing
+    * repeat
+      * frequency = 1
+      * period = 3
+      * periodUnit = #mo
+      * dayOfWeek = #tue
+  * patientInstruction = "alle 3 Monate am 1. Dienstag"
+  * doseAndRate.doseQuantity
+    * value = 1
+    * unit = "Tabl."
+    * system = $cs-ucum
+    * code = #1
+
+// Beispiel Parkinson-Medikation: Medikament 1
+Instance: ExampleISiKMedikationsInformationParkinson1
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#00003056 "Stalevo® 100 mg/25 mg/200 mg"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod.start = 2024-02-20
+* dateAsserted = 2024-02-20
+* reasonReference.reference = "Condition/DiagnoseParkinson"
+* dosage
+  * timing
+    * repeat
+      * timeOfDay = 07:00:00
+      * timeOfDay = 10:00:00
+      * timeOfDay = 14:00:00
+      * timeOfDay = 18:00:00
+  * doseAndRate
+    * doseQuantity
+      * value = 1
+      * unit = "Tbl."
+      * system = $cs-ucum
+      * code = #1
+
+// Beispiel Parkinson-Medikation: Medikament 2
+Instance: ExampleISiKMedikationsInformationParkinson2
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#09339154 "Quetiapin HEXAL® 50 mg"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod.start = 2024-02-20
+* dateAsserted = 2024-02-20
+* reasonReference.reference = "Condition/DiagnoseParkinson"
+* dosage
+  * timing
+    * repeat
+      * timeOfDay = 13:00:00
+      * timeOfDay = 22:00:00
+  * doseAndRate
+    * doseQuantity
+      * value = 1
+      * unit = "Tbl."
+      * system = $cs-ucum
+      * code = #1
+
+// Beispiel Parkinson-Medikation: Medikament 3
+Instance: ExampleISiKMedikationsInformationParkinson3
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#03395803 "Madopar® 125 mg"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod.start = 2024-02-20
+* dateAsserted = 2024-02-20
+* reasonReference.reference = "Condition/DiagnoseParkinson"
+* dosage
+  * timing
+    * repeat
+      * timeOfDay = 14:00:00
+  * doseAndRate
+    * doseQuantity
+      * value = 0.5
+      * unit = "FTbl."
+      * system = $cs-ucum
+      * code = #1
+* dosage
+  * timing
+    * repeat
+      * timeOfDay = 18:00:00
+  * doseAndRate
+    * doseQuantity
+      * value = 1
+      * unit = "FTbl."
+      * system = $cs-ucum
+      * code = #1
+
+// Beispiel Parkinson-Medikation: Medikament 4
+Instance: ExampleISiKMedikationsInformationParkinson4
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#11119856 "Entacapon HEC 200 mg"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod.start = 2024-02-20
+* dateAsserted = 2024-02-20
+* reasonReference.reference = "Condition/DiagnoseParkinson"
+* dosage
+  * timing
+    * repeat
+      * timeOfDay = 14:00:00
+      * timeOfDay = 22:00:00
+  * doseAndRate
+    * doseQuantity
+      * value = 1
+      * unit = "Tbl."
+      * system = $cs-ucum
+      * code = #1
+
+// Beispiel Parkinson-Medikation: Medikament 5
+Instance: ExampleISiKMedikationsInformationParkinson5
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#04855419 "LevoCarb 200/50 ret - 1 A Pharma®"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod.start = 2024-02-20
+* dateAsserted = 2024-02-20
+* reasonReference.reference = "Condition/DiagnoseParkinson"
+* dosage
+  * timing
+    * repeat
+      * timeOfDay = 22:00:00
+  * doseAndRate
+    * doseQuantity
+      * value = 1
+      * unit = "Tbl."
+      * system = $cs-ucum
+      * code = #1

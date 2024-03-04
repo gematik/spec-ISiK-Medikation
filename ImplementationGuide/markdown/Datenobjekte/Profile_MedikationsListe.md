@@ -5,17 +5,17 @@
 ### Profil
 
 @```
-from StructureDefinition where url = 'https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsListe' select Name: name, Canonical: url
+from StructureDefinition where url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsListe' select Name: name, Canonical: url
 ```
 
-{{tree:https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsListe, hybrid}}
+{{tree:https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsListe, hybrid}}
 
 ## Anmerkungen zu Must-Support-Feldern
 
 @```from
 	StructureDefinition
 where
-    url = 'https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsListe'
+    url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsListe'
 for differential.element
 where mustSupport = true
   and short.exists()
@@ -28,6 +28,10 @@ select
 Valides Beispiel für das Profil MedikationsListe:
 
 {{json:ExampleISiKMedikationsListe}}
+
+Beispiel für eine Medikationsliste zur Behandlung von Morbus Parkinson (vgl. auch die vollständige Darstellung unter {{pagelink:ImplementationGuide/markdown/Datenobjekte/Profile_MedikationsInformation.md}}):
+
+{{json:ExampleISiKMedikationsListeParkinson}}
 
 ### Interaktionen
 

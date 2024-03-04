@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsInformation",
-  "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsInformation",
+  "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation",
   "version": "3.0.1",
   "name": "ISiKMedikationsInformation",
   "status": "active",
@@ -782,7 +782,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/isik/v3/Medikation/ValueSet/SctRouteOfAdministration"
+          "valueSet": "https://gematik.de/fhir/isik/v4/Medikation/ValueSet/SctRouteOfAdministration"
         }
       },
       {

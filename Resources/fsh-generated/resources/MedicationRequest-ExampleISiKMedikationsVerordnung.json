@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationsVerordnung",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsVerordnung"
+      "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsVerordnung"
     ]
   },
   "dosageInstruction": [
@@ -38,7 +38,7 @@
     "reference": "Patient/PatientinMusterfrau"
   },
   "encounter": {
-    "reference": "Encounter/Versorgungsstellenkontakt"
+    "reference": "Encounter/Fachabteilungskontakt"
   },
   "authoredOn": "2021-07-01",
   "requester": {
