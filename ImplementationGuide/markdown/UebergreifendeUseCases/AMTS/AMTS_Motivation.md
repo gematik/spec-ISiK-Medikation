@@ -10,7 +10,6 @@
   - [4.2. User Stories - Business](#42-user-stories---business)
   - [4.3. Exemplarische Abläufe](#43-exemplarische-abläufe)
   - [4.4. Weitere implizite Annahmen und weitere Informationen](#44-weitere-implizite-annahmen-und-weitere-informationen)
-- [5. Annex I - Diagramme](#5-annex-i---diagramme)
 
 ## 1. Motivation und Hintergrund
 
@@ -77,7 +76,7 @@ Neben den allgemein geltenden Festlegungen in FHIR und HL7v2 können auch folgen
 ## 4. Anwendungsfälle und Versorgungsprozesse
 
 Im Vorfeld der Ausbaustufe 4 des Moduls ISiK-Medikation fand ein umfangreicher Arbeitskreis mit dem Thema "Analyse der Mediaktionsprozesse" des IOP-Councils statt. Dort wurden ambulante, stationäre sowie sektorenübergreifen Anwendungsfälle und Vesorgungsprozesse untersucht. Wie alle ISiK Spezifikation beziehen sich die Neuerungen am ISiK Modul Medikation allerdings vorrangig auf die Kommunikation innerhalb des Krankenhauses (d.h. zwischen KIS und Subsystemen). 
-Daher ist im Anhang ist ein thematischer [Auszug des IOP- Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) der Anwendungsfälle und Versorgungsprozesse für den stationären Sektor gegeben. Dieser ist für eine Detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet.
+Daher ist im Anhang ist ein thematischer [Auszug des IOP- Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) der Anwendungsfälle und Versorgungsprozesse für den stationären Sektor gegeben. Dieser ist für eine detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet und hat bildet die fachliche Grundlage (Motivation) des vorliegenden IG AMTS.
 
 
 ### 4.1. User Stories und Use Cases
@@ -132,7 +131,3 @@ Ein geriatrischer Patient unterzieht sich einer geplanten Hüftersatzoperation:
 *Anmerkungen:*
 * AMTS-Checks sollten protokolliert werden, um Verantwortlichkeit und Rückverfolgbarkeit zu gewährleisten. Dies gilt sowohl für den positiven Fall der Veträglichkeit, als auch für den Fall in dem eine akzeptierte oder eine nicht akzeptable Risikobewertung erstellt wid.
 * AMTS-Checks könnten protokolliert werden, um redundante Prüfungen und Mehrarbeit zu vermeiden.
-
-
-## 5. Annex I - Diagramme
-

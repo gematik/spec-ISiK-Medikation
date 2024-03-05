@@ -1,6 +1,6 @@
-### FHIR-Profile des Anwendungsfalls AMTS
+## FHIR-Profile des Anwendungsfalls AMTS
 
-#### Profil ISiKAllergie der Basis
+### Profil ISiKAllergie der Basis
 
 @```
 from StructureDefinition where url = 'https://gematik.de/fhir/isik/StructureDefinition/ISiKAllergieUnvertraeglichkeit' select Name: name, Canonical: url
@@ -28,7 +28,7 @@ join binding.where(valueSet.exists())
 
 ---
 
-#### Profil ISiKAMTSBewertung
+### Profil ISiKAMTSBewertung
 
 @```
 from StructureDefinition where url = 'https://gematik.de/fhir/isik/v3/Basismodul/StructureDefinition/ISiKVersicherungsverhaeltnisSelbstzahler' select Name: name, Canonical: url

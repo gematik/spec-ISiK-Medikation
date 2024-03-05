@@ -1,34 +1,36 @@
-## Anhang I: Auszug des IOP- Arbeitskreises <!-- omit from toc -->
+## Anhang I: Auszug des IOP-Arbeitskreises <!-- omit from toc -->
+
+**Im Folgenden wurden Inhalte aus dem *IOP-Arbeitskreis zur Analyse der Medikationsprozesse* weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.** Das Betrifft vor allem Inahlte die auf ambulante Prozesse und politische Handlungsanweisungen fokussieren. Die Auslassungen sind an entsprechender Stelle erneut in **Bold-Face** gekennzeichnet.
 
 ## Table of Contents <!-- omit from toc -->
 - [1. Zielsetzung, wesentliche Ergebnisse und Empfehlungen](#1-zielsetzung-wesentliche-ergebnisse-und-empfehlungen)
 - [2. Modellierung exemplarischer Prozesse der Arzneimittelversorgung](#2-modellierung-exemplarischer-prozesse-der-arzneimittelversorgung)
-- [2.1. Versorgungsprozess 2: Stationäre Behandlung nach häuslichem Sturzereignis](#21-versorgungsprozess-2-stationäre-behandlung-nach-häuslichem-sturzereignis)
-  - [2.1.1. Versorgungsprozess Rettungsdient in der Häuslichkeit](#211-versorgungsprozess-rettungsdient-in-der-häuslichkeit)
-  - [2.1.2. Versorgungsprozess Krankenhaus](#212-versorgungsprozess-krankenhaus)
-  - [2.1.3. Versorgungsprozess Hausarztpraxis](#213-versorgungsprozess-hausarztpraxis)
-- [2.2. Versorgungsprozess 3: Schlaganfall im Pflegeheim](#22-versorgungsprozess-3-schlaganfall-im-pflegeheim)
-  - [2.2.1. Versorgungsprozess Pflegeheim Interventionsvorbereitung](#221-versorgungsprozess-pflegeheim-interventionsvorbereitung)
-  - [2.2.2. Versorgungsprozess Rettungsdienst Präklinische Versorgung ](#222-versorgungsprozess-rettungsdienst-präklinische-versorgung)
-  - [2.2.3. Versorgungsprozess Krankenhaus Klinische Versorgung - siehe auch Versorgungsprozess 2](#223-versorgungsprozess-krankenhaus-klinische-versorgung---siehe-auch-versorgungsprozess-2)
-  - [2.2.4. Versorgungsprozess Neurologische Rehabilitationseinrichtung (Neurorehabilitation)](#224-versorgungsprozess-neurologische-rehabilitationseinrichtung-neurorehabilitation)
-  - [2.2.5. Wiederaufnahmeprozess im Pflegeheim](#225-wiederaufnahmeprozess-im-pflegeheim)
-  - [2.2.6. Versorgungsprozess Hausarztpraxis im Pflegeheim ](#226-versorgungsprozess-hausarztpraxis-im-pflegeheim)
-  - [2.2.7. Versorgungsprozess Neurologisch-Fachärztliche Praxis im Pflegeheim](#227-versorgungsprozess-neurologisch-fachärztliche-praxis-im-pflegeheim)
-- [2.3. In den Versorgungsprozessen mehrfach durchlaufene Subprozesse](#23-in-den-versorgungsprozessen-mehrfach-durchlaufene-subprozesse)
-  - [2.4. Versorgung Subprozess Anamnese](#24-versorgung-subprozess-anamnese)
-  - [2.4.1. Versorgung Subprozess Medikationsentscheidung und Verordnung](#241-versorgung-subprozess-medikationsentscheidung-und-verordnung)
-  - [2.4.2. Versorgung Subprozess Verordnungsdokumentation mit (e)Rezept ](#242-versorgung-subprozess-verordnungsdokumentation-mit-erezept)
-  - [2.5. In Versorgungs-Prozessen verwendete Dokumentationen mit Medikationsinformationen](#25-in-versorgungs-prozessen-verwendete-dokumentationen-mit-medikationsinformationen)
-  - [2.6. AMTS-spezifische Handlungsempfehlungen für medizinisch-pflegerische Medikationsprozesse](#26-amts-spezifische-handlungsempfehlungen-für-medizinisch-pflegerische-medikationsprozesse)
-  - [2.7. Exemplarische IST-Prozesse der pharmazeutischen Arzneimittelversorgung](#27-exemplarische-ist-prozesse-der-pharmazeutischen-arzneimittelversorgung)
-    - [2.7.1. Pharmazie-Prozess-2 Medikationsanalyse in der Apotheke](#271-pharmazie-prozess-2-medikationsanalyse-in-der-apotheke)
-    - [2.7.2. Pharmazie-Prozess-3 KH Aufnahme mit Medication Reconciliation](#272-pharmazie-prozess-3-kh-aufnahme-mit-medication-reconciliation)
-  - [2.8. Beiträge der jeweiligen Akteure im Sollprozess](#28-beiträge-der-jeweiligen-akteure-im-sollprozess)
-    - [2.8.1. Im Krankenhaus](#281-im-krankenhaus)
-  - [2.9. Medikationsrelevante Zusatzinformationen](#29-medikationsrelevante-zusatzinformationen)
-  - [2.10. Folgearbeitskreis "AMTS-Prüfung"](#210-folgearbeitskreis-amts-prüfung)
-    - [2.10.1. Der Fokus des Arbeitskreises sollte daher umfassen:](#2101-der-fokus-des-arbeitskreises-sollte-daher-umfassen)
+- [3. Versorgungsprozess 2: Stationäre Behandlung nach häuslichem Sturzereignis](#3-versorgungsprozess-2-stationäre-behandlung-nach-häuslichem-sturzereignis)
+  - [3.1. Versorgungsprozess Rettungsdient in der Häuslichkeit](#31-versorgungsprozess-rettungsdient-in-der-häuslichkeit)
+  - [3.2. Versorgungsprozess Krankenhaus](#32-versorgungsprozess-krankenhaus)
+  - [3.3. Versorgungsprozess Hausarztpraxis](#33-versorgungsprozess-hausarztpraxis)
+- [4. Versorgungsprozess 3: Schlaganfall im Pflegeheim](#4-versorgungsprozess-3-schlaganfall-im-pflegeheim)
+  - [4.1. Versorgungsprozess Pflegeheim Interventionsvorbereitung](#41-versorgungsprozess-pflegeheim-interventionsvorbereitung)
+  - [4.2. Versorgungsprozess Rettungsdienst Präklinische Versorgung ](#42-versorgungsprozess-rettungsdienst-präklinische-versorgung)
+  - [4.3. Versorgungsprozess Krankenhaus Klinische Versorgung - siehe auch Versorgungsprozess 2](#43-versorgungsprozess-krankenhaus-klinische-versorgung---siehe-auch-versorgungsprozess-2)
+  - [4.4. Versorgungsprozess Neurologische Rehabilitationseinrichtung (Neurorehabilitation)](#44-versorgungsprozess-neurologische-rehabilitationseinrichtung-neurorehabilitation)
+  - [4.5. Wiederaufnahmeprozess im Pflegeheim](#45-wiederaufnahmeprozess-im-pflegeheim)
+  - [4.6. Versorgungsprozess Hausarztpraxis im Pflegeheim ](#46-versorgungsprozess-hausarztpraxis-im-pflegeheim)
+  - [4.7. Versorgungsprozess Neurologisch-Fachärztliche Praxis im Pflegeheim](#47-versorgungsprozess-neurologisch-fachärztliche-praxis-im-pflegeheim)
+- [5. In den Versorgungsprozessen mehrfach durchlaufene Subprozesse](#5-in-den-versorgungsprozessen-mehrfach-durchlaufene-subprozesse)
+  - [5.1. Versorgung Subprozess Anamnese](#51-versorgung-subprozess-anamnese)
+  - [5.2. Versorgung Subprozess Medikationsentscheidung und Verordnung](#52-versorgung-subprozess-medikationsentscheidung-und-verordnung)
+  - [5.3. Versorgung Subprozess Verordnungsdokumentation mit (e)Rezept ](#53-versorgung-subprozess-verordnungsdokumentation-mit-erezept)
+  - [5.4. In Versorgungs-Prozessen verwendete Dokumentationen mit Medikationsinformationen](#54-in-versorgungs-prozessen-verwendete-dokumentationen-mit-medikationsinformationen)
+  - [5.5. AMTS-spezifische Handlungsempfehlungen für medizinisch-pflegerische Medikationsprozesse](#55-amts-spezifische-handlungsempfehlungen-für-medizinisch-pflegerische-medikationsprozesse)
+  - [5.6. Exemplarische IST-Prozesse der pharmazeutischen Arzneimittelversorgung](#56-exemplarische-ist-prozesse-der-pharmazeutischen-arzneimittelversorgung)
+    - [5.6.1. Pharmazie-Prozess-2 Medikationsanalyse in der Apotheke](#561-pharmazie-prozess-2-medikationsanalyse-in-der-apotheke)
+    - [5.6.2. Pharmazie-Prozess-3 KH Aufnahme mit Medication Reconciliation](#562-pharmazie-prozess-3-kh-aufnahme-mit-medication-reconciliation)
+  - [5.7. Beiträge der jeweiligen Akteure im Sollprozess](#57-beiträge-der-jeweiligen-akteure-im-sollprozess)
+    - [5.7.1. Im Krankenhaus](#571-im-krankenhaus)
+  - [5.8. Medikationsrelevante Zusatzinformationen](#58-medikationsrelevante-zusatzinformationen)
+  - [5.9. Folgearbeitskreis "AMTS-Prüfung"](#59-folgearbeitskreis-amts-prüfung)
+    - [5.9.1. Der Fokus des Arbeitskreises sollte daher umfassen:](#591-der-fokus-des-arbeitskreises-sollte-daher-umfassen)
 
 
 
@@ -49,15 +51,15 @@ Die graphische Darstellung von sieben ausgewählten Anwendungsfällen bildet die
 
 **Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden** 
 
-## 2.1. Versorgungsprozess 2: Stationäre Behandlung nach häuslichem Sturzereignis
+## 3. Versorgungsprozess 2: Stationäre Behandlung nach häuslichem Sturzereignis
 
 Beispielhafter Anwendungsfall: Eine Patientin mit Akuterkrankung in der Häuslichkeit stürzt dort bei schlechtem Allgemeinzustand wegen eines fieberhaften Harnwegsinfektes (HWI). Es wird der Rettungsdienst alarmiert und die Patientin in stationäre Behandlung übergeben. Im Anschluss wird sie wieder in die Häuslichkeit entlassen.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung" width="90%"/>**Versorgung (2): Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung" width="90%"/>**Versorgungsprozess (2): Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung**
 
 Ein beträchtlicher Anteil der Informationsübermittlung im Notfall in der Häuslichkeit erfolgt momentan immer noch mündlich und auf Papier. Selbst an der Schnittstelle zwischen Notaufnahme und Normalstation innerhalb der Krankenhäuser sind aufgrund verschiedener klinischer Softwaresysteme häufig nur manuelle Übertragungen der Medikationsinformationen möglich. In der Notfallmedizin sind jedoch präzise und schnelle Erfassung von Vorbefunden und Medikationsdokumentationen von entscheidender Bedeutung, um eine adäquate Patientenversorgung sicherzustellen. In der aktuellen Versorgungslandschaft sind die Patient:innen und Angehörige häufig die einzigen, die für eine Übermittlung von Informationen in Frage kommen. Dies gilt in der Regel insbesonders für medikationsrelevante Informationen. Patient:innen, die in der Häuslichkeit vom Rettungsdienst vorgefunden werden, sind selten in der Lage, diese Informationen zu teilen. So sind die Mitarbeitenden der Rettungsdienste darauf angewiesen, dass vor Ort Medikamentenpackungen, Rezepte oder Medikationspläne gefunden werden bzw. mit Angehörigen gesprochen werden kann, denen die notwendigen Informationen ggf. bekannt sind.
 
-### 2.1.1. Versorgungsprozess Rettungsdient in der Häuslichkeit
+### 3.1. Versorgungsprozess Rettungsdient in der Häuslichkeit
 
 Notfallsituation: Eine Patientin mit einem fieberhaften Harnwegsinfekt (HWI) stürzt in der Häuslichkeit aufgrund eines schlechten Allgemeinzustands z.B. mit Verdacht auf eine Knochenfraktur. In der Häuslichkeit wird daraufhin ein Bereitschaftsdienst oder eine regionale Rettungsleitstelle per Telefon kontaktiert. Bei der Kontaktaufnahme mit einem medizinischen Notdienst werden die Rufnummer 116 117 oder die 112 bei Notfallsituationen mit hoher Dringlichkeit gewählt. Der ärztliche Bereitschaftsdienst einer Kassenärztlichen Vereinigung unter der Telefonnummer 116 117 vermittelt den Kontakt zu einem/einer diensthabenden Bereitschaftsarzt:in oder einer Bereitschaftspraxis in der Nähe. Bei einer Notfallsituation mit hoher Dringlichkeit, bei der die Nummer 112 angerufen wird, dokumentiert eine Rettungsleitstelle (RLS) häufig in einem computergestützten Einsatzleitsystem (ELS) das dabei hilft, den Notfall effektiv zu managen und die notwendigen Ressourcen schnellstmöglich zu koordinieren. Bei der Erfassung der Notfallsituation durch eine Rettungsleitstelle werden auch Informationen über die Medikation der Patientin erfragt und dokumentiert. Die Disponent:innen sind geschult, nach aktuellen Medikamenten, Vorerkrankungen und Allergien zu fragen, da diese Informationen entscheidend für die Einschätzung der Situation und die Anweisungen an die Einsatzkräfte sein können. Sie helfen dem/der Notarzt:in oder dem Rettungsdienstpersonal, sich auf die Behandlung vorzubereiten und mögliche Wechselwirkungen oder Kontraindikationen bei der Notfallbehandlung zu berücksichtigen. Entsprechend dem Notfall wird ein Rettungsmittel (Rettungswagen, Notarzt:in, ggf. Rettungshubschrauber) entsendet.
 
@@ -67,7 +69,7 @@ Diagnose und Erstbehandlung vor Ort: Je nach Schwere des Zustands wird eine erst
 Dokumentation. Der Rettungsdienst dokumentiert Einsätze sowohl auf Papier als auch elektronisch, abhängig von der Ausstattung und den Vorschriften der jeweiligen Organisation. Die Dokumentation erfolgt üblicherweise anhand eines Rettungsdienstprotokolls oder Einsatzprotokolls. Bei einem Rettungseinsatz wird eine präzise Dokumentation erstellt, die alle relevanten Einsatzdetails wie Datum, Uhrzeit, Ort und die eingesetzten Rettungskräfte umfasst. Patientenbezogene Daten, darunter Identität, Vitalzeichen, beobachtete Symptome sowie Informationen zu Vorerkrankungen, Medikamenteneinnahme und Allergien, werden erfasst. Die durchgeführten medizinischen Maßnahmen, einschließlich Erstversorgung und verabreichten Medikamenten, werden ebenso festgehalten wie Veränderungen im Zustand der Patientin. Bei der Übergabe an das Krankenhaus werden die gesammelten Daten und der Zeitpunkt der Übergabe dokumentiert. Zusätzlich werden besondere Vorkommnisse oder die Anwesenheit von Dritten protokolliert. Die Dokumentation erfolgt entweder handschriftlich auf Papierformularen oder elektronisch mittels mobiler Endgeräte und gewährleistet so eine nahtlose Weitergabe der Informationen an die weiterbehandelnde Einrichtung, während sie gleichzeitig den rechtlichen Dokumentationsanforderungen genügt. Erstellung Übergabeprotokoll mit Medikationsangaben. Alle während des Einsatzes vom Rettungspersonal gegebenen Medikamente, inklusive Dosis, Verabreichungsweg und Zeitpunkt, werden genau dokumentiert.
 Transportentscheidung: Die Transportentscheidung durch den Rettungsdienst mit Beteiligung eines/einer Notarzt:in und Rettungswagens berücksichtigt mehrere Faktoren. Auf Grundlage der Symptomatik und der Dringlichkeit des Falles trifft der/die Notarzt:in die Entscheidung über die Notwendigkeit und Art des Transports. Dies geschieht unter Berücksichtigung der medizinischen Protokolle und Leitlinien. Dabei wird auch das Risiko einer möglichen Verschlechterung des Gesundheitszustandes während des Transports abgewogen. Ist der/die Patient:in bei Bewusstsein und in der Lage, seinen/ihren Willen zu äußern, wird dieser in die Entscheidung miteinbezogen. Des Weiteren berücksichtigt der/die Notarzt:in die Verfügbarkeit von Spezialabteilungen und freien Betten in den umliegenden Krankenhäusern. In enger Absprache mit der Rettungsleitstelle wird dann das geeignetste Krankenhaus ausgewählt und der Transport koordiniert. In Fällen, wo die Distanz zum Krankenhaus oder die Schwere der Verletzungen einen schnelleren Transport erfordern, kann auch ein Rettungshubschrauber angefordert werden. 
 
-### 2.1.2. Versorgungsprozess Krankenhaus
+### 3.2. Versorgungsprozess Krankenhaus
 
 Übergabe in die Zentrale Notaufnahme (ZNA): Eine strukturierte Übergabe ist essentiell, um eine sichere und effiziente Fortführung der Patient:innenversorgung zu gewährleisten. In der Zentralen Notaufnahme (ZNA) wird eine strukturierte Übergabe der Patientin durchgeführt, die bereits mit einer Vorankündigung des Rettungsdienstes beginnt. Wichtige Informationen über den Zustand der Patientin und die bisherigen Maßnahmen werden vorab telefonisch übermittelt. Nach der Ankunft wird die Patientin umgehend in den Übergabebereich der ZNA gebracht, wobei alle notwendigen medizinischen Unterstützungen aufrechterhalten werden. Ein Team aus Ärzt:innen und Pflegekräften nimmt die Patientin in Empfang und übernimmt sofort die lebenserhaltenden Maßnahmen. Der/Die Notarzt:in oder das Rettungspersonal überreicht dann die Dokumentation, die entweder als elektronisches Protokoll oder in Papierform vorliegen kann. Dieses enthält detaillierte Informationen über den Einsatz, den Zustand der Patientin bei der Erstversorgung, während des Transports und die ergriffenen medizinischen Interventionen, speziell der Gabe von Medikamenten. In einem mündlichen Bericht werden die Kerninformationen zusammengefasst und dem Klinikpersonal präsentiert, das anschließend Rückfragen stellen kann, um die Informationen für die weiterführende Versorgung zu vervollständigen. Nach der Informationsübergabe übernimmt das Klinikpersonal die Verantwortung für die Patientin. Im Anschluss daran beginnt das Klinikpersonal ohne Verzögerung mit der weiterführenden Diagnostik und leitet notwendige Behandlungsschritte ein. Die sorgfältige Dokumentation dieses Übergabeprozesses in den Systemen der ZNA ist für die Kontinuität der Versorgung und die Qualitätssicherung unerlässlich. 
 Versorgung in der Zentralen Notaufnahme (ZNA): In deutschen Kliniken beginnt die Versorgung in der Zentralen Notaufnahme (ZNA) mit dem Erstkontakt und einer schnellen Sichtung durch geschultes Personal, das mithilfe eines standardisierten Triage-Systems die Dringlichkeit der Behandlung bewertet. Ein/e Arzt:in übernimmt dann die medizinische Erstuntersuchung, misst die Vitalparameter der Patientin und erfasst ihre Hauptbeschwerden. Anschließend wird eine detaillierte Anamnese erhoben, die den aktuellen Gesundheitszustand, die medizinische Vorgeschichte sowie Informationen über Medikamente und Allergien umfasst. Abhängig von dieser ersten Diagnose leitet der/die Arzt:in weiterführende diagnostische Maßnahmen ein, darunter Bluttests und bildgebende Verfahren. Auf Basis all dieser Informationen trifft der/die Arzt:in eine Entscheidung über die erforderlichen nächsten Schritte, die eine stationäre Aufnahme, spezifische Behandlungen oder die Überweisung an Fachabteilungen beinhalten können, um eine umfassende und zielgerichtete Patientenversorgung zu gewährleisten. 
@@ -80,7 +82,7 @@ Vorbereitung zur Entlassung: Die Entscheidung, ob eine Patientin nach Diagnose 
 
 Medikationsprozess bei Entlassung: Bei der Entlassung einer Patientin aus der Klinik ist eine gründliche Dokumentation der Medikationsprozesse von entscheidender Bedeutung. Der/die behandelnde Arzt:in aktualisiert den Medikationsplan, der alle während des Krankenhausaufenthalts verabreichten Medikamente sowie alle neuen Verordnungen und Änderungen umfasst. Diese Informationen werden detailliert im Arztbrief festgehalten, einschließlich der Namen der Medikamente, sowohl des Handelsnamens als auch des generischen Namens, der exakten Dosierungen, der spezifischen Anweisungen zur Einnahme, der Indikationen für jedes Medikament und der notwendigen Überwachungsmaßnahmen. Besonders wichtig sind dabei Hinweise zu bekannten Allergien oder Medikamentenunverträglichkeiten sowie spezielle Anweisungen für Medikamente, die fortgeführt, angepasst oder abgesetzt werden sollen. Der Arztbrief wird dem/der Hausarzt:in übermittelt, der/die über die Weiterverordnung der Medikamente entscheidet. Der/die entlassende Arzt:in kann die Verwendung von Generika empfehlen, wobei meist kommuniziert wird, dass der/die Hausarzt:in die endgültige Wahl hinsichtlich der Verschreibung trifft. Dies berücksichtigt individuelle Faktoren wie Verträglichkeit und Patientenpräferenz. Zudem wird die Patientin umfassend über ihre Medikation aufgeklärt, mit besonderem Augenmerk auf die Bedeutung der Befolgung des Medikationsplans und der Notwendigkeit von Nachfolgeuntersuchungen. Um eine kontinuierliche Versorgung zu gewährleisten, wird außerdem geprüft, ob die Patientin nach der Entlassung Zugang zu ihren Medikamenten hat. Dies kann entweder durch eine vorübergehende Mitgabe von Medikamenten aus der Klinik oder durch ein Rezept erfolgen, das in einer Apotheke eingelöst werden kann. Eine solche sorgfältige Vorgehensweise stellt sicher, dass nach der Entlassung eine sichere und effektive Medikation gewährleistet ist und erleichtert dem Hausarzt die kohärente Fortführung der Behandlung. 
 
-### 2.1.3. Versorgungsprozess Hausarztpraxis
+### 3.3. Versorgungsprozess Hausarztpraxis
 
 Nach der Entlassung aus dem Krankenhaus sucht die Patientin mit dem Krankenhaus-Entlassungsbrief und dem dazugehörigen Medikationsplan die hausärztliche Praxis auf. Dort wird ein strukturierter Ansatz zur Medikationsverwaltung und Patientennachsorge eingeleitet, der die gesamte Behandlungskette von der Hausarztpraxis bis zur Apotheke umfasst.
 
@@ -96,13 +98,13 @@ Dokumentation im Praxisverwaltungssystem (PVS): Alle therapeutischen Entscheidun
 
 Mit diesen Schritten stellt die Hausarztpraxis sicher, dass die Patientin mit der erforderlichen Medikation und einem klaren Behandlungsplan die Praxis verlässt, bereit für den Weg zur Apotheke ist und die Fortsetzung seiner Genesung zu Hause.
 
-## 2.2. Versorgungsprozess 3: Schlaganfall im Pflegeheim
+## 4. Versorgungsprozess 3: Schlaganfall im Pflegeheim
 
 Insbesondere am Sektorenübergang gibt es in der Patientenversorgung momentan große Herausforderungen und Informationsverluste. Dieser Anwendungsfall soll den intersektoralen Versorgungsprozess exemplarisch systematisiert abbilden und verdeutlicht die Informationslücken. Beispielhafter Anwendungsfall: Ein Patient wird aufgrund des Alters und Multimorbidität stationär im Pflegeheim versorgt. Die Heimversorgung erfolgt über den Hausarzt (Heimversorgungsvertrag). Der Patient erleidet akut einen Schlaganfall. Es erfolgt eine akutneurologische Behandlung mit anschließender Neurorehabilitation. Danach erfolgt die Rückverlegung ins Pflegeheim mit erhöhtem Pflegegrad bei gesteigertem Pflegebedarf (Restparese).
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess3.png" alt="Schlaganfall im Pflegeheim" width="90%"/>**Versorgung (3): Stroke**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess3.png" alt="Schlaganfall im Pflegeheim" width="90%"/>**Versorgungsprozess (3): Schlaganfall im Pflegeheim**
 
-### 2.2.1. Versorgungsprozess Pflegeheim Interventionsvorbereitung
+### 4.1. Versorgungsprozess Pflegeheim Interventionsvorbereitung
 
 In einem Pflegeheim werden in der Regel umfangreiche Informationen über die Bewohner:innen gesammelt und im papierbasierten Pflegedokumentationssystem oder digitalen Pflegeinformationssystem festgehalten, um im Notfall schnell und effizient reagieren zu können. Bei einem Schlaganfall oder anderen Notfällen ist es entscheidend, dass der Rettungsdienst so schnell und vollständig wie möglich informiert wird, um eine adäquate Versorgung zu gewährleisten.
 
@@ -119,7 +121,7 @@ Dokumentation des Schlaganfalls: Zeitpunkt des Auftretens der Symptome. Erste Ma
 
 Das Pflegepersonal ist in der Regel darauf geschult, diese Informationen schnell zu sammeln und dem Rettungsdienst bei Ankunft zur Verfügung zu stellen. Zusätzlich kann in vielen Fällen die Dokumentation elektronisch übermittelt werden, sofern entsprechende Systeme vorhanden sind und Datenschutzbestimmungen dies zulassen.
 
-### 2.2.2. Versorgungsprozess Rettungsdienst Präklinische Versorgung 
+### 4.2. Versorgungsprozess Rettungsdienst Präklinische Versorgung 
 
 Ankunft und Sicherheit: Bei Ankunft im Pflegeheim stellen die Rettungskräfte sicher, dass die Transportsetting sicher ist und keine unmittelbaren Gefahren für den/der Patient:in oder das medizinische Personal bestehen. Als Ausgangspunkt des Prozesses sind im Pflegeheim Medikationsplan, medizinisches Notfallblatt und ggf. Pflegeüberleitungsbogen als Dokumentation vorhanden. Dies zunehmend in digitaler Form je nach Abhängigkeit des Digitalisierungsgrades des Pflegeheimes. Im Falle eines medizinischen Notfalls werden diese allerdings meist in Papierform an den Rettungsdienst übergeben.
 Initial-Assessment: Bei Ankunft am Notfallort erfolgt eine umfassende Präliminär-Beurteilung des Patienten. Hierbei werden die vitalen Parameter wie Puls, Blutdruck und Sauerstoffsättigung eruiert und die neurologische Symptomatik sowie mögliche fokale Defizite evaluiert.
@@ -133,7 +135,7 @@ Datenübertragung ins Krankenhaus: Im modernen Rettungswesen werden technische S
 
 In einigen Bundesländern erfolgt die Datenübertragung und damit auch die Übertragung von Medikationsdaten ins Krankenhaus in der Regel über spezialisierte Rettungsdienstsysteme, die digitale Übertragungsfunktionen bieten. Die erfassten medizinischen Daten können digital an das Krankenhaus übertragen werden, um die Vorbereitung auf die Ankunft des Patienten/der Patientin in der Notfallpraxis zu erleichtern.
 
-### 2.2.3. Versorgungsprozess Krankenhaus Klinische Versorgung - siehe auch Versorgungsprozess 2
+### 4.3. Versorgungsprozess Krankenhaus Klinische Versorgung - siehe auch Versorgungsprozess 2
 
 Einlieferung in der Notaufnahme: Bei Ankunft in der Notaufnahme wird die Patient:in samt vorhandener Dokumentation ((e)Protokoll von Notärzt:innen oder Rettungsdienst) dem Krankenhaus übergeben.
 Erste Untersuchungen: Es folgt eine medizinische Untersuchung, um die genaue Ursache und den Schweregrad der Pathologie zu bestimmen. Basierend auf dieser Diagnose wird eine Entscheidung zur weiteren Behandlung getroffen.
@@ -144,7 +146,7 @@ Entscheidung & Dokumentation: Basierend auf der Diagnose und Behandlung wird ein
 
 Zusammenfassung: Die patientenbezogenen Informationen können über zwei Wege ins Krankenhaus übermittelt werden. Zum einen erfolgt die Übergabe der durch das Pflegeheim überreichten Dokumente durch den/die Notarzt:in/Rettungsdienst in der Notaufnahme des Krankenhauses. Zum anderen kann eine direkte digitale Übertragung von den im Pflegeheim gepflegten, vorstehend genannten Dokumenten an die Notaufnahme des Krankenhauses erfolgen. Sind diese Dokumente nicht vorhanden bzw. digital verfügbar  liegen nur das Notarzt-/Rettungsdienstprotokoll und die darin enthaltenen Informationen in der Notaufnahme vor. Im Krankenhaus wird der/die Patient:in in diesem Szenario in der Regel Notaufnahme, Stroke Unit und Normalstation durchlaufen, wo jeweils entsprechend Patientendaten übergeben werden und neue Daten generiert und dokumentiert werden. Die Medikationsdokumentation wird zunächst im Informations-/Dokumentationssystem der Notaufnahme vorgenommen. Hier erfolgt nach der Medikationsanamnese die Umstellung der Hausmedikation auf die stationäre Medikation sowie die Neuverordnung von Medikamenten. Bei Verlegung auf die Stroke Unit ist eine automatische Übernahme vom Medikationsdaten über Schnittstellen aktuell in strukturierter Form in der Regel nicht möglich, sodass zumindest eine händisch unterstützte Eingabe in das PDMS der Stroke Unit erfolgen muss. Ebendieses muss auch bei der Rückverlegung auf Normalstation erfolgen, da auch hier üblicherweise keine automatische Übernahme von Medikationsdaten in das KIS/KAS der Normalstation möglich ist. Bei Verlegung des/der Patient:in in die stationäre neurologische Reha erfolgt erneut eine Übergabe der bisherigen medizinischen Dokumentation inklusive der angepassten Medikation, in der Regel als Ausdruck in Papierform. Eine strukturierte digitale Übertragung erfolgt sehr selten. Ggf. stellen Praxen/Einrichtungen die patientenbezogenen Informationen per Email/KIM als .PDF zur Verfügung.
 
-### 2.2.4. Versorgungsprozess Neurologische Rehabilitationseinrichtung (Neurorehabilitation)
+### 4.4. Versorgungsprozess Neurologische Rehabilitationseinrichtung (Neurorehabilitation)
 
 Überleitung aus dem Krankenhaus in die Reha: Nach der Versorgung im Krankenhaus wird der/die Patient:in für eine stationäre neurologische Reha in eine spezialisierte Rehaklinik verlegt.
 Übergabe und Anamnese: Sobald der/die Patient:in in der Reha-Einrichtung ankommt, gibt es eine Übergabe, bei der relevante Informationen aus dem Krankenhaus, speziell die Entlassmedikation im Arztbrief und ggf. der BMP an das Reha-Personal weitergegeben werden. Darauf folgt eine Anamnese, bei der die medizinische Vorgeschichte des/der Patient:in sowie spezifische Informationen über den Schlaganfall und den aktuellen Zustand des/der Patient:in erfasst werden. Rehabilitations-Strategie: Erstellung eines individuellen Rehabilitationsplans für den/die Patient:in. Es werden Entscheidungen über die spezifischen Therapien und Interventionen, vor allem auch medikamentös getroffen, die der/die Patient:in benötigt, basierend auf seinem/ihrem Zustand und seinen/ihren Bedürfnissen.
@@ -157,7 +159,7 @@ Entlassung: Nach Abschluss der Reha wird entschieden, ob der/die Patient:in entl
 
 Der dargestellte Prozess gibt einen Einblick in die umfassende Versorgung, die ein/e Schlaganfallpatient:in während einer stationären neurologischen Rehabilitation erhält. Es werden sowohl medizinische als auch organisatorische Aspekte und der Medikationsprozess berücksichtigt, um sicherzustellen, dass der/die Patient:in die bestmögliche Betreuung erhält.
 
-### 2.2.5. Wiederaufnahmeprozess im Pflegeheim
+### 4.5. Wiederaufnahmeprozess im Pflegeheim
 
 Um den Medikationsprozess bei der Entlassung aus der Rehaklinik und der Wiederaufnahme ins Pflegeheim zu präzisieren, muss der Schwerpunkt auf einem sorgfältigen Medikationsabgleich, einer lückenlosen Informationskette und einer gezielten Kommunikation zwischen den beteiligten Gesundheitseinrichtungen liegen.
 
@@ -170,7 +172,7 @@ Regelmäßige Überprüfung der Medikation: Die Pflegekräfte im Pflegeheim übe
 
 Qualitätssicherung und Dokumentation: Der Medikationsplan wird regelmäßig durch den/die Hausarzt:in in Absprache mit dem Pflegepersonal und ggf. dem/der Apotheker:in im Pflegeheim bei Hausbesuchen reevaluiert und wenn notwendig angepasst.
 
-### 2.2.6. Versorgungsprozess Hausarztpraxis im Pflegeheim 
+### 4.6. Versorgungsprozess Hausarztpraxis im Pflegeheim 
 
 Die Rückverlegung eines/r Patient:in aus der Rehabilitationseinrichtung ins Pflegeheim ist ein kritischer Moment im Medikationsmanagement, bei dem der/die Hausarzt:in eine zentrale Rolle spielt, um eine sichere und effektive Arzneimitteltherapie zu gewährleisten.
 
@@ -186,7 +188,7 @@ Interdisziplinäre Koordination: Bei Bedarf koordiniert der/die Hausarzt:in die 
 
 Diese Aufgaben veranschaulichen die Vorgehensweise des/der Hausarzt:in, um die Arzneimitteltherapie des aus der Reha zurückkehrenden Pflegeheimbewohners sicherzustellen.
 
-### 2.2.7. Versorgungsprozess Neurologisch-Fachärztliche Praxis im Pflegeheim
+### 4.7. Versorgungsprozess Neurologisch-Fachärztliche Praxis im Pflegeheim
 
 Die Versorgung eines Heimbewohners durch eine neurologische Praxis nach der Entlassung aus der Rehabilitation ist ein mehrstufiger Prozess, der eng mit dem/der Hausarzt:in koordiniert wird und die spezialisierte neurologische Expertise in die allgemeine medizinische Versorgung integriert.
 
@@ -201,12 +203,12 @@ Pflegeheimkommunikation: Ergänzend zur hausärztlichen Übermittlung der Medika
 
 Zusammenfassung: Der Versorgungsprozess bei einem Schlaganfall beginnt oftmals in einem Pflegeheim, wo eine Interventionsvorbereitung stattfindet. Hier werden die ersten Anzeichen eines Schlaganfalls erkannt und erste Maßnahmen eingeleitet, um den Patienten für die Intervention vorzubereiten. Im Falle eines Schlaganfalls wird der Rettungsdienst kontaktiert, der die präklinische Versorgung übernimmt. Der Patient erhält erste lebensrettende Maßnahmen und wird für den Transport ins Krankenhaus stabilisiert. Im Krankenhaus erfolgt die klinische Versorgung, die eine umfangreiche Diagnostik und die Einleitung einer akuten Schlaganfalltherapie beinhaltet. Nach der Akutbehandlung wird der Patient, je nach Schwere seines Zustandes, entweder zur weiteren Behandlung in das Krankenhaus aufgenommen oder in eine spezialisierte neurologische Rehabilitationseinrichtung überführt. Die Neurorehabilitation ist ein entscheidender Teil des Versorgungsprozesses. Hier wird der Patient durch ein Team aus verschiedenen Therapiebereichen behandelt, um die Folgen des Schlaganfalls zu mindern und die Wiedererlangung der motorischen und kognitiven Funktionen zu fördern. Nach Abschluss der Rehabilitation kann der Wiederaufnahmeprozess ins Pflegeheim erfolgen. Hier wird der Patient erneut aufgenommen und die notwendigen Pflege- und Unterstützungsleistungen werden fortgesetzt. Parallel dazu wird der Versorgungsprozess durch die Hausarztpraxis im Pflegeheim unterstützt. Der Hausarzt übernimmt die allgemeinmedizinische Versorgung, kontrolliert den Gesundheitszustand des Patienten und koordiniert weitere Maßnahmen. Des Weiteren ist die neurologisch-fachärztliche Praxis im Pflegeheim involviert. Hier wird der Patient fachärztlich betreut, was die Überwachung neurologischer Symptome und die Anpassung spezifischer Medikationen einschließt. Jeder dieser Versorgungsschritte ist durch ein Netzwerk von Fachpersonal und spezialisierten Abläufen gekennzeichnet. Ziel ist es, eine kontinuierliche und qualitativ hochwertige Versorgung des Schlaganfallpatienten zu gewährleisten und seine Lebensqualität nachhaltig zu verbessern.
 
-## 2.3. In den Versorgungsprozessen mehrfach durchlaufene Subprozesse
-### 2.4. Versorgung Subprozess Anamnese
+## 5. In den Versorgungsprozessen mehrfach durchlaufene Subprozesse
+### 5.1. Versorgung Subprozess Anamnese
 
 Die Anamnese bildet das Fundament für eine qualitativ hochwertige Patientenversorgung und ist ein unverzichtbarer Bestandteil medizinischer Versorgungsprozesse. Als systematische Erhebung der medizinischen Vorgeschichte ermöglicht sie es den Behandelnden, individuelle Behandlungsstrategien zu entwickeln und Risiken frühzeitig zu erkennen. Im Folgendem beleuchten wir die zentrale Rolle der Anamnese als integralen Subprozess, der die Weichen für eine zielgerichtete Diagnostik und Therapie stellt. Der Subprozess Anamnese schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit "+" gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden. 
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess1.png" alt="Subprozess Anamnese" width="90%"/>**Versorgung Subprozess Anamnesee**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess1.png" alt="Subprozess Anamnese" width="90%"/>**Subprozess (1): Subprozess Anamnesee**
 
 Im Rahmen der Anamnese finden die Erhebung der aktuellen Medikation, klinischer Daten und arzneimittelbezogener Probleme (ABP) statt. Wenn möglich wird dabei auch die Medikationshistorie erhoben. Alle gewonnenen Informationen fließen dann in eine AMTS-Prüfung ein, die wenn möglich softwaregestützt abläuft. Bei den Medikationsdaten fehlen dabei oft der genaue Einnahmezeitpunkt sowie die Applikationsart und der Applikationsort. Auch klinische Daten sind - insbesondere, wenn sie aus der Erinnerung von Patient:innen und Angehörigen kommen - nur bedingt vollständig.
 
@@ -254,11 +256,11 @@ Lebensqualität und funktioneller Status: Die Beurteilung der Lebensqualität un
 
 Durch die Einbeziehung dieser umfassenden und differenzierten klinischen Daten in die Anamnese wird eine ganzheitliche und individuelle Medikationsplanung ermöglicht, die auf die spezifischen Bedürfnisse und Umstände jedes/jeder einzelnen Patient:in zugeschnitten ist.
 
-### 2.4.1. Versorgung Subprozess Medikationsentscheidung und Verordnung
+### 5.2. Versorgung Subprozess Medikationsentscheidung und Verordnung
 
 Die Medikationsentscheidung und Medikamentenversorgung sind zentrale Elemente der Patientenbetreuung und basieren auf einer gründlichen Anamnese sowie der Abwägung verschiedener Faktoren. Hierbei sind die Wirksamkeit, Nebenwirkungen, Patientenbedürfnisse und Interaktionen mit anderen Medikamenten entscheidend. Die Verordnung sollte evidenzbasiert erfolgen und eine regelmäßige Überprüfung der Medikation ist essenziell, um die Sicherheit und Effektivität der Behandlung zu gewährleisten. Die Einbeziehung des Patienten in den Entscheidungsprozess ist dabei unerlässlich, um Compliance und Behandlungszufriedenheit zu fördern. Der Subprozess Medikationsentscheidung und Verordnung schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit "+" gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Medikationsentscheidung und Verordnung" width="90%"/>**Versorgung Subprozess Medikationsentscheidung und Verordnung**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Medikationsentscheidung und Verordnung" width="90%"/>**Subprozess (2): Medikationsentscheidung und Verordnung**
 
 Der Prozess beginnt mit einem Startpunkt, gefolgt von einem Schritt Medikationsentscheidung. Ein optionaler Input hierfür ist ein "Arztbrief (Facharzt)", sofern vorhanden. Von der Medikationsentscheidung führt ein Weg zur "AMTS-Prüfung", die, wenn möglich, softwaregestützt durchgeführt werden sollte. Anschließend folgt eine Entscheidung, ob arzneimittelbezogene Probleme (ABP) vorliegen. Falls nein, führt der Prozess direkt zur "Verordnung". Falls ja, zurück zu einem vorherigen Schritt im Prozess. Im Rahmen der Verordnung werden Medikationsdaten berücksichtigt, darunter Präparate-/Wirkstoffname, Wirkstoffstärke, Dosierung, Einnahmeschema, Arzneiform, Indikation (Einnahmegrund), ob es sich um ein Dauer-/Akut-/Bedarfsmedikament handelt, der Einnahmezeitraum, Einnahmezeitpunkt, Applikationsart und -ort. Zusätzlich ist vermerkt, dass die Aufklärung des/der Patient:in inklusive ist. Der Prozess endet schließlich mit einem Endpunkt, der den Abschluss des Subprozesses "Medikationsentscheidung & Verordnung" symbolisiert.
 
@@ -274,11 +276,11 @@ Patientenaufklärung: Abschließend wird der Medikationsprozess durch eine ausf�
 
 Zusammenfassend stellt der Medikationsprozess eine kritische Verbindung zwischen Patientenbetreuung und fortschrittlicher Technologie dar. Angefangen bei der detaillierten Patientenkonsultation über die Auswertung von Facharztbriefen bis hin zur fundierten Medikationsentscheidung und -verordnung, bildet er das Rückgrat einer sicheren und effektiven pharmakotherapeutischen Versorgung. Die Integration des eRezepts spielt hierbei eine zunehmend wichtige Rolle, indem es die Verordnung und Abgabe von Medikamenten vereinfacht, den Abrechnungsprozess beschleunigt und die Medikationssicherheit durch Reduktion von Übertragungsfehlern erhöht. Abschließend bildet eine umfassende Patientenaufklärung den Schlüsselstein, der gewährleistet, dass der Patient über die notwendigen Informationen verfügt, um die Medikation korrekt anzuwenden und somit den Therapieerfolg zu unterstützen.
 
-### 2.4.2. Versorgung Subprozess Verordnungsdokumentation mit (e)Rezept 
+### 5.3. Versorgung Subprozess Verordnungsdokumentation mit (e)Rezept 
 
 Bei der Verordnungsdokumentation über das eRezept werden alle relevanten Medikationsdetails digital erfasst und gespeichert, wodurch ein sicherer und effizienter Informationsfluss zwischen Arztpraxis, Apotheke und Patient:in gewährleistet wird. Die Nutzung des eRezeptes ermöglicht eine lückenlose Dokumentation und Nachverfolgbarkeit der Medikamentenverordnung, was zu einer erhöhten Arzneimitteltherapiesicherheit beiträgt. Der Subprozess Verordnungsdokumentation mit (e)Rezept schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit "+" gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Verordnungsdokumentation mit (e)Rezept" width="90%"/>**Versorgung Subprozess Verordnungsdokumentation mit (e)Rezept**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Verordnungsdokumentation mit (e)Rezept" width="90%"/>**Subprozess (3): Verordnungsdokumentation mit (e)Rezept**
 
 Der Prozess beginnt mit der Erstellung eines (e)Rezeptes, in das Stammdaten und Medikationsdaten eingetragen werden, die je nach Verordnungstyp variieren können und Details wie PZN, Wirkstoff, Rezeptur und Freitext umfassen. Nach der Erstellung des (e)Rezeptes wird entschieden, ob ein Ausdruck erforderlich ist. Falls ja, wird ein physischer Ausdruck generiert. Falls nein, erfolgt keine weitere Aktion in dieser Richtung. Parallel dazu wird der Medikationsplan erstellt oder aktualisiert. Dieser Plan kann in verschiedenen Formen vorliegen, wie als elektronischer Medikationsplan (eMP), als bundeseinheitlicher Medikationsplan (BMP) oder andere Formate. Die Medikationsdaten, die hier berücksichtigt werden, beinhalten den Präparate- oder Wirkstoffnamen, die Wirkstoffstärke, das Dosierungsschema, die Arzneiform, die Indikation, also den Einnahmegrund, und Angaben dazu, ob es sich um ein Dauer-, Akut- oder Bedarfsmedikament handelt. Des Weiteren werden der Einnahmezeitraum, der Einnahmezeitpunkt sowie die Applikationsart und der Applikationsort festgehalten. Der Prozess sieht auch eine Speicherung der Daten vor. Diese Speicherung findet sowohl in der elektronischen Gesundheitskarte (eGK) als auch im Primärsystem (PVS) statt und dient der Dokumentation und Nachverfolgung der Medikationsgeschichte. Der Prozess endet mit der Fertigstellung des (e)Rezeptes oder des Medikationsplans, je nachdem, was der aktuelle Bedarf ist.
 
@@ -306,7 +308,7 @@ In der Summe bildet dieser Prozess das Fundament für eine patientenzentrierte, 
 
 **Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden** 
 
-### 2.5. In Versorgungs-Prozessen verwendete Dokumentationen mit Medikationsinformationen
+### 5.4. In Versorgungs-Prozessen verwendete Dokumentationen mit Medikationsinformationen
 
 Häufig liegen nur unvollständige Informationen für den Medikationsprozess vor. Die Informationen sind über viele verschiedene Dokumente, bzw. Informationsobjekte verteilt, von einem automatischen Vorliegen dieser Informationsobjekte im Versorgungsprozessen kann heute nicht ausgegangen werden, so dass davon ausgegangen werden muss, dass die Patient:in und ihre Angehörigen als alleinige Transporteur:in von Informationen angesehen werden muss.
 
@@ -345,7 +347,7 @@ Medikamentendokumentation in PVS/KIS/PIS
 
 **Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden** 
 
-### 2.6. AMTS-spezifische Handlungsempfehlungen für medizinisch-pflegerische Medikationsprozesse
+### 5.5. AMTS-spezifische Handlungsempfehlungen für medizinisch-pflegerische Medikationsprozesse
 
 Die Implementierung digitaler Arzneimitteltherapiesicherheitssysteme (AMTS) im Medikationsmanagement ist ein entscheidender Schritt, um die Medikationssicherheit zu verbessern und die Qualität der Patientenversorgung zu steigern. Diese digitalen Systeme sollten integraler Bestandteil des Sollprozesses im Medikationsmanagement sein, jedoch dürfen sie nicht die Arbeitsprozesse der Health Care Professionals beeinträchtigen, was zu Overalerting und zusätzlichen Dokumentationspflichten führen könnte. Um eine reibungslose Implementierung sicherzustellen, müssen zunächst Probleme gelöst werden, die aufgrund der Nutzung unterschiedlicher Datenbanken auftreten können. In diesem Zusammenhang spielen verschiedene Datenbanken eine wichtige Rolle, um eine sichere und effektive Medikationsverwaltung zu gewährleisten. Diese Datenbanken umfassen Arzneimitteldatenbanken, die umfangreiche Informationen über Medikamente bieten, Patientendatenbanken mit individuellen Patienteninformationen und klinische Entscheidungsunterstützungssysteme (CDSS), die auf Basis der verfügbaren Daten Behandlungsempfehlungen aussprechen. Zusätzlich sind Datenbanken für nationale und internationale Leitlinien relevant, da sie aktuelle Behandlungsstandards zur Verfügung stellen, die bei Medikationsentscheidungen unterstützen. Im Folgenden werden die Kernkomponenten und Vorteile einer digital gestützten AMTS im Kontext von Handlungsempfehlungen, die sich aus den medizinisch-pflegerischen Medikationsprozessen ableiten, detailliert beschrieben:
 
@@ -369,7 +371,7 @@ Zusätzlich sollten Indikatoren zur Messung von AMTS in der Routineversorgung en
 Fazit: Es ist von entscheidender Bedeutung, dass in der Etablierung eines innovativer AMTS-Prozesses die vorhandenen Ressourcen und Fachkenntnisse optimal genutzt werden, um die Entwicklung und Implementierung von AMTS-Prüfungen zu optimieren. Eine enge Zusammenarbeit und Abstimmung zwischen den beteiligten Fachleuten und Organisationen ist unabdingbar, um sicherzustellen, dass die AMTS-Prüfungen den höchsten Qualitätsstandards entsprechen und einen positiven Einfluss auf die Patientenversorgung haben. Zusätzlich möchten wir betonen, dass generell eine umfassende Auseinandersetzung mit dem Thema Arzneimitteltherapiesicherheit notwendig ist.
 
  
-### 2.7. Exemplarische IST-Prozesse der pharmazeutischen Arzneimittelversorgung
+### 5.6. Exemplarische IST-Prozesse der pharmazeutischen Arzneimittelversorgung
 
 Es wurden vier aussagefähige Prozesse der pharmazeutischen Arzneimittelversorgung modelliert:
 - P1-Pharmazie-Prozess-1 Selbstmedikation bei akuten Beschwerden
@@ -379,11 +381,11 @@ Es wurden vier aussagefähige Prozesse der pharmazeutischen Arzneimittelversorgu
 
 Zwei davon können so oder in abgewandelter Form auch im stationären Kontext auftreten.
 
-#### 2.7.1. Pharmazie-Prozess-2 Medikationsanalyse in der Apotheke
+#### 5.6.1. Pharmazie-Prozess-2 Medikationsanalyse in der Apotheke
 
 Beispielhafter Anwendungsfall: Patient:in stellt sich zur Medikationsanalyse in der Apotheke vor. Es werden noch nicht erfasste OTC-Arzneimittel im Medikationsplan dokumentiert und die Bedarfsmedikation (Schmerzmittel) angepasst.
 
-Originaldiagramm (Lesezugriff): https://modeler.cloud.camunda.io/share/d0bb1959-8c45-4a52-936a-45171c31cc02
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Pharmazieprozess2.png" alt="Medikationsanalyse in der Apotheke" width="90%"/>**Pharmazieprozess (2): Medikationsanalyse in der Apotheke**
 
 Der abgebildete Prozess basiert auf der Leitlinie der Bundesapothekerkammer zur Qualitätssicherung "Medikationsanalyse" und entspricht einer Medikationsanalyse vom Typ 2a.1,2
 
@@ -418,16 +420,14 @@ Nach optionaler Arztrücksprache sowie Erarbeitung von Lösungsvorschlägen zu d
 Die Ergebnisse der Medikationsanalyse werden durch die Apotheke dokumentiert. Dieser Schritt kann auch erfolgen, wenn der/die Patient:in die Apotheke bereits wieder verlassen hat. Sofern ein Medikationsplan und/oder eine Patientendatei vorliegen, werden diese bei Bedarf entsprechend der ABP-Lösungen durch die Apotheke aktualisiert. Sofern eine Medikationsanalyse im Rahmen einer pharmazeutischen Dienstleistung (gem. §129 Abs. 5e SGB V) durchgeführt wird, wird mit Zustimmung des/der Patient:in ein Bericht sowie Medikationsplan an den/die Ärzt:in versendet, wenn der/die Patient:in dem zustimmt. Bisher erfolgt dies in der Regel papierbasiert, wobei für die Strukturierung des Berichts an den/die Ärzt:in bisher keine Vorgaben bestehen.
 
 
-#### 2.7.2. Pharmazie-Prozess-3 KH Aufnahme mit Medication Reconciliation
+#### 5.6.2. Pharmazie-Prozess-3 KH Aufnahme mit Medication Reconciliation
 
-Originaldiagramm (Lesezugriff): https://modeler.cloud.camunda.io/share/458a0430-04e9-4d13-aa02-37e7950e0217
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Pharmazieprozess3.png" alt="KH Aufnahme mit Medication Reconciliation" width="90%"/>**Pharmazieprozess (3): KH Aufnahme mit Medication Reconciliation**
 
 Stationäre Aufnahme inkl. der  
-
-Erhebung klinischer Daten (aktuelle Anamnese und Untersuchung, Vitalparameter, Laborbefunde; Vorbefunde, Diagnosen, Informationen zu Allergien und Unverträglichkeiten, Medikationsrelevante Zusatzinformationen, historische Laborbefunde). 
-
-Medication Reconciliation (Medikationsabgleich, siehe Definition Glossar) besteht aus zwei Teilen.  
-Erhebung eines Medikationsstatus /-liste (Erstellung einer vollständigen und genauen Liste der aktuellen Hausmedikation, einschließlich Namen, Dosierung, Häufigkeit und Applikationsweg des Medikaments bei Krankenhausaufnahme) aus den nachfolgenden Informationsquellen:  
+- **Erhebung klinischer Daten** (aktuelle Anamnese und Untersuchung, Vitalparameter, Laborbefunde; Vorbefunde, Diagnosen, Informationen zu Allergien und Unverträglichkeiten, Medikationsrelevante Zusatzinformationen, historische Laborbefunde).
+- Medication Reconciliation (Medikationsabgleich, siehe Definition Glossar) besteht aus zwei Teilen.  
+- **Erhebung eines Medikationsstatus /-liste** (Erstellung einer vollständigen und genauen Liste der aktuellen Hausmedikation, einschließlich Namen, Dosierung, Häufigkeit und Applikationsweg des Medikaments bei Krankenhausaufnahme) aus den nachfolgenden Informationsquellen:  
 Medikationsinformationen, welche von der Patientin /dem Patienten vorgelegt werden (z.B. Medikationsplan, BMP, Gespräch, "Brown Bag" etc.). (TO Do Hinweis: Änderung im Diagramm notwendig)
 
 Einweisungsdokumente / Begleitdokumentation (z.B. Pflegeüberleitungsbogen etc.).
@@ -468,7 +468,7 @@ Die Arzneimitteltherapie ist ein wesentlicher Bestandteil des Entlassmanagement 
 
 **Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden** 
 
-### 2.8. Beiträge der jeweiligen Akteure im Sollprozess
+### 5.7. Beiträge der jeweiligen Akteure im Sollprozess
 
 Im Folgenden wird betrachtet, welche Akteure im Versorgungssystem wie Informationen zum Thema Medikation beitragen. Welche Daten im einzelnen für eine umfängliche Dokumentation notwendig sind, wird im folgenden Kapitel "Soll-Informationselemente zu Medikationsprozessen" behandelt.
 
@@ -476,7 +476,7 @@ Im Folgenden wird betrachtet, welche Akteure im Versorgungssystem wie Informatio
 
 **Apotheker/Apothekerin in der öffentlichen Apotheke:** Als Folge der ärztlichen Verordnung wird von der Apotheke ein definiertes Fertigarzneimittel oder eine Zubereitung abgegeben (Dispensierung). Hierbei können sich z.B. bei Substitution zugunsten von Rabattarzneimitteln Veränderungen zur ursprünglichen Verordnung ergeben. Im Falle einer elektronischen Verordnung wird dies automatisch im Dispensierdatensatz des eRezepts dokumentiert. Weiterhin können durch die Apotheke zudem aktuell angewendete Arzneimittel der Selbstmedikation sowie - soweit relevant- Medizinprodukte, Hilfsmittel und Nahrungsergänzungsmittel elektronisch am zentralen Speicherort dokumentiert werden (eMP in der ePA). Sofern von der Apotheke im Rahmen einer Medikationsanalyse und ggf. in Absprache mit dem Arzt Anpassungen vorgeschlagen bzw. vorgenommen werden, sind auch diese im eMP zu dokumentieren.
 
-#### 2.8.1. Im Krankenhaus
+#### 5.7.1. Im Krankenhaus
 Arzt/Ärztin im Krankenhaus
 
 Im Krankenhaus startet im Normalfall das Thema Medikation mit der Prüfung der laufenden Medikation, die ggf. angepasst wird. Es folgen mit der Behandlung im Krankenhaus ggf. weitere Medikationen. Am Ende steht die Definition einer Medikation zur Entlassung (mitgegebene Medikamente und Verordnungen). Grundsätzlich werden alle hierbei anfallenden Informationen am zentralen Ort gespeichert. Eine detaillierte Betrachtung der Dokumentation während eines Krankenhausaufenthaltes und ob diese auch immer/vollständig zentral abgelegt werden soll, ist noch zu betrachten. Es ist aber auch hier zu bedenken, dass einige solcher Details zwar für die ambulante Weiterbehandlung nicht relevant sein mögen (ggf. hier also nicht anzeigen werden, siehe Sichten), unter Umständen aber einen Informationswert für die Forschung oder andere Prozesse gegeben ist.
@@ -503,7 +503,7 @@ Besonders kritisch für den Erfolg des skizzierten Vorgehens ist eine möglichst
 
 Die im Konkreten notwendigen Informationselemente werden im folgenden Kapitel "Soll-Informationselemente zu Medikationsprozessen" dargestellt.
 
-### 2.9. Medikationsrelevante Zusatzinformationen
+### 5.8. Medikationsrelevante Zusatzinformationen
 
 Die Bedeutung von medikationsrelevanten Zusatzinformationen in der Arzneimitteltherapiesicherheit (AMTS) ist von entscheidender Bedeutung, um Medikationsfehler und damit verbundene Risiken für Patienten zu verringern. AMTS umfasst alle Maßnahmen, die darauf abzielen, den Medikationsprozess zu optimieren und Medikationsfehler sowie vermeidbare Risiken zu reduzieren. Zu den arzneimittelbezogenen Problemen (ABP) gehören Medikationsfehler, unerwünschte Arzneimittelereignisse und Nebenwirkungen. Medikationsfehler können durch Abweichungen vom optimalen Medikationsprozess entstehen, die zu vermeidbaren Schädigungen des Patienten führen oder führen könnten. Diese Fehler können von Ärzten, Apothekern, Patienten oder Angehörigen verursacht werden. Daher ist die Einbeziehung von Zusatzinformationen über den Patienten in den Medikationsprozess unerlässlich, um solche Fehler zu vermeiden. Eine Medikationsanalyse, die zur Identifizierung, Bewertung, Dokumentation und Lösung von ABP beiträgt, ist ein wichtiger Bestandteil des Medikationsprozesses. Diese Analyse erfolgt in Zusammenarbeit mit dem Patienten und gegebenenfalls mit anderen Berufsgruppen. Sie beinhaltet die Sammlung von Informationen über die aktuelle Medikation, die Verordnung und die Einnahme durch den Patienten bis hin zur AMTS-Prüfung und deren Ergebnissen.
 
@@ -513,7 +513,7 @@ Zusammengefasst verdeutlichen diese Informationen die entscheidende Rolle von me
 
 **Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden** 
 
-### 2.10. Folgearbeitskreis "AMTS-Prüfung"
+### 5.9. Folgearbeitskreis "AMTS-Prüfung"
 
 Ein optimaler Medikationsprozess hat das Ziel, mit der Arzneimitteltherapie ein bestmögliches Therapieziel bei möglichst geringen vermeidbaren Risiken für Patient:innen zu erreichen. Im Versorgungsalltag stellt es teilweise eine Herausforderung dar, dieses Ziel zu erreichen.
 
@@ -535,7 +535,7 @@ Als weitere Handlungsempfehlung konnte abgeleitet werden, dass es technischer M�
 
 Diese inhaltlichen Standards sollten anschließend unter Berücksichtigung bereits existierender Codierungssysteme, die in Hinblick auf ihre Eignung und Praxistauglichkeit für die beteiligten Professionen systematisch beurteilt und ggf. weiterentwickelt werden müssen, in einheitliche technische Formate überführt und verpflichtend eingeführt werden.
 
-#### 2.10.1. Der Fokus des Arbeitskreises sollte daher umfassen:
+#### 5.9.1. Der Fokus des Arbeitskreises sollte daher umfassen:
 
 Anforderungen an die digitale Codierung von Daten zur Arzneimitteltherapie und die Verfügbarkeit der Informationen zur Arzneimitteltherapie für Leistungserbringer:innen und Patient:innen (Definition erforderlicher Dokumente)
 Anforderungen an Praxistauglichkeit und Wirksamkeit elektronischer Unterstützung von AMTS-Prüfungen und zu unterstützende Use-Cases durch Software in Arztpraxen, Apotheken und Krankenhäusern
