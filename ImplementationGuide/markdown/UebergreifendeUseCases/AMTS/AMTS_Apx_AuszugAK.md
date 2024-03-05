@@ -55,7 +55,8 @@ Die graphische Darstellung von sieben ausgewählten Anwendungsfällen bildet die
 
 Beispielhafter Anwendungsfall: Eine Patientin mit Akuterkrankung in der Häuslichkeit stürzt dort bei schlechtem Allgemeinzustand wegen eines fieberhaften Harnwegsinfektes (HWI). Es wird der Rettungsdienst alarmiert und die Patientin in stationäre Behandlung übergeben. Im Anschluss wird sie wieder in die Häuslichkeit entlassen.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung" width="90%"/>**Versorgungsprozess (2): Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung" width="90%"/>
+**Versorgungsprozess (2): Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung**
 
 Ein beträchtlicher Anteil der Informationsübermittlung im Notfall in der Häuslichkeit erfolgt momentan immer noch mündlich und auf Papier. Selbst an der Schnittstelle zwischen Notaufnahme und Normalstation innerhalb der Krankenhäuser sind aufgrund verschiedener klinischer Softwaresysteme häufig nur manuelle Übertragungen der Medikationsinformationen möglich. In der Notfallmedizin sind jedoch präzise und schnelle Erfassung von Vorbefunden und Medikationsdokumentationen von entscheidender Bedeutung, um eine adäquate Patientenversorgung sicherzustellen. In der aktuellen Versorgungslandschaft sind die Patient:innen und Angehörige häufig die einzigen, die für eine Übermittlung von Informationen in Frage kommen. Dies gilt in der Regel insbesonders für medikationsrelevante Informationen. Patient:innen, die in der Häuslichkeit vom Rettungsdienst vorgefunden werden, sind selten in der Lage, diese Informationen zu teilen. So sind die Mitarbeitenden der Rettungsdienste darauf angewiesen, dass vor Ort Medikamentenpackungen, Rezepte oder Medikationspläne gefunden werden bzw. mit Angehörigen gesprochen werden kann, denen die notwendigen Informationen ggf. bekannt sind.
 
@@ -102,7 +103,8 @@ Mit diesen Schritten stellt die Hausarztpraxis sicher, dass die Patientin mit de
 
 Insbesondere am Sektorenübergang gibt es in der Patientenversorgung momentan große Herausforderungen und Informationsverluste. Dieser Anwendungsfall soll den intersektoralen Versorgungsprozess exemplarisch systematisiert abbilden und verdeutlicht die Informationslücken. Beispielhafter Anwendungsfall: Ein Patient wird aufgrund des Alters und Multimorbidität stationär im Pflegeheim versorgt. Die Heimversorgung erfolgt über den Hausarzt (Heimversorgungsvertrag). Der Patient erleidet akut einen Schlaganfall. Es erfolgt eine akutneurologische Behandlung mit anschließender Neurorehabilitation. Danach erfolgt die Rückverlegung ins Pflegeheim mit erhöhtem Pflegegrad bei gesteigertem Pflegebedarf (Restparese).
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess3.png" alt="Schlaganfall im Pflegeheim" width="90%"/>**Versorgungsprozess (3): Schlaganfall im Pflegeheim**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess3.png" alt="Schlaganfall im Pflegeheim" width="90%"/>
+**Versorgungsprozess (3): Schlaganfall im Pflegeheim**
 
 ### 4.1. Versorgungsprozess Pflegeheim Interventionsvorbereitung
 
@@ -208,7 +210,8 @@ Zusammenfassung: Der Versorgungsprozess bei einem Schlaganfall beginnt oftmals i
 
 Die Anamnese bildet das Fundament für eine qualitativ hochwertige Patientenversorgung und ist ein unverzichtbarer Bestandteil medizinischer Versorgungsprozesse. Als systematische Erhebung der medizinischen Vorgeschichte ermöglicht sie es den Behandelnden, individuelle Behandlungsstrategien zu entwickeln und Risiken frühzeitig zu erkennen. Im Folgendem beleuchten wir die zentrale Rolle der Anamnese als integralen Subprozess, der die Weichen für eine zielgerichtete Diagnostik und Therapie stellt. Der Subprozess Anamnese schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit "+" gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden. 
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess1.png" alt="Subprozess Anamnese" width="90%"/>**Subprozess (1): Subprozess Anamnesee**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess1.png" alt="Subprozess Anamnese" width="90%"/>
+**Subprozess (1): Subprozess Anamnesee**
 
 Im Rahmen der Anamnese finden die Erhebung der aktuellen Medikation, klinischer Daten und arzneimittelbezogener Probleme (ABP) statt. Wenn möglich wird dabei auch die Medikationshistorie erhoben. Alle gewonnenen Informationen fließen dann in eine AMTS-Prüfung ein, die wenn möglich softwaregestützt abläuft. Bei den Medikationsdaten fehlen dabei oft der genaue Einnahmezeitpunkt sowie die Applikationsart und der Applikationsort. Auch klinische Daten sind - insbesondere, wenn sie aus der Erinnerung von Patient:innen und Angehörigen kommen - nur bedingt vollständig.
 
@@ -260,7 +263,8 @@ Durch die Einbeziehung dieser umfassenden und differenzierten klinischen Daten i
 
 Die Medikationsentscheidung und Medikamentenversorgung sind zentrale Elemente der Patientenbetreuung und basieren auf einer gründlichen Anamnese sowie der Abwägung verschiedener Faktoren. Hierbei sind die Wirksamkeit, Nebenwirkungen, Patientenbedürfnisse und Interaktionen mit anderen Medikamenten entscheidend. Die Verordnung sollte evidenzbasiert erfolgen und eine regelmäßige Überprüfung der Medikation ist essenziell, um die Sicherheit und Effektivität der Behandlung zu gewährleisten. Die Einbeziehung des Patienten in den Entscheidungsprozess ist dabei unerlässlich, um Compliance und Behandlungszufriedenheit zu fördern. Der Subprozess Medikationsentscheidung und Verordnung schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit "+" gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Medikationsentscheidung und Verordnung" width="90%"/>**Subprozess (2): Medikationsentscheidung und Verordnung**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Medikationsentscheidung und Verordnung" width="90%"/>
+**Subprozess (2): Medikationsentscheidung und Verordnung**
 
 Der Prozess beginnt mit einem Startpunkt, gefolgt von einem Schritt Medikationsentscheidung. Ein optionaler Input hierfür ist ein "Arztbrief (Facharzt)", sofern vorhanden. Von der Medikationsentscheidung führt ein Weg zur "AMTS-Prüfung", die, wenn möglich, softwaregestützt durchgeführt werden sollte. Anschließend folgt eine Entscheidung, ob arzneimittelbezogene Probleme (ABP) vorliegen. Falls nein, führt der Prozess direkt zur "Verordnung". Falls ja, zurück zu einem vorherigen Schritt im Prozess. Im Rahmen der Verordnung werden Medikationsdaten berücksichtigt, darunter Präparate-/Wirkstoffname, Wirkstoffstärke, Dosierung, Einnahmeschema, Arzneiform, Indikation (Einnahmegrund), ob es sich um ein Dauer-/Akut-/Bedarfsmedikament handelt, der Einnahmezeitraum, Einnahmezeitpunkt, Applikationsart und -ort. Zusätzlich ist vermerkt, dass die Aufklärung des/der Patient:in inklusive ist. Der Prozess endet schließlich mit einem Endpunkt, der den Abschluss des Subprozesses "Medikationsentscheidung & Verordnung" symbolisiert.
 
@@ -280,7 +284,8 @@ Zusammenfassend stellt der Medikationsprozess eine kritische Verbindung zwischen
 
 Bei der Verordnungsdokumentation über das eRezept werden alle relevanten Medikationsdetails digital erfasst und gespeichert, wodurch ein sicherer und effizienter Informationsfluss zwischen Arztpraxis, Apotheke und Patient:in gewährleistet wird. Die Nutzung des eRezeptes ermöglicht eine lückenlose Dokumentation und Nachverfolgbarkeit der Medikamentenverordnung, was zu einer erhöhten Arzneimitteltherapiesicherheit beiträgt. Der Subprozess Verordnungsdokumentation mit (e)Rezept schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit "+" gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Verordnungsdokumentation mit (e)Rezept" width="90%"/>**Subprozess (3): Verordnungsdokumentation mit (e)Rezept**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Verordnungsdokumentation mit (e)Rezept" width="90%"/>
+**Subprozess (3): Verordnungsdokumentation mit (e)Rezept**
 
 Der Prozess beginnt mit der Erstellung eines (e)Rezeptes, in das Stammdaten und Medikationsdaten eingetragen werden, die je nach Verordnungstyp variieren können und Details wie PZN, Wirkstoff, Rezeptur und Freitext umfassen. Nach der Erstellung des (e)Rezeptes wird entschieden, ob ein Ausdruck erforderlich ist. Falls ja, wird ein physischer Ausdruck generiert. Falls nein, erfolgt keine weitere Aktion in dieser Richtung. Parallel dazu wird der Medikationsplan erstellt oder aktualisiert. Dieser Plan kann in verschiedenen Formen vorliegen, wie als elektronischer Medikationsplan (eMP), als bundeseinheitlicher Medikationsplan (BMP) oder andere Formate. Die Medikationsdaten, die hier berücksichtigt werden, beinhalten den Präparate- oder Wirkstoffnamen, die Wirkstoffstärke, das Dosierungsschema, die Arzneiform, die Indikation, also den Einnahmegrund, und Angaben dazu, ob es sich um ein Dauer-, Akut- oder Bedarfsmedikament handelt. Des Weiteren werden der Einnahmezeitraum, der Einnahmezeitpunkt sowie die Applikationsart und der Applikationsort festgehalten. Der Prozess sieht auch eine Speicherung der Daten vor. Diese Speicherung findet sowohl in der elektronischen Gesundheitskarte (eGK) als auch im Primärsystem (PVS) statt und dient der Dokumentation und Nachverfolgung der Medikationsgeschichte. Der Prozess endet mit der Fertigstellung des (e)Rezeptes oder des Medikationsplans, je nachdem, was der aktuelle Bedarf ist.
 
@@ -317,14 +322,14 @@ Relevante Informationsobjekte als Quelle von Medikationsinformationen in der Ver
 - Medikationsplan ggf. als Bundeseinheitlicher Medikationsplan (BMP) nach §31a SGB-V
 - (e)Protokoll von Notärzt:in / Rettungsdienst bei Notfällen 
 - Medikationsplan Praxisarzt:innen
-Medikationsplan umgestellt auf Krankenhaus-Hausliste
-Krankenhausentlassbrief
-Krankenhauseinweisung Praxisarzt:innen
-Fachärztlicher Arztbrief Praxisarzt:innen
-Überweisungsschein (Muster 7)
-Bericht für den Medizinischen Dienst (Muster 11)
-Verordnung häuslicher Krankenpflege (Muster 12a-c)
-Notfall-/Vertretungsschein (Muster 19)
+- Medikationsplan umgestellt auf Krankenhaus-Hausliste
+- Krankenhausentlassbrief
+- Krankenhauseinweisung Praxisarzt:innen
+- Fachärztlicher Arztbrief Praxisarzt:innen
+- Überweisungsschein (Muster 7)
+- Bericht für den Medizinischen Dienst (Muster 11)
+- Verordnung häuslicher Krankenpflege (Muster 12a-c)
+- Notfall-/Vertretungsschein (Muster 19)
 Konsiliarbericht vor Aufnahme einer Psychotherapie (Muster 22)
 Konsiliarbericht, freier Facharzt/Fachärztin
 Bericht für die Krankenkasse bei Fortbestehung der AU (Muster 52)
@@ -385,7 +390,8 @@ Zwei davon können so oder in abgewandelter Form auch im stationären Kontext au
 
 Beispielhafter Anwendungsfall: Patient:in stellt sich zur Medikationsanalyse in der Apotheke vor. Es werden noch nicht erfasste OTC-Arzneimittel im Medikationsplan dokumentiert und die Bedarfsmedikation (Schmerzmittel) angepasst.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Pharmazieprozess2.png" alt="Medikationsanalyse in der Apotheke" width="90%"/>**Pharmazieprozess (2): Medikationsanalyse in der Apotheke**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Pharmazieprozess2.png" alt="Medikationsanalyse in der Apotheke" width="90%"/>
+**Pharmazieprozess (2): Medikationsanalyse in der Apotheke**
 
 Der abgebildete Prozess basiert auf der Leitlinie der Bundesapothekerkammer zur Qualitätssicherung "Medikationsanalyse" und entspricht einer Medikationsanalyse vom Typ 2a.1,2
 
@@ -422,7 +428,8 @@ Die Ergebnisse der Medikationsanalyse werden durch die Apotheke dokumentiert. Di
 
 #### 5.6.2. Pharmazie-Prozess-3 KH Aufnahme mit Medication Reconciliation
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Pharmazieprozess3.png" alt="KH Aufnahme mit Medication Reconciliation" width="90%"/>**Pharmazieprozess (3): KH Aufnahme mit Medication Reconciliation**
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Pharmazieprozess3.png" alt="KH Aufnahme mit Medication Reconciliation" width="90%"/>
+**Pharmazieprozess (3): KH Aufnahme mit Medication Reconciliation**
 
 Stationäre Aufnahme inkl. der  
 - **Erhebung klinischer Daten** (aktuelle Anamnese und Untersuchung, Vitalparameter, Laborbefunde; Vorbefunde, Diagnosen, Informationen zu Allergien und Unverträglichkeiten, Medikationsrelevante Zusatzinformationen, historische Laborbefunde).

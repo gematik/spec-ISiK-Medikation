@@ -281,6 +281,51 @@ namespace ISiK_Medikation {
          |_ allowedBoolean
    }
 
+   class ISiKAMTSBewertung <RiskAssessment><<(P,#8DA5C4)>>{
+      id
+      status
+      code
+      |_ coding
+         |_ system
+         |_ code
+         |_ display
+      |_ text
+      subject : Reference( **Patient** )
+      |_ reference
+      encounter : Reference( **Encounter** )
+      |_ reference
+      occurrence[x]
+      |_ occurrenceDateTime
+      |_ occurrencePeriod
+      condition : Reference( **Condition** )
+      |_ reference
+      reasonCode
+      |_ coding
+         |_ system
+         |_ code
+         |_ display
+      |_ text
+      reasonReference : Reference( **Condition** | **Observation** | \nDiagnosticReport | **DocumentReference** )
+      |_ reference
+      basis : Reference( **Resource** )
+      |_ reference
+      prediction
+      |_ outcome
+         |_ coding
+            |_ system
+            |_ code
+            |_ display         
+         |_ text
+      |_ qualitativeRisk
+         |_ coding
+            |_ system
+            |_ code
+            |_ display         
+         |_ text
+      mitigation
+      note
+   }
+
    class ISiKMedikationTransaction <Bundle><<(P,#8DA5C4)>>{
       type : BundleType.**Transaction**
       entry

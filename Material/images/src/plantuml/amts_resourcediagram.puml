@@ -14,7 +14,7 @@
  ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
 
 namespace ISiK_VitalparameterUndKoerpermasze {
-   class ModulVitalparameterUndKoerpermasze_Stufe_3 <<(M,#FFDC36)>>{
+   class ModulVitalparameterUndKoerpermasze <<(M,#FFDC36)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v3/~introduction ISiK VitalparameterUndKoerpermasze Stufe 3]]
    }
@@ -34,9 +34,9 @@ namespace ISiK_VitalparameterUndKoerpermasze {
 }
 
 namespace ISiK_Basis {
-   class Basismodul_Stufe_3 <<(M,#FFDC36)>>{
+   class Basismodul_Stufe_4 <<(M,#FFDC36)>>{
       Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v3/~introduction ISiK Basis Stufe 3]]
+      [[https://simplifier.net/isik-basis-v4/~introduction ISiK Basis Stufe 4]]
    }
    class ISiKPatient <Patient><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
@@ -133,92 +133,99 @@ namespace ISiK_Basis {
 
 namespace ISiK_Medikation {
 
-   class  ISiKMedikationsRisiko <RiskAssessment><<(P,#8DA5C4)>>{
-      <back:Salmon>Dokumentation auf HL7 Org
-      <back:Salmon>[[https://hl7.org/fhir/R4/riskassessment.html RiskAssessment]]
-      ---
-      identifier: Identifier
-      basedOn : Reference (**Any**)
-      parent : Reference (**Any**)
-      status : **ObservationStatus**
-      method
+   class ISiKAMTSBewertung <RiskAssessment><<(P,#8DA5C4)>>{
+      id
+      status
       code
-      subject : Reference (**Patient**)
-      encounter : Reference (**Encounter**)
-      occurence[x] // When was is made?
+      |_ coding
+         |_ system
+         |_ code
+         |_ display
+      |_ text
+      subject : Reference( **Patient** )
+      |_ reference
+      encounter : Reference( **Encounter** )
+      |_ reference
+      occurrence[x]
       |_ occurrenceDateTime
-      condition : Reference (**Condition**) // Condition assessed
-      performer : Reference (**Practitioner** | PractitionerRole | Device)
+      |_ occurrencePeriod
+      condition : Reference( **Condition** )
+      |_ reference
       reasonCode
-      basis : Reference (**Any**) \n\t // Referenziert auf die Medicationstatement und/oder MedicationRequest
+      |_ coding
+         |_ system
+         |_ code
+         |_ display
+      |_ text
+      reasonReference : Reference( **Condition** | **Observation** | \nDiagnosticReport | **DocumentReference** )
+      |_ reference
+      basis : Reference( **Resource** )
+      |_ reference
       prediction
       |_ outcome
-      |_ probability[x]  // (decimal|Range)
+         |_ coding
+            |_ system
+            |_ code
+            |_ display         
+         |_ text
       |_ qualitativeRisk
-      |_ relativeRisk
-      |_ when[x] // (Period|Range)
-      |_ rationale \n\t // Explanation of prediction (Kontraindikation, Wechselwirkung etc.)
-      mitigation \n\t // How to reduce risk (Substitution, Abgabeform etc)
-      note Annotation   
+         |_ coding
+            |_ system
+            |_ code
+            |_ display         
+         |_ text
+      mitigation
+      note
    }
    
    class ISiKMedikament <Medication><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-medikation-v3/isikmedikament ISiK Medikament]]
-      --
-      id
-      code
-      |_ <back:LightGreen>coding­</back>
-         |_ PZN : **Pattern**
-         |_ ATC-DE : **Pattern**
-         |_ WG14 : **Pattern**
-      |_ text
-      <back:LightGreen>ingredient</back>
-      |_ extension
-         |_ Wirkstofftyp : **Extension**
-      |_ item[x]
-         |_ itemCodeableConcept
-            |_ coding­
-               |_ ASK : **Pattern**
-               |_ PZN : **Pattern**
-               |_ ATC-DE : **Pattern**
-               |_ WG14 : **Pattern**
-            |_ text
-            |_ <back:LightGreen> itemReference : Reference (**Substance** | **Medication**)</back>
-            |_ reference
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_Medikament hier]] oder auf 
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikmedikament ISiK Medikament]]
+      ---
    }
    'ISiKMedikation::itemReference --> ISiKMedikation
 
    class ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
-       Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-medikation-v3/isikmedikationsinformation ISiK Medikationsinformation]]
-      --
-      id	
-      medication[x]
-      |_ medicationReference : Reference (**Medication**)
-         |_ reference
-      |_ <back:LightGreen>route</back>
-         |_	coding
-            |_	EDQM : **Pattern**
-            |_	SNOMED-CT : **Pattern**
-         |_ text
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsInformation hier]] oder auf 
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikmedikationsinformation ISiK Medikationsinformation]]
+      ---
+      id
+      ...
+      ...
+      AcceptedRisk : **Extension**
+      |_ text
+      |_ Bewertung : **ISiKAMTSBewertung**
    }
-   'ISiKMedikationsInformation::medicationReference ---> ISiKMedikation
-   
-   class SctRouteOfAdministration <ValueSet><<(V,#8DA5C4)>> #LightGreen{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-medikation-v3/sctrouteofadministration SNOMED CT Route Of Administration]]
-      Beeinhaltet Codes aus SNOMED CT bei denen das \nConcept 284009009 (Route Of Administration) ist
-      [[https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80147 SNOMED_CT 284009009]]
-      --
-      codes : **$CS-SCT** is-a **284009009**
+
+   class ISiKMedikationsVerabreichung <MedicationAdministration><<(P,#8DA5C4)>>{
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsVerabreichung hier]] oder auf 
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikmedikationsverabreichung ISiK Medikationsverabreichung]]
+      ---
+      id
+      ...
+      ...
+      AcceptedRisk : **Extension**
+      |_ text
+      |_ Bewertung : **ISiKAMTSBewertung**
+   }
+
+   class ISiKMedikationsVerordnung <MedicationRequest><<(P,#8DA5C4)>>{
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsVerordnung hier]] oder auf
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikmedikationsverordnung ISiK Medikationsverordnung]]
+      ---
+      id
+      ...
+      ...
+      AcceptedRisk : **Extension**
+      |_ text
+      |_ Bewertung : **ISiKAMTSBewertung**
    }
 }
 
-package "ISiK-Labor (MVP)" #Salmon{
-    class ModulLabor_MVP <<(M,#FFDC36)>>{
+package ISiK_Labor {
+    class Labor_Stufe_4 <<(M,#FFDC36)>>{
       Dokumentation auf Simplifier Projekt TBD
-      [[https://simplifier.net/isik-labor-v3/~introduction ISiK Labor MVP]]
+      [[https://simplifier.net/isik-labor-v4/~introduction ISiK Labor (Support Modul)]]
    }
 
    class ISiK_LaborBeobachtung <Observation><<(P,#8DA5C4)>>{
@@ -272,40 +279,9 @@ package "ISiK-Labor (MVP)" #Salmon{
       codes : **$CS-LOINC** is-a **11580-8** (Thyrotropin [Units/volume] in Serum or Plasma by Detection limit <= 0.005 mIU/L) 
    }
 
-   'class  ISiKLaborBefund <DiagnosticReport><<(P,#8DA5C4)>>{
-   '   Dokumentation auf HL7 Org 
-   '   [[http://hl7.org/fhir/R4/diagnosticreport.html Diagnostic Report]]
-   '   --
-   '   id
-   '   identifier \n\t // Business identifier for report
-   '   basedOn : Reference (CarePlan | ImmunizationRecommendation | **MedicationRequest** | NutritionOrder | **ServiceRequest**) \n\t // What was requested
-   '   status : **DiagnosticReportStatus**   \n\t // z.B. amended | unknow | registered | final +
-   '   category \n\t // vernachlässigbar 
-   '   code	: **FixedValue** \n\t // SNOMED Report Name Labor Befunde
-   '   |_ coding 
-   '      |_ system : **$CS-SCT**
-   '      |_ version 
-   '      |_ code : **4241000179101**
-   '      |_ display : **Laboratory report (record artifact)**
-   '   subject : Reference (**Patient** | Group | Device | Location)  \n\t // The subject of the report - usually, the patient
-   '   encounter : Reference (**Encounter**)  \n\t // Health care event when test ordered
-   '   effective[x] \n\t // Clinically relevant time/time-period for report
-   '   |_ effectiveDateTime
-   '   |_ effectivePeriod
-   '   issued : \n\t // vernachlässigbar
-   '   performer : Reference (**Practitioner** | PractitionerRole | Organization | CareTeam)  \n\t // Responsible Diagnostic Service
-   '   resultsInterpreter : Reference (**Practitioner** | PractitionerRole | Organization | CareTeam)  \n\t // vernachlässigbar
-   '   specimen : Reference (Specimen)  \n\t // vernachlässigbar
-   '   <back:Salmon>result : Reference (Observation) </back> \n\t // Observations
-   '   <s>imagingStudy :	Reference (ImagingStudy)</s>  \n\t // vernachlässigbar
-   '   <s> media : BackboneElement</s>  \n\t // vernachlässigbar
-   '   conclusion \n\t // Clinical conclusion (interpretation) of test results
-   '   conclusionCode	: **SNOMED CT Clinical Findings**  \n\t // Codes for the clinical conclusion of test results z.B. **AllergyIntolerance.reaction.manifestation**
-   '   presentedForm : **Attachment**  \n\t // Entire report as issued (PDF)
-   '}
 }
 
-namespace HL7_FHIR_R4_Core #Salmon {
+namespace HL7_FHIR_R4_Core {
    class Foundation_Modul <<(M,#FFAAAA)>>{
       Dokumentation auf HL7 Org
       [[https://hl7.org/fhir/R4/ HL7 FHIR R4 Core Foundation]]
