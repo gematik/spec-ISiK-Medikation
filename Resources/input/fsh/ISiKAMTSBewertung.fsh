@@ -5,6 +5,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Risi
 * insert Meta
 * id MS
   * ^short = "eindeutige ID der Ressource auf dem Server"
+* extension MS
+* extension contains ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS
+  * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
+  * ^comment = "Hier kann die Begründung und ggf. erforderliche Begleitmaßnahmen für ein in Kauf genommenes Risiko dokumentiert werden."
 * status MS
 * code MS
   * ^short = "Art der Risikobeurteilung"

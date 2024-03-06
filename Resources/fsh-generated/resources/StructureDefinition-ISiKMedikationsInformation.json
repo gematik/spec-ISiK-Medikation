@@ -46,6 +46,29 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.extension",
+        "path": "MedicationStatement.extension",
+        "short": "akzeptiertes (in Kauf genommenes) Risiko",
+        "comment": "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen.",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:acceptedRisk",
+        "path": "MedicationStatement.extension",
+        "sliceName": "acceptedRisk",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionWirkstofftyp"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "MedicationStatement.partOf",
         "path": "MedicationStatement.partOf",
         "short": "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist",
