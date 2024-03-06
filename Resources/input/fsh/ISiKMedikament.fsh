@@ -68,7 +68,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
 * ingredient MS
   * ^short = "Informationen zu Bestandteilen (Rezeptur)"
   * extension MS
-  * extension contains $ext-mii-wirkstofftyp named wirkstofftyp 0..1 MS
+  * extension contains $ext-wirkstofftyp named wirkstofftyp 0..1 MS
     * ^short = "Wirkstofftyp"
     * ^comment = "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?"
   * itemCodeableConcept MS
@@ -155,7 +155,7 @@ Usage: #example
 * ingredient[0]
   * extension[wirkstofftyp]
     * valueCoding
-      * system = "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp"
+      * system = "http://fhir.de/CodeSystem/WirkstofftypCS"
       * code = #IN
   * itemCodeableConcept.coding
     * system = $cs-atc-de

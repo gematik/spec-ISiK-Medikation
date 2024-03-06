@@ -328,7 +328,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp"
+              "http://fhir.de/StructureDefinition/WirkstofftypEX"
             ]
           }
         ],

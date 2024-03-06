@@ -24,9 +24,9 @@
       },
       "extension": [
         {
-          "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/wirkstofftyp",
+          "url": "http://fhir.de/StructureDefinition/WirkstofftypEX",
           "valueCoding": {
-            "system": "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/CodeSystem/wirkstofftyp",
+            "system": "http://fhir.de/CodeSystem/WirkstofftypCS",
             "code": "IN"
           }
         }
