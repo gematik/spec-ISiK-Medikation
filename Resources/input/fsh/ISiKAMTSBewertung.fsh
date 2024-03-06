@@ -6,13 +6,6 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Risi
 * id MS
   * ^short = "eindeutige ID der Ressource auf dem Server"
 * status MS
-* method MS
-  * ^short = "Methode der Risikobeurteilung"
-  * coding MS
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
-  * text MS
 * code MS
   * ^short = "Art der Risikobeurteilung"
   * coding MS
@@ -73,7 +66,6 @@ Instance: ExampleISiKAMTSBewertung1
 InstanceOf: ISiKAMTSBewertung
 Usage: #example
 * status = #final
-* method.text = "AMTS Best Practice"
 * code.text = "AMTS Risikobewertung"
 * subject.reference = "Patient/PatientinMusterfrau"
 * encounter.reference = "Encounter/Fachabteilungskontakt"

@@ -56,39 +56,6 @@
         "mustSupport": true
       },
       {
-        "id": "RiskAssessment.method",
-        "path": "RiskAssessment.method",
-        "short": "Methode der Risikobeurteilung",
-        "mustSupport": true
-      },
-      {
-        "id": "RiskAssessment.method.coding",
-        "path": "RiskAssessment.method.coding",
-        "mustSupport": true
-      },
-      {
-        "id": "RiskAssessment.method.coding.system",
-        "path": "RiskAssessment.method.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "RiskAssessment.method.coding.code",
-        "path": "RiskAssessment.method.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "RiskAssessment.method.coding.display",
-        "path": "RiskAssessment.method.coding.display",
-        "mustSupport": true
-      },
-      {
-        "id": "RiskAssessment.method.text",
-        "path": "RiskAssessment.method.text",
-        "mustSupport": true
-      },
-      {
         "id": "RiskAssessment.code",
         "path": "RiskAssessment.code",
         "short": "Art der Risikobeurteilung",
