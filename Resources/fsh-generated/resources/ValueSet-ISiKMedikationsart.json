@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ISiKMedikationsart",
+  "id": "ISiKMedikationsart",
+  "description": "ISiK Therapiearten für Medikation",
+  "url": "https://gematik.de/fhir/isik/v4/Medikation/ValueSet/ISiKMedikationsart",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "version": "3.0.1",
+  "date": "2024-01-12",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/isik/v4/Medikation/CodeSystem/ISiKMedikationsart"
+      }
+    ]
+  }
+}

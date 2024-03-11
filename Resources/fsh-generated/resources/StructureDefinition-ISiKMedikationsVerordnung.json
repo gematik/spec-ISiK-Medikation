@@ -53,14 +53,14 @@
       {
         "id": "MedicationRequest.extension",
         "path": "MedicationRequest.extension",
-        "short": "akzeptiertes (in Kauf genommenes) Risiko",
-        "comment": "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen.",
         "mustSupport": true
       },
       {
         "id": "MedicationRequest.extension:acceptedRisk",
         "path": "MedicationRequest.extension",
         "sliceName": "acceptedRisk",
+        "short": "akzeptiertes (in Kauf genommenes) Risiko",
+        "comment": "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen.",
         "min": 0,
         "max": "1",
         "type": [
@@ -71,6 +71,44 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:acceptedRisk.value[x]",
+        "path": "MedicationRequest.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:medikationsart",
+        "path": "MedicationRequest.extension",
+        "sliceName": "medikationsart",
+        "short": "Therapieart der Medikation",
+        "comment": "Angabe Akut- oder Dauermedikation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedikationsart"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:medikationsart.value[x].system",
+        "path": "MedicationRequest.extension.value[x].system",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:medikationsart.value[x].code",
+        "path": "MedicationRequest.extension.value[x].code",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:medikationsart.value[x].display",
+        "path": "MedicationRequest.extension.value[x].display",
         "mustSupport": true
       },
       {

@@ -6,9 +6,20 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
 * id MS
   * ^short = "eindeutige ID der Ressource auf dem Server"
 * extension MS
-* extension contains ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS
+* extension contains
+    ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS and
+    ExtensionISiKMedikationsart named medikationsart 0..1 MS
+* extension[acceptedRisk]
   * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
   * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
+  * valueString MS
+* extension[medikationsart]
+  * ^short = "Therapieart der Medikation"
+  * ^comment = "Angabe Akut- oder Dauermedikation."
+  * valueCoding
+    * system MS
+    * code MS
+    * display MS
 * status MS
   * ^short = "Status der Verordnungsinformation"
 * intent MS
