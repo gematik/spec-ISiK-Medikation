@@ -8,7 +8,7 @@
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionWirkstofftyp",
+      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk",
       "valueString": "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
     },
     {
@@ -17,6 +17,10 @@
         "code": "akut",
         "system": "https://gematik.de/fhir/isik/v4/Medikation/CodeSystem/ISiKMedikationsart"
       }
+    },
+    {
+      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKBehandlungsziel",
+      "valueString": "Schmerztherapie postoperativ"
     }
   ],
   "dosageInstruction": [

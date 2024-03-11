@@ -67,7 +67,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionWirkstofftyp"
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk"
             ]
           }
         ],
@@ -109,6 +109,29 @@
       {
         "id": "MedicationRequest.extension:medikationsart.value[x].display",
         "path": "MedicationRequest.extension.value[x].display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:behandlungsziel",
+        "path": "MedicationRequest.extension",
+        "sliceName": "behandlungsziel",
+        "short": "Behandlungsziel (textuell)",
+        "comment": "Freitext-Beschreibung des Behandlungsziels.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKBehandlungsziel"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:behandlungsziel.value[x]",
+        "path": "MedicationRequest.extension.value[x]",
         "mustSupport": true
       },
       {

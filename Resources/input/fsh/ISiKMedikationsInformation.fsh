@@ -9,7 +9,8 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
 * extension contains
     ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS and
     ExtensionISiKMedikationsart named medikationsart 0..1 MS and
-    ExtensionISiKSelbstmedikation named selbstmedikation 0..1 MS
+    ExtensionISiKSelbstmedikation named selbstmedikation 0..1 MS and
+    ExtensionISiKBehandlungsziel named behandlungsziel 0..1 MS
 * extension[acceptedRisk]
   * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
   * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
@@ -25,6 +26,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * ^short = "Selbstmedikation"
   * ^comment = "Flag zur Selbstmedikation."
   * valueBoolean MS
+* extension[behandlungsziel]
+  * ^short = "Behandlungsziel (textuell)"
+  * ^comment = "Freitext-Beschreibung des Behandlungsziels."
+  * valueString MS
 * partOf MS
   * ^short = "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
 * status MS
@@ -278,6 +283,7 @@ Usage: #example
 * extension[acceptedRisk].valueString = "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
 * extension[medikationsart].valueCoding = ISiKMedikationsart#akut
 * extension[selbstmedikation].valueBoolean = true
+* extension[behandlungsziel].valueString = "Schmerztherapie postoperativ"
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"

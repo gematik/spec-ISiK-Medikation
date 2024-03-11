@@ -20,7 +20,7 @@
         },
         "extension": [
           {
-            "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionWirkstofftyp",
+            "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk",
             "valueString": "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
           },
           {
@@ -33,6 +33,10 @@
           {
             "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKSelbstmedikation",
             "valueBoolean": true
+          },
+          {
+            "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKBehandlungsziel",
+            "valueString": "Schmerztherapie postoperativ"
           }
         ],
         "dosage": [
