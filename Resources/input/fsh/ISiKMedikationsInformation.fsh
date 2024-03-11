@@ -386,8 +386,8 @@ Usage: #example
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Fachabteilungskontakt"
 * effectivePeriod
-  * start = 2024-02-16
-* dateAsserted = 2024-02-16
+  * start = 2024-02-06
+* dateAsserted = 2024-01-31
 * dosage
   * timing
     * repeat

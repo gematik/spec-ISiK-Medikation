@@ -59,6 +59,9 @@ Einfaches Zytostatikum-Therapieschema (Chemotherapie):
 Einnahme zu allen Mahlzeiten incl. Zwischenmahlzeiten:
 {{json:ExampleISiKMedikationsInformation4}}
 
+Einnahme alle drei Monate jeweils am ersten Dienstag des Monats. Hierbei wird das Faktum "ERSTER Dienstag" durch das entsprechende Setzen des Beginndatums (effectivePeriod.start) ausgedrückt, kann aber (wie hier geschehen) ergänzend auch textuell in der patientInstruction vermerkt werden:
+{{json:ExampleISiKMedikationsInformation5}}
+
 Komplexes Beispiel: Medikation zur Behandlung von Morbus Parkinson; Medikationsliste und zugehörige Einzelmedikationen.
 
 {{json:ExampleISiKMedikationsListeParkinson}}
