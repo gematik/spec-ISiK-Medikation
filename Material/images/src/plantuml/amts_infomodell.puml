@@ -187,10 +187,10 @@ namespace ISiK_Medikation {
    }
 }
 
-package "ISiK-Labor (MVP)" #Salmon{
+package ISiK_Labor {
     class ModulLabor_MVP <<(M,#FFDC36)>>{
       Dokumentation auf Simplifier Projekt TBD
-      [[https://simplifier.net/isik-labor-v3/~introduction ISiK Labor MVP]]
+      [[https://simplifier.net/isik-labor-v4/~introduction ISiK Labor MVP]]
    }
 
    class ISiK_LaborBeobachtung <Observation><<(P,#8DA5C4)>>{
@@ -337,11 +337,13 @@ namespace R4_Core #Salmon {
       [[https://hl7.org/fhir/R4/valueset-reaction-event-severity.html Reaction Eventu Severity]]
       Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html Code System of Severity]]
    }
+
    class ObservationCategory <ValueSet><<(V,#8DA5C4)>>{
       Dokumentation auf HL7 Org 
       [[https://hl7.org/fhir/R4/valueset-observation-category.html Observation Category]]
       Das entsprechende Standard-ValueSet beeinhatet das komplette \nCode System des zugehörigen [[https://hl7.org/fhir/R4/codesystem-observation-category.html Code System of Observation Category]]
    }
+
    class SctObservationMethods <ValueSet><<(V,#8DA5C4)>>{
       Dokumentation auf HL7 Org 
       [[https://hl7.org/fhir/R4/valueset-observation-methods.html SNONMED CT Observation Methods]]
