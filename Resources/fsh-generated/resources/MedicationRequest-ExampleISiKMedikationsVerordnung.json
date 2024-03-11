@@ -6,6 +6,19 @@
       "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsVerordnung"
     ]
   },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionWirkstofftyp",
+      "valueString": "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
+    },
+    {
+      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedikationsart",
+      "valueCoding": {
+        "code": "akut",
+        "system": "https://gematik.de/fhir/isik/v4/Medikation/CodeSystem/ISiKMedikationsart"
+      }
+    }
+  ],
   "dosageInstruction": [
     {
       "doseAndRate": [

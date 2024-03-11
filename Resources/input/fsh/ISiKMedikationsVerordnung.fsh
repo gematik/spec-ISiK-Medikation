@@ -267,6 +267,8 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
 Instance: ExampleISiKMedikationsVerordnung
 InstanceOf: ISiKMedikationsVerordnung
 Usage: #example
+* extension[acceptedRisk].valueString = "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
+* extension[medikationsart].valueCoding = ISiKMedikationsart#akut
 * status = #active
 * intent = #order
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
