@@ -1,5 +1,5 @@
 Extension: ExtensionISiKAcceptedRisk
-Id: ExtensionWirkstofftyp
+Id: ExtensionISiKAcceptedRisk
 Title: "ISiKAcceptedRisk"
 Description: "Extension zur Dokumentation eines im Rahmen der AMTS bewusst eingegangenen Risikos. In diesem Freitext kann die Begründung und ggf. zu treffende besondere Maßnahmen dokumentiert werden."
 * insert Meta
