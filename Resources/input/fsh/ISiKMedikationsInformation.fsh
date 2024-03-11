@@ -402,6 +402,25 @@ Usage: #example
     * system = $cs-ucum
     * code = #1
 
+// Beispiel Dosierung kurzwirksames Insulin nach gemessenen Werten
+Instance: ExampleISiKMedikationsInformation6
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#06922060 "Huminsulin® Normal KwikPen™"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod.start = 2024-02-20
+* dateAsserted = 2024-02-20
+* reasonReference.reference = "Condition/DiagnoseDiabetesMellitus"
+* dosage
+  * patientInstruction = "Dosierung nach BZ, gemäß Informationsblatt vom 20.02.2024"
+  * timing
+    * repeat
+      * timeOfDay = 07:00:00
+      * timeOfDay = 13:00:00
+      * timeOfDay = 19:00:00
+
 // Beispiel Parkinson-Medikation: Medikament 1
 Instance: ExampleISiKMedikationsInformationParkinson1
 InstanceOf: ISiKMedikationsInformation

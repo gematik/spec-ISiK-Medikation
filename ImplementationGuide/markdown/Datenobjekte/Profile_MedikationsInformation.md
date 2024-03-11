@@ -62,6 +62,9 @@ Einnahme zu allen Mahlzeiten incl. Zwischenmahlzeiten:
 Einnahme alle drei Monate jeweils am ersten Dienstag des Monats. Hierbei wird das Faktum "ERSTER Dienstag" durch das entsprechende Setzen des Beginndatums (effectivePeriod.start) ausgedrückt, kann aber (wie hier geschehen) ergänzend auch textuell in der patientInstruction vermerkt werden:
 {{json:ExampleISiKMedikationsInformation5}}
 
+Dosierung nach Messwerten, Wirkstärke anhand eines ärztlich vorgegebenen, potentiell komplexen Algorithmus:
+{{json:ExampleISiKMedikationsInformation6}}
+
 Komplexes Beispiel: Medikation zur Behandlung von Morbus Parkinson; Medikationsliste und zugehörige Einzelmedikationen.
 
 {{json:ExampleISiKMedikationsListeParkinson}}
