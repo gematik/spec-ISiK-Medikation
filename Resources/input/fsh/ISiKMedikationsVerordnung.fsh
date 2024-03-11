@@ -5,6 +5,32 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
 * insert Meta
 * id MS
   * ^short = "eindeutige ID der Ressource auf dem Server"
+* extension MS
+* extension contains
+    ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS and
+    ExtensionISiKMedikationsart named medikationsart 0..1 MS and
+    ExtensionISiKBehandlungsziel named behandlungsziel 0..1 MS and
+    ExtensionISiKMedicationRequestReplaces named medicationRequestReplaces 0..1 MS
+* extension[acceptedRisk]
+  * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
+  * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
+  * valueString MS
+* extension[medikationsart]
+  * ^short = "Therapieart der Medikation"
+  * ^comment = "Angabe Akut- oder Dauermedikation."
+  * valueCoding
+    * system MS
+    * code MS
+    * display MS
+* extension[behandlungsziel]
+  * ^short = "Behandlungsziel (textuell)"
+  * ^comment = "Freitext-Beschreibung des Behandlungsziels."
+  * valueString MS
+* extension[medicationRequestReplaces]
+  * ^short = "Welche Medikationsverordnung wird ersetzt?"
+  * ^comment = "FWelche Medikationsverordnung wird ersetzt?"
+  * valueReference MS
+    * reference MS
 * status MS
   * ^short = "Status der Verordnungsinformation"
 * intent MS
@@ -252,6 +278,9 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
 Instance: ExampleISiKMedikationsVerordnung
 InstanceOf: ISiKMedikationsVerordnung
 Usage: #example
+* extension[acceptedRisk].valueString = "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
+* extension[medikationsart].valueCoding = ISiKMedikationsart#akut
+* extension[behandlungsziel].valueString = "Schmerztherapie postoperativ"
 * status = #active
 * intent = #order
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
@@ -274,6 +303,7 @@ Usage: #example
 Instance: ExampleISiKMedikationsVerordnung2
 InstanceOf: ISiKMedikationsVerordnung
 Usage: #example
+* extension[medicationRequestReplaces].valueReference.reference = "MedicationRequest/77777"
 * status = #active
 * intent = #order
 * medicationReference = Reference(ExampleISiKMedikament8)

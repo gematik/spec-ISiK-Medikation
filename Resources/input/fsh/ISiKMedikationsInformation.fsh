@@ -5,6 +5,37 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
 * insert Meta
 * id MS
   * ^short = "eindeutige ID der Ressource auf dem Server"
+* extension MS
+* extension contains
+    ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS and
+    ExtensionISiKMedikationsart named medikationsart 0..1 MS and
+    ExtensionISiKSelbstmedikation named selbstmedikation 0..1 MS and
+    ExtensionISiKBehandlungsziel named behandlungsziel 0..1 MS and
+    ExtensionISiKMedicationStatementReplaces named medicationStatementReplaces 0..1 MS
+* extension[acceptedRisk]
+  * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
+  * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
+  * valueString MS
+* extension[medikationsart]
+  * ^short = "Therapieart der Medikation"
+  * ^comment = "Angabe Akut- oder Dauermedikation."
+  * valueCoding
+    * system MS
+    * code MS
+    * display MS
+* extension[selbstmedikation]
+  * ^short = "Selbstmedikation"
+  * ^comment = "Flag zur Selbstmedikation."
+  * valueBoolean MS
+* extension[behandlungsziel]
+  * ^short = "Behandlungsziel (textuell)"
+  * ^comment = "Freitext-Beschreibung des Behandlungsziels."
+  * valueString MS
+* extension[medicationStatementReplaces]
+  * ^short = "Welche Medikationsinformation wird ersetzt?"
+  * ^comment = "Welche Medikationsinformation wird ersetzt?"
+  * valueReference MS
+    * reference MS
 * partOf MS
   * ^short = "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
 * status MS
@@ -255,6 +286,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
 Instance: ExampleISiKMedikationsInformation1
 InstanceOf: ISiKMedikationsInformation
 Usage: #example
+* extension[acceptedRisk].valueString = "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
+* extension[medikationsart].valueCoding = ISiKMedikationsart#akut
+* extension[selbstmedikation].valueBoolean = true
+* extension[behandlungsziel].valueString = "Schmerztherapie postoperativ"
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament1"
 * subject.reference = "Patient/PatientinMusterfrau"
@@ -276,6 +311,7 @@ Usage: #example
 Instance: ExampleISiKMedikationsInformation2
 InstanceOf: ISiKMedikationsInformation
 Usage: #example
+* extension[medicationStatementReplaces].valueReference.reference = "MedicationStatement/55555"
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament2"
 * subject.reference = "Patient/PatientinMusterfrau"
@@ -350,8 +386,8 @@ Usage: #example
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Fachabteilungskontakt"
 * effectivePeriod
-  * start = 2024-02-16
-* dateAsserted = 2024-02-16
+  * start = 2024-02-06
+* dateAsserted = 2024-01-31
 * dosage
   * timing
     * repeat
@@ -365,6 +401,25 @@ Usage: #example
     * unit = "Tabl."
     * system = $cs-ucum
     * code = #1
+
+// Beispiel Dosierung kurzwirksames Insulin nach gemessenen Werten
+Instance: ExampleISiKMedikationsInformation6
+InstanceOf: ISiKMedikationsInformation
+Usage: #example
+* status = #active
+* medicationCodeableConcept = $cs-pzn#06922060 "Huminsulin® Normal KwikPen™"
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* effectivePeriod.start = 2024-02-20
+* dateAsserted = 2024-02-20
+* reasonReference.reference = "Condition/DiagnoseDiabetesMellitus"
+* dosage
+  * patientInstruction = "Dosierung nach BZ, gemäß Informationsblatt vom 20.02.2024"
+  * timing
+    * repeat
+      * timeOfDay = 07:00:00
+      * timeOfDay = 13:00:00
+      * timeOfDay = 19:00:00
 
 // Beispiel Parkinson-Medikation: Medikament 1
 Instance: ExampleISiKMedikationsInformationParkinson1

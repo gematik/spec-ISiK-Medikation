@@ -5,14 +5,11 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Risi
 * insert Meta
 * id MS
   * ^short = "eindeutige ID der Ressource auf dem Server"
+* extension MS
+* extension contains ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS
+  * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
+  * ^comment = "Hier kann die Begründung und ggf. erforderliche Begleitmaßnahmen für ein in Kauf genommenes Risiko dokumentiert werden."
 * status MS
-* method MS
-  * ^short = "Methode der Risikobeurteilung"
-  * coding MS
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
-  * text MS
 * code MS
   * ^short = "Art der Risikobeurteilung"
   * coding MS
@@ -73,7 +70,6 @@ Instance: ExampleISiKAMTSBewertung1
 InstanceOf: ISiKAMTSBewertung
 Usage: #example
 * status = #final
-* method.text = "AMTS Best Practice"
 * code.text = "AMTS Risikobewertung"
 * subject.reference = "Patient/PatientinMusterfrau"
 * encounter.reference = "Encounter/Fachabteilungskontakt"

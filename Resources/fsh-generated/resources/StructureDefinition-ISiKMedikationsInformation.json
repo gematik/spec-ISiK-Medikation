@@ -46,6 +46,141 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationStatement.extension",
+        "path": "MedicationStatement.extension",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:acceptedRisk",
+        "path": "MedicationStatement.extension",
+        "sliceName": "acceptedRisk",
+        "short": "akzeptiertes (in Kauf genommenes) Risiko",
+        "comment": "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:acceptedRisk.value[x]",
+        "path": "MedicationStatement.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:medikationsart",
+        "path": "MedicationStatement.extension",
+        "sliceName": "medikationsart",
+        "short": "Therapieart der Medikation",
+        "comment": "Angabe Akut- oder Dauermedikation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedikationsart"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:medikationsart.value[x].system",
+        "path": "MedicationStatement.extension.value[x].system",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:medikationsart.value[x].code",
+        "path": "MedicationStatement.extension.value[x].code",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:medikationsart.value[x].display",
+        "path": "MedicationStatement.extension.value[x].display",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:selbstmedikation",
+        "path": "MedicationStatement.extension",
+        "sliceName": "selbstmedikation",
+        "short": "Selbstmedikation",
+        "comment": "Flag zur Selbstmedikation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKSelbstmedikation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:selbstmedikation.value[x]",
+        "path": "MedicationStatement.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:behandlungsziel",
+        "path": "MedicationStatement.extension",
+        "sliceName": "behandlungsziel",
+        "short": "Behandlungsziel (textuell)",
+        "comment": "Freitext-Beschreibung des Behandlungsziels.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKBehandlungsziel"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:behandlungsziel.value[x]",
+        "path": "MedicationStatement.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:medicationStatementReplaces",
+        "path": "MedicationStatement.extension",
+        "sliceName": "medicationStatementReplaces",
+        "short": "Welche Medikationsinformation wird ersetzt?",
+        "comment": "Welche Medikationsinformation wird ersetzt?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedicationStatementReplaces"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:medicationStatementReplaces.value[x]",
+        "path": "MedicationStatement.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationStatement.extension:medicationStatementReplaces.value[x].reference",
+        "path": "MedicationStatement.extension.value[x].reference",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationStatement.partOf",
         "path": "MedicationStatement.partOf",
         "short": "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist",
