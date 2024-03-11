@@ -10,7 +10,8 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS and
     ExtensionISiKMedikationsart named medikationsart 0..1 MS and
     ExtensionISiKSelbstmedikation named selbstmedikation 0..1 MS and
-    ExtensionISiKBehandlungsziel named behandlungsziel 0..1 MS
+    ExtensionISiKBehandlungsziel named behandlungsziel 0..1 MS and
+    ExtensionISiKMedicationStatementReplaces named medicationStatementReplaces 0..1 MS
 * extension[acceptedRisk]
   * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
   * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
@@ -30,6 +31,11 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * ^short = "Behandlungsziel (textuell)"
   * ^comment = "Freitext-Beschreibung des Behandlungsziels."
   * valueString MS
+* extension[medicationStatementReplaces]
+  * ^short = "Welche Medikationsinformation wird ersetzt?"
+  * ^comment = "Welche Medikationsinformation wird ersetzt?"
+  * valueReference MS
+    * reference MS
 * partOf MS
   * ^short = "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
 * status MS
@@ -305,6 +311,7 @@ Usage: #example
 Instance: ExampleISiKMedikationsInformation2
 InstanceOf: ISiKMedikationsInformation
 Usage: #example
+* extension[medicationStatementReplaces].valueReference.reference = "MedicationStatement/55555"
 * status = #active
 * medicationReference.reference = "Medication/ExampleISiKMedikament2"
 * subject.reference = "Patient/PatientinMusterfrau"

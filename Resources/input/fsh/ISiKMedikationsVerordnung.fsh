@@ -9,7 +9,8 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
 * extension contains
     ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS and
     ExtensionISiKMedikationsart named medikationsart 0..1 MS and
-    ExtensionISiKBehandlungsziel named behandlungsziel 0..1 MS
+    ExtensionISiKBehandlungsziel named behandlungsziel 0..1 MS and
+    ExtensionISiKMedicationRequestReplaces named medicationRequestReplaces 0..1 MS
 * extension[acceptedRisk]
   * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
   * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
@@ -25,6 +26,11 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * ^short = "Behandlungsziel (textuell)"
   * ^comment = "Freitext-Beschreibung des Behandlungsziels."
   * valueString MS
+* extension[medicationRequestReplaces]
+  * ^short = "Welche Medikationsverordnung wird ersetzt?"
+  * ^comment = "FWelche Medikationsverordnung wird ersetzt?"
+  * valueReference MS
+    * reference MS
 * status MS
   * ^short = "Status der Verordnungsinformation"
 * intent MS
@@ -297,6 +303,7 @@ Usage: #example
 Instance: ExampleISiKMedikationsVerordnung2
 InstanceOf: ISiKMedikationsVerordnung
 Usage: #example
+* extension[medicationRequestReplaces].valueReference.reference = "MedicationRequest/77777"
 * status = #active
 * intent = #order
 * medicationReference = Reference(ExampleISiKMedikament8)

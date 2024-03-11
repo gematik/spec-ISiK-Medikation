@@ -135,6 +135,34 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.extension:medicationRequestReplaces",
+        "path": "MedicationRequest.extension",
+        "sliceName": "medicationRequestReplaces",
+        "short": "Welche Medikationsverordnung wird ersetzt?",
+        "comment": "FWelche Medikationsverordnung wird ersetzt?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedicationRequestReplaces"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:medicationRequestReplaces.value[x]",
+        "path": "MedicationRequest.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.extension:medicationRequestReplaces.value[x].reference",
+        "path": "MedicationRequest.extension.value[x].reference",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationRequest.status",
         "path": "MedicationRequest.status",
         "short": "Status der Verordnungsinformation",

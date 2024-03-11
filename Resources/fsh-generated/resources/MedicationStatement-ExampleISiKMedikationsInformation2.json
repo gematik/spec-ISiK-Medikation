@@ -6,6 +6,14 @@
       "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation"
     ]
   },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedicationStatementReplaces",
+      "valueReference": {
+        "reference": "MedicationStatement/55555"
+      }
+    }
+  ],
   "dosage": [
     {
       "doseAndRate": [
