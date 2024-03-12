@@ -37,11 +37,13 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Feld
 * Nur Unter-Elemente (MS) bis zu zweiten oder dritten Tiefe, abhängig von Umfang und Systematik. D.h. Keine bedingten Wiederholungen (repeat) oder Rekursionen (part-of).
 
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_resourcediagram.svg" alt="AMTS Ressourcenciagramm" width="90%"/>
+
 **Ressourcendiagramm AMTS**
 
 ### Vereinfachtes Informationsmodell AMTS
 
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Basismodul/rc/main-stufe-4/Material/images/diagrams/amts_infomodell.svg" alt="Vereinfachtes AMTS Infomodell" width="90%"/>
+
 **Vereinfachtes Infomodell AMTS**
 
 
@@ -50,11 +52,11 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Feld
 
 Im Folgenden sind exemplarisch die Interaktionen für einen AMTS Pull und -Push im Sinne eines Businessprozesses modelliert.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/bpnm/AMTS_pull.svg" class="center" alt="AMTS Pull" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_pull.svg" class="center" alt="AMTS Pull" width="90%"/>
 
 **AMTS Pull**
 
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/bpnm/AMTS_push.svg" class="center" alt="AMTS Push" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_push.svg" class="center" alt="AMTS Push" width="90%"/>
 
 **AMTS Push**
