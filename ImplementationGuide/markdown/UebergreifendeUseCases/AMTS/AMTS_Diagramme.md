@@ -15,6 +15,16 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und daf
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_usecases.svg" alt="AMTS Use Cases" width="90%"/>
 **Anwendungsfälle AMTS**
 
+
+### Interkationen In der Versorgung
+
+Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem [Auszug des IOP-Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) dargestellt, welcher der Erarbeitung diese Implemetierungsleitfadens zugrunde lag. Weitere Prozesse und Details finden sich im [Anhang](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug).
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung" width="90%"/>
+
+**Beispielprozess: Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung**
+
+
 ### Ressourcen Diagramm AMTS
 
 Im Folgenden wird ein grafischer Überblick über alle für diesen Übergreifenden Use Case (AMTS) profilierten Ressourcen gegeben.
@@ -34,9 +44,17 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Feld
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Basismodul/rc/main-stufe-4/Material/images/diagrams/amts_infomodell.svg" alt="Vereinfachtes AMTS Infomodell" width="90%"/>
 **Vereinfachtes Infomodell AMTS**
 
-### Interkationen In der Versorgung
 
-Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem [Auszug des IOP-Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) dargestellt, welcher der Erarbeitung diese Implemetierungsleitfadens zugrunde lag. Weitere Prozesse und Details finden sich im [Anhang](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug).
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung" width="90%"/>
-**Beispielprozess: Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung**
+### Interaktionen im Rahmen AMTS
+
+Im Folgenden sind exemplarisch die Interaktionen für einen AMTS Pull und -Push im Sinne eines Businessprozesses modelliert.
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/bpnm/AMTS_pull.svg" class="center" alt="AMTS Pull" width="90%"/>
+
+**AMTS Pull**
+
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/bpnm/AMTS_push.svg" class="center" alt="AMTS Push" width="90%"/>
+
+**AMTS Push**
