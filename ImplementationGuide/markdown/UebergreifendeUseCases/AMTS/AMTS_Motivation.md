@@ -1,6 +1,7 @@
 ## Table of Contents <!-- omit from toc -->
 - [1. Motivation und Hintergrund](#1-motivation-und-hintergrund)
 - [2. Ziele](#2-ziele)
+  - [2.1. Out-of-Scope](#21-out-of-scope)
 - [3. Stakeholder, User und weitere Systeme](#3-stakeholder-user-und-weitere-systeme)
   - [3.1. User und Systeme im Fokus](#31-user-und-systeme-im-fokus)
   - [3.2. Einordnung in die ISiK Landschaft](#32-einordnung-in-die-isik-landschaft)
@@ -26,7 +27,16 @@ Ziele des vorliegenden IG sind:
 3. Die Schaffung eines Implementierungsleitfadens zur Bereitstellung ebendieser AMTS relevanter Informationen.
 4. Die korrekte Abgrenzung des Leistungsumfang ISiK-Medikation im Bezug auf AMTS (Out-of-Scope).
 
-Die genauere Zielstellung kann unter Einbeziehung der Stakeholder in der ersten Projektphase erweitert oder verändert werden.
+Die genauere Zielstellung kann unter Einbeziehung der Stakeholder in der Evolution von ISiK erweitert oder verändert werden.
+
+### 2.1. Out-of-Scope
+
+Aufgrund technischer Beschränkungen oder eines starken implizierten Aufwands gibt es auch Aspekte, die aktuell noch außen vor bleiben müssen:
+* Medical Knowledege Management. Eine medizinische Wissensdatenbank ohne Patientenbezug, in der zum Beispiel Informationen zu bekannten Nebenwirkungen,Wechselwirkungen oder Kontra-Indikationen gespeichert werden (z.B. FHIR-R5 Ressource _ClinicalUseDefinition_). Leider stehen entsprechende Ressourcen erst in R5 zur Verfügung und es gibt kein einheitliches Bild wo eine solche Medical Knowledge DB in der deutschen Gesundheitslandschaft (und in der Telematik Infrastruktur) zu verorten wäre.
+* Die Einbeziehung eines Therapieziel (FHIR-R4 Ressource _Goal_), da dies sehr komplex ist und ein erheblicher Abstimmungsaufwand impliziert wäre.
+* Die Einbeziehung eines Therapieplan (FHIR-R4 Ressource _Careplan_), da dieser ein neues Fachfeld braucht. Dieses Feld (Onkologie) würde ein neues ISiK Modul sowie IG begründen und benötigt eine eigene Arbeitsgruppe in einer zukünfitgen Stufe.
+
+Einige dieser Aspekte sind bereits im Backlog für kommende ISiK Entwicklungsstufen aufgenommen.
 
 ## 3. Stakeholder, User und weitere Systeme
 
