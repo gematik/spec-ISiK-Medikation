@@ -3,12 +3,12 @@
   "id": "ExampleISiKMedikationsInformation2",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation"
+      "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsInformation"
     ]
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedicationStatementReplaces",
+      "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedicationStatementReplaces",
       "valueReference": {
         "reference": "MedicationStatement/55555"
       }

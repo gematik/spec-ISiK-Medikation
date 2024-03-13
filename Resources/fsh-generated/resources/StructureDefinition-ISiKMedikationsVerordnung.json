@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsVerordnung",
-  "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsVerordnung",
-  "version": "3.0.1",
+  "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung",
+  "version": "4.0.0-rc",
   "name": "ISiKMedikationsVerordnung",
   "status": "active",
   "experimental": false,
-  "date": "2024-01-12",
+  "date": "2024-03-13",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -67,7 +67,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk"
             ]
           }
         ],
@@ -90,7 +90,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedikationsart"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart"
             ]
           }
         ],
@@ -123,7 +123,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKBehandlungsziel"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKBehandlungsziel"
             ]
           }
         ],
@@ -146,7 +146,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedicationRequestReplaces"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedicationRequestReplaces"
             ]
           }
         ],
@@ -816,7 +816,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/isik/v4/Medikation/ValueSet/SctRouteOfAdministration"
+          "valueSet": "https://gematik.de/fhir/isik/ValueSet/SctRouteOfAdministration"
         }
       },
       {

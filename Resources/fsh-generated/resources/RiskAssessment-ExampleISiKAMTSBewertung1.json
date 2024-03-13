@@ -3,7 +3,7 @@
   "id": "ExampleISiKAMTSBewertung1",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKAMTSBewertung"
+      "https://gematik.de/fhir/isik/StructureDefinition/ISiKAMTSBewertung"
     ]
   },
   "status": "final",

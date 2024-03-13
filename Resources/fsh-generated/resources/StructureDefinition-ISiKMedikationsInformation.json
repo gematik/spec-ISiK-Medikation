@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsInformation",
-  "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation",
-  "version": "3.0.1",
+  "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsInformation",
+  "version": "4.0.0-rc",
   "name": "ISiKMedikationsInformation",
   "status": "active",
   "experimental": false,
-  "date": "2024-01-12",
+  "date": "2024-03-13",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -62,7 +62,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk"
             ]
           }
         ],
@@ -85,7 +85,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedikationsart"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart"
             ]
           }
         ],
@@ -118,7 +118,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKSelbstmedikation"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKSelbstmedikation"
             ]
           }
         ],
@@ -141,7 +141,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKBehandlungsziel"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKBehandlungsziel"
             ]
           }
         ],
@@ -164,7 +164,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedicationStatementReplaces"
+              "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedicationStatementReplaces"
             ]
           }
         ],
@@ -917,7 +917,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/isik/v4/Medikation/ValueSet/SctRouteOfAdministration"
+          "valueSet": "https://gematik.de/fhir/isik/ValueSet/SctRouteOfAdministration"
         }
       },
       {

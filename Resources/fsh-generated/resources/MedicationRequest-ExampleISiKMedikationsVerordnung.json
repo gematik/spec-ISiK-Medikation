@@ -3,23 +3,23 @@
   "id": "ExampleISiKMedikationsVerordnung",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsVerordnung"
+      "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung"
     ]
   },
   "extension": [
     {
-      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk",
+      "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk",
       "valueString": "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
     },
     {
-      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedikationsart",
+      "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart",
       "valueCoding": {
         "code": "akut",
-        "system": "https://gematik.de/fhir/isik/v4/Medikation/CodeSystem/ISiKMedikationsart"
+        "system": "https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsart"
       }
     },
     {
-      "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKBehandlungsziel",
+      "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKBehandlungsziel",
       "valueString": "Schmerztherapie postoperativ"
     }
   ],

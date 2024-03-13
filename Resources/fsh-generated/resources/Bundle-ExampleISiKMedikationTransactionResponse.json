@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationTransactionResponse",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationTransactionResponse"
+      "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationTransactionResponse"
     ]
   },
   "type": "transaction-response",
@@ -15,27 +15,27 @@
         "id": "ExampleISiKMedikationsInformation1",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation"
+            "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsInformation"
           ]
         },
         "extension": [
           {
-            "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk",
+            "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk",
             "valueString": "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
           },
           {
-            "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKMedikationsart",
+            "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart",
             "valueCoding": {
               "code": "akut",
-              "system": "https://gematik.de/fhir/isik/v4/Medikation/CodeSystem/ISiKMedikationsart"
+              "system": "https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsart"
             }
           },
           {
-            "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKSelbstmedikation",
+            "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKSelbstmedikation",
             "valueBoolean": true
           },
           {
-            "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKBehandlungsziel",
+            "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKBehandlungsziel",
             "valueString": "Schmerztherapie postoperativ"
           }
         ],
@@ -94,7 +94,7 @@
         "id": "ExampleISiKMedikament1",
         "meta": {
           "profile": [
-            "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikament"
+            "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament"
           ]
         },
         "code": {

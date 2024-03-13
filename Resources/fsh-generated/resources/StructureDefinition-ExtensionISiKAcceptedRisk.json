@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ExtensionISiKAcceptedRisk",
-  "url": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk",
-  "version": "3.0.1",
+  "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk",
+  "version": "4.0.0-rc",
   "name": "ExtensionISiKAcceptedRisk",
   "title": "ISiKAcceptedRisk",
   "status": "active",
   "experimental": false,
-  "date": "2024-01-12",
+  "date": "2024-03-13",
   "publisher": "gematik GmbH",
   "description": "Extension zur Dokumentation eines im Rahmen der AMTS bewusst eingegangenen Risikos. In diesem Freitext kann die Begründung und ggf. zu treffende besondere Maßnahmen dokumentiert werden.",
   "fhirVersion": "4.0.1",
@@ -47,7 +47,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ExtensionISiKAcceptedRisk"
+        "fixedUri": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk"
       },
       {
         "id": "Extension.value[x]",

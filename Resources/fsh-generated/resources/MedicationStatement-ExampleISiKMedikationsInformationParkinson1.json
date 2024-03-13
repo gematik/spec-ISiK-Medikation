@@ -3,7 +3,7 @@
   "id": "ExampleISiKMedikationsInformationParkinson1",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationsInformation"
+      "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsInformation"
     ]
   },
   "dosage": [
