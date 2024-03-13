@@ -369,7 +369,7 @@ Usage: #example
 * dosage
   * timing
     * repeat
-      * when = $cs-v4-event-timing#C
+      * when = $cs-v3-event-timing#C
   * patientInstruction = "auch zu Zwischenmahlzeiten"
   * doseAndRate.doseQuantity
     * value = 1

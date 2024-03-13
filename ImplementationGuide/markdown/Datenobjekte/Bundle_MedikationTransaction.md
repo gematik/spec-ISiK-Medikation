@@ -7,17 +7,17 @@ Hinweis: Die Regeln aus dem Modul [ISiK Basis Stufe 4](https://simplifier.net/gu
 ### Profil
 
 @```
-from StructureDefinition where url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationTransaction' select Name: name, Canonical: url
+from StructureDefinition where url = 'https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationTransaction' select Name: name, Canonical: url
 ```
 
-{{tree:https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationTransaction, hybrid}}
+{{tree:https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationTransaction, hybrid}}
 
 ### Anmerkungen zu Must-Support-Feldern
 
 @```from
 	StructureDefinition
 where
-    url = 'https://gematik.de/fhir/isik/v4/Medikation/StructureDefinition/ISiKMedikationTransaction'
+    url = 'https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationTransaction'
 for differential.element
 where mustSupport = true
   and short.exists()
