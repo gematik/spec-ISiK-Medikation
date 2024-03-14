@@ -40,12 +40,21 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Feld
 
 **Ressourcendiagramm AMTS**
 
-### Vereinfachtes Informationsmodell AMTS
+### Informationsmodelle AMTS
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Basismodul/rc/main-stufe-4/Material/images/diagrams/amts_infomodell.svg" alt="Vereinfachtes AMTS Infomodell" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_infomodel_med.svg" alt="Infomodell AMTS aus Perspektive der Medikation" width="90%"/>
 
-**Vereinfachtes Infomodell AMTS**
+**Infomodell AMTS aus Perspektive der Medikation**
 
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_infomodel_basis.svg" alt="Infomodell AMTS mit relevanten Basisinformation" width="90%"/>
+
+**Infomodell AMTS mit relevanten Basisinformation**
+
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_infomodel_labvit.svg" alt="Infomodell AMTS mit relevanten Labor- und Vitalinformatione" width="90%"/>
+
+**Infomodell AMTS mit relevanten Labor- und Vitalinformatione**
 
 
 ### Interaktionen im Rahmen AMTS
