@@ -27,3 +27,4 @@ Alias: $EntlassungsgrundErsteUndZweiteStelle = http://fhir.de/CodeSystem/dkgev/E
 Alias: $EntlassungsgrundDritteStelle = http://fhir.de/CodeSystem/dkgev/EntlassungsgrundDritteStelle
 Alias: $LocationPhysicalType = http://terminology.hl7.org/CodeSystem/location-physical-type
 Alias: $identifier-type-de-basis = http://fhir.de/CodeSystem/identifier-type-de-basis
+Alias: $capabilitystatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation

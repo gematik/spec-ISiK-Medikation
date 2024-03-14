@@ -298,93 +298,6 @@ Usage: #definition
     * extension
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #SHALL
-    * type = #List
-    * supportedProfile = "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsListe"
-    * interaction[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * code = #create
-    * interaction[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * code = #read
-    * interaction[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * code = #update
-    * interaction[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * code = #search-type
-    * searchInclude[+] = "List:patient"
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-    * searchInclude[+] = "List:encounter"
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-    * searchInclude[+] = "List:item"
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-    * searchParam[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * name = "_id"
-      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
-      * type = #token
-    * searchParam[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * name = "code"
-      * definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
-      * type = #token
-    * searchParam[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * name = "date"
-      * definition = "http://hl7.org/fhir/SearchParameter/clinical-date"
-      * type = #date
-    * searchParam[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * name = "encounter"
-      * definition = "http://hl7.org/fhir/SearchParameter/clinical-encounter"
-      * type = #reference
-    * searchParam[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * name = "item"
-      * definition = "http://hl7.org/fhir/SearchParameter/List-item"
-      * type = #reference
-    * searchParam[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * name = "patient"
-      * definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
-      * type = #reference
-    * searchParam[+]
-      * extension
-        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-        * valueCode = #SHALL
-      * name = "status"
-      * definition = "http://hl7.org/fhir/SearchParameter/List-status"
-      * type = #token
-  * resource[+]
-    * extension
-      * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-      * valueCode = #SHALL
     * type = #Medication
     * supportedProfile = "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament"
     * interaction[+]
@@ -550,6 +463,10 @@ Usage: #definition
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #SHALL
     * type = #Observation
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKAlkoholAbusus"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKRaucherStatus"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKSchwangerschaftsstatus"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKStillstatus"
     * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchung"
     * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungCRP"
     * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungGFR"
@@ -628,6 +545,13 @@ Usage: #definition
         * valueCode = #SHALL
       * name = "status"
       * definition = "http://hl7.org/fhir/SearchParameter/Observation-status"
+      * type = #token
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * name = "value-concept"
+      * definition = "http://hl7.org/fhir/SearchParameter/Observation-value-concept"
       * type = #token
     * searchParam[+]
       * extension
@@ -868,3 +792,65 @@ Usage: #definition
 * rest.resource[=].searchParam[=].name = "name"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Practitioner-name"
 * rest.resource[=].searchParam[=].type = #string
+* rest.resource[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].extension.valueCode = #SHALL
+* rest.resource[=].type = #Condition
+* rest.resource[=].supportedProfile = "https://gematik.de/fhir/isik/StructureDefinition/ISiKDiagnose"
+* rest.resource[=].interaction[0].extension.url = $capabilitystatement-expectation
+* rest.resource[=].interaction[=].extension.valueCode = #SHALL
+* rest.resource[=].interaction[=].code = #read
+* rest.resource[=].interaction[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].interaction[=].extension.valueCode = #SHALL
+* rest.resource[=].interaction[=].code = #search-type
+* rest.resource[=].searchParam[0].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "_id"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "clinical-status"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-clinical-status"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "patient"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
+* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "subject"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-subject"
+* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "encounter"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-encounter"
+* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "recorded-date"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-recorded-date"
+* rest.resource[=].searchParam[=].type = #date
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "related"
+* rest.resource[=].searchParam[=].definition = "http://fhir.de/SearchParameter/Condition-related"
+* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #MAY
+* rest.resource[=].searchParam[=].name = "category"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-category"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchInclude = "Condition:patient"
+* rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[+] = "Condition:subject"
+* rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[+] = "Condition:encounter"
+* rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude = "Encounter:diagnosis"
+* rest.resource[=].searchRevInclude[=].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
