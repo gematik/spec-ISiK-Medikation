@@ -863,7 +863,9 @@
             "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungSerumkreatinin",
             "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungThrombozyten",
             "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungTroponin",
-            "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungTSH"
+            "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungTSH",
+            "https://gematik.de/fhir/isik/StructureDefinition/ISiKKoerpergewicht",
+            "https://gematik.de/fhir/isik/StructureDefinition/ISiKKoerpergroesse"
           ],
           "interaction": [
             {

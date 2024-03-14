@@ -476,6 +476,8 @@ Usage: #definition
     * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungThrombozyten"
     * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungTroponin"
     * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungTSH"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKKoerpergewicht"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKKoerpergroesse"
     * interaction[+]
       * extension
         * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
