@@ -485,7 +485,7 @@ Usage: #definition
         * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
         * valueCode = #SHALL
       * code = #search-type
-    * searchInclude[+] = "RiskAssessment:patient"
+    * searchInclude[+] = "AllergyIntolerance:patient"
       * extension
         * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
         * valueCode = #SHALL
@@ -544,6 +544,111 @@ Usage: #definition
         * valueCode = #MAY
       * name = "type"
       * definition = "http://hl7.org/fhir/SearchParameter/clinical-type"
+      * type = #token
+  * resource[+]
+    * extension
+      * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * valueCode = #SHALL
+    * type = #Observation
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchung"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungCRP"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungGFR"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungHb"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungPCT"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungSerumkreatinin"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungThrombozyten"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungTroponin"
+    * supportedProfile[+] = "https://gematik.de/fhir/isik/StructureDefinition/ISiKLaboruntersuchungTSH"
+    * interaction[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * code = #create
+    * interaction[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * code = #read
+    * interaction[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * code = #update
+    * interaction[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * code = #search-type
+    * searchInclude[+] = "Observation:encounter"
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+    * searchInclude[+] = "Observation:patient"
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * name = "_id"
+      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
+      * type = #token
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * name = "code"
+      * definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
+      * type = #token
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * name = "date"
+      * definition = "http://hl7.org/fhir/SearchParameter/conformance-date"
+      * type = #date
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * name = "encounter"
+      * definition = "http://hl7.org/fhir/SearchParameter/clinical-encounter"
+      * type = #reference
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * name = "patient"
+      * definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
+      * type = #reference
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * name = "status"
+      * definition = "http://hl7.org/fhir/SearchParameter/Observation-status"
+      * type = #token
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #SHALL
+      * name = "value-quantity"
+      * definition = "http://hl7.org/fhir/SearchParameter/Observation-value-quantity"
+      * type = #quantity
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #MAY
+      * name = "_profile"
+      * definition = "http://hl7.org/fhir/SearchParameter/Resource-profile"
+      * type = #token
+    * searchParam[+]
+      * extension
+        * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+        * valueCode = #MAY
+      * name = "category"
+      * definition = "http://hl7.org/fhir/SearchParameter/Observation-category"
       * type = #token
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
