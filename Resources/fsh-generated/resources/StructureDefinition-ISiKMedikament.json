@@ -596,7 +596,7 @@
         "id": "Medication.batch",
         "path": "Medication.batch",
         "short": "Angaben zur Charge",
-        "comment": "Bitte beachten Sie die Regelungen der Bundesmantelvertragspartner: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung.",
+        "comment": "Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung.",
         "mustSupport": true
       },
       {
