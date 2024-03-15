@@ -14,129 +14,10 @@
  ' Vervollständigen im Sinne von: https://github.com/gematik/spec-ISiK-Medikation/blob/rc/main-stufe-4/Material/docs/Medikation%20Abgleich%20bestehende%20Spezifikationen.xlsx
 
 
-class  ISiKLaboruntersuchung <Observation><<(P,#8DA5C4)>>{
-   Dokumentation auf Simplifier 
-   [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchung ISiK Laboruntersuchung]]
-   ---
-   code : **LOINCCodes**
-   |_ coding
-      |_ (All Slices)			
-         |_ system
-         |_ code
-         |_ display
-      |_ loinc : **LOINCCodes**
-   . . .
-   value[x]
-   |_ valueQuantity
-      |_ value
-      |_ unit
-      |_ system : http://unitsofmeasure.org
-   . . .
-}
+
    'ISiKMedikation::itemReference --> ISiKMedikation
 
-'observations childs
-together {
-
-   class ISiKLaboruntersuchungCRP <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchungcrp ISiK Laboruntersuchung CRP]]
-      ---
-      |_ coding
-         |_ loinc : **ObservationCodesCRP**
-         |_ snomed : code **55235003**
-      value[x]
-      |_ valueQuantity : **ObservationUnitsCRP**
-      . . .
-   }
-
-   class ISiKLaboruntersuchungGFR <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchunggfr ISiK Laboruntersuchung GFR]]
-      ---
-      |_ coding
-         |_ loinc : **ObservationCodesGFR**
-         |_ snomed : code **80274001**
-      value[x]
-      |_ valueQuantity : **ObservationUnitsGFR**
-      . . .
-   }
-
-   class ISiKLaboruntersuchungHb <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchunghb ISiK Laboruntersuchung Hb]]
-      ---
-      |_ coding
-         |_ loinc : **ObservationCodesHb**
-         |_ snomed : code **416125006**
-      value[x]
-      |_ valueQuantity : **ObservationUnitsHb**
-      . . .
-   }
-
-   class ISiKLaboruntersuchungPCT <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchungpct ISiK Laboruntersuchung PCT]]
-      ---
-      |_ coding
-         |_ loinc : **ObservationCodesPCT**
-         |_ snomed : code **418752001**
-      value[x]
-      |_ valueQuantity : **ObservationUnitsPCT**
-      . . .
-   }
-
-   class ISiKLaboruntersuchungSerumkreatinin <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchungserumkreatinin ISiK Laboruntersuchung Serumkreatinin]]
-      ---
-     |_ coding
-         |_ loinc : **ObservationCodesSerumkreatinin**
-         |_ snomed : code **70901006**
-      value[x]
-      |_ valueQuantity : **ObservationUnitsSerumkreatinin**
-      . . .
-   }
-
-   class ISiKLaboruntersuchungThrombozyten <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchungthrombozyten ISiK Laboruntersuchung Thrombozyten]]
-      ---
-      |_ coding
-         |_ loinc : **ObservationCodesThrombozyten**
-         |_ snomed : code **365632008**
-      value[x]
-      |_ valueQuantity : **ObservationUnitsThrombozyten**
-      . . .
-   }
-
-   class ISiKLaboruntersuchungTroponin <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchungtroponin ISiK Laboruntersuchung Troponin]]
-      ---
-      |_ coding
-         |_ loinc : **ObservationCodesTroponin**
-         |_ snomed : code **105000003**
-      value[x]
-      |_ valueQuantity : **ObservationUnitsTroponin**   
-      . . .
-   }
-
-   class ISiKLaboruntersuchungTSH <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchungtsh ISiK Laboruntersuchung TSH]]
-      ---
-      |_ coding
-         |_ loinc : **ObservationCodesTSH**
-         |_ snomed : code **61167004**
-      value[x]
-      |_ valueQuantity : **ObservationUnitsTSH** 
-      . . .      
-   }
-}
-'vital observations
-
-together {
+namespace Infomodell_LaborVitalObservations {
    class ISiKKoerpergewicht <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v4/isikkoerpergewicht ISiK Körpergewicht]]
@@ -145,205 +26,21 @@ together {
       Dokumentation auf Simplifier 
       [[https://gematik.de/fhir/isik/StructureDefinition/ISiKKoerpergroesse ISiK Koerpergroesse]]
    }
-}
 
-'Valuesets Observations
-
-   class LOINCCodes <ValueSet><<(V,#8DA5C4)>>{
-      Dokumentation auf HL7 Org 
-      [[http://hl7.org/fhir/ValueSet/observation-codes Observation Codes]] from [[https://loinc.org/ LOINC]]
-   }
-
-   class SchwangerschaftEtMethodeVS <ValueSet><<(V,#8DA5C4)>>{
+   class  ISiKLaboruntersuchung <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/schwangerschaftetmethodevs Schwangerschaft Estimated Methode]] from [[http://loinc.org LOINC]]
-   }
-
-
-together {
-   class AllergyIntoleranceCriticality <ValueSet><<(V,#8DA5C4)>>{
-      Dokumentation auf HL7 Org 
-      [[https://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html Allergy Intolerance Criticality]] from [[https://hl7.org/fhir/R4/codesystem-allergy-intolerance-criticality.html HL7]]
-   }
-   class AllergyIntoleranceVerificationStatus <ValueSet><<(V,#8DA5C4)>>{
-      Dokumentation auf HL7 Org 
-      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-verification.html Allergy Intolerance Verification Status]] from [[https://www.hl7.org/fhir/R4/codesystem-allergyintolerance-verification.html HL7]]
-   }
-   class AllergyIntoleranceClinicalStatus <ValueSet><<(V,#8DA5C4)>>{
-      Dokumentation auf HL7 Org 
-      [[https://www.hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html Allergy Intolerance Clinical Status]] from [[https://www.hl7.org/fhir/R4/codesystem-allergyintolerance-clinical.html HL7]]
-   }
-   class AllergyIntoleranceType <ValueSet><<(V,#8DA5C4)>>{
-      Dokumentation auf HL7 Org 
-      [[http://hl7.org/fhir/ValueSet/allergy-intolerance-type Allergy Intolerance Type]] from [[http://hl7.org/fhir/allergy-intolerance-type Code System of Allergy Intolerance]]
-   }
-   class AllergyIntoleranceCode <ValueSet><<(V,#8DA5C4)>>{
-      Dokumentation auf HL7 Org 
-      [[http://hl7.org/fhir/ValueSet/allergyintolerance-code Substance/Product, Condition, NegationCodes]] from [[http://snomed.info/sct SNOMED CT]]
-   }
-   class ReactionEventSeverity <ValueSet><<(V,#8DA5C4)>> {
-      Dokumentation auf HL7 Org 
-      [[https://hl7.org/fhir/R4/valueset-reaction-event-severity.html Reaction Eventu Severity]] from [[https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html HL7]]
-   }
-}
-
-   'together Observations_Codes {
-      class ObservationCodesGFR <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationcodesgfr Observation Codes GFR]] from [[http://loinc.org LOINC]]
-      }
-
-      class ObservationCodesHb <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationcodeshb Observation Codes Hb]] from [[http://loinc.org LOINC]]
-      }
-
-      class ObservationCodesPCT <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationcodespct Observation Codes PCT]] from [[http://loinc.org LOINC]]
-      }
-
-      class ObservationCodesSerumkreatinin <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationcodesserumkreatinin Observation Codes Serumkreatinin]] from [[http://loinc.org LOINC]]
-      }
-
-      class ObservationCodesThrombozyten <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationcodesthrombozyten Observation Codes Thrombozyten]] from [[http://loinc.org LOINC]]
-      }
-
-      class ObservationCodesTroponin <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationcodestroponin Observation Codes Troponin]] from [[http://loinc.org LOINC]]
-      }
-
-      class ObservationCodesTSH <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationcodestsh Observation Codes TSH]] from [[http://loinc.org LOINC]]
-      }
-
-   
-
-   'together Observations_Units {
-      class ObservationUnitsCRP <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationunitscrp Observation Units CRP]] from [[http://unitsofmeasure.org UCUM]]
-      }
-      class ObservationCodesCRP <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationcodescrp Observation Codes CRP]] from [[http://loinc.org LOINC]]
-      }
-   
-      class ObservationUnitsGFR <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationunitsgfr Observation Units GFR]] from [[http://unitsofmeasure.org UCUM]]
-      }
-
-      class ObservationUnitsHb <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationunitshb Observation Units Hb]] from [[http://unitsofmeasure.org UCUM]]
-      }
-
-      class ObservationUnitsPCT <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationunitspct Observation Units PCT]] from [[http://unitsofmeasure.org UCUM]]
-      }
-
-      class ObservationUnitsSerumkreatinin <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationunitsserumkreatinin Observation Units Serumkreatinin]] from [[http://unitsofmeasure.org UCUM]]
-      }
-
-      class ObservationUnitsThrombozyten <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationunitsthrombozyten Observation Units Thrombozyten]] from [[http://unitsofmeasure.org UCUM]]
-      }
-
-      class ObservationUnitsTroponin <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationunitstroponin Observation Units Troponin]] from [[http://unitsofmeasure.org UCUM]]
-      }
-
-      class ObservationUnitsTSH <ValueSet><<(V,#8DA5C4)>>{
-         Dokumentation auf Simplifier 
-         [[https://simplifier.net/isik-labor-v4/observationunitstsh Observation Units TSH]] from [[http://unitsofmeasure.org UCUM]]
-      }
-   
-class ISiKAllergieUnvertraeglichkeit <AllergyIntolerance><<(P,#8DA5C4)>>{
-   Dokumentation auf Simplifier 
-   [[https://simplifier.net/isik-basis-v4/isikallergieunvertraeglichkeit ISiK AllergieUnvertraeglichkeit]]
-   ---
-   clinicalStatus : **AllergyIntoleranceClinicalStatusCodes**
-   |_ coding
-   verificationStatus : **AllergyIntoleranceVerificationStatusCodes**
-   |_ coding
-   type : **AllergyIntoleranceType**
-   category : **AllergyIntoleranceCategory**
-   criticality : **AllergyIntoleranceCriticality**
-   code
-   |_ coding
-   . . .
-}
-
-class ISiKLebensZustand <Observation><<(P,#8DA5C4)>>{
-   Dokumentation auf Simplifier 
-   [[https://simplifier.net/isik-basis-v4/isiklebenszustand ISiK LebensZustand]]
-   ---
-   status : **ObservationStatus**
-   code
-   subject : Reference ( **Patient** | \nGroup | Device | Location)
-   . . .
-}
-
- 
-   class ISiKAlkoholAbusus <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/isikalkoholabusus ISiK Alkohol Abusus]]
+      [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchung ISiK Laboruntersuchung]]
       ---
-      code : snomed sct **15167005**
+      code : **LOINCCodes**
       . . .
-   }
-   class ISiKRaucherStatus <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/isikraucherstatus ISiK Raucherstatus]]
-      ---
-      code : snomed sct **77176002**
-      . . .
-   }
-'Oservation Childs    
-together Observations {
-
-   class ISiKSchwangerschaftErwarteterEntbindungstermin <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/isikschwangerschafterwarteterentbindungstermin ISiK Schwangerschaft - Erwarteter Entbindungstermin]]
-      ---
-      code : **SchwangerschaftEtMethodeVS**
-      . . .
-   }
-   class ISiKSchwangerschaftsstatus <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/isikschwangerschaftsstatus ISiK Schwangerschaftsstatus]]
-      ---
-      code : loinc **82810-3**
-      . . .
-   }
-   
-   class SchwangerschaftsstatusVS <ValueSet><<(V,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/schwangerschaftsstatusvs Schwangerschaft Status]] from [[http://loinc.org LOINC]]
-   }
-
-   class ISiKStillstatus <Observation><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/isikstillstatus ISiK Stillstatus]]
-      ---
-      code : snomed sct **1260078007**
+      value[x]
+         |_ value
+         |_ system : http://unitsofmeasure.org
       . . .
    }
 }
 
-'together ISiK_Basis {
+namespace Infomodell_Basis {
    class ISiKPatient <Patient><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v4/isikpatient ISiK Patient]]
@@ -352,119 +49,127 @@ together Observations {
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v4/isikkontaktgesundheitseinrichtung ISiK Kontakt Gesundheitseinrichtung]]
    }  
-    class ISiKProzedur <Procedure><<(P,#8DA5C4)>>{
+   class ISiKProzedur <Procedure><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v4/isikprozedur ISiK Prozedur]]
    }
+
    
-   class ISiKAngehoeriger <RelatedPerson><<(P,#8DA5C4)>>{
+   class ISiKAllergieUnvertraeglichkeit <AllergyIntolerance><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/isikangehoeriger ISiK Angehoeriger]]
+      [[https://simplifier.net/isik-basis-v4/isikallergieunvertraeglichkeit ISiK AllergieUnvertraeglichkeit]]
+      ---
+      type : **AllergyIntoleranceType**
+      category : **AllergyIntoleranceCategory**
+      criticality : **AllergyIntoleranceCriticality**
+      code
+      |_ coding
+      . . .
    }
-'}
+
+   class ISiKLebensZustand <Observation><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v4/isiklebenszustand ISiK LebensZustand]]
+      ---
+      status : **ObservationStatus**
+      code
+      subject : Reference ( **Patient** | \nGroup | Device | Location)
+      . . .
+   }  
+
+   class ISiKDiagnose <Condition><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-basis-v4/isikdiagnose ISiK Diagnose]]
+   }
+   
+}
+'Valuesets Observations
 
 'Medikation related
 together {
-   class  ISiKMedikationsVerabreichung <Medication><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-medikation-v4/isikmedikationsverabreichung ISiK MedikationsVerabreichung]]
+   class ISiKAMTSBewertung <RiskAssessment><<(P,#8DA5C4)>>{
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_AMTSBewertung hier]] oder auf
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikamtsbewertung ISiK AMTS Bewertung]]
+      ---
+      subject : Reference( **Patient** )
+      encounter : Reference( **Encounter** )
+      condition : Reference( **Condition** )
+      reasonReference : Reference( **Condition** | **Observation** | \nDiagnosticReport | **DocumentReference** )
+      basis : Reference( **Resource** )
+      prediction
    }
+   
+   class ISiKMedikament <Medication><<(P,#8DA5C4)>>{
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_Medikament hier]] oder auf 
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikmedikament ISiK Medikament]]
+      ---
+   }
+   'ISiKMedikation::itemReference --> ISiKMedikation
 
    class ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-medikation-v4/isikmedikationsinformation ISiK MedikationsInformation]]
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsInformation hier]] oder auf 
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikmedikationsinformation ISiK Medikationsinformation]]
+      ---
+      id
+      ...
+      ...
+      AcceptedRisk : **Extension**
+      |_ text
+      |_ Bewertung : **ISiKAMTSBewertung**
    }
+
+   class ISiKMedikationsVerabreichung <MedicationAdministration><<(P,#8DA5C4)>>{
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsVerabreichung hier]] oder auf 
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikmedikationsverabreichung ISiK Medikationsverabreichung]]
+      ---
+      id
+      ...
+      ...
+      AcceptedRisk : **Extension**
+      |_ text
+      |_ Bewertung : **ISiKAMTSBewertung**
+   }
+
+   class ISiKMedikationsVerordnung <MedicationRequest><<(P,#8DA5C4)>>{
+      Dokumentation [[https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsVerordnung hier]] oder auf
+      Simplifier [[https://simplifier.net/isik-medikation-v4/isikmedikationsverordnung ISiK Medikationsverordnung]]
+      ---
+      id
+      ...
+      ...
+      AcceptedRisk : **Extension**
+      |_ text
+      |_ Bewertung : **ISiKAMTSBewertung**
+   }
+
 }
-
-
 
 'Relations regarding the observation
 
 'diamonds
 'together {
 <> MultiRef_PatEnc
-MultiRef_PatEnc -- "  1..1  " ISiKPatient
-MultiRef_PatEnc -- "  0..1  " ISiKKontaktGesundheitseinrichtung
-<> MultiRef_LabReason
-MultiRef_LabReason -- ISiKMedikationsInformation
-MultiRef_LabReason -- ISiKMedikationsVerabreichung
-MultiRef_LabReason -- ISiKProzedur
+MultiRef_PatEnc -- "  1..1  " Infomodell_Basis.ISiKPatient
+MultiRef_PatEnc -- "  0..1  " Infomodell_Basis.ISiKKontaktGesundheitseinrichtung
+<> MultiRef_AccRisk
+MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsVerordnung::AcceptedRisk
+MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsVerabreichung::AcceptedRisk
+MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsInformation::AcceptedRisk
 '}
 
-ISiKLaboruntersuchung::subject -up-> MultiRef_PatEnc
-ISiKLaboruntersuchung::partOf -up-> MultiRef_LabReason
 
+Infomodell_Basis.ISiKAllergieUnvertraeglichkeit .. Infomodell_Basis.ISiKDiagnose
 
-
-'Specific Observations inherit from generic obseration
-ISiKLaboruntersuchung <|-- ISiKLaboruntersuchungCRP
-ISiKLaboruntersuchung <|-- ISiKLaboruntersuchungGFR
-ISiKLaboruntersuchung <|-- ISiKLaboruntersuchungHb
-ISiKLaboruntersuchung <|-- ISiKLaboruntersuchungPCT
-ISiKLaboruntersuchung <|-- ISiKLaboruntersuchungSerumkreatinin
-ISiKLaboruntersuchung <|-- ISiKLaboruntersuchungThrombozyten
-ISiKLaboruntersuchung <|-- ISiKLaboruntersuchungTroponin
-ISiKLaboruntersuchung <|-- ISiKLaboruntersuchungTSH
-
-'Observations to ValuesSets
-ISiKLaboruntersuchungCRP::coding .down.> "  1..1  " ObservationCodesCRP
-ISiKLaboruntersuchungCRP::valueQuantity  ..down. ObservationUnitsCRP
-
-ISiKLaboruntersuchungGFR::coding .down.> "  1..1  " ObservationCodesGFR
-ISiKLaboruntersuchungGFR::valueQuantity  ..down. ObservationUnitsGFR
-
-ISiKLaboruntersuchungHb::coding .down.> "  1..1  " ObservationCodesHb
-ISiKLaboruntersuchungHb::valueQuantity  ..down. ObservationUnitsHb
-
-ISiKLaboruntersuchungPCT::coding .down.> "  1..1  " ObservationCodesPCT
-ISiKLaboruntersuchungPCT::valueQuantity  ..down. ObservationUnitsPCT
-
-ISiKLaboruntersuchungSerumkreatinin::coding .down.> "  1..1  " ObservationCodesSerumkreatinin
-ISiKLaboruntersuchungSerumkreatinin::valueQuantity  ..down. ObservationUnitsSerumkreatinin
-
-ISiKLaboruntersuchungThrombozyten::coding .down.> "  1..1  " ObservationCodesThrombozyten
-ISiKLaboruntersuchungThrombozyten::valueQuantity  ..down. ObservationUnitsThrombozyten
-
-ISiKLaboruntersuchungTroponin::coding .down.> "  1..1  " ObservationCodesTroponin
-ISiKLaboruntersuchungTroponin::valueQuantity  ..down. ObservationUnitsTroponin
-
-ISiKLaboruntersuchungTSH::coding .down.> "  1..1  " ObservationCodesTSH
-ISiKLaboruntersuchungTSH::valueQuantity  ..down. ObservationUnitsTSH
-
-
-'Relations regarding basis AMTS
-
-'diamonds
-'together {
-<> MultiRef_PracPatRel
-MultiRef_PracPatRel -- ISiKPractitioner
-MultiRef_PracPatRel -- ISiKPatient
-MultiRef_PracPatRel -- ISiKAngehoeriger
-<> MultiRef_AllergyDetails
-MultiRef_AllergyDetails -up- AllergyIntoleranceCriticality
-MultiRef_AllergyDetails -up- AllergyIntoleranceVerificationStatus
-MultiRef_AllergyDetails -up- AllergyIntoleranceClinicalStatus
-MultiRef_AllergyDetails -up- ReactionEventSeverity
-MultiRef_AllergyDetails -up- AllergyIntoleranceType
-MultiRef_AllergyDetails -up-> "  1..1  " AllergyIntoleranceCode
-'}
+Infomodell_Basis.ISiKAllergieUnvertraeglichkeit .. Infomodell_Basis.ISiKProzedur
 
 'AMTS
-ISiKAllergieUnvertraeglichkeit::patient --> "  1..1  " ISiKPatient
-ISiKAllergieUnvertraeglichkeit::encounter --> "  0..1  " ISiKKontaktGesundheitseinrichtung
-ISiKAllergieUnvertraeglichkeit::recorder --> "  0..1  " MultiRef_PracPatRel
-ISiKAllergieUnvertraeglichkeit::recorder .up.  MultiRef_AllergyDetails
+ISiKMedikament "  1..1  " <-down-  MultiRef_AccRisk
+ISiKAMTSBewertung -- MultiRef_AccRisk
+ISiKAMTSBewertung --> MultiRef_PatEnc
 
-'Specific Observations inherit from generic obseration
-ISiKLebensZustand <|-- ISiKAlkoholAbusus
-ISiKLebensZustand <|-- ISiKRaucherStatus
-ISiKLebensZustand <|-- ISiKSchwangerschaftsstatus
-ISiKLebensZustand <|-- ISiKSchwangerschaftErwarteterEntbindungstermin
-ISiKLebensZustand <|-- ISiKStillstatus
-
-ISiKSchwangerschaftsstatus::hasMember -down-> "  0..1  " ISiKSchwangerschaftErwarteterEntbindungstermin
-ISiKSchwangerschaftsstatus::value ..> "  0..1  " SchwangerschaftsstatusVS
-ISiKSchwangerschaftErwarteterEntbindungstermin::code ..> "  1..1  " SchwangerschaftEtMethodeVS 
-
+ISiKAMTSBewertung -right-> "  0..*  " Infomodell_LaborVitalObservations.ISiKLaboruntersuchung
+ISiKAMTSBewertung -down-> "  0..1  " Infomodell_Basis.ISiKAllergieUnvertraeglichkeit
+ISiKAMTSBewertung -down-> "  0..*  " Infomodell_Basis.ISiKLebensZustand
+ISiKAMTSBewertung::basis -right-> Infomodell_LaborVitalObservations
 
 @enduml

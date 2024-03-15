@@ -144,5 +144,3 @@ Daher ist im Anhang ist ein thematischer [Auszug des IOP-Arbeitskreises](https:/
 *Anmerkungen:*
 * AMTS-Checks sollten protokolliert werden, um Verantwortlichkeit und Rückverfolgbarkeit zu gewährleisten. Dies gilt sowohl für den positiven Fall der Veträglichkeit, als auch für den Fall in dem eine akzeptierte oder eine nicht akzeptable Risikobewertung erstellt wid.
 * AMTS-Checks könnten protokolliert werden, um redundante Prüfungen und Mehrarbeit zu vermeiden.
-
--- 

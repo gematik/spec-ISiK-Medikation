@@ -241,7 +241,7 @@ together {
       }
    
 
-'together ISiK_Basis {
+namespace Infomodell_Basis {
    class ISiKPatient <Patient><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v4/isikpatient ISiK Patient]]
@@ -254,8 +254,7 @@ together {
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v4/isikprozedur ISiK Prozedur]]
    }
-   
-'}
+}
 
 'Medikation related
 namespace Infomodell_Medikation {
@@ -277,12 +276,12 @@ namespace Infomodell_Medikation {
 'diamonds
 'together {
 <> MultiRef_PatEnc
-MultiRef_PatEnc --> "  1..1  " ISiKPatient
-MultiRef_PatEnc --> "  0..1  " ISiKKontaktGesundheitseinrichtung
+MultiRef_PatEnc --> "  1..1  " Infomodell_Basis.ISiKPatient
+MultiRef_PatEnc --> "  0..1  " Infomodell_Basis.ISiKKontaktGesundheitseinrichtung
 <> MultiRef_LabReason
 MultiRef_LabReason -- Infomodell_Medikation.ISiKMedikationsInformation
 MultiRef_LabReason -- Infomodell_Medikation.ISiKMedikationsVerabreichung
-MultiRef_LabReason -- ISiKProzedur
+MultiRef_LabReason -- Infomodell_Basis.ISiKProzedur
 '}
 
 ISiKLaboruntersuchung::subject -up-> MultiRef_PatEnc

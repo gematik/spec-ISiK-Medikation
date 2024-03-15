@@ -50,8 +50,7 @@ together {
       [[https://hl7.org/fhir/R4/valueset-reaction-event-severity.html Reaction Eventu Severity]] from [[https://hl7.org/fhir/R4/codesystem-reaction-event-severity.html HL7]]
    }
 }
-
-   
+together {
 class ISiKAllergieUnvertraeglichkeit <AllergyIntolerance><<(P,#8DA5C4)>>{
    Dokumentation auf Simplifier 
    [[https://simplifier.net/isik-basis-v4/isikallergieunvertraeglichkeit ISiK AllergieUnvertraeglichkeit]]
@@ -68,6 +67,11 @@ class ISiKAllergieUnvertraeglichkeit <AllergyIntolerance><<(P,#8DA5C4)>>{
    . . .
 }
 
+class ISiKDiagnose <Condition><<(P,#8DA5C4)>>{
+   Dokumentation auf Simplifier 
+   [[https://simplifier.net/isik-basis-v4/isikdiagnose ISiK Diagnose]]
+}
+
 class ISiKLebensZustand <Observation><<(P,#8DA5C4)>>{
    Dokumentation auf Simplifier 
    [[https://simplifier.net/isik-basis-v4/isiklebenszustand ISiK LebensZustand]]
@@ -77,7 +81,7 @@ class ISiKLebensZustand <Observation><<(P,#8DA5C4)>>{
    subject : Reference ( **Patient** | \nGroup | Device | Location)
    . . .
 }
-
+}
  
    class ISiKAlkoholAbusus <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
@@ -94,8 +98,7 @@ class ISiKLebensZustand <Observation><<(P,#8DA5C4)>>{
       . . .
    }
 'Oservation Childs    
-together Observations {
-
+together  {
    class ISiKSchwangerschaftErwarteterEntbindungstermin <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-basis-v4/isikschwangerschafterwarteterentbindungstermin ISiK Schwangerschaft - Erwarteter Entbindungstermin]]
@@ -162,7 +165,6 @@ namespace Infomodell_Medikation {
    }
 }
 
-
 namespace Infomodell_LaborVitalObservations {
       class ISiKKoerpergewicht <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
@@ -179,18 +181,6 @@ namespace Infomodell_LaborVitalObservations {
    }
 }
 
-namespace Infomodell_Medikation {
-   class  ISiKMedikationsVerabreichung <Medication><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-medikation-v4/isikmedikationsverabreichung ISiK MedikationsVerabreichung]]
-   }
-
-   class ISiKMedikationsInformation <MedicationStatement><<(P,#8DA5C4)>>{
-      Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-medikation-v4/isikmedikationsinformation ISiK MedikationsInformation]]
-   }
-}
-
 
 'Relations regarding the observation
 
@@ -199,16 +189,18 @@ namespace Infomodell_Medikation {
 <> MultiRef_PatEncProc
 MultiRef_PatEncProc -- "  1..1  " ISiKPatient
 MultiRef_PatEncProc -- "  0..1  " ISiKKontaktGesundheitseinrichtung
-MultiRef_PatEncProc -- ISiKProzedur
 <> MultiRef_MedRelation
-MultiRef_MedRelation -- ISiKMedikationsInformation
-MultiRef_MedRelation -- ISiKMedikationsVerabreichung
+MultiRef_MedRelation <-- Infomodell_Medikation.ISiKMedikationsInformation
+MultiRef_MedRelation <-- Infomodell_Medikation.ISiKMedikationsVerabreichung
 '}
 
-Infomodell_LaborVitalObservations.ISiKLaboruntersuchung -up-> MultiRef_PatEncProc
+ISiKPatient - MultiRef_MedRelation
+
+ISiKAllergieUnvertraeglichkeit --> ISiKProzedur
+Infomodell_LaborVitalObservations.ISiKLaboruntersuchung <-- ISiKProzedur
 'Vital Observations
-Infomodell_LaborVitalObservations.ISiKKoerpergewicht -up-> MultiRef_PatEncProc
-Infomodell_LaborVitalObservations.ISiKKoerpergroesse -up-> MultiRef_PatEncProc
+Infomodell_LaborVitalObservations.ISiKKoerpergewicht --> MultiRef_PatEncProc
+Infomodell_LaborVitalObservations.ISiKKoerpergroesse --> MultiRef_PatEncProc
 
 'Relations regarding basis AMTS
 
@@ -228,8 +220,7 @@ MultiRef_AllergyDetails -up-> "  1..1  " AllergyIntoleranceCode
 '}
 
 'AMTS
-ISiKAllergieUnvertraeglichkeit::patient --> "  1..1  " ISiKPatient
-ISiKAllergieUnvertraeglichkeit::encounter --> "  0..1  " ISiKKontaktGesundheitseinrichtung
+ISiKAllergieUnvertraeglichkeit::patient --> MultiRef_PatEncProc
 ISiKAllergieUnvertraeglichkeit::recorder --> "  0..1  " MultiRef_PracPatRel
 ISiKAllergieUnvertraeglichkeit::recorder .up.  MultiRef_AllergyDetails
 
@@ -244,5 +235,7 @@ ISiKSchwangerschaftsstatus::hasMember -down-> "  0..1  " ISiKSchwangerschaftErwa
 ISiKSchwangerschaftsstatus::value ..> "  0..1  " SchwangerschaftsstatusVS
 ISiKSchwangerschaftErwarteterEntbindungstermin::code ..> "  1..1  " SchwangerschaftEtMethodeVS 
 
+ ISiKAllergieUnvertraeglichkeit . ISiKDiagnose
+ ISiKDiagnose . ISiKLebensZustand 
 
 @enduml

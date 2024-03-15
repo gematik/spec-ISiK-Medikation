@@ -46,9 +46,36 @@ namespace ISiK_Basis {
       Dokumentation [[https://simplifier.net/guide/isik-basis-v4/markdown-Datenobjekte-Datenobjekte_AllergieUnvertraeglichkeit hier]] oder auf
       Simplifier [[https://simplifier.net/isik-basis-v4/isikallergieunvertraeglichkeit ISiK Allergie Unvertraeglichkeit]]
       ---
-      clinicalStatus
-      ...
-      ...
+      type : **AllergyIntoleranceType**
+      category : **AllergyIntoleranceCategory**
+      criticality : **AllergyIntoleranceCriticality**
+      code
+      |_ coding
+         |_ snomed-ct
+         |_ ask 
+         |_ atc     
+      |_ text
+      patient : Reference (**Patient**)
+      encounter : Reference (**Encounter**)
+      onset[x]
+      |_ onsetDateTime
+      |_ onsetAge
+      |_ onsetString
+      recordedDate : dateTime
+      recorder : Reference (**Practitioner** | PractitionerRole | \n**Patient** | RelatedPerson)
+      |_ reference
+      |_ display
+      asserter	: Reference (**Patient** | **RelatedPerson** | \n**Practitioner** | PractitionerRole)
+      |_ reference
+      |_ display      
+      note : Annotation
+      |_ author[x]
+      reaction
+      |_ manifestation
+         |_ coding
+         |_ text      
+      |_ severity	
+      |_ exposureRoute
    }
 
    namespace Observations {
@@ -128,8 +155,31 @@ namespace ISiK_Medikation {
       Simplifier [[https://simplifier.net/isik-medikation-v4/isikamtsbewertung ISiK AMTS Bewertung]]
       ---
       id
-      ...
-      ...
+      status
+      code
+      |_ coding
+      |_ text
+      subject : Reference( **Patient** )
+      |_ reference
+      encounter : Reference( **Encounter** )
+      |_ reference
+      occurrence[x]
+      |_ occurrenceDateTime
+      |_ occurrencePeriod
+      condition : Reference( **Condition** )
+      |_ reference
+      reasonCode
+      |_ coding
+      |_ text
+      reasonReference : Reference( **Condition** | **Observation** | \nDiagnosticReport | **DocumentReference** )
+      |_ reference
+      basis : Reference( **Resource** )
+      |_ reference
+      prediction
+      |_ outcome
+         |_ coding        
+         |_ text
+      . . .
    }
    
    class ISiKMedikament <Medication><<(P,#8DA5C4)>>{
@@ -186,9 +236,32 @@ namespace ISiK_Labor {
       Dokumentation [[https://simplifier.net/guide/isik-labor-v4/ImplementationGuide-markdown-Datenobjekte-Profile_Laboruntersuchung hier]] oder auf
       Simplifier [[https://simplifier.net/isik-labor-v4/isiklaboruntersuchung ISiK Laboruntersuchung]]
       ---
-      id
-      ...
-      ...
+       id
+      status : **ObservationStatus*
+      category : **ObservationCategoryCodes**
+      code : **LOINCCodes**
+      |_ coding
+      |_ text
+      subject : Reference ( **Patient** | Group | Device | Location)
+      encounter : Reference ( **Encounter** )
+      effective[x]
+      |_ effectiveDateTime
+      issued
+      value[x]
+      |_ valueQuantity
+      specimen : Reference (Specimen)
+      |_ reference
+      |_ identifier
+      device : Reference ( Device | DeviceMetric )
+      referenceRange
+      |_ low
+      |_ high 
+      |_ type : **ObservationReferenceRangeMeaningCodes**
+         |_ coding
+         |_ text
+      |_ appliesTo
+         |_ coding
+         |_ text
    }
    'ISiKMedikation::itemReference --> ISiKMedikation
 
