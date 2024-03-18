@@ -37,3 +37,11 @@ Canonical: https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/ve
 Canonical: https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/verabreichung
 
 {{render:https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/verabreichung}}
+
+### CapabilityStatement (Requirement) ISiK-Medikation - Bereich AMTS
+
+Der lesende Zugriff auf die typischen Eingangs-Parameter eines AMTS-Systems (Medikationsangaben, Laborwerte usw.) wurde vor dem Hintergrund integriert, dass die entsprechenden Informationen vom AMTS-System nach der Bewertung wieder zurückgegeben werden können (im Sinn von zugrundeliegenden, zum Zeitpunkt der Bewertung vorhandene Informationen).
+
+Canonical: https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/amts
+
+{{render:https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/amts}}

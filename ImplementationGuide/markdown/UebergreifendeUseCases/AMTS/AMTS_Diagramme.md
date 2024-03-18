@@ -15,7 +15,7 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und daf
 **Anwendungsfälle AMTS**
 
 
-### Interkationen In der Versorgung
+### Interaktionen In der Versorgung
 
 Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem [Auszug des IOP-Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) dargestellt, welcher der Erarbeitung diese Implemetierungsleitfadens zugrunde lag. Weitere Prozesse und Details finden sich im [Anhang](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug).
 
