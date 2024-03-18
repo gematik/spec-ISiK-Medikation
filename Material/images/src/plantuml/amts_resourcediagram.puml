@@ -16,11 +16,27 @@
 namespace ISiK_VitalparameterUndKoerpermasze {
    class ModulVitalparameterUndKoerpermasze <<(M,#FFDC36)>>{
       Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v3/~introduction ISiK VitalparameterUndKoerpermasze Stufe 3]]
+      [[https://simplifier.net/isik-vitalparameter-v4 ISiK VitalparameterUndKoerpermasze Stufe 4]]
    }
    class ISiKKoerpergewicht <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
       [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v4/isikkoerpergewicht ISiK Körpergewicht]]
+      ---
+      code
+      |_ coding
+         |_ loinc : code **29463-7**
+         |_ snomed : **ISiKKoerpergewichtSCTVS**
+      . . .
+   }
+   class ISiKKoerpergroesse <Observation><<(P,#8DA5C4)>>{
+      Dokumentation auf Simplifier 
+      [[https://simplifier.net/isik-vitalparameter-v4/isikkoerpergroesse ISiK Koerpergroesse]]
+      ---
+      code
+      |_ coding
+         |_ loinc : code **8302-2**
+         |_ snomed : **ISiKKoerpergroesseSCTVS**
+      . . .
    }
 }
 

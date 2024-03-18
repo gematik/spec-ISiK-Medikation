@@ -11,4 +11,3 @@ Dieser Übergreifende Use Case mehrere Profile aus verschiedenen Modulen. Die Ei
 - Verschiedene aktuelle [Merkmale der Vitalparamater](https://simplifier.net/guide/isik-vitalparameter-v4/ImplementationGuide-markdown-Datenobjekte) zur Erfassung von Einflussfaktoren, welche die physische Kondition des Pattienten betreffen, insbesondere.
   - Köprergewicht,
   - Körpergröße.
-- 

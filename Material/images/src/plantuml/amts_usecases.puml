@@ -22,11 +22,16 @@ storage (AMTS) {
         (Neu-Verordung)
         (Änderung)
         (Abgabe)
+        (Wechselwirkung)
     }
     storage (Reconciliation){
         (Stationäre Aufnahme mit\n Medikationsumstellung)
         (Entlassung mit\n Medikationsumstellung)
     }
+    (Risikofaktoren)
+    (Allergien &\n Inteloranzen)
+    (Lebenzustände)
+    (Umfassender\n Medikationsplan)
     cloud "Neue Informationslage" as cl1 {
     }
 }

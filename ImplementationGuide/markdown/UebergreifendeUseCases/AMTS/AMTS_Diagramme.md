@@ -1,7 +1,7 @@
 ## Grafische Zusammenfassung
 Im Gegensatz zu den sonstigen Zusammenfassungen, wird in den folgenden Diagrammen auf den vorliegenden Übergreifende Use Case (AMTS) fokussiert und nicht auf das gesamte Modul.
 
-## Use Case Diagramm AMTS
+### Use Case Diagramm AMTS
 
 Im Folgenden wird ein grafischer Überblick über möglichst in diesem Implementierungsleitfaden (AMTS) abgedeckten Anwednungsfälle gegeben.
 Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und dafür hinreichende Funktionen dargestellt:
@@ -11,7 +11,8 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und daf
 * Allgemeine und intuitiv Adverse Use Cases. Diese gilt es zu vermeiden.
 * In den Funktionen werde triviale Suchen einer Ressoruce anhand ihrer eigenen Properties nicht dargestelt, z.B. Suche einer Ressoruce anhand der ID, Name, Code usw.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_usecases.svg" alt="AMTS Use Cases" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_usecases.svg" alt="AMTS Use Cases" width="90%"/>
+
 **Anwendungsfälle AMTS**
 
 
@@ -51,9 +52,9 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Feld
 **Infomodell AMTS mit relevanten Basisinformation**
 
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_infomodel_labvit.svg" alt="Infomodell AMTS mit relevanten Labor- und Vitalinformatione" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_infomodel_labvit.svg" alt="Infomodell AMTS mit relevanten Labor- und Vitalinformationen" width="90%"/>
 
-**Infomodell AMTS mit relevanten Labor- und Vitalinformatione**
+**Infomodell AMTS mit relevanten Labor- und Vitalinformationen**
 
 
 ### Interaktionen im Rahmen AMTS

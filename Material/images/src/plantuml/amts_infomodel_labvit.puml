@@ -139,20 +139,21 @@ together {
 together {
    class ISiKKoerpergewicht <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-vitalparameter-und-koerpermasze-v4/isikkoerpergewicht ISiK Körpergewicht]]
+      [[https://simplifier.net/isik-vitalparameter-v4/isikkoerpergewicht ISiK Körpergewicht]]
       ---
       |_ coding
          |_ loinc : code **29463-7**
          |_ snomed : **ISiKKoerpergewichtSCTVS**
-
+      . . .
    }
    class ISiKKoerpergroesse <Observation><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 
-      [[https://gematik.de/fhir/isik/StructureDefinition/ISiKKoerpergroesse ISiK Koerpergroesse]]
+      [[https://simplifier.net/isik-vitalparameter-v4/isikkoerpergroesse ISiK Koerpergroesse]]
       ---
       |_ coding
          |_ loinc : code **8302-2**
          |_ snomed : **ISiKKoerpergroesseSCTVS**
+      . . .
    }
 }
 

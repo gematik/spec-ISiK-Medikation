@@ -152,9 +152,9 @@ together {
 MultiRef_PatEnc -- "  1..1  " Infomodell_Basis.ISiKPatient
 MultiRef_PatEnc -- "  0..1  " Infomodell_Basis.ISiKKontaktGesundheitseinrichtung
 <> MultiRef_AccRisk
-MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsVerordnung::AcceptedRisk
-MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsVerabreichung::AcceptedRisk
-MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsInformation::AcceptedRisk
+MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsVerordnung
+MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsVerabreichung
+MultiRef_AccRisk <-down- "  0..1  " ISiKMedikationsInformation
 '}
 
 

@@ -88,13 +88,8 @@
               "generation": "markdown",
               "page": [
                 {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Motivation.md",
-                  "title": "Motivation",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Narrativ.md",
-                  "title": "Anwendung im Krankenhaus",
+                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Narrative.md",
+                  "title": "AMTS Einführung",
                   "generation": "markdown"
                 },
                 {

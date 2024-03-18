@@ -50,7 +50,7 @@ Valide Beispiele für das Profil MedikationsVerabreichung:
 Einfache Einnahme:
 {{json:ExampleISiKMedikationsVerabreichung}}
 
-Zytostaka-Infusion:
+Zytostatika-Infusion:
 {{json:ExampleISiKMedikationsVerabreichung2}}
 
 ## Interaktionen
