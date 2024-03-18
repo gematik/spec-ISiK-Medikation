@@ -1,5 +1,5 @@
 CodeSystem: ISiKMedikationsart
-Id: ISiKMedikationsart
+Id: ISiKMedikationsartCS
 Description: "ISiK Therapiearten für Medikation"
 * insert Meta
 * #akut "Akutmedikation"

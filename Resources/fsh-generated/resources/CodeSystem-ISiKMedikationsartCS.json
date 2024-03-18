@@ -3,9 +3,9 @@
   "status": "active",
   "content": "complete",
   "name": "ISiKMedikationsart",
-  "id": "ISiKMedikationsart",
+  "id": "ISiKMedikationsartCS",
   "description": "ISiK Therapiearten für Medikation",
-  "url": "https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsart",
+  "url": "https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsartCS",
   "concept": [
     {
       "code": "akut",

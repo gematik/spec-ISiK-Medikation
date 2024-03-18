@@ -15,7 +15,7 @@
       "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart",
       "valueCoding": {
         "code": "akut",
-        "system": "https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsart"
+        "system": "https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsartCS"
       }
     },
     {
