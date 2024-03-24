@@ -191,28 +191,19 @@
         "sliceName": "EDQM",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKCoding"
+            ]
+          }
+        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform"
         }
-      },
-      {
-        "id": "Medication.form.coding:EDQM.system",
-        "path": "Medication.form.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.form.coding:EDQM.code",
-        "path": "Medication.form.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.form.coding:EDQM.display",
-        "path": "Medication.form.coding.display",
-        "mustSupport": true
       },
       {
         "id": "Medication.amount",
@@ -360,26 +351,17 @@
         "sliceName": "ASK",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKASKCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ask"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK.system",
-        "path": "Medication.ingredient.item[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK.code",
-        "path": "Medication.ingredient.item[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK.display",
-        "path": "Medication.ingredient.item[x].coding.display",
         "mustSupport": true
       },
       {
@@ -388,26 +370,17 @@
         "sliceName": "ATC-DE",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKATCCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/bfarm/atc"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE.system",
-        "path": "Medication.ingredient.item[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE.code",
-        "path": "Medication.ingredient.item[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE.display",
-        "path": "Medication.ingredient.item[x].coding.display",
         "mustSupport": true
       },
       {
@@ -416,26 +389,17 @@
         "sliceName": "PZN",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKPZNCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ifa/pzn"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN.system",
-        "path": "Medication.ingredient.item[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN.code",
-        "path": "Medication.ingredient.item[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN.display",
-        "path": "Medication.ingredient.item[x].coding.display",
         "mustSupport": true
       },
       {
@@ -444,26 +408,17 @@
         "sliceName": "WG14",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKWG14Coding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/abdata/wg14"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14.system",
-        "path": "Medication.ingredient.item[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14.code",
-        "path": "Medication.ingredient.item[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14.display",
-        "path": "Medication.ingredient.item[x].coding.display",
         "mustSupport": true
       },
       {

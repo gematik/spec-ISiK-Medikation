@@ -78,26 +78,17 @@
         "sliceName": "PZN",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKPZNCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ifa/pzn"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:PZN.system",
-        "path": "MedicationAdministration.medication[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:PZN.code",
-        "path": "MedicationAdministration.medication[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:PZN.display",
-        "path": "MedicationAdministration.medication[x].coding.display",
         "mustSupport": true
       },
       {
@@ -106,26 +97,17 @@
         "sliceName": "ATC-DE",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKATCCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/bfarm/atc"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:ATC-DE.system",
-        "path": "MedicationAdministration.medication[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:ATC-DE.code",
-        "path": "MedicationAdministration.medication[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:ATC-DE.display",
-        "path": "MedicationAdministration.medication[x].coding.display",
         "mustSupport": true
       },
       {
@@ -134,26 +116,17 @@
         "sliceName": "WG14",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKWG14Coding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/abdata/wg14"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:WG14.system",
-        "path": "MedicationAdministration.medication[x].coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:WG14.code",
-        "path": "MedicationAdministration.medication[x].coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:WG14.display",
-        "path": "MedicationAdministration.medication[x].coding.display",
         "mustSupport": true
       },
       {
@@ -347,26 +320,17 @@
         "sliceName": "SNOMED-CT",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://snomed.info/sct"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.site.coding:SNOMED-CT.system",
-        "path": "MedicationAdministration.dosage.site.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.site.coding:SNOMED-CT.code",
-        "path": "MedicationAdministration.dosage.site.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.site.coding:SNOMED-CT.display",
-        "path": "MedicationAdministration.dosage.site.coding.display",
         "mustSupport": true
       },
       {
@@ -400,6 +364,14 @@
         "sliceName": "EDQM",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://standardterms.edqm.eu"
         },
@@ -410,28 +382,19 @@
         }
       },
       {
-        "id": "MedicationAdministration.dosage.route.coding:EDQM.system",
-        "path": "MedicationAdministration.dosage.route.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.route.coding:EDQM.code",
-        "path": "MedicationAdministration.dosage.route.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.route.coding:EDQM.display",
-        "path": "MedicationAdministration.dosage.route.coding.display",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT",
         "path": "MedicationAdministration.dosage.route.coding",
         "sliceName": "SNOMED-CT",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://snomed.info/sct"
         },
@@ -440,23 +403,6 @@
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/isik/ValueSet/SctRouteOfAdministration"
         }
-      },
-      {
-        "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.system",
-        "path": "MedicationAdministration.dosage.route.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.code",
-        "path": "MedicationAdministration.dosage.route.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.route.coding:SNOMED-CT.display",
-        "path": "MedicationAdministration.dosage.route.coding.display",
-        "mustSupport": true
       },
       {
         "id": "MedicationAdministration.dosage.route.text",
