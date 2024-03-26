@@ -17,31 +17,31 @@ Implementiert ein System mehr als einen der drei Bereiche dieser Spezifikation, 
 
 Die Verwendung der [CapabilityStatement-Expectation](https://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.
 
-Die für dieses Modul bestätigungsrelevanten Teile des [Moduls "Basis"](https://simplifier.net/guide/Implementierungsleitfaden-ISiK-Basismodul-Stufe-3/ImplementationGuide-markdown-Einfuehrung?version=current) sind in den CapabilityStatements ebenfalls enthalten.
+Die für dieses Modul bestätigungsrelevanten Teile des [Moduls "Basis"](https://simplifier.net/guide/isik-basis-v4?version=current) sind in den CapabilityStatements ebenfalls enthalten.
 
 
 ### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsinformation
 
-Canonical: https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/information
+Canonical: https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformation
 
-{{render:https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/information}}
+{{render:https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformation}}
 
 ### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverordnung
 
-Canonical: https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/verordnung
+Canonical: https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerordnung
 
-{{render:https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/verordnung}}
+{{render:https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerordnung}}
 
 ### CapabilityStatement (Requirement) ISiK-Medikation - Bereich Medikationsverabreichung
 
-Canonical: https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/verabreichung
+Canonical: https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerabreichung
 
-{{render:https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/verabreichung}}
+{{render:https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerabreichung}}
 
 ### CapabilityStatement (Requirement) ISiK-Medikation - Bereich AMTS
 
 Der lesende Zugriff auf die typischen Eingangs-Parameter eines AMTS-Systems (Medikationsangaben, Laborwerte usw.) wurde vor dem Hintergrund integriert, dass die entsprechenden Informationen vom AMTS-System nach der Bewertung wieder zurückgegeben werden können (im Sinn von zugrundeliegenden, zum Zeitpunkt der Bewertung vorhandene Informationen).
 
-Canonical: https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/amts
+Canonical: https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformation
 
-{{render:https://gematik.de/fhir/isik/CapabilityStatement/medikation-server/amts}}
+{{render:https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformation}}
