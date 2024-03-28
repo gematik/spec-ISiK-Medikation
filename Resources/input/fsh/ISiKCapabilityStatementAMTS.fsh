@@ -1,7 +1,7 @@
 Instance: ISiKCapabilityStatementAMTS
 InstanceOf: CapabilityStatement
 Usage: #definition
-* insert Meta-CapabilityStatementInformation
+* insert Meta-CapabilityStatementAMTS
 * name = "ISiKCapabilityStatementAMTS"
 * title = "ISiK CapabilityStatement AMTS Server"
 * contact.telecom.system = #url

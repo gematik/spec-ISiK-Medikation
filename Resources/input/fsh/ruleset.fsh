@@ -14,6 +14,15 @@ RuleSet: Meta-CapabilityStatementInformation
 * implementationGuide = "https://gematik.de/fhir/Medikation/ImplementationGuide/ISiK-Medikation"
 * url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformation"
 
+RuleSet: Meta-CapabilityStatementAMTS
+* status = #active
+* experimental = false
+* version = "4.0.0-rc"
+* publisher = "gematik GmbH"
+* date = "2024-03-13"
+* implementationGuide = "https://gematik.de/fhir/Medikation/ImplementationGuide/ISiK-Medikation"
+* url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationAMTS"
+
 RuleSet: Meta-CapabilityStatementVerordnung
 * status = #active
 * experimental = false
