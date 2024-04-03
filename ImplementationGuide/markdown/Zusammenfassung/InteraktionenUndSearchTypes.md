@@ -18,7 +18,7 @@ Die Interaktionen sind somit in allen drei Bereichen äquivalent:
 
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/interaktionen.svg" class="center" alt="Interkationen" width="90%"/>
 
-**Interkationen der FHIR Akteure**
+**Interaktionen der FHIR Akteure**
 
 
 ## Search Includes and Reverse Includes

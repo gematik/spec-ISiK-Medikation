@@ -1,4 +1,4 @@
-## Ressourcen Diagramm
+## Ressourcen Diagramm (WIP)
 
 Im Folgenden wird ein grafischer Überblick über alle in diesem Modul profilierten Ressourcen gegeben.
 Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Felder dargestellt:
