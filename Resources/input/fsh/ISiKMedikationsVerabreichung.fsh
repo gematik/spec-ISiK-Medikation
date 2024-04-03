@@ -18,21 +18,12 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
       PZN 0..1 MS and
       ATC-DE 0..1 MS and
       WG14 0..1 MS
-  * coding[PZN]
+  * coding[PZN] only ISiKPZNCoding
     * ^patternCoding.system = $cs-pzn
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
-  * coding[ATC-DE]
+  * coding[ATC-DE] only ISiKATCCoding
     * ^patternCoding.system = $cs-atc-de
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
-  * coding[WG14]
+  * coding[WG14] only ISiKWG14Coding
     * ^patternCoding.system = $cs-wg14
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
   * text MS
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
@@ -73,11 +64,8 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
       * ^slicing.rules = #open
     * coding contains
         SNOMED-CT 0..1 MS
-    * coding[SNOMED-CT]
+    * coding[SNOMED-CT] only ISiKSnomedCTCoding
       * ^patternCoding.system = $cs-sct
-      * system 1..1 MS
-      * code 1..1 MS
-      * display MS
     * text MS
   * route MS
     * ^short = "Route"
@@ -89,15 +77,11 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
         EDQM 0..1 MS and
         SNOMED-CT 0..1 MS
     * coding[EDQM] from $vs-edqm-route (required)
+    * coding[EDQM] only ISiKCoding
       * ^patternCoding.system = $cs-edqm
-      * system 1..1 MS
-      * code 1..1 MS
-      * display MS
     * coding[SNOMED-CT] from SctRouteOfAdministration (required)
+    * coding[SNOMED-CT] only ISiKSnomedCTCoding
       * ^patternCoding.system = $cs-sct
-      * system 1..1 MS
-      * code 1..1 MS
-      * display MS
     * text MS
   * dose MS
     * ^short = "verabreichte Dosis"

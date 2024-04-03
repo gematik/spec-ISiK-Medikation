@@ -48,9 +48,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * coding contains
       EDQM 0..1 MS
   * coding[EDQM] from $vs-edqm-doseform (required)
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
+  * coding[EDQM] only ISiKCoding
 * amount MS
   * ^short = "Menge"
   * numerator 1..1 MS
@@ -82,26 +80,14 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
         ATC-DE 0..1 MS and
         PZN 0..1 MS and
         WG14 0..1 MS
-    * coding[ASK]
+    * coding[ASK] only ISiKASKCoding
       * ^patternCoding.system = $cs-ask
-      * system 1..1 MS
-      * code 1..1 MS
-      * display MS
-    * coding[ATC-DE]
+    * coding[ATC-DE] only ISiKATCCoding
       * ^patternCoding.system = $cs-atc-de
-      * system 1..1 MS
-      * code 1..1 MS
-      * display MS
-    * coding[PZN]
+    * coding[PZN] only ISiKPZNCoding
       * ^patternCoding.system = $cs-pzn
-      * system 1..1 MS
-      * code 1..1 MS
-      * display MS
-    * coding[WG14]
+    * coding[WG14] only ISiKWG14Coding
       * ^patternCoding.system = $cs-wg14
-      * system 1..1 MS
-      * code 1..1 MS
-      * display MS
     * text MS
   * itemReference MS
     * ^short = "Bestandteil (Referenz auf ein anderes Medikament)"
