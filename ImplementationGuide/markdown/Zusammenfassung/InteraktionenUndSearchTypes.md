@@ -16,9 +16,12 @@ Für jeden dieser Bereiche wurden jeweils drei Akteure identifiziert, die in ein
 
 Die Interaktionen sind somit in allen drei Bereichen äquivalent:
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-3/Material/images/diagrams/Interaktionen.svg" class="center" alt="Interkationen" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/interaktionen.svg" class="center" alt="Interkationen" width="90%"/>
 
-# Search Includes and Reverse Includes
+**Interkationen der FHIR Akteure**
+
+
+## Search Includes and Reverse Includes
 
 Damit diese Akteure sinnvoll miteinander kommunizieren, wird im Folgenden ein grafischer Überblick über die in diesem Modul zu inlduierenden Suchparameter und Operationen gegeben.
 Da es sich um eine Zusammenfassung handelt, gelten Bedingungen für die gezeigten Inhalte:
@@ -26,6 +29,9 @@ Da es sich um eine Zusammenfassung handelt, gelten Bedingungen für die gezeigte
 * Ein Doppelpunkt meint den Zugriff auf ein Element des beinhaltenden Profils.
 * Das Elemente hinter einem Doppelpunkt besitzt wiederum die Suchparameter (alle Must-Support Elemente!), die hier in die Suchsyntax zu inkludieren sind.
 
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/search_includes.svg" class="center" alt="Searchtypes" width="90%"/>
+
+**Inkludierte Suchparameter nach Capability Statement**
 
 ## Zusammenhang zu den Use Cases
 
@@ -34,5 +40,3 @@ Im Folgenden sollen für die Lesart des Diagramms zwei Beispiele gegeben werden:
 * **Beispiel für einen Include Zusammenhang:** Eine Applikation muss in der Lage sein ein _ISiK Medikament_ anhand der Eigenschaften von _ingredient_ suchen zu können, um den (Adverse) Use Case einer _Wechelwirkung_ zu vermeiden.
 * **Beispiel für einen Reverse Include Zusammenhang:** Eine Applikation muss in der Lage sein zu einem _ISiK Patient_ alle _Encounter_ anhand der Zugehörigkeit via _subject_ suchen zu können, um den Anwendungsfall der vollständigen _Dokumentation_ gewährleisten zu können.
   
-
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/search_includes.svg" class="center" alt="Searchtypes" width="90%"/>
