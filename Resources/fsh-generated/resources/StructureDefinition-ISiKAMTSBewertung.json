@@ -6,7 +6,7 @@
   "name": "ISiKAMTSBewertung",
   "status": "active",
   "experimental": false,
-  "date": "2024-03-13",
+  "date": "2024-04-04",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Informationen zur Risikobeurteilung im Rahmen der Arzneimitteltherapiesicherheit (AMTS).",
   "fhirVersion": "4.0.1",
