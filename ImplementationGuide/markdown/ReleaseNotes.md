@@ -4,11 +4,30 @@ Im Rahmen der ISiK-Veröffentlichungen wird das [Semantic Versioning](https://se
 
 Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von Releases. Die dritte Ziffer Y (Release x.0.y) bezeichnet eine technische Korrektur und versioniert kleinere Änderungen (Packages) während eines Jahres, z. B. 1.0.1.
 
+
+----
+**Release Candidate zur Kommentierung**
+
 Version: 4.0.0-rc
 
-Datum: 03.04.2024
+Datum: 04.04.2024
 
-**Release Candidate zur Kommentierung**
+* 10 neue Beispiele und Prosa zu Rezepturen, Verordnung, Verabreichung, Abgabezyklus, Darreichungsformen und nicht-trivialen Kombinationen
+* Neue Übergreifender Use Case AMTS, inklusive mini-IG und Auszügen aus IOP-Arbeitskreis. Dieser Übergreifende USe Case nutzt auch (insbesondere) weitere neue Profile aus der Basis und dem Support-Modul Labor
+  * Diagnose aus Basis (ISiKAllergieUnvertraeglichkeit, chr. Krankheit wie Parkinson, usw.)
+  * Observation aus Basis (Schwangerschaft, AlkoholAbusus usw.)
+  * Observation aus Labor oder Vital (SerumKreatinin, GFR, Blutbild, Gewicht usw.)
+* Neues Profil ISiKAMTSBewertung
+* Neues Extensions: 
+  * MedikationsArt in Form von Akut & Dauer
+  * Selbstmedikation
+  * Behandlungsziel
+  * Replaces als Ersatz-Verordnung
+  * AcceptedRisk im Zuge einer AMTS-Bewertung
+* Erweiterung um Use Case Diagramm, Resourcen Diagramm und Informationsmodell
+* Erweiterung um Use Case Zusammenhänge von verketteten Suchparametern
+
+**Full Changelog**: https://github.com/gematik/spec-ISiK-Medikation/compare/v.3.0.2...rc/main-stufe-4
 
 ----
 Version: 3.0.1

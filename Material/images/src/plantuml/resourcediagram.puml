@@ -428,9 +428,9 @@ namespace R4_Core {
 }
 
 namespace ISiK_Basis {
-   class Basismodul_Stufe_3 <<(M,#FFDC36)>>{
+   class Basismodul_Stufe_4 <<(M,#FFDC36)>>{
       Dokumentation auf Simplifier 
-      [[https://simplifier.net/isik-basis-v4/~introduction ISiK Basis Stufe 3]]
+      [[https://simplifier.net/isik-basis-v4/~introduction ISiK Basis Stufe 4]]
    }
    class ISiKPatient <Patient><<(P,#8DA5C4)>>{
       Dokumentation auf Simplifier 

@@ -15,7 +15,11 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Feld
 **Ressourcen Diagramm**
 
 
-## Informationsmodell
+## Informationsmodell Diagramm
+
+Für das Informationsmodell gilt des Weiteren:
+* Es werden nur die Rümpfe der Profile (Klassen) dargestellt.
+* ValueSets und CodeSystems werden, wenn relevant, über gestrichelte Linien dargestellt.
 
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/simple_infomodel.svg" alt="Vereinfachtes Informationsmodell" width="90%"/>
 
