@@ -1,12 +1,12 @@
 RuleSet: Meta
-* ^status = #active
+* ^status = #draft
 * ^experimental = false
 * ^publisher = "gematik GmbH"
 * ^version = "4.0.0-rc"
 * ^date = "2024-04-04"
 
 RuleSet: Meta-CapabilityStatementInformation
-* status = #active
+* status = #draft
 * experimental = false
 * version = "4.0.0-rc"
 * publisher = "gematik GmbH"
@@ -15,7 +15,7 @@ RuleSet: Meta-CapabilityStatementInformation
 * url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformation"
 
 RuleSet: Meta-CapabilityStatementAMTS
-* status = #active
+* status = #draft
 * experimental = false
 * version = "4.0.0-rc"
 * publisher = "gematik GmbH"
@@ -24,7 +24,7 @@ RuleSet: Meta-CapabilityStatementAMTS
 * url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationAMTS"
 
 RuleSet: Meta-CapabilityStatementVerordnung
-* status = #active
+* status = #draft
 * experimental = false
 * version = "4.0.0-rc"
 * publisher = "gematik GmbH"
@@ -33,7 +33,7 @@ RuleSet: Meta-CapabilityStatementVerordnung
 * url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerordnung"
 
 RuleSet: Meta-CapabilityStatementVerabreichung
-* status = #active
+* status = #draft
 * experimental = false
 * version = "4.0.0-rc"
 * publisher = "gematik GmbH"
