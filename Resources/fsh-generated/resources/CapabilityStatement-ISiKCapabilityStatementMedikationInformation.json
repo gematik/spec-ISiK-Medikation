@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "ISiKCapabilityStatementMedikationInformation",
   "url": "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationInformation",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
   "version": "4.0.0-rc",
   "publisher": "gematik GmbH",

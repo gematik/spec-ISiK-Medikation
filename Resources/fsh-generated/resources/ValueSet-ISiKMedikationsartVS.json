@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "ISiKMedikationsart",
   "id": "ISiKMedikationsartVS",
   "description": "ISiK Therapiearten für Medikation",
