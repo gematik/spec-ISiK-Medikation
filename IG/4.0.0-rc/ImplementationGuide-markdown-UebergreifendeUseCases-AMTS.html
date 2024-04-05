@@ -1,0 +1,1012 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Implementierungsleitfaden ISiK-Medikation</title>
+
+    <link rel="icon" href="static/styles/common/favicon.ico" />
+
+    <script src="static/styles/common/jquery/jquery.min.js"></script>
+    <script src="static/styles/common/bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/common/main.min.css" />
+    <link rel="stylesheet" href="static/styles/common/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/styles/common/rendering/rendering.min.css" />
+
+    <script src="static/styles/common/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/common/rendering/baseTreetable.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/twolevelmenu/style.css?v=1da8759c488f100" />
+
+</head>
+
+<body>
+
+    <div id="ig-viewer">
+
+        <div class="ig-view-content">
+
+            <div id="ig-view-twolevelmenu">
+
+                <div class="header" role="banner" aria-label="Header">
+                    
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+                <a class="navbar-brand" href="ImplementationGuide-markdown-Einfuehrung.html">
+                    Implementierungsleitfaden ISiK-Medikation
+                </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ImplementationGuide-markdown-Einfuehrung.html">
+                            Einf&#xFC;hrung
+                        </a>
+                    </li>
+
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Motivation <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Motivation.html">
+                                            Motivation
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-ReleaseNotes.html">
+                                            ReleaseNotes
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Zusammenfassung <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Zusammenfassung.html">
+                                            Zusammenfassung
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Zusammenfassung-UseCases.html">
+                                            Anwendungsf&#xE4;lle (Use Cases)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Zusammenfassung-Informationsmodell.html">
+                                            Informationsmodell
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Zusammenfassung-InteraktionenUndSearchTypes.html">
+                                            Interaktionen Und SearchTypes
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Festlegungen <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen.html">
+                                            &#xDC;bergreifende Festlegungen
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-BestaetigungsrelevanteSysteme.html">
+                                            Best&#xE4;tigungsrelevante Systeme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Kompatibilitaet.html">
+                                            Kompatibilit&#xE4;t
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-RestApi.html">
+                                            REST-API
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Use Cases <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeUseCases.html">
+                                            &#xDC;bergreifende Use Cases
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeUseCases-AMTS.html">
+                                            Arzneimitteltherapiesicherheit (AMTS)
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Datenobjekte <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte.html">
+                                            Datenobjekte
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-CapabilityStatement.html">
+                                            Capability Statement
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsInformation.html">
+                                            MedikationsInformation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsListe.html">
+                                            MedikationsListe
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsVerordnung.html">
+                                            MedikationsVerordnung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsVerabreichung.html">
+                                            MedikationsVerabreichung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_Medikament.html">
+                                            Medikament
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_AMTSBewertung.html">
+                                            AMTS-Bewertung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Bundle_MedikationTransaction.html">
+                                            Bundle MedikationTransaction
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Bundle_MedikationTransactionResponse.html">
+                                            Bundle MedikationTransactionResponse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Terminologie.html">
+                                            Terminologie
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                </div>
+
+                <div class="content container" role="main" aria-label="Main content">
+                    
+
+
+<div class="row">
+
+        <div class="col-md-6">
+            <ul class="nav nav-pills nav-stacked affix-top">
+                    <li>
+                        <a title="AMTS Einf&#xFC;hrung" href="#ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Narrative">AMTS Einf&#xFC;hrung</a>
+                    </li>
+                    <li>
+                        <a title="Grafische Zusammenfassung" href="#ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Diagramme">Grafische Zusammenfassung</a>
+                    </li>
+                    <li>
+                        <a title="Profile" href="#ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Profile">Profile</a>
+                    </li>
+                    <li>
+                        <a title="Anhang I - Auszug " href="#ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Apx_AuszugAK">Anhang I - Auszug </a>
+                    </li>
+            </ul>
+        </div>
+
+    <div class="col-md-18">
+
+        <div id="preview-content">
+
+            <h1 id="arzneitmitteltherapiesicherheit-im-krankenhaus-amts">Arzneitmitteltherapiesicherheit im Krankenhaus - AMTS</h1>
+
+
+                    <div id="ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Narrative">
+                        <h2 id="table-of-contents">Table of Contents <!-- omit from toc --></h2>
+<ul>
+<li><a href="#1-motivation-und-hintergrund">1. Motivation und Hintergrund</a></li>
+<li><a href="#2-ziele">2. Ziele</a>
+<ul>
+<li><a href="#21-out-of-scope">2.1. Out-of-Scope</a></li>
+</ul>
+</li>
+<li><a href="#3-stakeholder-user-und-weitere-systeme">3. Stakeholder, User und weitere Systeme</a>
+<ul>
+<li><a href="#31-user-und-systeme-im-fokus">3.1. User und Systeme im Fokus</a></li>
+<li><a href="#32-einordnung-in-die-isik-landschaft">3.2. Einordnung in die ISiK Landschaft</a></li>
+<li><a href="#33-weitere-zu-ber%C3%BCcksichtigende-systeme-und-standards">3.3. Weitere zu berücksichtigende Systeme und Standards</a></li>
+</ul>
+</li>
+<li><a href="#4-anwendungsf%C3%A4lle-und-versorgungsprozesse">4. Anwendungsfälle und Versorgungsprozesse</a>
+<ul>
+<li><a href="#41-user-stories-und-use-cases">4.1. User Stories und Use Cases</a></li>
+<li><a href="#42-user-stories---business">4.2. User Stories - Business</a></li>
+<li><a href="#43-exemplarische-abl%C3%A4ufe">4.3. Exemplarische Abläufe</a></li>
+<li><a href="#44-weitere-implizite-annahmen-und-weitere-informationen">4.4. Weitere implizite Annahmen und weitere Informationen</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="motivation-und-hintergrund">1. Motivation und Hintergrund</h2>
+<p>Dieser Implementierungsleitfaden beschreibt die an der Schnittstelle verfügbaren Informationen für eine sichere Arzneimitteltherapie. Das beinhaltet die Vermeidung sämtlicher unerwünschter und potenziell gefährlicher Reaktionen eines individuellen Patienten im Zuge der Einnahme einer verordneten Medikation. Ein intuitives Beispiel dafür ist eine Penicillinallergie des Patienten.</p>
+<p>Im Zuge der Ausbaustufe 4 des Moduls ISiK-Medikation werden die bereitgestellten Ressourcen der ISiK-Landschaft erweitert, sodass nun eine Vielzahl an Funktionen möglich ist, mit denen eine Medikation individuell durch die Informationssysteme beurteilt oder angepasst werden kann.
+Die bedeutendsten abzudeckenden Use Cases sind Wechselwirkungen, Allergien und Kontraindikationen, die vor einer Abgabe identifziert werden sollten. So lässt sich dann z.B. erkennen, ob ein Medikament in einem bestimmten Behandlungsfall nicht als sicher einzustufen ist. Mit den verfügbaren Informationen könnte potenziell auch ein individuell besser geeignetes Medikament vorgeschlagen werden.</p>
+<h2 id="ziele">2. Ziele</h2>
+<p>Ziele des vorliegenden IG sind:</p>
+<ol>
+<li>Die Identifikation und Beschreibung zentral relevanter Anwendungsfälle.</li>
+<li>Die Identifikation und nachfolgende Spezifikation neuer notwendiger (oder zu erweiternder) Ressourcen als Informationsträger für die AMTS Bewertung.</li>
+<li>Die Schaffung eines Implementierungsleitfadens zur Bereitstellung ebendieser AMTS relevanter Informationen.</li>
+<li>Die korrekte Abgrenzung des Leistungsumfang ISiK-Medikation im Bezug auf AMTS (Out-of-Scope).</li>
+</ol>
+<p>Die genauere Zielstellung kann unter Einbeziehung der Stakeholder in der Evolution von ISiK erweitert oder verändert werden.</p>
+<h3 id="out-of-scope">2.1. Out-of-Scope</h3>
+<p>Aufgrund technischer Beschränkungen oder eines starken implizierten Aufwands gibt es auch Aspekte, die aktuell noch außen vor bleiben müssen:</p>
+<ul>
+<li>Die Schaffung, Abstimmung und Spezifikation eines vollständigen ISiK Labor Moduls.</li>
+<li>Medical Knowledege Management. Eine medizinische Wissensdatenbank ohne Patientenbezug, in der zum Beispiel Informationen zu bekannten Nebenwirkungen,Wechselwirkungen oder Kontra-Indikationen gespeichert werden (z.B. FHIR-R5 Ressource <em>ClinicalUseDefinition</em>). Leider stehen entsprechende Ressourcen erst in R5 zur Verfügung und es gibt kein einheitliches Bild wo eine solche Medical Knowledge DB in der deutschen Gesundheitslandschaft (und in der Telematik Infrastruktur) zu verorten wäre.</li>
+<li>Die Einbeziehung eines Therapieziel (FHIR-R4 Ressource <em>Goal</em>), da dies sehr komplex ist und ein erheblicher Abstimmungsaufwand impliziert wäre.</li>
+<li>Die Einbeziehung eines Therapieplan (FHIR-R4 Ressource <em>Careplan</em>), da dieser ein neues Fachfeld braucht. Dieses Feld (Onkologie) würde ein neues ISiK Modul sowie IG begründen und benötigt eine eigene Arbeitsgruppe in einer zukünfitgen Stufe.</li>
+</ul>
+<p>Einige dieser Aspekte sind bereits im Backlog für kommende ISiK Entwicklungsstufen aufgenommen.</p>
+<h2 id="stakeholder-user-und-weitere-systeme">3. Stakeholder, User und weitere Systeme</h2>
+<p>Die Spezifikation richtet sich insbesondere an SW-Hersteller von 1) KIS,  2) zugehörigen Submodulen und Subsystemen, die von Stationsapotheker genutzt werden sowie 3) eigenständigen aber im Ökosystem integrierten Systemen, die in der Krankenhausapotheke zum Einsatz kommen. Alle anderen Hersteller von ISiK-nahen Systemen sind auch eingeladen sich zu beteiligen, da Aufrufe und Ergebnisse potenziell propagier werden müssen.</p>
+<p>Es handelt sich um eine technische Spezifikation, zu der keine weiteren medizinischen Fachexperten zu Rate gezogen werden müssen. Die sogenannten 'AMTS-Checks' - zur medizinischen und pharmakologischen Bewertung von AMTS - müssen durch die IS weiterhin selbst durchgeführt werden.</p>
+<h3 id="user-und-systeme-im-fokus">3.1. User und Systeme im Fokus</h3>
+<p>Primär zu berücksichtigende User sind</p>
+<ul>
+<li>Krankenhausmitarbeiter (MFAs, Ärzte etc.)</li>
+<li>Pharmazeutisches Personal (Apotheker, PTAs etc.)</li>
+<li>Patienten (bei Aufnahme, Entlassunge, stationärer Medikation usw.)</li>
+</ul>
+<p>Beteiligte Systeme sind prinzipiell alle bestätigungsrelevanten Systeme (siehe <a href="https://www.dkgev.de/themen/digitalisierung-daten/elektronische-datenuebermittlung/datenuebermittlung-nach-373-sgb-v-informationssysteme-im-krankenhaus/">DKG Festlegung</a>). Primär hervorzuheben sind dabei:</p>
+<ul>
+<li>KIS, auch fokussierte KIS der Dentalklinik oder der Mund-, Kiefer- und Gesichtschirurgie</li>
+<li>KIS-Submodule der Medikation</li>
+<li>Eigenständige Systeme der Krankenhausapotheke (AVS)</li>
+</ul>
+<p>Zudem sind hervorzuheben als mögliche Clients oder Subsysteme auch Datenbanken oder Services außerhalb der Krankenhauslandschaft, die Informationen bereitstellen über:</p>
+<ul>
+<li>Wirkstoffe und Wechselwirkungen</li>
+<li>Indikationen, Kontraindikationen und Nebenwirkungen</li>
+<li>Substitutionsmöglichkeiten und Generika</li>
+</ul>
+<h3 id="einordnung-in-die-isik-landschaft">3.2. Einordnung in die ISiK Landschaft</h3>
+<p>Als Übergreifender Use Case ist AMTS grundsätzlich im Modul Medikation verankert. Dennoch werden AMTS-relevante Information aus weiteren ISiK-Modulen benötigt, die aus verschiedenen Gründen dort fachlich zugeordnet werden und verbleiben:</p>
+<ul>
+<li><strong>ISiK Modul Medikation: Mit Informationen zur Medikation und Verordnung</strong> - In dem vorliegenden Modul finden sich Information zur aktuellen Medikation (z.B. Blutdruck-Senker) und patienten-spezifischen Verordnung. Ziel der hier verorteten Profile ist es vor allem Wechselwirkung zu weiteren Verordnungen oder Behandlungen zu identifizieren und in ihrem Risiko zu bewerten. Auch die Bewertung von akzeptieren Risiken findet sich hier. Da ISiK aktuell noch einen starken Patientenzentrischen Ansatz verfolgt, sei darauf hingewiesen, dass es keine MedicationKnowledge-Profile gibt (Arzneimittel- oder Wissensdatenbank im weiteren Sinne).</li>
+<li><strong>ISiK Basismodul: Mit Informationen zum Patienten und Diagnosen</strong> - Hier sind Profile im Zusammehang mit Allergien und Unverträglichkeiten verortet. Es gehören aber auch chronische Erkrankungen (z.B. Niereninsuffizienz), Lebensumstände (z.B. Schwangerschaft) und Lebensgewohnheiten (z.B. Raucher) dazu.
+<a href="https://simplifier.net/guide/isik-basis-v4">ISiK Basismodul</a></li>
+<li><strong>ISiK Support Modul Labor: Mit Informationen aus der Labor Diagnostik</strong> - In diesem Modul finden sich vor allem AMTS-relevante Beobachtungen und Messwerte, die als Ergebnis eines diagnostischen Prozesses oder einer Probe zugeordnet werden kann.
+<a href="https://simplifier.net/guide/isik-labor-v4">ISiK Modul Labor</a></li>
+</ul>
+<h3 id="weitere-zu-berucksichtigende-systeme-und-standards">3.3. Weitere zu berücksichtigende Systeme und Standards</h3>
+<p>Die Kompatibilitäten zu den <a href="https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeFestlegungen-Kompatibilitaet">gelisteten Spezifikationen</a> sollen weiterhin gewahrt bleiben.</p>
+<p>Da mit dem <a href="https://mio.kbv.de/display/EMP1X0X0/">MIO Medikationsplan</a> eine FHIR-Basiertes Lösung zur Verwendung in der ePA für Alle erstellt wird, sollte die Kompatibilität sowohl organisatorisch als auch in der Umsetzung der Spezifikation angestrebt werden.</p>
+<p>Neben den allgemein geltenden Festlegungen in FHIR und HL7v2 können auch folgende Festlegungen in die Entwicklung mit eingehen:</p>
+<ul>
+<li>Das Allergie Profil aus der Patientenkurzakte, <a href="https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-AllergyIntolerance-uv-ips.html">Allergy Intolerance (IPS) </a></li>
+<li>Die Bereiche <em>CAVE</em>, <em>Interaktionen</em> sowie <em>Indikationen und Nebenwirkungen</em> des AMTS-Modul der <a href="https://abdata.de/produkte/abdadatenbank2/amts-modul/">ABDADatenbank²</a></li>
+<li>Das AllergyIntolerance-Profil der KBV-Basisprofile <a href="https://simplifier.net/base1x0/kbv_pr_base_allergyintolerance">KBV_PR_Base_AllergyIntolerance</a></li>
+<li>Das AllergyIntolerance-Profil von GEVKO eMDAF <a href="https://simplifier.net/emdaf/emdafprallergyintolerance">eMDAF Allergien und Unverträglichkeiten</a></li>
+</ul>
+<h2 id="anwendungsfalle-und-versorgungsprozesse">4. Anwendungsfälle und Versorgungsprozesse</h2>
+<p>Im Vorfeld der Ausbaustufe 4 des Moduls ISiK-Medikation fand ein umfangreicher Arbeitskreis mit dem Thema &quot;Analyse der Mediaktionsprozesse&quot; des IOP-Councils statt. Dort wurden ambulante, stationäre sowie sektorenübergreifen Anwendungsfälle und Vesorgungsprozesse untersucht. Wie alle ISiK Spezifikation beziehen sich die Neuerungen am ISiK Modul Medikation allerdings vorrangig auf die Kommunikation innerhalb des Krankenhauses (d.h. zwischen KIS und Subsystemen).
+Daher ist im Anhang ist ein thematischer <a href="https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug">Auszug des IOP-Arbeitskreises</a> der Anwendungsfälle und Versorgungsprozesse für den stationären Sektor gegeben. Dieser ist für eine detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet und hat bildet die fachliche Grundlage (Motivation) des vorliegenden IG AMTS.</p>
+<h3 id="user-stories-und-use-cases">4.1. User Stories und Use Cases</h3>
+<p>In folgendem wird eine grob-granulare Übersicht über die User Stories bzw. Use Cases und die zugehörigen technischen Requirements gegeben.
+User Stories sollen dazu dienen die Bereiche der Bedarfsanalyse grob abzudecken, daraufhin zu präzisieren und die Problemdefinition zu schärfen. Sie fokussieren auf den Nutzer und was dieser mit einer Funktionalität erreichen möchte. Use Cases sind eher technisch orientiert und fokussieren verschiedene Einsatzszenarien deren Anwendungsfälle.</p>
+<h3 id="user-stories-business">4.2. User Stories - Business</h3>
+<p>Die User Stories beschreiben die grundlegenden Kontexte, in denen der Bedarf nach einem AMTS-Check und einem entsprechenden Informationsaustuasch entsteht.</p>
+<ul>
+<li><strong>User Story 01</strong> - AMTS Prüfung bei Verordnung, Änderung der Verordnung und Abgabe
+<ul>
+<li>Ein Heilberufler (insb. Ärzte, Apotheker) möchte AMTS-relevante Informationen abrufen, um eine sichere Verordnung, Änderung einer Verordnung (z.B. Substitution) oder Abgabe einer Medikation zu gewährleisten.</li>
+<li><strong>Requirement</strong>: Im Rahmen der Medikationsverordnung, -Änderung oder -Ausgabe MUSS der Nutzer auf AMTS hin prüfen können.</li>
+</ul>
+</li>
+<li><strong>User Story 02</strong> - AMTS Prüfung bei neuer Informationslage
+<ul>
+<li>Ein Heilberufler (insb. Ärzte, Apotheker) möchte AMTS-relevante Informationen abrufen, um eine sichere Abgabe einer Medikation zu gewährleisten.</li>
+<li><strong>Requirement</strong>: Im Rahmen neu bekanntgewordener Informationen MUSS der Nutzer auf AMTS hin prüfen können.</li>
+</ul>
+</li>
+<li><strong>User Story 03</strong> - Stationäre Aufnahme mit Medikationsumstellung (Medication Reconciliation)
+<ul>
+<li>Bei der stationären Aufnahme eines Patienten soll die bestehenden (häusliche oder ambulante) Medikation mit in das geänderte Versorgungsumfeld übersetzte und angepasst werden, um eine gleichwertige und sichere stationäre Verordnung zu gewährleisten.</li>
+<li><strong>Requirement</strong>: Im Rahmen der Patientenaufnahme MUSS der Nutzer auf AMTS hin prüfen können.</li>
+</ul>
+</li>
+<li><strong>User Story 04</strong> - Entlassung mit Medikationsumstellung (Medication Reconciliation)
+<ul>
+<li>Bei der Entlassung eines Patienten aus der stationären Versorgung soll die initiale Medikation mit in das sich ändernde Umfeld übersetzt und angepasst werden, um eine gleichwertige und sichere Weiterführung der Medikation zu gewährleisten.</li>
+<li><strong>Requirement</strong>: Im Rahmen der Entlassung MUSS der Nutzer auf AMTS hin prüfen können.</li>
+</ul>
+</li>
+</ul>
+<p>Der zentrale Auslöser einer AMTS-Prüfung und damit auch für die Nutzung der Schnittstellen ist eine vorher unbekannte Informationslage. Die Informationen können initial neu sein, durch den Patienten später in den Prozess hinzugegeben werden, oder sich im Zuge einer Behandlung ergeben.</p>
+<h3 id="exemplarische-ablaufe">4.3. Exemplarische Abläufe</h3>
+<p><strong>Beispiel-Sequenz Geplanter operativer mit stationärem Aufenthalt</strong>
+Ein geriatrischer Patient unterzieht sich einer geplanten Hüftersatzoperation:</p>
+<ul>
+<li>Der Patient kommt am Tag vor dem Eingriff wie verainbart zur stationäre Aufnahme.</li>
+<li>Das Krankenhauspersonal erfasst den relevanten Krankheits- bzw. Versorungsverlauf.</li>
+<li>Das Krankenhauspersonal erhebt relevante klinische Daten: Anamese, Untersusuchung, Vitalparameter, Allergien, Laborbefunde, Blutbild u.ä.</li>
+<li>Das Krankenhauspersonal erhebt seinen umfassenden Medikationsstatus: Anamnese, Medikationsplan, Einweisung &amp; Begleitdokumentation u.ä.</li>
+<li>Das Krankenhauspersonal erarbeitet einen Vorschlag zur Umstellung auf Krankenhaus Medikation</li>
+<li>Mit Hilfe der Schnittstellen werden alle <strong>AMTS relevanten Informationen konsolidiert</strong> und ein AMTS-Check durchgeführt.</li>
+<li>Der Patienten bekommt ein Hüftprothese und wird beobachtet.</li>
+<li>Klinische Daten werden nach dem Eingriff aktualisiert bzw. neu erhoben.</li>
+<li>Zur Entzündungsvermeidung ist eine weitere Verodnung notwendig.</li>
+<li>Im Rahmen des Entlassprozesses erarbeitet das Krankenhauspersonal einen Vorschlag zur Umstellung auf häusliche Gesamtmedikation.</li>
+<li>Mit Hilfe der Schnittstellen werden alle <strong>AMTS relevanten Informationen konsolidiert</strong> und ein AMTS-Check durchgeführt.</li>
+<li>Im Entlassgespräch werdenden Veränderungen kommuniziert und erklärt.</li>
+<li>Der Patient wird mit einem neuen Medikationsplan entlassen.</li>
+</ul>
+<p>Daher ist im Anhang ist ein thematischer <a href="https://simplifier.net/guide/isik-medikation-v4/implementationguide-markdown-uebergreifendeusecases-amts?version=current#ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Apx_AuszugAK">Auszug des IOP-Arbeitskreises</a> der Anwendungsfälle und Versorgungsprozesse für den stationären Sektor gegeben. Dieser ist für eine detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet und hat bildet die fachliche Grundlage (Motivation) des vorliegenden IG AMTS.</p>
+<h3 id="weitere-implizite-annahmen-und-weitere-informationen">4.4. Weitere implizite Annahmen und weitere Informationen</h3>
+<p><em>Annahmen:</em></p>
+<ul>
+<li>Ein beteiligtes und ISiK-AMTS-bestätigtes System verfügt über die grundlegende Funktion zur Durchführung eines AMTS-Checks. Wie ein AMTS-Check durchzuführen ist wird in diesem IG nicht beschrieben.</li>
+<li>Ein beteiligtes und ISiK-AMTS-bestätigtes System erkennt selber, ob ein (erneuter) AMTS-Check notwendig wird, z.B. nach einer Arzneimittelsubstition. Fachliche Systemführung, Fachliche Trigger oder Listener-Observer-Pattern zur Festlegung der Reihenfolge der AMTS-Teilschritte werden in diesem IG nicht beschrieben.</li>
+</ul>
+<p><em>Anmerkungen:</em></p>
+<ul>
+<li>AMTS-Checks sollten protokolliert werden, um Verantwortlichkeit und Rückverfolgbarkeit zu gewährleisten. Dies gilt sowohl für den positiven Fall der Veträglichkeit, als auch für den Fall in dem eine akzeptierte oder eine nicht akzeptable Risikobewertung erstellt wid.</li>
+<li>AMTS-Checks könnten protokolliert werden, um redundante Prüfungen und Mehrarbeit zu vermeiden.</li>
+</ul>
+
+                    </div>
+                    <div id="ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Diagramme">
+                        <h2 id="grafische-zusammenfassung">Grafische Zusammenfassung</h2>
+<p>Im Gegensatz zu den sonstigen Zusammenfassungen, wird in den folgenden Diagrammen auf den vorliegenden Übergreifende Use Case (AMTS) fokussiert und nicht auf das gesamte Modul.</p>
+<h3 id="use-case-diagramm-amts">Use Case Diagramm AMTS</h3>
+<p>Im Folgenden wird ein grafischer Überblick über möglichst in diesem Implementierungsleitfaden (AMTS) abgedeckten Anwednungsfälle gegeben.
+Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und dafür hinreichende Funktionen dargestellt:</p>
+<ul>
+<li>Allgemeine und intuitiv verständliche Use Cases.
+<ul>
+<li>Kombinationen und weitere Details sind möglich.</li>
+<li>Übergreifende Use Cases und und ihre Sub Use Cases können in einem separaten Diagram auf den entsprechenden Seiten gefunden werden.</li>
+</ul>
+</li>
+<li>Allgemeine und intuitiv Adverse Use Cases. Diese gilt es zu vermeiden.</li>
+<li>In den Funktionen werde triviale Suchen einer Ressoruce anhand ihrer eigenen Properties nicht dargestelt, z.B. Suche einer Ressoruce anhand der ID, Name, Code usw.</li>
+</ul>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_usecases.svg" alt="AMTS Use Cases" width="90%"/>
+<p><strong>Anwendungsfälle AMTS</strong></p>
+<h3 id="interaktionen-in-der-versorgung">Interaktionen In der Versorgung</h3>
+<p>Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem <a href="https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug">Auszug des IOP-Arbeitskreises</a> dargestellt, welcher der Erarbeitung diese Implemetierungsleitfadens zugrunde lag. Weitere Prozesse und Details finden sich im <a href="https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug">Anhang</a>.</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung" width="90%"/>
+<p><strong>Beispielprozess: Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung</strong></p>
+<h3 id="ressourcen-diagramm-amts">Ressourcen Diagramm AMTS</h3>
+<p>Im Folgenden wird ein grafischer Überblick über alle für diesen Übergreifenden Use Case (AMTS) profilierten Ressourcen gegeben.
+Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Felder dargestellt:</p>
+<ul>
+<li>Profile und Extenstion, die spezielle für AMTS profiliert wurden.</li>
+<li>Profile und Extenstion, die für AMTS zwingend benötigt werden. In vereinfachter Form, mit Verweis auf den Ursprung.</li>
+<li>Felder, mit besonderer Relevanz, die unterstüzt werden MÜSSEN (Must Support).</li>
+<li>
+<ul>
+<li>Datentypen, die im ISiK-Kontext enstanden, festgelegt oder eingeschränkt wurden, sind als <strong>Fett</strong> gekennzeichnet.</li>
+</ul>
+</li>
+<li>Die Elemente (Unterfelder) haben, die unterstüzt werden MÜSSEN (Must Support).</li>
+<li>Nur Unter-Elemente (MS) bis zu ersten Tiefe, abhängig von Umfang und Systematik. D.h. Keine bedingten Wiederholungen (repeat) oder Rekursionen (part-of).</li>
+</ul>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_resourcediagram.svg" alt="AMTS Ressourcenciagramm" width="90%"/>
+<p><strong>Ressourcendiagramm AMTS</strong></p>
+<h3 id="informationsmodelle-amts">Informationsmodelle AMTS</h3>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_infomodel_med.svg" alt="Infomodell AMTS aus Perspektive der Medikation" width="90%"/>
+<p><strong>Infomodell AMTS aus Perspektive der Medikation</strong></p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_infomodel_basis.svg" alt="Infomodell AMTS mit relevanten Basisinformation" width="90%"/>
+<p><strong>Infomodell AMTS mit relevanten Basisinformation</strong></p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_infomodel_labvit.svg" alt="Infomodell AMTS mit relevanten Labor- und Vitalinformationen" width="90%"/>
+<p><strong>Infomodell AMTS mit relevanten Labor- und Vitalinformationen</strong></p>
+<h3 id="interaktionen-im-rahmen-amts">Interaktionen im Rahmen AMTS</h3>
+<p>Im Folgenden sind exemplarisch die Interaktionen für einen AMTS Pull und -Push im Sinne eines Businessprozesses modelliert.</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_pull.svg" class="center" alt="AMTS Pull" width="90%"/>
+<p><strong>AMTS Pull</strong></p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_push.svg" class="center" alt="AMTS Push" width="90%"/>
+<p><strong>AMTS Push</strong></p>
+
+                    </div>
+                    <div id="ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Profile">
+                        <h2 id="fhir-profile-des-anwendungsfalls-amts">FHIR-Profile des Anwendungsfalls AMTS</h2>
+<p>Dieser Übergreifende Use Case mehrere Profile aus verschiedenen Modulen. Die Einzelbeschreibungen sind im Folgenden verlinkt:</p>
+<ul>
+<li>Die <a href="https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-Datenobjekte-Profile_AMTSBewertung">AMTS Bewertung der Medikation</a> zur Persistierung des Ergebnisses eines AMTS-Checks.</li>
+<li>Die <a href="https://simplifier.net/guide/isik-basis-v4/markdown-Datenobjekte-Datenobjekte_AllergieUnvertraeglichkeit">Allergien und Unverträglichkeiten der Basis</a> zur Synchronisation der patientenbezogenen Intoleranzfaktoren.</li>
+<li>Verschiedene <a href="https://simplifier.net/isik-labor-v4/isiklaboruntersuchung">Untersuchungsergebnisse des Labors</a> zur Erfassung fallbezogener Einflussfaktoren.</li>
+<li>Verschiedene <a href="https://simplifier.net/guide/isik-basis-v4/ImplementationGuide-markdown-Datenobjekte-Datenobjekte_Lebenszustand">Lebenszustände des Basis</a> zur Erfassung aktueller (zeitbezogener) Zustände oder Kondidtionen, insbesondere:
+<ul>
+<li>Schwangerschaft,</li>
+<li>Akohol-Absus,</li>
+<li>Raucherstatus.</li>
+</ul>
+</li>
+<li>Verschiedene aktuelle <a href="https://simplifier.net/guide/isik-vitalparameter-v4/ImplementationGuide-markdown-Datenobjekte">Merkmale der Vitalparamater</a> zur Erfassung von Einflussfaktoren, welche die physische Kondition des Pattienten betreffen, insbesondere.
+<ul>
+<li>Köprergewicht,</li>
+<li>Körpergröße.</li>
+</ul>
+</li>
+</ul>
+
+                    </div>
+                    <div id="ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Apx_AuszugAK">
+                        <h2 id="anhang-i-auszug-des-iop-arbeitskreises">Anhang I: Auszug des IOP-Arbeitskreises <!-- omit from toc --></h2>
+<p><strong>Im Folgenden wurden Inhalte aus dem <em>IOP-Arbeitskreis zur Analyse der Medikationsprozesse</em> weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong> Das Betrifft vor allem Inahlte die auf ambulante Prozesse und politische Handlungsanweisungen fokussieren. Die Auslassungen sind an entsprechender Stelle erneut in <strong>Bold-Face</strong> gekennzeichnet.</p>
+<h2 id="table-of-contents">Table of Contents <!-- omit from toc --></h2>
+<ul>
+<li><a href="#1-zielsetzung-wesentliche-ergebnisse-und-empfehlungen">1. Zielsetzung, wesentliche Ergebnisse und Empfehlungen</a></li>
+<li><a href="#2-modellierung-exemplarischer-prozesse-der-arzneimittelversorgung">2. Modellierung exemplarischer Prozesse der Arzneimittelversorgung</a></li>
+<li><a href="#3-versorgungsprozess-2-station%C3%A4re-behandlung-nach-h%C3%A4uslichem-sturzereignis">3. Versorgungsprozess 2: Stationäre Behandlung nach häuslichem Sturzereignis</a>
+<ul>
+<li><a href="#31-versorgungsprozess-rettungsdient-in-der-h%C3%A4uslichkeit">3.1. Versorgungsprozess Rettungsdient in der Häuslichkeit</a></li>
+<li><a href="#32-versorgungsprozess-krankenhaus">3.2. Versorgungsprozess Krankenhaus</a></li>
+<li><a href="#33-versorgungsprozess-hausarztpraxis">3.3. Versorgungsprozess Hausarztpraxis</a></li>
+</ul>
+</li>
+<li><a href="#4-versorgungsprozess-3-schlaganfall-im-pflegeheim">4. Versorgungsprozess 3: Schlaganfall im Pflegeheim</a>
+<ul>
+<li><a href="#41-versorgungsprozess-pflegeheim-interventionsvorbereitung">4.1. Versorgungsprozess Pflegeheim Interventionsvorbereitung</a></li>
+<li><a href="#42-versorgungsprozess-rettungsdienst-pr%C3%A4klinische-versorgung">4.2. Versorgungsprozess Rettungsdienst Präklinische Versorgung </a></li>
+<li><a href="#43-versorgungsprozess-krankenhaus-klinische-versorgung---siehe-auch-versorgungsprozess-2">4.3. Versorgungsprozess Krankenhaus Klinische Versorgung - siehe auch Versorgungsprozess 2</a></li>
+<li><a href="#44-versorgungsprozess-neurologische-rehabilitationseinrichtung-neurorehabilitation">4.4. Versorgungsprozess Neurologische Rehabilitationseinrichtung (Neurorehabilitation)</a></li>
+<li><a href="#45-wiederaufnahmeprozess-im-pflegeheim">4.5. Wiederaufnahmeprozess im Pflegeheim</a></li>
+<li><a href="#46-versorgungsprozess-hausarztpraxis-im-pflegeheim">4.6. Versorgungsprozess Hausarztpraxis im Pflegeheim </a></li>
+<li><a href="#47-versorgungsprozess-neurologisch-fach%C3%A4rztliche-praxis-im-pflegeheim">4.7. Versorgungsprozess Neurologisch-Fachärztliche Praxis im Pflegeheim</a></li>
+</ul>
+</li>
+<li><a href="#5-in-den-versorgungsprozessen-mehrfach-durchlaufene-subprozesse">5. In den Versorgungsprozessen mehrfach durchlaufene Subprozesse</a>
+<ul>
+<li><a href="#51-versorgung-subprozess-anamnese">5.1. Versorgung Subprozess Anamnese</a></li>
+<li><a href="#52-erhebung-von-medikationsdaten">5.2. Erhebung von Medikationsdaten</a></li>
+<li><a href="#53-erhebung-der-medikationshistorie">5.3. Erhebung der Medikationshistorie</a></li>
+<li><a href="#54-erhebung-klinische-daten">5.4. Erhebung Klinische Daten</a></li>
+<li><a href="#55-versorgung-subprozess-medikationsentscheidung-und-verordnung">5.5. Versorgung Subprozess Medikationsentscheidung und Verordnung</a></li>
+<li><a href="#56-versorgung-subprozess-verordnungsdokumentation-mit-erezept">5.6. Versorgung Subprozess Verordnungsdokumentation mit (e)Rezept </a></li>
+<li><a href="#57-in-versorgungs-prozessen-verwendete-dokumentationen-mit-medikationsinformationen">5.7. In Versorgungs-Prozessen verwendete Dokumentationen mit Medikationsinformationen</a></li>
+<li><a href="#58-amts-spezifische-handlungsempfehlungen-f%C3%BCr-medizinisch-pflegerische-medikationsprozesse">5.8. AMTS-spezifische Handlungsempfehlungen für medizinisch-pflegerische Medikationsprozesse</a></li>
+</ul>
+</li>
+<li><a href="#6-exemplarische-ist-prozesse-der-pharmazeutischen-arzneimittelversorgung">6. Exemplarische IST-Prozesse der pharmazeutischen Arzneimittelversorgung</a>
+<ul>
+<li><a href="#61-pharmazie-prozess-2-medikationsanalyse-in-der-apotheke">6.1. Pharmazie-Prozess-2 Medikationsanalyse in der Apotheke</a></li>
+<li><a href="#62-pharmazie-prozess-3-kh-aufnahme-mit-medication-reconciliation">6.2. Pharmazie-Prozess-3 KH Aufnahme mit Medication Reconciliation</a></li>
+</ul>
+</li>
+<li><a href="#7-handlungsempfehlungen-zu-pharmazeutischen-medikationsprozessen-im-krankenhaus">7. Handlungsempfehlungen zu pharmazeutischen Medikationsprozessen im Krankenhaus</a></li>
+<li><a href="#8-beitr%C3%A4ge-der-jeweiligen-akteure-im-sollprozess">8. Beiträge der jeweiligen Akteure im Sollprozess</a>
+<ul>
+<li><a href="#81-im-krankenhaus">8.1. Im Krankenhaus</a></li>
+<li><a href="#82-patientpatientin">8.2. Patient/Patientin</a></li>
+<li><a href="#83-ambulant-und-station%C3%A4r-pflegende">8.3. Ambulant und stationär Pflegende</a></li>
+<li><a href="#84-vollst%C3%A4ndige-informationen-zur-medikation">8.4. Vollständige Informationen zur Medikation</a></li>
+<li><a href="#85-medikationsrelevante-zusatzinformationen">8.5. Medikationsrelevante Zusatzinformationen</a></li>
+</ul>
+</li>
+<li><a href="#9-folgearbeitskreis-amts-pr%C3%BCfung">9. Folgearbeitskreis &quot;AMTS-Prüfung&quot;</a>
+<ul>
+<li><a href="#91-der-fokus-des-arbeitskreises-sollte-daher-umfassen">9.1. Der Fokus des Arbeitskreises sollte daher umfassen:</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="zielsetzung-wesentliche-ergebnisse-und-empfehlungen">1. Zielsetzung, wesentliche Ergebnisse und Empfehlungen</h2>
+<p>Startpunkt - gesundheitspolitischer Auftrag:</p>
+<p>Mit der Einführung der „ePA für alle“ soll die flächendeckende Einführung von elektronischen Patientenakten beschleunigt und der einrichtungsübergreifende Informationsaustausch verbessert werden. Als ersten Anwendungsfall soll die ePA die Etablierung eines digital gestützten Medikationsprozesses für eine patientenzentrierte Gesundheitsversorgung unterstützen.
+Insbesondere unter der Nutzung arzneimittelbezogener Verordnungsdaten und Dispensierinformationen aus der ePA soll mehr Transparenz über die Medikation der Patientinnen und Patienten entstehen.</p>
+<p><strong>Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong></p>
+<h2 id="modellierung-exemplarischer-prozesse-der-arzneimittelversorgung">2. Modellierung exemplarischer Prozesse der Arzneimittelversorgung</h2>
+<p>Exemplarische IST-Prozesse der medizinisch-pflegerischen Versorgung</p>
+<p>Die graphische Darstellung von sieben ausgewählten Anwendungsfällen bildet die Grundlage für die Analyse des Ist-Zustands im aktuellen Medikationsprozess. Die ersten drei Anwendungsfälle fokussieren auf die Prozesse in der Versorgung, während die folgenden vier Anwendungsfälle die pharmazeutischen Prozesse verstärkt in den Blick nehmen. Die aktuellen Informations- und Dokumentationsanforderungen sind kurz am Prozess erläutert. Die grafische Darstellung des Ist-Prozesses zeigt die Lücken in den vorhandenen Prozessen auf, um darauf aufbauend die Anforderungen für den Soll-Prozess formulieren zu können. Die Prozesse wurden in der Modellierungssprache BPMN (Business Process Model and Notation) graphisch modelliert und beschrieben.</p>
+<p><strong>Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong></p>
+<h2 id="versorgungsprozess-2-stationare-behandlung-nach-hauslichem-sturzereignis">3. Versorgungsprozess 2: Stationäre Behandlung nach häuslichem Sturzereignis</h2>
+<p>Beispielhafter Anwendungsfall: Eine Patientin mit Akuterkrankung in der Häuslichkeit stürzt dort bei schlechtem Allgemeinzustand wegen eines fieberhaften Harnwegsinfektes (HWI). Es wird der Rettungsdienst alarmiert und die Patientin in stationäre Behandlung übergeben. Im Anschluss wird sie wieder in die Häuslichkeit entlassen.</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung" width="90%"/>
+<p><strong>Versorgungsprozess (2): Sturz mit stationärer Behandlung mit hausärztlicher Weiterbehandlung</strong></p>
+<p>Ein beträchtlicher Anteil der Informationsübermittlung im Notfall in der Häuslichkeit erfolgt momentan immer noch mündlich und auf Papier. Selbst an der Schnittstelle zwischen Notaufnahme und Normalstation innerhalb der Krankenhäuser sind aufgrund verschiedener klinischer Softwaresysteme häufig nur manuelle Übertragungen der Medikationsinformationen möglich. In der Notfallmedizin sind jedoch präzise und schnelle Erfassung von Vorbefunden und Medikationsdokumentationen von entscheidender Bedeutung, um eine adäquate Patientenversorgung sicherzustellen. In der aktuellen Versorgungslandschaft sind die Patient:innen und Angehörige häufig die einzigen, die für eine Übermittlung von Informationen in Frage kommen. Dies gilt in der Regel insbesonders für medikationsrelevante Informationen. Patient:innen, die in der Häuslichkeit vom Rettungsdienst vorgefunden werden, sind selten in der Lage, diese Informationen zu teilen. So sind die Mitarbeitenden der Rettungsdienste darauf angewiesen, dass vor Ort Medikamentenpackungen, Rezepte oder Medikationspläne gefunden werden bzw. mit Angehörigen gesprochen werden kann, denen die notwendigen Informationen ggf. bekannt sind.</p>
+<h3 id="versorgungsprozess-rettungsdient-in-der-hauslichkeit">3.1. Versorgungsprozess Rettungsdient in der Häuslichkeit</h3>
+<p><strong>Notfallsituation:</strong> Eine Patientin mit einem fieberhaften Harnwegsinfekt (HWI) stürzt in der Häuslichkeit aufgrund eines schlechten Allgemeinzustands z.B. mit Verdacht auf eine Knochenfraktur. In der Häuslichkeit wird daraufhin ein Bereitschaftsdienst oder eine regionale Rettungsleitstelle per Telefon kontaktiert. Bei der Kontaktaufnahme mit einem medizinischen Notdienst werden die Rufnummer 116 117 oder die 112 bei Notfallsituationen mit hoher Dringlichkeit gewählt. Der ärztliche Bereitschaftsdienst einer Kassenärztlichen Vereinigung unter der Telefonnummer 116 117 vermittelt den Kontakt zu einem/einer diensthabenden Bereitschaftsarzt:in oder einer Bereitschaftspraxis in der Nähe. Bei einer Notfallsituation mit hoher Dringlichkeit, bei der die Nummer 112 angerufen wird, dokumentiert eine Rettungsleitstelle (RLS) häufig in einem computergestützten Einsatzleitsystem (ELS) das dabei hilft, den Notfall effektiv zu managen und die notwendigen Ressourcen schnellstmöglich zu koordinieren. Bei der Erfassung der Notfallsituation durch eine Rettungsleitstelle werden auch Informationen über die Medikation der Patientin erfragt und dokumentiert. Die Disponent:innen sind geschult, nach aktuellen Medikamenten, Vorerkrankungen und Allergien zu fragen, da diese Informationen entscheidend für die Einschätzung der Situation und die Anweisungen an die Einsatzkräfte sein können. Sie helfen dem/der Notarzt:in oder dem Rettungsdienstpersonal, sich auf die Behandlung vorzubereiten und mögliche Wechselwirkungen oder Kontraindikationen bei der Notfallbehandlung zu berücksichtigen. Entsprechend dem Notfall wird ein Rettungsmittel (Rettungswagen, Notarzt:in, ggf. Rettungshubschrauber) entsendet.</p>
+<ul>
+<li><strong>Ankunft des Rettungsdienstes:</strong> Beim Eintreffen erfolgt eine Sichtung (Triage) und Erstbewertung der Patientin (Primary Survey), um Vitalfunktionen und die Dringlichkeit zu beurteilen.</li>
+<li><strong>Anamnese in der Häuslichkeit:</strong> Unter Berücksichtigung der Symptome und des aktuellen Zustands der Patientin führen der Rettungsdienst oder der KV-Bereitschaftsdienst eine Anamnese durch. Bei Bewusstlosigkeit der Patientin müssen Rettungskräfte versuchen, diese Informationen über Angehörige, betreuende Arztpraxen oder über ein Medikationsverzeichnis, das in der Häuslichkeit vorliegt, zu erhalten. Die Sichtung von Ort beinhaltet die Suche nach Medikamentenpackungen, Patientenverfügung, Notfallausweis, Diabetikerausweis, Allergiepass oder anderen medizinischen Unterlagen, die auf die medizinische Geschichte oder aktuelle Medikation hinweisen könnten.</li>
+<li><strong>Diagnose und Erstbehandlung vor Ort:</strong> Je nach Schwere des Zustands wird eine erste medizinische Einschätzung vorgenommen. Es kann eine Anbehandlung in der Häuslichkeit durch den KV-Bereitschaftsarzt oder den Rettungsdienst erfolgen, um den Zustand der Patientin zu stabilisieren. Sofortige Einleitung lebensrettender Basismaßnahmen (Basic Life Support, BLS) oder erweiterter Maßnahmen (Advanced Life Support, ALS), je nach Zustand der Patientin. Administration von Notfallmedikamenten, wobei auf bekannte Medikationspläne oder Allergien geachtet werden muss.</li>
+<li><strong>Dokumentation:</strong> Der Rettungsdienst dokumentiert Einsätze sowohl auf Papier als auch elektronisch, abhängig von der Ausstattung und den Vorschriften der jeweiligen Organisation. Die Dokumentation erfolgt üblicherweise anhand eines Rettungsdienstprotokolls oder Einsatzprotokolls. Bei einem Rettungseinsatz wird eine präzise Dokumentation erstellt, die alle relevanten Einsatzdetails wie Datum, Uhrzeit, Ort und die eingesetzten Rettungskräfte umfasst. Patientenbezogene Daten, darunter Identität, Vitalzeichen, beobachtete Symptome sowie Informationen zu Vorerkrankungen, Medikamenteneinnahme und Allergien, werden erfasst. Die durchgeführten medizinischen Maßnahmen, einschließlich Erstversorgung und verabreichten Medikamenten, werden ebenso festgehalten wie Veränderungen im Zustand der Patientin. Bei der Übergabe an das Krankenhaus werden die gesammelten Daten und der Zeitpunkt der Übergabe dokumentiert. Zusätzlich werden besondere Vorkommnisse oder die Anwesenheit von Dritten protokolliert. Die Dokumentation erfolgt entweder handschriftlich auf Papierformularen oder elektronisch mittels mobiler Endgeräte und gewährleistet so eine nahtlose Weitergabe der Informationen an die weiterbehandelnde Einrichtung, während sie gleichzeitig den rechtlichen Dokumentationsanforderungen genügt. Erstellung Übergabeprotokoll mit Medikationsangaben. Alle während des Einsatzes vom Rettungspersonal gegebenen Medikamente, inklusive Dosis, Verabreichungsweg und Zeitpunkt, werden genau dokumentiert.</li>
+<li><strong>Transportentscheidung:</strong> Die Transportentscheidung durch den Rettungsdienst mit Beteiligung eines/einer Notarzt:in und Rettungswagens berücksichtigt mehrere Faktoren. Auf Grundlage der Symptomatik und der Dringlichkeit des Falles trifft der/die Notarzt:in die Entscheidung über die Notwendigkeit und Art des Transports. Dies geschieht unter Berücksichtigung der medizinischen Protokolle und Leitlinien. Dabei wird auch das Risiko einer möglichen Verschlechterung des Gesundheitszustandes während des Transports abgewogen. Ist der/die Patient:in bei Bewusstsein und in der Lage, seinen/ihren Willen zu äußern, wird dieser in die Entscheidung miteinbezogen. Des Weiteren berücksichtigt der/die Notarzt:in die Verfügbarkeit von Spezialabteilungen und freien Betten in den umliegenden Krankenhäusern. In enger Absprache mit der Rettungsleitstelle wird dann das geeignetste Krankenhaus ausgewählt und der Transport koordiniert. In Fällen, wo die Distanz zum Krankenhaus oder die Schwere der Verletzungen einen schnelleren Transport erfordern, kann auch ein Rettungshubschrauber angefordert werden.</li>
+</ul>
+<h3 id="versorgungsprozess-krankenhaus">3.2. Versorgungsprozess Krankenhaus</h3>
+<ul>
+<li><strong>Übergabe in die Zentrale Notaufnahme (ZNA):</strong> Eine strukturierte Übergabe ist essentiell, um eine sichere und effiziente Fortführung der Patient:innenversorgung zu gewährleisten. In der Zentralen Notaufnahme (ZNA) wird eine strukturierte Übergabe der Patientin durchgeführt, die bereits mit einer Vorankündigung des Rettungsdienstes beginnt. Wichtige Informationen über den Zustand der Patientin und die bisherigen Maßnahmen werden vorab telefonisch übermittelt. Nach der Ankunft wird die Patientin umgehend in den Übergabebereich der ZNA gebracht, wobei alle notwendigen medizinischen Unterstützungen aufrechterhalten werden. Ein Team aus Ärzt:innen und Pflegekräften nimmt die Patientin in Empfang und übernimmt sofort die lebenserhaltenden Maßnahmen. Der/Die Notarzt:in oder das Rettungspersonal überreicht dann die Dokumentation, die entweder als elektronisches Protokoll oder in Papierform vorliegen kann. Dieses enthält detaillierte Informationen über den Einsatz, den Zustand der Patientin bei der Erstversorgung, während des Transports und die ergriffenen medizinischen Interventionen, speziell der Gabe von Medikamenten. In einem mündlichen Bericht werden die Kerninformationen zusammengefasst und dem Klinikpersonal präsentiert, das anschließend Rückfragen stellen kann, um die Informationen für die weiterführende Versorgung zu vervollständigen. Nach der Informationsübergabe übernimmt das Klinikpersonal die Verantwortung für die Patientin. Im Anschluss daran beginnt das Klinikpersonal ohne Verzögerung mit der weiterführenden Diagnostik und leitet notwendige Behandlungsschritte ein. Die sorgfältige Dokumentation dieses Übergabeprozesses in den Systemen der ZNA ist für die Kontinuität der Versorgung und die Qualitätssicherung unerlässlich.</li>
+<li><strong>Versorgung in der Zentralen Notaufnahme (ZNA):</strong> In deutschen Kliniken beginnt die Versorgung in der Zentralen Notaufnahme (ZNA) mit dem Erstkontakt und einer schnellen Sichtung durch geschultes Personal, das mithilfe eines standardisierten Triage-Systems die Dringlichkeit der Behandlung bewertet. Ein/e Arzt:in übernimmt dann die medizinische Erstuntersuchung, misst die Vitalparameter der Patientin und erfasst ihre Hauptbeschwerden. Anschließend wird eine detaillierte Anamnese erhoben, die den aktuellen Gesundheitszustand, die medizinische Vorgeschichte sowie Informationen über Medikamente und Allergien umfasst. Abhängig von dieser ersten Diagnose leitet der/die Arzt:in weiterführende diagnostische Maßnahmen ein, darunter Bluttests und bildgebende Verfahren. Auf Basis all dieser Informationen trifft der/die Arzt:in eine Entscheidung über die erforderlichen nächsten Schritte, die eine stationäre Aufnahme, spezifische Behandlungen oder die Überweisung an Fachabteilungen beinhalten können, um eine umfassende und zielgerichtete Patientenversorgung zu gewährleisten.</li>
+<li><strong>Anpassung der Medikation:</strong> In der Klinik wird die mitgebrachte Medikation der Patientin nach ihrer Ankunft in der Zentralen Notaufnahme (ZNA) oder nach ihrer Verlegung auf eine Station sorgfältig überprüft. Die vom Rettungsdienst überbrachten Vorinformationen zur Medikation werden mit den in der Klinik gängigen Medikamenten (Hausliste) abgeglichen. Der/die behandelnde Arzt:in führt eine Medikationsanamnese durch, um die aktuelle Medikation zu erfassen und zu prüfen, ob alle Medikamente weiterhin indiziert sind. Falls notwendig, wird die Medikation angepasst. Das kann bedeuten, dass bestimmte Medikamente durch äquivalente Präparate aus der Hausliste der Klinik ersetzt werden, die Dosierung verändert oder Medikamente hinzugefügt oder abgesetzt werden. Alle Änderungen werden in der elektronischen oder papierbasierten Patientenakte dokumentiert und sind Teil des Medikationsplans. Wichtig ist, die Medikation zu optimieren und sicherzustellen, dass sie den aktuellen klinischen Bedürfnissen der Patientin entspricht und keine unerwünschten Wechselwirkungen oder Doppelmedikationen entstehen.</li>
+<li><strong>Diagnostik und Behandlung:</strong> Nach Verlegung von der Zentralen Notaufnahme auf die Station wird die Patientin weiterführend diagnostiziert und therapiert. Dabei wird das klinikinterne Informationssystem (KIS) konsultiert, um frühere Aufenthalte und Behandlungen der Patientin in derselben Klinik zu berücksichtigen. In diesem System gespeicherte Daten zu bekannten Allergien, Medikamentenunverträglichkeiten und früheren Medikationen fließen in die aktuelle Behandlungsplanung ein, um eine individuell abgestimmte und sichere Patientenversorgung zu gewährleisten. Dies gewährleistet eine umfassende Kontinuität der Versorgung und minimiert das Risiko von Wechselwirkungen und anderen Komplikationen.</li>
+<li><strong>Vorbereitung zur Entlassung:</strong> Die Entscheidung, ob eine Patientin nach Diagnose und Therapieeinleitung im Krankenhaus verbleiben muss, beruht auf einer sorgfältigen Abwägung mehrerer Faktoren. Zunächst wird die Stabilität ihres Zustandes beurteilt, um zu bestimmen, ob eine kontinuierliche Überwachung erforderlich ist. Weiterführende Untersuchungen, die spezielle Ausrüstung erfordern, können ebenso einen längeren Krankenhausaufenthalt notwendig machen. Die Intensität der benötigten Pflege wird ebenso bewertet, da einige Patienten eine umfassendere Betreuung benötigen, die zu Hause nicht gewährleistet werden kann. Zudem muss überprüft werden, ob zusätzliche Informationen für die medizinische Dokumentation erforderlich sind, die eventuell eine stationäre Überwachung erfordern. Darüber hinaus spielen soziale und häusliche Umstände eine wichtige Rolle bei der Entscheidungsfindung. Es muss sichergestellt sein, dass die Patientin zu Hause die notwendige Unterstützung, vor allem bzgl. der Medikamenteneinnahme erhält. Ein wesentlicher Bestandteil der Entscheidungsfindung ist der Medikationsprozess. Es muss sichergestellt werden, dass die Patientin ihre Medikamente wie vorgeschrieben einnimmt und gut verträgt. Dafür kann die Konsultation eines/r klinischen Apotheker:in erforderlich sein, um die Medikation auf mögliche Wechselwirkungen und Kontraindikationen zu überprüfen. Vor der Entlassung wird ein detaillierter Medikationsplan erstellt, der die Patientin über die korrekte Einnahme ihrer Medikamente aufklärt. Zudem werden z.B. bei komplexen onkologischen Medikationen, die ambulant nicht durchgeführt werden können, Nachsorgetermine geplant, um die Medikation zu überprüfen und bei Bedarf anzupassen oder Medikamente (z.B. Infusionen) zu verabreichen. All diese Schritte dienen dazu, die Sicherheit der Patientin zu gewährleisten und das bestmögliche Behandlungsergebnis zu erzielen.</li>
+<li><strong>Medikationsprozess bei Entlassung:</strong> Bei der Entlassung einer Patientin aus der Klinik ist eine gründliche Dokumentation der Medikationsprozesse von entscheidender Bedeutung. Der/die behandelnde Arzt:in aktualisiert den Medikationsplan, der alle während des Krankenhausaufenthalts verabreichten Medikamente sowie alle neuen Verordnungen und Änderungen umfasst. Diese Informationen werden detailliert im Arztbrief festgehalten, einschließlich der Namen der Medikamente, sowohl des Handelsnamens als auch des generischen Namens, der exakten Dosierungen, der spezifischen Anweisungen zur Einnahme, der Indikationen für jedes Medikament und der notwendigen Überwachungsmaßnahmen. Besonders wichtig sind dabei Hinweise zu bekannten Allergien oder Medikamentenunverträglichkeiten sowie spezielle Anweisungen für Medikamente, die fortgeführt, angepasst oder abgesetzt werden sollen. Der Arztbrief wird dem/der Hausarzt:in übermittelt, der/die über die Weiterverordnung der Medikamente entscheidet. Der/die entlassende Arzt:in kann die Verwendung von Generika empfehlen, wobei meist kommuniziert wird, dass der/die Hausarzt:in die endgültige Wahl hinsichtlich der Verschreibung trifft. Dies berücksichtigt individuelle Faktoren wie Verträglichkeit und Patientenpräferenz. Zudem wird die Patientin umfassend über ihre Medikation aufgeklärt, mit besonderem Augenmerk auf die Bedeutung der Befolgung des Medikationsplans und der Notwendigkeit von Nachfolgeuntersuchungen. Um eine kontinuierliche Versorgung zu gewährleisten, wird außerdem geprüft, ob die Patientin nach der Entlassung Zugang zu ihren Medikamenten hat. Dies kann entweder durch eine vorübergehende Mitgabe von Medikamenten aus der Klinik oder durch ein Rezept erfolgen, das in einer Apotheke eingelöst werden kann. Eine solche sorgfältige Vorgehensweise stellt sicher, dass nach der Entlassung eine sichere und effektive Medikation gewährleistet ist und erleichtert dem Hausarzt die kohärente Fortführung der Behandlung.</li>
+</ul>
+<h3 id="versorgungsprozess-hausarztpraxis">3.3. Versorgungsprozess Hausarztpraxis</h3>
+<p>Nach der Entlassung aus dem Krankenhaus sucht die Patientin mit dem Krankenhaus-Entlassungsbrief und dem dazugehörigen Medikationsplan die hausärztliche Praxis auf. Dort wird ein strukturierter Ansatz zur Medikationsverwaltung und Patientennachsorge eingeleitet, der die gesamte Behandlungskette von der Hausarztpraxis bis zur Apotheke umfasst.</p>
+<ul>
+<li><strong>Sichtung der Krankenhausdokumentation:</strong> Der/die Hausarzt:in beginnt mit der sorgfältigen Prüfung des Entlassungsbriefes, der detaillierte Informationen über erfolgte Behandlungen, wie etwa eine Frakturversorgung oder operative Eingriffe, sowie die während des Krankenhausaufenthaltes verabreichte Medikation enthält. Dabei werden insbesondere die Empfehlungen für das poststationäre (Medikations-)Management betrachtet.</li>
+<li><strong>Durchführung einer ausführlichen Anamnese:</strong> In einem persönlichen Gespräch werden die aktuellen Beschwerden, der Schmerzstatus, mögliche Funktionseinschränkungen und das allgemeine Wohlbefinden der Patientin erfasst. Hierbei geht es vor allem um Veränderungen seit der Klinikentlassung und um die Erfassung des Genesungsverlaufs.</li>
+<li><strong>Anpassung der Entlassmedikation:</strong> Bei der Anpassung des Entlassmedikation an die hausärztliche Medikation geht der/die Hausarzt:in detailgenau vor. Sie übernimmt die in der Klinik initiierte und/oder modifizierte Pharmakotherapie und fügt diese in den ambulanten Medikationsplan des Patientin ein. Dabei werden nicht nur die Namen der Arzneimittel sorgfältig überprüft, sondern auch die Dosierungen genau abgeglichen, um Dosierungsfehler zu vermeiden. Der/die Hausarzt:in achtet zudem darauf, dass die Applikationswege – ob oral, intravenös, subkutan oder anders – klar definiert sind und die Einnahmehäufigkeiten exakt festgelegt werden, um jegliche Unsicherheiten im Einnahmeprozess der Patientin auszuschließen. So wird sichergestellt, dass die Patientin nach ihrer Entlassung aus der Klinik die Medikamente exakt nach BMP so einnimmt, wie sie verordnet wurden, was eine unabdingbare Voraussetzung für die Effektivität der Therapie und die Sicherheit der Patientin darstellt.</li>
+<li><strong>Medication Reconciliation (Medikationsabgleich):</strong> Medication Reconciliation ist eine systematische Methode zur Erhöhung der Arzneimitteltherapiesicherheit. Dabei prüft der/die behandelnde Hausarzt:in die vorliegende Medikation der Patientin auf Wechselwirkungen zwischen verschiedenen Präparaten, Doppelverordnungen sowie auf Kontraindikationen. Dieser Abgleich ist besonders wichtig bei Übergängen in der Versorgung, wie Krankenhausaufnahmen oder Überweisungen zu Facharztpraxen. Ziel ist es, fehlerhafte Medikationen zu vermeiden, das Risiko von Nebenwirkungen zu reduzieren und die Behandlungsergebnisse zu verbessern. Zu einem umfassenden Medikationsabgleich gehören auch die Berücksichtigung von OTC-Medikamenten (Over-The-Counter, also rezeptfreie Medikamente), Nahrungsergänzungsmittel und pflanzliche Präparate, da auch diese Substanzen Einfluss auf die Wirksamkeit und Sicherheit der verschriebenen Medikation haben können. Der Prozess schließt mit einer Patientenaufklärung, bei der die Bedeutung der korrekten Medikamenteneinnahme und -handhabung besprochen wird, um eine hohe Adhärenz und Therapietreue zu sichern.</li>
+<li><strong>Ausstellen von Verordnungen (Rezeptierung):</strong> Nachdem die Medikation der Patientin sorgfältig geprüft und die notwendigen Medikamente ausgewählt wurden, arbeitet der/die Arzt:in im Praxisverwaltungssystem (PVS), um die Rezepte zu bearbeiten. Sie beginnt damit, die genauen Daten jedes Medikaments einzugeben. Dabei achtet sie darauf, alle Angaben genau zu überprüfen, um Fehler zu vermeiden, die bei der Ausgabe in der Apotheke zu Problemen führen könnten. Anschließend entscheidet sie, ob sie ein traditionelles Papierrezept ausstellen oder, falls der Prozess in der Praxis etabliert ist, ein elektronisches Rezept (eRezept) nutzen möchte. Bei einem Papierrezept druckt sie das Rezeptformular aus, unterschreibt es und händigt es der Patientin direkt aus. Wird ein eRezept ausgestellt, dann unterschreibt der/die Arzt:in das Rezept elektronisch mit ihrem Heilberufsausweis am Computer. Für einen effizienten Ablauf empfiehlt sich die Verwendung der Komfortsignatur. Die Patientin kann das eRezept in der Apotheke mit seiner elektronischen Gesundheitskarte (eGK) oder alternativ mit einem Rezeptcode einlösen. Diesen Code kann er über eine eRezept-App abrufen oder als Papierausdruck in der Praxis erhalten. Der/die Arzt:in nimmt sich die Zeit, die Patientin ausführlich über die neue Medikation zu informieren und sicherzustellen, dass alle Anweisungen zur Einnahme und etwaige Besonderheiten des eRezeptes verstanden werden. Alle Schritte werden akribisch im PVS dokumentiert, wodurch eine lückenlose Nachverfolgung der Verschreibungen gewährleistet ist. Sollte ein eRezept verwendet werden, informiert sie die Patientin darüber, wie der Code in der Apotheke eingelöst werden kann.</li>
+<li><strong>Planung der weiterführenden Versorgung:</strong> Die Organisation der weiteren ambulanten Behandlung wird konkretisiert, was auch die Einbindung weiterer Leistungserbringer wie Physiotherapeut:innen oder Pflegedienste einschließen kann.</li>
+<li><strong>Terminierung von Weiterbehandlungen:</strong> Es werden regelmäßige Kontrolltermine vereinbart, um die Wirksamkeit und Verträglichkeit der Medikation zu überwachen und bei Bedarf anzupassen.</li>
+<li><strong>Fachübergreifende Kommunikation:</strong> Bei speziellen medizinischen Fragestellungen findet ein interdisziplinärer Austausch mit Facharzt:innen statt, um eine optimale intersektorale Versorgung zu gewährleisten. Im Fall urologischer Indikationen wird insbesondere der Urologe mit einbezogen.</li>
+<li><strong>Dokumentation im Praxisverwaltungssystem (PVS):</strong> Alle therapeutischen Entscheidungen, Patienteninstruktionen und Planungen werden in der elektronischen Patientenakte im PVS festgehalten. Dies dient der Nachvollziehbarkeit und der Qualitätssicherung und stellt sicher, dass bei zukünftigen Besuchen alle Informationen zugänglich sind.</li>
+</ul>
+<p>Mit diesen Schritten stellt die Hausarztpraxis sicher, dass die Patientin mit der erforderlichen Medikation und einem klaren Behandlungsplan die Praxis verlässt, bereit für den Weg zur Apotheke ist und die Fortsetzung seiner Genesung zu Hause.</p>
+<h2 id="versorgungsprozess-3-schlaganfall-im-pflegeheim">4. Versorgungsprozess 3: Schlaganfall im Pflegeheim</h2>
+<p>Insbesondere am Sektorenübergang gibt es in der Patientenversorgung momentan große Herausforderungen und Informationsverluste. Dieser Anwendungsfall soll den intersektoralen Versorgungsprozess exemplarisch systematisiert abbilden und verdeutlicht die Informationslücken. Beispielhafter Anwendungsfall: Ein Patient wird aufgrund des Alters und Multimorbidität stationär im Pflegeheim versorgt. Die Heimversorgung erfolgt über den Hausarzt (Heimversorgungsvertrag). Der Patient erleidet akut einen Schlaganfall. Es erfolgt eine akutneurologische Behandlung mit anschließender Neurorehabilitation. Danach erfolgt die Rückverlegung ins Pflegeheim mit erhöhtem Pflegegrad bei gesteigertem Pflegebedarf (Restparese).</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess3.png" alt="Schlaganfall im Pflegeheim" width="90%"/>
+<p><strong>Versorgungsprozess (3): Schlaganfall im Pflegeheim</strong></p>
+<h3 id="versorgungsprozess-pflegeheim-interventionsvorbereitung">4.1. Versorgungsprozess Pflegeheim Interventionsvorbereitung</h3>
+<p>In einem Pflegeheim werden in der Regel umfangreiche Informationen über die Bewohner:innen gesammelt und im papierbasierten Pflegedokumentationssystem oder digitalen Pflegeinformationssystem festgehalten, um im Notfall schnell und effizient reagieren zu können. Bei einem Schlaganfall oder anderen Notfällen ist es entscheidend, dass der Rettungsdienst so schnell und vollständig wie möglich informiert wird, um eine adäquate Versorgung zu gewährleisten.</p>
+<p>Folgende Informationen und Dokumente können dem Rettungsdienst oder dem/der Bereitschaftsdienstarzt:in in solchen Fällen ausgehändigt werden:</p>
+<ul>
+<li><strong>Persönliche Daten:</strong> Elektronische Gesundheitskarte zu Einlesen in ein mobiles Kartenlesegerät. Kontaktdaten von Angehörigen oder gesetzlichen Betreuern.</li>
+<li><strong>Medizinische Vorgeschichte aus der Papierakte oder Pflegesoftwaresystem:</strong> Informationen zur Medikation einschließlich früherer Erkrankungen, Operationen und Hospitalisierungen. Aktuelle Diagnosen und Behandlungspläne. Informationen über bekannte Allergien.</li>
+<li><strong>Medikationsplan:</strong> Ein Medikationsplan mit allen aktuelle angewendeten Medikamenten, einschließlich Dosierungen und Zeitpunkte der Einnahme. Hinweise auf kürzlich vorgenommene Änderungen der Medikation.</li>
+<li><strong>Pflegeplan:</strong> Informationen über den aktuellen Pflegeplan, inklusive spezieller Pflegeanforderungen und Angaben über regelmäßige Überwachungsmaßnahmen, wie Blutdruck- oder Blutzuckermessungen.</li>
+<li><strong>Aktuelle Befunde:</strong> Ergebnisse jüngster Untersuchungen oder Behandlungen. Informationen über den Zustand des Patienten unmittelbar vor dem Notfall.</li>
+<li><strong>Patientenverfügung oder Vorsorgevollmacht:</strong> Angaben zu Patientenverfügungen oder Vorliegen einer Vorsorgevollmacht, sofern vorhanden. Hinweise zu eventuellen Wünschen bezüglich lebenserhaltender Maßnahmen.</li>
+<li><strong>Ernährungszustand und Vitalparameter:</strong> Informationen über Ernährungszustand, Flüssigkeitsaufnahme und zuletzt gemessene Vitalparameter.</li>
+<li><strong>Dokumentation des Schlaganfalls:</strong> Zeitpunkt des Auftretens der Symptome. Erste Maßnahmen, die vom Pflegepersonal ergriffen wurden. Bereits verabreichte Notfallmedikation, wenn zutreffend. Kommunikation und Bewusstseinszustand: Informationen über die Kommunikationsfähigkeit des/der Patient:in und Bewusstseinszustand vor dem Ereignis.</li>
+</ul>
+<p>Das Pflegepersonal ist in der Regel darauf geschult, diese Informationen schnell zu sammeln und dem Rettungsdienst bei Ankunft zur Verfügung zu stellen. Zusätzlich kann in vielen Fällen die Dokumentation elektronisch übermittelt werden, sofern entsprechende Systeme vorhanden sind und Datenschutzbestimmungen dies zulassen.</p>
+<h3 id="versorgungsprozess-rettungsdienst-praklinische-versorgung">4.2. Versorgungsprozess Rettungsdienst Präklinische Versorgung</h3>
+<ul>
+<li><strong>Ankunft und Sicherheit:</strong> Bei Ankunft im Pflegeheim stellen die Rettungskräfte sicher, dass die Transportsetting sicher ist und keine unmittelbaren Gefahren für den/der Patient:in oder das medizinische Personal bestehen. Als Ausgangspunkt des Prozesses sind im Pflegeheim Medikationsplan, medizinisches Notfallblatt und ggf. Pflegeüberleitungsbogen als Dokumentation vorhanden. Dies zunehmend in digitaler Form je nach Abhängigkeit des Digitalisierungsgrades des Pflegeheimes. Im Falle eines medizinischen Notfalls werden diese allerdings meist in Papierform an den Rettungsdienst übergeben.</li>
+<li><strong>Initial-Assessment:</strong> Bei Ankunft am Notfallort erfolgt eine umfassende Präliminär-Beurteilung des Patienten. Hierbei werden die vitalen Parameter wie Puls, Blutdruck und Sauerstoffsättigung eruiert und die neurologische Symptomatik sowie mögliche fokale Defizite evaluiert.</li>
+<li><strong>Haupt-Assessment:</strong> Die Rettungskräfte beginnen mit einer umfassenden klinischen Untersuchung des Patienten/der Patientin. Sie überprüfen die Vitalparameter wie Blutdruck, Puls, Atmung und Sauerstoffsättigung und stellen sicher, dass der Patient/die Patientin stabilisiert ist. Bei Bedarf ergreifen sie lebenserhaltende Maßnahmen wie die Sicherstellung der Atemwege oder die Gabe von Sauerstoff.</li>
+<li><strong>Anamnese und Symptomerhebung:</strong> Die Rettungskräfte erfragen die medizinische Vorgeschichte des/der Patient:in, insbesondere in Bezug auf Schlaganfallrisikofaktoren, frühere Schlaganfälle chronische Erkrankungen oder Medikamentenunverträglichkeiten. Sie sammeln Informationen über die aktuellen Symptome des Patienten/der Patientin, einschließlich des Beginns der Symptome, der Art der Symptome (z. B. Lähmungen, Sprachprobleme) und deren Verlauf. Notfallanamnese, -diagnostik und -behandlung werden im Notarzt-/Rettungsdienstprotokoll (elektronisch oder papierbasiert) dokumentiert.</li>
+<li><strong>Neurologische Untersuchung:</strong> Die Rettungskräfte führen eine neurologische Untersuchung durch, um die Funktionsfähigkeit des Gehirns und des Nervensystems zu bewerten. Dies kann die Prüfung von Kraft, Sensibilität, Koordination und Reflexen beinhalten. Ein FAST-Test (Face, Arms, Speech, Time) wird durchgeführt, um den Verdacht auf einen Schlaganfall zu überprüfen und zu bestätigen.</li>
+<li><strong>Blutzuckermessung:</strong> Die Blutzuckerkonzentration wird gemessen, da niedriger oder hoher Blutzucker schlaganfallähnliche Symptome verursachen kann.</li>
+<li><strong>Elektrokardiogramm (EKG) und Vitalparameterüberwachung:</strong> Bei Verdacht auf pathologische Herzrhythmusstörungen, die häufig Auslöser eines Schlaganfalls sind, wird ein EKG durchgeführt. Die Vitalparameter des/ Patient:in werden kontinuierlich überwacht, um Veränderungen zu erfassen und zu dokumentieren.</li>
+<li><strong>Entscheidung über den Transport:</strong> Basierend auf der Schwere des Schlaganfalls, den klinischen Befunden und den Ressourcen vor Ort wird entschieden, ob der Patient/die Patientin vor Ort behandelt werden kann oder ein Transport ins Krankenhaus erforderlich ist.</li>
+<li><strong>Datenübertragung ins Krankenhaus:</strong> Im modernen Rettungswesen werden technische Strukturen, Protokolle und digitale Kommunikationswege effektiv genutzt, um die Versorgung von Schlaganfallpatient:innen zu optimieren.</li>
+</ul>
+<p>In einigen Bundesländern erfolgt die Datenübertragung und damit auch die Übertragung von Medikationsdaten ins Krankenhaus in der Regel über spezialisierte Rettungsdienstsysteme, die digitale Übertragungsfunktionen bieten. Die erfassten medizinischen Daten können digital an das Krankenhaus übertragen werden, um die Vorbereitung auf die Ankunft des Patienten/der Patientin in der Notfallpraxis zu erleichtern.</p>
+<h3 id="versorgungsprozess-krankenhaus-klinische-versorgung-siehe-auch-versorgungsprozess-2">4.3. Versorgungsprozess Krankenhaus Klinische Versorgung - siehe auch Versorgungsprozess 2</h3>
+<ul>
+<li><strong>Einlieferung in der Notaufnahme:</strong> Bei Ankunft in der Notaufnahme wird die Patient:in samt vorhandener Dokumentation ((e)Protokoll von Notärzt:innen oder Rettungsdienst) dem Krankenhaus übergeben.</li>
+<li><strong>Erste Untersuchungen:</strong> Es folgt eine medizinische Untersuchung, um die genaue Ursache und den Schweregrad der Pathologie zu bestimmen. Basierend auf dieser Diagnose wird eine Entscheidung zur weiteren Behandlung getroffen.</li>
+<li><strong>Anamnese in der ZNA:</strong> Eine erneute, tiefergehende Anamnese wird durchgeführt. Hierbei wird insbesondere auf den aktuellen Zustand, Vorgeschichte, aktuelle Medikation und mögliche Arzneimittelunverträglichkeiten geachtet.</li>
+<li><strong>Anpassung der Medikation:</strong> Im Zuge der Medication Reconciliation wird die aktuelle Medikation im Pflegeheim anhand vorliegender Dokumente wie BMP oder eigene Patientenaufzeichnungen überprüft und ggf. an die Klinik-Hausliste angepasst.</li>
+<li><strong>Diagnostik und Behandlung:</strong> Basierend auf den Untersuchungsergebnissen werden weitere Diagnostik-und Therapiemaßnahmen eingeleitet und eine entsprechende Behandlungsstrategie festgelegt. Ggf. liegen bei einem Wiederaufnahmefall im KIS-System der Klinik Vorinformationen vor, die zur Beurteilung verwendet werden können und möglicherweise mit anderen Systemen synchronisiert werden.</li>
+<li><strong>Entscheidung &amp; Dokumentation:</strong> Basierend auf der Diagnose und Behandlung wird eine medizinische Entscheidung zur Aufnahme in der Stroke Unit oder bei zwischenzeitlich reduzierte Symptomatik ggf. auf einer neurologischen Station getroffen. Diese Entscheidung sowie alle relevanten Informationen werden im KIS dokumentiert. Die Übernahme vom Medikationsdaten über Schnittstellen ist aktuell in strukturierter Form in der Regel nicht möglich, sodass eine zumindest händisch unterstützte Eingabe in das PDMS der Stroke Unit erfolgt. Ebendieses muss auch bei der Rückverlegung auf Normalstation erfolgen, da auch hier üblicherweise keine automatische Übernahme von Medikationsdaten in das KIS/KAS der Normalstation möglich ist.</li>
+</ul>
+<p><strong>Zusammenfassung:</strong> Die patientenbezogenen Informationen können über zwei Wege ins Krankenhaus übermittelt werden. Zum einen erfolgt die Übergabe der durch das Pflegeheim überreichten Dokumente durch den/die Notarzt:in/Rettungsdienst in der Notaufnahme des Krankenhauses. Zum anderen kann eine direkte digitale Übertragung von den im Pflegeheim gepflegten, vorstehend genannten Dokumenten an die Notaufnahme des Krankenhauses erfolgen. Sind diese Dokumente nicht vorhanden bzw. digital verfügbar  liegen nur das Notarzt-/Rettungsdienstprotokoll und die darin enthaltenen Informationen in der Notaufnahme vor. Im Krankenhaus wird der/die Patient:in in diesem Szenario in der Regel Notaufnahme, Stroke Unit und Normalstation durchlaufen, wo jeweils entsprechend Patientendaten übergeben werden und neue Daten generiert und dokumentiert werden. Die Medikationsdokumentation wird zunächst im Informations-/Dokumentationssystem der Notaufnahme vorgenommen. Hier erfolgt nach der Medikationsanamnese die Umstellung der Hausmedikation auf die stationäre Medikation sowie die Neuverordnung von Medikamenten. Bei Verlegung auf die Stroke Unit ist eine automatische Übernahme vom Medikationsdaten über Schnittstellen aktuell in strukturierter Form in der Regel nicht möglich, sodass zumindest eine händisch unterstützte Eingabe in das PDMS der Stroke Unit erfolgen muss. Ebendieses muss auch bei der Rückverlegung auf Normalstation erfolgen, da auch hier üblicherweise keine automatische Übernahme von Medikationsdaten in das KIS/KAS der Normalstation möglich ist. Bei Verlegung des/der Patient:in in die stationäre neurologische Reha erfolgt erneut eine Übergabe der bisherigen medizinischen Dokumentation inklusive der angepassten Medikation, in der Regel als Ausdruck in Papierform. Eine strukturierte digitale Übertragung erfolgt sehr selten. Ggf. stellen Praxen/Einrichtungen die patientenbezogenen Informationen per Email/KIM als .PDF zur Verfügung.</p>
+<h3 id="versorgungsprozess-neurologische-rehabilitationseinrichtung-neurorehabilitation">4.4. Versorgungsprozess Neurologische Rehabilitationseinrichtung (Neurorehabilitation)</h3>
+<ul>
+<li><strong>Überleitung aus dem Krankenhaus in die Reha:</strong> Nach der Versorgung im Krankenhaus wird der/die Patient:in für eine stationäre neurologische Reha in eine spezialisierte Rehaklinik verlegt.</li>
+<li><strong>Übergabe und Anamnese:</strong> Sobald der/die Patient:in in der Reha-Einrichtung ankommt, gibt es eine Übergabe, bei der relevante Informationen aus dem Krankenhaus, speziell die Entlassmedikation im Arztbrief und ggf. der BMP an das Reha-Personal weitergegeben werden. Darauf folgt eine Anamnese, bei der die medizinische Vorgeschichte des/der Patient:in sowie spezifische Informationen über den Schlaganfall und den aktuellen Zustand des/der Patient:in erfasst werden. Rehabilitations-Strategie: Erstellung eines individuellen Rehabilitationsplans für den/die Patient:in. Es werden Entscheidungen über die spezifischen Therapien und Interventionen, vor allem auch medikamentös getroffen, die der/die Patient:in benötigt, basierend auf seinem/ihrem Zustand und seinen/ihren Bedürfnissen.</li>
+<li><strong>Behandlung und Normalisierung:</strong> Während seines Aufenthalts in der Reha-Einrichtung erhält der/die Patient:in verschiedene Therapien, um seine/ihre motorischen, kognitiven und sprachlichen Fähigkeiten zu verbessern. &quot;Normalisierung&quot; bezieht sich auf den Prozess , bei dem der/die Patient:in wieder zu einer möglichst normalen Routine und Funktion zurückkehrt.</li>
+<li><strong>Datenübertragung:</strong> Es gibt eine kontinuierliche Übertragung von Daten zwischen verschiedenen Systemen, wie z.B. PDMS (Patientendatenmanagementsystem), KIS/PIS.  Diese Daten könnten den Fortschritt des/der Patient:in, seine/ihre Therapie und andere relevante Informationen dokumentieren.</li>
+<li><strong>Medizinische Entscheidung &amp; Dokumentation:</strong> Gegen Ende des Reha-Aufenthalts wird überprüft, wie viel Fortschritt der/die Patient:in gemacht hat und welche weiteren Maßnahmen in der anschließenden ambulanten Betreuung durch die Hausarztpraxis und die Neurologiepraxis notwendig sind. Alle Entscheidungen, Therapien und Fortschritte werden dokumentiert.</li>
+<li><strong>Medication Reconciliation:</strong> Bevor der/die Patient:in die Rehaklinik verlässt, führen Fachpersonal und/oder der/die Apotheker:in einen Medikationsabgleich (Medication Reconciliation) durch. Dieser umfasst den Abgleich der Medikation bei Aufnahme mit der aktuellen Medikation, um sicherzustellen, dass alle Änderungen, inklusive Dosierungen, Indikationen und spezielle Anweisungen, präzise dokumentiert sind.</li>
+<li><strong>Erstellung des Entlassungs-Medikationsplans:</strong> Der Medikationsplan wird aktualisiert, um die in der Reha begonnenen oder geänderten Medikamente zu reflektieren, und inkludiert genaue Anweisungen für die Einnahme sowie Informationen über mögliche Neben- und Wechselwirkungen.</li>
+<li><strong>Entlassung:</strong> Nach Abschluss der Reha wird entschieden, ob der/die Patient:in entlassen werden kann und wie seine weiterführende Versorgung aussehen sollte. Vorläufiger Reha-Arztbrief mit der Entlassmedikation und BMP werden dem Patienten in Printform übergeben.</li>
+</ul>
+<p>Der dargestellte Prozess gibt einen Einblick in die umfassende Versorgung, die ein/e Schlaganfallpatient:in während einer stationären neurologischen Rehabilitation erhält. Es werden sowohl medizinische als auch organisatorische Aspekte und der Medikationsprozess berücksichtigt, um sicherzustellen, dass der/die Patient:in die bestmögliche Betreuung erhält.</p>
+<h3 id="wiederaufnahmeprozess-im-pflegeheim">4.5. Wiederaufnahmeprozess im Pflegeheim</h3>
+<p>Um den Medikationsprozess bei der Entlassung aus der Rehaklinik und der Wiederaufnahme ins Pflegeheim zu präzisieren, muss der Schwerpunkt auf einem sorgfältigen Medikationsabgleich, einer lückenlosen Informationskette und einer gezielten Kommunikation zwischen den beteiligten Gesundheitseinrichtungen liegen.</p>
+<ul>
+<li><strong>Übergabe des aktualisierten Medikationsplans:</strong> Der Medikationsplan wird zusammen mit dem Entlassbrief und dem Überleitungsbogen an das Pflegeheim übergeben. Dies gewährleistet, dass das Pflegepersonal über alle notwendigen Informationen zur Umsetzung eines sicheren Medikationsprozesses verfügt.</li>
+<li><strong>Überprüfung der Medikation bei Aufnahme ins Pflegeheim:</strong> Bei der Aufnahme des/der Patient:in führt das Pflegepersonal des Pflegeheims einen eigenen Abgleich des Medikationsplans durch, um eventuelle Diskrepanzen zu identifizieren. Abgleich der im BMP und/oder Arztbrief dargestellten Medikation mit den Dauermedikation, die im Pflegeheim vor Einweisung in die Klinik physisch und im Pflegeinformationssystem dokumentiert und verabreicht wurde.</li>
+<li><strong>Anpassungen durch den/die Hausarzt:in:</strong> Der/die Hausarzt:in nimmt, basierend auf den Rückmeldungen aus dem Pflegeheim und dem ebenfalls bei ihm vorliegenden Entlassbrief und aufgrund eigener Beurteilung der Entlass- und vorhandenen Dauermedikation auf Station eigene Beurteilungen vor bzgl. sinnvoller Anpassungen der Medikation. Alle Änderungen werden klar dokumentiert und an das Pflegepersonal kommuniziert.</li>
+<li><strong>Edukation der/des Patient:in und des Pflegepersonals:</strong> Sowohl der/die Patient:in als auch das Pflegepersonal werden über die Medikation und deren richtige Handhabung aufgeklärt, um die Adhärenz zu fördern und Anwendungsfehler zu minimieren.</li>
+<li><strong>Bestellung von Medikamenten:</strong> Übermittlung der von dem/der Hausärzt:in u. U. angepassten Verordnungen, analog oder als eRezept, an das Pflegeheim zur anschließenden Belieferung mit (meist verblisterter) Medikation durch die Apotheke (Versorgungsvertrag gemäß § 12a Apothekengesetz (ApoG)).</li>
+<li><strong>Regelmäßige Überprüfung der Medikation:</strong> Die Pflegekräfte im Pflegeheim überprüfen kontinuierlich den Medikationsplan bzw. die Medikationsprozesse im Hinblick auf die aktuelle Gesundheitssituation des/der Patient:in und kommunizieren Bedenken oder Änderungen an den/die Hausarzt:in oder Neurolog:in.</li>
+</ul>
+<p>Qualitätssicherung und Dokumentation: Der Medikationsplan wird regelmäßig durch den/die Hausarzt:in in Absprache mit dem Pflegepersonal und ggf. dem/der Apotheker:in im Pflegeheim bei Hausbesuchen reevaluiert und wenn notwendig angepasst.</p>
+<h3 id="versorgungsprozess-hausarztpraxis-im-pflegeheim">4.6. Versorgungsprozess Hausarztpraxis im Pflegeheim</h3>
+<p>Die Rückverlegung eines/r Patient:in aus der Rehabilitationseinrichtung ins Pflegeheim ist ein kritischer Moment im Medikationsmanagement, bei dem der/die Hausarzt:in eine zentrale Rolle spielt, um eine sichere und effektive Arzneimitteltherapie zu gewährleisten.</p>
+<ul>
+<li><strong>Heimbesuch und Vorstellung:</strong> Der Prozess beginnt mit dem vom Pflegeheim angeforderten Heimbesuch. Entweder orchestriert der/die Hausarzt:in vor dem Heimbesuch die neue Medikation des Heimbewohners schon vorab in der Praxis wenn ihm alle (Medikations-)Daten vorliegen. Im Allgemeinen legt er dies jedoch im Heim am Wiederaufnahmetag des Bewohners fest.</li>
+<li><strong>Medication Reconciliation:</strong> Der/die Arzt:in überprüft alle Unterlagen, um sicherzustellen, dass die verordneten Medikamente und Therapieanpassungen während des Rehaaufenthaltes korrekt und vollständig dokumentiert sind.</li>
+<li><strong>Abgleich mit der Vormedikation:</strong> Vergleich mit früheren Plänen. Der/die Hausarzt:in vergleicht die aktuelle Medikation mit der Medikation vor der Krankenhausaufnahme, die Medikation bzgl. der Rehabilitation und die auf der Station physisch oder notiert im Pflegeinformationssystem vorhandenen Medikamente, um Diskrepanzen oder Doppelverordnungen zu identifizieren.</li>
+<li><strong>Kommunikation mit dem Pflegepersonal:</strong> Wichtige Informationen und Änderungen in der Medikation werden an das Pflegepersonal weitergegeben, um einen lückenlosen Übergang zu gewährleisten.</li>
+<li><strong>Anpassung der Medikation:</strong> Bei Bedarf passt der/die Hausarzt:in die Medikation an, basierend auf dem aktuellen Zustand des/der Patient:in und den Medikationsinformationen aus den vorliegenden Medikationsprozessen und stellt ein Rezept aus. Der/die Arzt:in stellt sicher, dass alle Medikamente eine klare Indikation haben und auf die aktuellen Bedürfnisse des/der Patienten:in abgestimmt sind. Mögliche Wechselwirkungen zwischen den Medikamenten werden bewertet und bei Bedarf angepasst.</li>
+<li><strong>Patient:innen- und Pflegeedukation:</strong> Der/die Hausarzt:in klärt sowohl den/die Patient:in als auch das Pflegepersonal über alle neuen Medikamente und Anpassungen in der Therapie auf. Es werden Anweisungen für die korrekte Medikamentengabe, potenzielle Nebenwirkungen und das Vorgehen bei arzneimittelbezogenen Problemen gegeben.</li>
+<li><strong>Aktualisierung der Patientenakte im Pflegeinformationssystem:</strong> Alle Änderungen werden in der elektronischen Patientenakte des Pflegeinformationssystems dokumentiert, um eine aktuelle und umfassende Medikationshistorie zu gewährleisten.</li>
+<li><strong>Follow-Up:</strong> Der/die Hausarzt:in plant regelmäßige Überprüfungen der Medikation, um deren Wirksamkeit und Verträglichkeit sicherzustellen. In Feedback-Schleifen wird ein stetiger Informationsaustausch mit dem Pflegepersonal etabliert, um den Zustand des/der Patient:in im Auge zu behalten und gegebenenfalls die Therapie anzupassen. Dabei erstellt der/die Hausarzt:in mit dem Pflegeheim einen Plan für den Umgang mit medikamentösen Notfällen oder akuten Gesundheitsproblemen, die einer Gabe von speziellen Notfallmedikamenten, z.B. zur Senkung des Blutdrucks des/der Patient:in benötigen.</li>
+<li><strong>Interdisziplinäre Koordination:</strong> Bei Bedarf koordiniert der/die Hausarzt:in die Medikation und Behandlung mit anderen beteiligten Facharzt:innen, im Fall der Medikationsversorgung nach Apoplex mit einer neurologischen Praxis, um eine ganzheitliche Betreuung zu garantieren.</li>
+</ul>
+<p>Diese Aufgaben veranschaulichen die Vorgehensweise des/der Hausarzt:in, um die Arzneimitteltherapie des aus der Reha zurückkehrenden Pflegeheimbewohners sicherzustellen.</p>
+<h3 id="versorgungsprozess-neurologisch-facharztliche-praxis-im-pflegeheim">4.7. Versorgungsprozess Neurologisch-Fachärztliche Praxis im Pflegeheim</h3>
+<p>Die Versorgung eines Heimbewohners durch eine neurologische Praxis nach der Entlassung aus der Rehabilitation ist ein mehrstufiger Prozess, der eng mit dem/der Hausarzt:in koordiniert wird und die spezialisierte neurologische Expertise in die allgemeine medizinische Versorgung integriert.</p>
+<p>In Absprache mit dem Pflegeheim und dem Bewohner wird ein Termin für die Vorstellung in der neurologischen Praxis vereinbart. Der Prozess vor Ort startet damit, dass ein/e Heimbewohner:in vom Pflegeheim aus zur neurologisch-fachärztlichen Praxis transportiert wird, begleitet von einem Überweisungsschein, einem BMP und dem Entlassbrief der Rehaklinik und ggf. des Krankenhauses. Ein Hausbesuch des/der Neurolog:in im Pflegeheim wird kurz nach der Wiederaufnahme des Bewohners kaum praktiziert. Alternativ erhält der/die Neurolog:in auf Anforderung vom Hausarzt:in alle relevanten medizinischen Unterlagen, einschließlich des Rehabilitationsberichts und den aktuellen Medikationsplans. Datenerfassung: Er/Sie prüft die neurologisch relevanten Aspekte, wie die neurologische Medikation und Befunde, die während der Rehabilitation dokumentiert wurden und nach Wiederaufnahme des Bewohners im Pflegeheim durch den/die Hausarzt:in festgelegt wurde.</p>
+<ul>
+<li><strong>Klinische Einschätzung:</strong> Der/die Neurolog:in wertet die übermittelten Daten aus, um einen ersten Eindruck vom neurologischen Status des/der Patient:in zu gewinnen. In einem Abgleich analoger und digitaler historischer Daten werden frühere neurologische Befunde und Therapieansätze mit den aktuellen Informationen verglichen, um Veränderungen und Trends zu identifizieren.</li>
+<li><strong>Anamnese und neurologische Untersuchung:</strong> Der/die Neurolog:in führt eine angemessene Anamnese durch, insbesondere zu Veränderungen seit der Rehabilitation. Eine neurologische Untersuchung wird durchgeführt, um den aktuellen Zustand zu bewerten.</li>
+<li><strong>Überprüfung und Anpassung der Medikation:</strong> Im Rahmen einer Medication Reconciliation überprüft er/sie die aktuelle Medikation im Hinblick auf neurologische Indikationen. Falls erforderlich, passt der/die Neurolog:in die medikamentöse Therapie an oder fügt neue Medikamente hinzu, um den Zustand des/der Patient:in zu optimieren.</li>
+<li><strong>Interdisziplinäre Abstimmung:</strong> Der/die Neurolog:in kommuniziert die Veränderung in der Medikation und Behandlungsstrategie im Allgemeinen per Arztbrief an den/die Hausarzt:in. Als gemeinsame Strategie wird vom Hausarzt:in ein abgestimmter Therapieplan entwickelt, der sowohl die neurologischen als auch die allgemeinmedizinischen Bedürfnisse des/der Patient:in berücksichtigt und entsprechende Medikationsinformationen wie z.B. den BMP an das Pflegeheim, oft per Fax, übermittelt.</li>
+<li><strong>Aktualisierung der Patientenakte:</strong> Der/die Neurolog:in dokumentiert alle relevanten neurologischen Befunde und Therapieanpassungen detailliert in der Patientenakte in der neurologischen Praxis.</li>
+<li><strong>Pflegeheimkommunikation:</strong> Ergänzend zur hausärztlichen Übermittlung der Medikation ans Pflegeheim stellt der/die Neurolog:in sicher, dass alle medikamentösen Anpassungen und therapeutischen Empfehlungen an das Pflegepersonal kommuniziert werden. Falls der/die Neurolog:in einen Hausbesuch im Pflegeheim macht dann sind die Prozesse analog zu den hausärztlichen Prozessen. Ergänzend bietet bei Bedarf der/die Neurolog:in Schulungen oder Anleitungen für das Pflegepersonal bezüglich der neurologischen Aspekte der Medikation und Versorgung des Patienten/der Patientin an.</li>
+</ul>
+<p><strong>Zusammenfassung:</strong> Der Versorgungsprozess bei einem Schlaganfall beginnt oftmals in einem Pflegeheim, wo eine Interventionsvorbereitung stattfindet. Hier werden die ersten Anzeichen eines Schlaganfalls erkannt und erste Maßnahmen eingeleitet, um den Patienten für die Intervention vorzubereiten. Im Falle eines Schlaganfalls wird der Rettungsdienst kontaktiert, der die präklinische Versorgung übernimmt. Der Patient erhält erste lebensrettende Maßnahmen und wird für den Transport ins Krankenhaus stabilisiert. Im Krankenhaus erfolgt die klinische Versorgung, die eine umfangreiche Diagnostik und die Einleitung einer akuten Schlaganfalltherapie beinhaltet. Nach der Akutbehandlung wird der Patient, je nach Schwere seines Zustandes, entweder zur weiteren Behandlung in das Krankenhaus aufgenommen oder in eine spezialisierte neurologische Rehabilitationseinrichtung überführt. Die Neurorehabilitation ist ein entscheidender Teil des Versorgungsprozesses. Hier wird der Patient durch ein Team aus verschiedenen Therapiebereichen behandelt, um die Folgen des Schlaganfalls zu mindern und die Wiedererlangung der motorischen und kognitiven Funktionen zu fördern. Nach Abschluss der Rehabilitation kann der Wiederaufnahmeprozess ins Pflegeheim erfolgen. Hier wird der Patient erneut aufgenommen und die notwendigen Pflege- und Unterstützungsleistungen werden fortgesetzt. Parallel dazu wird der Versorgungsprozess durch die Hausarztpraxis im Pflegeheim unterstützt. Der Hausarzt übernimmt die allgemeinmedizinische Versorgung, kontrolliert den Gesundheitszustand des Patienten und koordiniert weitere Maßnahmen. Des Weiteren ist die neurologisch-fachärztliche Praxis im Pflegeheim involviert. Hier wird der Patient fachärztlich betreut, was die Überwachung neurologischer Symptome und die Anpassung spezifischer Medikationen einschließt. Jeder dieser Versorgungsschritte ist durch ein Netzwerk von Fachpersonal und spezialisierten Abläufen gekennzeichnet. Ziel ist es, eine kontinuierliche und qualitativ hochwertige Versorgung des Schlaganfallpatienten zu gewährleisten und seine Lebensqualität nachhaltig zu verbessern.</p>
+<h2 id="in-den-versorgungsprozessen-mehrfach-durchlaufene-subprozesse">5. In den Versorgungsprozessen mehrfach durchlaufene Subprozesse</h2>
+<h3 id="versorgung-subprozess-anamnese">5.1. Versorgung Subprozess Anamnese</h3>
+<p>Die Anamnese bildet das Fundament für eine qualitativ hochwertige Patientenversorgung und ist ein unverzichtbarer Bestandteil medizinischer Versorgungsprozesse. Als systematische Erhebung der medizinischen Vorgeschichte ermöglicht sie es den Behandelnden, individuelle Behandlungsstrategien zu entwickeln und Risiken frühzeitig zu erkennen. Im Folgendem beleuchten wir die zentrale Rolle der Anamnese als integralen Subprozess, der die Weichen für eine zielgerichtete Diagnostik und Therapie stellt. Der Subprozess Anamnese schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit &quot;+&quot; gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden.</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess1.png" alt="Subprozess Anamnese" width="90%"/>
+<p><strong>Subprozess (1): Subprozess Anamnesee</strong></p>
+<p>Im Rahmen der Anamnese finden die Erhebung der aktuellen Medikation, klinischer Daten und arzneimittelbezogener Probleme (ABP) statt. Wenn möglich wird dabei auch die Medikationshistorie erhoben. Alle gewonnenen Informationen fließen dann in eine AMTS-Prüfung ein, die wenn möglich softwaregestützt abläuft. Bei den Medikationsdaten fehlen dabei oft der genaue Einnahmezeitpunkt sowie die Applikationsart und der Applikationsort. Auch klinische Daten sind - insbesondere, wenn sie aus der Erinnerung von Patient:innen und Angehörigen kommen - nur bedingt vollständig.</p>
+<p>Die Erfassung und Analyse von Medikationsdaten ist an vielen Stellen im Medikationsprozess von entscheidender Bedeutung, um um eine sichere und effektive medikamentöse Therapie zu gewährleisten. Der Prozess der Anamnese vor einer Arzneimitteltherapiesicherheitsprüfung (AMTS) beginnt mit der Erhebung des aktuellen Medikationsstatus. Hier werden detaillierte Informationen über die vom Patienten aktuell verwendeten Medikamente gesammelt, z.B. Präparate- und Wirkstoffnamen, Wirkstoffstärke, Dosierung, Einnahmeschema, Arzneiform, Indikation sowie ob es sich um Medikamente für den Dauerbedarf oder den Akutbedarf handelt. Als nächstes wird die Medikationshistorie des Patienten aufgenommen, um einen vollständigen Überblick über die bisherige Medikamentenanwendung und eventuell aufgetretene Probleme zu erhalten. Parallel dazu werden klinische Daten erhoben, zu denen z.B. Allergien, medikationsrelevante Diagnosen, Laborwerte sowie Körpergröße und Gewicht des Patienten zählen. Ein weiterer wesentlicher Schritt ist das Identifizieren von arzneimittelbezogenen Problemen (ABP), wie etwa Wechselwirkungen zwischen verschiedenen Medikamenten oder andere Risiken, die die Medikation mit sich bringen könnte. Nachdem alle notwendigen Informationen gesammelt wurden, kann die AMTS-Prüfung stattfinden. Diese evaluiert die Sicherheit der Medikation des Patienten. Es wird empfohlen, diese Prüfung mit Unterstützung von Software durchzuführen, um Genauigkeit und Effizienz zu maximieren. Somit stellt der Prozess sicher, dass alle relevanten Daten vor der Durchführung der AMTS-Prüfung sorgfältig erfasst und analysiert werden.</p>
+<h3 id="erhebung-von-medikationsdaten">5.2. Erhebung von Medikationsdaten</h3>
+<p>Um eine detailliertere Darstellung der Erhebung von Medikationsdaten zu erhalten, wäre es hilfreich, verschiedene Datenquellen zu integrieren und zu analysieren. Im Folgenden finden Sie eine ausführlichere Erörterung, gegliedert nach den Hauptpunkten des Medikationsprozesses:</p>
+<ul>
+<li><strong>Medikamentenidentifikation:</strong> Die Identifikation eines Medikaments ist ein kritischer Schritt, der Genauigkeit erfordert. Durch den bundeseinheitlichen Medikationsplan (BMP) erhalten wir eine verlässliche Quelle für Handels- und generische Namen sowie für Wirkstoffkonzentrationen und Dosierungsstärken. Krankenhausinformationssysteme (KIS) bieten eine weitere Ebene der Validierung, da sie aktuelle Verordnungen und Änderungen während des Krankenhausaufenthaltes abbilden. Ergänzend dazu können Praxisverwaltungssysteme (PVS) herangezogen werden, um die Verschreibungshistorie und -kontinuität außerhalb des Krankenhauskontextes zu überprüfen.</li>
+<li><strong>Dosierungsregime:</strong> Die genaue Kenntnis des Dosierungsregimes ist entscheidend für die Therapietreue und die Vermeidung von Medikationsfehlern. Patienten- und Angehörigengespräche bieten persönliche Einblicke in den Alltag und die Handhabung der Medikation durch den/die Patient:in. Diese Gespräche können Aufschluss über individuelle Anpassungen im Alltag geben, die in keiner elektronischen Akte vermerkt sind. Apothekendaten können ebenfalls zur Überprüfung der Dosierungshistorie genutzt werden, da sie die Ausgabezeitpunkte und die Menge der abgegebenen Medikamente dokumentieren.</li>
+<li><strong>Darreichungsform:</strong> Die Darreichungsform eines Medikaments beeinflusst die Art und Weise, wie es vom Körper aufgenommen wird. Informationen hierzu finden sich in den Beipackzetteln, die auch Hinweise auf spezielle Lagerungs- oder Verabreichungsanforderungen enthalten. Elektronische Medikationspläne können diese Daten ergänzen, indem sie eine übersichtliche und schnell zugängliche Referenz für das medizinische Personal bieten.</li>
+<li><strong>Therapeutische Indikation:</strong> Jede Verschreibung hat einen Grund, der in ärztlichen Verordnungen dokumentiert ist. Diese Indikationen können aus der elektronischen Patientenakte abgerufen werden, die eine umfassende Dokumentation der medizinischen Historie und der Behandlungsziele enthält.</li>
+<li><strong>Anwendungsmodus:</strong> Die Unterscheidung zwischen Dauertherapie und Bedarfsmedikation ist essenziell für das Verständnis der Medikamentenwirkung und die Planung der Therapie. Medizinische- und Pflegeberichte bieten detaillierte Informationen zur Applikationstechnik und zum Verabreichungsort, die für die korrekte Anwendung kritisch sind.</li>
+<li><strong>Patienteninterview:</strong> Direkte Befragungen liefern Informationen über das Medikationsverhalten und mögliche Probleme bei der Medikamenteneinnahme. Sie helfen, die Daten aus den Gesundheitsakten mit den realen Erfahrungen des/der Patient:in abzugleichen.</li>
+<li><strong>Abgleich mit Dokumenten:</strong> Die Konsistenz der Medikationsinformationen wird durch einen Abgleich der Patientenauskünfte mit den vorliegenden Dokumenten im BMP, KIS- und PVS-Daten sichergestellt. Dies trägt dazu bei, die Genauigkeit der Medikationsdaten zu erhöhen und etwaige Diskrepanzen aufzudecken.</li>
+<li><strong>Adhärenz-Überprüfung:</strong> Die Beurteilung der Therapietreue ist ein komplexes Unterfangen, das durch moderne Technologien wie Wearables und Gesundheits-Apps unterstützt werden kann. Diese Geräte können die Medikamenteneinnahmezeitpunkte erfassen und damit wertvolle Daten zur Compliance liefern.</li>
+</ul>
+<p>Indem man diese Datenquellen heranzieht und auswertet, lässt sich ein detailliertes Bild der Medikation eines/einer Patient:in erstellen, das weit über eine einfache Liste von Medikamenten hinausgeht. Es bietet die Möglichkeit, die Medikationstherapie zu optimieren und die Patientensicherheit zu erhöhen.</p>
+<h3 id="erhebung-der-medikationshistorie">5.3. Erhebung der Medikationshistorie</h3>
+<p>Um die Medikamentenhistorie und die erforderlichen akuten Änderungen eingehend zu analysieren, ist eine systematische Vorgehensweise entscheidend. Der folgende Textabschnitt bietet einen erweiterten Überblick über die einzelnen Schritte, die bei einer sorgfältigen Anamnese der Medikationshistorie berücksichtigt werden sollten.</p>
+<ul>
+<li><strong>Chronologische Erfassung:</strong> Eine detaillierte chronologische Erfassung der Medikationshistorie ist grundlegend. Hierbei wird eine Timeline erstellt, die sämtliche Änderungen und Ereignisse im Medikationsverlauf des/der Patient:in dokumentiert. Dies umfasst das Startdatum jedes Medikaments, Dosierungsänderungen, Pausen und das Ende der Medikation. Diese Timeline dient als Basis für die Analyse der Medikationsentwicklung und ermöglicht es, Muster und potenzielle Probleme zu identifizieren.</li>
+<li><strong>Bewertung von Therapieänderungen:</strong> Die Gründe für das Wechseln oder Absetzen von Medikamenten müssen sorgfältig untersucht werden. Hierbei ist es wichtig, die Ursachen zu verstehen, sei es aufgrund von Nebenwirkungen, Ineffektivität oder anderen klinischen Entscheidungen. Diese Informationen können Aufschluss über die Verträglichkeit und Wirksamkeit der Medikation geben und sind entscheidend für zukünftige Therapieentscheidungen.</li>
+<li><strong>Interaktive Datenabfrage:</strong> Moderne EDV-Systeme ermöglichen das Abrufen und Abgleichen historischer Medikationsdaten. Hierbei können auch automatisierte AMTS-Prüfungen (Arzneimitteltherapiesicherheit) durchgeführt werden, die Interaktionen, Kontraindikationen und Doppelverordnungen aufdecken. Dieser Prozess unterstützt eine umfassende Analyse der Medikationshistorie und hilft, potenzielle Risiken frühzeitig zu identifizieren.</li>
+<li><strong>Risikoassessment:</strong> Ein umfassendes Risikoassessment, das Patientendemografie und -historie berücksichtigt, ist entscheidend, um Risikofaktoren für Arzneimittelnebenwirkungen zu identifizieren. Alter, Geschlecht, bestehende Erkrankungen, genetische Faktoren und Lebensstil des Patienten sind dabei wichtige Parameter. Die Kenntnis dieser Faktoren ermöglicht eine individuell angepasste Medikationsplanung.</li>
+<li><strong>Klinische Evaluation:</strong> Die klinische Evaluation der aktuellen Arzneimitteltherapie unter Berücksichtigung der gegenwärtigen klinischen Bedingungen ist ein weiterer wichtiger Schritt. Hierbei wird beurteilt, inwieweit die aktuelle Medikation den Bedürfnissen und Gesundheitszielen des/der Patient:in entspricht. Diese Beurteilung kann zu Empfehlungen für Medikationsänderungen führen, um die Wirksamkeit und Sicherheit der Therapie zu verbessern.</li>
+<li><strong>Therapieanpassung:</strong> Auf Basis der gewonnenen Erkenntnisse werden Empfehlungen für Therapieanpassungen formuliert. Diese Empfehlungen müssen klar und verständlich kommuniziert und mit dem behandelnden medizinischen Personal abgestimmt werden. Ziel ist es, die Arzneimittelsicherheit und -wirksamkeit zu optimieren, indem auf individuelle Bedürfnisse des/der Patient:in eingegangen wird. Hierzu zählen Anpassungen der Dosierung, das Hinzufügen neuer Medikamente oder das Absetzen von Medikamenten, wenn dies medizinisch angezeigt ist.</li>
+</ul>
+<h3 id="erhebung-klinische-daten">5.4. Erhebung Klinische Daten</h3>
+<p>Für eine noch genauere und differenziertere Anamnese der klinischen Daten, die bei der Medikationsplanung berücksichtigt werden müssen, sind folgende zusätzlichen Aspekte relevant:</p>
+<ul>
+<li><strong>Vorerkrankungen und chirurgische Eingriffe:</strong> Neben den aktuellen Diagnosen sind Informationen über vorherige Erkrankungen und durchgeführte Operationen entscheidend. Diese historischen medizinischen Daten können Hinweise auf chronische Zustände oder frühere Komplikationen geben, die die Medikationsauswahl und -dosierung beeinflussen können.</li>
+<li><strong>Familienanamnese:</strong> Die Familienanamnese kann wichtige Hinweise auf genetische Prädispositionen für bestimmte Krankheiten oder Medikamentenreaktionen liefern. Erbliche Faktoren können beispielsweise die Wirksamkeit und Verträglichkeit von Medikamenten beeinflussen.</li>
+<li><strong>Sozialanamnese:</strong> Die Sozialanamnese umfasst Informationen über Lebensstil, Beruf, Wohnsituation, Ernährungsgewohnheiten und soziales Umfeld des Patienten. Faktoren wie Rauchen, Alkoholkonsum und Ernährungsgewohnheiten können die Medikamentenmetabolisierung und -wirksamkeit beeinflussen.</li>
+<li><strong>Psychische Gesundheit:</strong> Die psychische Gesundheit des/der Patient:in, einschließlich früherer und aktueller psychischer Erkrankungen, sollte in der Anamnese berücksichtigt werden. Psychische Erkrankungen können die Compliance und die Reaktion auf Medikamente beeinflussen.</li>
+<li><strong>Impfstatus:</strong> Aktuelle Informationen zum Impfstatus sind wichtig, besonders im Zusammenhang mit Immunsuppressiva oder bei Patient:innen mit chronischen Erkrankungen.</li>
+<li><strong>Schwangerschaft und Stillzeit:</strong> Bei Frauen im gebärfähigen Alter sollte der Schwangerschaftsstatus sowie die Stillzeit berücksichtigt werden, da viele Medikamente die fetale Entwicklung beeinträchtigen oder in die Muttermilch übergehen können.</li>
+<li><strong>Aktueller Medikationsplan:</strong> Eine genaue Übersicht über alle aktuell eingenommenen Medikamente, einschließlich Nahrungsergänzungsmitteln, pflanzlichen Präparaten und nicht verschreibungspflichtigen Medikamenten, ist unerlässlich.</li>
+<li><strong>Schmerzanamnese:</strong> Bei Patient:innen, die Schmerzmittel einnehmen, ist eine detaillierte Schmerzanamnese wichtig, um die Wirksamkeit und Angemessenheit der Schmerztherapie zu beurteilen.</li>
+<li><strong>Lebensqualität und funktioneller Status:</strong> Die Beurteilung der Lebensqualität und des funktionellen Status kann helfen, die Auswirkungen der Medikation auf den Alltag des/der Patient:in zu verstehen und anzupassen.</li>
+</ul>
+<p>Durch die Einbeziehung dieser umfassenden und differenzierten klinischen Daten in die Anamnese wird eine ganzheitliche und individuelle Medikationsplanung ermöglicht, die auf die spezifischen Bedürfnisse und Umstände jedes/jeder einzelnen Patient:in zugeschnitten ist.</p>
+<h3 id="versorgung-subprozess-medikationsentscheidung-und-verordnung">5.5. Versorgung Subprozess Medikationsentscheidung und Verordnung</h3>
+<p>Die Medikationsentscheidung und Medikamentenversorgung sind zentrale Elemente der Patientenbetreuung und basieren auf einer gründlichen Anamnese sowie der Abwägung verschiedener Faktoren. Hierbei sind die Wirksamkeit, Nebenwirkungen, Patientenbedürfnisse und Interaktionen mit anderen Medikamenten entscheidend. Die Verordnung sollte evidenzbasiert erfolgen und eine regelmäßige Überprüfung der Medikation ist essenziell, um die Sicherheit und Effektivität der Behandlung zu gewährleisten. Die Einbeziehung des Patienten in den Entscheidungsprozess ist dabei unerlässlich, um Compliance und Behandlungszufriedenheit zu fördern. Der Subprozess Medikationsentscheidung und Verordnung schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit &quot;+&quot; gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden.</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Medikationsentscheidung und Verordnung" width="90%"/>
+<p><strong>Subprozess (2): Medikationsentscheidung und Verordnung</strong></p>
+<p>Der Prozess beginnt mit einem Startpunkt, gefolgt von einem Schritt Medikationsentscheidung. Ein optionaler Input hierfür ist ein &quot;Arztbrief (Facharzt)&quot;, sofern vorhanden. Von der Medikationsentscheidung führt ein Weg zur &quot;AMTS-Prüfung&quot;, die, wenn möglich, softwaregestützt durchgeführt werden sollte. Anschließend folgt eine Entscheidung, ob arzneimittelbezogene Probleme (ABP) vorliegen. Falls nein, führt der Prozess direkt zur &quot;Verordnung&quot;. Falls ja, zurück zu einem vorherigen Schritt im Prozess. Im Rahmen der Verordnung werden Medikationsdaten berücksichtigt, darunter Präparate-/Wirkstoffname, Wirkstoffstärke, Dosierung, Einnahmeschema, Arzneiform, Indikation (Einnahmegrund), ob es sich um ein Dauer-/Akut-/Bedarfsmedikament handelt, der Einnahmezeitraum, Einnahmezeitpunkt, Applikationsart und -ort. Zusätzlich ist vermerkt, dass die Aufklärung des/der Patient:in inklusive ist. Der Prozess endet schließlich mit einem Endpunkt, der den Abschluss des Subprozesses &quot;Medikationsentscheidung &amp; Verordnung&quot; symbolisiert.</p>
+<p>Der Medikationsprozess in der medizinischen Versorgung ist ein komplexes Geflecht aus klinischer Beurteilung, pharmakologischer Expertise und technologischer Unterstützung, das sich zum Ziel setzt, eine optimale pharmakotherapeutische Betreuung des/der Patient:in zu gewährleisten. Hier wird dieser Prozess detailliert dargelegt:</p>
+<ul>
+<li><strong>Startpunkt Patientenkonsultation und Medikationsanamnese:</strong> Die Initialzündung des Medikationsentscheidungsprozesses erfolgt typischerweise in einer klinischen Konsultation, in der der/die Arzt:in die Symptome, Vorerkrankungen, aktuelle Medikation sowie die Lebensumstände des/der Patient:in eingehend erfasst. Dies ist die erste und vielleicht kritischste Etappe, da hier die Weichen für den weiteren therapeutischen Kurs gestellt werden.</li>
+<li><strong>Facharztbrief:</strong> Falls vorhanden, liefert der Facharztbrief weitere nuancierte Einsichten in den Patientenstatus, die etwaige spezialisierte Diagnosen oder Therapieempfehlungen enthalten können. Der/die Arzt:in synthetisiert diese Informationen in seine Medikationsstrategie, um eine kontinuierliche und kohärente Behandlung sicherzustellen.</li>
+<li><strong>Medikationsentscheidung mit impliziter AMTS-Prüfung:</strong> Die implizite AMTS-Prüfung ist eingebettet in den Entscheidungsprozess. Hierbei werden mittels des ärztlichen Fachwissens und Erfahrungsschatzes potenzielle Risikofaktoren und Wechselwirkungen berücksichtigt. Die Bewertung der Ergebnisse der AMTS-Prüfung ist das fundamentale und entscheidende Sicherheitsnetz innerhalb der klinischen Urteilbildung.</li>
+<li>**Softwaregestützte AMTS-Prüfung: **Softwaregestützte Systeme bieten eine zusätzliche Ebene der Überwachung und Analyse, indem sie verschreibungspflichtige Daten mit Arzneimitteldatenbanken vergleichen und auf diese Weise potenzielle Diskrepanzen aufdecken.</li>
+<li><strong>Rückkopplung:</strong> Sollte die softwaregestützte AMTS-Prüfung arzneimittelbezogene Probleme registrieren, wird eine Rückkopplungsschleife aktiviert, die den/die Arzt:in dazu anhält, die Medikation erneut zu überdenken. Diese iterative Schleife ist entscheidend für die Eliminierung von Fehlern und die Optimierung der Patientenversorgung.</li>
+<li><strong>Medikationsverordnung:</strong> Mit der finalen Entscheidung zur Medikation werden die Medikamentenverordnungen ausgefertigt. In Deutschland erfolgt dies zunehmend über das elektronische Rezept (eRezept). Bei dieser digitalen Verordnungsform generiert der/die Arzt:in ein eRezept, welches einen Code enthält. Dieser Code wird dem/der Patient:in elektronisch zur Verfügung gestellt, entweder über die elektronische Gesundheitskarte, eine gesicherte App oder als Ausdruck. Der/die Patient:in kann diesen Code in einer Apotheke seiner/ihrer Wahl einlösen, wo das eRezept über eine sichere Verbindung abgerufen und die Medikamente ausgehändigt oder zur Lieferung vorbereitet werden. Dieses Verfahren reduziert Papierkram, vereinfacht den Abrechnungsprozess mit Krankenkassen und minimiert Fehler durch manuelle Dateneingabe. Das eRezept steht für eine sichere, effiziente und transparente Art der Medikamentenverordnung und -abgabe.</li>
+<li><strong>Patientenaufklärung:</strong> Abschließend wird der Medikationsprozess durch eine ausführliche Patientenaufklärung abgerundet. Diese ist sowohl eine informative als auch eine pädagogische Maßnahme, die sicherstellt, dass der/die Patient:in nicht nur ein Rezept in Händen hält, sondern auch das Wissen und Verständnis für dessen korrekte Anwendung. Diese Schritte dienen der Qualitätssicherung der Behandlung mit Medikamenten.</li>
+</ul>
+<p><strong>Zusammenfassend</strong> stellt der Medikationsprozess eine kritische Verbindung zwischen Patientenbetreuung und fortschrittlicher Technologie dar. Angefangen bei der detaillierten Patientenkonsultation über die Auswertung von Facharztbriefen bis hin zur fundierten Medikationsentscheidung und -verordnung, bildet er das Rückgrat einer sicheren und effektiven pharmakotherapeutischen Versorgung. Die Integration des eRezepts spielt hierbei eine zunehmend wichtige Rolle, indem es die Verordnung und Abgabe von Medikamenten vereinfacht, den Abrechnungsprozess beschleunigt und die Medikationssicherheit durch Reduktion von Übertragungsfehlern erhöht. Abschließend bildet eine umfassende Patientenaufklärung den Schlüsselstein, der gewährleistet, dass der Patient über die notwendigen Informationen verfügt, um die Medikation korrekt anzuwenden und somit den Therapieerfolg zu unterstützen.</p>
+<h3 id="versorgung-subprozess-verordnungsdokumentation-mit-erezept">5.6. Versorgung Subprozess Verordnungsdokumentation mit (e)Rezept</h3>
+<p>Bei der Verordnungsdokumentation über das eRezept werden alle relevanten Medikationsdetails digital erfasst und gespeichert, wodurch ein sicherer und effizienter Informationsfluss zwischen Arztpraxis, Apotheke und Patient:in gewährleistet wird. Die Nutzung des eRezeptes ermöglicht eine lückenlose Dokumentation und Nachverfolgbarkeit der Medikamentenverordnung, was zu einer erhöhten Arzneimitteltherapiesicherheit beiträgt. Der Subprozess Verordnungsdokumentation mit (e)Rezept schließt sich an die vorstehenden Visualisierungen von Prozessen an die jeweils mit &quot;+&quot; gekennzeichneten Prozessschritte an. Entsprechend ist dieser an verschiedenen Stellen der Versorgungsprozesse wiederzufinden.</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Subprozess2.png" alt="Subprozess Verordnungsdokumentation mit (e)Rezept" width="90%"/>
+<p><strong>Subprozess (3): Verordnungsdokumentation mit (e)Rezept</strong></p>
+<p>Der Prozess beginnt mit der Erstellung eines (e)Rezeptes, in das Stammdaten und Medikationsdaten eingetragen werden, die je nach Verordnungstyp variieren können und Details wie PZN, Wirkstoff, Rezeptur und Freitext umfassen. Nach der Erstellung des (e)Rezeptes wird entschieden, ob ein Ausdruck erforderlich ist. Falls ja, wird ein physischer Ausdruck generiert. Falls nein, erfolgt keine weitere Aktion in dieser Richtung. Parallel dazu wird der Medikationsplan erstellt oder aktualisiert. Dieser Plan kann in verschiedenen Formen vorliegen, wie als elektronischer Medikationsplan (eMP), als bundeseinheitlicher Medikationsplan (BMP) oder andere Formate. Die Medikationsdaten, die hier berücksichtigt werden, beinhalten den Präparate- oder Wirkstoffnamen, die Wirkstoffstärke, das Dosierungsschema, die Arzneiform, die Indikation, also den Einnahmegrund, und Angaben dazu, ob es sich um ein Dauer-, Akut- oder Bedarfsmedikament handelt. Des Weiteren werden der Einnahmezeitraum, der Einnahmezeitpunkt sowie die Applikationsart und der Applikationsort festgehalten. Der Prozess sieht auch eine Speicherung der Daten vor. Diese Speicherung findet sowohl in der elektronischen Gesundheitskarte (eGK) als auch im Primärsystem (PVS) statt und dient der Dokumentation und Nachverfolgung der Medikationsgeschichte. Der Prozess endet mit der Fertigstellung des (e)Rezeptes oder des Medikationsplans, je nachdem, was der aktuelle Bedarf ist.</p>
+<p>Die Verschreibung und Dokumentation von Medikamenten ist ein komplexer Prozess, der durch eine sorgfältige Balance zwischen klinischem Urteilsvermögen und administrativer Präzision gekennzeichnet ist. Im Zentrum steht dabei die Sicherstellung der Arzneimitteltherapiesicherheit (AMTS), die durch eine detaillierte Überprüfung von Patientendaten, Medikationshistorie und potenziellen Wechselwirkungen gewährleistet wird. Das Diagramm stellt einen Subprozess der Verordnungsdokumentation mit einem (elektronischen) Rezept in einer schematischen Form dar. Hier ist ein erklärender Durchlauf dieses Prozesses: Start des Prozesses: Der Prozess beginnt an einem Ausgangspunkt (gekennzeichnet durch einen Kreis), der den Start der Verordnungsdokumentation symbolisiert.</p>
+<ul>
+<li><strong>Startpunkt des Prozesses:</strong> Der initiale Anstoß zur Medikationsentscheidung ist typischerweise ein diagnostischer Befund oder eine klinische Beurteilung, welche durch den/die Arzt:in oder medizinisches Fachpersonal, basierend auf umfassenden Patientendaten und unter Umständen unter Zuhilfenahme eines Facharztbriefes, vorgenommen wird.</li>
+<li><strong>Datenintegration:</strong> Informationen aus der elektronischen Gesundheitskarte (eGK), dem Praxissystem (Primärsystem, PVS)  und Krankenhausinformationssystem (KIS) werden für die Erstellung des Rezepts herangezogen. Dies beinhaltet die Speicherung und Verarbeitung von Stammdaten und Medikationsdaten.</li>
+<li><strong>Integration von Patientendaten:</strong> Die Einbeziehung der Patientenhistorie, einschließlich bereits bestehender Medikation und individueller Risikofaktoren wie Allergien, genetische Prädispositionen und die Lebensumstände des/der Patient:in, ist essentiell. Diese Daten, oft hinterlegt in einer elektronischen Patientenakte im KIS- und AIS-System, dienen als Basis für eine individualisierte Therapieplanung.</li>
+<li><strong>Erstellung des (e)Rezepts:</strong> Auf Basis dieser Daten wird ein elektronisches Rezept (eRezept) oder bei Bedarf ein traditionelles Papierrezept erstellt. Dieses enthält Informationen wie die Pharmazentralnummer (PZN), Wirkstoffnamen, Dosierungsanweisungen und weitere Anmerkungen.</li>
+<li><strong>Entscheidung zur Übermittlung:</strong> Es folgt eine Entscheidung, auf welchem Transportweg das eRezept übermittelt wird. In der Regel ist die technische Infrastruktur (Zertifiziertes PVS, eHbA, eGK, Konnektor und Lesegerät) bei den Leistungserbringern etabliert so dass das eRezept direkt aus dem PVS weitergeleitet werden kann. Alternativ kann der Patient einen Ausdruck mit QR-Code erhalten um seine Medikamente in der Apotheke seiner Wahl zu besorgen.</li>
+<li><strong>Medikationsplan:</strong> Parallel dazu sollte ein Medikationsplan erstellt oder aktualisiert werden, welcher als ein wichtiges Dokument dient, um alle Medikamente, die ein/eine Patient:in einnimmt, übersichtlich darzustellen. Der Plan kann elektronisch (eMP), in Papierform (BMP)  oder in anderer Form sein. Der Prozess endet mit der Fertigstellung des Rezepts oder des Medikationsplans, was durch einen Endpunkt im Diagramm markiert ist.</li>
+<li><strong>Dokumentation und Übermittlung:</strong> Die präzise Dokumentation der Verschreibung in der Patientenakte des Leistungserbringers und die sichere Übergabe des eRezeptes im Rahmen der etablierten Prozesse (App, Code auf Papier, Stecken der eGK,) schließen den Medikationsprozess beim Leistungserbringer ab.</li>
+<li>Zusätzlich ist im Diagramm ein Auszug der spezifischen Inhalte aufgelistet, die in der Medikationsdokumentation enthalten sein müssen:
+<ul>
+<li>Präparate-/Wirkstoffname: Name des Medikaments oder des aktiven Wirkstoffs.</li>
+<li>Wirkstoffstärke: Die Konzentration des Wirkstoffs.</li>
+<li>Dosierung: Die Menge des Medikaments, die pro Einnahme verabreicht wird.</li>
+<li>Einnahmeschema: Wie oft und zu welchen Zeiten das Medikament eingenommen werden soll.</li>
+<li>Arzneiform: Die Darreichungsform des Medikaments (z.B. Tablette, Salbe, Injektion).</li>
+<li>Indikation (Einnahmegrund): Der Grund für die Verordnung des Medikaments.</li>
+<li>Dauer-/Akut-/Bedarfsmedikation: Klassifizierung der Medikation je nach Notwendigkeit und Dauer der Einnahme.</li>
+<li>Einnahmezeitraum/-zeitpunkt: Dauer der Medikation und spezifische Zeitpunkte der Einnahme.</li>
+<li>Applikationsart und -ort: Wie und wo das Medikament angewendet oder eingenommen werden soll.</li>
+</ul>
+</li>
+</ul>
+<p>In der Summe bildet dieser Prozess das Fundament für eine patientenzentrierte, sichere und effektive Arzneimittelverordnung, die das Wohl und die Sicherheit des/der Patient:in in den Vordergrund stellt und von den medizinischen Fachkräften angewendet wird. Der dargestellte Prozess stellt in dieser Form sicher, dass alle relevanten Informationen für eine korrekte Medikation erfasst, dokumentiert und an die entsprechenden Stellen (z.B. Apotheke, anderweitige medizinische Dienstleister) kommuniziert werden.</p>
+<p><strong>Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong></p>
+<h3 id="in-versorgungs-prozessen-verwendete-dokumentationen-mit-medikationsinformationen">5.7. In Versorgungs-Prozessen verwendete Dokumentationen mit Medikationsinformationen</h3>
+<p>Häufig liegen nur unvollständige Informationen für den Medikationsprozess vor. Die Informationen sind über viele verschiedene Dokumente, bzw. Informationsobjekte verteilt, von einem automatischen Vorliegen dieser Informationsobjekte im Versorgungsprozessen kann heute nicht ausgegangen werden, so dass davon ausgegangen werden muss, dass die Patient:in und ihre Angehörigen als alleinige Transporteur:in von Informationen angesehen werden muss.</p>
+<p>Relevante Informationsobjekte als Quelle von Medikationsinformationen in der Versorgung:</p>
+<ul>
+<li>Notfalldatensatz</li>
+<li>Medikationsplan ggf. als Bundeseinheitlicher Medikationsplan (BMP) nach §31a SGB-V</li>
+<li>(e)Protokoll von Notärzt:in / Rettungsdienst bei Notfällen</li>
+<li>Medikationsplan Praxisarzt:innen</li>
+<li>Medikationsplan umgestellt auf Krankenhaus-Hausliste</li>
+<li>Krankenhausentlassbrief</li>
+<li>Krankenhauseinweisung Praxisarzt:innen</li>
+<li>Fachärztlicher Arztbrief Praxisarzt:innen</li>
+<li>Überweisungsschein (Muster 7)</li>
+<li>Bericht für den Medizinischen Dienst (Muster 11)</li>
+<li>Verordnung häuslicher Krankenpflege (Muster 12a-c)</li>
+<li>Notfall-/Vertretungsschein (Muster 19)</li>
+<li>Konsiliarbericht vor Aufnahme einer Psychotherapie (Muster 22)</li>
+<li>Konsiliarbericht, freier Facharzt/Fachärztin</li>
+<li>Bericht für die Krankenkasse bei Fortbestehung der AU (Muster 52)</li>
+<li>Behandlungsplan Bedarfsmedikamente für AKI (Muster 62c)</li>
+<li>Verordnung SAPV (Muster 63)</li>
+<li>Antikoagulationspass</li>
+<li>Verordnung</li>
+<li>gelber Überweisungsschein (aktuell unzureichend)
+<ul>
+<li>Voruntersuchungen</li>
+<li>Vorergebnisse</li>
+</ul>
+</li>
+<li>medizinisches Notfallblatt (in Pflegeheimen)</li>
+<li>Überleitungsbogen Pflege</li>
+<li>Insulinschema Pflege</li>
+<li>Dokumentation zur Patient:in als Ausdruck und digital (Pflegeheim)</li>
+<li>Rehabilitations-Bericht</li>
+<li>Rezept (Muster 16)</li>
+<li>Elektronisches Rezept</li>
+<li>Medikamentendokumentation in PVS/KIS/PIS</li>
+</ul>
+<p><strong>Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong></p>
+<h3 id="amts-spezifische-handlungsempfehlungen-fur-medizinisch-pflegerische-medikationsprozesse">5.8. AMTS-spezifische Handlungsempfehlungen für medizinisch-pflegerische Medikationsprozesse</h3>
+<p>Die Implementierung digitaler Arzneimitteltherapiesicherheitssysteme (AMTS) im Medikationsmanagement ist ein entscheidender Schritt, um die Medikationssicherheit zu verbessern und die Qualität der Patientenversorgung zu steigern. Diese digitalen Systeme sollten integraler Bestandteil des Sollprozesses im Medikationsmanagement sein, jedoch dürfen sie nicht die Arbeitsprozesse der Health Care Professionals beeinträchtigen, was zu Overalerting und zusätzlichen Dokumentationspflichten führen könnte. Um eine reibungslose Implementierung sicherzustellen, müssen zunächst Probleme gelöst werden, die aufgrund der Nutzung unterschiedlicher Datenbanken auftreten können. In diesem Zusammenhang spielen verschiedene Datenbanken eine wichtige Rolle, um eine sichere und effektive Medikationsverwaltung zu gewährleisten. Diese Datenbanken umfassen Arzneimitteldatenbanken, die umfangreiche Informationen über Medikamente bieten, Patientendatenbanken mit individuellen Patienteninformationen und klinische Entscheidungsunterstützungssysteme (CDSS), die auf Basis der verfügbaren Daten Behandlungsempfehlungen aussprechen. Zusätzlich sind Datenbanken für nationale und internationale Leitlinien relevant, da sie aktuelle Behandlungsstandards zur Verfügung stellen, die bei Medikationsentscheidungen unterstützen. Im Folgenden werden die Kernkomponenten und Vorteile einer digital gestützten AMTS im Kontext von Handlungsempfehlungen, die sich aus den medizinisch-pflegerischen Medikationsprozessen ableiten, detailliert beschrieben:</p>
+<ul>
+<li>Fehlerminimierung als Standard: Im Sollprozess sollte eine automatisierte Überprüfung und Warnsysteme integrieren, um Medikationsfehler frühzeitig zu erkennen und zu verhindern. Die Fehlerminimierung durch digitale Unterstützung sollte als Standard in allen Phasen des Medikationsprozesses angesehen werden.</li>
+<li>Kontinuierliche Medikamentenüberwachung: Eine systematische und kontinuierliche Beobachtung der Medikation sollte implementiert werden, um Nebenwirkungen oder Wechselwirkungen mit anderen Medikamenten frühzeitig zu identifizieren und zu adressieren.</li>
+<li>Integrierter Datenzugriff und -management: Der Prozess sollte den integrierten Zugriff und das Management von Medikationsdaten über verschiedene Gesundheitseinrichtungen hinweg fördern, um eine koordinierte Versorgung und informierte Entscheidungsfindung zu ermöglichen.</li>
+<li>Priorisierung der Patientensicherheit: Patientensicherheit sollte durch präzise Medikationsverwaltung und -beobachtung im Vordergrund des Sollprozesses stehen, um bessere Behandlungsergebnisse zu erzielen und gesundheitliche Komplikationen zu reduzieren.</li>
+<li>Effizienzsteigerung: Der Einsatz von digitalen AMTS-Systemen sollte zur Effizienzsteigerung der Arzneimittelsicherheit beitragen, indem Routineaufgaben automatisiert und der administrative Aufwand reduziert wird.</li>
+<li>Förderung der Patientenbeteiligung: Der Medikationsprozess sollte digitale Tools integrieren, die die Patientenbeteiligung und das Verständnis für die Medikationspläne fördern, um die Medikamentenadhärenz und die AMTS zu verbessern.</li>
+<li>Einhaltung von Qualitätsstandards und Compliance: Der Sollprozess sollte sicherstellen, dass die Einrichtungen Qualitätsstandards und regulatorische Anforderungen im Bereich der Medikamentensicherheit erfüllen.</li>
+<li>Förderung der interdisziplinären Zusammenarbeit: Durch verbesserten Informationsaustausch und Koordination zwischen den Gesundheitsfachkräften sollte ein Sollprozess die interdisziplinäre Zusammenarbeit fördern.</li>
+<li>Nutzung von Daten für Analyse und Forschung: Die Sammlung und Analyse von Medikationsdaten sollten gefördert werden, um wertvolle Einblicke für die Forschung und die Weiterentwicklung von Behandlungsrichtlinien zu bieten.</li>
+<li>Die Etablierung dieser digital gestützten Medikationsprozesse ist dringend notwendig, um den Herausforderungen einer modernen Medikamententherapie gerecht zu werden. Durch die Integration digitaler AMTS-Systeme können Gesundheitseinrichtungen die Qualität der Medikamentenversorgung erheblich verbessern, die Patientensicherheit erhöhen und die Behandlungsergebnisse optimieren.</li>
+<li>Des Weiteren besteht die Notwendigkeit, regelmäßige AMTS-Prüfungen im Versorgungsprozess durchzuführen, wobei Art und Umfang dieser Prüfungen von verschiedenen Faktoren abhängig sind. Diese Prüfungen können im Rahmen von Routineprozessen bei der Arzneimittelverordnung oder -abgabe erfolgen oder umfassender sein, was spezielle Berücksichtigung erfordert, da sie nicht in den aktuellen Vergütungssystemen abgebildet sind.</li>
+<li>Eine einheitliche Definition und Standardisierung der AMTS-Prüfungen sowie der Umfang und die Dokumentation der Ergebnisse sind von Bedeutung. Hierbei sollten auch bereits existierende nationale und internationale Standards berücksichtigt werden, um eine einheitliche Praxis sicherzustellen.</li>
+<li>Um eine effiziente AMTS-Prüfung zu gewährleisten, müssen grundlegende Informationsobjekte identifiziert werden, die für die elektronische Unterstützung dieser Prüfungen erforderlich sind. Dazu gehören Informationen zu Allergien, Unverträglichkeiten, Schwangerschaft, Vorerkrankungen, Alter, Geschlecht, Stillzeit und Symptomabklärung, historische Medikationsdaten wie Präparate-/Wirkstoffnamen, Wirkstoffstärke, Dosierung, Einnahmeschema, Darreichungsform und Indikation, sowie Laborwerte.</li>
+<li>Die Entwicklung einheitlicher Standards und Kodierungssysteme ist entscheidend, um die Kommunikation und den Informationsaustausch zwischen verschiedenen Systemen zu erleichtern. Ebenso wichtig ist die technische Umsetzung, um irrelevante Warnungen zu markieren und zu erklären, um redundante Warnungen zu verhindern.</li>
+<li>Die weiteren Entwicklungen sollten sich auf die Anforderungen an die digitale Kodierung von Arzneimitteltherapie, die Praxistauglichkeit und Wirksamkeit elektronischer Unterstützung von AMTS-Prüfungen, die erforderlichen Schnittstellen und Funktionalitäten von Software in Praxen, Kliniken und Apotheken sowie die Aufgaben von Leistungserbringern und Patienten zur Ermöglichung von AMTS konzentrieren.</li>
+<li>Zusätzlich sollten Indikatoren zur Messung von AMTS in der Routineversorgung entwickelt werden, um die Qualität und Effizienz der Prüfungen nachverfolgen zu können. Dies erfordert eine enge Zusammenarbeit und Abstimmung zwischen den beteiligten Professionen und Organisationen, um sicherzustellen, dass die AMTS-Prüfungen einen maximalen Nutzen für die Patientenversorgung bieten.</li>
+</ul>
+<p><strong>Fazit:</strong> Es ist von entscheidender Bedeutung, dass in der Etablierung eines innovativer AMTS-Prozesses die vorhandenen Ressourcen und Fachkenntnisse optimal genutzt werden, um die Entwicklung und Implementierung von AMTS-Prüfungen zu optimieren. Eine enge Zusammenarbeit und Abstimmung zwischen den beteiligten Fachleuten und Organisationen ist unabdingbar, um sicherzustellen, dass die AMTS-Prüfungen den höchsten Qualitätsstandards entsprechen und einen positiven Einfluss auf die Patientenversorgung haben. Zusätzlich möchten wir betonen, dass generell eine umfassende Auseinandersetzung mit dem Thema Arzneimitteltherapiesicherheit notwendig ist.</p>
+<p></p>
+<h2 id="exemplarische-ist-prozesse-der-pharmazeutischen-arzneimittelversorgung">6. Exemplarische IST-Prozesse der pharmazeutischen Arzneimittelversorgung</h2>
+<p>Es wurden vier aussagefähige Prozesse der pharmazeutischen Arzneimittelversorgung modelliert:</p>
+<ul>
+<li>P1-Pharmazie-Prozess-1 Selbstmedikation bei akuten Beschwerden</li>
+<li>P2-Pharmazie-Prozess-2 Medikationsanalyse in der Apotheke</li>
+<li>P3-Pharmazie-Prozess-3 KH Aufnahme mit Medication Reconciliation</li>
+<li>P4-Pharmazie-Prozess-4 Einlösung Rezept in der Apotheke</li>
+</ul>
+<p>Zwei davon können so oder in abgewandelter Form auch im stationären Kontext auftreten.</p>
+<h3 id="pharmazie-prozess-2-medikationsanalyse-in-der-apotheke">6.1. Pharmazie-Prozess-2 Medikationsanalyse in der Apotheke</h3>
+<p>Beispielhafter Anwendungsfall: Patient:in stellt sich zur Medikationsanalyse in der Apotheke vor. Es werden noch nicht erfasste OTC-Arzneimittel im Medikationsplan dokumentiert und die Bedarfsmedikation (Schmerzmittel) angepasst.</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Pharmazieprozess2.png" alt="Medikationsanalyse in der Apotheke" width="90%"/>
+<p><strong>Pharmazieprozess (2): Medikationsanalyse in der Apotheke</strong></p>
+<p>Der abgebildete Prozess basiert auf der Leitlinie der Bundesapothekerkammer zur Qualitätssicherung &quot;Medikationsanalyse&quot; und entspricht einer Medikationsanalyse vom Typ 2a. Im ersten Patientengespräch wird ein sog. „Brown Bag Review“ durchgeführt, d. h. die von dem/der Patient:in zum Gespräch mitgebrachten Arzneimittel werden erfasst. Außer den aktuell angewendeten Arzneimitteln (ärztlich verordnet und Selbstmedikation) werden auch - soweit relevant - Medizinprodukte, Hilfsmittel und Nahrungsergänzungsmittel mit dokumentiert.</p>
+<p>Daneben können Medikationspläne, bisher überwiegend papierbasiert, sowie eine digitale Patientendatei im AVS der Apotheke weitere Datenquellen zu aktuellen Arzneimitteln und auch zum Datenabgleich sein. Die Patientendatei ist freiwillig, setzt eine schriftliche Einwilligung voraus, und liegt somit optional in der Stammapotheke des/r Patient:in vor und kann an die Vorlage einer Kundenkarte gekoppelt sein. Die Kundendatei umfasst historisierte Daten der durch diese Apotheke abgegebenen Arzneimittel (PZN und Datum) zu dem/r jeweiligen Patient:in. Außerdem können dort z. B. Informationen zu Alter, Vorerkrankungen, Allergien und Unverträglichkeiten von Arzneimittel nach Auskunft des/r Patient:in und ggf. weitere Angaben von Scans der Verordnungen hinterlegt sein. Die Datenqualität der Patientendatei ist abhängig davon, welche Daten durch die Apotheke bereits eingepflegt wurden und ob Patient:innen diese über Einlesen der Kundenkarte (alternativ: Eingabe des Patientennamen) bei jedem Apothekenbesuch nutzen bzw. ob Patient:innen Arzneimittel von einer oder mehreren Apotheken erhalten haben. Da viele Kundenkarten ursprünglich zum Zweck der Kundenbindung und nicht als „Akte“ gedacht waren, ist die Qualität der Daten je nach Nutzung sehr heterogen. Mit zunehmender Nutzung der eGK bzw. mit Einlösung von eRezepten sollte sich die Datenqualität schrittweise verbessern.</p>
+<p>Auf Basis dieser verfügbaren Datenquellen sowie den Auskünften der/des Patient:in zum Umgang mit der Medikation wird anschließend eine AMTS-Prüfung durchgeführt. Diese umfasst eine systematische Prüfung der so erfassten aktuellen Gesamtmedikation entsprechend der Bundesapothekerkammer zur Qualitätssicherung &quot;Medikationsanalyse“2 auf arzneimittelbezogene Probleme (ABP):</p>
+<ul>
+<li>(Pseudo-)Doppelmedikation</li>
+<li>Interaktionen</li>
+<li>Ungeeignetes bzw. unzweckmäßiges Dosierungsintervall</li>
+<li>Ungeeigneter bzw. unzweckmäßiger Anwendungszeitpunkt (auch in Zusammenhang mit Mahlzeiten)</li>
+<li>Ungeeignete bzw. unzweckmäßige Darreichungsform</li>
+<li>Anwendungsprobleme</li>
+<li>Nebenwirkungen/Unverträglichkeiten</li>
+<li>Mangelnde Therapietreue</li>
+<li>Selbstmedikation ungeeignet</li>
+<li>Präparate der Selbstmedikation für Indikation ungeeignet</li>
+<li>Über- oder Unterdosierungen in der Selbstmedikation</li>
+<li>Kontraindikationen für Arzneimittel der Selbstmedikation</li>
+<li>Nicht sachgerechte Lagerung</li>
+</ul>
+<p>Die Prüfung auf einige dieser ABP, insbesondere auf Interaktionen, erfolgt in der Regel im AVS oder über eine an das AVS via Schnittstelle angebundene Software. Anschließend werden die ABP auf ihre klinische Relevanz hin bewertet und zu klinisch relevanten ABP Lösungsvorschläge erarbeitet.</p>
+<p>Nicht klinisch relevante ABP können zum Teil im AVS als „akzeptiert“ entsprechend dokumentiert werden, sodass diese als akzeptierte ABP bei einer erneuten AMTS-Prüfung bereits im System hinterlegt sein können.</p>
+<p>Im Zuge der Erarbeitung von Lösungsvorschlägen kann die Kommunikation mit Ärzt:innen zu einem oder mehreren ABP erforderlich sein. Diese Kommunikation erfolgt bisher überwiegend papierbasiert oder in akuten Fällen telefonisch.</p>
+<p>Nach optionaler Arztrücksprache sowie Erarbeitung von Lösungsvorschlägen zu den ABP werden diese dem/der Patient:in in einem zweiten Gespräch erläutert.</p>
+<p>Die Ergebnisse der Medikationsanalyse werden durch die Apotheke dokumentiert. Dieser Schritt kann auch erfolgen, wenn der/die Patient:in die Apotheke bereits wieder verlassen hat. Sofern ein Medikationsplan und/oder eine Patientendatei vorliegen, werden diese bei Bedarf entsprechend der ABP-Lösungen durch die Apotheke aktualisiert. Sofern eine Medikationsanalyse im Rahmen einer pharmazeutischen Dienstleistung (gem. §129 Abs. 5e SGB V) durchgeführt wird, wird mit Zustimmung des/der Patient:in ein Bericht sowie Medikationsplan an den/die Ärzt:in versendet, wenn der/die Patient:in dem zustimmt. Bisher erfolgt dies in der Regel papierbasiert, wobei für die Strukturierung des Berichts an den/die Ärzt:in bisher keine Vorgaben bestehen.</p>
+<h3 id="pharmazie-prozess-3-kh-aufnahme-mit-medication-reconciliation">6.2. Pharmazie-Prozess-3 KH Aufnahme mit Medication Reconciliation</h3>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Pharmazieprozess3.png" alt="KH Aufnahme mit Medication Reconciliation" width="90%"/>
+**Pharmazieprozess (3): KH Aufnahme mit Medication Reconciliation**
+<p>Stationäre Aufnahme inkl. der:</p>
+<ul>
+<li><strong>Erhebung klinischer Daten</strong> (aktuelle Anamnese und Untersuchung, Vitalparameter, Laborbefunde; Vorbefunde, Diagnosen, Informationen zu Allergien und Unverträglichkeiten, Medikationsrelevante Zusatzinformationen, historische Laborbefunde).</li>
+<li>Medication Reconciliation (Medikationsabgleich, siehe Definition Glossar) besteht aus zwei Teilen.</li>
+<li><strong>Erhebung eines Medikationsstatus /-liste</strong> (Erstellung einer vollständigen und genauen Liste der aktuellen Hausmedikation, einschließlich Namen, Dosierung, Häufigkeit und Applikationsweg des Medikaments bei Krankenhausaufnahme) aus den nachfolgenden Informationsquellen:
+<ul>
+<li>Medikationsinformationen, welche von der Patientin /dem Patienten vorgelegt werden (z.B. Medikationsplan, BMP, Gespräch, &quot;Brown Bag&quot; etc.). (TO Do Hinweis: Änderung im Diagramm notwendig)</li>
+<li>Einweisungsdokumente / Begleitdokumentation (z.B. Pflegeüberleitungsbogen etc.).</li>
+<li>Archiv-Daten aus dem KIS.</li>
+</ul>
+</li>
+<li><strong>Nutzung des Medikationsstatus</strong> bei der Erstellung der Medikation bei Aufnahme/Verlegung/Entlassung.</li>
+<li><strong>Umstellung auf die im Krankenhaus</strong> gelistete und benötigte Medikation.</li>
+<li>Vergleich dieser Liste mit den Verordnungen bei Aufnahme, Verlegung und/oder Entlassung des Patienten, um etwaige unbeabsichtigte Diskrepanzen aufzudecken und sie dem/der verordnenden Arzt/Ärztin mitzuteilen, damit die Verordnungen ggf. geändert werden können Diskrepanzen können sein z.B. fehlende Stärke/Einheiten, fehlende Wirkstoffnamen, fehlende Angabe der Häufigkeiten der Anwendung-bzw.-dauern; beabsichtigte Diskrepanzen (z.B. pausierte Medikation ist zu dokumentieren im KIS).</li>
+</ul>
+<p>Die technologische Unterstützung des Medication Reconciliation-Prozesses ist für eine erfolgreiche Umsetzung im Gesundheitssystem von entscheidender Bedeutung.</p>
+<p><strong>Die Initiale Verordnung der KH-Medikation erfolgt auf</strong> Basis der Medication Reconciliation. Notwendige/beabsichtigte Veränderungen werden im Verordnungssystem/KIS dokumentiert. Das Medication Reconciliation-Verfahren stellt noch keine detaillierte Medikationsanalyse oder AMTS-Prüfung dar (1 = Fußnote 1: Gross I, Fischer A, Knoth H. Medikationsmanagement im Krankenhaus-Ein Arbeitsbuch für Stationsapotheker. Vol 1. Auflage 2021. Deutscher Apotheker Verlag; 2021 )</p>
+<p>Die Aufgabe der Krankenhausapotheker<em>innen ist es, dass Krankenhauspersonal und Patient</em>innenüber Arzneimittel zu informieren und zu beraten (§ 27 ApBetrO). <strong>AMTS-Prüfung der Verordnung</strong> (Definition der AMTS-Prüfung siehe Glossar) durch einen/e Stationsapotheker*in beschreibt die Ermittlung von potentiellen Arzneimittelbezogenen Problemen (ABP) im Klinik-Kontext, die in unterschiedlichem Umfang elektronisch gestützt sein kann.</p>
+<p>Hierzu sollten Daten zu Patient*innen (individuelle Parameter z.B. Alter, Geschlecht, Gewicht, Laborbefunde/ Diagnosen/ Allergien etc.) und Medikationsdaten laut aktueller Verordnung inkl. der Medikationsliste aus der Medication Reconciliation Berücksichtigung finden.</p>
+<p>Mögliche ABP, die durch die AMTS-Prüfung identifiziert werden können (Auswahl ungeeigneter Dosierungen, Arzneimittel mit fehlender Indikation, keine Arzneimittel bei Indikation, Kontraindikationen, Nebenwirkungen, Anwendungsdauer). Im Kontext der erweiterten Medikationsanalyse im stationären Umfeld können eine Vielzahl von zusätzlichen ABP identifiziert werden, die sowohl aus der Anwendung (Anwender*innen-Sicht) verordneter Medikation als auch solche ABP, die aus den Ergebnissen der klinisch-diagnostischer Untersuchungen (z.B. Laborbefunde) resultieren.</p>
+<p>Daran anschließend findet im Rahmen der erweiterten Medikationsanalyse (Typ 2b, 3) basierend auf den zur Verfügung stehenden Informationsquellen eine <strong>Bewertung der ABP</strong> statt. Die gelisteten / identifizierten ABP werden von der Stationsapothekerin / dem Stationsapotheker im Kontext bewertet/eingeschätzt (klinische Relevanz).</p>
+<ul>
+<li>Ein ABP ist klinisch nicht relevant, wenn z.B. ein Monitoring das ABP kontrolliert und dieser Effekt erwünscht bzw. das Monitoring ein fester Bestandteil der Überwachung des Patienten /der Patientin ist, z.B. beabsichtige Verordnung von zwei additiv wirkenden Medikamenten.</li>
+<li>Ein ABP ist klinisch relevant, wenn es im Behandlungskontext, das Erreichen eines Therapie-Ziel verhindert (z.B. unbeabsichtigte wirkungsverändernde Interaktionen, fehlende Dosisanpassung bei Organinsuffizienz).</li>
+</ul>
+<p>Es werden <strong>Lösungsvorschläge</strong> für ABP (z.B.: Datenbank-Recherche, Berechnung von Dosisanpassungen [TDM] etc.) durch den Stationsapotheker*innen erarbeitet und die abgeleiteten <strong>Maßnahmen</strong> werden interprofessionell mit dem Behandlungsteam und/oder der Patientin/dem Patienten vereinbart/kommuniziert. Die Dokumentation der Maßnahmen sollte schriftlich z.B. Verordnungssystem/ KIS stattfinden. Diese Maßnahmen können z.B. eine Dosisänderung, eine Änderung der Applikationszeiten oder -form sein, ebenso kann unter Abwägung von Risiko und Nutzen eine Akzeptanz des ABP erfolgen.</p>
+<p>Im Rahmen des KH-Aufenthaltes kann sich der klinische Zustand/Befund der Patient<em>innen ändern. Medikation kann neu angesetzt, abgesetzt, pausiert sowie in der Dosis/Dosisintervall oder der Darreichungsform geändert werden. Dies kann eine wiederholte AMTS-Prüfung durch den/die Stationsapotheker</em>in erfordern. Dies wird als Pharmazeutische Tätigkeit in der Apothekenbetriebsordnung § 1a (3) beschrieben und dient der Verbesserung der Arzneimitteltherapiesicherheit und Therapietreue, indem ABP erkannt und gelöst werden. Das kontinuierliche Medikationsmanagement während des stationären Aufenthaltes beschreibt also die wiederkehrende Prüfung (AMTS-Prüfung und/oder Medikationsanalyse) der patientenindividuellen Parameter im Kontext seiner Krankenhausmedikation. Neu auftretende, manifeste und potentielle arzneimittelbezogene Probleme werden durch proaktives kontinuierliches. Medikationsmanagement frühzeitig erkannt, gemeinsam gelöst oder gar vermieden (2  Fußnote: ABDA. Grundsatzpapier zur Medikationsanalyse und zum Medikationsmanagement. Updated 10.11.2015. Accessed 07.07.2023, <a href="https://www.abda.de/fileadmin/user_upload/assets/Medikationsmanagement/Grundsatzpapier_MA_MM_GBAM.pdf">https://www.abda.de/fileadmin/user_upload/assets/Medikationsmanagement/Grundsatzpapier_MA_MM_GBAM.pdf</a>)</p>
+<p><strong>Im Entlassprozess</strong> sind die entsprechenden gesetzlichen Regelungen zu beachten. Folgende Dokumente sind Bestandteil dieses Prozesses: Entlassbrief, Entlassrezept, Medikationsplan (nach § 39 Abs. 1a SGB V) Darüber hinaus kann ein Entlassgespräch bzw. die Mitgabe von Medikation (§ 14 Abs. 7 ApoG) erforderlich werden. Alle Informationen des Entlassprozess werden in geeigneter Art und Weise im Krankenhausinformationssystem abgelegt.  Gemäß § 115c SGB V müssen im Entlassbrief u.a. genannt sein: Arzneimittel unter ihrer Wirkstoffbezeichnung/-stärke. Ebenfalls anzugeben sind Erläuterungen bei Veränderungen.</p>
+<p>Die Arzneimitteltherapie ist ein wesentlicher Bestandteil des Entlassmanagement mit dem Ziel die Weitergabe versorgungsrelevanter Informationen, eine Anschlussversorgung mit Arzneimitteln sicherzustellen sowie ggfs. benötigte Unterstützung frühzeitig zu identifizieren (3 = 1 aao. ). Für die Patient*innen sind vor allem der Medikationsplan und das Entlassgespräch probate Mittel zur Informationsweitergabe, hier können Änderungen kenntlich gemacht, Hinweise zu möglichen Nebenwirkungen/Anwendungshinweisen dokumentiert und im Entlassgespräch in verständlicher Sprache dem Patienten/der Patientin bzw. Angehörigen erläutert werden. Die Medication Reconciliation als systematischer Prozess kann die Umstellung der Krankenhausmedikation auf die Entlassmedikation und die Weitergabe wichtiger Informationen an den Schnittstellen sichern.</p>
+<p><strong>Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong></p>
+<h2 id="handlungsempfehlungen-zu-pharmazeutischen-medikationsprozessen-im-krankenhaus">7. Handlungsempfehlungen zu pharmazeutischen Medikationsprozessen im Krankenhaus</h2>
+<ul>
+<li>Alle erforderlichen Medikationsdaten und medikationsrelevanten Zusatzinformationen, müssen in einem standardisierten, einheitlichen Code-System vorliegen. Die Versorgung im Krankenhaus würde weiterhin durch die Entwicklung von Regeln zur automatisierten klinischen Entscheidungsunterstützung auf Basis dieser codierten Informationen für den Arzt/die Ärztin erleichtert.</li>
+<li>Die technische Unterstützung der AMTS-Maßnahmen sowie deren Dokumentation, sollte im Sinne eines iterativen Prozesses im Rahmen der Patientenversorgung im Krankenhaus zudem fortlaufend optimiert werden. Diese Optimierung hat sich an klinischen Anwendungsfällen zu orientieren.</li>
+<li>Die Entlassungsmedikation sollte als solche gekennzeichnet sein und in einem standardisierten, codierten Format exportiert werden können.</li>
+<li>Entscheidend für alle Behandler:innen ist, dass Veränderungen gegenüber der Aufnahmemedikation eindeutig erkennbar gekennzeichnet sind und dementsprechend von den Mit-/Nachbehandler:innen einfach nachvollzogen werden können. Hierfür sind mit der Verordnung die Veränderungen im Vergleich zur Aufnahmemedikation (welche Medikamente werden beibehalten, geändert oder abgesetzt) in einem strukturierten Format (beispielweise Dokumentation dieser Informationen im MIO Krankenhaus-Entlassbrief) zu benennen mit standardisierten Codes für die Gründe der jeweiligen Änderungen verfügbar zu machen.</li>
+</ul>
+<p><strong>Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong></p>
+<h2 id="beitrage-der-jeweiligen-akteure-im-sollprozess">8. Beiträge der jeweiligen Akteure im Sollprozess</h2>
+<p>Im Folgenden wird betrachtet, welche Akteure im Versorgungssystem wie Informationen zum Thema Medikation beitragen. Welche Daten im einzelnen für eine umfängliche Dokumentation notwendig sind, wird im folgenden Kapitel &quot;Soll-Informationselemente zu Medikationsprozessen&quot; behandelt.</p>
+<p><strong>Ambulanter Arzt/Ärztin:</strong> Bei der Verschreibung einer neuen Medikation oder der direkten Ausgabe einer Medikation werden alle relevanten Informationen (siehe folgendes Kapitel) erfasst und an den zentralen Speicherort übergeben. Ergibt sich im Nachgang eine Anpassung der Medikation, z.B. eine Veränderung der Dosierung, so wird auch dies vermerkt. Damit sorgt insbesondere der ambulante Bereich aktiv für eine Vollständigkeit in der Dokumentation der Medikation. Mit Blick auf telemedizinische Angebote ist bei diesen vollkommen analog zu verfahren.</p>
+<p><strong>Apotheker/Apothekerin in der öffentlichen Apotheke:</strong> Als Folge der ärztlichen Verordnung wird von der Apotheke ein definiertes Fertigarzneimittel oder eine Zubereitung abgegeben (Dispensierung). Hierbei können sich z.B. bei Substitution zugunsten von Rabattarzneimitteln Veränderungen zur ursprünglichen Verordnung ergeben. Im Falle einer elektronischen Verordnung wird dies automatisch im Dispensierdatensatz des eRezepts dokumentiert. Weiterhin können durch die Apotheke zudem aktuell angewendete Arzneimittel der Selbstmedikation sowie - soweit relevant- Medizinprodukte, Hilfsmittel und Nahrungsergänzungsmittel elektronisch am zentralen Speicherort dokumentiert werden (eMP in der ePA). Sofern von der Apotheke im Rahmen einer Medikationsanalyse und ggf. in Absprache mit dem Arzt Anpassungen vorgeschlagen bzw. vorgenommen werden, sind auch diese im eMP zu dokumentieren.</p>
+<h3 id="im-krankenhaus">8.1. Im Krankenhaus</h3>
+<p><strong>Arzt/Ärztin im Krankenhaus</strong>
+Im Krankenhaus startet im Normalfall das Thema Medikation mit der Prüfung der laufenden Medikation, die ggf. angepasst wird. Es folgen mit der Behandlung im Krankenhaus ggf. weitere Medikationen. Am Ende steht die Definition einer Medikation zur Entlassung (mitgegebene Medikamente und Verordnungen). Grundsätzlich werden alle hierbei anfallenden Informationen am zentralen Ort gespeichert. Eine detaillierte Betrachtung der Dokumentation während eines Krankenhausaufenthaltes und ob diese auch immer/vollständig zentral abgelegt werden soll, ist noch zu betrachten. Es ist aber auch hier zu bedenken, dass einige solcher Details zwar für die ambulante Weiterbehandlung nicht relevant sein mögen (ggf. hier also nicht anzeigen werden, siehe Sichten), unter Umständen aber einen Informationswert für die Forschung oder andere Prozesse gegeben ist.</p>
+<p>Die Empfehlung einer Medikation an den behandelnden Arzt/die behandelnde Ärztin über den Entlassungsbrief ist hingegen als solche nicht direkt in der Liste der Medikationen des Patienten/der Patientin am zentralen Speicherort zu dokumentieren. Dokumentiert wird hingegen die (ggf. angepasste) Umsetzung in eine konkrete Medikation (Verordnung / Ausgabe) durch den behandelnden Arzt/die behandelnde Ärztin.</p>
+<p><strong>Apotheker/Apothekerin im Krankenhaus</strong>
+Im Bereich der Krankenhäuser unterstützt der Apotheker/ die Apothekerin im gesamten Medikationsprozess (Aufnahme, Stationäre Behandlung und Entlassung, ambulante Versorgung im Krankenhaus). Ziel ist es, eine bestmögliche Arzneimitteltherapie für die Patient*innen zu erreichen und Information und Beratung zu arzneimittelbezogenen Fragestellungen für alle Akteure anzubieten. Im ambulanten Szenario (zukünftig eRezept) wird auch eine Information zur Dispensierung erstellt.</p>
+<h3 id="patientpatientin">8.2. Patient/Patientin</h3>
+<p>Auch Patienten und Patientinnen sollten Arzneimittel der Selbstmedikation am zentralen Speicherort eintragen können, z.B. falls die Eintragung in der Apotheke nicht erfolgt ist oder eine andere Beschaffungsquelle genutzt wurde. Hierbei kann weiterhin die Dokumentation von Medizinprodukten, Hilfsmitteln, Nahrungsergänzungsmitteln in Hinblick auf die AMTS relevant sein. Bei allen angewendeten Arzneimitteln bzw. Produkten sollte zudem eine Dokumentation von Hinweisen durch Patienten und Patientinnen möglich sein, z.B. um vermutete Nebenwirkungen festzuhalten. Diese Einträge werden berechtigten Leistungserbringenden angezeigt. Auch eine Protokollierung der konkreten Einnahme kann für Patient:innen hilfreich sein. Dies kann als Folge einer Einnahmeerinnerung geschehen, die auf Basis der Daten des zentralen Speicherortes angeboten wird.</p>
+<h3 id="ambulant-und-stationar-pflegende">8.3. Ambulant und stationär Pflegende</h3>
+<p>Die Pflege unterstützt Patienten und Patientinnen in verschiedenen Settings und übernimmt dabei u.a. Aufgaben rund um die Medikation für sie. Diese Aufgaben umfassen in der stationären Pflege vor allem die Medikamentenbereitstellung und individuelle Medikamentengabe. In der häuslichen Pflege sind auch Aktionen umzusetzen, die von Patienten und Patientinnen in relativ gutem Allgemeinzustand ggf. selbst gemacht werden (z.B. Kommentierungen und Einnahmeprotokollierung, Dokumentation der Wirkung (Vitalwerterfassungen) und ggf. von Nebenwirkungen).</p>
+<h3 id="vollstandige-informationen-zur-medikation">8.4. Vollständige Informationen zur Medikation</h3>
+<p>Soweit die beschriebenen Dokumentationen von allen beteiligten Akteuren konsequent und durchgängig durchgeführt werden, ergibt es sich ein übergreifendes und vollständiges Bild der Medikation eines Patienten/einer Patientin. Jede Änderung dieser Historie von Medikationen kann einer verantwortlichen Person (z.B. Arzt/Ärztin) und einem Zeitpunkt der Änderung zugeordnet werden. Diese Informationen können von allen Prozessen im System genutzt werden und sind nicht von einzelnen Prozessen oder Sektoren abhängig. Die Prozesse können von einer Prüfung von Wechselwirkungen, einer Einnahmeunterstützung bis hin zur Forschung gehen.</p>
+<p>Besonders kritisch für den Erfolg des skizzierten Vorgehens ist eine möglichst automatsche Erstellung und Übertragung der Informationen direkt aus den Primärsystemen. Die Systeme müssen hierfür die Dokumentation der Medikation über den gesamten Prozess hinweg nutzerfreundlich unterstützen. Es dürfen insbesondere keine Doppelerfassungen notwendig sein.</p>
+<p>Die im Konkreten notwendigen Informationselemente werden im folgenden Kapitel &quot;Soll-Informationselemente zu Medikationsprozessen&quot; dargestellt.</p>
+<h3 id="medikationsrelevante-zusatzinformationen">8.5. Medikationsrelevante Zusatzinformationen</h3>
+<p>Die Bedeutung von medikationsrelevanten Zusatzinformationen in der Arzneimitteltherapiesicherheit (AMTS) ist von entscheidender Bedeutung, um Medikationsfehler und damit verbundene Risiken für Patienten zu verringern. AMTS umfasst alle Maßnahmen, die darauf abzielen, den Medikationsprozess zu optimieren und Medikationsfehler sowie vermeidbare Risiken zu reduzieren. Zu den arzneimittelbezogenen Problemen (ABP) gehören Medikationsfehler, unerwünschte Arzneimittelereignisse und Nebenwirkungen. Medikationsfehler können durch Abweichungen vom optimalen Medikationsprozess entstehen, die zu vermeidbaren Schädigungen des Patienten führen oder führen könnten. Diese Fehler können von Ärzten, Apothekern, Patienten oder Angehörigen verursacht werden. Daher ist die Einbeziehung von Zusatzinformationen über den Patienten in den Medikationsprozess unerlässlich, um solche Fehler zu vermeiden. Eine Medikationsanalyse, die zur Identifizierung, Bewertung, Dokumentation und Lösung von ABP beiträgt, ist ein wichtiger Bestandteil des Medikationsprozesses. Diese Analyse erfolgt in Zusammenarbeit mit dem Patienten und gegebenenfalls mit anderen Berufsgruppen. Sie beinhaltet die Sammlung von Informationen über die aktuelle Medikation, die Verordnung und die Einnahme durch den Patienten bis hin zur AMTS-Prüfung und deren Ergebnissen.</p>
+<p>Die Bundesvereinigung Deutscher Apothekerverbände unterscheidet in ihrer Definition vier Typen der Medikationsanalyse, basierend auf den verwendeten Informationsquellen. Der Typ 1, die einfache Medikationsanalyse, beinhaltet die Überprüfung einer Medikationsdatei und Basispatientendaten wie Alter und Geschlecht auf Doppelverordnungen, Interaktionen und Kontraindikationen. Bei Typ 2, der erweiterten Medikationsanalyse, wird zwischen Typ 2a und 2b unterschieden. Typ 2a kombiniert Informationen aus einem strukturierten Patientengespräch mit Medikationsdaten zur Optimierung des Patientenverständnisses und der Arzneimittelanwendung. Typ 2b verwendet Medikationsdaten und klinische Daten, um den indikationsgerechten Einsatz der Arzneimittel zu analysieren. Typ 3, die umfassende Medikationsanalyse, integriert Medikationsdaten, Patientengesprächsinformationen und klinische Daten, um alle arzneimittelbezogenen Probleme zu prüfen. Diese Differenzierung fördert eine strukturierte Herangehensweise zur Verbesserung der Arzneimitteltherapiesicherheit. In öffentlichen Apotheken werden erweiterte Medikationsanalysen durchgeführt, die auf der Medikationsdatei und dem Patientengespräch basieren. Zusätzlich können mitgebrachte Arzneimittel der Patienten zur Informationsgewinnung herangezogen werden. Darüber hinaus hat sich die Anzahl der an das Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM) gemeldeten AMTS-Vorfälle in den letzten Jahren deutlich erhöht. Zwischen 2017 und 2021 stieg die Zahl der Meldungen von 359 auf 1.284, wobei viele dieser Meldungen Anwendungs- und Dosierungsfehler betrafen. Die gestiegenen Fallzahlen könnten teilweise darauf zurückzuführen sein, dass es Patienten seit 2012 ermöglicht wurde, selbst Berichte über Medikationsfehler und andere AMTS-Vorgänge abzugeben.</p>
+<p>Zusammengefasst verdeutlichen diese Informationen die entscheidende Rolle von medikationsrelevanten Zusatzinformationen. Sie tragen wesentlich dazu bei, Medikationsfehler zu reduzieren, die Therapieeffektivität zu verbessern und damit die Patientensicherheit zu erhöhen. Bisher wurde in den Texten der Umgang mit Informationen zu einzelnen Medikationen beschrieben. Für die AMTS-Prüfung, insbesondere der Prüfung von Wechselwirkungen, sind wie vorgehende beschrieben weitere Informationen notwendig, welche Merkmale, Zustände oder Messwerte der betroffenen Person sind. Ihre Änderung muss in keinem zeitlichen Zusammenhang mit einer Medikation stehen. Dies sind unter anderem Geschlecht, Gewicht, bekannte Unverträglichkeiten, Schwangerschaftsstatus, aber auch bestimmte Laborwerte. Die Informationen müssen daher von den Leistungserbringer:innen gepflegt werden, sobald eine entsprechende Veränderung bekannt wird. Auch hier ist eine möglichst automatische Übertragung an den zentralen Speicherort direkt aus dem Primärsystem heraus ohne doppelte Erfassung anzustreben. Die medikationsrelevante Zusatzinformationen haben übergreifenden Charakter und werden auch von anderen Prozessen benötigt. Es ist darauf zu achten, dass es nur eine klar definierte Stelle gibt, an der der aktuelle Stand dieser Informationen gepflegt wird und von allen Nutzenden gelesen werden kann. Andere Stellen sind als Redundanzen ohne Anspruch auf Aktualität zu verstehen.</p>
+<p><strong>Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong></p>
+<h2 id="folgearbeitskreis-amts-prufung">9. Folgearbeitskreis &quot;AMTS-Prüfung&quot;</h2>
+<p>Ein optimaler Medikationsprozess hat das Ziel, mit der Arzneimitteltherapie ein bestmögliches Therapieziel bei möglichst geringen vermeidbaren Risiken für Patient:innen zu erreichen. Im Versorgungsalltag stellt es teilweise eine Herausforderung dar, dieses Ziel zu erreichen.</p>
+<p>Um die AMTS dauerhaft sicherzustellen, sind im Versorgungsprozess wiederholend AMTS-Prüfungen erforderlich. Art und Umfang einer AMTS-Prüfung sind von einer Vielzahl von Faktoren abhängig (vergleiche Glossar). Gleichzeitig müssen Aufwand und Leistbarkeit für die unterschiedlichen Professionen den entsprechenden Situationen angemessen sein und entsprechend berücksichtigt werden können.</p>
+<p>Einerseits werden AMTS-Prüfungen bereits beispielsweise bei jeder Arzneimittelverordnung oder -abgabe im Versorgungsalltag im Rahmen von Routineprozessen durchgeführt (vergl. entsprechende Prozesse und Subprozesse in diesem Positionspapier), andererseits gibt es umfänglichere AMTS-Prüfungen, die wiederum über Routineprozesse hinaus gehen und entsprechend anders adressiert werden müssen, zumal sie nicht in den aktuellen Vergütungssystemen abgebildet sind.</p>
+<p>Eine Beschreibung der Bandbreite möglicher AMTS-Prüfungen existiert bisher nicht und sollte deshalb in einem Folgearbeitskreis vorgenommen werden.</p>
+<p>In diesem Arbeitskreis wurden folgende grundlegenden Informationsobjekte für die elektronische Unterstützung von AMTS-Prüfungen identifiziert:</p>
+<ul>
+<li>Allergien, Unverträglichkeiten, Schwangerschaft, Erkrankungen, Alter, Geschlecht, Stillzeit, Symptomabklärung</li>
+<li>(historische) Medikationsdaten: Präparate-/Wirkstoffname, Wirkstoffstärke, Dosierung, Einnahme-/Anwendungsschema, Darreichungsform, Indikation (Einnahmegrund), Dauer-/Akut-/Bedarfsmedikation (Anwendungszeitraum)</li>
+<li>Laborwerte</li>
+</ul>
+<p>Darüber hinaus fehlen auch inhaltlich einheitliche Standardisierungen, welchen Umfang AMTS-Prüfungen im jeweiligen Setting haben sollten und welche Inhalte der Ergebnisse wiederum zu dokumentieren sind. Auch dies sollte durch diesen Folgearbeitskreis unter Berücksichtigung von Vorarbeiten entsprechender nationaler und internationaler Fachgesellschaften entwickelt werden. Die unterschiedlichen Settings und Zuständigkeiten zwischen den jeweils beteiligten Professionen sind hierbei zu berücksichtigen und zu definieren, sofern noch uneindeutig.</p>
+<p>Als weitere Handlungsempfehlung konnte abgeleitet werden, dass es technischer Möglichkeiten bedarf, ein im Rahmen einer AMTS-Prüfung als klinisch nicht relevant eingestuftes ABP als solches bei der Dokumentation zu markieren und ggf. mit einer Erläuterung zu versehen, um redundante Warnungen zu einem späteren Zeitpunkt systemübergreifend zu unterbinden.</p>
+<p>Diese inhaltlichen Standards sollten anschließend unter Berücksichtigung bereits existierender Codierungssysteme, die in Hinblick auf ihre Eignung und Praxistauglichkeit für die beteiligten Professionen systematisch beurteilt und ggf. weiterentwickelt werden müssen, in einheitliche technische Formate überführt und verpflichtend eingeführt werden.</p>
+<h3 id="der-fokus-des-arbeitskreises-sollte-daher-umfassen">9.1. Der Fokus des Arbeitskreises sollte daher umfassen:</h3>
+<ul>
+<li>Anforderungen an die digitale Codierung von Daten zur Arzneimitteltherapie und die Verfügbarkeit der Informationen zur Arzneimitteltherapie für Leistungserbringer:innen und Patient:innen (Definition erforderlicher Dokumente)</li>
+<li>Anforderungen an Praxistauglichkeit und Wirksamkeit elektronischer Unterstützung von AMTS-Prüfungen und zu unterstützende Use-Cases durch Software in Arztpraxen, Apotheken und Krankenhäusern</li>
+<li>Anforderungen an Schnittstellen und Funktionalitäten von Software in Arztpraxen, Apotheken und Krankenhäusern zur Ermöglichung digitaler Unterstützung der Arzneimitteltherapie</li>
+<li>Aufgaben von Leistungserbringer:innen und Patient:innen zur Ermöglichung von AMTS</li>
+<li>Mögliche Indikatoren für die Messung von AMTS in der Routineversorgung</li>
+</ul>
+<p><strong>Hier wurden Inhalte weggelassen, die den Rahmen des vorliegenden IG überdehnen würden.</strong></p>
+
+                    </div>
+
+        </div>
+
+    </div>
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+            
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

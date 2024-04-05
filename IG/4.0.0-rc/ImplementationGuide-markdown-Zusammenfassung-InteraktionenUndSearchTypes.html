@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Implementierungsleitfaden ISiK-Medikation</title>
+
+    <link rel="icon" href="static/styles/common/favicon.ico" />
+
+    <script src="static/styles/common/jquery/jquery.min.js"></script>
+    <script src="static/styles/common/bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/common/main.min.css" />
+    <link rel="stylesheet" href="static/styles/common/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/styles/common/rendering/rendering.min.css" />
+
+    <script src="static/styles/common/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/common/rendering/baseTreetable.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/twolevelmenu/style.css?v=1da8759c488f100" />
+
+</head>
+
+<body>
+
+    <div id="ig-viewer">
+
+        <div class="ig-view-content">
+
+            <div id="ig-view-twolevelmenu">
+
+                <div class="header" role="banner" aria-label="Header">
+                    
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+                <a class="navbar-brand" href="ImplementationGuide-markdown-Einfuehrung.html">
+                    Implementierungsleitfaden ISiK-Medikation
+                </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ImplementationGuide-markdown-Einfuehrung.html">
+                            Einf&#xFC;hrung
+                        </a>
+                    </li>
+
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Motivation <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Motivation.html">
+                                            Motivation
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-ReleaseNotes.html">
+                                            ReleaseNotes
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Zusammenfassung <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Zusammenfassung.html">
+                                            Zusammenfassung
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Zusammenfassung-UseCases.html">
+                                            Anwendungsf&#xE4;lle (Use Cases)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Zusammenfassung-Informationsmodell.html">
+                                            Informationsmodell
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Zusammenfassung-InteraktionenUndSearchTypes.html">
+                                            Interaktionen Und SearchTypes
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Festlegungen <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen.html">
+                                            &#xDC;bergreifende Festlegungen
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-BestaetigungsrelevanteSysteme.html">
+                                            Best&#xE4;tigungsrelevante Systeme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Kompatibilitaet.html">
+                                            Kompatibilit&#xE4;t
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-RestApi.html">
+                                            REST-API
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Use Cases <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeUseCases.html">
+                                            &#xDC;bergreifende Use Cases
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeUseCases-AMTS.html">
+                                            Arzneimitteltherapiesicherheit (AMTS)
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Datenobjekte <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte.html">
+                                            Datenobjekte
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-CapabilityStatement.html">
+                                            Capability Statement
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsInformation.html">
+                                            MedikationsInformation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsListe.html">
+                                            MedikationsListe
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsVerordnung.html">
+                                            MedikationsVerordnung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_MedikationsVerabreichung.html">
+                                            MedikationsVerabreichung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_Medikament.html">
+                                            Medikament
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Profile_AMTSBewertung.html">
+                                            AMTS-Bewertung
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Bundle_MedikationTransaction.html">
+                                            Bundle MedikationTransaction
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Bundle_MedikationTransactionResponse.html">
+                                            Bundle MedikationTransactionResponse
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Terminologie.html">
+                                            Terminologie
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                </div>
+
+                <div class="content container" role="main" aria-label="Main content">
+                    
+
+
+<div class="row">
+
+
+    <div class="col-md-24">
+
+        <div id="preview-content">
+
+            <h1 id="interaktionen-und-search-types">Interaktionen und Search Types</h1>
+<p>Innerhalb des ISiK-Moduls Medikation kann ein beteiligtes System verschiedene Rollen einnehmen und somit unterschiedliche Aufgaben übernehmen. In Anlehnung an IHE HMW werden im Folgenden diese Rollen mithilfe der Definition von Akteuren formalisiert und die Interaktionen zugeordnet.</p>
+<p>Hierbei wird wiederum unterschieden zwischen den folgenden drei Bereichen:</p>
+<ul>
+<li><strong>Medication Summary (Medikationsinformationen, &quot;Medikationspläne&quot;):</strong> Bildet den Medikationsstatus eines Patienten ab, z.B. Informationen über Dauermedikation oder Selbstmedikation. In diesem Kontext wird häufig noch eine Liste verwendet, in der die einzelnen Medikationsinformationen strukturiert sind.</li>
+<li><strong>Medication Order (Medikations-Verordnungen):</strong> Informationen über die Verordnung von Medikamenten im Rahmen des medizinischen Workflows.</li>
+<li><strong>Administered Medication (Medikations-Verabreichungen):</strong> Informationen über die (erfolgte) Verabreichung bzw. Einnahme von Medikamenten im Rahmen des medizinischen Workflows.</li>
+</ul>
+<p>Für jeden dieser Bereiche wurden jeweils drei Akteure identifiziert, die in einem oder mehreren Systemen implementiert sein können:</p>
+<ul>
+<li><strong>Repository:</strong> Hält die jeweiligen Informationen (Datenobjekte) vor und verwaltet diese. Es ermöglicht das Erstellen, Ändern und Lesen dieser Informationen.</li>
+<li><strong>Provider:</strong> Erstellt bzw. generiert die Informationen und übermittelt sie an das Repository.</li>
+<li><strong>Consumer:</strong> Liest die Informationen aus dem Repository, beispielsweise um sie dem Benutzer anzuzeigen oder anderweitig zu verarbeiten.</li>
+</ul>
+<p>Die Interaktionen sind somit in allen drei Bereichen äquivalent:</p>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/interaktionen.svg" class="center" alt="Interkationen" width="90%"/>
+<p><strong>Interaktionen der FHIR Akteure</strong></p>
+<h2 id="search-includes-and-reverse-includes">Search Includes and Reverse Includes</h2>
+<p>Damit diese Akteure sinnvoll miteinander kommunizieren, wird im Folgenden ein grafischer Überblick über die in diesem Modul zu inlduierenden Suchparameter und Operationen gegeben.
+Da es sich um eine Zusammenfassung handelt, gelten Bedingungen für die gezeigten Inhalte:</p>
+<ul>
+<li>Alle Must-Support Elemente einer Componente müssen von den entsprechenden Systemen suchbar sein. Diese sind hier nicht erneut aufgezählt.</li>
+<li>Ein Doppelpunkt meint den Zugriff auf ein Element des beinhaltenden Profils.</li>
+<li>Das Elemente hinter einem Doppelpunkt besitzt wiederum die Suchparameter (alle Must-Support Elemente!), die hier in die Suchsyntax zu inkludieren sind.</li>
+</ul>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/search_includes.svg" class="center" alt="Searchtypes" width="90%"/>
+<p><strong>Inkludierte Suchparameter nach Capability Statement</strong></p>
+<h2 id="zusammenhang-zu-den-use-cases">Zusammenhang zu den Use Cases</h2>
+<p>Jeder Include oder Reverse Include Parameter ist mit mindestens einem <a href="ImplementationGuide-markdown-Zusammenfassung-UseCases.html" title='ImplementationGuide/markdown/Zusammenfassung/UseCases.md'>Anwendungsfall</a> begründet. Diese Details sie auf der Seite der jeweiligen Ressource unter <a href="ImplementationGuide-markdown-Datenobjekte.html" title='ImplementationGuide/markdown/Datenobjekte.md'>Datenobjekte</a> zu finden.
+Im Folgenden sollen für die Lesart des Diagramms zwei Beispiele gegeben werden:</p>
+<ul>
+<li><strong>Beispiel für einen Include Zusammenhang:</strong> Eine Applikation muss in der Lage sein ein <em>ISiK Medikament</em> anhand der Eigenschaften von <em>ingredient</em> suchen zu können, um den (Adverse) Use Case einer <em>Wechelwirkung</em> zu vermeiden.</li>
+<li><strong>Beispiel für einen Reverse Include Zusammenhang:</strong> Eine Applikation muss in der Lage sein zu einem <em>ISiK Patient</em> alle <em>Encounter</em> anhand der Zugehörigkeit via <em>subject</em> suchen zu können, um den Anwendungsfall der vollständigen <em>Dokumentation</em> gewährleisten zu können.</li>
+</ul>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+            
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
