@@ -1,4 +1,4 @@
-## Use Case Diagramm
+# Use Case Diagramm
 Im Folgenden wird ein grafischer Überblick über möglichst in diesem Modul abgedeckten Anwednungsfälle gegeben.
 Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und dafür hinreichende Funktionen dargestellt:
 * Allgemeine und intuitive verständliche Use Cases.
@@ -11,10 +11,7 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und daf
 
 **Use Case Digramm**
 
-
-**Inkludierte Suchparameter nach Capability Statement**
-
-## Zusammenhang zu den Use Cases
+## Zusammenhang zwischen verketteten Suchparametern und Use Cases
 
 Jeder Include oder Reverse Include Parameter ist mit mindestens einem {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Anwendungsfall}} begründet. Diese Details sie auf der Seite der jeweiligen Ressource unter {{pagelink:ImplementationGuide/markdown/Datenobjekte.md, text:Datenobjekte}} zu finden. 
 Im Folgenden sollen für die Lesart des Diagramms zwei Beispiele gegeben werden:

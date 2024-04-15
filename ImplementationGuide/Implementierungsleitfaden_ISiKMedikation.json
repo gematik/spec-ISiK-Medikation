@@ -50,6 +50,11 @@
               "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/RestApi.md",
               "title": "REST-API",
               "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/Suchparameter.md",
+              "title": "Suchparameter",
+              "generation": "markdown"
             }
           ]
         },
@@ -65,7 +70,7 @@
             },
             {
               "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/AkteureUndInteraktionen.md",
-              "title": "Informationsmodell",
+              "title": "Akteure und Interaktionen",
               "generation": "markdown"
             },
             {
@@ -90,7 +95,7 @@
                 },
                 {
                   "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/AMTS/AMTS_Apx_AuszugAK.md",
-                  "title": "Anhang I - Auszug ",
+                  "title": "Anhang I - Auszug des IOP Arbeitskreises",
                   "generation": "markdown"
                 }
               ]
