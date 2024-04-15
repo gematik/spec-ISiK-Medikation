@@ -99,20 +99,6 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
-1. Der verkettete Suchparameter "encounter.identifier" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/MedicationRequest?encounter.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
-
-    ```GET [base]/MedicationRequest?encounter.identifier=7567867```
-
-    Use Case Zusammenhang: Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Verordnung zu vermeiden.
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
-
-      Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
-
 1. Der Suchparameter "intent" MUSS unterstützt werden:
 
     Beispiele:
@@ -129,18 +115,6 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
-1. Der verkettete Suchparameter "medication.code" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/MedicationRequest?medication.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
-    
-    Use Case Zusammenhang: Um eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Wechselwirkung}} bei der Verordnung auf Basis des Wirkstoffes zu vermeiden.
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-	  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
-
 1. Der Suchparameter "patient" MUSS unterstützt werden:
 
     Beispiele:
@@ -148,20 +122,6 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     ```GET [base]/MedicationRequest?patient=Patient/123```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
-
-1. Der verkettete Suchparameter "patient.identifier" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/MedicationRequest?patient.identifier=http://mein-krankenhaus.example/fhir/sid/patienten|1032702```
-
-    ```GET [base]/MedicationRequest?patient.identifier=1032702```
-
-    Use Case Zusammenhang: Um bei der Verordnung einer Medikation eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
-
-    Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-	  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
 
 1. Der Suchparameter "requester" MUSS unterstützt werden:
 
@@ -171,21 +131,6 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
-1. Der verkettete Suchparameter "requester.identifier" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/MedicationRequest?requester.identifier=http://fhir.de/sid/bundesaerztekammer/efn|123456789123456```
-
-    ```GET [base]/MedicationRequest?requester.identifier=123456789123456```
-
-    Use Case Zusammenhang: Um mich als Heilberufler über die {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Historie}} meiner Medikationsverordnungen zur informieren.
-    <!-- Use Case Zusammenhang: Um bei der Veordnungsanfrage die notwendige {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Expertise}} eines entsprechend spezialisierten Facharztes (z.B. Onkologie) zu gewährleisten. -->
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-      Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
-
 1. Der Suchparameter "status" MUSS unterstützt werden:
 
     Beispiele:
@@ -193,3 +138,52 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     ```GET [base]/MedicationRequest?status=active```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+---
+
+### Verkettete Suchparameter (Chaining und Reverse Chaining)
+
+Auch die verketteten Suchparameter MÜSSEN unterstützt werden und sind mit entsprechenden Referenzen im CapabilityStatement unter ```CapabilityStatement.rest.resource.searchInclude``` bzw. ```CapabilityStatement.rest.resource.searchRevInclude``` angegeben. Siehe {{pagelink:ImplementationGuide/markdown/CapabilityStatement.md}}
+
+Informationen und Beispiele zur Suche nach verketteten Parametern finden sich [im Basismodul](https://simplifier.net/guide/isik-basis-v4/UebergreifendeFestlegungen-UebergreifendeFestlegungen_Suchparameter) und in der FHIR-Basisspezifikation im [Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining) und im [Abschnitt "Reverse Chaining"](https://hl7.org/fhir/R4/search.html#has).
+
+Die verketteten Suchparameter des Profils ```MedicationRequest``` hängen wie folgt mit den festgelegten {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Anwendungsfällen (Use Cases)}}  zusammen:
+
+1. Der verkettete Suchparameter ```Encounter:identifier``` unterstützt den Anwendungsfall:
+
+    Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Verordnung zu vermeiden.
+
+    Beispiele:
+
+    ```GET [base]/MedicationRequest?encounter.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
+
+    ```GET [base]/MedicationRequest?encounter.identifier=7567867```
+
+1. Der verkettete Suchparameter ```Medication:code``` unterstützt den Anwendungsfall:
+
+    Um eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Wechselwirkung}} bei der Verordnung auf Basis des Wirkstoffes zu vermeiden.
+
+    Beispiele:
+
+    ```GET [base]/MedicationRequest?medication.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
+
+1. Der verkettete Suchparameter ```Patient:identifier``` unterstützt den Anwendungsfall:
+
+    Um bei der Verordnung einer Medikation eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
+
+    Beispiele:
+
+    ```GET [base]/MedicationRequest?patient.identifier=http://mein-krankenhaus.example/fhir/sid/patienten|1032702```
+
+    ```GET [base]/MedicationRequest?patient.identifier=1032702```
+
+1. Der verkettete Suchparameter ```Requester:identifier``` unterstützt den Anwendungsfall:
+
+    Um mich als Heilberufler über die {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Historie}} meiner Medikationsverordnungen zur informieren.
+    <!-- Use Case Zusammenhang: Um bei der Veordnungsanfrage die notwendige {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Expertise}} eines entsprechend spezialisierten Facharztes (z.B. Onkologie) zu gewährleisten. -->
+
+    Beispiele:
+
+    ```GET [base]/MedicationRequest?requester.identifier=http://fhir.de/sid/bundesaerztekammer/efn|123456789123456```
+
+    ```GET [base]/MedicationRequest?requester.identifier=123456789123456```

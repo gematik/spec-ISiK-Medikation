@@ -71,20 +71,6 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
-1. Der verkettete Suchparameter "encounter.identifier" MUSS unterstützt werden:
-
-   Beispiele:
-
-   ```GET [base]/List?encounter.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
-
-	 ```GET [base]/List?encounter.identifier=7567867```
-
-   Use Case Zusammenhang: Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Medikation zu vermeiden.
-
-   Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
-
-	 Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
-
 1. Der Suchparameter "item" MUSS unterstützt werden:
 
     Beispiele:
@@ -102,20 +88,6 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
-1. Der verkettete Suchparameter "patient.identifier" MUSS unterstützt werden:
-
-    Beispiele:
-
-    ```GET [base]/List?patient.identifier=http://mein-krankenhaus.example/fhir/sid/patienten|1032702```
-
-    ```GET [base]/List?patient.identifier=1032702```
-
-    Use Case Zusammenhang: Um bei der Medikationsliste eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
-    
-    Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
-
-	  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
-
 1. Der Suchparameter "status" MUSS unterstützt werden:
 
     Beispiele:
@@ -123,3 +95,33 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     ```GET [base]/List?status=current```
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+
+---
+
+### Verkettete Suchparameter (Chaining und Reverse Chaining)
+
+Auch die verketteten Suchparameter MÜSSEN unterstützt werden und sind mit entsprechenden Referenzen im CapabilityStatement unter ```CapabilityStatement.rest.resource.searchInclude``` bzw. ```CapabilityStatement.rest.resource.searchRevInclude``` angegeben. Siehe {{pagelink:ImplementationGuide/markdown/CapabilityStatement.md}}
+
+Informationen und Beispiele zur Suche nach verketteten Parametern finden sich [im Basismodul](https://simplifier.net/guide/isik-basis-v4/UebergreifendeFestlegungen-UebergreifendeFestlegungen_Suchparameter) und in der FHIR-Basisspezifikation im [Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining) und im [Abschnitt "Reverse Chaining"](https://hl7.org/fhir/R4/search.html#has).
+
+Die verketteten Suchparameter des Profils ```List``` hängen wie folgt mit den festgelegten {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Anwendungsfällen (Use Cases)}}  zusammen:
+
+1. Der verkettete Suchparameter ```Patient:identifier``` unterstützt den Anwendungsfall:
+    
+    Um bei der Medikationsliste eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
+
+    Beispiele:
+
+    ```GET [base]/List?patient.identifier=http://mein-krankenhaus.example/fhir/sid/patienten|1032702```
+
+    ```GET [base]/List?patient.identifier=1032702```
+
+1. Der verkettete Suchparameter ```Encounter:identifier``` unterstützt den Anwendungsfall:
+
+    Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Medikation zu vermeiden.
+
+    Beispiele:
+
+    ```GET [base]/List?encounter.identifier=http://mein-krankenhaus.example/fhir/sid/fallnummern|7567867```
+
+    ```GET [base]/List?encounter.identifier=7567867```
