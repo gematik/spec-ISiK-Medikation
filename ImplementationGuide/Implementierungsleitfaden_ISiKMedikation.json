@@ -24,36 +24,12 @@
         {
           "nameUrl": "ImplementationGuide/markdown/Motivation.md",
           "title": "Motivation",
-          "generation": "markdown",
-          "page": [
-            {
-              "nameUrl": "ImplementationGuide/markdown/ReleaseNotes.md",
-              "title": "ReleaseNotes",
-              "generation": "markdown"
-            }
-          ]
+          "generation": "markdown"
         },
         {
-          "nameUrl": "ImplementationGuide/markdown/Zusammenfassung.md",
-          "title": "Zusammenfassung",
-          "generation": "markdown",
-          "page": [
-            {
-              "nameUrl": "ImplementationGuide/markdown/Zusammenfassung/UseCases.md",
-              "title": "Anwendungsfälle (Use Cases)",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "ImplementationGuide/markdown/Zusammenfassung/Informationsmodell.md",
-              "title": "Informationsmodell",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "ImplementationGuide/markdown/Zusammenfassung/InteraktionenUndSearchTypes.md",
-              "title": "Interaktionen Und SearchTypes",
-              "generation": "markdown"
-            }
-          ]
+          "nameUrl": "ImplementationGuide/markdown/ReleaseNotes.md",
+          "title": "ReleaseNotes",
+          "generation": "markdown"
         },
         {
           "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen.md",
@@ -78,32 +54,42 @@
           ]
         },
         {
-          "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases.md",
-          "title": "Übergreifende Use Cases",
+          "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung.md",
+          "title": "Use Cases",
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS.md",
+              "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md",
+              "title": "Anwendungsfälle (Use Cases)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/AkteureUndInteraktionen.md",
+              "title": "Informationsmodell",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/AMTS.md",
               "title": "Arzneimitteltherapiesicherheit (AMTS)",
               "generation": "markdown",
               "page": [
                 {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Narrative.md",
+                  "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/AMTS/AMTS_Narrative.md",
                   "title": "AMTS Einführung",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Diagramme.md",
+                  "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/AMTS/AMTS_Diagramme.md",
                   "title": "Grafische Zusammenfassung",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Profile.md",
+                  "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/AMTS/AMTS_Profile.md",
                   "title": "Profile",
                   "generation": "markdown"
                 },
                 {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Apx_AuszugAK.md",
+                  "nameUrl": "ImplementationGuide/markdown/UseCasesAnwendung/AMTS/AMTS_Apx_AuszugAK.md",
                   "title": "Anhang I - Auszug ",
                   "generation": "markdown"
                 }
