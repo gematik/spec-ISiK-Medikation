@@ -6,7 +6,7 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 Version: 3.0.2
 
-Datum: 7.5.2024
+Datum: 8.5.2024
 
 * Update ISIK Basismodul Dependency to Wildcard
 
