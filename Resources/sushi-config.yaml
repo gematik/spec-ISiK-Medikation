@@ -2,8 +2,8 @@ canonical: https://gematik.de/fhir/isik/v3/Medikation
 fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false
-version: 3.0.1
+version: 3.0.2
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.medikation: 1.0.11
   hl7.fhir.r4.core: 4.0.1
-  de.gematik.isik-basismodul: 3.0.1
+  de.gematik.isik-basismodul: 3.0.x

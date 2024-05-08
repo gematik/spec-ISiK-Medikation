@@ -2,26 +2,14 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsListe",
   "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikationsListe",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "name": "ISiKMedikationsListe",
   "status": "active",
   "experimental": false,
-  "date": "2024-01-12",
+  "date": "2024-05-08",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Zusammenführung einzelner MedikationsInformationen eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "List",
