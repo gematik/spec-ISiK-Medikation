@@ -3,13 +3,13 @@ Im Gegensatz zu den sonstigen Zusammenfassungen, wird in den folgenden Diagramme
 
 ### Use Case Diagramm AMTS
 
-Im Folgenden wird ein grafischer Überblick über möglichst in diesem Implementierungsleitfaden (AMTS) abgedeckten Anwednungsfälle gegeben.
+Im Folgenden wird ein grafischer Überblick über möglichst in diesem Implementierungsleitfaden (AMTS) abgedeckten Anwendungsfälle gegeben.
 Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und dafür hinreichende Funktionen dargestellt:
 * Allgemeine und intuitiv verständliche Use Cases.
   * Kombinationen und weitere Details sind möglich.
   * Übergreifende Use Cases und und ihre Sub Use Cases können in einem separaten Diagram auf den entsprechenden Seiten gefunden werden.
 * Allgemeine und intuitiv Adverse Use Cases. Diese gilt es zu vermeiden.
-* In den Funktionen werde triviale Suchen einer Ressoruce anhand ihrer eigenen Properties nicht dargestelt, z.B. Suche einer Ressoruce anhand der ID, Name, Code usw.
+* In den Funktionen werde triviale Suchen einer Ressource anhand ihrer eigenen Properties nicht dargestellt, z.B. Suche einer Ressource anhand der ID, Name, Code usw.
 
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_usecases.svg" alt="AMTS Use Cases" width="90%"/>
 
@@ -18,7 +18,7 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und daf
 
 ### Interaktionen In der Versorgung
 
-Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem [Auszug des IOP-Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) dargestellt, welcher der Erarbeitung diese Implemetierungsleitfadens zugrunde lag. Weitere Prozesse und Details finden sich im [Anhang](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug).
+Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem [Auszug des IOP-Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) dargestellt, welcher der Erarbeitung diese Implementierungsleitfadens zugrunde lag. Weitere Prozesse und Details finden sich im [Anhang](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug).
 
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung" width="90%"/>
 
@@ -29,14 +29,14 @@ Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem [Auszug des IOP-A
 
 Im Folgenden wird ein grafischer Überblick über alle für diesen Übergreifenden Use Case (AMTS) profilierten Ressourcen gegeben.
 Da es sich um eine Zusammenfassung handelt, werden nur folgende Profile und Felder dargestellt:
-* Profile und Extenstion, die spezielle für AMTS profiliert wurden.
-* Profile und Extenstion, die für AMTS zwingend benötigt werden. In vereinfachter Form, mit Verweis auf den Ursprung.
-* Felder, mit besonderer Relevanz, die unterstüzt werden MÜSSEN (Must Support).
-* * Datentypen, die im ISiK-Kontext enstanden, festgelegt oder eingeschränkt wurden, sind als **Fett** gekennzeichnet.
-* Die Elemente (Unterfelder) haben, die unterstüzt werden MÜSSEN (Must Support).
+* Profile und Extension, die spezielle für AMTS profiliert wurden.
+* Profile und Extension, die für AMTS zwingend benötigt werden. In vereinfachter Form, mit Verweis auf den Ursprung.
+* Felder, mit besonderer Relevanz, die unterstützt werden MÜSSEN (Must Support).
+* * Datentypen, die im ISiK-Kontext entstanden, festgelegt oder eingeschränkt wurden, sind als **Fett** gekennzeichnet.
+* Die Elemente (Unterfelder) haben, die unterstützt werden MÜSSEN (Must Support).
 * Nur Unter-Elemente (MS) bis zu ersten Tiefe, abhängig von Umfang und Systematik. D.h. Keine bedingten Wiederholungen (repeat) oder Rekursionen (part-of).
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_resourcediagram.svg" alt="AMTS Ressourcenciagramm" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_resourcediagram.svg" alt="AMTS Ressourcendiagramm" width="90%"/>
 
 **Ressourcendiagramm AMTS**
 

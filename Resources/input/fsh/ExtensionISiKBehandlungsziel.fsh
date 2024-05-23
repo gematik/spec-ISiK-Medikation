@@ -1,6 +1,6 @@
 Extension: ExtensionISiKBehandlungsziel
 Id: ExtensionISiKBehandlungsziel
-Title: "ISiKBehandlungsziel"
+Title: "ISiK Behandlungsziel"
 Description: "Extension zur freitextlichen Angabe des Behandlungsziels."
 * insert Meta
 * ^experimental = false

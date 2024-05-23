@@ -1,6 +1,6 @@
 Extension: ExtensionISiKAcceptedRisk
 Id: ExtensionISiKAcceptedRisk
-Title: "ISiKAcceptedRisk"
+Title: "ISiK Accepted Risk"
 Description: "Extension zur Dokumentation eines im Rahmen der AMTS bewusst eingegangenen Risikos. In diesem Freitext kann die Begründung und ggf. zu treffende besondere Maßnahmen dokumentiert werden."
 * insert Meta
 * ^experimental = false

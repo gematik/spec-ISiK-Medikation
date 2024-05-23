@@ -1,6 +1,7 @@
 Profile: ISiKMedikationTransaction
 Parent: Bundle
 Id: ISiKMedikationTransaction
+Title: "ISiK Medikation Transactionbundle"
 Description: "Dieses Profil definiert die Transaktions-Bundles im Rahmen von ISiK-Medikations-Szenarien."
 * insert Meta
 * type MS
@@ -16,7 +17,7 @@ Description: "Dieses Profil definiert die Transaktions-Bundles im Rahmen von ISi
   * resource MS
     * ^short = "Die Ressourcen-Instanz der Interaktion"
   * search 0..0
-  * request 1..1 MS
+  * request 1.. MS
     * ^short = "HTTP-Request innerhalb der Transaktion"
     * method MS
       * ^short = "HTTP-Verb"

@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk",
   "version": "4.0.0-rc",
   "name": "ExtensionISiKAcceptedRisk",
-  "title": "ISiKAcceptedRisk",
+  "title": "ISiK Accepted Risk",
   "status": "draft",
   "experimental": false,
   "date": "2024-04-04",

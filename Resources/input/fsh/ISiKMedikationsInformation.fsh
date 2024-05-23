@@ -1,11 +1,9 @@
 Profile: ISiKMedikationsInformation
 Parent: MedicationStatement
 Id: ISiKMedikationsInformation
+Title: "ISiK Medikationsinformation"
 Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien."
 * insert Meta
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
-* extension MS
 * extension contains
     ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS and
     ExtensionISiKMedikationsart named medikationsart 0..1 MS and
@@ -62,15 +60,15 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
   * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
-  * reference 1..1 MS
+  * reference 1.. MS
 * subject MS
   * ^short = "Referenz auf den Patienten"
 * subject only Reference(Patient)
-  * reference 1..1 MS
+  * reference 1.. MS
 * context MS
   * ^short = "Referenz auf den Abteilungskontakt"
-  * reference 1..1 MS
-* effective[x] 1..1 MS
+  * reference 1.. MS
+* effective[x] 1.. MS
   * ^short = "Zeitpunkt oder Zeitraum, für den die MedikationsInformation gilt"
 * effectiveDateTime MS
   * ^short = "Zeitpunkt"
@@ -83,13 +81,13 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
 * reasonCode MS
   * ^short = "Grund der Medikation (codiert)"
   * coding MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
     * display MS
   * text MS
 * reasonReference MS
   * ^short = "Grund der Medikation (Referenz)"
-  * reference 1..1 MS
+  * reference 1.. MS
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"
@@ -108,24 +106,24 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
       * boundsDuration MS
         * ^short = "Begrenzung der Dauer"
         * ^patternDuration.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
       * boundsRange MS
         * ^short = "Bereich für die Begrenzung"
         * low MS
           * ^patternQuantity.system = $cs-ucum
-          * value 1..1 MS
+          * value 1.. MS
           * unit MS
-          * system 1..1 MS
-          * code 1..1 MS
+          * system 1.. MS
+          * code 1.. MS
         * high MS
           * ^patternQuantity.system = $cs-ucum
-          * value 1..1 MS
+          * value 1.. MS
           * unit MS
-          * system 1..1 MS
-          * code 1..1 MS
+          * system 1.. MS
+          * code 1.. MS
       * boundsPeriod MS
         * ^short = "begrenzender Zeitraum"
         * start MS
@@ -193,85 +191,85 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
       * ^short = "Dosisbereich"
       * low MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
       * high MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
     * doseQuantity MS
       * ^short = "Dosis"
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
     * rateRatio MS
       * ^short = "Raten-Verhältnis"
       * numerator MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
       * denominator MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
     * rateRange MS
       * ^short = "Raten-Bereich"
       * low MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
       * high MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
     * rateQuantity MS
       * ^short = "Rate"
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
   * maxDosePerPeriod MS
     * ^short = "Maximaldosis (Zähler) pro Zeitraum (Nenner)"
     * numerator MS
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
     * denominator MS
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
   * maxDosePerAdministration MS
     * ^short = "Maximaldosis pro Verabreichung"
     * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
+    * value 1.. MS
     * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
 
 Instance: ExampleISiKMedikationsInformation1
 InstanceOf: ISiKMedikationsInformation
 Usage: #example
 * extension[acceptedRisk].valueString = "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
-* extension[medikationsart].valueCoding = ISiKMedikationsart#akut
+* extension[medikationsart].valueCoding = ISiKMedikationsartCS#akut
 * extension[selbstmedikation].valueBoolean = true
 * extension[behandlungsziel].valueString = "Schmerztherapie postoperativ"
 * status = #active

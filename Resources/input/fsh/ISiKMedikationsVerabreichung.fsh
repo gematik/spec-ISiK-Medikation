@@ -1,10 +1,9 @@
 Profile: ISiKMedikationsVerabreichung
 Parent: MedicationAdministration
 Id: ISiKMedikationsVerabreichung
+Title: "ISiK Medikationsverabreichung"
 Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien."
 * insert Meta
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
 * status MS
   * ^short = "Status der Verabreichungsinformation"
 * medicationCodeableConcept MS
@@ -28,14 +27,14 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
   * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
-  * reference 1..1 MS
+  * reference 1.. MS
 * subject MS
   * ^short = "Referenz auf den Patienten"
 * subject only Reference(Patient)
-  * reference 1..1 MS
+  * reference 1.. MS
 * context MS
   * ^short = "Referenz auf den Abteilungskontakt"
-  * reference 1..1 MS
+  * reference 1.. MS
 * effectiveDateTime MS
   * ^short = "Zeitpunkt der Verabreichung"
 * effectivePeriod MS
@@ -45,10 +44,10 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
 * performer MS
   * actor MS
     * ^short = "Referenz auf die verabreichende Person"
-    * reference 1..1 MS
+    * reference 1.. MS
 * reasonReference MS
   * ^short = "Grund der Medikation (Referenz)"
-  * reference 1..1 MS
+  * reference 1.. MS
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"
@@ -86,31 +85,31 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
   * dose MS
     * ^short = "verabreichte Dosis"
     * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
+    * value 1.. MS
     * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
   * rateRatio MS
     * ^short = "Verabreichungs-Rate (Verhältnis)"
     * numerator MS
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
     * denominator MS
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
   * rateQuantity MS
     * ^short = "Verabreichungs-Rate"
     * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
+    * value 1.. MS
     * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
 
 Instance: ExampleISiKMedikationsVerabreichung
 InstanceOf: ISiKMedikationsVerabreichung

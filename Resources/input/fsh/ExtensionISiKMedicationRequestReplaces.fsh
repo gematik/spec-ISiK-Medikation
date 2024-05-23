@@ -1,7 +1,7 @@
 Extension: ExtensionISiKMedicationRequestReplaces
 Id: ExtensionISiKMedicationRequestReplaces
-Title: "ISiKMedicationRequestReplaces"
-Description: "Welche Medikationsverordnung wird ersetzt?"
+Title: "ISiK MedicationRequestReplaces"
+Description: "Extension zur Verlinkung der Medikationsverordnung die ersetzt wurde"
 * insert Meta
 * ^experimental = false
 * ^context[+].type = #element

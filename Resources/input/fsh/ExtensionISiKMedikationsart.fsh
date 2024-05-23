@@ -1,6 +1,6 @@
 Extension: ExtensionISiKMedikationsart
 Id: ExtensionISiKMedikationsart
-Title: "ISiKMedikationsart"
+Title: "ISiK Medikationsart"
 Description: "Extension zur Dokumentation der Therapieart einer Medikation (Akut- oder Dauermedikation)."
 * insert Meta
 * ^experimental = false
@@ -10,6 +10,6 @@ Description: "Extension zur Dokumentation der Therapieart einer Medikation (Akut
 * ^context[=].expression = "MedicationRequest"
 * value[x] 1..
 * value[x] only Coding
-* valueCoding from ISiKMedikationsart
+* valueCoding from ISiKMedikationsartVS
   * system 1..
   * code 1..

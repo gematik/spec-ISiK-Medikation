@@ -4,6 +4,7 @@
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKAMTSBewertung",
   "version": "4.0.0-rc",
   "name": "ISiKAMTSBewertung",
+  "title": "ISiK AMTS-Bewertung",
   "status": "draft",
   "experimental": false,
   "date": "2024-04-04",
@@ -18,17 +19,10 @@
   "differential": {
     "element": [
       {
-        "id": "RiskAssessment.id",
-        "path": "RiskAssessment.id",
-        "short": "eindeutige ID der Ressource auf dem Server",
-        "mustSupport": true
-      },
-      {
         "id": "RiskAssessment.extension",
         "path": "RiskAssessment.extension",
         "short": "akzeptiertes (in Kauf genommenes) Risiko",
-        "comment": "Hier kann die Begründung und ggf. erforderliche Begleitmaßnahmen für ein in Kauf genommenes Risiko dokumentiert werden.",
-        "mustSupport": true
+        "comment": "Hier kann die Begründung und ggf. erforderliche Begleitmaßnahmen für ein in Kauf genommenes Risiko dokumentiert werden."
       },
       {
         "id": "RiskAssessment.extension:acceptedRisk",
