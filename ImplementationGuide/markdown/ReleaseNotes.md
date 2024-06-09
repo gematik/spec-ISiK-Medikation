@@ -6,6 +6,12 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 
 ----
+Version: 4.0.0-rc3
+
+Datum: tbd.
+
+- Entfernen von MS von .id der Ressourcen https://github.com/gematik/spec-ISiK-Medikation/pull/122
+---
 **Release Candidate zur Kommentierung**
 
 Version: 4.0.0-rc
