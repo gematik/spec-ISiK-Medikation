@@ -31,12 +31,6 @@
         ]
       },
       {
-        "id": "Medication.id",
-        "path": "Medication.id",
-        "short": "eindeutige ID der Ressource auf dem Server",
-        "mustSupport": true
-      },
-      {
         "id": "Medication.code",
         "path": "Medication.code",
         "short": "Medikament in codierter Form oder ggf. als Freitext",

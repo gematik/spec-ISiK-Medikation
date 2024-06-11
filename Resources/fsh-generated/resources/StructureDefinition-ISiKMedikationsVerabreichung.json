@@ -18,12 +18,6 @@
   "differential": {
     "element": [
       {
-        "id": "MedicationAdministration.id",
-        "path": "MedicationAdministration.id",
-        "short": "eindeutige ID der Ressource auf dem Server",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationAdministration.status",
         "path": "MedicationAdministration.status",
         "short": "Status der Verabreichungsinformation",

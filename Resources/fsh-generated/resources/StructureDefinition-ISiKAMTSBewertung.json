@@ -18,12 +18,6 @@
   "differential": {
     "element": [
       {
-        "id": "RiskAssessment.id",
-        "path": "RiskAssessment.id",
-        "short": "eindeutige ID der Ressource auf dem Server",
-        "mustSupport": true
-      },
-      {
         "id": "RiskAssessment.extension",
         "path": "RiskAssessment.extension",
         "short": "akzeptiertes (in Kauf genommenes) Risiko",

@@ -4,8 +4,6 @@ Id: ISiKMedikament
 Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien."
 * insert Meta
 * obeys isik-med-1
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
 * code MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
   * coding MS

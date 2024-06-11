@@ -3,8 +3,6 @@ Parent: RiskAssessment
 Id: ISiKAMTSBewertung
 Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Risikobeurteilung im Rahmen der Arzneimitteltherapiesicherheit (AMTS)."
 * insert Meta
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
 * extension MS
 * extension contains ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS
   * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
