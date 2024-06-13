@@ -6,21 +6,12 @@
       "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament"
     ]
   },
+  "code": {
+    "text": "Paracetamol gelöst in Wasser"
+  },
+  "status": "active",
   "ingredient": [
     {
-      "strength": {
-        "numerator": {
-          "system": "http://unitsofmeasure.org",
-          "value": 500,
-          "unit": "mg",
-          "code": "mg"
-        },
-        "denominator": {
-          "system": "http://unitsofmeasure.org",
-          "value": 1,
-          "code": "1"
-        }
-      },
       "itemCodeableConcept": {
         "coding": [
           {
@@ -30,30 +21,39 @@
           }
         ]
       },
-      "isActive": true
-    },
-    {
+      "isActive": true,
       "strength": {
         "numerator": {
+          "value": 500,
+          "unit": "mg",
           "system": "http://unitsofmeasure.org",
-          "value": 1,
-          "unit": "Esslöffel",
-          "code": "1"
+          "code": "mg"
         },
         "denominator": {
-          "system": "http://unitsofmeasure.org",
           "value": 1,
+          "system": "http://unitsofmeasure.org",
           "code": "1"
         }
-      },
+      }
+    },
+    {
       "itemCodeableConcept": {
         "text": "Wasser"
       },
-      "isActive": false
+      "isActive": false,
+      "strength": {
+        "numerator": {
+          "value": 1,
+          "unit": "Esslöffel",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        },
+        "denominator": {
+          "value": 1,
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        }
+      }
     }
-  ],
-  "code": {
-    "text": "Paracetamol gelöst in Wasser"
-  },
-  "status": "active"
+  ]
 }

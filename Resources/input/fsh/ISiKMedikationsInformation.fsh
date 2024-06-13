@@ -48,14 +48,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     * ^slicing.rules = #open
   * coding contains
       PZN 0..1 MS and
-      ATC-DE 0..1 MS and
-      WG14 0..1 MS
+      ATC-DE 0..1 MS
   * coding[PZN] only ISiKPZNCoding
     * ^patternCoding.system = $cs-pzn
   * coding[ATC-DE] only ISiKATCCoding
-    * ^patternCoding.system = $cs-atc-de
-  * coding[WG14] only ISiKWG14Coding
-    * ^patternCoding.system = $cs-wg14
   * text MS
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
@@ -190,80 +186,36 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     * doseRange MS
       * ^short = "Dosisbereich"
       * low MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
-        * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+      * low only MedicationQuantity
       * high MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
-        * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+      * high only MedicationQuantity
     * doseQuantity MS
+    * doseQuantity only MedicationQuantity
       * ^short = "Dosis"
-      * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
-      * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
     * rateRatio MS
       * ^short = "Raten-Verhältnis"
-      * numerator MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
-        * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
-      * denominator MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
-        * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+      * numerator 1.. MS
+      * numerator only MedicationQuantity
+      * denominator 1.. MS
+      * denominator only MedicationQuantity
     * rateRange MS
       * ^short = "Raten-Bereich"
       * low MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
-        * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+      * low only MedicationQuantity
       * high MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
-        * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+      * high only MedicationQuantity
     * rateQuantity MS
+    * rateQuantity only MedicationQuantity
       * ^short = "Rate"
-      * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
-      * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
   * maxDosePerPeriod MS
     * ^short = "Maximaldosis (Zähler) pro Zeitraum (Nenner)"
     * numerator MS
-      * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
-      * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+    * numerator only MedicationQuantity
     * denominator MS
-      * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
-      * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+    * denominator only MedicationQuantity
   * maxDosePerAdministration MS
+  * maxDosePerAdministration only MedicationQuantity
     * ^short = "Maximaldosis pro Verabreichung"
-    * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
-    * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
 
 Instance: ExampleISiKMedikationsInformation1
 InstanceOf: ISiKMedikationsInformation

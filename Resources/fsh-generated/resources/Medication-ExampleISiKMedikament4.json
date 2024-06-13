@@ -6,21 +6,12 @@
       "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament"
     ]
   },
+  "status": "active",
+  "form": {
+    "text": "Tabletten"
+  },
   "ingredient": [
     {
-      "strength": {
-        "numerator": {
-          "system": "http://unitsofmeasure.org",
-          "value": 1,
-          "unit": "St.",
-          "code": "1"
-        },
-        "denominator": {
-          "system": "http://unitsofmeasure.org",
-          "value": 1,
-          "code": "1"
-        }
-      },
       "itemCodeableConcept": {
         "coding": [
           {
@@ -30,22 +21,23 @@
           }
         ]
       },
-      "isActive": true
-    },
-    {
+      "isActive": true,
       "strength": {
         "numerator": {
+          "value": 400,
+          "unit": "mg",
           "system": "http://unitsofmeasure.org",
-          "value": 1,
-          "unit": "St.",
-          "code": "1"
+          "code": "mg"
         },
         "denominator": {
-          "system": "http://unitsofmeasure.org",
+          "unit": "Tablette",
           "value": 1,
-          "code": "1"
+          "system": "http://snomed.info/sct",
+          "code": "732936001"
         }
-      },
+      }
+    },
+    {
       "itemCodeableConcept": {
         "coding": [
           {
@@ -55,11 +47,21 @@
           }
         ]
       },
-      "isActive": true
+      "isActive": true,
+      "strength": {
+        "numerator": {
+          "value": 500,
+          "unit": "mg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        },
+        "denominator": {
+          "unit": "Tablette",
+          "value": 1,
+          "system": "http://snomed.info/sct",
+          "code": "732936001"
+        }
+      }
     }
-  ],
-  "status": "active",
-  "form": {
-    "text": "Tabletten"
-  }
+  ]
 }
