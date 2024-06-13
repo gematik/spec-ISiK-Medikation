@@ -5,10 +5,10 @@
   "id": "UcumUndSctDoseFormVS",
   "title": "Ucum und SnomedCT Basic Dose Form ValueSet",
   "description": "ValueSet zur Abbildung von kodierten Dosierinformationen. Bestehend aus UCUM Codes & SnomedCT Unit of presentation",
-  "version": "4.0.0-rc",
   "url": "https://gematik.de/fhir/isik/ValueSet/UcumUndSctDoseFormVS",
   "experimental": false,
   "publisher": "gematik GmbH",
+  "version": "4.0.0-rc",
   "date": "2024-04-04",
   "compose": {
     "include": [
