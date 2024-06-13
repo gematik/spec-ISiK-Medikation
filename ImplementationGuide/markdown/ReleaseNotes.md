@@ -11,7 +11,7 @@ Version: 4.0.0-rc3
 Datum: tbd.
 
 * Entfernen von MS von .id der Ressourcen https://github.com/gematik/spec-ISiK-Medikation/pull/122
-* Entfernen der WG14 Kodierung, Hinzufügen eines SimpleQuantity Profiles welches ein VS bindet bestehend aus UCUM & SCT Unit of presentation um bspw. 500mg/Tablette maschinenlesbar kodieren zu können, hinzufügen eines SnomedCT Slices zur Kodierung der Medikationsressourcen, Update der Abhängigkeit auf IPS 1.1.0 
+* Entfernen der WG14 Kodierung, Hinzufügen eines SimpleQuantity Profiles welches ein VS bindet bestehend aus UCUM & SCT Unit of presentation um bspw. 500mg/Tablette maschinenlesbar kodieren zu können, hinzufügen eines SnomedCT Slices zur Kodierung der Medikationsressourcen, Update der Abhängigkeit auf IPS 1.1.0 https://github.com/gematik/spec-ISiK-Medikation/pull/123
 ---
 **Release Candidate zur Kommentierung**
 
