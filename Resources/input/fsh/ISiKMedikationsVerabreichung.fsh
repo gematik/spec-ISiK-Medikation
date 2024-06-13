@@ -14,11 +14,14 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * ^slicing.rules = #open
   * coding contains
       PZN 0..1 MS and
-      ATC-DE 0..1 MS
+      ATC-DE 0..1 MS and
+      SCT 0..1 MS
   * coding[PZN] only ISiKPZNCoding
     * ^patternCoding.system = $cs-pzn
   * coding[ATC-DE] only ISiKATCCoding
     * ^patternCoding.system = $cs-atc-de
+  * coding[SCT] only ISiKSnomedCTCoding
+    * ^patternCoding.system = $cs-sct
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
   * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"

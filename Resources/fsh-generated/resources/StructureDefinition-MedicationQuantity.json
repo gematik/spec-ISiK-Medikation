@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "MedicationQuantity",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity",
+  "version": "4.0.0-rc",
   "name": "MedicationQuantity",
   "title": "Medication Quantity",
   "status": "draft",

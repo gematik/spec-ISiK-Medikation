@@ -105,6 +105,25 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:SCT",
+        "path": "MedicationAdministration.medication[x].coding",
+        "sliceName": "SCT",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true
+      },
+      {
         "id": "MedicationAdministration.medication[x]:medicationReference",
         "path": "MedicationAdministration.medication[x]",
         "sliceName": "medicationReference",

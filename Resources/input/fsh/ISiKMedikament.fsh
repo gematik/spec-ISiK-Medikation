@@ -14,16 +14,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
       PZN 0..1 MS and
       ATC-DE 0..1 MS and
       SCT 0..1 MS
-  * coding[PZN]
+  * coding[PZN] only ISiKPZNCoding
     * ^patternCoding.system = $cs-pzn
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
-  * coding[ATC-DE]
+  * coding[ATC-DE] only ISiKATCCoding
     * ^patternCoding.system = $cs-atc-de
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
   * coding[SCT] only ISiKSnomedCTCoding
     * ^patternCoding.system = $cs-sct
   * text MS
@@ -65,13 +59,16 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * coding contains
         ASK 0..1 MS and
         ATC-DE 0..1 MS and
-        PZN 0..1 MS
+        PZN 0..1 MS and
+        SCT 0..1 MS
     * coding[ASK] only ISiKASKCoding
       * ^patternCoding.system = $cs-ask
     * coding[ATC-DE] only ISiKATCCoding
       * ^patternCoding.system = $cs-atc-de
     * coding[PZN] only ISiKPZNCoding
       * ^patternCoding.system = $cs-pzn
+    * coding[SCT] only ISiKSnomedCTCoding
+      * ^patternCoding.system = $cs-sct
     * text MS
   * itemReference MS
     * reference 1..1 MS
