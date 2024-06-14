@@ -13,7 +13,7 @@ Description: "ISiK Therapiearten für Medikation"
 ValueSet: UcumUndSctDoseFormVS
 Id: UcumUndSctDoseFormVS
 Title: "Ucum und SnomedCT Basic Dose Form ValueSet"
-Description: "ValueSet zur Abbildung von kodierten Dosierinformationen. Bestehend aus UCUM Codes & SnomedCT Unit of presentation"
+Description: "ValueSet zur Abbildung von kodierten Dosierinformationen. Bestehend aus UCUM Codes & SnomedCT Unit Dose Concepten"
 * insert Meta
-* include codes from system $cs-sct where concept is-a #732935002 // Unit of presentation
+* include codes from system $cs-sct where concept is-a #408102007 // Unit dose (qualifier value)
 * include codes from system $cs-ucum
