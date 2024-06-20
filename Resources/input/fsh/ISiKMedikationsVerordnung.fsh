@@ -231,8 +231,8 @@ Usage: #example
   * doseAndRate.doseQuantity
     * value = 1
     * unit = "Brausetablette"
-    * system = $cs-sct
-    * code = #732936001
+    * system = $cs-ucum
+    * code = #1
 
 Instance: ExampleISiKMedikationsVerordnung2
 InstanceOf: ISiKMedikationsVerordnung

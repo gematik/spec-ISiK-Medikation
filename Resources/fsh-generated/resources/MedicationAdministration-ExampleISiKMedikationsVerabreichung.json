@@ -6,6 +6,14 @@
       "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerabreichung"
     ]
   },
+  "dosage": {
+    "dose": {
+      "system": "http://unitsofmeasure.org",
+      "value": 1,
+      "unit": "Tablette",
+      "code": "1"
+    }
+  },
   "status": "completed",
   "medicationReference": {
     "reference": "Medication/ExampleISiKMedikament1"
@@ -16,13 +24,5 @@
   "context": {
     "reference": "Encounter/Fachabteilungskontakt"
   },
-  "effectiveDateTime": "2021-07-01",
-  "dosage": {
-    "dose": {
-      "value": 1,
-      "unit": "Tablette",
-      "system": "http://snomed.info/sct",
-      "code": "732936001"
-    }
-  }
+  "effectiveDateTime": "2021-07-01"
 }

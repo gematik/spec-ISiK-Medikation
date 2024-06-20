@@ -105,8 +105,8 @@ Usage: #example
   * dose
     * value = 1
     * unit = "Tablette"
-    * system = $cs-sct
-    * code = #732936001
+    * system = $cs-ucum
+    * code = #1
 
 Instance: ExampleISiKMedikationsVerabreichung2
 InstanceOf: ISiKMedikationsVerabreichung
@@ -120,5 +120,5 @@ Usage: #example
   * dose
     * value = 1
     * unit = "Beutel"
-    * system = $cs-sct
-    * code = #733013000
+    * system = $cs-ucum
+    * code = #1

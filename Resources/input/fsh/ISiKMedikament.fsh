@@ -165,8 +165,8 @@ Usage: #example
     * denominator
       * unit = "Tablette"
       * value = 1
-      * system = $cs-sct
-      * code = #732936001
+      * system = $cs-ucum
+      * code = #1
 * ingredient[1]
   * itemCodeableConcept.coding
     * system = $cs-pzn
@@ -182,8 +182,8 @@ Usage: #example
     * denominator
       * unit = "Tablette"
       * value = 1
-      * system = $cs-sct
-      * code = #732936001
+      * system = $cs-ucum
+      * code = #1
 
 Instance: ExampleISiKMedikament5
 InstanceOf: ISiKMedikament
@@ -205,8 +205,8 @@ Usage: #example
     * denominator
       * unit = "Tablette"
       * value = 1
-      * system = $cs-sct
-      * code = #732936001
+      * system = $cs-ucum
+      * code = #1
 * ingredient[1]
   * itemCodeableConcept.coding
     * system = $cs-atc-de
@@ -222,8 +222,8 @@ Usage: #example
     * denominator
       * unit = "Tablette"
       * value = 1
-      * system = $cs-sct
-      * code = #732936001
+      * system = $cs-ucum
+      * code = #1
 
 Instance: ExampleISiKMedikament6
 InstanceOf: ISiKMedikament

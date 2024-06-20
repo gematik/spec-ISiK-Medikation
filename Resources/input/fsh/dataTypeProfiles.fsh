@@ -6,5 +6,5 @@ Description: "Quantity Datentyp der UcumUndSctDoseFormVS vorgibt. Bei Dimensions
 * value 1..1 MS
 * unit MS
 * system 1..1 MS
+* system = $cs-ucum
 * code 1..1 MS
-* code from UcumUndSctDoseFormVS

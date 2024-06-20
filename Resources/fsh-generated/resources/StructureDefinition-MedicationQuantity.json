@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "MedicationQuantity",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity",
+  "version": "4.0.0-rc",
   "name": "MedicationQuantity",
   "title": "Medication Quantity",
   "status": "draft",
@@ -29,17 +30,14 @@
         "id": "Quantity.system",
         "path": "Quantity.system",
         "min": 1,
+        "patternUri": "http://unitsofmeasure.org",
         "mustSupport": true
       },
       {
         "id": "Quantity.code",
         "path": "Quantity.code",
         "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/isik/ValueSet/UcumUndSctDoseFormVS"
-        }
+        "mustSupport": true
       }
     ]
   }

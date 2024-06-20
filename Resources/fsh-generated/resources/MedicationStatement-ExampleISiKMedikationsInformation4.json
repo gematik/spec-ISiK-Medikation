@@ -6,6 +6,28 @@
       "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsInformation"
     ]
   },
+  "dosage": [
+    {
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "system": "http://unitsofmeasure.org",
+            "value": 1,
+            "unit": "Tabl.",
+            "code": "1"
+          }
+        }
+      ],
+      "timing": {
+        "repeat": {
+          "when": [
+            "C"
+          ]
+        }
+      },
+      "patientInstruction": "auch zu Zwischenmahlzeiten"
+    }
+  ],
   "status": "active",
   "medicationCodeableConcept": {
     "coding": [
@@ -25,27 +47,5 @@
   "effectivePeriod": {
     "start": "2024-01-22"
   },
-  "dateAsserted": "2024-02-16",
-  "dosage": [
-    {
-      "timing": {
-        "repeat": {
-          "when": [
-            "C"
-          ]
-        }
-      },
-      "patientInstruction": "auch zu Zwischenmahlzeiten",
-      "doseAndRate": [
-        {
-          "doseQuantity": {
-            "value": 1,
-            "unit": "Tabl.",
-            "system": "http://unitsofmeasure.org",
-            "code": "1"
-          }
-        }
-      ]
-    }
-  ]
+  "dateAsserted": "2024-02-16"
 }
