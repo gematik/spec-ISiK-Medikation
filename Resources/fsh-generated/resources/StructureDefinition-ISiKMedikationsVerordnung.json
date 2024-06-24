@@ -912,6 +912,7 @@
         "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
         "sliceName": "rateRatio",
         "short": "Raten-Verhältnis",
+        "comment": "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1064,6 +1065,7 @@
         "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
         "sliceName": "rateQuantity",
         "short": "Rate",
+        "comment": "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können.",
         "min": 0,
         "max": "1",
         "type": [

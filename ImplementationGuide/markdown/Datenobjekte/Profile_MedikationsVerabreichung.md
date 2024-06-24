@@ -53,6 +53,12 @@ Einfache Einnahme:
 Zytostatika-Infusion:
 {{json:ExampleISiKMedikationsVerabreichung2}}
 
+Verabreichung einer Infusion mit Angabe der Dosierungs-Rate in zwei Varianten (Quantity und Ratio):
+
+{{json:ExampleISiKMedikationsVerabreichung3}}
+
+{{json:ExampleISiKMedikationsVerabreichung4}}
+
 ## Interaktionen
 
 Für die Ressource MedicationAdministration MÜSSEN die REST-Interaktionen "READ", "CREATE" und "UPDATE" implementiert werden.
@@ -120,7 +126,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     ```GET [base]/MedicationAdministration?medication.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
 
     Use Case Zusammenhang: Um eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Kontraindikation}} bei der Verabreichung auf Basis des Wirkstoffes zu vermeiden.
-    
+
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
 	  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
@@ -142,7 +148,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     ```GET [base]/MedicationAdministration?patient.identifier=1032702```
 
     Use Case Zusammenhang: Um bei der Verabreichung eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
-    
+
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
 	  Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
@@ -165,7 +171,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     Use Case Zusammenhang: Um mich als Heilberufler über die {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Historie}} meiner Medikationsverabreichungen zur informieren.
     <!-- Use Case Zusammenhang: Um bei der Verabreichung die notwendige {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Expertise}} eines entsprechend spezialisierten Facharztes (z.B. Onkologie) zu gewährleisten.-->
-    
+
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
       Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
