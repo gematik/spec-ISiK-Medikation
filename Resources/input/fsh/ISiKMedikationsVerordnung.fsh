@@ -191,7 +191,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * code 1..1 MS
     * rateRatio MS
       * ^short = "Raten-Verhältnis"
-      * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden können. Beim Empfang und Verarbeitung der eingehenden Daten müssen dagegen beide Datentypen interpretiert werden können."
+      * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können."
       * numerator MS
         * ^patternQuantity.system = $cs-ucum
         * value 1..1 MS
