@@ -155,8 +155,7 @@
       {
         "id": "MedicationStatement.partOf",
         "path": "MedicationStatement.partOf",
-        "short": "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist",
-        "mustSupport": true
+        "short": "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
       },
       {
         "id": "MedicationStatement.status",
