@@ -12,6 +12,8 @@ Datum: tbd.
 
 - Entfernen von MS von .id der Ressourcen https://github.com/gematik/spec-ISiK-Medikation/pull/122
 - Klärung Dosis-Rate Quantity und Ratio (Beispiele, Must-Support)  https://github.com/gematik/spec-ISiK-Medikation/pull/124/files
+- Entfernen von MS von MedicationStatement.partOf https://github.com/gematik/spec-ISiK-Medikation/pull/126
+
 ---
 **Release Candidate zur Kommentierung**
 
