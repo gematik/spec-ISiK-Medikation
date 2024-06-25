@@ -34,7 +34,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * ^comment = "Welche Medikationsinformation wird ersetzt?"
   * valueReference MS
     * reference MS
-* partOf MS
+* partOf
   * ^short = "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
 * status MS
   * ^short = "Status der Medikationsinformation"
