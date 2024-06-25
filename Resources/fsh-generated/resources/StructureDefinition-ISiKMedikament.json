@@ -48,6 +48,7 @@
           ],
           "rules": "open"
         },
+        "comment": "Motivation: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden",
         "mustSupport": true
       },
       {
@@ -110,6 +111,7 @@
       {
         "id": "Medication.code.text",
         "path": "Medication.code.text",
+        "comment": "Motivation: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden",
         "mustSupport": true
       },
       {
@@ -150,6 +152,7 @@
           ],
           "rules": "open"
         },
+        "comment": "Motivation: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene",
         "mustSupport": true
       },
       {
@@ -176,11 +179,13 @@
         "id": "Medication.amount",
         "path": "Medication.amount",
         "short": "Menge",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
         "mustSupport": true
       },
       {
         "id": "Medication.amount.numerator",
         "path": "Medication.amount.numerator",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
         "min": 1,
         "type": [
           {
@@ -195,6 +200,8 @@
       {
         "id": "Medication.amount.denominator",
         "path": "Medication.amount.denominator",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
+        "min": 1,
         "type": [
           {
             "code": "Quantity",

@@ -84,72 +84,72 @@
     "fshName": "ExampleISiKMedikament1",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 96,
-    "endLine": 103
+    "startLine": 102,
+    "endLine": 109
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament2.json",
     "fshName": "ExampleISiKMedikament2",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 105,
-    "endLine": 137
+    "startLine": 111,
+    "endLine": 143
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament3.json",
     "fshName": "ExampleISiKMedikament3",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 139,
-    "endLine": 146
+    "startLine": 145,
+    "endLine": 152
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament4.json",
     "fshName": "ExampleISiKMedikament4",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 148,
-    "endLine": 186
+    "startLine": 154,
+    "endLine": 192
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament5.json",
     "fshName": "ExampleISiKMedikament5",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 188,
-    "endLine": 226
+    "startLine": 194,
+    "endLine": 232
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament6.json",
     "fshName": "ExampleISiKMedikament6",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 228,
-    "endLine": 232
+    "startLine": 234,
+    "endLine": 238
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament7.json",
     "fshName": "ExampleISiKMedikament7",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 234,
-    "endLine": 267
+    "startLine": 240,
+    "endLine": 273
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament8.json",
     "fshName": "ExampleISiKMedikament8",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 269,
-    "endLine": 311
+    "startLine": 275,
+    "endLine": 317
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament9.json",
     "fshName": "ExampleISiKMedikament9",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 313,
-    "endLine": 355
+    "startLine": 319,
+    "endLine": 361
   },
   {
     "outputFile": "MedicationAdministration-ExampleISiKMedikationsVerabreichung.json",
@@ -349,7 +349,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikament.fsh",
     "startLine": 1,
-    "endLine": 89
+    "endLine": 95
   },
   {
     "outputFile": "StructureDefinition-ISiKMedikationTransaction.json",
@@ -422,13 +422,5 @@
     "fshFile": "valueSets.fsh",
     "startLine": 1,
     "endLine": 5
-  },
-  {
-    "outputFile": "ValueSet-UcumUndSctDoseFormVS.json",
-    "fshName": "UcumUndSctDoseFormVS",
-    "fshType": "ValueSet",
-    "fshFile": "valueSets.fsh",
-    "startLine": 13,
-    "endLine": 19
   }
 ]

@@ -14,6 +14,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
       PZN 0..1 MS and
       ATC-DE 0..1 MS and
       SCT 0..1 MS
+    * ^comment = "Motivation: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden"
   * coding[PZN] only ISiKPZNCoding
     * ^patternCoding.system = $cs-pzn
   * coding[ATC-DE] only ISiKATCCoding
@@ -21,6 +22,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * coding[SCT] only ISiKSnomedCTCoding
     * ^patternCoding.system = $cs-sct
   * text MS
+    * ^comment = "Motivation: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden"
 * status 1..1 MS
   * ^short = "Status der Medikamenteninformation"
 * manufacturer MS
@@ -36,13 +38,17 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * ^slicing.rules = #open
   * coding contains
       EDQM 0..1 MS
+    * ^comment = "Motivation: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene"    
   * coding[EDQM] from $vs-edqm-doseform (required)
   * coding[EDQM] only ISiKCoding
 * amount MS
+  * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
   * ^short = "Menge"
-  * numerator 1..1 MS
+  * numerator 1.. MS
+    * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
   * numerator only MedicationQuantity  
-  * denominator MS
+  * denominator 1.. MS
+    * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
   * denominator only MedicationQuantity
 * ingredient MS
   * ^short = "Informationen zu Bestandteilen (Rezeptur)"
