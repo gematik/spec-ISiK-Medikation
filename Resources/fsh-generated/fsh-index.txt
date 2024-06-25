@@ -42,11 +42,6 @@ StructureDefinition-ExtensionISiKMedicationStatementReplaces.json        Extensi
 StructureDefinition-ExtensionISiKMedikationsart.json                     ExtensionISiKMedikationsart                     Extension   ExtensionISiKMedikationsart.fsh                     1 - 15
 StructureDefinition-ExtensionISiKSelbstmedikation.json                   ExtensionISiKSelbstmedikation                   Extension   ExtensionISiKSelbstmedikation.fsh                   1 - 10
 StructureDefinition-ISiKAMTSBewertung.json                               ISiKAMTSBewertung                               Profile     ISiKAMTSBewertung.fsh                               1 - 66
-StructureDefinition-ISiKASKCoding.json                                   ISiKASKCoding                                   Profile     ISiKDataTypeProfiles.fsh                            50 - 57
-StructureDefinition-ISiKATCCoding.json                                   ISiKATCCoding                                   Profile     ISiKDataTypeProfiles.fsh                            59 - 66
-StructureDefinition-ISiKCoding.json                                      ISiKCoding                                      Profile     ISiKDataTypeProfiles.fsh                            4 - 11
-StructureDefinition-ISiKICD10GMCoding.json                               ISiKICD10GMCoding                               Profile     ISiKDataTypeProfiles.fsh                            40 - 48
-StructureDefinition-ISiKLoincCoding.json                                 ISiKLoincCoding                                 Profile     ISiKDataTypeProfiles.fsh                            21 - 27
 StructureDefinition-ISiKMedikament.json                                  ISiKMedikament                                  Profile     ISiKMedikament.fsh                                  1 - 116
 StructureDefinition-ISiKMedikationTransaction.json                       ISiKMedikationTransaction                       Profile     ISiKMedikationTransaction.fsh                       1 - 25
 StructureDefinition-ISiKMedikationTransactionResponse.json               ISiKMedikationTransactionResponse               Profile     ISiKMedikationTransactionResponse.fsh               1 - 27
@@ -54,8 +49,5 @@ StructureDefinition-ISiKMedikationsInformation.json                      ISiKMed
 StructureDefinition-ISiKMedikationsListe.json                            ISiKMedikationsListe                            Profile     ISiKMedikationsListe.fsh                            1 - 45
 StructureDefinition-ISiKMedikationsVerabreichung.json                    ISiKMedikationsVerabreichung                    Profile     ISiKMedikationsVerabreichung.fsh                    1 - 113
 StructureDefinition-ISiKMedikationsVerordnung.json                       ISiKMedikationsVerordnung                       Profile     ISiKMedikationsVerordnung.fsh                       1 - 260
-StructureDefinition-ISiKPZNCoding.json                                   ISiKPZNCoding                                   Profile     ISiKDataTypeProfiles.fsh                            68 - 75
-StructureDefinition-ISiKSnomedCTCoding.json                              ISiKSnomedCTCoding                              Profile     ISiKDataTypeProfiles.fsh                            13 - 19
-StructureDefinition-ISiKWG14Coding.json                                  ISiKWG14Coding                                  Profile     ISiKDataTypeProfiles.fsh                            29 - 34
 ValueSet-ISiKMedikationsartVS.json                                       ISiKMedikationsart                              ValueSet    valueSets.fsh                                       7 - 11
 ValueSet-SctRouteOfAdministration.json                                   SctRouteOfAdministration                        ValueSet    valueSets.fsh                                       1 - 5

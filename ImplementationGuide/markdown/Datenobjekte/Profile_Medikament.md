@@ -87,7 +87,7 @@ Die dort angesprochene Lösung kann gegebenenfalls auch auf den stationären Sek
 
 **Relevanter Passus:** Soweit die Übermittlung der Chargenbezeichnung beim „Stellen“ von Arzneimitteln technisch nicht möglich ist, wird bis zur Schaffung entsprechender technischer Möglichkeiten analog § 312 Absatz 1 Nummer 3 SGB V ausnahmsweise bis zum 30. Juni 2025 von der Verpflichtung zur Chargendokumentation abgesehen.
 Anstelle der tatsächlichen Chargenbezeichnungen ist „STELLEN“ in das entsprechende Datenfeld einzutragen.
-Dabei sind die Abrechnungs- und rahmenvertraglichen Regelungen im Übrigen einzuhalten, insbesondere ist sicherzustellen, dass die in Anlage 9 § 2 Satz 1 des Rahmenvertrages nach § 129 Absatz 2 SGB V beschriebenen Mitwirkungspflichten auf Nachfrage erfüllt werden. Siehe auch, [Ergänzung in der Anlage 1 zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Abs. 3 SGB V](https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/apotheken/technische_anlagen_aktuell/FAQ-Liste_TA7-V004_001_20231127.pdf) in der FAQ-Liste zur TA7. 
+Dabei sind die Abrechnungs- und rahmenvertraglichen Regelungen im Übrigen einzuhalten, insbesondere ist sicherzustellen, dass die in Anlage 9 § 2 Satz 1 des Rahmenvertrages nach § 129 Absatz 2 SGB V beschriebenen Mitwirkungspflichten auf Nachfrage erfüllt werden. Siehe auch, [Ergänzung in der Anlage 1 zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Abs. 3 SGB V](https://www.gkv-datenaustausch.de/media/dokumente/leistungserbringer_1/apotheken/technische_anlagen_aktuell/FAQ-Liste_TA7-V004_001_20231127.pdf) in der FAQ-Liste zur TA7.
 
 ### Interaktionen
 
@@ -161,7 +161,7 @@ Informationen und Beispiele zur Suche nach verketteten Parametern finden sich [i
 
 Die verketteten Suchparameter des Profils ```Medication``` hängen wie folgt mit den festgelegten {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Anwendungsfällen (Use Cases)}}  zusammen:
 
-1. Der verkettete Suchparameter ```Ingredient:code``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```ingredient.code``` unterstützt den Anwendungsfall:
 
     Um eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Wechselwirkung}} zwischen Medikamenten auf Basis des Wirkstoffes zu vermeiden.
 

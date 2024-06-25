@@ -106,8 +106,8 @@ Informationen und Beispiele zur Suche nach verketteten Parametern finden sich [i
 
 Die verketteten Suchparameter des Profils ```List``` hängen wie folgt mit den festgelegten {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Anwendungsfällen (Use Cases)}}  zusammen:
 
-1. Der verkettete Suchparameter ```Patient:identifier``` unterstützt den Anwendungsfall:
-    
+1. Der verkettete Suchparameter ```patient.identifier``` unterstützt den Anwendungsfall:
+
     Um bei der Medikationsliste eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
 
     Beispiele:
@@ -116,7 +116,7 @@ Die verketteten Suchparameter des Profils ```List``` hängen wie folgt mit den f
 
     ```GET [base]/List?patient.identifier=1032702```
 
-1. Der verkettete Suchparameter ```Encounter:identifier``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```encounter.identifier``` unterstützt den Anwendungsfall:
 
     Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Medikation zu vermeiden.
 

@@ -106,17 +106,17 @@ Informationen und Beispiele zur Suche nach verketteten Parametern finden sich [i
 
 Die verketteten Suchparameter des Profils ```RiskAssessment``` hängen wie folgt mit den festgelegten {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Anwendungsfällen (Use Cases)}}  zusammen:
 
-1. Der verkettete Suchparameter ```Patient:identifier``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```patient.identifier``` unterstützt den Anwendungsfall:
 
     Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} der Risikobewertung und damit eine falsche Schlussfolgerung zur Medikation zu vermeiden.
 
     Beispiele:  
-    
+
     ```GET [base]/RiskAssessment?patient.identifier=http://mein-krankenhaus.example/fhir/sid/patienten|1032702```   
-    
+
     ```GET [base]/RiskAssessment?patient.identifier=1032702```
 
-1. Der verkettete Suchparameter ```Encounter:identifier``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```encounter.identifier``` unterstützt den Anwendungsfall:
 
     Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Schlussfolgerung zur Medikation zu vermeiden.
 
@@ -126,8 +126,8 @@ Die verketteten Suchparameter des Profils ```RiskAssessment``` hängen wie folgt
 
     ```GET [base]/RiskAssessment?encounter.identifier=7567867```
 
-1. Der verkettete Suchparameter ```Condition:code``` unterstützt den Anwendungsfall:
-    
+1. Der verkettete Suchparameter ```condition.code``` unterstützt den Anwendungsfall:
+
     Um für die Risikobewertung eines Patienten {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:eindeutig}} alle relevanten Diagnosen zu finden und eine falsche Schlussfolgerung zur der speziell vorliegenden Diagnose zu vermeiden.
 
     Beispiele:

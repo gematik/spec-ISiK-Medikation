@@ -344,46 +344,6 @@
     "endLine": 66
   },
   {
-    "outputFile": "StructureDefinition-ISiKASKCoding.json",
-    "fshName": "ISiKASKCoding",
-    "fshType": "Profile",
-    "fshFile": "ISiKDataTypeProfiles.fsh",
-    "startLine": 50,
-    "endLine": 57
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKATCCoding.json",
-    "fshName": "ISiKATCCoding",
-    "fshType": "Profile",
-    "fshFile": "ISiKDataTypeProfiles.fsh",
-    "startLine": 59,
-    "endLine": 66
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKCoding.json",
-    "fshName": "ISiKCoding",
-    "fshType": "Profile",
-    "fshFile": "ISiKDataTypeProfiles.fsh",
-    "startLine": 4,
-    "endLine": 11
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKICD10GMCoding.json",
-    "fshName": "ISiKICD10GMCoding",
-    "fshType": "Profile",
-    "fshFile": "ISiKDataTypeProfiles.fsh",
-    "startLine": 40,
-    "endLine": 48
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKLoincCoding.json",
-    "fshName": "ISiKLoincCoding",
-    "fshType": "Profile",
-    "fshFile": "ISiKDataTypeProfiles.fsh",
-    "startLine": 21,
-    "endLine": 27
-  },
-  {
     "outputFile": "StructureDefinition-ISiKMedikament.json",
     "fshName": "ISiKMedikament",
     "fshType": "Profile",
@@ -438,30 +398,6 @@
     "fshFile": "ISiKMedikationsVerordnung.fsh",
     "startLine": 1,
     "endLine": 260
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKPZNCoding.json",
-    "fshName": "ISiKPZNCoding",
-    "fshType": "Profile",
-    "fshFile": "ISiKDataTypeProfiles.fsh",
-    "startLine": 68,
-    "endLine": 75
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKSnomedCTCoding.json",
-    "fshName": "ISiKSnomedCTCoding",
-    "fshType": "Profile",
-    "fshFile": "ISiKDataTypeProfiles.fsh",
-    "startLine": 13,
-    "endLine": 19
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKWG14Coding.json",
-    "fshName": "ISiKWG14Coding",
-    "fshType": "Profile",
-    "fshFile": "ISiKDataTypeProfiles.fsh",
-    "startLine": 29,
-    "endLine": 34
   },
   {
     "outputFile": "ValueSet-ISiKMedikationsartVS.json",

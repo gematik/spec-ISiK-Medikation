@@ -159,8 +159,8 @@ Informationen und Beispiele zur Suche nach verketteten Parametern finden sich [i
 
 Die verketteten Suchparameter des Profils ```MedicationStatement``` hängen wie folgt mit den festgelegten {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Anwendungsfällen (Use Cases)}}  zusammen:
 
-1. Der verkettete Suchparameter ```Patient:identifier``` unterstützt den Anwendungsfall:
-    
+1. Der verkettete Suchparameter ```patient.identifier``` unterstützt den Anwendungsfall:
+
     Um bei den Informationen zur Medikation eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
 
     Beispiele:
@@ -169,7 +169,7 @@ Die verketteten Suchparameter des Profils ```MedicationStatement``` hängen wie 
 
     ```GET [base]/MedicationStatement?patient.identifier=1032702```
 
-1. Der verkettete Suchparameter ```Medication:code``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```medication.code``` unterstützt den Anwendungsfall:
 
     Um eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Wechselwirkung}} zwischen Medikamenten auf Basis des Wirkstoffes zu vermeiden.
 
@@ -177,7 +177,7 @@ Die verketteten Suchparameter des Profils ```MedicationStatement``` hängen wie 
 
     ```GET [base]/MedicationStatement?medication.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
 
-1. Der verkettete Suchparameter ```Context:identifier``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```context.identifier``` unterstützt den Anwendungsfall:
 
     Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Medikation zu vermeiden.
 

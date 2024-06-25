@@ -149,7 +149,7 @@ Informationen und Beispiele zur Suche nach verketteten Parametern finden sich [i
 
 Die verketteten Suchparameter des Profils ```MedicationRequest``` hängen wie folgt mit den festgelegten {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Anwendungsfällen (Use Cases)}}  zusammen:
 
-1. Der verkettete Suchparameter ```Encounter:identifier``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```encounter.identifier``` unterstützt den Anwendungsfall:
 
     Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Verordnung zu vermeiden.
 
@@ -159,7 +159,7 @@ Die verketteten Suchparameter des Profils ```MedicationRequest``` hängen wie fo
 
     ```GET [base]/MedicationRequest?encounter.identifier=7567867```
 
-1. Der verkettete Suchparameter ```Medication:code``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```medication.code``` unterstützt den Anwendungsfall:
 
     Um eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Wechselwirkung}} bei der Verordnung auf Basis des Wirkstoffes zu vermeiden.
 
@@ -167,7 +167,7 @@ Die verketteten Suchparameter des Profils ```MedicationRequest``` hängen wie fo
 
     ```GET [base]/MedicationRequest?medication.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
 
-1. Der verkettete Suchparameter ```Patient:identifier``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```patient.identifier``` unterstützt den Anwendungsfall:
 
     Um bei der Verordnung einer Medikation eine {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
 
@@ -177,7 +177,7 @@ Die verketteten Suchparameter des Profils ```MedicationRequest``` hängen wie fo
 
     ```GET [base]/MedicationRequest?patient.identifier=1032702```
 
-1. Der verkettete Suchparameter ```Requester:identifier``` unterstützt den Anwendungsfall:
+1. Der verkettete Suchparameter ```requester.identifier``` unterstützt den Anwendungsfall:
 
     Um mich als Heilberufler über die {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Historie}} meiner Medikationsverordnungen zur informieren.
     <!-- Use Case Zusammenhang: Um bei der Veordnungsanfrage die notwendige {{pagelink:ImplementationGuide/markdown/UseCasesAnwendung/UseCases.md, text:Expertise}} eines entsprechend spezialisierten Facharztes (z.B. Onkologie) zu gewährleisten. -->
