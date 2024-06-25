@@ -3,8 +3,6 @@ Parent: MedicationAdministration
 Id: ISiKMedikationsVerabreichung
 Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien."
 * insert Meta
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
 * status MS
   * ^short = "Status der Verabreichungsinformation"
 * medicationCodeableConcept MS
@@ -92,6 +90,7 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * code 1..1 MS
   * rateRatio MS
     * ^short = "Verabreichungs-Rate (Verhältnis)"
+    * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden können. Beim Empfang und Verarbeitung der eingehenden Daten müssen dagegen beide Datentypen interpretiert werden können."
     * numerator MS
       * ^patternQuantity.system = $cs-ucum
       * value 1..1 MS
@@ -106,6 +105,7 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
       * code 1..1 MS
   * rateQuantity MS
     * ^short = "Verabreichungs-Rate"
+    * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden können. Beim Empfang und Verarbeitung der eingehenden Daten müssen dagegen beide Datentypen interpretiert werden können."
     * ^patternQuantity.system = $cs-ucum
     * value 1..1 MS
     * unit MS
@@ -141,3 +141,59 @@ Usage: #example
     * unit = "Infusionsbeutel"
     * system = $cs-ucum
     * code = #1
+
+Instance: ExampleISiKMedikationsVerabreichung3
+InstanceOf: ISiKMedikationsVerabreichung
+Usage: #example
+* status = #completed
+* medicationReference = Reference(Medication-Read-Example)
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* context.identifier.value = "0123456789"
+* effectiveDateTime = 2021-07-01
+* note.text = "Testnotiz"
+* dosage
+  * text = "1L Infusion mit Rate 50ml/h"
+  * site = $cs-sct#6073002 "Structure of ligament of left superior vena cava"
+  * dose
+    * value = 1000
+    * unit = "mL"
+    * system = $cs-ucum
+    * code = $cs-ucum#mL
+  * rateQuantity
+    * value = 50
+    * unit = "mL/h"
+    * system = $cs-ucum
+    * code = $cs-ucum#mL/h
+  * route = $cs-sct#255560000 "Intravenous"
+
+Instance: ExampleISiKMedikationsVerabreichung4
+InstanceOf: ISiKMedikationsVerabreichung
+Usage: #example
+* status = #completed
+* medicationReference = Reference(Medication-Read-Example)
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* context.identifier.value = "0123456789"
+* effectiveDateTime = 2021-07-01
+* note.text = "Testnotiz"
+* dosage
+  * text = "1L Infusion mit Rate 50ml/h"
+  * site = $cs-sct#6073002 "Structure of ligament of left superior vena cava"
+  * dose
+    * value = 1000
+    * unit = "mL"
+    * system = $cs-ucum
+    * code = $cs-ucum#mL
+  * rateRatio
+    * numerator
+      * value = 50
+      * unit = "mL"
+      * system = $cs-ucum
+      * code = $cs-ucum#mL
+    * denominator
+      * value = 1
+      * unit = "h"
+      * system = $cs-ucum
+      * code = $cs-ucum#h
+  * route = $cs-sct#255560000 "Intravenous"

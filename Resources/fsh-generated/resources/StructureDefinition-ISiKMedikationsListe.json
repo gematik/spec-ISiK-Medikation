@@ -18,12 +18,6 @@
   "differential": {
     "element": [
       {
-        "id": "List.id",
-        "path": "List.id",
-        "short": "eindeutige ID der Ressource auf dem Server",
-        "mustSupport": true
-      },
-      {
         "id": "List.status",
         "path": "List.status",
         "short": "(Aktualitäts-)Status der Liste",

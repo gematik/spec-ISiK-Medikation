@@ -3,8 +3,6 @@ Parent: MedicationRequest
 Id: ISiKMedikationsVerordnung
 Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien."
 * insert Meta
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
 * extension MS
 * extension contains
     ExtensionISiKAcceptedRisk named acceptedRisk 0..1 MS and
@@ -193,6 +191,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * code 1..1 MS
     * rateRatio MS
       * ^short = "Raten-Verhältnis"
+      * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können."
       * numerator MS
         * ^patternQuantity.system = $cs-ucum
         * value 1..1 MS
@@ -221,6 +220,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
         * code 1..1 MS
     * rateQuantity MS
       * ^short = "Rate"
+      * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können."
       * ^patternQuantity.system = $cs-ucum
       * value 1..1 MS
       * unit MS

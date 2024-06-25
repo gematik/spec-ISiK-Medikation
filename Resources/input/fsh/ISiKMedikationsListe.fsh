@@ -3,8 +3,6 @@ Parent: List
 Id: ISiKMedikationsListe
 Description: "Dieses Profil ermöglicht die Zusammenführung einzelner MedikationsInformationen eines Patienten in ISiK Szenarien."
 * insert Meta
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
 * status MS
   * ^short = "(Aktualitäts-)Status der Liste"
 * mode MS
