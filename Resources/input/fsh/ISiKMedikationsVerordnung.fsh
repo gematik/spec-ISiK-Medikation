@@ -179,6 +179,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * ^short = "Dosis"
     * rateRatio MS
       * ^short = "Raten-Verhältnis"
+      * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können."
       * numerator 1.. MS
       * numerator only MedicationQuantity
       * denominator 1.. MS
@@ -192,6 +193,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
     * rateQuantity MS
     * rateQuantity only MedicationQuantity
       * ^short = "Rate"
+      * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können."
   * maxDosePerPeriod MS
     * ^short = "Maximaldosis (Zähler) pro Zeitraum (Nenner)"
     * numerator 1.. MS

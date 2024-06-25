@@ -85,6 +85,7 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * ^short = "verabreichte Dosis"
   * rateRatio MS
     * ^short = "Verabreichungs-Rate (Verhältnis)"
+    * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden können. Beim Empfang und Verarbeitung der eingehenden Daten müssen dagegen beide Datentypen interpretiert werden können."
     * numerator 1.. MS
     * numerator only MedicationQuantity
     * denominator 1.. MS
@@ -92,6 +93,7 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
   * rateQuantity MS
   * rateQuantity only MedicationQuantity
     * ^short = "Verabreichungs-Rate"
+    * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden können. Beim Empfang und Verarbeitung der eingehenden Daten müssen dagegen beide Datentypen interpretiert werden können."
 
 Instance: ExampleISiKMedikationsVerabreichung
 InstanceOf: ISiKMedikationsVerabreichung
@@ -122,3 +124,59 @@ Usage: #example
     * unit = "Beutel"
     * system = $cs-ucum
     * code = #1
+
+Instance: ExampleISiKMedikationsVerabreichung3
+InstanceOf: ISiKMedikationsVerabreichung
+Usage: #example
+* status = #completed
+* medicationReference = Reference(Medication-Read-Example)
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* context.identifier.value = "0123456789"
+* effectiveDateTime = 2021-07-01
+* note.text = "Testnotiz"
+* dosage
+  * text = "1L Infusion mit Rate 50ml/h"
+  * site = $cs-sct#6073002 "Structure of ligament of left superior vena cava"
+  * dose
+    * value = 1000
+    * unit = "mL"
+    * system = $cs-ucum
+    * code = $cs-ucum#mL
+  * rateQuantity
+    * value = 50
+    * unit = "mL/h"
+    * system = $cs-ucum
+    * code = $cs-ucum#mL/h
+  * route = $cs-sct#255560000 "Intravenous"
+
+Instance: ExampleISiKMedikationsVerabreichung4
+InstanceOf: ISiKMedikationsVerabreichung
+Usage: #example
+* status = #completed
+* medicationReference = Reference(Medication-Read-Example)
+* subject.reference = "Patient/PatientinMusterfrau"
+* context.reference = "Encounter/Fachabteilungskontakt"
+* context.identifier.value = "0123456789"
+* effectiveDateTime = 2021-07-01
+* note.text = "Testnotiz"
+* dosage
+  * text = "1L Infusion mit Rate 50ml/h"
+  * site = $cs-sct#6073002 "Structure of ligament of left superior vena cava"
+  * dose
+    * value = 1000
+    * unit = "mL"
+    * system = $cs-ucum
+    * code = $cs-ucum#mL
+  * rateRatio
+    * numerator
+      * value = 50
+      * unit = "mL"
+      * system = $cs-ucum
+      * code = $cs-ucum#mL
+    * denominator
+      * value = 1
+      * unit = "h"
+      * system = $cs-ucum
+      * code = $cs-ucum#h
+  * route = $cs-sct#255560000 "Intravenous"
