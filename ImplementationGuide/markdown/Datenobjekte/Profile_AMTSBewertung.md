@@ -121,7 +121,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
 	Weitere Informationen zur Suche nach verketteten Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Chained Parameters"](https://hl7.org/fhir/R4/search.html#chaining).
--
+
 1. Der Suchparameter "risk" MUSS unterstützt werden:
 
     Beispiele:
