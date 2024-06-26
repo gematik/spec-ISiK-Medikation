@@ -17,8 +17,8 @@
         },
         "denominator": {
           "system": "http://unitsofmeasure.org",
+          "unit": "Tablette",
           "value": 1,
-          "unit": "St.",
           "code": "1"
         }
       },
@@ -43,8 +43,8 @@
         },
         "denominator": {
           "system": "http://unitsofmeasure.org",
+          "unit": "Tablette",
           "value": 1,
-          "unit": "St.",
           "code": "1"
         }
       },

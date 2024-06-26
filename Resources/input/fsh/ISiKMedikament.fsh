@@ -13,23 +13,16 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * coding contains
       PZN 0..1 MS and
       ATC-DE 0..1 MS and
-      WG14 0..1 MS
-  * coding[PZN]
+      SCT 0..1 MS
+    * ^comment = "Motivation: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden"
+  * coding[PZN] only ISiKPZNCoding
     * ^patternCoding.system = $cs-pzn
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
-  * coding[ATC-DE]
+  * coding[ATC-DE] only ISiKATCCoding
     * ^patternCoding.system = $cs-atc-de
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
-  * coding[WG14]
-    * ^patternCoding.system = $cs-wg14
-    * system 1..1 MS
-    * code 1..1 MS
-    * display MS
+  * coding[SCT] only ISiKSnomedCTCoding
+    * ^patternCoding.system = $cs-sct
   * text MS
+    * ^comment = "Motivation: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden"
 * status 1..1 MS
   * ^short = "Status der Medikamenteninformation"
 * manufacturer MS
@@ -45,22 +38,18 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * ^slicing.rules = #open
   * coding contains
       EDQM 0..1 MS
+    * ^comment = "Motivation: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene"    
   * coding[EDQM] from $vs-edqm-doseform (required)
   * coding[EDQM] only ISiKCoding
 * amount MS
+  * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
   * ^short = "Menge"
-  * numerator 1..1 MS
-    * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
-    * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
-  * denominator MS
-    * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
-    * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
+  * numerator 1.. MS
+    * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
+  * numerator only MedicationQuantity  
+  * denominator 1.. MS
+    * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
+  * denominator only MedicationQuantity
 * ingredient MS
   * ^short = "Informationen zu Bestandteilen (Rezeptur)"
   * extension MS
@@ -77,35 +66,27 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
         ASK 0..1 MS and
         ATC-DE 0..1 MS and
         PZN 0..1 MS and
-        WG14 0..1 MS
+        SCT 0..1 MS
     * coding[ASK] only ISiKASKCoding
       * ^patternCoding.system = $cs-ask
     * coding[ATC-DE] only ISiKATCCoding
       * ^patternCoding.system = $cs-atc-de
     * coding[PZN] only ISiKPZNCoding
       * ^patternCoding.system = $cs-pzn
-    * coding[WG14] only ISiKWG14Coding
-      * ^patternCoding.system = $cs-wg14
+    * coding[SCT] only ISiKSnomedCTCoding
+      * ^patternCoding.system = $cs-sct
     * text MS
   * itemReference MS
-    * ^short = "Bestandteil (Referenz auf ein anderes Medikament)"
     * reference 1..1 MS
+    * ^short = "Bestandteil (Referenz auf ein anderes Medikament)"
   * isActive MS
     * ^short = "handelt es sich um einen aktiven Bestandteil?"
   * strength MS
     * ^short = "Stärke"
-    * numerator 1..1 MS
-      * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
-      * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
-    * denominator MS
-      * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
-      * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+    * numerator 1.. MS
+    * numerator only MedicationQuantity
+    * denominator 1.. MS
+    * denominator only MedicationQuantity
 * batch MS
   * ^short = "Angaben zur Charge"
   * ^comment = "Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung."
@@ -183,11 +164,12 @@ Usage: #example
   * isActive = true
   * strength
     * numerator
-      * value = 1
-      * unit = "St."
+      * value = 400
+      * unit = "mg"
       * system = $cs-ucum
-      * code = #1
+      * code = #mg
     * denominator
+      * unit = "Tablette"
       * value = 1
       * system = $cs-ucum
       * code = #1
@@ -199,11 +181,12 @@ Usage: #example
   * isActive = true
   * strength
     * numerator
-      * value = 1
-      * unit = "St."
+      * value = 500
+      * unit = "mg"
       * system = $cs-ucum
-      * code = #1
+      * code = #mg
     * denominator
+      * unit = "Tablette"
       * value = 1
       * system = $cs-ucum
       * code = #1
@@ -226,8 +209,8 @@ Usage: #example
       * system = $cs-ucum
       * code = #mg
     * denominator
+      * unit = "Tablette"
       * value = 1
-      * unit = "St."
       * system = $cs-ucum
       * code = #1
 * ingredient[1]
@@ -243,8 +226,8 @@ Usage: #example
       * system = $cs-ucum
       * code = #mg
     * denominator
+      * unit = "Tablette"
       * value = 1
-      * unit = "St."
       * system = $cs-ucum
       * code = #1
 

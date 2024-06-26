@@ -105,27 +105,22 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:WG14",
+        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:SCT",
         "path": "MedicationAdministration.medication[x].coding",
-        "sliceName": "WG14",
+        "sliceName": "SCT",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Coding",
             "profile": [
-              "https://gematik.de/fhir/isik/StructureDefinition/ISiKWG14Coding"
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
             ]
           }
         ],
         "patternCoding": {
-          "system": "http://fhir.de/CodeSystem/abdata/wg14"
+          "system": "http://snomed.info/sct"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.text",
-        "path": "MedicationAdministration.medication[x].text",
         "mustSupport": true
       },
       {
@@ -407,32 +402,14 @@
         "id": "MedicationAdministration.dosage.dose",
         "path": "MedicationAdministration.dosage.dose",
         "short": "verabreichte Dosis",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.dose.value",
-        "path": "MedicationAdministration.dosage.dose.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.dose.unit",
-        "path": "MedicationAdministration.dosage.dose.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.dose.system",
-        "path": "MedicationAdministration.dosage.dose.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.dose.code",
-        "path": "MedicationAdministration.dosage.dose.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -467,63 +444,29 @@
       {
         "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator",
         "path": "MedicationAdministration.dosage.rate[x].numerator",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator.value",
-        "path": "MedicationAdministration.dosage.rate[x].numerator.value",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator.unit",
-        "path": "MedicationAdministration.dosage.rate[x].numerator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator.system",
-        "path": "MedicationAdministration.dosage.rate[x].numerator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator.code",
-        "path": "MedicationAdministration.dosage.rate[x].numerator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator",
         "path": "MedicationAdministration.dosage.rate[x].denominator",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator.value",
-        "path": "MedicationAdministration.dosage.rate[x].denominator.value",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator.unit",
-        "path": "MedicationAdministration.dosage.rate[x].denominator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator.system",
-        "path": "MedicationAdministration.dosage.rate[x].denominator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator.code",
-        "path": "MedicationAdministration.dosage.rate[x].denominator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -538,36 +481,10 @@
           {
             "code": "Quantity",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
             ]
           }
         ],
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity.value",
-        "path": "MedicationAdministration.dosage.rate[x].value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity.unit",
-        "path": "MedicationAdministration.dosage.rate[x].unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity.system",
-        "path": "MedicationAdministration.dosage.rate[x].system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity.code",
-        "path": "MedicationAdministration.dosage.rate[x].code",
-        "min": 1,
         "mustSupport": true
       }
     ]

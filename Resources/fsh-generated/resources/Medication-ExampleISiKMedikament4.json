@@ -11,12 +11,13 @@
       "strength": {
         "numerator": {
           "system": "http://unitsofmeasure.org",
-          "value": 1,
-          "unit": "St.",
-          "code": "1"
+          "value": 400,
+          "unit": "mg",
+          "code": "mg"
         },
         "denominator": {
           "system": "http://unitsofmeasure.org",
+          "unit": "Tablette",
           "value": 1,
           "code": "1"
         }
@@ -36,12 +37,13 @@
       "strength": {
         "numerator": {
           "system": "http://unitsofmeasure.org",
-          "value": 1,
-          "unit": "St.",
-          "code": "1"
+          "value": 500,
+          "unit": "mg",
+          "code": "mg"
         },
         "denominator": {
           "system": "http://unitsofmeasure.org",
+          "unit": "Tablette",
           "value": 1,
           "code": "1"
         }
