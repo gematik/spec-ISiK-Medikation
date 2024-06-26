@@ -94,6 +94,11 @@
               "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/RestApi.md",
               "title": "REST-API",
               "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/AkteureUndInteraktionen.md",
+              "title": "Akteure und Interaktionen",
+              "generation": "markdown"
             }
           ]
         },
