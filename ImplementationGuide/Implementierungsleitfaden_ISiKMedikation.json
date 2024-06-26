@@ -45,6 +45,33 @@
               "nameUrl": "ImplementationGuide/markdown/UseCases/Informationsmodell.md",
               "title": "Informationsmodell",
               "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS.md",
+              "title": "Arzneimitteltherapiesicherheit (AMTS)",
+              "generation": "markdown",
+              "page": [
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS/AMTS_Narrative.md",
+                  "title": "AMTS Einführung",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS/AMTS_Diagramme.md",
+                  "title": "Grafische Zusammenfassung",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS/AMTS_Profile.md",
+                  "title": "Profile",
+                  "generation": "markdown"
+                },
+                {
+                  "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS/AMTS_Apx_AuszugAK.md",
+                  "title": "Anhang I - Auszug ",
+                  "generation": "markdown"
+                }
+              ]
             }
           ]
         },
@@ -67,40 +94,6 @@
               "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/RestApi.md",
               "title": "REST-API",
               "generation": "markdown"
-            }
-          ]
-        },
-        {
-          "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases.md",
-          "title": "Übergreifende Use Cases",
-          "generation": "markdown",
-          "page": [
-            {
-              "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS.md",
-              "title": "Arzneimitteltherapiesicherheit (AMTS)",
-              "generation": "markdown",
-              "page": [
-                {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Narrative.md",
-                  "title": "AMTS Einführung",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Diagramme.md",
-                  "title": "Grafische Zusammenfassung",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Profile.md",
-                  "title": "Profile",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "ImplementationGuide/markdown/UebergreifendeUseCases/AMTS/AMTS_Apx_AuszugAK.md",
-                  "title": "Anhang I - Auszug ",
-                  "generation": "markdown"
-                }
-              ]
             }
           ]
         },
