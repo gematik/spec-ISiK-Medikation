@@ -83,9 +83,9 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * ^short = "handelt es sich um einen aktiven Bestandteil?"
   * strength MS
     * ^short = "Stärke"
-    * numerator 1..1 MS
+    * numerator 1.. MS
     * numerator only MedicationQuantity
-    * denominator MS
+    * denominator 1.. MS
     * denominator only MedicationQuantity
 * batch MS
   * ^short = "Angaben zur Charge"

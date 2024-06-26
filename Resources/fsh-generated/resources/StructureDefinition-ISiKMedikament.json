@@ -417,6 +417,7 @@
       {
         "id": "Medication.ingredient.strength.denominator",
         "path": "Medication.ingredient.strength.denominator",
+        "min": 1,
         "type": [
           {
             "code": "Quantity",
