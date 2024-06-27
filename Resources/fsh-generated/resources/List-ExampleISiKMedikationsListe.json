@@ -20,7 +20,7 @@
     "reference": "Patient/PatientinMusterfrau"
   },
   "encounter": {
-    "reference": "Encounter/Versorgungsstellenkontakt"
+    "reference": "Encounter/Abteilungskontakt"
   },
   "date": "2021-07-04",
   "entry": [

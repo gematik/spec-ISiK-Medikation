@@ -49,15 +49,13 @@ InstanceOf: ISiKMedikationsListe
 Usage: #example
 * status = #current
 * mode = #working
-* code.coding
-  * system = "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
-  * code = #medications
+* code.coding[medications] = http://terminology.hl7.org/CodeSystem/list-example-use-codes#medications
 * subject.reference = "Patient/PatientinMusterfrau"
-* encounter.reference = "Encounter/Versorgungsstellenkontakt"
+* encounter.reference = "Encounter/Abteilungskontakt"
 * date = 2021-07-04
-* entry[0]
+* entry[+]
   * date = 2021-07-01
   * item.reference = "MedicationStatement/ExampleISiKMedikationsInformation1"
-* entry[1]
+* entry[+]
   * date = 2021-07-04
   * item.reference = "MedicationStatement/ExampleISiKMedikationsInformation2"
