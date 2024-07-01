@@ -1,16 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsVerordnung",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Medications"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsVerordnung",
   "version": "2.0.2",
   "name": "ISiKMedikationsVerordnung",
@@ -20,33 +10,6 @@
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
-  "mapping": [
-    {
-      "identity": "workflow",
-      "uri": "http://hl7.org/fhir/workflow",
-      "name": "Workflow Pattern"
-    },
-    {
-      "identity": "script10.6",
-      "uri": "http://ncpdp.org/SCRIPT10_6",
-      "name": "Mapping to NCPDP SCRIPT 10.6"
-    },
-    {
-      "identity": "rim",
-      "uri": "http://hl7.org/v3",
-      "name": "RIM Mapping"
-    },
-    {
-      "identity": "w5",
-      "uri": "http://hl7.org/fhir/fivews",
-      "name": "FiveWs Pattern Mapping"
-    },
-    {
-      "identity": "v2",
-      "uri": "http://hl7.org/v2",
-      "name": "HL7 v2 Mapping"
-    }
-  ],
   "kind": "resource",
   "abstract": false,
   "type": "MedicationRequest",
@@ -79,8 +42,23 @@
         "max": "0"
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept",
-        "path": "MedicationRequest.medicationCodeableConcept",
+        "id": "MedicationRequest.medication[x]",
+        "path": "MedicationRequest.medication[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept",
+        "path": "MedicationRequest.medication[x]",
+        "sliceName": "medicationCodeableConcept",
         "short": "Medikament in codierter Form oder ggf. als Freitext",
         "comment": "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren.",
         "min": 0,
@@ -93,8 +71,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding",
-        "path": "MedicationRequest.medicationCodeableConcept.coding",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding",
+        "path": "MedicationRequest.medication[x].coding",
         "slicing": {
           "discriminator": [
             {
@@ -107,8 +85,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:PZN",
-        "path": "MedicationRequest.medicationCodeableConcept.coding",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:PZN",
+        "path": "MedicationRequest.medication[x].coding",
         "sliceName": "PZN",
         "min": 0,
         "max": "1",
@@ -118,25 +96,25 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:PZN.system",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.system",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:PZN.system",
+        "path": "MedicationRequest.medication[x].coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:PZN.code",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.code",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:PZN.code",
+        "path": "MedicationRequest.medication[x].coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:PZN.display",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.display",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:PZN.display",
+        "path": "MedicationRequest.medication[x].coding.display",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:ATC-DE",
-        "path": "MedicationRequest.medicationCodeableConcept.coding",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:ATC-DE",
+        "path": "MedicationRequest.medication[x].coding",
         "sliceName": "ATC-DE",
         "min": 0,
         "max": "1",
@@ -146,25 +124,25 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:ATC-DE.system",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.system",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:ATC-DE.system",
+        "path": "MedicationRequest.medication[x].coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:ATC-DE.code",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.code",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:ATC-DE.code",
+        "path": "MedicationRequest.medication[x].coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:ATC-DE.display",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.display",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:ATC-DE.display",
+        "path": "MedicationRequest.medication[x].coding.display",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:WG14",
-        "path": "MedicationRequest.medicationCodeableConcept.coding",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:WG14",
+        "path": "MedicationRequest.medication[x].coding",
         "sliceName": "WG14",
         "min": 0,
         "max": "1",
@@ -174,30 +152,31 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:WG14.system",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.system",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:WG14.system",
+        "path": "MedicationRequest.medication[x].coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:WG14.code",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.code",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:WG14.code",
+        "path": "MedicationRequest.medication[x].coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.coding:WG14.display",
-        "path": "MedicationRequest.medicationCodeableConcept.coding.display",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.coding:WG14.display",
+        "path": "MedicationRequest.medication[x].coding.display",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationCodeableConcept.text",
-        "path": "MedicationRequest.medicationCodeableConcept.text",
+        "id": "MedicationRequest.medication[x]:medicationCodeableConcept.text",
+        "path": "MedicationRequest.medication[x].text",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationReference",
-        "path": "MedicationRequest.medicationReference",
+        "id": "MedicationRequest.medication[x]:medicationReference",
+        "path": "MedicationRequest.medication[x]",
+        "sliceName": "medicationReference",
         "short": "Referenz auf das Medikament (Medication-Ressource)",
         "comment": "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen",
         "min": 0,
@@ -213,8 +192,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.medicationReference.reference",
-        "path": "MedicationRequest.medicationReference.reference",
+        "id": "MedicationRequest.medication[x]:medicationReference.reference",
+        "path": "MedicationRequest.medication[x].reference",
         "min": 1,
         "mustSupport": true
       },
@@ -316,8 +295,23 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsDuration",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+        "sliceName": "boundsDuration",
         "short": "Begrenzung der Dauer",
         "min": 0,
         "max": "1",
@@ -332,31 +326,32 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration.value",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration.value",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsDuration.value",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration.unit",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration.unit",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsDuration.unit",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration.system",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration.system",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsDuration.system",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration.code",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsDuration.code",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsDuration.code",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+        "sliceName": "boundsRange",
         "short": "Bereich für die Begrenzung",
         "min": 0,
         "max": "1",
@@ -368,70 +363,71 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.low",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].low",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low.value",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low.value",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.low.value",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].low.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low.unit",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low.unit",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.low.unit",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].low.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low.system",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low.system",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.low.system",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].low.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low.code",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.low.code",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.low.code",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].low.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.high",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].high",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high.value",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high.value",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.high.value",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].high.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high.unit",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high.unit",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.high.unit",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].high.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high.system",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high.system",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.high.system",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].high.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high.code",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsRange.high.code",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange.high.code",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].high.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]",
+        "sliceName": "boundsPeriod",
         "short": "begrenzender Zeitraum",
         "min": 0,
         "max": "1",
@@ -443,13 +439,13 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.start",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.start",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].start",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
-        "path": "MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod.end",
+        "id": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsPeriod.end",
+        "path": "MedicationRequest.dosageInstruction.timing.repeat.bounds[x].end",
         "mustSupport": true
       },
       {
@@ -537,8 +533,23 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.asNeededBoolean",
-        "path": "MedicationRequest.dosageInstruction.asNeededBoolean",
+        "id": "MedicationRequest.dosageInstruction.asNeeded[x]",
+        "path": "MedicationRequest.dosageInstruction.asNeeded[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.asNeeded[x]:asNeededBoolean",
+        "path": "MedicationRequest.dosageInstruction.asNeeded[x]",
+        "sliceName": "asNeededBoolean",
         "short": "Bedarfsmedikation",
         "min": 0,
         "max": "1",
@@ -698,8 +709,23 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "sliceName": "doseRange",
         "short": "Dosisbereich",
         "min": 0,
         "max": "1",
@@ -711,70 +737,71 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.low",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].low",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low.value",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low.value",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.low.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].low.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low.unit",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low.unit",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.low.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].low.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low.system",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low.system",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.low.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].low.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low.code",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.low.code",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.low.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].low.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.high",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].high",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high.value",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high.value",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.high.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].high.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high.unit",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high.unit",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.high.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].high.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high.system",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high.system",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.high.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].high.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high.code",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseRange.high.code",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseRange.high.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].high.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+        "sliceName": "doseQuantity",
         "short": "Dosis",
         "min": 0,
         "max": "1",
@@ -792,31 +819,46 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.value",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.value",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.unit",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.unit",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.system",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.system",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.code",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.code",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]:doseQuantity.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x].code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "sliceName": "rateRatio",
         "short": "Raten-Verhältnis",
         "min": 0,
         "max": "1",
@@ -828,70 +870,71 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.numerator",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].numerator",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.value",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.value",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.numerator.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].numerator.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.unit",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.unit",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.numerator.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].numerator.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.system",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.system",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.numerator.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].numerator.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.code",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.code",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.numerator.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].numerator.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.denominator",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].denominator",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.value",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.value",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.denominator.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].denominator.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.unit",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.unit",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.denominator.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].denominator.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.system",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.system",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.denominator.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].denominator.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.code",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.code",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRatio.denominator.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].denominator.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "sliceName": "rateRange",
         "short": "Raten-Bereich",
         "min": 0,
         "max": "1",
@@ -903,70 +946,71 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.low",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].low",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low.value",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low.value",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.low.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].low.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low.unit",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low.unit",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.low.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].low.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low.system",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low.system",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.low.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].low.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low.code",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.low.code",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.low.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].low.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.high",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].high",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high.value",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high.value",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.high.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].high.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high.unit",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high.unit",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.high.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].high.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high.system",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high.system",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.high.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].high.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high.code",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateRange.high.code",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateRange.high.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].high.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]",
+        "sliceName": "rateQuantity",
         "short": "Rate",
         "min": 0,
         "max": "1",
@@ -984,25 +1028,25 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity.value",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity.value",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity.value",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity.unit",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity.unit",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity.unit",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity.system",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity.system",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity.system",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity.code",
-        "path": "MedicationRequest.dosageInstruction.doseAndRate.rateQuantity.code",
+        "id": "MedicationRequest.dosageInstruction.doseAndRate.rate[x]:rateQuantity.code",
+        "path": "MedicationRequest.dosageInstruction.doseAndRate.rate[x].code",
         "min": 1,
         "mustSupport": true
       },
@@ -1150,8 +1194,23 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.substitution.allowedBoolean",
-        "path": "MedicationRequest.substitution.allowedBoolean",
+        "id": "MedicationRequest.substitution.allowed[x]",
+        "path": "MedicationRequest.substitution.allowed[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "MedicationRequest.substitution.allowed[x]:allowedBoolean",
+        "path": "MedicationRequest.substitution.allowed[x]",
+        "sliceName": "allowedBoolean",
         "min": 0,
         "max": "1",
         "type": [
