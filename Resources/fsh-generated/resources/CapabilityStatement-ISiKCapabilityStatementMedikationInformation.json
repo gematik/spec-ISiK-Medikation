@@ -4,11 +4,11 @@
   "url": "https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/information",
   "status": "active",
   "experimental": false,
-  "version": "3.0.2",
+  "version": "3.0.3",
   "publisher": "gematik GmbH",
-  "date": "2024-05-08",
+  "date": "2024-07-03",
   "implementationGuide": [
-    "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.2"
+    "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.3"
   ],
   "name": "ISiKCapabilityStatementMedikationInformation",
   "title": "ISiK CapabilityStatement Medikation Server - Medikationsinformation",
