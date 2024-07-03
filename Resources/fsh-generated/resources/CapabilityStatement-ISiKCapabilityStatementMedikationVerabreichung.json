@@ -4,11 +4,11 @@
   "url": "https://gematik.de/fhir/isik/v2/Medikation/CapabilityStatement/medikation-server/verabreichung",
   "status": "active",
   "experimental": false,
-  "version": "2.0.2",
+  "version": "2.0.3",
   "publisher": "gematik GmbH",
-  "date": "2023-01-31",
+  "date": "2024-07-03",
   "implementationGuide": [
-    "https://gematik.de/fhir/isik/v2/Medikation/ImplementationGuide|2.0.2"
+    "https://gematik.de/fhir/isik/v2/Medikation/ImplementationGuide|2.0.3"
   ],
   "name": "ISiKCapabilityStatementMedikationVerabreichung",
   "title": "ISiK CapabilityStatement Medikation Server - Medikationsverabreichung",
