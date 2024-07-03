@@ -24,12 +24,6 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement.partOf",
-        "path": "MedicationStatement.partOf",
-        "short": "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist",
-        "mustSupport": true
-      },
-      {
         "id": "MedicationStatement.status",
         "path": "MedicationStatement.status",
         "short": "Status der Medikationsinformation",
