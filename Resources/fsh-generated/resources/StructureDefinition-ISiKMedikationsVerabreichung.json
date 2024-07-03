@@ -1,6 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsVerabreichung",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Medications"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
   "url": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsVerabreichung",
   "version": "2.0.2",
   "name": "ISiKMedikationsVerabreichung",
@@ -10,6 +20,33 @@
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "w3c.prov",
+      "uri": "http://www.w3.org/ns/prov",
+      "name": "W3C PROV"
+    }
+  ],
   "kind": "resource",
   "abstract": false,
   "type": "MedicationAdministration",
@@ -30,23 +67,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]",
-        "path": "MedicationAdministration.medication[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept",
-        "path": "MedicationAdministration.medication[x]",
-        "sliceName": "medicationCodeableConcept",
+        "id": "MedicationAdministration.medicationCodeableConcept",
+        "path": "MedicationAdministration.medicationCodeableConcept",
         "short": "Medikament in codierter Form oder ggf. als Freitext",
         "comment": "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren.",
         "min": 0,
@@ -59,8 +81,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding",
-        "path": "MedicationAdministration.medication[x].coding",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding",
         "slicing": {
           "discriminator": [
             {
@@ -73,8 +95,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:PZN",
-        "path": "MedicationAdministration.medication[x].coding",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding",
         "sliceName": "PZN",
         "min": 0,
         "max": "1",
@@ -84,25 +106,25 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:PZN.system",
-        "path": "MedicationAdministration.medication[x].coding.system",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN.system",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:PZN.code",
-        "path": "MedicationAdministration.medication[x].coding.code",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN.code",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:PZN.display",
-        "path": "MedicationAdministration.medication[x].coding.display",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:PZN.display",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.display",
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:ATC-DE",
-        "path": "MedicationAdministration.medication[x].coding",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding",
         "sliceName": "ATC-DE",
         "min": 0,
         "max": "1",
@@ -112,25 +134,25 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:ATC-DE.system",
-        "path": "MedicationAdministration.medication[x].coding.system",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE.system",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:ATC-DE.code",
-        "path": "MedicationAdministration.medication[x].coding.code",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE.code",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:ATC-DE.display",
-        "path": "MedicationAdministration.medication[x].coding.display",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:ATC-DE.display",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.display",
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:WG14",
-        "path": "MedicationAdministration.medication[x].coding",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:WG14",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding",
         "sliceName": "WG14",
         "min": 0,
         "max": "1",
@@ -140,31 +162,30 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:WG14.system",
-        "path": "MedicationAdministration.medication[x].coding.system",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:WG14.system",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:WG14.code",
-        "path": "MedicationAdministration.medication[x].coding.code",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:WG14.code",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.coding:WG14.display",
-        "path": "MedicationAdministration.medication[x].coding.display",
+        "id": "MedicationAdministration.medicationCodeableConcept.coding:WG14.display",
+        "path": "MedicationAdministration.medicationCodeableConcept.coding.display",
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationCodeableConcept.text",
-        "path": "MedicationAdministration.medication[x].text",
+        "id": "MedicationAdministration.medicationCodeableConcept.text",
+        "path": "MedicationAdministration.medicationCodeableConcept.text",
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationReference",
-        "path": "MedicationAdministration.medication[x]",
-        "sliceName": "medicationReference",
+        "id": "MedicationAdministration.medicationReference",
+        "path": "MedicationAdministration.medicationReference",
         "short": "Referenz auf das Medikament (Medication-Ressource)",
         "comment": "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen",
         "min": 0,
@@ -180,8 +201,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.medication[x]:medicationReference.reference",
-        "path": "MedicationAdministration.medication[x].reference",
+        "id": "MedicationAdministration.medicationReference.reference",
+        "path": "MedicationAdministration.medicationReference.reference",
         "min": 1,
         "mustSupport": true
       },
@@ -218,23 +239,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.effective[x]",
-        "path": "MedicationAdministration.effective[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "MedicationAdministration.effective[x]:effectiveDateTime",
-        "path": "MedicationAdministration.effective[x]",
-        "sliceName": "effectiveDateTime",
+        "id": "MedicationAdministration.effectiveDateTime",
+        "path": "MedicationAdministration.effectiveDateTime",
         "short": "Zeitpunkt der Verabreichung",
         "min": 0,
         "max": "1",
@@ -246,9 +252,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.effective[x]:effectivePeriod",
-        "path": "MedicationAdministration.effective[x]",
-        "sliceName": "effectivePeriod",
+        "id": "MedicationAdministration.effectivePeriod",
+        "path": "MedicationAdministration.effectivePeriod",
         "short": "Zeitraum der Verabreichung",
         "min": 0,
         "max": "1",
@@ -260,13 +265,13 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.effective[x]:effectivePeriod.start",
-        "path": "MedicationAdministration.effective[x].start",
+        "id": "MedicationAdministration.effectivePeriod.start",
+        "path": "MedicationAdministration.effectivePeriod.start",
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.effective[x]:effectivePeriod.end",
-        "path": "MedicationAdministration.effective[x].end",
+        "id": "MedicationAdministration.effectivePeriod.end",
+        "path": "MedicationAdministration.effectivePeriod.end",
         "mustSupport": true
       },
       {
@@ -496,23 +501,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]",
-        "path": "MedicationAdministration.dosage.rate[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio",
-        "path": "MedicationAdministration.dosage.rate[x]",
-        "sliceName": "rateRatio",
+        "id": "MedicationAdministration.dosage.rateRatio",
+        "path": "MedicationAdministration.dosage.rateRatio",
         "short": "Verabreichungs-Rate (Verhältnis)",
         "min": 0,
         "max": "1",
@@ -524,71 +514,70 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator",
-        "path": "MedicationAdministration.dosage.rate[x].numerator",
+        "id": "MedicationAdministration.dosage.rateRatio.numerator",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator.value",
-        "path": "MedicationAdministration.dosage.rate[x].numerator.value",
+        "id": "MedicationAdministration.dosage.rateRatio.numerator.value",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator.unit",
-        "path": "MedicationAdministration.dosage.rate[x].numerator.unit",
+        "id": "MedicationAdministration.dosage.rateRatio.numerator.unit",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator.system",
-        "path": "MedicationAdministration.dosage.rate[x].numerator.system",
+        "id": "MedicationAdministration.dosage.rateRatio.numerator.system",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.numerator.code",
-        "path": "MedicationAdministration.dosage.rate[x].numerator.code",
+        "id": "MedicationAdministration.dosage.rateRatio.numerator.code",
+        "path": "MedicationAdministration.dosage.rateRatio.numerator.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator",
-        "path": "MedicationAdministration.dosage.rate[x].denominator",
+        "id": "MedicationAdministration.dosage.rateRatio.denominator",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator",
         "patternQuantity": {
           "system": "http://unitsofmeasure.org"
         },
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator.value",
-        "path": "MedicationAdministration.dosage.rate[x].denominator.value",
+        "id": "MedicationAdministration.dosage.rateRatio.denominator.value",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator.unit",
-        "path": "MedicationAdministration.dosage.rate[x].denominator.unit",
+        "id": "MedicationAdministration.dosage.rateRatio.denominator.unit",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator.system",
-        "path": "MedicationAdministration.dosage.rate[x].denominator.system",
+        "id": "MedicationAdministration.dosage.rateRatio.denominator.system",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateRatio.denominator.code",
-        "path": "MedicationAdministration.dosage.rate[x].denominator.code",
+        "id": "MedicationAdministration.dosage.rateRatio.denominator.code",
+        "path": "MedicationAdministration.dosage.rateRatio.denominator.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity",
-        "path": "MedicationAdministration.dosage.rate[x]",
-        "sliceName": "rateQuantity",
+        "id": "MedicationAdministration.dosage.rateQuantity",
+        "path": "MedicationAdministration.dosage.rateQuantity",
         "short": "Verabreichungs-Rate",
         "min": 0,
         "max": "1",
@@ -606,25 +595,25 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity.value",
-        "path": "MedicationAdministration.dosage.rate[x].value",
+        "id": "MedicationAdministration.dosage.rateQuantity.value",
+        "path": "MedicationAdministration.dosage.rateQuantity.value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity.unit",
-        "path": "MedicationAdministration.dosage.rate[x].unit",
+        "id": "MedicationAdministration.dosage.rateQuantity.unit",
+        "path": "MedicationAdministration.dosage.rateQuantity.unit",
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity.system",
-        "path": "MedicationAdministration.dosage.rate[x].system",
+        "id": "MedicationAdministration.dosage.rateQuantity.system",
+        "path": "MedicationAdministration.dosage.rateQuantity.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "MedicationAdministration.dosage.rate[x]:rateQuantity.code",
-        "path": "MedicationAdministration.dosage.rate[x].code",
+        "id": "MedicationAdministration.dosage.rateQuantity.code",
+        "path": "MedicationAdministration.dosage.rateQuantity.code",
         "min": 1,
         "mustSupport": true
       }
