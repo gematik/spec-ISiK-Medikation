@@ -7,7 +7,7 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 Version: 3.0.3
 
-Datum: t.b.d
+Datum: 03.07.2024
 
 * Entfernen von MS von MedicationStatement.partOf (Analog in Stufe 4.0.0-rc2) https://github.com/gematik/spec-ISiK-Medikation/pull/130
 
