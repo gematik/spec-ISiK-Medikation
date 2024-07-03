@@ -5,8 +5,6 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
 * insert Meta
 * id MS
   * ^short = "eindeutige ID der Ressource auf dem Server"
-* partOf MS
-  * ^short = "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
 * status MS
   * ^short = "Status der Medikationsinformation"
 * medication[x] MS

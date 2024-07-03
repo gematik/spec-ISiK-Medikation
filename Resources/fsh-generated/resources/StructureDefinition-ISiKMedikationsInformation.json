@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsInformation",
   "url": "https://gematik.de/fhir/isik/v2/Medikation/StructureDefinition/ISiKMedikationsInformation",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "name": "ISiKMedikationsInformation",
   "status": "active",
   "experimental": false,
-  "date": "2023-01-31",
+  "date": "2024-07-03",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -21,12 +21,6 @@
         "id": "MedicationStatement.id",
         "path": "MedicationStatement.id",
         "short": "eindeutige ID der Ressource auf dem Server",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.partOf",
-        "path": "MedicationStatement.partOf",
-        "short": "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist",
         "mustSupport": true
       },
       {
