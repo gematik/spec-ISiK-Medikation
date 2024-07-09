@@ -1,0 +1,24 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ISiKMedikationsart",
+  "id": "ISiKMedikationsartCS",
+  "description": "ISiK Therapiearten für Medikation",
+  "url": "https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsartCS",
+  "concept": [
+    {
+      "code": "akut",
+      "display": "Akutmedikation"
+    },
+    {
+      "code": "dauer",
+      "display": "Dauermedikation"
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "version": "4.0.0-rc2",
+  "date": "2024-06-26",
+  "count": 2
+}
