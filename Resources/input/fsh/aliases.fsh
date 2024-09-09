@@ -7,7 +7,6 @@ Alias: $cs-risk-probability = http://terminology.hl7.org/CodeSystem/risk-probabi
 Alias: $cs-sct = http://snomed.info/sct
 Alias: $cs-ucum = http://unitsofmeasure.org
 Alias: $cs-v3-event-timing = http://terminology.hl7.org/CodeSystem/v3-TimingEvent
-Alias: $cs-wg14 = http://fhir.de/CodeSystem/abdata/wg14
 Alias: $vs-edqm-doseform = http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform
 Alias: $vs-edqm-route = http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration
 Alias: $vs-risk-probability = http://hl7.org/fhir/ValueSet/risk-probability

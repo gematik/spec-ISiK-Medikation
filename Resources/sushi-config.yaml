@@ -2,8 +2,9 @@ canonical: https://gematik.de/fhir/isik
 fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false
-version: 4.0.0-rc
+version: 4.0.0-rc2
 dependencies:
   hl7.fhir.r4.core: 4.0.1
   de.basisprofil.r4: 1.5.0-ballot2
-  de.gematik.isik-basismodul: 4.0.0-rc2
+  de.gematik.isik-basismodul: 4.0.0-rc3
+  hl7.fhir.uv.ips: 1.1.0

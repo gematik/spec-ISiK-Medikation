@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikament",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament",
-  "version": "4.0.0-rc",
+  "version": "4.0.0-rc2",
   "name": "ISiKMedikament",
   "title": "ISiK Medikament",
   "status": "draft",
   "experimental": false,
-  "date": "2024-04-04",
+  "date": "2024-06-26",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -49,6 +49,7 @@
           ],
           "rules": "open"
         },
+        "comment": "Motivation: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden",
         "mustSupport": true
       },
       {
@@ -57,26 +58,17 @@
         "sliceName": "PZN",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKPZNCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ifa/pzn"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:PZN.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:PZN.code",
-        "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:PZN.display",
-        "path": "Medication.code.coding.display",
         "mustSupport": true
       },
       {
@@ -85,59 +77,42 @@
         "sliceName": "ATC-DE",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKATCCoding"
+            ]
+          }
+        ],
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/bfarm/atc"
         },
         "mustSupport": true
       },
       {
-        "id": "Medication.code.coding:ATC-DE.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:ATC-DE.code",
-        "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:ATC-DE.display",
-        "path": "Medication.code.coding.display",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:WG14",
+        "id": "Medication.code.coding:SCT",
         "path": "Medication.code.coding",
-        "sliceName": "WG14",
+        "sliceName": "SCT",
         "min": 0,
         "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
+            ]
+          }
+        ],
         "patternCoding": {
-          "system": "http://fhir.de/CodeSystem/abdata/wg14"
+          "system": "http://snomed.info/sct"
         },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:WG14.system",
-        "path": "Medication.code.coding.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:WG14.code",
-        "path": "Medication.code.coding.code",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.code.coding:WG14.display",
-        "path": "Medication.code.coding.display",
         "mustSupport": true
       },
       {
         "id": "Medication.code.text",
         "path": "Medication.code.text",
+        "comment": "Motivation: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden",
         "mustSupport": true
       },
       {
@@ -178,6 +153,7 @@
           ],
           "rules": "open"
         },
+        "comment": "Motivation: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene",
         "mustSupport": true
       },
       {
@@ -204,69 +180,37 @@
         "id": "Medication.amount",
         "path": "Medication.amount",
         "short": "Menge",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
         "mustSupport": true
       },
       {
         "id": "Medication.amount.numerator",
         "path": "Medication.amount.numerator",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
         "min": 1,
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.value",
-        "path": "Medication.amount.numerator.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.unit",
-        "path": "Medication.amount.numerator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.system",
-        "path": "Medication.amount.numerator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.numerator.code",
-        "path": "Medication.amount.numerator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "Medication.amount.denominator",
         "path": "Medication.amount.denominator",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.denominator.value",
-        "path": "Medication.amount.denominator.value",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.denominator.unit",
-        "path": "Medication.amount.denominator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.denominator.system",
-        "path": "Medication.amount.denominator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.amount.denominator.code",
-        "path": "Medication.amount.denominator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -397,21 +341,21 @@
         "mustSupport": true
       },
       {
-        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:WG14",
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:SCT",
         "path": "Medication.ingredient.item[x].coding",
-        "sliceName": "WG14",
+        "sliceName": "SCT",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Coding",
             "profile": [
-              "https://gematik.de/fhir/isik/StructureDefinition/ISiKWG14Coding"
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
             ]
           }
         ],
         "patternCoding": {
-          "system": "http://fhir.de/CodeSystem/abdata/wg14"
+          "system": "http://snomed.info/sct"
         },
         "mustSupport": true
       },
@@ -460,63 +404,28 @@
         "id": "Medication.ingredient.strength.numerator",
         "path": "Medication.ingredient.strength.numerator",
         "min": 1,
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.value",
-        "path": "Medication.ingredient.strength.numerator.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.unit",
-        "path": "Medication.ingredient.strength.numerator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.system",
-        "path": "Medication.ingredient.strength.numerator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.numerator.code",
-        "path": "Medication.ingredient.strength.numerator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "Medication.ingredient.strength.denominator",
         "path": "Medication.ingredient.strength.denominator",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.value",
-        "path": "Medication.ingredient.strength.denominator.value",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.unit",
-        "path": "Medication.ingredient.strength.denominator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.system",
-        "path": "Medication.ingredient.strength.denominator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Medication.ingredient.strength.denominator.code",
-        "path": "Medication.ingredient.strength.denominator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {

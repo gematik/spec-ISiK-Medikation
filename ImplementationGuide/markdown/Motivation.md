@@ -11,7 +11,3 @@ Das ISiK-Modul "Medikation" möchte diese Daten-Integration ermöglichen und ste
 Diese Spezifikation lehnt sich an die entsprechenden Teile des IHE-Profils HMW (Hospital Medication Workflow) sowie partiell auch an das IHE-Profil CMPD (Community Medication Prescription and Dispense) an. Weiterhin erfolgte ein Abgleich mit den aktuell in Deutschland bestehenden Spezifikationen im Bereich Medikation.
 
 Der Fokus dieser Spezifikation liegt auf den Festlegungen zum Datenaustausch innerhalb einer Einrichtung, jedoch ist diese offen in dem Sinn, dass auch eine Nutzung in anderen Kontexten möglich ist.
-
-# Grafische Zusammenfassung des Implementation Guides
-
-{{index:current}}

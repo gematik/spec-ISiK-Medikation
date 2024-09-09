@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsInformation",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsInformation",
-  "version": "4.0.0-rc",
+  "version": "4.0.0-rc2",
   "name": "ISiKMedikationsInformation",
   "title": "ISiK Medikationsinformation",
   "status": "draft",
   "experimental": false,
-  "date": "2024-04-04",
+  "date": "2024-06-26",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -151,8 +151,7 @@
       {
         "id": "MedicationStatement.partOf",
         "path": "MedicationStatement.partOf",
-        "short": "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist",
-        "mustSupport": true
+        "short": "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
       },
       {
         "id": "MedicationStatement.status",
@@ -243,21 +242,21 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:WG14",
+        "id": "MedicationStatement.medication[x]:medicationCodeableConcept.coding:SCT",
         "path": "MedicationStatement.medication[x].coding",
-        "sliceName": "WG14",
+        "sliceName": "SCT",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Coding",
             "profile": [
-              "https://gematik.de/fhir/isik/StructureDefinition/ISiKWG14Coding"
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
             ]
           }
         ],
         "patternCoding": {
-          "system": "http://fhir.de/CodeSystem/abdata/wg14"
+          "system": "http://snomed.info/sct"
         },
         "mustSupport": true
       },
@@ -893,63 +892,27 @@
       {
         "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.low",
         "path": "MedicationStatement.dosage.doseAndRate.dose[x].low",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.low.value",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].low.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.low.unit",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].low.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.low.system",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].low.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.low.code",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].low.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.high",
         "path": "MedicationStatement.dosage.doseAndRate.dose[x].high",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.high.value",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].high.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.high.unit",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].high.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.high.system",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].high.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseRange.high.code",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].high.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -963,36 +926,10 @@
           {
             "code": "Quantity",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
             ]
           }
         ],
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseQuantity.value",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseQuantity.unit",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseQuantity.system",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.dose[x]:doseQuantity.code",
-        "path": "MedicationStatement.dosage.doseAndRate.dose[x].code",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -1014,6 +951,7 @@
         "path": "MedicationStatement.dosage.doseAndRate.rate[x]",
         "sliceName": "rateRatio",
         "short": "Raten-Verhältnis",
+        "comment": "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden können. Beim Empfang und Verarbeitung der eingehenden Daten müssen dagegen beide Datentypen interpretiert werden können.",
         "min": 0,
         "max": "1",
         "type": [
@@ -1026,63 +964,29 @@
       {
         "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.numerator",
         "path": "MedicationStatement.dosage.doseAndRate.rate[x].numerator",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.numerator.value",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].numerator.value",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.numerator.unit",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].numerator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.numerator.system",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].numerator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.numerator.code",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].numerator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.denominator",
         "path": "MedicationStatement.dosage.doseAndRate.rate[x].denominator",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.denominator.value",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].denominator.value",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.denominator.unit",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].denominator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.denominator.system",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].denominator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRatio.denominator.code",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].denominator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -1102,63 +1006,27 @@
       {
         "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.low",
         "path": "MedicationStatement.dosage.doseAndRate.rate[x].low",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.low.value",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].low.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.low.unit",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].low.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.low.system",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].low.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.low.code",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].low.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.high",
         "path": "MedicationStatement.dosage.doseAndRate.rate[x].high",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.high.value",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].high.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.high.unit",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].high.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.high.system",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].high.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateRange.high.code",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].high.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -1166,42 +1034,17 @@
         "path": "MedicationStatement.dosage.doseAndRate.rate[x]",
         "sliceName": "rateQuantity",
         "short": "Rate",
+        "comment": "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden können. Beim Empfang und Verarbeitung der eingehenden Daten müssen dagegen beide Datentypen interpretiert werden können.",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Quantity",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
             ]
           }
         ],
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateQuantity.value",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateQuantity.unit",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateQuantity.system",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.doseAndRate.rate[x]:rateQuantity.code",
-        "path": "MedicationStatement.dosage.doseAndRate.rate[x].code",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -1213,95 +1056,41 @@
       {
         "id": "MedicationStatement.dosage.maxDosePerPeriod.numerator",
         "path": "MedicationStatement.dosage.maxDosePerPeriod.numerator",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod.numerator.value",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod.numerator.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod.numerator.unit",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod.numerator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod.numerator.system",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod.numerator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod.numerator.code",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod.numerator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "MedicationStatement.dosage.maxDosePerPeriod.denominator",
         "path": "MedicationStatement.dosage.maxDosePerPeriod.denominator",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod.denominator.value",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod.denominator.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod.denominator.unit",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod.denominator.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod.denominator.system",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod.denominator.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerPeriod.denominator.code",
-        "path": "MedicationStatement.dosage.maxDosePerPeriod.denominator.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "MedicationStatement.dosage.maxDosePerAdministration",
         "path": "MedicationStatement.dosage.maxDosePerAdministration",
         "short": "Maximaldosis pro Verabreichung",
-        "patternQuantity": {
-          "system": "http://unitsofmeasure.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerAdministration.value",
-        "path": "MedicationStatement.dosage.maxDosePerAdministration.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerAdministration.unit",
-        "path": "MedicationStatement.dosage.maxDosePerAdministration.unit",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerAdministration.system",
-        "path": "MedicationStatement.dosage.maxDosePerAdministration.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationStatement.dosage.maxDosePerAdministration.code",
-        "path": "MedicationStatement.dosage.maxDosePerAdministration.code",
-        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
         "mustSupport": true
       }
     ]

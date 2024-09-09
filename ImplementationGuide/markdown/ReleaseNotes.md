@@ -4,13 +4,18 @@ Im Rahmen der ISiK-Veröffentlichungen wird das [Semantic Versioning](https://se
 
 Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von Releases. Die dritte Ziffer Y (Release x.0.y) bezeichnet eine technische Korrektur und versioniert kleinere Änderungen (Packages) während eines Jahres, z. B. 1.0.1.
 
-
 ----
-Version: 4.0.0-rc3
 
-Datum: tbd.
+Version: 4.0.0-rc2
+
+Datum: 26.6.2024
 
 - Entfernen von MS von .id der Ressourcen https://github.com/gematik/spec-ISiK-Medikation/pull/122
+- Klärung Dosis-Rate Quantity und Ratio (Beispiele, Must-Support)  https://github.com/gematik/spec-ISiK-Medikation/pull/124/files
+- Entfernen von MS von .id der Ressourcen https://github.com/gematik/spec-ISiK-Medikation/pull/122
+- Entfernen der WG14 Kodierung, Hinzufügen eines SimpleQuantity Profiles, Update der Abhängigkeit auf IPS 1.1.0, Hinzufügen eines SCT Slices zu Medikationsoprofilen, bei Medication.amount (Ratios) numerator und denominator auf 1..1 https://github.com/gematik/spec-ISiK-Medikation/pull/123
+- Entfernen von MS von MedicationStatement.partOf https://github.com/gematik/spec-ISiK-Medikation/pull/126
+
 ---
 **Release Candidate zur Kommentierung**
 
