@@ -4,16 +4,16 @@
     "fshName": "ExampleISiKMedikationTransaction",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationTransaction.fsh",
-    "startLine": 27,
-    "endLine": 42
+    "startLine": 28,
+    "endLine": 43
   },
   {
     "outputFile": "Bundle-ExampleISiKMedikationTransactionResponse.json",
     "fshName": "ExampleISiKMedikationTransactionResponse",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationTransactionResponse.fsh",
-    "startLine": 29,
-    "endLine": 44
+    "startLine": 30,
+    "endLine": 45
   },
   {
     "outputFile": "CapabilityStatement-ISiKCapabilityStatementAMTS.json",
@@ -49,11 +49,11 @@
   },
   {
     "outputFile": "CodeSystem-ISiKMedikationsartCS.json",
-    "fshName": "ISiKMedikationsart",
+    "fshName": "ISiKMedikationsartCS",
     "fshType": "CodeSystem",
     "fshFile": "codeSystems.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 7
   },
   {
     "outputFile": "Encounter-Fachabteilungskontakt.json",
@@ -68,16 +68,16 @@
     "fshName": "ExampleISiKMedikationsListe",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsListe.fsh",
-    "startLine": 45,
-    "endLine": 58
+    "startLine": 47,
+    "endLine": 60
   },
   {
     "outputFile": "List-ExampleISiKMedikationsListeParkinson.json",
     "fshName": "ExampleISiKMedikationsListeParkinson",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsListe.fsh",
-    "startLine": 60,
-    "endLine": 82
+    "startLine": 62,
+    "endLine": 84
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament1.json",
@@ -300,8 +300,8 @@
     "fshName": "ExampleISiKAMTSBewertung1",
     "fshType": "Instance",
     "fshFile": "ISiKAMTSBewertung.fsh",
-    "startLine": 67,
-    "endLine": 84
+    "startLine": 68,
+    "endLine": 85
   },
   {
     "outputFile": "StructureDefinition-ExtensionISiKAcceptedRisk.json",
@@ -357,7 +357,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKAMTSBewertung.fsh",
     "startLine": 1,
-    "endLine": 64
+    "endLine": 65
   },
   {
     "outputFile": "StructureDefinition-ISiKMedikament.json",
@@ -373,7 +373,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikationTransaction.fsh",
     "startLine": 1,
-    "endLine": 25
+    "endLine": 26
   },
   {
     "outputFile": "StructureDefinition-ISiKMedikationTransactionResponse.json",
@@ -381,7 +381,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikationTransactionResponse.fsh",
     "startLine": 1,
-    "endLine": 27
+    "endLine": 28
   },
   {
     "outputFile": "StructureDefinition-ISiKMedikationsInformation.json",
@@ -397,7 +397,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikationsListe.fsh",
     "startLine": 1,
-    "endLine": 43
+    "endLine": 45
   },
   {
     "outputFile": "StructureDefinition-ISiKMedikationsVerabreichung.json",
@@ -425,11 +425,19 @@
   },
   {
     "outputFile": "ValueSet-ISiKMedikationsartVS.json",
-    "fshName": "ISiKMedikationsart",
+    "fshName": "ISiKMedikationsartVS",
     "fshType": "ValueSet",
     "fshFile": "valueSets.fsh",
     "startLine": 7,
     "endLine": 11
+  },
+  {
+    "outputFile": "ValueSet-MedikationsListeListModeVS.json",
+    "fshName": "MedikationsListeListModeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valueSets.fsh",
+    "startLine": 13,
+    "endLine": 19
   },
   {
     "outputFile": "ValueSet-SctRouteOfAdministration.json",

@@ -227,7 +227,7 @@ Instance: ExampleISiKMedikationsInformation1
 InstanceOf: ISiKMedikationsInformation
 Usage: #example
 * extension[acceptedRisk].valueString = "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
-* extension[medikationsart].valueCoding = ISiKMedikationsart#akut
+* extension[medikationsart].valueCoding = ISiKMedikationsartCS#akut
 * extension[selbstmedikation].valueBoolean = true
 * extension[behandlungsziel].valueString = "Schmerztherapie postoperativ"
 * status = #active

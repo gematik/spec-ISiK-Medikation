@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationAMTS",
   "status": "draft",
   "experimental": false,
-  "version": "4.0.0-rc2",
+  "version": "4.0.0",
   "publisher": "gematik GmbH",
   "date": "2024-06-26",
   "implementationGuide": [

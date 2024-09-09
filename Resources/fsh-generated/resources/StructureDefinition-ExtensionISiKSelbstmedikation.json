@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ExtensionISiKSelbstmedikation",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKSelbstmedikation",
-  "version": "4.0.0-rc2",
+  "version": "4.0.0",
   "name": "ExtensionISiKSelbstmedikation",
   "title": "ISiK Selbstmedikation",
   "status": "draft",

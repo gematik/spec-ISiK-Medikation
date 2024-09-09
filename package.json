@@ -1,13 +1,13 @@
 {
   "name": "de.gematik.isik-medikation",
-  "version": "4.0.0-rc2",
+  "version": "4.0.0",
   "fhirVersions": [
     "4.0.1"
   ],
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
     "hl7.fhir.uv.ips": "1.1.0",
-    "de.basisprofil.r4": "1.5.0-ballot2",
-    "de.gematik.isik-basismodul": "4.0.0-rc3"
+    "de.basisprofil.r4": "1.5.0",
+    "de.gematik.isik-basismodul": "4.0.0"
   }
 }

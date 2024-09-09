@@ -6,9 +6,9 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 ----
 
-Version: 4.0.0-rc2
+Version: 4.0.0
 
-Datum: 26.6.2024
+Datum: 09.09.2024
 
 - Entfernen von MS von .id der Ressourcen https://github.com/gematik/spec-ISiK-Medikation/pull/122
 - Klärung Dosis-Rate Quantity und Ratio (Beispiele, Must-Support)  https://github.com/gematik/spec-ISiK-Medikation/pull/124/files

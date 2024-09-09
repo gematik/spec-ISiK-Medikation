@@ -5,4 +5,3 @@ Description: "ISiK Therapiearten für Medikation"
 * insert Meta
 * #akut "Akutmedikation"
 * #dauer "Dauermedikation"
-
