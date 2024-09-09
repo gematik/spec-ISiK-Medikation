@@ -4,6 +4,7 @@
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsInformation",
   "version": "4.0.0-rc",
   "name": "ISiKMedikationsInformation",
+  "title": "ISiK Medikationsinformation",
   "status": "draft",
   "experimental": false,
   "date": "2024-04-04",
@@ -17,11 +18,6 @@
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "MedicationStatement.extension",
-        "path": "MedicationStatement.extension",
-        "mustSupport": true
-      },
       {
         "id": "MedicationStatement.extension:acceptedRisk",
         "path": "MedicationStatement.extension",

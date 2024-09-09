@@ -1,6 +1,6 @@
 Extension: ExtensionISiKSelbstmedikation
 Id: ExtensionISiKSelbstmedikation
-Title: "ISiKSelbstmedikation"
+Title: "ISiK Selbstmedikation"
 Description: "Extension zur Angabe, ob es sich bei der Medikation um eine Selbstmedikation handelt."
 * insert Meta
 * ^experimental = false

@@ -2,8 +2,9 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "ISiKMedikationsart",
+  "name": "ISiKMedikationsartCS",
   "id": "ISiKMedikationsartCS",
+  "title": "ISiK Medikationsart",
   "description": "ISiK Therapiearten für Medikation",
   "url": "https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsartCS",
   "concept": [

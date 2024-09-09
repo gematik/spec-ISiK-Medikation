@@ -4,7 +4,7 @@ Die Verordnung, Abgabe und Verabreichung von Medikamenten stellt eine der Kernt�
 
 Eine möglichst medienbruch-freie Kommunikation innerhalb dieses Workflows zwischen Behandelnden, Apotheken und Patienten kann zur Effizienz der Behandlungsprozesse beitragen und gleichzeitig die Therapiequalität sichern und verbessern (Stichworte: interne Qualitätssicherung, Arzneimitteltherapiesicherheit, Übernahme der Daten bei Verlegung zwischen Stationen, insbesondere zwischen Normal- und Intensivstation).
 
-Dies gilt ebenso für die Dokumentation und Weiterverarbeitung der Aufnahme- bzw. Entlass-Medikation (Medikationsplan), die derzeit noch häufig in Form von manueller und somit fehleranfälliger Übertragung der Medikationsangaben umgesetzt wird.
+Dies gilt ebenso für die Dokumentation und Weiterverarbeitung der Aufnahme- bzw. Entlassmedikation (Medikationsplan), die derzeit noch häufig in Form von manueller und somit fehleranfälliger Übertragung der Medikationsangaben umgesetzt wird.
 
 Das ISiK-Modul "Medikation" möchte diese Daten-Integration ermöglichen und stellt in dieser Ausbaustufe strukturierte Kommunikationsmöglichkeiten auf Basis einer RESTful API zum Austausch von Medikationsinformationen ("Medikationsplan") sowie Verordnungs- und Verabreichungsdaten zur Verfügung. Derzeit nicht berücksichtigt ist das Apothekenwesen.
 

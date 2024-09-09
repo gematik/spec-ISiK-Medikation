@@ -4,6 +4,7 @@
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament",
   "version": "4.0.0-rc",
   "name": "ISiKMedikament",
+  "title": "ISiK Medikament",
   "status": "draft",
   "experimental": false,
   "date": "2024-04-04",
@@ -278,8 +279,7 @@
         "id": "Medication.ingredient.extension",
         "path": "Medication.ingredient.extension",
         "short": "Wirkstofftyp",
-        "comment": "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?",
-        "mustSupport": true
+        "comment": "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?"
       },
       {
         "id": "Medication.ingredient.extension:wirkstofftyp",

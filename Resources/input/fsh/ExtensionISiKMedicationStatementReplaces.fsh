@@ -1,7 +1,7 @@
 Extension: ExtensionISiKMedicationStatementReplaces
 Id: ExtensionISiKMedicationStatementReplaces
-Title: "ISiKMedicationStatementReplaces"
-Description: "Welche Medikationsinformation wird ersetzt?"
+Title: "ISiK MedicationStatementReplaces"
+Description: "Extension zur Verlinkung der Medikationsinformation die ersetzt wurde"
 * insert Meta
 * ^experimental = false
 * ^context[+].type = #element

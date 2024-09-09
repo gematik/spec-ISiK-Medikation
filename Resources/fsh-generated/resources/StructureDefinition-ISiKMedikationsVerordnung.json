@@ -4,6 +4,7 @@
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung",
   "version": "4.0.0-rc",
   "name": "ISiKMedikationsVerordnung",
+  "title": "ISiK Medikationsverordnung",
   "status": "draft",
   "experimental": false,
   "date": "2024-04-04",
@@ -17,11 +18,6 @@
   "derivation": "constraint",
   "differential": {
     "element": [
-      {
-        "id": "MedicationRequest.extension",
-        "path": "MedicationRequest.extension",
-        "mustSupport": true
-      },
       {
         "id": "MedicationRequest.extension:acceptedRisk",
         "path": "MedicationRequest.extension",
@@ -145,6 +141,7 @@
       {
         "id": "MedicationRequest.doNotPerform",
         "path": "MedicationRequest.doNotPerform",
+        "short": "Aktuell kein ISiK use-case, daher auf 0 constraint",
         "max": "0"
       },
       {

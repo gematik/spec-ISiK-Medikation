@@ -30,7 +30,7 @@ Datum: 04.04.2024
   * Behandlungsziel
   * Replaces als Ersatz-Verordnung
   * AcceptedRisk im Zuge einer AMTS-Bewertung
-* Erweiterung um Use Case Diagramm, Resourcen Diagramm und Informationsmodell
+* Erweiterung um Use Case Diagramm, Ressourcen Diagramm und Informationsmodell
 * Erweiterung um Use Case Zusammenhänge von verketteten Suchparametern
 
 **Full Changelog**: https://github.com/gematik/spec-ISiK-Medikation/compare/v.3.0.2...rc/main-stufe-4
@@ -70,7 +70,7 @@ Version: 2.0.2
 Datum: 31.01.2023
 
 - Update Basismodul Dependency -> 2.0.4
-- weitere Änderungen an Implmentierungsleitfaden (informativ)
+- weitere Änderungen an Implementierungsleitfaden (informativ)
 ----
 Version: 2.0.1
 

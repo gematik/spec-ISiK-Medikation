@@ -2,7 +2,7 @@
 
 Der vorliegende Implementierungsleitfaden wurde aus der Analyse verschiedener in Deutschland bestehender Spezifikationen im Bereich Medikation heraus entwickelt.
 
-Überwiegend wurde dabei eine Vereinigungsmenge aus diesen, teilweise mit stark unterschiedlicher Ausrichtung verfassten, Spezifikationen hergestellt. Allerdings wurde auch zum einen der Entwicklung der letzten Jahre Rechnung getragen, zum anderen wurden sehr spezifische Datenelemente, die für die Medikations-Kommunikation im stationären Bereich nicht von Bedeutung sind, nicht berücksichtigt.
+Überwiegend wurde dabei eine Vereinigungsmenge aus diesen, teilweise mit stark unterschiedlicher Ausrichtung verfassten, Spezifikationen hergestellt. Allerdings wurde auch zum einen der Entwicklung der letzten Jahre Rechnung getragen, zum anderen wurden sehr spezifische Datenelemente, die für die Medikationskommunikation im stationären Bereich nicht von Bedeutung sind, nicht berücksichtigt.
 
 ## Kompatibilität zum Medizininformatik-Initiative Kerndatensatz Modul Medikation
 
@@ -10,7 +10,7 @@ Die Medikations-Spezifikationen der Medizininformatik-Initiative sowie in ISiK s
 
 Dies trifft auch für die verwendeten Terminologien zu, mit Ausnahme der Medikamenten-Codierung. Hier erlaubt ISiK die Verwendung von ABDATA WG14, jedoch nicht ATC-WHO. Unter Umständen muss hier also ein Mapping vorgenommen werden.
 
-Weiterhin erlaubt die Medizininformatik-Initiative derzeit mehrfache Slices der einzelnen Codesysteme zum Medikament (z.B. PZN), während im vorliegenden Implementierungsleitfaden gemäß Abstimmung mit dem BfArm und in Übereinstimmung mit den Regeln für den FHIR CodeableConcept Datentyp jedes Codesystem jeweils nur ein Mal vorkommen darf. Im (bei bestimmungsgemäßer Verwendung der Codesysteme nicht zu erwartenden) Fall einer Instanz mit zwei unterschiedlichen Medikamenten-Codes aus dem selben Codesystem muss also eine Einzelfallentscheidung getroffen werden.
+Weiterhin erlaubt die Medizininformatik-Initiative derzeit mehrfache Slices der einzelnen Codesysteme zum Medikament (z.B. PZN), während im vorliegenden Implementierungsleitfaden gemäß Abstimmung mit dem BfArm und in Übereinstimmung mit den Regeln für den FHIR CodeableConcept Datentyp jedes Codesystem jeweils nur ein Mal vorkommen darf. Im (bei bestimmungsgemäßer Verwendung der Codesysteme nicht zu erwartenden) Fall einer Instanz mit zwei unterschiedlichen Medikamenten-Codes aus demselben Codesystem muss also eine Einzelfallentscheidung getroffen werden.
 
 ## Kompatibilität zum KBV eRezept
 

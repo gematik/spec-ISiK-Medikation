@@ -1,6 +1,7 @@
 Profile: ISiKMedikament
 Parent: Medication
 Id: ISiKMedikament
+Title: "ISiK Medikament"
 Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien."
 * insert Meta
 * obeys isik-med-1
@@ -16,26 +17,26 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
       WG14 0..1 MS
   * coding[PZN]
     * ^patternCoding.system = $cs-pzn
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
     * display MS
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
     * display MS
   * coding[WG14]
     * ^patternCoding.system = $cs-wg14
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
     * display MS
   * text MS
-* status 1..1 MS
+* status 1.. MS
   * ^short = "Status der Medikamenteninformation"
 * manufacturer MS
   * ^short = "Hersteller des Medikaments"
   * ^comment = "Hier kann der tatsächliche Hersteller des Medikaments benannt werden, vornehmlich im Fall von Wirkstoffmischungen (Rezepturen), beispielsweise die Krankenhausapotheke. Zu beachten ist, dass die zulassende Organisation, wie sie z.B. in den Daten zur PZN benannt ist, nicht als Hersteller gilt."
-  * display 1..1 MS
+  * display 1.. MS
 * form MS
   * ^short = "Abgabeform"
 * form
@@ -49,21 +50,20 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * coding[EDQM] only ISiKCoding
 * amount MS
   * ^short = "Menge"
-  * numerator 1..1 MS
+  * numerator 1.. MS
     * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
+    * value 1.. MS
     * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
   * denominator MS
     * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
+    * value 1.. MS
     * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
 * ingredient MS
   * ^short = "Informationen zu Bestandteilen (Rezeptur)"
-  * extension MS
   * extension contains $ext-wirkstofftyp named wirkstofftyp 0..1 MS
     * ^short = "Wirkstofftyp"
     * ^comment = "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?"
@@ -89,23 +89,23 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * text MS
   * itemReference MS
     * ^short = "Bestandteil (Referenz auf ein anderes Medikament)"
-    * reference 1..1 MS
+    * reference 1.. MS
   * isActive MS
     * ^short = "handelt es sich um einen aktiven Bestandteil?"
   * strength MS
     * ^short = "Stärke"
-    * numerator 1..1 MS
+    * numerator 1.. MS
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
     * denominator MS
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
 * batch MS
   * ^short = "Angaben zur Charge"
   * ^comment = "Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung."

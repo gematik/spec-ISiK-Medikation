@@ -1,6 +1,7 @@
 Profile: ISiKMedikationsVerordnung
 Parent: MedicationRequest
 Id: ISiKMedikationsVerordnung
+Title: "ISiK Medikationsverordnung"
 Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien."
 * insert Meta
 * extension MS
@@ -35,6 +36,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * ^short = "Ziel der Verordnungsinformation"
   * ^comment = "i.d.R. 'order'"
 * doNotPerform ..0
+  * ^short = "Aktuell kein ISiK use-case, daher auf 0 constraint"
 * medicationCodeableConcept MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
   * ^comment = "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
@@ -56,19 +58,19 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
   * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
-  * reference 1..1 MS
+  * reference 1.. MS
 * subject MS
   * ^short = "Referenz auf den Patienten"
 * subject only Reference(Patient)
-  * reference 1..1 MS
+  * reference 1.. MS
 * encounter MS
   * ^short = "Referenz auf den Abteilungskontakt"
-  * reference 1..1 MS
+  * reference 1.. MS
 * authoredOn MS
   * ^short = "Erstellungsdatum der Verordnung"
 * requester MS
   * ^short = "Referenz auf die verordnende Person"
-  * reference 1..1 MS
+  * reference 1.. MS
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"
@@ -87,24 +89,24 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * boundsDuration MS
         * ^short = "Begrenzung der Dauer"
         * ^patternDuration.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
       * boundsRange MS
         * ^short = "Bereich für die Begrenzung"
         * low MS
           * ^patternQuantity.system = $cs-ucum
-          * value 1..1 MS
+          * value 1.. MS
           * unit MS
-          * system 1..1 MS
-          * code 1..1 MS
+          * system 1.. MS
+          * code 1.. MS
         * high MS
           * ^patternQuantity.system = $cs-ucum
-          * value 1..1 MS
+          * value 1.. MS
           * unit MS
-          * system 1..1 MS
-          * code 1..1 MS
+          * system 1.. MS
+          * code 1.. MS
       * boundsPeriod MS
         * ^short = "begrenzender Zeitraum"
         * start MS
@@ -172,87 +174,87 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * ^short = "Dosisbereich"
       * low MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
       * high MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
     * doseQuantity MS
       * ^short = "Dosis"
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
     * rateRatio MS
       * ^short = "Raten-Verhältnis"
       * numerator MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
       * denominator MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
     * rateRange MS
       * ^short = "Raten-Bereich"
       * low MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
       * high MS
         * ^patternQuantity.system = $cs-ucum
-        * value 1..1 MS
+        * value 1.. MS
         * unit MS
-        * system 1..1 MS
-        * code 1..1 MS
+        * system 1.. MS
+        * code 1.. MS
     * rateQuantity MS
       * ^short = "Rate"
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
   * maxDosePerPeriod MS
     * ^short = "Maximaldosis (Zähler) pro Zeitraum (Nenner)"
     * numerator MS
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
     * denominator MS
       * ^patternQuantity.system = $cs-ucum
-      * value 1..1 MS
+      * value 1.. MS
       * unit MS
-      * system 1..1 MS
-      * code 1..1 MS
+      * system 1.. MS
+      * code 1.. MS
   * maxDosePerAdministration MS
     * ^short = "Maximaldosis pro Verabreichung"
     * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
+    * value 1.. MS
     * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
 * dispenseRequest MS
   * quantity MS
     * ^short = "angeforderte Abgabemenge"
     * ^patternQuantity.system = $cs-ucum
-    * value 1..1 MS
+    * value 1.. MS
     * unit MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
 * substitution MS
   * ^short = "Ersatz zulässig"
   * allowedBoolean MS
@@ -261,7 +263,7 @@ Instance: ExampleISiKMedikationsVerordnung
 InstanceOf: ISiKMedikationsVerordnung
 Usage: #example
 * extension[acceptedRisk].valueString = "Erhöhtes Blutungsrisiko ist in diesem Fall vertretbar."
-* extension[medikationsart].valueCoding = ISiKMedikationsart#akut
+* extension[medikationsart].valueCoding = ISiKMedikationsartCS#akut
 * extension[behandlungsziel].valueString = "Schmerztherapie postoperativ"
 * status = #active
 * intent = #order

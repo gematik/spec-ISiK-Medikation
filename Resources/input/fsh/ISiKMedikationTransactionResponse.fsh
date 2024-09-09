@@ -1,6 +1,7 @@
 Profile: ISiKMedikationTransactionResponse
 Parent: Bundle
 Id: ISiKMedikationTransactionResponse
+Title: "ISiK Medikation TransactionBundle-Response"
 Description: "Dieses Profil definiert die Server-Antwort auf Transaktions-Bundles im Rahmen von ISiK-Medikations-Szenarien."
 * insert Meta
 * type MS
@@ -16,7 +17,7 @@ Description: "Dieses Profil definiert die Server-Antwort auf Transaktions-Bundle
     * ^short = "Die Ressourcen-Instanz der Interaktion"
   * search 0..0
   * request 0..0
-  * response 1..1 MS
+  * response 1.. MS
     * ^short = "HTTP-Response des Servers innerhalb der Transaktions-Antwort"
     * status MS
       * ^short = "HTTP-Statuscode"
