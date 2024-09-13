@@ -52,7 +52,7 @@ Primär zu berücksichtigende User sind
 * Pharmazeutisches Personal (Apotheker, PTAs etc.)
 * Patienten (bei Aufnahme, Entlassung, stationärer Medikation usw.)
 
-Beteiligte Systeme sind prinzipiell alle bestätigungsrelevanten Systeme (siehe [DKG Festlegung](https://www.dkgev.de/themen/digitalisierung-daten/elektronische-datenuebermittlung/datenuebermittlung-nach-373-sgb-v-informationssysteme-im-krankenhaus/)). Primär hervorzuheben sind dabei:
+Beteiligte Systeme sind prinzipiell alle [bestätigungsrelevanten Systeme](https://simplifier.net/guide/isik-basis-v4/UebergreifendeFestlegungen_BestaetigungsrelevanteSysteme?version=current). Primär hervorzuheben sind dabei:
 * KIS, auch fokussierte KIS der Dentalklinik oder der Mund-, Kiefer- und Gesichtschirurgie
 * KIS-Submodule der Medikation
 * Eigenständige Systeme der Krankenhausapotheke (AVS)

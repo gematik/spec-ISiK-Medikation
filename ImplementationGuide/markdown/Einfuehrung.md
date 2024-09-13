@@ -1,11 +1,11 @@
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/Gematik_Logo_Flag.svg" alt="gematik logo" width="400"/>
 
 ----
-Version: 4.0.0-rc
+Version: 4.0.0
 
-Datum: 04.04.2024
+Datum: 09.09.2024
 
-Status: Draft (Kommentierung)
+Status: Active
 
 Realm: Deutschland
 

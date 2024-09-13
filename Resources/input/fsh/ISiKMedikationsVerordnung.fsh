@@ -1,7 +1,6 @@
 Profile: ISiKMedikationsVerordnung
 Parent: MedicationRequest
 Id: ISiKMedikationsVerordnung
-Title: "ISiK Medikationsverordnung"
 Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien."
 * insert Meta
 * extension MS
@@ -36,7 +35,6 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * ^short = "Ziel der Verordnungsinformation"
   * ^comment = "i.d.R. 'order'"
 * doNotPerform ..0
-  * ^short = "Aktuell kein ISiK use-case, daher auf 0 constraint"
 * medicationCodeableConcept MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
   * ^comment = "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
@@ -47,30 +45,30 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * coding contains
       PZN 0..1 MS and
       ATC-DE 0..1 MS and
-      WG14 0..1 MS
+      SCT 0..1 MS
   * coding[PZN] only ISiKPZNCoding
     * ^patternCoding.system = $cs-pzn
   * coding[ATC-DE] only ISiKATCCoding
     * ^patternCoding.system = $cs-atc-de
-  * coding[WG14] only ISiKWG14Coding
-    * ^patternCoding.system = $cs-wg14
+  * coding[SCT] only ISiKSnomedCTCoding
+    * ^patternCoding.system = $cs-sct
   * text MS
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
   * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
-  * reference 1.. MS
+  * reference 1..1 MS
 * subject MS
   * ^short = "Referenz auf den Patienten"
 * subject only Reference(Patient)
-  * reference 1.. MS
+  * reference 1..1 MS
 * encounter MS
   * ^short = "Referenz auf den Abteilungskontakt"
-  * reference 1.. MS
+  * reference 1..1 MS
 * authoredOn MS
   * ^short = "Erstellungsdatum der Verordnung"
 * requester MS
   * ^short = "Referenz auf die verordnende Person"
-  * reference 1.. MS
+  * reference 1..1 MS
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"
@@ -89,24 +87,24 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
       * boundsDuration MS
         * ^short = "Begrenzung der Dauer"
         * ^patternDuration.system = $cs-ucum
-        * value 1.. MS
+        * value 1..1 MS
         * unit MS
-        * system 1.. MS
-        * code 1.. MS
+        * system 1..1 MS
+        * code 1..1 MS
       * boundsRange MS
         * ^short = "Bereich für die Begrenzung"
         * low MS
           * ^patternQuantity.system = $cs-ucum
-          * value 1.. MS
+          * value 1..1 MS
           * unit MS
-          * system 1.. MS
-          * code 1.. MS
+          * system 1..1 MS
+          * code 1..1 MS
         * high MS
           * ^patternQuantity.system = $cs-ucum
-          * value 1.. MS
+          * value 1..1 MS
           * unit MS
-          * system 1.. MS
-          * code 1.. MS
+          * system 1..1 MS
+          * code 1..1 MS
       * boundsPeriod MS
         * ^short = "begrenzender Zeitraum"
         * start MS
@@ -173,88 +171,42 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
     * doseRange MS
       * ^short = "Dosisbereich"
       * low MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1.. MS
-        * unit MS
-        * system 1.. MS
-        * code 1.. MS
+      * low only MedicationQuantity
       * high MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1.. MS
-        * unit MS
-        * system 1.. MS
-        * code 1.. MS
+      * high only MedicationQuantity
     * doseQuantity MS
+    * doseQuantity only MedicationQuantity
       * ^short = "Dosis"
-      * ^patternQuantity.system = $cs-ucum
-      * value 1.. MS
-      * unit MS
-      * system 1.. MS
-      * code 1.. MS
     * rateRatio MS
       * ^short = "Raten-Verhältnis"
-      * numerator MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1.. MS
-        * unit MS
-        * system 1.. MS
-        * code 1.. MS
-      * denominator MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1.. MS
-        * unit MS
-        * system 1.. MS
-        * code 1.. MS
+      * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können."
+      * numerator 1.. MS
+      * numerator only MedicationQuantity
+      * denominator 1.. MS
+      * denominator only MedicationQuantity
     * rateRange MS
       * ^short = "Raten-Bereich"
       * low MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1.. MS
-        * unit MS
-        * system 1.. MS
-        * code 1.. MS
+      * low only MedicationQuantity
       * high MS
-        * ^patternQuantity.system = $cs-ucum
-        * value 1.. MS
-        * unit MS
-        * system 1.. MS
-        * code 1.. MS
+      * high only MedicationQuantity
     * rateQuantity MS
+    * rateQuantity only MedicationQuantity
       * ^short = "Rate"
-      * ^patternQuantity.system = $cs-ucum
-      * value 1.. MS
-      * unit MS
-      * system 1.. MS
-      * code 1.. MS
+      * ^comment = "Das Must-Support-Flag auf rateRatio bzw. rateQuantity bedeutet, dass produzierende Systeme zur Kodierung der Ratenangaben nach eigenem Ermessen entweder den Datentyp Ratio oder Quantity verwenden KÖNNEN. Beim Empfang und Verarbeitung der eingehenden Daten MÜSSEN dagegen beide Datentypen interpretiert werden können."
   * maxDosePerPeriod MS
     * ^short = "Maximaldosis (Zähler) pro Zeitraum (Nenner)"
-    * numerator MS
-      * ^patternQuantity.system = $cs-ucum
-      * value 1.. MS
-      * unit MS
-      * system 1.. MS
-      * code 1.. MS
-    * denominator MS
-      * ^patternQuantity.system = $cs-ucum
-      * value 1.. MS
-      * unit MS
-      * system 1.. MS
-      * code 1.. MS
+    * numerator 1.. MS
+    * numerator only MedicationQuantity
+    * denominator 1.. MS
+    * denominator only MedicationQuantity
   * maxDosePerAdministration MS
+  * maxDosePerAdministration only MedicationQuantity
     * ^short = "Maximaldosis pro Verabreichung"
-    * ^patternQuantity.system = $cs-ucum
-    * value 1.. MS
-    * unit MS
-    * system 1.. MS
-    * code 1.. MS
 * dispenseRequest MS
   * quantity MS
+  * quantity only MedicationQuantity
     * ^short = "angeforderte Abgabemenge"
-    * ^patternQuantity.system = $cs-ucum
-    * value 1.. MS
-    * unit MS
-    * system 1.. MS
-    * code 1.. MS
 * substitution MS
   * ^short = "Ersatz zulässig"
   * allowedBoolean MS

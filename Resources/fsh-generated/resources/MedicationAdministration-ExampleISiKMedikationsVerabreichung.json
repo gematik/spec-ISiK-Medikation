@@ -10,7 +10,7 @@
     "dose": {
       "system": "http://unitsofmeasure.org",
       "value": 1,
-      "unit": "Brausetablette",
+      "unit": "Tablette",
       "code": "1"
     }
   },
