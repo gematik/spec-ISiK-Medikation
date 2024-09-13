@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "MedikationsListeListModeVS",
   "id": "MedikationsListeListModeVS",
   "title": "Medikationslisten-Modes",
@@ -9,7 +9,7 @@
   "url": "https://gematik.de/fhir/isik/ValueSet/MedikationsListeListModeVS",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2024-06-26",
+  "date": "2024-09-09",
   "compose": {
     "include": [
       {

@@ -3,7 +3,7 @@
   "url": "https://gematik.de/fhir/isik/ImplementationGuide/ISiK-Medikation",
   "version": "4.0.0",
   "name": "Implementierungsleitfaden ISiK-Medikation",
-  "status": "draft",
+  "status": "active",
   "fhirVersion": [
     "4.0.1"
   ],
