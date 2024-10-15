@@ -4,11 +4,11 @@
   "name": "ISiKMedikationsartVS",
   "id": "ISiKMedikationsartVS",
   "description": "ISiK Therapiearten für Medikation",
+  "version": "4.0.0",
   "url": "https://gematik.de/fhir/isik/ValueSet/ISiKMedikationsartVS",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "version": "4.0.0",
-  "date": "2024-09-09",
+  "date": "2024-10-15",
   "compose": {
     "include": [
       {
