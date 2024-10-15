@@ -1,0 +1,447 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ISiKMedikament",
+  "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament",
+  "version": "4.0.0",
+  "name": "ISiKMedikament",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-10-15",
+  "publisher": "gematik GmbH",
+  "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication",
+        "path": "Medication",
+        "constraint": [
+          {
+            "key": "isik-med-1",
+            "severity": "error",
+            "human": "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden.",
+            "expression": "code.exists() or ingredient.exists()",
+            "source": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament"
+          }
+        ]
+      },
+      {
+        "id": "Medication.code",
+        "path": "Medication.code",
+        "short": "Medikament in codierter Form oder ggf. als Freitext",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding",
+        "path": "Medication.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "comment": "Motivation: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:PZN",
+        "path": "Medication.code.coding",
+        "sliceName": "PZN",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKPZNCoding"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:ATC-DE",
+        "path": "Medication.code.coding",
+        "sliceName": "ATC-DE",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKATCCoding"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.coding:SCT",
+        "path": "Medication.code.coding",
+        "sliceName": "SCT",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.code.text",
+        "path": "Medication.code.text",
+        "comment": "Motivation: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.status",
+        "path": "Medication.status",
+        "short": "Status der Medikamenteninformation",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.manufacturer",
+        "path": "Medication.manufacturer",
+        "short": "Hersteller des Medikaments",
+        "comment": "Hier kann der tatsächliche Hersteller des Medikaments benannt werden, vornehmlich im Fall von Wirkstoffmischungen (Rezepturen), beispielsweise die Krankenhausapotheke. Zu beachten ist, dass die zulassende Organisation, wie sie z.B. in den Daten zur PZN benannt ist, nicht als Hersteller gilt.",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.manufacturer.display",
+        "path": "Medication.manufacturer.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form",
+        "path": "Medication.form",
+        "short": "Abgabeform",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding",
+        "path": "Medication.form.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "comment": "Motivation: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.form.coding:EDQM",
+        "path": "Medication.form.coding",
+        "sliceName": "EDQM",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKCoding"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform"
+        }
+      },
+      {
+        "id": "Medication.amount",
+        "path": "Medication.amount",
+        "short": "Menge",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.numerator",
+        "path": "Medication.amount.numerator",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.amount.denominator",
+        "path": "Medication.amount.denominator",
+        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient",
+        "path": "Medication.ingredient",
+        "short": "Informationen zu Bestandteilen (Rezeptur)",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.extension",
+        "path": "Medication.ingredient.extension",
+        "short": "Wirkstofftyp",
+        "comment": "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.extension:wirkstofftyp",
+        "path": "Medication.ingredient.extension",
+        "sliceName": "wirkstofftyp",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhir.de/StructureDefinition/WirkstofftypEX"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]",
+        "path": "Medication.ingredient.item[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemCodeableConcept",
+        "short": "Bestandteil in codierter Form oder ggf. als Freitext",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding",
+        "path": "Medication.ingredient.item[x].coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ASK",
+        "path": "Medication.ingredient.item[x].coding",
+        "sliceName": "ASK",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKASKCoding"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/ask"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:ATC-DE",
+        "path": "Medication.ingredient.item[x].coding",
+        "sliceName": "ATC-DE",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKATCCoding"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:PZN",
+        "path": "Medication.ingredient.item[x].coding",
+        "sliceName": "PZN",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKPZNCoding"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.coding:SCT",
+        "path": "Medication.ingredient.item[x].coding",
+        "sliceName": "SCT",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/ISiKSnomedCTCoding"
+            ]
+          }
+        ],
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemCodeableConcept.text",
+        "path": "Medication.ingredient.item[x].text",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemReference",
+        "path": "Medication.ingredient.item[x]",
+        "sliceName": "itemReference",
+        "short": "Bestandteil (Referenz auf ein anderes Medikament)",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Substance",
+              "http://hl7.org/fhir/StructureDefinition/Medication"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.item[x]:itemReference.reference",
+        "path": "Medication.ingredient.item[x].reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.isActive",
+        "path": "Medication.ingredient.isActive",
+        "short": "handelt es sich um einen aktiven Bestandteil?",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength",
+        "path": "Medication.ingredient.strength",
+        "short": "Stärke",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.numerator",
+        "path": "Medication.ingredient.strength.numerator",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.ingredient.strength.denominator",
+        "path": "Medication.ingredient.strength.denominator",
+        "min": 1,
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "https://gematik.de/fhir/isik/StructureDefinition/MedicationQuantity"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.batch",
+        "path": "Medication.batch",
+        "short": "Angaben zur Charge",
+        "comment": "Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung.",
+        "mustSupport": true
+      },
+      {
+        "id": "Medication.batch.lotNumber",
+        "path": "Medication.batch.lotNumber",
+        "short": "Chargennummer",
+        "comment": "Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (\"STELLEN\") eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen \"STELLEN\" in das hierbeschirebene Datenfeld eingetragen werden.",
+        "mustSupport": true
+      }
+    ]
+  }
+}
