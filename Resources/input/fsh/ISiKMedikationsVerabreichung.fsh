@@ -3,8 +3,6 @@ Parent: MedicationAdministration
 Id: ISiKMedikationsVerabreichung
 Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien."
 * insert Meta
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
 * status MS
   * ^short = "Status der Verabreichungsinformation"
 * medicationCodeableConcept MS
