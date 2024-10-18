@@ -3,8 +3,6 @@ Parent: MedicationRequest
 Id: ISiKMedikationsVerordnung
 Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien."
 * insert Meta
-* id MS
-  * ^short = "eindeutige ID der Ressource auf dem Server"
 * status MS
   * ^short = "Status der Verordnungsinformation"
 * intent MS
