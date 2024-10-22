@@ -87,7 +87,7 @@ Neben den allgemein geltenden Festlegungen in FHIR und HL7v2 können auch folgen
 ## 4. Anwendungsfälle und Versorgungsprozesse
 
 Im Vorfeld der Ausbaustufe 4 des Moduls ISiK-Medikation fand ein umfangreicher Arbeitskreis mit dem Thema "Analyse der Medikationsprozesse" des IOP-Councils statt. Dort wurden ambulante, stationäre sowie sektorenübergreifende Anwendungsfälle und Versorgungsprozesse untersucht. Wie alle ISiK Spezifikation beziehen sich die Neuerungen am ISiK Modul Medikation allerdings vorrangig auf die Kommunikation innerhalb des Krankenhauses (d.h. zwischen KIS und Subsystemen). 
-Daher ist im Anhang ist ein thematischer [Auszug des IOP-Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) der Anwendungsfälle und Versorgungsprozesse für den stationären Sektor gegeben. Dieser ist für eine detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet und hat bildet die fachliche Grundlage (Motivation) des vorliegenden IG AMTS.
+Im Positionspapier [Digital gestützte Medikationsprozesse](https://www.ina.gematik.de/fileadmin/Arbeitskreisdokumente/Ergebnisdokumente/Analyse_der_Medikationsprozesse/Positionspapier_Analyse_der_Medikationsprozesse.pdf) aus dem Arbeitskreis *Analyse der Medikationsprozesse* des Interop Councils sind unter anderem Anwendungsfälle und Versorgungsprozesse für den stationären Sektor gegeben. Dieser ist für eine detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet und bildet die fachliche Grundlage (Motivation) des vorliegenden IG AMTS.
 
 
 ### 4.1. User Stories und Use Cases
@@ -132,7 +132,7 @@ Ein geriatrischer Patient unterzieht sich einer geplanten Hüftersatzoperation:
 * Im Entlassgespräch werdenden Veränderungen kommuniziert und erklärt.
 * Der Patient wird mit einem neuen Medikationsplan entlassen.
 
-Daher ist im Anhang ist ein thematischer [Auszug des IOP-Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/implementationguide-markdown-uebergreifendeusecases-amts?version=current#ImplementationGuide-markdown-UebergreifendeUseCases-AMTS-AMTS_Apx_AuszugAK) der Anwendungsfälle und Versorgungsprozesse für den stationären Sektor gegeben. Dieser ist für einen detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet und hat bildet die fachliche Grundlage (Motivation) des vorliegenden IG AMTS.
+
 
 
 ### 4.4. Weitere implizite Annahmen und weitere Informationen
@@ -144,3 +144,6 @@ Daher ist im Anhang ist ein thematischer [Auszug des IOP-Arbeitskreises](https:/
 *Anmerkungen:*
 * AMTS-Checks sollten protokolliert werden, um Verantwortlichkeit und Rückverfolgbarkeit zu gewährleisten. Dies gilt sowohl für den positiven Fall der Verträglichkeit, als auch für den Fall in dem eine akzeptierte oder eine nicht akzeptable Risikobewertung erstellt wid.
 * AMTS-Checks könnten protokolliert werden, um redundante Prüfungen und Mehrarbeit zu vermeiden.
+
+
+Weitere Anwendungsfälle und Versorgungsprozesse für den stationären Sektor sind im Positionspapier [Digital gestützte Medikationsprozesse](https://www.ina.gematik.de/fileadmin/Arbeitskreisdokumente/Ergebnisdokumente/Analyse_der_Medikationsprozesse/Positionspapier_Analyse_der_Medikationsprozesse.pdf) aus dem Arbeitskreis *Analyse der Medikationsprozesse* des Interop Councils zu finden. 
