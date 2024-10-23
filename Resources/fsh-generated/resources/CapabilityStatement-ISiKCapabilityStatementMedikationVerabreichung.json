@@ -4,9 +4,9 @@
   "url": "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementMedikationVerabreichung",
   "status": "active",
   "experimental": false,
-  "version": "4.0.0",
+  "version": "4.0.1",
   "publisher": "gematik GmbH",
-  "date": "2024-10-15",
+  "date": "2024-10-23",
   "implementationGuide": [
     "https://gematik.de/fhir/ISiK/ImplementationGuide/ISiK-Medikation"
   ],
