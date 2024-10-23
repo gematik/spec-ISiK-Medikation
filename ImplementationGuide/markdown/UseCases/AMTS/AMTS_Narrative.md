@@ -87,7 +87,7 @@ Neben den allgemein geltenden Festlegungen in FHIR und HL7v2 können auch folgen
 ## 4. Anwendungsfälle und Versorgungsprozesse
 
 Im Vorfeld der Ausbaustufe 4 des Moduls ISiK-Medikation fand ein umfangreicher Arbeitskreis mit dem Thema "Analyse der Medikationsprozesse" des IOP-Councils statt. Dort wurden ambulante, stationäre sowie sektorenübergreifende Anwendungsfälle und Versorgungsprozesse untersucht. Wie alle ISiK Spezifikation beziehen sich die Neuerungen am ISiK Modul Medikation allerdings vorrangig auf die Kommunikation innerhalb des Krankenhauses (d.h. zwischen KIS und Subsystemen). 
-Im Positionspapier [Digital gestützte Medikationsprozesse](https://www.ina.gematik.de/fileadmin/Arbeitskreisdokumente/Ergebnisdokumente/Analyse_der_Medikationsprozesse/Positionspapier_Analyse_der_Medikationsprozesse.pdf) aus dem Arbeitskreis *Analyse der Medikationsprozesse* des Interop Councils sind unter anderem Anwendungsfälle und Versorgungsprozesse für den stationären Sektor gegeben. Dieser ist für eine detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet und bildet die fachliche Grundlage (Motivation) des vorliegenden IG AMTS.
+Im Positionspapier [Digital gestützte Medikationsprozesse](https://www.ina.gematik.de/fileadmin/Arbeitskreisdokumente/Ergebnisdokumente/Analyse_der_Medikationsprozesse/Positionspapier_Analyse_der_Medikationsprozesse.pdf) aus dem Arbeitskreis *Analyse der Medikationsprozesse* des Interop Councils sind unter anderem Anwendungsfälle und Versorgungsprozesse für den stationären Sektor aufgeführt. Dieser ist für eine detaillierten Einstieg und Auseinandersetzung mit dem Thema geeignet und bildet die fachliche Grundlage (Motivation) des vorliegenden IG AMTS.
 
 
 ### 4.1. User Stories und Use Cases
