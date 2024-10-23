@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKAMTSBewertung",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKAMTSBewertung",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "ISiKAMTSBewertung",
   "title": "ISiK AMTS-Bewertung",
   "status": "active",
   "experimental": false,
-  "date": "2024-10-15",
+  "date": "2024-10-23",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Informationen zur Risikobeurteilung im Rahmen der Arzneimitteltherapiesicherheit (AMTS).",
   "fhirVersion": "4.0.1",
@@ -22,7 +22,7 @@
         "id": "RiskAssessment.extension",
         "path": "RiskAssessment.extension",
         "short": "akzeptiertes (in Kauf genommenes) Risiko",
-        "comment": "Hier kann die Begründung und ggf. erforderliche Begleitmaßnahmen für ein in Kauf genommenes Risiko dokumentiert werden.",
+        "comment": "Begründung des Must-Support: ... tbd.\n\n  Hinweis: Hier kann die Begründung und ggf. erforderliche Begleitmaßnahmen für ein in Kauf genommenes Risiko dokumentiert werden.",
         "mustSupport": true
       },
       {
@@ -44,12 +44,14 @@
       {
         "id": "RiskAssessment.status",
         "path": "RiskAssessment.status",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.code",
         "path": "RiskAssessment.code",
         "short": "Art der Risikobeurteilung",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
@@ -83,6 +85,7 @@
         "id": "RiskAssessment.subject",
         "path": "RiskAssessment.subject",
         "short": "Referenz auf den Patienten",
+        "comment": "Begründung der Kardinalität: ... tbd.\n\n  Hintergrund: Die Kardinalität wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "type": [
           {
             "code": "Reference",
@@ -103,6 +106,7 @@
         "id": "RiskAssessment.encounter",
         "path": "RiskAssessment.encounter",
         "short": "Referenz auf den Abteilungskontakt",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
@@ -125,6 +129,7 @@
           "rules": "open"
         },
         "short": "Zeitpunkt oder Zeitraum der Beurteilung",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
@@ -157,6 +162,7 @@
         "id": "RiskAssessment.condition",
         "path": "RiskAssessment.condition",
         "short": "Bezugsdiagnose (Referenz)",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
@@ -169,6 +175,7 @@
         "id": "RiskAssessment.reasonCode",
         "path": "RiskAssessment.reasonCode",
         "short": "Grund der Risikobewertung (codiert)",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
@@ -202,6 +209,7 @@
         "id": "RiskAssessment.reasonReference",
         "path": "RiskAssessment.reasonReference",
         "short": "Grund der Risikobewertung (Referenz)",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
@@ -214,6 +222,7 @@
         "id": "RiskAssessment.basis",
         "path": "RiskAssessment.basis",
         "short": "Entscheidungsgrundlagen der Risikobewertung (Referenz)",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
@@ -225,6 +234,7 @@
       {
         "id": "RiskAssessment.prediction",
         "path": "RiskAssessment.prediction",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
@@ -264,6 +274,7 @@
         "id": "RiskAssessment.prediction.qualitativeRisk",
         "path": "RiskAssessment.prediction.qualitativeRisk",
         "short": "Risikowahrscheinlichkeit (qualitativ, codiert)",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -301,12 +312,14 @@
         "id": "RiskAssessment.mitigation",
         "path": "RiskAssessment.mitigation",
         "short": "Hinweis zur Risikovermeidung",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       },
       {
         "id": "RiskAssessment.note",
         "path": "RiskAssessment.note",
         "short": "Anmerkung zur Risikobewertung",
+        "comment": "Begründung des Must-Support-Support-Flag (MS): ... tbd.\n  \n  Hintergrund: Das MS wurde im Rahmen der Ausarbeitung zur Stufe 4 des ISiK Moduls Medikation hinzugefügt und mit den Stakeholdern abgestimmt. ",
         "mustSupport": true
       }
     ]
