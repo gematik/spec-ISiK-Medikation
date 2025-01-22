@@ -97,7 +97,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     ```GET [base]/MedicationAdministration?context.identifier=7567867```
 
-    Use Case Zusammenhang: Um bei einem wiederkehrenden Patienten eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} des Falls und damit eine falsche Verabreichung zu vermeiden.
+    Use Case Zusammenhang: Um bei einem wiederkehrenden Patienten eine Verwechslung des Falls und damit eine falsche Verabreichung zu vermeiden.
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Reference-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Reference Search"](https://www.hl7.org/fhir/R4/search.html#reference).
 
@@ -125,7 +125,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     ```GET [base]/MedicationAdministration?medication.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
 
-    Use Case Zusammenhang: Um eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Kontraindikation}} bei der Verabreichung auf Basis des Wirkstoffes zu vermeiden.
+    Use Case Zusammenhang: Um eine Kontraindikation bei der Verabreichung auf Basis des Wirkstoffes zu vermeiden.
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
@@ -147,7 +147,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     ```GET [base]/MedicationAdministration?patient.identifier=1032702```
 
-    Use Case Zusammenhang: Um bei der Verabreichung eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Verwechslung}} zwischen verschiedenen Patienten vermeiden.
+    Use Case Zusammenhang: Um bei der Verabreichung eine Verwechslung zwischen verschiedenen Patienten vermeiden.
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
@@ -169,8 +169,8 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     ```GET [base]/MedicationAdministration?performer.identifier=123456789123456```
 
-    Use Case Zusammenhang: Um mich als Heilberufler über die {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Historie}} meiner Medikationsverabreichungen zur informieren.
-    <!-- Use Case Zusammenhang: Um bei der Verabreichung die notwendige {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Expertise}} eines entsprechend spezialisierten Facharztes (z.B. Onkologie) zu gewährleisten.-->
+    Use Case Zusammenhang: Um mich als Heilberufler über die Historie meiner Medikationsverabreichungen zur informieren.
+    <!-- Use Case Zusammenhang: Um bei der Verabreichung die notwendige Expertise eines entsprechend spezialisierten Facharztes (z.B. Onkologie) zu gewährleisten.-->
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
