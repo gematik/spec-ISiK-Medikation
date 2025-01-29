@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsVerabreichung",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerabreichung",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "ISiKMedikationsVerabreichung",
   "status": "active",
   "experimental": false,
-  "date": "2024-10-15",
+  "date": "2024-10-31",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -21,6 +21,7 @@
         "id": "MedicationAdministration.status",
         "path": "MedicationAdministration.status",
         "short": "Status der Verabreichungsinformation",
+        "comment": "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard",
         "mustSupport": true
       },
       {
@@ -42,7 +43,7 @@
         "path": "MedicationAdministration.medication[x]",
         "sliceName": "medicationCodeableConcept",
         "short": "Medikament in codierter Form oder ggf. als Freitext",
-        "comment": "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren.",
+        "comment": "Begründung des Must-Support: Basisinformation\n\n  Hinweis: kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren.",
         "min": 0,
         "max": "1",
         "type": [
@@ -128,7 +129,7 @@
         "path": "MedicationAdministration.medication[x]",
         "sliceName": "medicationReference",
         "short": "Referenz auf das Medikament (Medication-Ressource)",
-        "comment": "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen",
+        "comment": "Begründung des Must-Support: Basisinformation\n\n  Hinweis: wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen",
         "min": 0,
         "max": "1",
         "type": [
@@ -151,6 +152,7 @@
         "id": "MedicationAdministration.subject",
         "path": "MedicationAdministration.subject",
         "short": "Referenz auf den Patienten",
+        "comment": "Begründung des Must-Support: Basisinformation",
         "type": [
           {
             "code": "Reference",
@@ -171,6 +173,7 @@
         "id": "MedicationAdministration.context",
         "path": "MedicationAdministration.context",
         "short": "Referenz auf den Abteilungskontakt",
+        "comment": "Begründung des Must-Support: Basisinformation im Krankenhaus-Kontext",
         "mustSupport": true
       },
       {
@@ -198,6 +201,7 @@
         "path": "MedicationAdministration.effective[x]",
         "sliceName": "effectiveDateTime",
         "short": "Zeitpunkt der Verabreichung",
+        "comment": "Begründung des Must-Support: Basisinformation",
         "min": 0,
         "max": "1",
         "type": [
@@ -212,6 +216,7 @@
         "path": "MedicationAdministration.effective[x]",
         "sliceName": "effectivePeriod",
         "short": "Zeitraum der Verabreichung",
+        "comment": "Begründung des Must-Support: Basisinformation",
         "min": 0,
         "max": "1",
         "type": [
@@ -240,6 +245,7 @@
         "id": "MedicationAdministration.performer.actor",
         "path": "MedicationAdministration.performer.actor",
         "short": "Referenz auf die verabreichende Person",
+        "comment": "Begründung des Must-Support: Nachvollziehbarkeit",
         "mustSupport": true
       },
       {
@@ -249,9 +255,17 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationAdministration.reasonCode",
+        "path": "MedicationAdministration.reasonCode",
+        "short": "Grund der Medikation (Referenz)",
+        "comment": "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.",
+        "mustSupport": true
+      },
+      {
         "id": "MedicationAdministration.reasonReference",
         "path": "MedicationAdministration.reasonReference",
         "short": "Grund der Medikation (Referenz)",
+        "comment": "Begründung des Must-Support: Nachvollziehbarkeit",
         "mustSupport": true
       },
       {
@@ -269,12 +283,14 @@
         "id": "MedicationAdministration.note.text",
         "path": "MedicationAdministration.note.text",
         "short": "Freitext-Notiz",
+        "comment": "Begründung des Must-Support: Angabe zusätzlicher Informationen kann fachlich relevant sein",
         "mustSupport": true
       },
       {
         "id": "MedicationAdministration.dosage",
         "path": "MedicationAdministration.dosage",
         "short": "Dosierungsangaben",
+        "comment": "Begründung des Must-Support: Basisinformation. Zur vollständig strukturierten Abbildung der zahlreichen Möglichkeiten sind die hier mit Must-Support gekennzeichneten Unterelemente erforderlich gemäß Konsens der ISiK AG Medikation",
         "mustSupport": true
       },
       {

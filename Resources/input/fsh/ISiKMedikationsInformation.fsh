@@ -12,36 +12,50 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     ExtensionISiKMedicationStatementReplaces named medicationStatementReplaces 0..1 MS
 * extension[acceptedRisk]
   * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
-  * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
+  * ^comment = "Begründung des Must-Support: Folgeinformation der AMTS-Bewertung, sollte auch an nachfolgende Behandelnde übermittelbar sein
+
+  Hinweis: Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
   * valueString MS
 * extension[medikationsart]
   * ^short = "Therapieart der Medikation"
-  * ^comment = "Angabe Akut- oder Dauermedikation."
+  * ^comment = "Begründung des Must-Support: von der Fachseite gewünschte Angabe
+
+  Hinweis: Angabe Akut- oder Dauermedikation."
   * valueCoding
     * system MS
     * code MS
     * display MS
 * extension[selbstmedikation]
   * ^short = "Selbstmedikation"
-  * ^comment = "Flag zur Selbstmedikation."
+  * ^comment = "Begründung des Must-Support: von der Fachseite gewünschte Angabe
+
+  Hinweis: Flag zur Selbstmedikation."
   * valueBoolean MS
 * extension[behandlungsziel]
   * ^short = "Behandlungsziel (textuell)"
-  * ^comment = "Freitext-Beschreibung des Behandlungsziels."
+  * ^comment = "Begründung des Must-Support: von der Fachseite gewünschte Angabe
+
+  Hinweis: Freitext-Beschreibung des Behandlungsziels."
   * valueString MS
 * extension[medicationStatementReplaces]
   * ^short = "Welche Medikationsinformation wird ersetzt?"
-  * ^comment = "Welche Medikationsinformation wird ersetzt?"
+  * ^comment = "Begründung des Must-Support: historische Nachvollziehbarkeit
+
+  Hinweis: Welche Medikationsinformation wird ersetzt?"
   * valueReference MS
     * reference MS
 * partOf
   * ^short = "Referenz auf andere Objekte, deren Bestandteil diese MedikationsInformation ist"
+  * ^comment = "Begründung des Must-Support: Abbildung der Zusammenhänge"
 * status MS
   * ^short = "Status der Medikationsinformation"
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard"
 * medication[x] MS
 * medicationCodeableConcept MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
-  * ^comment = "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Hinweis: kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -59,17 +73,22 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * text MS
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
-  * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Hinweis: wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
   * reference 1..1 MS
 * subject MS
   * ^short = "Referenz auf den Patienten"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * subject only Reference(Patient)
   * reference 1..1 MS
 * context MS
   * ^short = "Referenz auf den Abteilungskontakt"
+  * ^comment = "Begründung des Must-Support: Basisinformation im Krankenhaus-Kontext"
   * reference 1..1 MS
 * effective[x] 1..1 MS
   * ^short = "Zeitpunkt oder Zeitraum, für den die MedikationsInformation gilt"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * effectiveDateTime MS
   * ^short = "Zeitpunkt"
 * effectivePeriod MS
@@ -78,8 +97,12 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * end MS
 * dateAsserted MS
   * ^short = "Datum der Feststellung/des Bekanntwerdens der MedikationsInformation"
+  * ^comment = "Begründung des Must-Support: Nachvollziehbarkeit"
 * reasonCode MS
   * ^short = "Grund der Medikation (codiert)"
+  * ^comment = "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
+  
+  Begründung zu Must-Support: Konsolidierung mit MII."
   * coding MS
     * system 1..1 MS
     * code 1..1 MS
@@ -87,12 +110,17 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * text MS
 * reasonReference MS
   * ^short = "Grund der Medikation (Referenz)"
+  * ^comment = "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
+  
+  Begründung zu Must-Support: Konsolidierung mit MII."
   * reference 1..1 MS
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"
+    * ^comment = "Begründung des Must-Support: Angabe zusätzlicher Informationen kann fachlich relevant sein"
 * dosage MS
   * ^short = "Dosierungsangaben"
+  * ^comment = "Begründung des Must-Support: Basisinformation. Zur vollständig strukturierten Abbildung der zahlreichen Möglichkeiten sind die hier mit Must-Support gekennzeichneten Unterlemente erforderlich gemäß Konsens der ISiK AG Medikation"
   * text MS
     * ^short = "Freitext-Dosierungsanweisungen"
   * patientInstruction MS

@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsListe",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsListe",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "ISiKMedikationsListe",
   "title": "ISiK Medikationsliste",
   "status": "active",
   "experimental": false,
-  "date": "2024-10-15",
+  "date": "2024-10-31",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Zusammenführung einzelner MedikationsInformationen eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -22,13 +22,14 @@
         "id": "List.status",
         "path": "List.status",
         "short": "(Aktualitäts-)Status der Liste",
+        "comment": "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard",
         "mustSupport": true
       },
       {
         "id": "List.mode",
         "path": "List.mode",
         "short": "Listenmodus",
-        "comment": "Beispiel: eingelesene Medikationspläne werden als snapshot repräsentiert. Kontinuierlich fortgeschriebene Listen, z.B. im Rahmen der hausinternen Behandlung, sind als 'working' codiert.",
+        "comment": "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard\n\n  Beispiel: eingelesene Medikationspläne werden als snapshot repräsentiert. Kontinuierlich fortgeschriebene Listen, z.B. im Rahmen der hausinternen Behandlung, sind als 'working' codiert.",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -39,7 +40,7 @@
         "id": "List.code",
         "path": "List.code",
         "short": "Art der Liste.",
-        "comment": "Es ist mindestens ein Coding mit dem Code 'medications' anzugeben. Weitere Codes, z.B. im Kontext anderer Spezifikationen oder Hauscodierungen sind zulässig.",
+        "comment": "Begründung des Must-Support: Dient der Differenzierung zu anderen Listen.\n\n  Hinweis: Es ist mindestens ein Coding mit dem Code 'medications' anzugeben. Weitere Codes, z.B. im Kontext anderer Spezifikationen oder Hauscodierungen sind zulässig.",
         "min": 1,
         "mustSupport": true
       },
@@ -91,6 +92,7 @@
         "id": "List.subject",
         "path": "List.subject",
         "short": "Referenz auf den Patienten",
+        "comment": "Begründung des Must-Support: Basisinformation",
         "min": 1,
         "type": [
           {
@@ -112,6 +114,7 @@
         "id": "List.encounter",
         "path": "List.encounter",
         "short": "Referenz auf den Abteilungskontakt",
+        "comment": "Begründung des Must-Support: Basisinformation im Krankenhaus-Kontext",
         "mustSupport": true
       },
       {
@@ -124,6 +127,7 @@
         "id": "List.date",
         "path": "List.date",
         "short": "Erstellungsdatum der Liste",
+        "comment": "Begründung des Must-Support: Basisinformation",
         "mustSupport": true
       },
       {
@@ -136,13 +140,14 @@
         "id": "List.entry.date",
         "path": "List.entry.date",
         "short": "Datum des Listeneintrags",
-        "comment": "nur zulässig im Listenmodus 'working'",
+        "comment": "Begründung des Must-Support: Nachvollziehbarkeit\n\n    Hinweis: nur zulässig im Listenmodus 'working'",
         "mustSupport": true
       },
       {
         "id": "List.entry.item",
         "path": "List.entry.item",
         "short": "Referenz auf die MedikationsInformation",
+        "comment": "Begründung des Must-Support: Basisinformation (eigentlicher Zweck der Liste ist das Verbinden mehrerer MedikationsInformationen)",
         "type": [
           {
             "code": "Reference",

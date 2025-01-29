@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsVerordnung",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "ISiKMedikationsVerordnung",
   "status": "active",
   "experimental": false,
-  "date": "2024-10-15",
+  "date": "2024-10-31",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -27,7 +27,7 @@
         "path": "MedicationRequest.extension",
         "sliceName": "acceptedRisk",
         "short": "akzeptiertes (in Kauf genommenes) Risiko",
-        "comment": "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen.",
+        "comment": "Begründung des Must-Support: Folgeinformation der AMTS-Bewertung, sollte auch an nachfolgende Behandelnde übermittelbar sein\n\n  Hinweis: Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen.",
         "min": 0,
         "max": "1",
         "type": [
@@ -50,7 +50,7 @@
         "path": "MedicationRequest.extension",
         "sliceName": "medikationsart",
         "short": "Therapieart der Medikation",
-        "comment": "Angabe Akut- oder Dauermedikation.",
+        "comment": "Begründung des Must-Support: von der Fachseite gewünschte Angabe\n\n  Hinweis: Angabe Akut- oder Dauermedikation.",
         "min": 0,
         "max": "1",
         "type": [
@@ -83,7 +83,7 @@
         "path": "MedicationRequest.extension",
         "sliceName": "behandlungsziel",
         "short": "Behandlungsziel (textuell)",
-        "comment": "Freitext-Beschreibung des Behandlungsziels.",
+        "comment": "Begründung des Must-Support: von der Fachseite gewünschte Angabe\n\n  Hinweis: Freitext-Beschreibung des Behandlungsziels.",
         "min": 0,
         "max": "1",
         "type": [
@@ -106,7 +106,7 @@
         "path": "MedicationRequest.extension",
         "sliceName": "medicationRequestReplaces",
         "short": "Welche Medikationsverordnung wird ersetzt?",
-        "comment": "FWelche Medikationsverordnung wird ersetzt?",
+        "comment": "Begründung des Must-Support: historische Nachvollziehbarkeit\n\n  Hinweis: FWelche Medikationsverordnung wird ersetzt?",
         "min": 0,
         "max": "1",
         "type": [
@@ -133,18 +133,20 @@
         "id": "MedicationRequest.status",
         "path": "MedicationRequest.status",
         "short": "Status der Verordnungsinformation",
+        "comment": "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard",
         "mustSupport": true
       },
       {
         "id": "MedicationRequest.intent",
         "path": "MedicationRequest.intent",
         "short": "Ziel der Verordnungsinformation",
-        "comment": "i.d.R. 'order'",
+        "comment": "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard\n\n  Hinweis: i.d.R. 'order'",
         "mustSupport": true
       },
       {
         "id": "MedicationRequest.doNotPerform",
         "path": "MedicationRequest.doNotPerform",
+        "comment": "Begründung der Kardinalitätsänderung: Use Case für dieses Feld ist nicht im Scope",
         "max": "0"
       },
       {
@@ -166,7 +168,7 @@
         "path": "MedicationRequest.medication[x]",
         "sliceName": "medicationCodeableConcept",
         "short": "Medikament in codierter Form oder ggf. als Freitext",
-        "comment": "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren.",
+        "comment": "Begründung des Must-Support: Basisinformation\n\n  Hinweis: kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren.",
         "min": 0,
         "max": "1",
         "type": [
@@ -257,7 +259,7 @@
         "path": "MedicationRequest.medication[x]",
         "sliceName": "medicationReference",
         "short": "Referenz auf das Medikament (Medication-Ressource)",
-        "comment": "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen",
+        "comment": "Begründung des Must-Support: Basisinformation\n\n  Hinweis: wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen",
         "min": 0,
         "max": "1",
         "type": [
@@ -280,6 +282,7 @@
         "id": "MedicationRequest.subject",
         "path": "MedicationRequest.subject",
         "short": "Referenz auf den Patienten",
+        "comment": "Begründung des Must-Support: Basisinformation",
         "type": [
           {
             "code": "Reference",
@@ -300,6 +303,7 @@
         "id": "MedicationRequest.encounter",
         "path": "MedicationRequest.encounter",
         "short": "Referenz auf den Abteilungskontakt",
+        "comment": "Begründung des Must-Support: Basisinformation im Krankenhaus-Kontext",
         "mustSupport": true
       },
       {
@@ -312,12 +316,14 @@
         "id": "MedicationRequest.authoredOn",
         "path": "MedicationRequest.authoredOn",
         "short": "Erstellungsdatum der Verordnung",
+        "comment": "Begründung des Must-Support: Basisinformation",
         "mustSupport": true
       },
       {
         "id": "MedicationRequest.requester",
         "path": "MedicationRequest.requester",
         "short": "Referenz auf die verordnende Person",
+        "comment": "Begründung des Must-Support: Nachvollziehbarkeit",
         "mustSupport": true
       },
       {
@@ -335,12 +341,14 @@
         "id": "MedicationRequest.note.text",
         "path": "MedicationRequest.note.text",
         "short": "Freitext-Notiz",
+        "comment": "Begründung des Must-Support: Angabe zusätzlicher Informationen kann fachlich relevant sein",
         "mustSupport": true
       },
       {
         "id": "MedicationRequest.dosageInstruction",
         "path": "MedicationRequest.dosageInstruction",
         "short": "Dosierungsangaben",
+        "comment": "Begründung des Must-Support: Basisinformation. Zur vollständig strukturierten Abbildung der zahlreichen Möglichkeiten sind die hier mit Must-Support gekennzeichneten Unterelemente erforderlich gemäß Konsens der ISiK AG Medikation",
         "mustSupport": true
       },
       {
@@ -1003,6 +1011,7 @@
         "id": "MedicationRequest.dispenseRequest.quantity",
         "path": "MedicationRequest.dispenseRequest.quantity",
         "short": "angeforderte Abgabemenge",
+        "comment": "Begründung des Must-Support: Basisinformation",
         "type": [
           {
             "code": "Quantity",
@@ -1017,6 +1026,7 @@
         "id": "MedicationRequest.substitution",
         "path": "MedicationRequest.substitution",
         "short": "Ersatz zulässig",
+        "comment": "Begründung des Must-Support: Alignment mit dem (E-)Rezept",
         "mustSupport": true
       },
       {

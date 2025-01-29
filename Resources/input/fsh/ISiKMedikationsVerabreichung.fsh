@@ -5,9 +5,12 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
 * insert Meta
 * status MS
   * ^short = "Status der Verabreichungsinformation"
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard"
 * medicationCodeableConcept MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
-  * ^comment = "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Hinweis: kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -24,33 +27,46 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * ^patternCoding.system = $cs-sct
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
-  * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Hinweis: wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
   * reference 1..1 MS
 * subject MS
   * ^short = "Referenz auf den Patienten"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * subject only Reference(Patient)
   * reference 1..1 MS
 * context MS
   * ^short = "Referenz auf den Abteilungskontakt"
+  * ^comment = "Begründung des Must-Support: Basisinformation im Krankenhaus-Kontext"
   * reference 1..1 MS
 * effectiveDateTime MS
   * ^short = "Zeitpunkt der Verabreichung"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * effectivePeriod MS
   * ^short = "Zeitraum der Verabreichung"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
   * start MS
   * end MS
 * performer MS
   * actor MS
     * ^short = "Referenz auf die verabreichende Person"
+    * ^comment = "Begründung des Must-Support: Nachvollziehbarkeit"
     * reference 1..1 MS
+* reasonCode MS
+  * ^short = "Grund der Medikation (Referenz)"
+  * ^comment = "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können."
 * reasonReference MS
   * ^short = "Grund der Medikation (Referenz)"
+  * ^comment = "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können."
   * reference 1..1 MS
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"
+    * ^comment = "Begründung des Must-Support: Angabe zusätzlicher Informationen kann fachlich relevant sein"
 * dosage MS
   * ^short = "Dosierungsangaben"
+  * ^comment = "Begründung des Must-Support: Basisinformation. Zur vollständig strukturierten Abbildung der zahlreichen Möglichkeiten sind die hier mit Must-Support gekennzeichneten Unterelemente erforderlich gemäß Konsens der ISiK AG Medikation"
   * text MS
     * ^short = "Freitext-Dosierungsangabe"
   * site MS

@@ -11,33 +11,47 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
     ExtensionISiKMedicationRequestReplaces named medicationRequestReplaces 0..1 MS
 * extension[acceptedRisk]
   * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
-  * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
+  * ^comment = "Begründung des Must-Support: Folgeinformation der AMTS-Bewertung, sollte auch an nachfolgende Behandelnde übermittelbar sein
+
+  Hinweis: Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
   * valueString MS
 * extension[medikationsart]
   * ^short = "Therapieart der Medikation"
-  * ^comment = "Angabe Akut- oder Dauermedikation."
+  * ^comment = "Begründung des Must-Support: von der Fachseite gewünschte Angabe
+
+  Hinweis: Angabe Akut- oder Dauermedikation."
   * valueCoding
     * system MS
     * code MS
     * display MS
 * extension[behandlungsziel]
   * ^short = "Behandlungsziel (textuell)"
-  * ^comment = "Freitext-Beschreibung des Behandlungsziels."
+  * ^comment = "Begründung des Must-Support: von der Fachseite gewünschte Angabe
+
+  Hinweis: Freitext-Beschreibung des Behandlungsziels."
   * valueString MS
 * extension[medicationRequestReplaces]
   * ^short = "Welche Medikationsverordnung wird ersetzt?"
-  * ^comment = "FWelche Medikationsverordnung wird ersetzt?"
+  * ^comment = "Begründung des Must-Support: historische Nachvollziehbarkeit
+
+  Hinweis: FWelche Medikationsverordnung wird ersetzt?"
   * valueReference MS
     * reference MS
 * status MS
   * ^short = "Status der Verordnungsinformation"
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard"
 * intent MS
   * ^short = "Ziel der Verordnungsinformation"
-  * ^comment = "i.d.R. 'order'"
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard
+
+  Hinweis: i.d.R. 'order'"
 * doNotPerform ..0
+  * ^comment = "Begründung der Kardinalitätsänderung: Use Case für dieses Feld ist nicht im Scope"
 * medicationCodeableConcept MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
-  * ^comment = "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Hinweis: kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -55,25 +69,33 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * text MS
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
-  * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Hinweis: wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
   * reference 1..1 MS
 * subject MS
   * ^short = "Referenz auf den Patienten"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * subject only Reference(Patient)
   * reference 1..1 MS
 * encounter MS
   * ^short = "Referenz auf den Abteilungskontakt"
+  * ^comment = "Begründung des Must-Support: Basisinformation im Krankenhaus-Kontext"
   * reference 1..1 MS
 * authoredOn MS
   * ^short = "Erstellungsdatum der Verordnung"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * requester MS
   * ^short = "Referenz auf die verordnende Person"
+  * ^comment = "Begründung des Must-Support: Nachvollziehbarkeit"
   * reference 1..1 MS
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"
+    * ^comment = "Begründung des Must-Support: Angabe zusätzlicher Informationen kann fachlich relevant sein"
 * dosageInstruction MS
   * ^short = "Dosierungsangaben"
+  * ^comment = "Begründung des Must-Support: Basisinformation. Zur vollständig strukturierten Abbildung der zahlreichen Möglichkeiten sind die hier mit Must-Support gekennzeichneten Unterelemente erforderlich gemäß Konsens der ISiK AG Medikation"
   * text MS
     * ^short = "Freitext-Dosierungsanweisungen"
   * patientInstruction MS
@@ -207,8 +229,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * quantity MS
   * quantity only MedicationQuantity
     * ^short = "angeforderte Abgabemenge"
+    * ^comment = "Begründung des Must-Support: Basisinformation"
 * substitution MS
   * ^short = "Ersatz zulässig"
+  * ^comment = "Begründung des Must-Support: Alignment mit dem (E-)Rezept"
   * allowedBoolean MS
 
 Instance: ExampleISiKMedikationsVerordnung

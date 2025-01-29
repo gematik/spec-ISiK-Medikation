@@ -6,6 +6,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
 * obeys isik-med-1
 * code MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
+  * ^comment = "Begründung des Must-Support: grundlegende Information"
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -14,7 +15,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
       PZN 0..1 MS and
       ATC-DE 0..1 MS and
       SCT 0..1 MS
-    * ^comment = "Motivation: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden"
+    * ^comment = "Begründung des Must-Support: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden"
   * coding[PZN] only ISiKPZNCoding
     * ^patternCoding.system = $cs-pzn
   * coding[ATC-DE] only ISiKATCCoding
@@ -22,15 +23,19 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * coding[SCT] only ISiKSnomedCTCoding
     * ^patternCoding.system = $cs-sct
   * text MS
-    * ^comment = "Motivation: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden"
+    * ^comment = "Begründung des Must-Support: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden"
 * status 1..1 MS
   * ^short = "Status der Medikamenteninformation"
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard"
 * manufacturer MS
   * ^short = "Hersteller des Medikaments"
-  * ^comment = "Hier kann der tatsächliche Hersteller des Medikaments benannt werden, vornehmlich im Fall von Wirkstoffmischungen (Rezepturen), beispielsweise die Krankenhausapotheke. Zu beachten ist, dass die zulassende Organisation, wie sie z.B. in den Daten zur PZN benannt ist, nicht als Hersteller gilt."
+  * ^comment = "Begründung des Must-Support: Alignment mit KBV-Profilen
+
+  Hinweis: Hier kann der tatsächliche Hersteller des Medikaments benannt werden, vornehmlich im Fall von Wirkstoffmischungen (Rezepturen), beispielsweise die Krankenhausapotheke. Zu beachten ist, dass die zulassende Organisation, wie sie z.B. in den Daten zur PZN benannt ist, nicht als Hersteller gilt."
   * display 1..1 MS
 * form MS
   * ^short = "Abgabeform"
+  * ^comment = "Begründung des Must-Support: Basis-Information eines Medikaments"
 * form
   * coding MS
     * ^slicing.discriminator.type = #pattern
@@ -38,26 +43,30 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
     * ^slicing.rules = #open
   * coding contains
       EDQM 0..1 MS
-    * ^comment = "Motivation: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene"    
+    * ^comment = "Begründung des Must-Support: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene"
   * coding[EDQM] from $vs-edqm-doseform (required)
   * coding[EDQM] only ISiKCoding
 * amount MS
-  * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
+  * ^comment = "Begründung des Must-Support: Bei einer Medikation MUSS die Menge dokumentierbar sein"
   * ^short = "Menge"
   * numerator 1.. MS
-    * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
-  * numerator only MedicationQuantity  
+    * ^comment = "Begründung des Must-Support: Bei einer Medikation MUSS die Menge dokumentierbar sein"
+  * numerator only MedicationQuantity
   * denominator 1.. MS
-    * ^comment = "Motivation: Bei einer Medikation MUSS die Menge angegeben werden" 
+    * ^comment = "Begründung des Must-Support: Bei einer Medikation MUSS die Menge dokumentierbar sein"
   * denominator only MedicationQuantity
 * ingredient MS
   * ^short = "Informationen zu Bestandteilen (Rezeptur)"
+  * ^comment = "Begründung des Must-Support: Wirkstoff-Rezepturen müssen dokumentierbar sein"
   * extension MS
   * extension contains $ext-wirkstofftyp named wirkstofftyp 0..1 MS
     * ^short = "Wirkstofftyp"
-    * ^comment = "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?"
+    * ^comment = "Begründung des Must-Support: Alignment mit den MII-Profilen
+
+    Hinweis: Hiermit kann geklärt werden, ob es sich um eine Angabe zum Wirkstoff oder zum exakten Inhaltsstoff (z.B. Salze) handelt."
   * itemCodeableConcept MS
     * ^short = "Bestandteil in codierter Form oder ggf. als Freitext"
+    * ^comment = "Begründung des Must-Support: Der Bestandteil muss eindeutig benannt sein"
     * coding MS
       * ^slicing.discriminator.type = #pattern
       * ^slicing.discriminator.path = "$this"
@@ -79,20 +88,27 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
   * itemReference MS
     * reference 1..1 MS
     * ^short = "Bestandteil (Referenz auf ein anderes Medikament)"
+    * ^comment = "Begründung des Must-Support: Der Bestandteil muss eindeutig benannt sein"
   * isActive MS
     * ^short = "handelt es sich um einen aktiven Bestandteil?"
+    * ^comment = "Begründung des Must-Support: Wird eine vollständige Rezeptur dokumentiert, muss erkennbar sein, welches die Wirkstoffe sind"
   * strength MS
     * ^short = "Stärke"
+    * ^comment = "Begründung des Must-Support: Basisinformation in Rezepturen"
     * numerator 1.. MS
     * numerator only MedicationQuantity
     * denominator 1.. MS
     * denominator only MedicationQuantity
 * batch MS
   * ^short = "Angaben zur Charge"
-  * ^comment = "Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung."
+  * ^comment = "Begründung des Must-Support: erforderlich zur Dokumentation der Chargennummer
+
+  Hinweis: Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung."
   * lotNumber MS
     * ^short = "Chargennummer"
-    * ^comment = "Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (\"STELLEN\") eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen \"STELLEN\" in das hierbeschirebene Datenfeld eingetragen werden."
+    * ^comment = "Begründung des Must-Support: Therapiesicherheit und Nachvollziehbarkeit
+
+    Hinweis: Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (\"STELLEN\") eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen \"STELLEN\" in das hierbeschirebene Datenfeld eingetragen werden."
 
 Invariant: isik-med-1
 Description: "Medikamenten-Code, -Bezeichnung oder Inhaltsstoffe müssen angegeben werden."
