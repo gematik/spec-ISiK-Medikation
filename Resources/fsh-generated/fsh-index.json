@@ -21,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "ISiKCapabilityStatementAMTS.fsh",
     "startLine": 1,
-    "endLine": 858
+    "endLine": 864
   },
   {
     "outputFile": "CapabilityStatement-ISiKCapabilityStatementMedikationInformation.json",
@@ -29,7 +29,7 @@
     "fshType": "Instance",
     "fshFile": "ISiKCapabilityStatementMedikationInformation.fsh",
     "startLine": 1,
-    "endLine": 494
+    "endLine": 500
   },
   {
     "outputFile": "CapabilityStatement-ISiKCapabilityStatementMedikationVerabreichung.json",
@@ -37,7 +37,7 @@
     "fshType": "Instance",
     "fshFile": "ISiKCapabilityStatementMedikationVerabreichung.fsh",
     "startLine": 1,
-    "endLine": 411
+    "endLine": 417
   },
   {
     "outputFile": "CapabilityStatement-ISiKCapabilityStatementMedikationVerordnung.json",
@@ -45,7 +45,7 @@
     "fshType": "Instance",
     "fshFile": "ISiKCapabilityStatementMedikationVerordnung.fsh",
     "startLine": 1,
-    "endLine": 425
+    "endLine": 431
   },
   {
     "outputFile": "CodeSystem-ISiKMedikationsartCS.json",

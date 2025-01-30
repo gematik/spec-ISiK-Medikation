@@ -11,16 +11,17 @@ Da es sich um eine Zusammenfassung handelt, werden nur folgende Use Case und daf
 * Allgemeine und intuitiv Adverse Use Cases. Diese gilt es zu vermeiden.
 * In den Funktionen werde triviale Suchen einer Ressoruce anhand ihrer eigenen Properties nicht dargestelt, z.B. Suche einer Ressoruce anhand der ID, Name, Code usw.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/amts_usecases.svg" alt="AMTS Use Cases" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/diagrams/amts_usecases.svg" alt="AMTS Use Cases" width="90%"/>
 
 **Anwendungsfälle AMTS**
 
 
 ### Interaktionen In der Versorgung
 
-Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem [Auszug des IOP-Arbeitskreises](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug) dargestellt, welcher der Erarbeitung diese Implemetierungsleitfadens zugrunde lag. Weitere Prozesse und Details finden sich im [Anhang](https://simplifier.net/guide/isik-medikation-v4/ImplementationGuide-markdown-UebergreifendeUseCases-AMTS#Anhang-I-Auszug).
+Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem Positionspapier [Digital gestützte Medikationsprozesse](https://www.ina.gematik.de/fileadmin/Arbeitskreisdokumente/Ergebnisdokumente/Analyse_der_Medikationsprozesse/Positionspapier_Analyse_der_Medikationsprozesse.pdf) aus dem Arbeitskreis *Analyse der Medikationsprozesse* dargestellt. 
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung" width="90%"/>
+
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/AMTS_AuszugAK/Versorgungsprozess2.jpg" alt="Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung" width="90%"/>
 
 **Beispielprozess: Sturz mit stationärer Behandlung und hausärztlicher Weiterbehandlung**
 
@@ -29,11 +30,11 @@ Im Folgenden ist ein beispielhafter Versorgungsprozess aus dem [Auszug des IOP-A
 
 Im Folgenden sind exemplarisch die Interaktionen für einen AMTS Pull und -Push im Sinne eines Businessprozesses modelliert.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_pull.svg" class="center" alt="AMTS Pull" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/diagrams/AMTS_pull.svg" class="center" alt="AMTS Pull" width="90%"/>
 
 **AMTS Pull**
 
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/AMTS_push.svg" class="center" alt="AMTS Push" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/diagrams/AMTS_push.svg" class="center" alt="AMTS Push" width="90%"/>
 
 **AMTS Push**

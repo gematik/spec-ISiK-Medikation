@@ -14,6 +14,6 @@ Darüber hinaus gelten in diesem Modul folgende Datenobjekt-spezifische Festlegu
 
 Die Kern-Zusammenhänge der Datenobjekte zeigt das (stark vereinfacht dargestellte) Diagramm:
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/simple_infomodel.svg" class="center" alt="Vereinfachtes Informationsmodell" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/diagrams/simple_infomodel.svg" class="center" alt="Vereinfachtes Informationsmodell" width="90%"/>
 
 **Vereinfachtes Informationsmodell**

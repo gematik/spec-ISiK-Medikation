@@ -8,5 +8,5 @@ Im Folgenden wird ein grafischer Überblick über Anwendungsfälle (Use Cases) g
 
 **Use Case Digramm**
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/usecases.svg" alt="Use Case Diagrams" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/diagrams/usecases.svg" alt="Use Case Diagrams" width="90%"/>
 
