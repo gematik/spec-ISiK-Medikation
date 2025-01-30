@@ -34,7 +34,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * ^short = "Welche Medikationsverordnung wird ersetzt?"
   * ^comment = "Begründung des Must-Support: historische Nachvollziehbarkeit
 
-  Hinweis: FWelche Medikationsverordnung wird ersetzt?"
+  Hinweis: Welche Medikationsverordnung wird ersetzt?"
   * valueReference MS
     * reference MS
 * status MS
@@ -91,20 +91,23 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * reference 1..1 MS
 * reasonCode MS
   * ^short = "Grund der Medikation (codiert)"
-  * ^comment = "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
-  
-  Begründung zu Must-Support: Konsolidierung mit MII."
+  * ^comment = "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
+Begründung zu Must-Support: Konsolidierung mit MII Profil: https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest"
   * coding MS
-    * system 1..1 MS
-    * code 1..1 MS
+    * ^comment = "Begründung des Must-Support: Falls der Grund kodierbar ist, sollte er auch kodiert werden."
+    * system 1.. MS
+      * ^comment = "Begründung des Must-Support und Kardinalität: Ein Coding Element benötigt immer ein System um die Bedeutung des Codes zu definieren."
+    * code 1.. MS
+      * ^comment = "Begründung des Must-Support und Kardinalität: Ein Coding Element benötigt immer ein Code um die Bedeutung des Codes zu definieren."
     * display MS
+      * ^comment = "Begründung des Must-Support: Ein Display Element ist für die Lesbarkeit der Information notwendig."
   * text MS
 * reasonReference MS
   * ^short = "Grund der Medikation (Referenz)"
   * ^comment = "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
-  
   Begründung zu Must-Support: Konsolidierung mit MII."
   * reference 1..1 MS
+    * ^comment = "Begründung des Must-Support: Referenz auf die Diagnose oder Untersuchung, die die Medikation begründet."
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"

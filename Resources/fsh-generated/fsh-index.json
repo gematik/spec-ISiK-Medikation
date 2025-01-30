@@ -188,16 +188,16 @@
     "fshName": "ExampleISiKMedikationsVerordnung",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsVerordnung.fsh",
-    "startLine": 254,
-    "endLine": 277
+    "startLine": 257,
+    "endLine": 280
   },
   {
     "outputFile": "MedicationRequest-ExampleISiKMedikationsVerordnung2.json",
     "fshName": "ExampleISiKMedikationsVerordnung2",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsVerordnung.fsh",
-    "startLine": 279,
-    "endLine": 302
+    "startLine": 282,
+    "endLine": 305
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformation1.json",
@@ -413,7 +413,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikationsVerordnung.fsh",
     "startLine": 1,
-    "endLine": 252
+    "endLine": 255
   },
   {
     "outputFile": "StructureDefinition-MedicationQuantity.json",
