@@ -9,6 +9,7 @@ Version: 3.0.4
 Datum: 20.11.2024
 
 * #Entfernen der MS-Flag für .id, da irreführend (Analog in Stufe 4.0.0) https://github.com/gematik/spec-ISiK-Medikation/pull/137
+* `change` Die Verbindlichkeit des Suchparameters `subject` wurde von SHALL auf MAY reduziert, da der Suchparameter `patient` für ISiK-Zwecke ausreichend ist. Die Verbindlichkeit von Include und RevInclude wurde von SHALL auf MAY reduziert, außer bei den Parameter `patient` und `encounter`, da diese für ISiK-Zwecke ausreichend sind. https://github.com/gematik/spec-ISiK-Medikation/pull/157
 * Update ISiK Basismodul Dependency
 
 ----
@@ -18,6 +19,7 @@ Version: 3.0.3
 Datum: 03.07.2024
 
 * Entfernen von MS von MedicationStatement.partOf (Analog in Stufe 4.0.0-rc2) https://github.com/gematik/spec-ISiK-Medikation/pull/130
+
 
 ----
 
