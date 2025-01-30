@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "url": "https://gematik.de/fhir/isik/ImplementationGuide/ISiK-Medikation",
-  "version": "4.0.1",
+  "version": "4.0.0",
   "name": "Implementierungsleitfaden ISiK-Medikation",
   "status": "active",
   "fhirVersion": [
@@ -64,11 +64,6 @@
                 {
                   "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS/AMTS_Profile.md",
                   "title": "Profile",
-                  "generation": "markdown"
-                },
-                {
-                  "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS/AMTS_Apx_AuszugAK.md",
-                  "title": "Anhang I - Auszug ",
                   "generation": "markdown"
                 }
               ]
