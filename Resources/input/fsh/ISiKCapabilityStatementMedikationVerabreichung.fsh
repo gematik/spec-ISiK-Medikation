@@ -6,7 +6,12 @@ Usage: #definition
 * title = "ISiK CapabilityStatement Medikation Server - Medikationsverabreichung"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://www.gematik.de"
-* description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein ISiK-konformes System unterstützen muss um das Bestätigungsverfahren des Moduls 'Medikation', Bereich 'Medikationsverabreichung' zu bestehen."
+* description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein ISiK-konformes System unterstützen muss um das Bestätigungsverfahren des Moduls 'Medikation', Bereich 'Medikationsverabreichung' zu bestehen.
+  
+**HISTORIE:**    
+* `change` Die Verbindlichkeit des Suchparameters `subject` wurde von SHALL auf MAY reduziert, da der Suchparameter `patient` für ISiK-Zwecke ausreichend ist.   
+* `change` Die Verbindlichkeit von Include und RevInclude wurde von SHALL auf MAY reduziert, außer bei den Parameter `patient` und `encounter`, da diese für ISiK-Zwecke ausreichend sind.  
+"
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -276,7 +281,7 @@ Usage: #definition
 * rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
 * rest.resource[=].searchRevInclude[+] = "Encounter:subject"
 * rest.resource[=].searchRevInclude[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].type = #Encounter
@@ -318,7 +323,7 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].extension.valueCode = #MAY
 * rest.resource[=].searchParam[=].name = "subject"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-subject"
 * rest.resource[=].searchParam[=].type = #reference
@@ -352,13 +357,13 @@ Usage: #definition
 * rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
 * rest.resource[=].searchInclude[+] = "Encounter:subject"
 * rest.resource[=].searchInclude[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchInclude[+] = "Encounter:part-of"
 * rest.resource[=].searchInclude[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchRevInclude = "Encounter:part-of"
 * rest.resource[=].searchRevInclude[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].type = #Practitioner
