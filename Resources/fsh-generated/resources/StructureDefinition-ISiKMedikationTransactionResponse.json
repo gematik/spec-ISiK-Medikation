@@ -7,11 +7,7 @@
   "title": "ISiK Medikation TransactionBundle-Response",
   "status": "active",
   "experimental": false,
-<<<<<<< HEAD
-  "date": "2024-12-12",
-=======
-  "date": "2025-01-08",
->>>>>>> 7e279a50b8cefb4c83eb871cf1144bc6e8a631aa
+  "date": "2025-01-30",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil definiert die Server-Antwort auf Transaktions-Bundles im Rahmen von ISiK-Medikations-Szenarien.",
   "fhirVersion": "4.0.1",

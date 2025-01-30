@@ -8,11 +8,7 @@
   "url": "https://gematik.de/fhir/isik/ValueSet/SctRouteOfAdministration",
   "experimental": false,
   "publisher": "gematik GmbH",
-<<<<<<< HEAD
-  "date": "2024-12-12",
-=======
-  "date": "2025-01-08",
->>>>>>> 7e279a50b8cefb4c83eb871cf1144bc6e8a631aa
+  "date": "2025-01-30",
   "compose": {
     "include": [
       {
