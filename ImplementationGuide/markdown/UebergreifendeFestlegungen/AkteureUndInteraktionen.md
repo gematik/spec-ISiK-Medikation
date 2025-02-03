@@ -16,6 +16,6 @@ Für jeden dieser Bereiche wurden jeweils drei Akteure identifiziert, die in ein
 
 Die Interaktionen sind somit in allen drei Bereichen äquivalent:
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/Interaktionen.svg" class="center" alt="Interaktionen" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/diagrams/Interaktionen.svg" class="center" alt="Interaktionen" width="90%"/>
 
 **Interaktionen der FHIR Akteure**

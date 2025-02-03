@@ -65,11 +65,6 @@
                   "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS/AMTS_Profile.md",
                   "title": "Profile",
                   "generation": "markdown"
-                },
-                {
-                  "nameUrl": "ImplementationGuide/markdown/UseCases/AMTS/AMTS_Apx_AuszugAK.md",
-                  "title": "Anhang I - Auszug ",
-                  "generation": "markdown"
                 }
               ]
             }

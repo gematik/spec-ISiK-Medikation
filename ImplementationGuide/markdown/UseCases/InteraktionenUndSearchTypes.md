@@ -16,7 +16,7 @@ Für jeden dieser Bereiche wurden jeweils drei Akteure identifiziert, die in ein
 
 Die Interaktionen sind somit in allen drei Bereichen äquivalent:
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/Interaktionen.svg" class="center" alt="Interkationen" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/diagrams/Interaktionen.svg" class="center" alt="Interkationen" width="90%"/>
 
 **Interaktionen der FHIR Akteure**
 
@@ -29,7 +29,7 @@ Da es sich um eine Zusammenfassung handelt, gelten Bedingungen für die gezeigte
 * Ein Doppelpunkt meint den Zugriff auf ein Element des beinhaltenden Profils.
 * Das Elemente hinter einem Doppelpunkt besitzt wiederum die Suchparameter (alle Must-Support Elemente!), die hier in die Suchsyntax zu inkludieren sind.
 
-<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/rc/main-stufe-4/Material/images/diagrams/search_includes.svg" class="center" alt="Searchtypes" width="90%"/>
+<img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/diagrams/search_includes.svg" class="center" alt="Searchtypes" width="90%"/>
 
 **Inkludierte Suchparameter nach Capability Statement**
 
