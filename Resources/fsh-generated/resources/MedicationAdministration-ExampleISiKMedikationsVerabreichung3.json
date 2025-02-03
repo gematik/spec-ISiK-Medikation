@@ -41,7 +41,7 @@
   },
   "status": "completed",
   "medicationReference": {
-    "reference": "Medication-Read-Example"
+    "reference": "Medication/ExampleISiKMedikament9"
   },
   "subject": {
     "reference": "Patient/PatientinMusterfrau"

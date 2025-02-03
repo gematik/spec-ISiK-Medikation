@@ -145,7 +145,7 @@ Instance: ExampleISiKMedikationsVerabreichung3
 InstanceOf: ISiKMedikationsVerabreichung
 Usage: #example
 * status = #completed
-* medicationReference = Reference(Medication-Read-Example)
+* medicationReference = Reference(ExampleISiKMedikament9)
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Fachabteilungskontakt"
 * context.identifier.value = "0123456789"
@@ -170,7 +170,7 @@ Instance: ExampleISiKMedikationsVerabreichung4
 InstanceOf: ISiKMedikationsVerabreichung
 Usage: #example
 * status = #completed
-* medicationReference = Reference(Medication-Read-Example)
+* medicationReference = Reference(ExampleISiKMedikament2)
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Fachabteilungskontakt"
 * context.identifier.value = "0123456789"
