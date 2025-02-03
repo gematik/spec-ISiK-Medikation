@@ -122,6 +122,7 @@ Usage: #example
   * system = $cs-atc-de
   * code = #V03AB23
   * display = "Acetylcystein"
+  * version = "2024"
 * status = #active
 
 Instance: ExampleISiKMedikament2
@@ -141,6 +142,7 @@ Usage: #example
   * itemCodeableConcept.coding
     * system = $cs-atc-de
     * code = #L01DB01
+    * version = "2024"
     * display = "Doxorubicin"
   * isActive = true
   * strength
@@ -217,6 +219,7 @@ Usage: #example
     * system = $cs-atc-de
     * code = #M02AA13
     * display = "Ibuprofen"
+    * version = "2024"
   * isActive = true
   * strength
     * numerator
@@ -234,6 +237,7 @@ Usage: #example
     * system = $cs-atc-de
     * code = #N02BE01
     * display = "Paracetamol"
+    * version = "2024"
   * isActive = true
   * strength
     * numerator
@@ -263,6 +267,7 @@ Usage: #example
     * system = $cs-atc-de
     * code = #N02BE01
     * display = "Paracetamol"
+    * version = "2024"
   * isActive = true
   * strength
     * numerator
@@ -302,6 +307,7 @@ Usage: #example
     * system = $cs-atc-de
     * code = #L01CD01
     * display = "Paclitaxel"
+    * version = "2024"
   * isActive = true
   * strength
     * numerator
@@ -319,6 +325,7 @@ Usage: #example
     * system = $cs-atc-de
     * code = #B05BA11
     * display = "Glucose"
+    * version = "2024"
   * isActive = false
   * strength
     * numerator
@@ -346,6 +353,7 @@ Usage: #example
     * system = $cs-atc-de
     * code = #L01CD01
     * display = "Paclitaxel"
+    * version = "2024"
   * isActive = true
   * strength
     * numerator
@@ -363,6 +371,7 @@ Usage: #example
     * system = $cs-atc-de
     * code = #B05BA11
     * display = "Glucose"
+    * version = "2024"
   * isActive = false
   * strength
     * numerator
