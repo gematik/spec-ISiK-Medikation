@@ -1,6 +1,0 @@
-{ 
-  "suppress" : [
-    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
-    "SD_PATH_SLICING_DEPRECATED"
-  ]
-}
