@@ -55,7 +55,7 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * reference 1..1 MS
 * reasonReference MS
   * ^short = "Grund der Medikation (Referenz)"
-  * ^comment = "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. .reasonReference MUSS weiterhin interpretiert werden können.
+  * ^comment = "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Ein System KANN demnach statt .reasonReference auch .reasonCode in der Ausgabe verwenden. .reasonReference MUSS aber weiterhin interpretiert werden können.
 
   Begründung zu Must-Support: Konsolidierung mit MII."
   * reference 1..1 MS
