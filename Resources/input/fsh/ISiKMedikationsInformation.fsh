@@ -56,7 +56,7 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * ^short = "Datum der Feststellung/des Bekanntwerdens der MedikationsInformation"
 * reasonCode MS
   * ^short = "Grund der Medikation (codiert)"
-  * ^comment = "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
+  * ^comment = "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
 
   Begründung zu Must-Support: Konsolidierung mit MII."
   * coding MS
