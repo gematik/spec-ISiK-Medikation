@@ -7,6 +7,13 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 ----
 Version: 2.0.4
 
+Datum: 13.02.2025
+
+
+
+----
+Version: 2.0.4
+
 Datum: 13.11.2024
 
 - Update Basismodul Dependency -> 2.0.9
