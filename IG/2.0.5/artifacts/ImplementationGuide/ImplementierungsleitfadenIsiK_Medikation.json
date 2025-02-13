@@ -1,0 +1,115 @@
+{
+  "resourceType": "ImplementationGuide",
+  "url": "https://gematik.de/fhir/ISiK/v2/Medikation/ImplementationGuide/ISiK-Medikation",
+  "name": "Implementierungsleitfaden ISiK-Modul Medikation",
+  "status": "draft",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "packageId": "0.0.1",
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Patient/test"
+        }
+      }
+    ],
+    "page": {
+      "nameUrl": "ImplementationGuide/markdown/Einfuehrung.md",
+      "title": "Einführung",
+      "generation": "markdown",
+      "page": [
+        {
+          "nameUrl": "ImplementationGuide/markdown/ReleaseNotes.md",
+          "title": "Release Notes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide/markdown/Motivation.md",
+          "title": "Motivation",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen.md",
+          "title": "Übergreifende Festlegungen",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide/markdown/BestaetigungsrelevanteSysteme.md",
+              "title": "Bestätigungsrelevante Systeme",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Kompatibilitaet.md",
+              "title": "Kompatibilität",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/RestApi.md",
+              "title": "REST-API",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/AkteureUndInteraktionen.md",
+              "title": "Akteure und Interaktionen",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "ImplementationGuide/markdown/Datenobjekte.md",
+          "title": "Datenobjekte",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide/markdown/CapabilityStatement.md",
+              "title": "CapabilityStatement",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_MedikationsInformation.md",
+              "title": "MedikationsInformation",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_MedikationsListe.md",
+              "title": "MedikationsListe",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_MedikationsVerordnung.md",
+              "title": "MedikationsVerordnung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_MedikationsVerabreichung.md",
+              "title": "MedikationsVerabreichung",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_Medikament.md",
+              "title": "Medikament",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_Bundle_MedikationTransaction.md",
+              "title": "Bundle MedikationTransaction",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte_Bundle_MedikationTransactionResponse.md",
+              "title": "Bundle MedikationTransactionResponse",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "ImplementationGuide/markdown/Terminologie.md",
+          "title": "Terminologie"
+        }
+      ]
+    }
+  }
+}
