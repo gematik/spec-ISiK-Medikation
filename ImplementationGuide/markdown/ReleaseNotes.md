@@ -9,7 +9,7 @@ Version: 2.0.5
 
 Datum: 13.02.2025
 
-* ´improve´ ´test modifying´ Klarstellung zum Umgang mit Freitext-Dosierungsinformationen für empfangende Systeme https://github.com/gematik/spec-ISiK-Medikation/pull/165/commits/7b86f2d27d4ea36691fe8c49271c46892ba6b4db 
+* `improve` `test modifying` Klarstellung zum Umgang mit Freitext-Dosierungsinformationen für empfangende Systeme https://github.com/gematik/spec-ISiK-Medikation/pull/165/commits/7b86f2d27d4ea36691fe8c49271c46892ba6b4db 
 
 ----
 Version: 2.0.4
