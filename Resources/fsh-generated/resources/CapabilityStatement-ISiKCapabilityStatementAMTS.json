@@ -816,7 +816,7 @@
               ],
               "name": "_profile",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
-              "type": "token"
+              "type": "uri"
             },
             {
               "extension": [
@@ -1025,7 +1025,7 @@
               ],
               "name": "_profile",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
-              "type": "token"
+              "type": "uri"
             },
             {
               "extension": [
