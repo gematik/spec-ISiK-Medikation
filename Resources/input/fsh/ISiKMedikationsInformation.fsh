@@ -108,7 +108,7 @@ Zur sekunden-genauen Angabe der Verabreichung eines Medikaments (im Sinne einer 
   
   Festlegung zur Nutzung: 
   An dieser Stelle MUSS eine lediglich Datums-genauen Angabe (einschließlich Granularität Jahr, Monat oder Tag für .effectiveDateTime oder .effectivePeriod auf Datums-Ebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime) seitens eines bestätigungsrelevanten Systems unterstützt werden.
-  Für sekunden-genauen Angaben zur Verabreichung eines Medikaments an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. 
+  Für sekunden-genaue Angaben zur Verabreichung eines Medikaments an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. 
   "  
   * start MS
   * end MS
