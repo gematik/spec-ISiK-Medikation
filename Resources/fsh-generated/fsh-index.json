@@ -21,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "ISiKCapabilityStatementAMTS.fsh",
     "startLine": 1,
-    "endLine": 864
+    "endLine": 865
   },
   {
     "outputFile": "CapabilityStatement-ISiKCapabilityStatementMedikationInformation.json",
@@ -53,7 +53,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codeSystems.fsh",
     "startLine": 1,
-    "endLine": 7
+    "endLine": 8
   },
   {
     "outputFile": "Encounter-Fachabteilungskontakt.json",
@@ -188,16 +188,16 @@
     "fshName": "ExampleISiKMedikationsVerordnung",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsVerordnung.fsh",
-    "startLine": 245,
-    "endLine": 268
+    "startLine": 264,
+    "endLine": 287
   },
   {
     "outputFile": "MedicationRequest-ExampleISiKMedikationsVerordnung2.json",
     "fshName": "ExampleISiKMedikationsVerordnung2",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsVerordnung.fsh",
-    "startLine": 270,
-    "endLine": 293
+    "startLine": 289,
+    "endLine": 312
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformation1.json",
@@ -413,7 +413,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikationsVerordnung.fsh",
     "startLine": 1,
-    "endLine": 243
+    "endLine": 262
   },
   {
     "outputFile": "StructureDefinition-MedicationQuantity.json",
