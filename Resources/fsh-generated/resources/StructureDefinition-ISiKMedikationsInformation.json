@@ -6,7 +6,7 @@
   "name": "ISiKMedikationsInformation",
   "status": "active",
   "experimental": false,
-  "date": "2025-02-13",
+  "date": "2025-02-24",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",

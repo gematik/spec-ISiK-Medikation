@@ -6,7 +6,7 @@
   "experimental": false,
   "version": "3.0.5",
   "publisher": "gematik GmbH",
-  "date": "2025-02-13",
+  "date": "2025-02-24",
   "implementationGuide": [
     "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.5"
   ],
