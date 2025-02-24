@@ -56,6 +56,9 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * ^short = "Datum der Feststellung/des Bekanntwerdens der MedikationsInformation"
 * reasonCode MS
   * ^short = "Grund der Medikation (codiert)"
+  * ^comment = "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
+
+  Begründung zu Must-Support: Konsolidierung mit MII."
   * coding MS
     * system 1..1 MS
     * code 1..1 MS
@@ -63,6 +66,9 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * text MS
 * reasonReference MS
   * ^short = "Grund der Medikation (Referenz)"
+  * ^comment = "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
+
+  Begründung zu Must-Support: Konsolidierung mit MII."
   * reference 1..1 MS
 * note MS
   * text MS
@@ -71,6 +77,13 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * ^short = "Dosierungsangaben"
   * text MS
     * ^short = "Freitext-Dosierungsanweisungen"
+    * ^comment = "Festlegung zum Must-Support: Die Verarbeitung MUSS unterstützt werden, indem empfangende Systeme  die Freitext-Dosierungsinformation entweder direkt in der Textform persistieren, ODER die Informationen in eine alternative (strukturierte) Form umwandeln (ggf. unter Einwirkung geeigneter Nutzer). Im letzteren Fall KANN auf eine Persistierung in Textform verzichtet werden, um Inkonsistenzen zu vermeiden.
+
+    Ein System KANN jedoch strukturierte Dosierungsinformationen in Freitext-Dosierungsinformationen umwandeln, um sie in einem Dokument oder einer Benutzeroberfläche anzuzeigen - dabei ist auf Konsistenzwahrung zu allen strukturierten Elementen zu achten.
+
+    Hinweis: Diese Festlegung folgt und spezifiziert folgende MS-Festlegung aus dem [ISiK Basismodul](https://simplifier.net/guide/isik-basis-401/Einfuehrung/UebergreifendeFestlegungen/UebergreifendeFestlegungen_Must-Support-Flags.page.md?version=current): 'Systeme KÖNNEN es darüber hinaus ermöglichen, dass die jeweiligen Informationen vom Anwender ergänzt oder editiert werden.'
+
+    Zum Beispiel könnte ein empfangendes System die Freitext-Dosierungsinformation in strukturierte Dosierungsinformation umwandeln, um sie in einer Medikationsverwaltung anzuzeigen oder später zu exponieren. Geht es zum Beispiel um eine Angabe zu Tageszeiten der Einnahme in der freitextlichen Dosierungsinformation als 'Morgens, Mittags, Abends', so könnte das empfangende System diese Angabe in strukturierte Dosierungsinformationen umwandeln, die die Einnahmezeiten in kodierter Form mit 'MORN', 'NOON', 'EVE' deklariert."
   * patientInstruction MS
     * ^short = "besondere Anweisungen für den Patienten"
   * timing MS

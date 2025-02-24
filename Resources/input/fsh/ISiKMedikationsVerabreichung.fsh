@@ -55,6 +55,9 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * reference 1..1 MS
 * reasonReference MS
   * ^short = "Grund der Medikation (Referenz)"
+  * ^comment = "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Ein System KANN demnach statt .reasonReference auch .reasonCode in der Ausgabe verwenden. .reasonReference MUSS aber weiterhin interpretiert werden können.
+
+  Begründung zu Must-Support: Konsolidierung mit MII."
   * reference 1..1 MS
 * note MS
   * text MS
@@ -63,6 +66,13 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
   * ^short = "Dosierungsangaben"
   * text MS
     * ^short = "Freitext-Dosierungsangabe"
+    * ^comment = "Festlegung zum Must-Support: Die Verarbeitung MUSS unterstützt werden, indem empfangende Systeme  die Freitext-Dosierungsinformation entweder direkt in der Textform persistieren, ODER die Informationen in eine alternative (strukturierte) Form umwandeln (ggf. unter Einwirkung geeigneter Nutzer). Im letzteren Fall KANN auf eine Persistierung in Textform verzichtet werden, um Inkonsistenzen zu vermeiden.
+
+    Ein System KANN jedoch strukturierte Dosierungsinformationen in Freitext-Dosierungsinformationen umwandeln, um sie in einem Dokument oder einer Benutzeroberfläche anzuzeigen - dabei ist auf Konsistenzwahrung zu allen strukturierten Elementen zu achten.
+
+    Hinweis: Diese Festlegung folgt und spezifiziert folgende MS-Festlegung aus dem [ISiK Basismodul](https://simplifier.net/guide/isik-basis-401/Einfuehrung/UebergreifendeFestlegungen/UebergreifendeFestlegungen_Must-Support-Flags.page.md?version=current): 'Systeme KÖNNEN es darüber hinaus ermöglichen, dass die jeweiligen Informationen vom Anwender ergänzt oder editiert werden.' 
+
+    Zum Beispiel kann die textuelle Information '1L Infusion mit Rate 50ml/h' in eine entsprechende, strukturierte Form überführt werden - d.h. in die Angabe von 'dose' und 'rateQuantity'."
   * site MS
     * ^short = "Körperstelle der Verabreichung"
     * coding MS
