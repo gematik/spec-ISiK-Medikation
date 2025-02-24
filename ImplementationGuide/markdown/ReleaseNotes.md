@@ -22,6 +22,7 @@ Datum: tbd
 * `improve` `documentation`Korrektur der Description & Status des MedicationQuantity Profils https://github.com/gematik/spec-ISiK-Medikation/pull/141
 * `improve` `documentation`Formulierungsänderung zur Nutzung von Profilen aus der Basis https://github.com/gematik/spec-ISiK-Medikation/pull/158
 * `improve` `documentation` Dokumentation für MS-Flags https://github.com/gematik/spec-ISiK-Medikation/pull/139
+* `improve` `documentation` Hinweis zur Kontextherstellung
 
 
 ----
