@@ -1,10 +1,15 @@
 {
-  "updated": "2024-03-06T13:41:40.2246937+01:00",
+  "updated": "2025-01-22T16:34:44.834184+01:00",
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1",
-    "de.basisprofil.r4": "1.5.0-ballot",
-    "hl7.fhir.uv.ips": "1.0.0",
-    "de.gematik.isik-basismodul": "4.0.0"
+    "hl7.fhir.uv.ips": "1.1.0",
+    "hl7.terminology.r4": "5.0.0",
+    "fhir.dicom": "2022.4.20221006",
+    "de.gematik.isik-basismodul": "4.0.1",
+    "de.basisprofil.r4": "1.5.0",
+    "hl7.fhir.uv.subscriptions-backport.r4": "1.1.0"
   },
-  "missing": {}
+  "missing": {
+    "hl7.fhir.r4.core": "4.0.0"
+  }
 }

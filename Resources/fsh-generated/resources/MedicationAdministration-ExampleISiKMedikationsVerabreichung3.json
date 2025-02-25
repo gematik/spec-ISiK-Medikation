@@ -32,16 +32,16 @@
     "route": {
       "coding": [
         {
-          "code": "255560000",
-          "system": "http://snomed.info/sct",
-          "display": "Intravenous"
+          "code": "20045000",
+          "system": "http://standardterms.edqm.eu",
+          "display": "Intravenous use"
         }
       ]
     }
   },
   "status": "completed",
   "medicationReference": {
-    "reference": "Medication-Read-Example"
+    "reference": "Medication/ExampleISiKMedikament9"
   },
   "subject": {
     "reference": "Patient/PatientinMusterfrau"

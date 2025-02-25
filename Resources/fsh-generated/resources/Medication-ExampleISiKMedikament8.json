@@ -27,7 +27,8 @@
           {
             "system": "http://fhir.de/CodeSystem/bfarm/atc",
             "code": "L01CD01",
-            "display": "Paclitaxel"
+            "display": "Paclitaxel",
+            "version": "2024"
           }
         ]
       },
@@ -53,7 +54,8 @@
           {
             "system": "http://fhir.de/CodeSystem/bfarm/atc",
             "code": "B05BA11",
-            "display": "Glucose"
+            "display": "Glucose",
+            "version": "2024"
           }
         ]
       },

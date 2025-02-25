@@ -106,7 +106,7 @@
         "path": "MedicationRequest.extension",
         "sliceName": "medicationRequestReplaces",
         "short": "Welche Medikationsverordnung wird ersetzt?",
-        "comment": "Begründung des Must-Support: historische Nachvollziehbarkeit\n\n  Hinweis: FWelche Medikationsverordnung wird ersetzt?",
+        "comment": "Begründung des Must-Support: historische Nachvollziehbarkeit\n\n  Hinweis: Welche Medikationsverordnung wird ersetzt?",
         "min": 0,
         "max": "1",
         "type": [
@@ -333,6 +333,58 @@
         "mustSupport": true
       },
       {
+        "id": "MedicationRequest.reasonCode",
+        "path": "MedicationRequest.reasonCode",
+        "short": "Grund der Medikation (codiert)",
+        "comment": "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.\nBegründung zu Must-Support: Konsolidierung mit MII Profil: https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonCode.coding",
+        "path": "MedicationRequest.reasonCode.coding",
+        "comment": "Begründung des Must-Support: Falls der Grund kodierbar ist, sollte er auch kodiert werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonCode.coding.system",
+        "path": "MedicationRequest.reasonCode.coding.system",
+        "comment": "Begründung des Must-Support und Kardinalität: Ein Coding Element benötigt immer ein System um die Bedeutung des Codes zu definieren.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonCode.coding.code",
+        "path": "MedicationRequest.reasonCode.coding.code",
+        "comment": "Begründung des Must-Support und Kardinalität: Ein Coding Element benötigt immer ein Code um die Bedeutung des Codes zu definieren.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonCode.coding.display",
+        "path": "MedicationRequest.reasonCode.coding.display",
+        "comment": "Begründung des Must-Support: Ein Display Element ist für die Lesbarkeit der Information notwendig.",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonCode.text",
+        "path": "MedicationRequest.reasonCode.text",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonReference",
+        "path": "MedicationRequest.reasonReference",
+        "short": "Grund der Medikation (Referenz)",
+        "comment": "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.\n  Begründung zu Must-Support: Konsolidierung mit MII.",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reasonReference.reference",
+        "path": "MedicationRequest.reasonReference.reference",
+        "comment": "Begründung des Must-Support: Referenz auf die Diagnose oder Untersuchung, die die Medikation begründet.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "MedicationRequest.note",
         "path": "MedicationRequest.note",
         "mustSupport": true
@@ -355,6 +407,7 @@
         "id": "MedicationRequest.dosageInstruction.text",
         "path": "MedicationRequest.dosageInstruction.text",
         "short": "Freitext-Dosierungsanweisungen",
+        "comment": "Festlegung zum Must-Support: Die Verarbeitung MUSS unterstützt werden, indem empfangende Systeme  die Freitext-Dosierungsinformation entweder direkt in der Textform persistieren, ODER die Informationen in eine alternative (strukturierte) Form umwandeln (ggf. unter Einwirkung geeigneter Nutzer). Im letzteren Fall KANN auf eine Persistierung in Textform verzichtet werden, um Inkonsistenzen zu vermeiden.\n        \n    Ein System KANN jedoch strukturierte Dosierungsinformationen in Freitext-Dosierungsinformationen umwandeln, um sie in einem Dokument oder einer Benutzeroberfläche anzuzeigen - dabei ist auf Konsistenzwahrung zu allen strukturierten Elementen zu achten.\n    \n    Hinweis: Diese Festlegung folgt und spezifiziert folgende MS-Festlegung aus dem [ISiK Basismodul](https://simplifier.net/guide/isik-basis-401/Einfuehrung/UebergreifendeFestlegungen/UebergreifendeFestlegungen_Must-Support-Flags.page.md?version=current): 'Systeme KÖNNEN es darüber hinaus ermöglichen, dass die jeweiligen Informationen vom Anwender ergänzt oder editiert werden.'\n    \n    Zum Beispiel könnte ein empfangendes System die Freitext-Dosierungsanweisungen in strukturierte Dosierungsanweisungen umwandeln, um sie in einer Medikationsverwaltung anzuzeigen oder später zu exponieren. Geht es zum Beispiel um eine Angabe zu Tageszeiten der Einnahme in der freitextlichen Dosierungsanweisung als 'Morgens, Mittags, Abends', so könnte das empfangende System diese Angabe in strukturierte Dosierungsanweisungen umwandeln, die die Einnahmezeiten in kodierter Form mit 'MORN', 'NOON', 'EVE' deklariert.",
         "mustSupport": true
       },
       {

@@ -83,6 +83,13 @@ Handelt es sich bei Erfassung um eine medizinische Verabreichungsdokumentation, 
   * ^comment = "Begründung des Must-Support: Basisinformation. Zur vollständig strukturierten Abbildung der zahlreichen Möglichkeiten sind die hier mit Must-Support gekennzeichneten Unterelemente erforderlich gemäß Konsens der ISiK AG Medikation"
   * text MS
     * ^short = "Freitext-Dosierungsangabe"
+    * ^comment = "Festlegung zum Must-Support: Die Verarbeitung MUSS unterstützt werden, indem empfangende Systeme  die Freitext-Dosierungsinformation entweder direkt in der Textform persistieren, ODER die Informationen in eine alternative (strukturierte) Form umwandeln (ggf. unter Einwirkung geeigneter Nutzer). Im letzteren Fall KANN auf eine Persistierung in Textform verzichtet werden, um Inkonsistenzen zu vermeiden.
+        
+    Ein System KANN jedoch strukturierte Dosierungsinformationen in Freitext-Dosierungsinformationen umwandeln, um sie in einem Dokument oder einer Benutzeroberfläche anzuzeigen - dabei ist auf Konsistenzwahrung zu allen strukturierten Elementen zu achten.
+    
+    Hinweis: Diese Festlegung folgt und spezifiziert folgende MS-Festlegung aus dem [ISiK Basismodul](https://simplifier.net/guide/isik-basis-401/Einfuehrung/UebergreifendeFestlegungen/UebergreifendeFestlegungen_Must-Support-Flags.page.md?version=current): 'Systeme KÖNNEN es darüber hinaus ermöglichen, dass die jeweiligen Informationen vom Anwender ergänzt oder editiert werden.' 
+    
+    Zum Beispiel kann die textuelle Information '1L Infusion mit Rate 50ml/h' in eine entsprechende, strukturierte Form überführt werden - d.h. in die Angabe von 'dose' und 'rateQuantity'."
   * site MS
     * ^short = "Körperstelle der Verabreichung"
     * coding MS
@@ -159,7 +166,7 @@ Instance: ExampleISiKMedikationsVerabreichung3
 InstanceOf: ISiKMedikationsVerabreichung
 Usage: #example
 * status = #completed
-* medicationReference = Reference(Medication-Read-Example)
+* medicationReference = Reference(ExampleISiKMedikament9)
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Fachabteilungskontakt"
 * context.identifier.value = "0123456789"
@@ -178,13 +185,13 @@ Usage: #example
     * unit = "mL/h"
     * system = $cs-ucum
     * code = $cs-ucum#mL/h
-  * route = $cs-sct#255560000 "Intravenous"
+  * route = $cs-edqm#20045000 "Intravenous use"
 
 Instance: ExampleISiKMedikationsVerabreichung4
 InstanceOf: ISiKMedikationsVerabreichung
 Usage: #example
 * status = #completed
-* medicationReference = Reference(Medication-Read-Example)
+* medicationReference = Reference(ExampleISiKMedikament2)
 * subject.reference = "Patient/PatientinMusterfrau"
 * context.reference = "Encounter/Fachabteilungskontakt"
 * context.identifier.value = "0123456789"
@@ -209,4 +216,4 @@ Usage: #example
       * unit = "h"
       * system = $cs-ucum
       * code = $cs-ucum#h
-  * route = $cs-sct#255560000 "Intravenous"
+  * route = $cs-edqm#20045000 "Intravenous use"
