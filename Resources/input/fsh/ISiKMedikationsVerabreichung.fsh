@@ -49,7 +49,7 @@ Handelt es sich bei Erfassung um eine medizinische Verabreichungsdokumentation, 
   * ^short = "Zeitpunkt der Verabreichung"
   * ^comment = "Begründung des Must-Support: Basisinformation
   
-  Festlegung zur Nutzung: eine Zeitpunkt-genauen Angabe (.effectiveDateTime oder .effectivePeriod auf Sekundenebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)) MUSS hier seitens eines bestätigungsrelevanten Systems unterstützt werden.
+  Festlegung zur Nutzung: eine Zeitpunkt-genaue Angabe (.effectiveDateTime oder .effectivePeriod auf Sekundenebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)) MUSS hier seitens eines bestätigungsrelevanten Systems unterstützt werden.
 
   Für grobgranularere Angaben (z.B. nur Jahr, Monat oder Tag) kann das Profil ISiKMedikationsInformation (MedicationStatement) verwendet werden.
   "
@@ -57,7 +57,7 @@ Handelt es sich bei Erfassung um eine medizinische Verabreichungsdokumentation, 
   * ^short = "Zeitraum der Verabreichung"
   * ^comment = "Begründung des Must-Support: Basisinformation
   
-  Festlegung zur Nutzung: eine Zeitpunkt-genauen Angabe (.effectiveDateTime oder .effectivePeriod auf Sekundenebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)) MUSS hier seitens eines bestätigungsrelevanten Systems unterstützt werden.
+  Festlegung zur Nutzung: eine Zeitpunkt-genaue Angabe (.effectiveDateTime oder .effectivePeriod auf Sekundenebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)) MUSS hier seitens eines bestätigungsrelevanten Systems unterstützt werden.
   Für grobgranularere Angaben (z.B. nur Jahr, Monat oder Tag) kann das Profil ISiKMedikationsInformation (MedicationStatement) verwendet werden.
   "
   * start MS
