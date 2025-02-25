@@ -20,6 +20,7 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2024-12-12",
+  "date": "2025-02-21",
+  "caseSensitive": true,
   "count": 2
 }
