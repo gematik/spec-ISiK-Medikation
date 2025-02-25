@@ -95,7 +95,7 @@ Zur sekunden-genauen Angabe der Verabreichung eines Medikaments (im Sinne einer 
   * ^short = "Zeitpunkt oder Zeitraum, für den die MedikationsInformation gilt"
   * ^comment = "Begründung des Must-Support: Basisinformation"
 * effectiveDateTime MS
-  * ^short = "Zeitpunkt (Datum und/oder Uhrzeit)"
+  * ^short = "Zeitpunkt (Datum oder Datum + Uhrzeit)"
   * ^comment = "Begründung des Must-Support: Basisinformation
   
   Festlegung zur Nutzung: 
