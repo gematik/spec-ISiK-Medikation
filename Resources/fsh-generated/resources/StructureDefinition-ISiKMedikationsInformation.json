@@ -351,7 +351,7 @@
         "id": "MedicationStatement.effective[x]:effectiveDateTime",
         "path": "MedicationStatement.effective[x]",
         "sliceName": "effectiveDateTime",
-        "short": "Zeitpunkt (Datum und/oder Uhrzeit)",
+        "short": "Zeitpunkt (Datum oder Datum + Uhrzeit)",
         "comment": "Begründung des Must-Support: Basisinformation\n  \n  Festlegung zur Nutzung: \n  An dieser Stelle MUSS eine lediglich Datums-genaue Angabe (einschließlich Granularität Jahr, Monat oder Tag für .effectiveDateTime oder .effectivePeriod auf Datums-Ebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime) seitens eines bestätigungsrelevanten Systems unterstützt werden.\n  Für sekunden-genaue Angaben zur Verabreichung eines Medikaments an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. \n  ",
         "min": 0,
         "max": "1",
