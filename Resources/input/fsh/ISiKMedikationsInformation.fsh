@@ -1,7 +1,12 @@
 Profile: ISiKMedikationsInformation
 Parent: MedicationStatement
 Id: ISiKMedikationsInformation
-Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien."
+Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien.
+
+Hinweis zur Auswahl des Profils: 
+In Abgrenzung zu ISiKMedikationsVerabreichung (MedicationAdministration) wird mittels des vorliegenden Profils die Verabreichung eines Medikaments an einen Patienten mit einer lediglich Datums-genauen Angabe abgebildet (einschließlich Granularität Jahr, Monat oder Tag für .effectiveDateTime oder .effectivePeriod auf Datums-Ebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)).
+Zur sekunden-genauen Angabe der Verabreichung eines Medikaments (im Sinne einer medizinischen Verabreichungsdokumentation durch medizinisches Personal) an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. Siehe entsprechende Profilseite für weitere Begründung."
+
 * insert Meta
 * extension MS
 * extension contains
@@ -90,9 +95,21 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
   * ^short = "Zeitpunkt oder Zeitraum, für den die MedikationsInformation gilt"
   * ^comment = "Begründung des Must-Support: Basisinformation"
 * effectiveDateTime MS
-  * ^short = "Zeitpunkt"
+  * ^short = "Zeitpunkt (Datum oder Datum + Uhrzeit)"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+  
+  Festlegung zur Nutzung: 
+  An dieser Stelle KANN eine lediglich Datums-genaue Angabe (einschließlich Granularität Jahr, Monat oder Tag für .effectiveDateTime oder .effectivePeriod auf Datums-Ebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime) seitens eines bestätigungsrelevanten Systems unterstützt werden. Es KANN auch eine Uhrzeit angegeben werden.
+  Für sekunden-genaue Angaben zur Verabreichung eines Medikaments an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. 
+  "  
 * effectivePeriod MS
   * ^short = "Zeitraum"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+  
+  Festlegung zur Nutzung: 
+  An dieser Stelle KANN eine lediglich Datums-genaue Angabe (einschließlich Granularität Jahr, Monat oder Tag für .effectiveDateTime oder .effectivePeriod auf Datums-Ebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime) seitens eines bestätigungsrelevanten Systems unterstützt werden. Es KANN auch eine Uhrzeit angegeben werden.
+  Für sekunden-genaue Angaben zur Verabreichung eines Medikaments an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. 
+  "  
   * start MS
   * end MS
 * dateAsserted MS
