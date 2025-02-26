@@ -6,13 +6,18 @@ Description: "Dieses Profil ermöglicht die Zusammenführung einzelner Medikatio
 * insert Meta
 * status MS
   * ^short = "(Aktualitäts-)Status der Liste"
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard"
 * mode MS
 * mode from MedikationsListeListModeVS
   * ^short = "Listenmodus"
-  * ^comment = "Beispiel: eingelesene Medikationspläne werden als snapshot repräsentiert. Kontinuierlich fortgeschriebene Listen, z.B. im Rahmen der hausinternen Behandlung, sind als 'working' codiert."
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard
+
+  Beispiel: eingelesene Medikationspläne werden als snapshot repräsentiert. Kontinuierlich fortgeschriebene Listen, z.B. im Rahmen der hausinternen Behandlung, sind als 'working' codiert."
 * code 1.. MS
   * ^short = "Art der Liste."
-  * ^comment = "Es ist mindestens ein Coding mit dem Code 'medications' anzugeben. Weitere Codes, z.B. im Kontext anderer Spezifikationen oder Hauscodierungen sind zulässig."
+  * ^comment = "Begründung des Must-Support: Dient der Differenzierung zu anderen Listen.
+
+  Hinweis: Es ist mindestens ein Coding mit dem Code 'medications' anzugeben. Weitere Codes, z.B. im Kontext anderer Spezifikationen oder Hauscodierungen sind zulässig."
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -27,20 +32,26 @@ Description: "Dieses Profil ermöglicht die Zusammenführung einzelner Medikatio
     * display MS
 * subject 1.. MS
   * ^short = "Referenz auf den Patienten"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * subject only Reference(Patient)
   * reference 1.. MS
 * encounter MS
   * ^short = "Referenz auf den Abteilungskontakt"
+  * ^comment = "Begründung des Must-Support: Basisinformation im Krankenhaus-Kontext"
   * reference 1.. MS
 * date MS
   * ^short = "Erstellungsdatum der Liste"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * entry MS
   * ^short = "Listeneintrag"
   * date MS
     * ^short = "Datum des Listeneintrags"
-    * ^comment = "nur zulässig im Listenmodus 'working'"
+    * ^comment = "Begründung des Must-Support: Nachvollziehbarkeit
+
+    Hinweis: nur zulässig im Listenmodus 'working'"
   * item MS
     * ^short = "Referenz auf die MedikationsInformation"
+    * ^comment = "Begründung des Must-Support: Basisinformation (eigentlicher Zweck der Liste ist das Verbinden mehrerer MedikationsInformationen)"
   * item only Reference(MedicationStatement)
     * reference 1.. MS
 

@@ -1,9 +1,9 @@
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/Gematik_Logo_Flag.svg" alt="gematik logo" width="400"/>
 
 ----
-Version: 4.0.0
+Version: 4.0.1
 
-Datum: 15.10.2024
+Datum: 26.02.2025
 
 Status: Active
 
@@ -39,3 +39,4 @@ Zugunsten des Leseflusses wird in dieser Publikation meist die
 männliche Form verwendet. Wir bitten, dies nicht als Zeichen einer
 geschlechtsspezifischen Wertung zu deuten. Diese Variante deckt auch alle
 weiteren Geschlechter, neben männlich und weiblich, ab.
+

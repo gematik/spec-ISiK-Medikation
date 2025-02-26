@@ -2,7 +2,8 @@ Profile: MedicationQuantity
 Parent: SimpleQuantity
 Id: MedicationQuantity
 Title: "Medication Quantity"
-Description: "Quantity Datentyp der UcumUndSctDoseFormVS vorgibt. Bei Dimensionslosen Einheiten wie 'Tablette' SOLL statt eines UCUM Code '1' der passende SnomedCT  Unit of presentation Code angegeben werden."
+Description: "Quantity Datentyp der die Nutzung von UCUM vorgibt. Bei dimensionslosen Einheiten wie 'Tablette' wird ein code von '1' erwartet, 'Tablette' kann als String in Unit hinterlegt werden."
+* insert Meta
 * value 1..1 MS
 * unit MS
 * system 1..1 MS

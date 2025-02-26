@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikament",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "ISiKMedikament",
   "status": "active",
   "experimental": false,
-  "date": "2024-10-15",
+  "date": "2025-02-26",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -34,6 +34,7 @@
         "id": "Medication.code",
         "path": "Medication.code",
         "short": "Medikament in codierter Form oder ggf. als Freitext",
+        "comment": "Begründung des Must-Support: grundlegende Information",
         "mustSupport": true
       },
       {
@@ -48,7 +49,7 @@
           ],
           "rules": "open"
         },
-        "comment": "Motivation: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden",
+        "comment": "Begründung des Must-Support: Medikamente MÜSSEN kodiert werden, hierfür kann eine PZN, ATC-Code oder SnomedCT Code verwendet werden",
         "mustSupport": true
       },
       {
@@ -111,13 +112,14 @@
       {
         "id": "Medication.code.text",
         "path": "Medication.code.text",
-        "comment": "Motivation: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden",
+        "comment": "Begründung des Must-Support: Falls eine Kodierung nicht möglich ist kann das Medikament alternativ per Freitext erfasst werden",
         "mustSupport": true
       },
       {
         "id": "Medication.status",
         "path": "Medication.status",
         "short": "Status der Medikamenteninformation",
+        "comment": "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard",
         "min": 1,
         "mustSupport": true
       },
@@ -125,7 +127,7 @@
         "id": "Medication.manufacturer",
         "path": "Medication.manufacturer",
         "short": "Hersteller des Medikaments",
-        "comment": "Hier kann der tatsächliche Hersteller des Medikaments benannt werden, vornehmlich im Fall von Wirkstoffmischungen (Rezepturen), beispielsweise die Krankenhausapotheke. Zu beachten ist, dass die zulassende Organisation, wie sie z.B. in den Daten zur PZN benannt ist, nicht als Hersteller gilt.",
+        "comment": "Begründung des Must-Support: Alignment mit KBV-Profilen\n\n  Hinweis: Hier kann der tatsächliche Hersteller des Medikaments benannt werden, vornehmlich im Fall von Wirkstoffmischungen (Rezepturen), beispielsweise die Krankenhausapotheke. Zu beachten ist, dass die zulassende Organisation, wie sie z.B. in den Daten zur PZN benannt ist, nicht als Hersteller gilt.",
         "mustSupport": true
       },
       {
@@ -138,6 +140,7 @@
         "id": "Medication.form",
         "path": "Medication.form",
         "short": "Abgabeform",
+        "comment": "Begründung des Must-Support: Basis-Information eines Medikaments",
         "mustSupport": true
       },
       {
@@ -152,7 +155,7 @@
           ],
           "rules": "open"
         },
-        "comment": "Motivation: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene",
+        "comment": "Begründung des Must-Support: EDQM definiert eine einheitliche DoseForm auf europäischer Ebene",
         "mustSupport": true
       },
       {
@@ -179,13 +182,13 @@
         "id": "Medication.amount",
         "path": "Medication.amount",
         "short": "Menge",
-        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
+        "comment": "Begründung des Must-Support: Bei einer Medikation MUSS die Menge dokumentierbar sein",
         "mustSupport": true
       },
       {
         "id": "Medication.amount.numerator",
         "path": "Medication.amount.numerator",
-        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
+        "comment": "Begründung des Must-Support: Bei einer Medikation MUSS die Menge dokumentierbar sein",
         "min": 1,
         "type": [
           {
@@ -200,7 +203,7 @@
       {
         "id": "Medication.amount.denominator",
         "path": "Medication.amount.denominator",
-        "comment": "Motivation: Bei einer Medikation MUSS die Menge angegeben werden",
+        "comment": "Begründung des Must-Support: Bei einer Medikation MUSS die Menge dokumentierbar sein",
         "min": 1,
         "type": [
           {
@@ -216,13 +219,14 @@
         "id": "Medication.ingredient",
         "path": "Medication.ingredient",
         "short": "Informationen zu Bestandteilen (Rezeptur)",
+        "comment": "Begründung des Must-Support: Wirkstoff-Rezepturen müssen dokumentierbar sein",
         "mustSupport": true
       },
       {
         "id": "Medication.ingredient.extension",
         "path": "Medication.ingredient.extension",
         "short": "Wirkstofftyp",
-        "comment": "Handelt es sich um eine Angabe zum Wirkstoff oder zum exakter Inhaltsstoff (z.B. Salze)?",
+        "comment": "Begründung des Must-Support: Alignment mit den MII-Profilen\n\n    Hinweis: Hiermit kann geklärt werden, ob es sich um eine Angabe zum Wirkstoff oder zum exakten Inhaltsstoff (z.B. Salze) handelt.",
         "mustSupport": true
       },
       {
@@ -260,6 +264,7 @@
         "path": "Medication.ingredient.item[x]",
         "sliceName": "itemCodeableConcept",
         "short": "Bestandteil in codierter Form oder ggf. als Freitext",
+        "comment": "Begründung des Must-Support: Der Bestandteil muss eindeutig benannt sein",
         "min": 0,
         "max": "1",
         "type": [
@@ -369,6 +374,7 @@
         "path": "Medication.ingredient.item[x]",
         "sliceName": "itemReference",
         "short": "Bestandteil (Referenz auf ein anderes Medikament)",
+        "comment": "Begründung des Must-Support: Der Bestandteil muss eindeutig benannt sein",
         "min": 0,
         "max": "1",
         "type": [
@@ -392,12 +398,14 @@
         "id": "Medication.ingredient.isActive",
         "path": "Medication.ingredient.isActive",
         "short": "handelt es sich um einen aktiven Bestandteil?",
+        "comment": "Begründung des Must-Support: Wird eine vollständige Rezeptur dokumentiert, muss erkennbar sein, welches die Wirkstoffe sind",
         "mustSupport": true
       },
       {
         "id": "Medication.ingredient.strength",
         "path": "Medication.ingredient.strength",
         "short": "Stärke",
+        "comment": "Begründung des Must-Support: Basisinformation in Rezepturen",
         "mustSupport": true
       },
       {
@@ -432,14 +440,14 @@
         "id": "Medication.batch",
         "path": "Medication.batch",
         "short": "Angaben zur Charge",
-        "comment": "Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung.",
+        "comment": "Begründung des Must-Support: erforderlich zur Dokumentation der Chargennummer\n\n  Hinweis: Bitte beachten Sie gegebenenfalls die Regelungen der zwischen GKV-SV und DAV: https://www.gkv-datenaustausch.de/leistungserbringer/apotheken/apotheken.jsp . Insbesondere den Technischen Anhang 7 (TA7) zur Arzneimittelabrechnungsvereinbarung gemäß § 300 Absatz 3 SGB V in der aktuellsten Fassung.",
         "mustSupport": true
       },
       {
         "id": "Medication.batch.lotNumber",
         "path": "Medication.batch.lotNumber",
         "short": "Chargennummer",
-        "comment": "Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (\"STELLEN\") eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen \"STELLEN\" in das hierbeschirebene Datenfeld eingetragen werden.",
+        "comment": "Begründung des Must-Support: Therapiesicherheit und Nachvollziehbarkeit\n\n    Hinweis: Gemäß Anlage 1 der TA7 kann hier übergangsweise bis zum 30. Juni 2025 eine Musterchargennummer (\"STELLEN\") eingetragen werden. Wenn die Übermittlung der Chargenbezeichnung beim Stellen von Arzneimitteln technisch nicht möglich ist, z.B. beim Verblistern, wird von der Verpflichtung zur Chargendokumentation abgesehen. Dementsprechend kann anstatt der tatsächlichen Chargenbezeichnungen \"STELLEN\" in das hierbeschirebene Datenfeld eingetragen werden.",
         "mustSupport": true
       }
     ]

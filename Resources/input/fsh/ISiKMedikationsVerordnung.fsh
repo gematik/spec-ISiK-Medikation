@@ -11,33 +11,47 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
     ExtensionISiKMedicationRequestReplaces named medicationRequestReplaces 0..1 MS
 * extension[acceptedRisk]
   * ^short = "akzeptiertes (in Kauf genommenes) Risiko"
-  * ^comment = "Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
+  * ^comment = "Begründung des Must-Support: Folgeinformation der AMTS-Bewertung, sollte auch an nachfolgende Behandelnde übermittelbar sein
+
+  Hinweis: Hier kann ein im Rahmen der Medikation festgestelltes, aber in Kauf genommenes Risiko dokumentiert werden, speziell auch die Begründung und ggf. erforderliche Begleitmaßnahmen."
   * valueString MS
 * extension[medikationsart]
   * ^short = "Therapieart der Medikation"
-  * ^comment = "Angabe Akut- oder Dauermedikation."
+  * ^comment = "Begründung des Must-Support: von der Fachseite gewünschte Angabe
+
+  Hinweis: Angabe Akut- oder Dauermedikation."
   * valueCoding
     * system MS
     * code MS
     * display MS
 * extension[behandlungsziel]
   * ^short = "Behandlungsziel (textuell)"
-  * ^comment = "Freitext-Beschreibung des Behandlungsziels."
+  * ^comment = "Begründung des Must-Support: von der Fachseite gewünschte Angabe
+
+  Hinweis: Freitext-Beschreibung des Behandlungsziels."
   * valueString MS
 * extension[medicationRequestReplaces]
   * ^short = "Welche Medikationsverordnung wird ersetzt?"
-  * ^comment = "FWelche Medikationsverordnung wird ersetzt?"
+  * ^comment = "Begründung des Must-Support: historische Nachvollziehbarkeit
+
+  Hinweis: Welche Medikationsverordnung wird ersetzt?"
   * valueReference MS
     * reference MS
 * status MS
   * ^short = "Status der Verordnungsinformation"
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard"
 * intent MS
   * ^short = "Ziel der Verordnungsinformation"
-  * ^comment = "i.d.R. 'order'"
+  * ^comment = "Begründung des Must-Support: Erforderliche Angabe im FHIR-Standard
+
+  Hinweis: i.d.R. 'order'"
 * doNotPerform ..0
+  * ^comment = "Begründung der Kardinalitätsänderung: Use Case für dieses Feld ist nicht im Scope"
 * medicationCodeableConcept MS
   * ^short = "Medikament in codierter Form oder ggf. als Freitext"
-  * ^comment = "kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Hinweis: kann verwendet werden, wenn keine detaillierten Informationen zum Medikament (z.B. Rezepturen) existieren."
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -55,27 +69,61 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * text MS
 * medicationReference MS
   * ^short = "Referenz auf das Medikament (Medication-Ressource)"
-  * ^comment = "wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Hinweis: wird verwendet, wenn detaillierte Informationen zum Medikament vorliegen"
   * reference 1..1 MS
 * subject MS
   * ^short = "Referenz auf den Patienten"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * subject only Reference(Patient)
   * reference 1..1 MS
 * encounter MS
   * ^short = "Referenz auf den Abteilungskontakt"
+  * ^comment = "Begründung des Must-Support: Basisinformation im Krankenhaus-Kontext"
   * reference 1..1 MS
 * authoredOn MS
   * ^short = "Erstellungsdatum der Verordnung"
+  * ^comment = "Begründung des Must-Support: Basisinformation"
 * requester MS
   * ^short = "Referenz auf die verordnende Person"
+  * ^comment = "Begründung des Must-Support: Nachvollziehbarkeit"
   * reference 1..1 MS
+* reasonCode MS
+  * ^short = "Grund der Medikation (codiert)"
+  * ^comment = "Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
+Begründung zu Must-Support: Konsolidierung mit MII Profil: https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest"
+  * coding MS
+    * ^comment = "Begründung des Must-Support: Falls der Grund kodierbar ist, sollte er auch kodiert werden."
+    * system 1.. MS
+      * ^comment = "Begründung des Must-Support und Kardinalität: Ein Coding Element benötigt immer ein System um die Bedeutung des Codes zu definieren."
+    * code 1.. MS
+      * ^comment = "Begründung des Must-Support und Kardinalität: Ein Coding Element benötigt immer ein Code um die Bedeutung des Codes zu definieren."
+    * display MS
+      * ^comment = "Begründung des Must-Support: Ein Display Element ist für die Lesbarkeit der Information notwendig."
+  * text MS
+* reasonReference MS
+  * ^short = "Grund der Medikation (Referenz)"
+  * ^comment = "  Festlegung zum MS: Die Elemente .reasonCode und .reasonReference MÜSSEN nach OR-Logik in der Ausgabe verwendet werden, d.h. nur eines MUSS geliefert werden können. Weiterhin MÜSSEN beide Elemente interpretiert werden können.
+  Begründung zu Must-Support: Konsolidierung mit MII."
+  * reference 1..1 MS
+    * ^comment = "Begründung des Must-Support: Referenz auf die Diagnose oder Untersuchung, die die Medikation begründet."
 * note MS
   * text MS
     * ^short = "Freitext-Notiz"
+    * ^comment = "Begründung des Must-Support: Angabe zusätzlicher Informationen kann fachlich relevant sein"
 * dosageInstruction MS
   * ^short = "Dosierungsangaben"
+  * ^comment = "Begründung des Must-Support: Basisinformation. Zur vollständig strukturierten Abbildung der zahlreichen Möglichkeiten sind die hier mit Must-Support gekennzeichneten Unterelemente erforderlich gemäß Konsens der ISiK AG Medikation"
   * text MS
     * ^short = "Freitext-Dosierungsanweisungen"
+    * ^comment = "Festlegung zum Must-Support: Die Verarbeitung MUSS unterstützt werden, indem empfangende Systeme  die Freitext-Dosierungsinformation entweder direkt in der Textform persistieren, ODER die Informationen in eine alternative (strukturierte) Form umwandeln (ggf. unter Einwirkung geeigneter Nutzer). Im letzteren Fall KANN auf eine Persistierung in Textform verzichtet werden, um Inkonsistenzen zu vermeiden.
+        
+    Ein System KANN jedoch strukturierte Dosierungsinformationen in Freitext-Dosierungsinformationen umwandeln, um sie in einem Dokument oder einer Benutzeroberfläche anzuzeigen - dabei ist auf Konsistenzwahrung zu allen strukturierten Elementen zu achten.
+    
+    Hinweis: Diese Festlegung folgt und spezifiziert folgende MS-Festlegung aus dem [ISiK Basismodul](https://simplifier.net/guide/isik-basis-401/Einfuehrung/UebergreifendeFestlegungen/UebergreifendeFestlegungen_Must-Support-Flags.page.md?version=current): 'Systeme KÖNNEN es darüber hinaus ermöglichen, dass die jeweiligen Informationen vom Anwender ergänzt oder editiert werden.'
+    
+    Zum Beispiel könnte ein empfangendes System die Freitext-Dosierungsanweisungen in strukturierte Dosierungsanweisungen umwandeln, um sie in einer Medikationsverwaltung anzuzeigen oder später zu exponieren. Geht es zum Beispiel um eine Angabe zu Tageszeiten der Einnahme in der freitextlichen Dosierungsanweisung als 'Morgens, Mittags, Abends', so könnte das empfangende System diese Angabe in strukturierte Dosierungsanweisungen umwandeln, die die Einnahmezeiten in kodierter Form mit 'MORN', 'NOON', 'EVE' deklariert."
   * patientInstruction MS
     * ^short = "besondere Anweisungen für den Patienten"
   * timing MS
@@ -207,8 +255,10 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
   * quantity MS
   * quantity only MedicationQuantity
     * ^short = "angeforderte Abgabemenge"
+    * ^comment = "Begründung des Must-Support: Basisinformation"
 * substitution MS
   * ^short = "Ersatz zulässig"
+  * ^comment = "Begründung des Must-Support: Alignment mit dem (E-)Rezept"
   * allowedBoolean MS
 
 Instance: ExampleISiKMedikationsVerordnung

@@ -2,4 +2,7 @@
 ^https?://test\.krankenhaus\.de
 ^http://hl7\.org/fhir/StructureDefinition/condition-related
 ^http://hl7\.org/fhir/5\.0/StructureDefinition/extension-Encounter\.plannedStartDate
+^https://confluence.hl7.org/display/FHIR/Validator+Advisor+Framework
+^https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator
 ^http://hl7\.org/fhir/5\.0/StructureDefinition/extension-Encounter\.plannedEndDate
+
