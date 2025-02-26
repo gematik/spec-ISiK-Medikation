@@ -133,7 +133,7 @@ Folgende Suchparameter sind für das Bestätigungsverfahren relevant, auch in Ko
 
     ```GET [base]/Medication?ingredient.code=http://fhir.de/CodeSystem/bfarm/atc|V03AB23```
 
-    Use Case Zusammenhang: Um eine {{pagelink:ImplementationGuide/markdown/Zusammenfassung/UseCases.md, text:Wechselwirkung}} zwischen Medikamenten auf Basis des Wirkstoffes zu vermeiden.
+    Use Case Zusammenhang: Um eine Wechselwirkung zwischen Medikamenten auf Basis des Wirkstoffes zu vermeiden.
 
     Anwendungshinweise: Weitere Informationen zur Suche nach Token-type Parametern finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
