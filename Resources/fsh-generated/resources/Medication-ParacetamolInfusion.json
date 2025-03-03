@@ -1,0 +1,85 @@
+{
+  "resourceType": "Medication",
+  "id": "ParacetamolInfusion",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament"
+    ]
+  },
+  "ingredient": [
+    {
+      "strength": {
+        "numerator": {
+          "system": "http://unitsofmeasure.org",
+          "value": 10,
+          "code": "mg",
+          "unit": "mg"
+        },
+        "denominator": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "code": "mL",
+          "unit": "mL"
+        }
+      },
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "N02BE01",
+            "system": "http://fhir.de/CodeSystem/bfarm/atc",
+            "display": "Paracetamol"
+          }
+        ],
+        "text": "Paracetamol"
+      },
+      "isActive": true
+    },
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "03710676",
+            "system": "http://fhir.de/CodeSystem/ifa/pzn",
+            "display": "Ecoflac® plus Glucose 5 % (100 ml)"
+          }
+        ]
+      },
+      "isActive": false
+    }
+  ],
+  "amount": {
+    "denominator": {
+      "system": "http://unitsofmeasure.org",
+      "value": 1,
+      "unit": "Beutel",
+      "code": "1"
+    },
+    "numerator": {
+      "value": 100,
+      "code": "mL",
+      "system": "http://unitsofmeasure.org",
+      "unit": "mL"
+    }
+  },
+  "status": "active",
+  "code": {
+    "coding": [
+      {
+        "code": "N02BE01",
+        "system": "http://fhir.de/CodeSystem/bfarm/atc",
+        "display": "Paracetamol"
+      }
+    ],
+    "text": "Paracetamol 10 mg/ml in Glukose 5 %"
+  },
+  "form": {
+    "coding": [
+      {
+        "system": "http://standardterms.edqm.eu",
+        "code": "11210000",
+        "display": "Solution for infusion"
+      }
+    ],
+    "text": "Infusionslösung"
+  }
+}

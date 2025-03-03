@@ -36,7 +36,6 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
 * form MS
   * ^short = "Abgabeform"
   * ^comment = "Begründung des Must-Support: Basis-Information eines Medikaments"
-* form
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -384,3 +383,34 @@ Usage: #example
       * unit = "Milliliter"
       * system = $cs-ucum
       * code = #mL
+
+Instance: ParacetamolInfusion
+InstanceOf: ISiKMedikament
+Usage: #example
+* status = #active
+* code = $cs-atc-de#N02BE01 "Paracetamol"
+* code.text = "Paracetamol 10 mg/ml in Glukose 5 %"
+* form
+  * coding[EDQM]
+    * system = $cs-edqm
+    * code = #11210000
+    * display = "Solution for infusion"
+  * text = "Infusionslösung"
+* ingredient[+]
+  * extension[wirkstofftyp]
+    * valueCoding
+      * system = "http://fhir.de/CodeSystem/WirkstofftypCS"
+      * code = #IN
+* ingredient[=].itemCodeableConcept = $cs-atc-de#N02BE01 "Paracetamol"
+* ingredient[=].itemCodeableConcept.text = "Paracetamol"
+* ingredient[=].strength.numerator = 10 'mg' "mg"
+* ingredient[=].strength.denominator = 1 'mL' "mL"
+* ingredient[=].isActive = true
+* ingredient[+].itemCodeableConcept = $cs-pzn#03710676 "Ecoflac® plus Glucose 5 % (100 ml)"
+* ingredient[=].isActive = false
+* amount.numerator = 100 'mL' "mL"
+* amount.denominator
+  * value = 1
+  * unit = "Beutel"
+  * system = $cs-ucum
+  * code = #1
