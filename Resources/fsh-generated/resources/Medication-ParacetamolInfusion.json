@@ -6,17 +6,6 @@
       "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikament"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "system": "http://fhir.de/CodeSystem/bfarm/atc",
-        "code": "N02BE01",
-        "display": "Paracetamol",
-        "version": "2024"
-      }
-    ],
-    "text": "Paracetamol 10 mg/ml in Glukose 5 %"
-  },
   "ingredient": [
     {
       "strength": {
@@ -83,6 +72,9 @@
     }
   },
   "status": "active",
+  "code": {
+    "text": "Paracetamol 10 mg/ml in Glukose 5 %"
+  },
   "form": {
     "coding": [
       {

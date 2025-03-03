@@ -388,10 +388,7 @@ Instance: ParacetamolInfusion
 InstanceOf: ISiKMedikament
 Usage: #example
 * status = #active
-* code
-  * coding[ATC-DE] = $cs-atc-de#N02BE01 "Paracetamol"
-    * version = "2024"
-  * text = "Paracetamol 10 mg/ml in Glukose 5 %"
+* code.text = "Paracetamol 10 mg/ml in Glukose 5 %"
 * form
   * coding[EDQM]
     * system = $cs-edqm
