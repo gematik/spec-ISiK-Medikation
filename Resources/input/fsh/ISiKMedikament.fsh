@@ -388,8 +388,10 @@ Instance: ParacetamolInfusion
 InstanceOf: ISiKMedikament
 Usage: #example
 * status = #active
-* code = $cs-atc-de#N02BE01 "Paracetamol"
-* code.text = "Paracetamol 10 mg/ml in Glukose 5 %"
+* code
+  * coding[ATC-DE] = $cs-atc-de#N02BE01 "Paracetamol"
+    * version = "2024"
+  * text = "Paracetamol 10 mg/ml in Glukose 5 %"
 * form
   * coding[EDQM]
     * system = $cs-edqm
@@ -401,13 +403,17 @@ Usage: #example
     * valueCoding
       * system = "http://fhir.de/CodeSystem/WirkstofftypCS"
       * code = #IN
-* ingredient[=].itemCodeableConcept = $cs-atc-de#N02BE01 "Paracetamol"
-* ingredient[=].itemCodeableConcept.text = "Paracetamol"
-* ingredient[=].strength.numerator = 10 'mg' "mg"
-* ingredient[=].strength.denominator = 1 'mL' "mL"
-* ingredient[=].isActive = true
-* ingredient[+].itemCodeableConcept = $cs-pzn#03710676 "Ecoflac® plus Glucose 5 % (100 ml)"
-* ingredient[=].isActive = false
+  * itemCodeableConcept
+    * coding[ATC-DE] = $cs-atc-de#N02BE01 "Paracetamol"
+      * version = "2024"
+    * text = "Paracetamol"
+  * strength
+    * numerator = 10 'mg' "mg"
+    * denominator = 1 'mL' "mL"
+  * isActive = true
+* ingredient[+]
+  * itemCodeableConcept = $cs-pzn#03710676 "Ecoflac® plus Glucose 5 % (100 ml)"
+  * isActive = false
 * amount.numerator = 100 'mL' "mL"
 * amount.denominator
   * value = 1

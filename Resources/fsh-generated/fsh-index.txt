@@ -18,7 +18,7 @@ Medication-ExampleISiKMedikament6.json                                   Example
 Medication-ExampleISiKMedikament7.json                                   ExampleISiKMedikament7                          Instance    ISiKMedikament.fsh                                  259 - 293
 Medication-ExampleISiKMedikament8.json                                   ExampleISiKMedikament8                          Instance    ISiKMedikament.fsh                                  295 - 339
 Medication-ExampleISiKMedikament9.json                                   ExampleISiKMedikament9                          Instance    ISiKMedikament.fsh                                  341 - 385
-Medication-ParacetamolInfusion.json                                      ParacetamolInfusion                             Instance    ISiKMedikament.fsh                                  387 - 411
+Medication-ParacetamolInfusion.json                                      ParacetamolInfusion                             Instance    ISiKMedikament.fsh                                  387 - 422
 MedicationAdministration-ExampleISiKMedikationsVerabreichung.json        ExampleISiKMedikationsVerabreichung             Instance    ISiKMedikationsVerabreichung.fsh                    135 - 148
 MedicationAdministration-ExampleISiKMedikationsVerabreichung2.json       ExampleISiKMedikationsVerabreichung2            Instance    ISiKMedikationsVerabreichung.fsh                    150 - 163
 MedicationAdministration-ExampleISiKMedikationsVerabreichung3.json       ExampleISiKMedikationsVerabreichung3            Instance    ISiKMedikationsVerabreichung.fsh                    165 - 188
