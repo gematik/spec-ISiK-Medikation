@@ -9,7 +9,7 @@
   "url": "https://gematik.de/fhir/isik/ValueSet/MedikationsListeListModeVS",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2025-02-26",
+  "date": "2025-03-05",
   "compose": {
     "include": [
       {
