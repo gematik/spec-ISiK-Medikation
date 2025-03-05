@@ -36,7 +36,6 @@ Description: "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen
 * form MS
   * ^short = "Abgabeform"
   * ^comment = "Begründung des Must-Support: Basis-Information eines Medikaments"
-* form
   * coding MS
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "$this"
@@ -384,3 +383,52 @@ Usage: #example
       * unit = "Milliliter"
       * system = $cs-ucum
       * code = #mL
+
+Instance: ParacetamolInfusion
+InstanceOf: ISiKMedikament
+Usage: #example
+* text
+  * status = #additional
+  * div = """<div xmlns="http://www.w3.org/1999/xhtml">
+      <div>
+      <p><b>Motivation:</b> Dieses Beispiel zeigt, wie Rezepturen als ISiK-Medikation in FHIR R4 abgebildet werden können. Es demonstriert die Kombination eines Wirkstoffs mit einer Trägerlösung.</p>
+      <p><b>Medikament:</b> Paracetamol 10 mg/ml in Glukose 5 %</p>
+      <p><b>Form:</b> Infusionslösung</p>
+      <p><b>Wirkstoffe:</b></p>
+      <ul>
+        <li><b>Paracetamol:</b> 10 mg/ml (aktiv)</li>
+        <li><b>Glukose 5 %:</b> Trägerlösung (inaktiv)</li>
+      </ul>
+      <p><b>Gesamtmenge:</b> 100 ml (entspricht 1000 mg Paracetamol)</p>
+      <p><b>Hinweis:</b> Rezepturen bestehen aus mehreren Bestandteilen. Dieses Beispiel zeigt, wie man sie mit <code>Medication.ingredient</code> korrekt modelliert.</p>
+    </div>"""
+* status = #active
+* code.text = "Paracetamol 10 mg/ml in Glukose 5 %"
+* form
+  * coding[EDQM]
+    * system = $cs-edqm
+    * code = #11210000
+    * display = "Solution for infusion"
+  * text = "Infusionslösung"
+* ingredient[+]
+  * extension[wirkstofftyp]
+    * valueCoding
+      * system = "http://fhir.de/CodeSystem/WirkstofftypCS"
+      * code = #IN
+  * itemCodeableConcept
+    * coding[ATC-DE] = $cs-atc-de#N02BE01 "Paracetamol"
+      * version = "2024"
+    * text = "Paracetamol"
+  * strength
+    * numerator = 10 'mg' "mg"
+    * denominator = 1 'mL' "mL"
+  * isActive = true
+* ingredient[+]
+  * itemCodeableConcept = $cs-pzn#03710676 "Ecoflac® plus Glucose 5 % (100 ml)"
+  * isActive = false
+* amount.numerator = 100 'mL' "mL"
+* amount.denominator
+  * value = 1
+  * unit = "Beutel"
+  * system = $cs-ucum
+  * code = #1

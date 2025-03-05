@@ -84,104 +84,112 @@
     "fshName": "ExampleISiKMedikament1",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 118,
-    "endLine": 126
+    "startLine": 117,
+    "endLine": 125
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament2.json",
     "fshName": "ExampleISiKMedikament2",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 128,
-    "endLine": 161
+    "startLine": 127,
+    "endLine": 160
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament3.json",
     "fshName": "ExampleISiKMedikament3",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 163,
-    "endLine": 170
+    "startLine": 162,
+    "endLine": 169
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament4.json",
     "fshName": "ExampleISiKMedikament4",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 172,
-    "endLine": 210
+    "startLine": 171,
+    "endLine": 209
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament5.json",
     "fshName": "ExampleISiKMedikament5",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 212,
-    "endLine": 252
+    "startLine": 211,
+    "endLine": 251
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament6.json",
     "fshName": "ExampleISiKMedikament6",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 254,
-    "endLine": 258
+    "startLine": 253,
+    "endLine": 257
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament7.json",
     "fshName": "ExampleISiKMedikament7",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 260,
-    "endLine": 294
+    "startLine": 259,
+    "endLine": 293
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament8.json",
     "fshName": "ExampleISiKMedikament8",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 296,
-    "endLine": 340
+    "startLine": 295,
+    "endLine": 339
   },
   {
     "outputFile": "Medication-ExampleISiKMedikament9.json",
     "fshName": "ExampleISiKMedikament9",
     "fshType": "Instance",
     "fshFile": "ISiKMedikament.fsh",
-    "startLine": 342,
-    "endLine": 386
+    "startLine": 341,
+    "endLine": 385
+  },
+  {
+    "outputFile": "Medication-ParacetamolInfusion.json",
+    "fshName": "ParacetamolInfusion",
+    "fshType": "Instance",
+    "fshFile": "ISiKMedikament.fsh",
+    "startLine": 387,
+    "endLine": 434
   },
   {
     "outputFile": "MedicationAdministration-ExampleISiKMedikationsVerabreichung.json",
     "fshName": "ExampleISiKMedikationsVerabreichung",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsVerabreichung.fsh",
-    "startLine": 121,
-    "endLine": 134
+    "startLine": 135,
+    "endLine": 148
   },
   {
     "outputFile": "MedicationAdministration-ExampleISiKMedikationsVerabreichung2.json",
     "fshName": "ExampleISiKMedikationsVerabreichung2",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsVerabreichung.fsh",
-    "startLine": 136,
-    "endLine": 149
+    "startLine": 150,
+    "endLine": 163
   },
   {
     "outputFile": "MedicationAdministration-ExampleISiKMedikationsVerabreichung3.json",
     "fshName": "ExampleISiKMedikationsVerabreichung3",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsVerabreichung.fsh",
-    "startLine": 151,
-    "endLine": 174
+    "startLine": 165,
+    "endLine": 188
   },
   {
     "outputFile": "MedicationAdministration-ExampleISiKMedikationsVerabreichung4.json",
     "fshName": "ExampleISiKMedikationsVerabreichung4",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsVerabreichung.fsh",
-    "startLine": 176,
-    "endLine": 205
+    "startLine": 190,
+    "endLine": 219
   },
   {
     "outputFile": "MedicationRequest-ExampleISiKMedikationsVerordnung.json",
@@ -204,88 +212,88 @@
     "fshName": "ExampleISiKMedikationsInformation1",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 262,
-    "endLine": 285
+    "startLine": 279,
+    "endLine": 302
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformation2.json",
     "fshName": "ExampleISiKMedikationsInformation2",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 287,
-    "endLine": 307
+    "startLine": 304,
+    "endLine": 324
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformation3.json",
     "fshName": "ExampleISiKMedikationsInformation3",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 309,
-    "endLine": 332
+    "startLine": 326,
+    "endLine": 349
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformation4.json",
     "fshName": "ExampleISiKMedikationsInformation4",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 335,
-    "endLine": 354
+    "startLine": 352,
+    "endLine": 371
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformation5.json",
     "fshName": "ExampleISiKMedikationsInformation5",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 357,
-    "endLine": 379
+    "startLine": 374,
+    "endLine": 396
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformation6.json",
     "fshName": "ExampleISiKMedikationsInformation6",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 382,
-    "endLine": 398
+    "startLine": 399,
+    "endLine": 415
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformationParkinson1.json",
     "fshName": "ExampleISiKMedikationsInformationParkinson1",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 401,
-    "endLine": 423
+    "startLine": 418,
+    "endLine": 440
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformationParkinson2.json",
     "fshName": "ExampleISiKMedikationsInformationParkinson2",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 426,
-    "endLine": 446
+    "startLine": 443,
+    "endLine": 463
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformationParkinson3.json",
     "fshName": "ExampleISiKMedikationsInformationParkinson3",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 449,
-    "endLine": 478
+    "startLine": 466,
+    "endLine": 495
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformationParkinson4.json",
     "fshName": "ExampleISiKMedikationsInformationParkinson4",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 481,
-    "endLine": 501
+    "startLine": 498,
+    "endLine": 518
   },
   {
     "outputFile": "MedicationStatement-ExampleISiKMedikationsInformationParkinson5.json",
     "fshName": "ExampleISiKMedikationsInformationParkinson5",
     "fshType": "Instance",
     "fshFile": "ISiKMedikationsInformation.fsh",
-    "startLine": 504,
-    "endLine": 523
+    "startLine": 521,
+    "endLine": 540
   },
   {
     "outputFile": "Patient-PatientinMusterfrau.json",
@@ -365,7 +373,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikament.fsh",
     "startLine": 1,
-    "endLine": 109
+    "endLine": 108
   },
   {
     "outputFile": "StructureDefinition-ISiKMedikationTransaction.json",
@@ -389,7 +397,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikationsInformation.fsh",
     "startLine": 1,
-    "endLine": 260
+    "endLine": 277
   },
   {
     "outputFile": "StructureDefinition-ISiKMedikationsListe.json",
@@ -405,7 +413,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedikationsVerabreichung.fsh",
     "startLine": 1,
-    "endLine": 119
+    "endLine": 133
   },
   {
     "outputFile": "StructureDefinition-ISiKMedikationsVerordnung.json",
