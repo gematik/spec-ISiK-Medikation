@@ -9,7 +9,7 @@ Version: 4.0.2
 
 Datum: 06.03.2025
 
-* `improve` Klarstellung zu übergreifenden Festlegungen
+* `improve` Klarstellung zu übergreifenden Festlegungen https://github.com/gematik/spec-ISiK-Medikation/pull/168
 * `fixed` broken package
 
 ----
