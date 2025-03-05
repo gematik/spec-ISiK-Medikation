@@ -7,7 +7,7 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 Version: 4.0.2 
 
-Datum: tbd.
+Datum: 06.03.2025
 
 * `improve` Klarstellung zu übergreifenden Festlegungen
 * `fixed` broken package
