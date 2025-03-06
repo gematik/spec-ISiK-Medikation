@@ -8,7 +8,7 @@
   "url": "https://gematik.de/fhir/isik/ValueSet/ISiKMedikationsartVS",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2025-03-05",
+  "date": "2025-03-06",
   "compose": {
     "include": [
       {
