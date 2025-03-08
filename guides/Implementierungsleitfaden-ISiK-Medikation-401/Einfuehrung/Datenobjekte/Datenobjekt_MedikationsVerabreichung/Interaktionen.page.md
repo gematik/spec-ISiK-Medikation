@@ -8,11 +8,13 @@ canonical: https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerab
 from
     CapabilityStatement
 where
-    url = %capability-1
+    url = %capability1
 or
-    url = %capability-2
+    url = %capability2
 or
-    url = %capability-3
+    url = %capability3
+or
+    url = %capability4
 for rest.resource.where(%canonical in supportedProfile)
 select
     documentation
@@ -31,7 +33,7 @@ with
         {{page:FQL-Capability-Operations}}
     </tab>
     <tab title="Link">
-        {{pagelink:CapabilityStatement}}
+        {{pagelink:Einfuehrung/Datenobjekte/CapabilityStatements}}
     </tab>
 </tabs>
 
