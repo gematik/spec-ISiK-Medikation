@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ExtensionISiKMedicationStatementReplaces",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedicationStatementReplaces",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "name": "ExtensionISiKMedicationStatementReplaces",
   "title": "ISiK MedicationStatementReplaces",
   "status": "active",

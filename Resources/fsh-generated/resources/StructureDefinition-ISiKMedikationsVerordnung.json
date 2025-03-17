@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsVerordnung",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "name": "ISiKMedikationsVerordnung",
   "status": "active",
   "experimental": false,

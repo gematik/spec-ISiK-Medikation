@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKAMTSBewertung",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKAMTSBewertung",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "name": "ISiKAMTSBewertung",
   "title": "ISiK AMTS-Bewertung",
   "status": "active",

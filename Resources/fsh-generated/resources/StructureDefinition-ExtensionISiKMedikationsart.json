@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ExtensionISiKMedikationsart",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "name": "ExtensionISiKMedikationsart",
   "title": "ISiK Medikationsart",
   "status": "active",
