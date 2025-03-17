@@ -7,7 +7,7 @@
   "title": "ISiK Medikationsart",
   "status": "active",
   "experimental": false,
-  "date": "2025-03-06",
+  "date": "2025-03-17",
   "publisher": "gematik GmbH",
   "description": "Extension zur Dokumentation der Therapieart einer Medikation (Akut- oder Dauermedikation).",
   "fhirVersion": "4.0.1",
