@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ExtensionISiKMedicationRequestReplaces",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedicationRequestReplaces",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "name": "ExtensionISiKMedicationRequestReplaces",
   "title": "ISiK MedicationRequestReplaces",
   "status": "active",

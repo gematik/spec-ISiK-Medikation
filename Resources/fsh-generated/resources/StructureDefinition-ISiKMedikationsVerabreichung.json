@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikationsVerabreichung",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerabreichung",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "name": "ISiKMedikationsVerabreichung",
   "status": "active",
   "experimental": false,
