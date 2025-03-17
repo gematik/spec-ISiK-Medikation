@@ -1,9 +1,9 @@
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Medikation/main-stufe-4/Material/images/Gematik_Logo_Flag.svg" alt="gematik logo" width="400"/>
 
 ----
-Version: 4.0.2
+Version: 4.0.3
 
-Datum: 06.03.2025
+Datum: 17.03.2025
 
 Status: Active
 
