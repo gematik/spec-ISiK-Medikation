@@ -23,6 +23,8 @@ expand: 4
 
 ## ExampleISiKMedikationsListeParkinson
 
+Beispiel für eine Medikationsliste zur Behandlung von Morbus Parkinson (vgl. auch die vollständige Darstellung unter {{pagelink:ImplementationGuide/markdown/Datenobjekte/Profile_MedikationsInformation.md}}):
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikationsListeParkinson}}
