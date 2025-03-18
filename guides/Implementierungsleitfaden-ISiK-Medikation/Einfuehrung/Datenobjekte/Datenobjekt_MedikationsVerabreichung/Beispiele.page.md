@@ -6,6 +6,8 @@ expand: 4
 
 ## ExampleISiKMedikationsVerabreichung
 
+Einfache Einnahme:
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikationsVerabreichung}}
@@ -23,6 +25,8 @@ expand: 4
 
 ## ExampleISiKMedikationsVerabreichung2
 
+Zytostatika-Infusion:
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikationsVerabreichung2}}
@@ -39,6 +43,8 @@ expand: 4
 </tabs>
 
 ## ExampleISiKMedikationsVerabreichung3
+
+Verabreichung einer Infusion mit Angabe der Dosierungs-Rate in zwei Varianten (Quantity und Ratio):
 
 <tabs>
     <tab title="Übersicht">      

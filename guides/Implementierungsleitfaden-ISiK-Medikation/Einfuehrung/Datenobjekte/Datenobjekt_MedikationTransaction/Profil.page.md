@@ -4,6 +4,8 @@ canonical: https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationTransa
 ---
 ## {{link}}
 
+Hinweis: Die Regeln aus dem Modul [ISiK Basis Stufe 4](https://simplifier.net/guide/isik-basis-v4) für die Verarbeitung Document-Bundles, treffen hier nicht zu, da es sich um den Bundle-Typ Transaction handelt.
+
 <fql output="inline">
 from
 	StructureDefinition
@@ -72,3 +74,6 @@ for
         join mapping.where(identity = 'CompositionDocumentReferenceMapping')
           { 'Quelle: Document-Bundle': map, Hinweis: comment } 
 </fql>-->
+
+
+Transaction-Bundles werden nicht persistiert, sondern ausschließlich im Kontext von FHIR-Transaktionen verwendet, vgl. [FHIR RESTful API - Batch/Transaction](https://www.hl7.org/fhir/R4/http.html#transaction).

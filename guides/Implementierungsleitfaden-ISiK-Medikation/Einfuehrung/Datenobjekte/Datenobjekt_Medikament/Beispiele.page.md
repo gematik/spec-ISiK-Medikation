@@ -6,6 +6,8 @@ expand: 4
 
 ## ExampleISiKMedikament1
 
+Medikament codiert (Wirkstoff):
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikament1}}
@@ -22,6 +24,8 @@ expand: 4
 </tabs>
 
 ## ExampleISiKMedikament2
+
+Infusionslösung:
 
 <tabs>
     <tab title="Übersicht">      
@@ -40,6 +44,8 @@ expand: 4
 
 ## ExampleISiKMedikament3
 
+Medikament codiert (PZN):
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikament3}}
@@ -56,6 +62,8 @@ expand: 4
 </tabs>
 
 ## ExampleISiKMedikament4
+
+Medikamentenrezeptur aus Fertigarzneimitteln:
 
 <tabs>
     <tab title="Übersicht">      
@@ -74,6 +82,8 @@ expand: 4
 
 ## ExampleISiKMedikament5
 
+Medikamentenrezeptur aus Wirkstoffen:
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikament5}}
@@ -90,6 +100,8 @@ expand: 4
 </tabs>
 
 ## ExampleISiKMedikament6
+
+Medikament als Freitext:
 
 <tabs>
     <tab title="Übersicht">      
@@ -108,6 +120,8 @@ expand: 4
 
 ## ExampleISiKMedikament7
 
+Medikament (hier: Paracetamol) in Wasser aufgelöst:
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikament7}}
@@ -125,6 +139,8 @@ expand: 4
 
 ## ExampleISiKMedikament8
 
+Zytostatikum mit relativer Wirkstärken-Angabe (mg/kg Körpergewicht):
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikament8}}
@@ -141,6 +157,8 @@ expand: 4
 </tabs>
 
 ## ExampleISiKMedikament9
+
+Zytostatikum mit absoluter Wirkstärken-Angabe:
 
 <tabs>
     <tab title="Übersicht">      

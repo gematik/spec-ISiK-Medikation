@@ -6,6 +6,8 @@ expand: 4
 
 ## ExampleISiKMedikationsVerordnung
 
+Dauermedikation morgens/mittags/abends:
+
 <tabs>
     <tab title="Übersicht">      
         {{render:ExampleISiKMedikationsVerordnung}}
@@ -22,6 +24,8 @@ expand: 4
 </tabs>
 
 ## ExampleISiKMedikationsVerordnung2
+
+Einfaches Zytostatikum-Therapieschema (Chemotherapie):
 
 <tabs>
     <tab title="Übersicht">      
