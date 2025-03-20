@@ -5,11 +5,11 @@
   "id": "MedikationsListeListModeVS",
   "title": "Medikationslisten-Modes",
   "description": "Erlaubte ListModes der ISiK MedikationsListe",
-  "version": "4.0.1",
+  "version": "4.0.3",
   "url": "https://gematik.de/fhir/isik/ValueSet/MedikationsListeListModeVS",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2025-03-17",
+  "date": "2025-03-18",
   "compose": {
     "include": [
       {
