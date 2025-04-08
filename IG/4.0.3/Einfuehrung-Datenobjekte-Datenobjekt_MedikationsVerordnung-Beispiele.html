@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Implementierungsleitfaden ISiK-Medikation</title>
+
+    <link rel="icon" href="static/styles/common/favicon.ico" />
+
+    <script src="static/styles/common/jquery/jquery.min.js"></script>
+    <script src="static/styles/common/bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/common/main.min.css" />
+    <link rel="stylesheet" href="static/styles/common/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/styles/common/rendering/rendering.min.css" /> 
+
+    <script src="static/styles/common/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/common/rendering/baseTreetable.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/twolevelmenu/style.css?v=1dba88217701980" />
+
+</head>
+
+<body>
+
+    <div id="ig-viewer">
+
+        <div class="ig-view-content">
+
+            <div id="ig-view-twolevelmenu">
+
+                <div class="header" role="banner" aria-label="Header">
+                    
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+                <a class="navbar-brand" href="Einfuehrung.html">
+                    Implementierungsleitfaden ISiK-Medikation
+                </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="Einfuehrung.html">
+                            Einf&#xFC;hrung
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="Einfuehrung-Motivation.html">
+                                Motivation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Einfuehrung-ReleaseNotes.html">
+                                ReleaseNotes
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Use Cases <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Einfuehrung-UseCases.html">
+                                            Use Cases
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="Einfuehrung-UseCases-UebersichtAnwendungsfaelle.html">
+                                            &#xDC;bersicht Anwendungsf&#xE4;lle (Use Cases)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-UseCases-Informationsmodell.html">
+                                            Informationsmodell
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-UseCases-AMTS.html">
+                                            AMTS
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Festlegungen <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Einfuehrung-UebergreifendeFestlegungen.html">
+                                            &#xDC;bergreifende Festlegungen
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="Einfuehrung-UebergreifendeFestlegungen-BestaetigungsrelevanteSysteme.html">
+                                            Best&#xE4;tigungsrelevante Systeme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-UebergreifendeFestlegungen-Kompatibilitaet.html">
+                                            Kompatibilit&#xE4;t
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-UebergreifendeFestlegungen-RestApi.html">
+                                            REST-API
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-UebergreifendeFestlegungen-AkteureUndInteraktionen.html">
+                                            Akteure und Interaktionen
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Datenobjekte <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte.html">
+                                            Datenobjekte
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-CapabilityStatements.html">
+                                            CapabilityStatements
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Terminologien.html">
+                                            Terminologien
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Extensions.html">
+                                            Extensions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Datenobjekt_Medikament.html">
+                                            ISiKMedikament (Medication)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Datenobjekt_MedikationsVerordnung.html">
+                                            ISiKMedikationsVerordnung (MedicationRequest)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Datenobjekt_MedikationsInformation.html">
+                                            ISiKMedikationsInformation (MedicationStatement)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Datenobjekt_MedikationsListe.html">
+                                            ISiKMedikationsListe (List)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Datenobjekt_MedikationsVerabreichung.html">
+                                            ISiKMedikationsVerabreichung (MedicationAdministration)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Datenobjekt_AMTSBewertung.html">
+                                            ISiKAMTSBewertung (RiskAssessment)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Datenobjekt_MedikationTransaction.html">
+                                            ISiKMedikationTransaction (Bundle)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Einfuehrung-Datenobjekte-Datenobjekt_MedikationTransactionResponse.html">
+                                            ISiKMedikationTransactionResponse (Bundle)
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                </div>
+
+                <div class="content container" role="main" aria-label="Main content">
+                    
+
+
+<div class="row">
+
+
+    <div class="col-md-24">
+
+        <div id="preview-content">
+
+            <h3 id="beispiele">Beispiele</h3>
+<h2 id="exampleisikmedikationsverordnung">ExampleISiKMedikationsVerordnung</h2>
+<p>Dauermedikation morgens/mittags/abends:</p>
+<div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#13e463c4-05c4-4ac3-9106-b415e8015c83" aria-controls="13e463c4-05c4-4ac3-9106-b415e8015c83" role="tab" data-toggle="tab">Übersicht</a>
+</li><li role="presentation" class="">
+    <a href="#bb8ee152-f623-4154-a646-91cf79f74d36" aria-controls="bb8ee152-f623-4154-a646-91cf79f74d36" role="tab" data-toggle="tab">XML</a>
+</li><li role="presentation" class="">
+    <a href="#89082c1b-5488-4a6c-b729-8edd97a76542" aria-controls="89082c1b-5488-4a6c-b729-8edd97a76542" role="tab" data-toggle="tab">JSON</a>
+</li><li role="presentation" class="">
+    <a href="#6efc5a6a-8c5c-4af5-a5eb-6e6d54e142ab" aria-controls="6efc5a6a-8c5c-4af5-a5eb-6e6d54e142ab" role="tab" data-toggle="tab">Link</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="13e463c4-05c4-4ac3-9106-b415e8015c83">
+    <div class="stu3-treetable" id="a60e566291424da697681c0b78f05143" data-level="4"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tr data-id="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>MedicationRequest</b></td></tr><tr class="collapsed" data-id="ca0bba814c164ee287e1c3ee4a20ccc8" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>ExampleISiKMedikationsVerordnung</span></td></tr>
+<tr class="collapsed" data-id="1f72fc697f5b4011a40adfe40eac00a0" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="fc38973944c34d74aa45d9dacab66ebf" data-parentId="1f72fc697f5b4011a40adfe40eac00a0"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung</span></td></tr>
+
+<tr class="collapsed" data-id="5a3936ac2bb0460bbacf93fd29a96bab" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="edd581fb7ad4464daa01e0ecd0cfb714" data-parentId="5a3936ac2bb0460bbacf93fd29a96bab"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk</span></td></tr>
+<tr class="collapsed" data-id="4ccef70334d249b096793b8b2a5820f7" data-parentId="5a3936ac2bb0460bbacf93fd29a96bab"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>Erh&#246;htes Blutungsrisiko ist in diesem Fall vertretbar.</span></td></tr>
+
+<tr class="collapsed" data-id="fa0f4f18c6004ec28d25342898f8aec1" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="6940c44476cf405396bb00b455b4205b" data-parentId="fa0f4f18c6004ec28d25342898f8aec1"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart</span></td></tr>
+<tr class="collapsed" data-id="e1918c45e1f04d829d99ebf013860554" data-parentId="fa0f4f18c6004ec28d25342898f8aec1"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="d3d7775e6c52403bae82b3f87afeecac" data-parentId="e1918c45e1f04d829d99ebf013860554"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsartCS</span></td></tr>
+<tr class="collapsed" data-id="064a5bc801cd4541aad5017127f21b40" data-parentId="e1918c45e1f04d829d99ebf013860554"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>akut</span></td></tr>
+
+
+<tr class="collapsed" data-id="c85d2051866d40a0807cb7e8632e6151" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="4c43ea95d257425387225ec514d40bc4" data-parentId="c85d2051866d40a0807cb7e8632e6151"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKBehandlungsziel</span></td></tr>
+<tr class="collapsed" data-id="930e010b628f452d800982db1ba5ed90" data-parentId="c85d2051866d40a0807cb7e8632e6151"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>Schmerztherapie postoperativ</span></td></tr>
+
+<tr class="collapsed" data-id="31d5852590be453db92b395be7c43ecf" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>active</span></td></tr>
+<tr class="collapsed" data-id="8c228075b957484c973f1c6145565bc7" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>intent : </b><span>order</span></td></tr>
+<tr class="collapsed" data-id="e6a28ce2059a40d5a79eeaa32cc0d2b3" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>medication</b></td></tr><tr class="collapsed" data-id="969bdff085454c85ab69baf8f868f565" data-parentId="e6a28ce2059a40d5a79eeaa32cc0d2b3"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Medication/ExampleISiKMedikament1</span></td></tr>
+
+<tr class="collapsed" data-id="bb5666cf5bf94309b55f4a8133a7d41c" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="e9f6fc95337744ba8001ee1e2f27b6a7" data-parentId="bb5666cf5bf94309b55f4a8133a7d41c"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/PatientinMusterfrau</span></td></tr>
+
+<tr class="collapsed" data-id="35a75b2170714fcfa3793f24ad11d0b1" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>encounter</b></td></tr><tr class="collapsed" data-id="e224a1c6e2bc4f87b4b4fdaade5ecff4" data-parentId="35a75b2170714fcfa3793f24ad11d0b1"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Encounter/Fachabteilungskontakt</span></td></tr>
+
+<tr class="collapsed" data-id="cee92e2605c74fc09da6238af2cbc3a1" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>authoredOn : </b><span>2021-07-01</span></td></tr>
+<tr class="collapsed" data-id="2f38f4239a9c439299e3c9a7a6057213" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>requester</b></td></tr><tr class="collapsed" data-id="6c0a5ea90f0a443abb02cd90048988dc" data-parentId="2f38f4239a9c439299e3c9a7a6057213"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/PractitionerWalterArzt</span></td></tr>
+
+<tr class="collapsed" data-id="19553fa76a534058b214bab36316390f" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>reasonReference</b></td></tr><tr class="collapsed" data-id="d7d74a1926214166907a9a2ac24cfb08" data-parentId="19553fa76a534058b214bab36316390f"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Condition/BehandlungsDiagnoseFreitext</span></td></tr>
+
+<tr class="collapsed" data-id="932ccbef24744e4994ff0a35f361ef4c" data-parentId="c8655e850b0941d99dc7f36ab275d868"><td class="instance"><span class="baseIcon primitive"></span><b>dosageInstruction</b></td></tr><tr class="collapsed" data-id="20bbbe32ff5b48a6b8700e8d27222469" data-parentId="932ccbef24744e4994ff0a35f361ef4c"><td class="instance"><span class="baseIcon primitive"></span><b>timing</b></td></tr><tr class="collapsed" data-id="94416483b8a84e2ebef1e4023f21fa7f" data-parentId="20bbbe32ff5b48a6b8700e8d27222469"><td class="instance"><span class="baseIcon primitive"></span><b>repeat</b></td></tr><tr class="collapsed" data-id="1ef7e33d1331419bb5a1684bc8ea2e66" data-parentId="94416483b8a84e2ebef1e4023f21fa7f"><td class="instance"><span class="baseIcon primitive"></span><b>when : </b><span>MORN</span></td></tr>
+<tr class="collapsed" data-id="bc1b6286698149dd866317025f510230" data-parentId="94416483b8a84e2ebef1e4023f21fa7f"><td class="instance"><span class="baseIcon primitive"></span><b>when : </b><span>NOON</span></td></tr>
+<tr class="collapsed" data-id="a42a0d89a8564e21ae71daca9079cea2" data-parentId="94416483b8a84e2ebef1e4023f21fa7f"><td class="instance"><span class="baseIcon primitive"></span><b>when : </b><span>EVE</span></td></tr>
+
+
+<tr class="collapsed" data-id="6d3d4a21c5734a84aee16aa54cea5f73" data-parentId="932ccbef24744e4994ff0a35f361ef4c"><td class="instance"><span class="baseIcon primitive"></span><b>doseAndRate</b></td></tr><tr class="collapsed" data-id="04fd20a604a147c0922c6c48a0bfc374" data-parentId="6d3d4a21c5734a84aee16aa54cea5f73"><td class="instance"><span class="baseIcon primitive"></span><b>dose</b></td></tr><tr class="collapsed" data-id="34711859eb374247abe7c4f63f3ccfb9" data-parentId="04fd20a604a147c0922c6c48a0bfc374"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>1</span></td></tr>
+<tr class="collapsed" data-id="92f0b31c7efd4fec9b4c85462186006f" data-parentId="04fd20a604a147c0922c6c48a0bfc374"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>Brausetablette</span></td></tr>
+<tr class="collapsed" data-id="a1ec9aa4a7644c5abdd236a4ce558395" data-parentId="04fd20a604a147c0922c6c48a0bfc374"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr>
+<tr class="collapsed" data-id="1b32632b0f5240bba60594457b1d10fd" data-parentId="04fd20a604a147c0922c6c48a0bfc374"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>1</span></td></tr>
+
+
+
+
+</table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTablea60e566291424da697681c0b78f05143 = new InstanceTree();
+resourceTreeTablea60e566291424da697681c0b78f05143.init("a60e566291424da697681c0b78f05143");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="bb8ee152-f623-4154-a646-91cf79f74d36">
+    <pre class="resource-validation-xml"><span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest" >MedicationRequest</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.id" >id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">ExampleISiKMedikationsVerordnung</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.meta" >meta</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.meta.profile" >profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension" >extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension.value" >valueString</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Erh&amp;#246;htes Blutungsrisiko ist in diesem Fall vertretbar.</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension" >extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension.value" >valueCoding</a></span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension.value.system" >system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsartCS</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension.value.code" >code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">akut</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">valueCoding</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension" >extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKBehandlungsziel</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension.value" >valueString</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Schmerztherapie postoperativ</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.status" >status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">active</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.intent" >intent</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">order</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.medication" >medicationReference</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.medication.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Medication/ExampleISiKMedikament1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">medicationReference</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.subject" >subject</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.subject.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/PatientinMusterfrau</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.encounter" >encounter</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.encounter.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Encounter/Fachabteilungskontakt</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">encounter</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.authoredOn" >authoredOn</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2021-07-01</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.requester" >requester</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.requester.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Practitioner/PractitionerWalterArzt</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">requester</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.reasonReference" >reasonReference</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.reasonReference.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Condition/BehandlungsDiagnoseFreitext</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">reasonReference</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction" >dosageInstruction</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing" >timing</a></span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat" >repeat</a></span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.when" >when</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">MORN</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.when" >when</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">NOON</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.when" >when</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">EVE</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">repeat</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">timing</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate" >doseAndRate</a></span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose" >doseQuantity</a></span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose.value" >value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose.unit" >unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Brausetablette</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose.system" >system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose.code" >code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">doseQuantity</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">doseAndRate</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">dosageInstruction</span><span class="brace">&gt;</span>
+<span class="brace">&lt;/</span><span class="element">MedicationRequest</span><span class="brace">&gt;</span>
+</pre>
+</div><div role="tabpanel" class="tab-pane " id="89082c1b-5488-4a6c-b729-8edd97a76542">
+    <pre class="resource-validation-xml"><pre><span class="brace">{</span>
+    <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">MedicationRequest</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ExampleISiKMedikationsVerordnung</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+            <span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung</span><span class="string">&quot;</span>
+        <span class="brace">]</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">extension</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKAcceptedRisk</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">valueString</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Erh&#246;htes Blutungsrisiko ist in diesem Fall vertretbar.</span><span class="string">&quot;</span>
+        <span class="brace">}</span><span class="symbol">,</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedikationsart</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">valueCoding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">akut</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/CodeSystem/ISiKMedikationsartCS</span><span class="string">&quot;</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span><span class="symbol">,</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKBehandlungsziel</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">valueString</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Schmerztherapie postoperativ</span><span class="string">&quot;</span>
+        <span class="brace">}</span>
+    <span class="brace">]</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">dosageInstruction</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">doseAndRate</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                <span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">doseQuantity</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">value</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">1</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">unit</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Brausetablette</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">1</span><span class="string">&quot;</span>
+                    <span class="brace">}</span>
+                <span class="brace">}</span>
+            <span class="brace">]</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">timing</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">repeat</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">when</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="string">&quot;</span><span class="string">MORN</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="string">&quot;</span><span class="string">NOON</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="string">&quot;</span><span class="string">EVE</span><span class="string">&quot;</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span>
+    <span class="brace">]</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">status</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">active</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">intent</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">order</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">medicationReference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Medication/ExampleISiKMedikament1</span><span class="string">&quot;</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">subject</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/PatientinMusterfrau</span><span class="string">&quot;</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">encounter</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Encounter/Fachabteilungskontakt</span><span class="string">&quot;</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">authoredOn</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2021-07-01</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">requester</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Practitioner/PractitionerWalterArzt</span><span class="string">&quot;</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">reasonReference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition/BehandlungsDiagnoseFreitext</span><span class="string">&quot;</span>
+        <span class="brace">}</span>
+    <span class="brace">]</span>
+<span class="brace">}</span></pre></pre>
+</div><div role="tabpanel" class="tab-pane " id="6efc5a6a-8c5c-4af5-a5eb-6e6d54e142ab">
+    <a  href='artifacts/Resources/fsh-generated/resources/MedicationRequest-ExampleISiKMedikationsVerordnung.json'>Medication order for Patient/PatientinMusterfrau</a>
+</div>
+  </div>
+</div>
+<h2 id="exampleisikmedikationsverordnung2">ExampleISiKMedikationsVerordnung2</h2>
+<p>Einfaches Zytostatikum-Therapieschema (Chemotherapie):</p>
+<div class="cool-tabs">
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+    <a href="#8dcfde19-af22-4874-a0f8-cdefd769867b" aria-controls="8dcfde19-af22-4874-a0f8-cdefd769867b" role="tab" data-toggle="tab">Übersicht</a>
+</li><li role="presentation" class="">
+    <a href="#cc88cd09-5872-402b-8c41-1b3c15125c0a" aria-controls="cc88cd09-5872-402b-8c41-1b3c15125c0a" role="tab" data-toggle="tab">XML</a>
+</li><li role="presentation" class="">
+    <a href="#1ff32f5e-3a9a-4d87-b93b-2de9eab105f5" aria-controls="1ff32f5e-3a9a-4d87-b93b-2de9eab105f5" role="tab" data-toggle="tab">JSON</a>
+</li><li role="presentation" class="">
+    <a href="#30fdacde-3dbe-4751-901e-dd0a952af5df" aria-controls="30fdacde-3dbe-4751-901e-dd0a952af5df" role="tab" data-toggle="tab">Link</a>
+</li>
+  </ul>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="8dcfde19-af22-4874-a0f8-cdefd769867b">
+    <div class="stu3-treetable" id="92ca5b2616304741a7a8db5583900fa5" data-level="4"><div class="treetable-wrapper"><div class="treetable-left-panel"><table class="treetable instance-tree"><tr data-id="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>MedicationRequest</b></td></tr><tr class="collapsed" data-id="cce87444564841b5bfbd64b106b8a341" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>id : </b><span>ExampleISiKMedikationsVerordnung2</span></td></tr>
+<tr class="collapsed" data-id="f78ad1a1a962405ebe6070402b4711de" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>meta</b></td></tr><tr class="collapsed" data-id="b2e8ad12905b4753bcccd2c20794505b" data-parentId="f78ad1a1a962405ebe6070402b4711de"><td class="instance"><span class="baseIcon primitive"></span><b>profile : </b><span>https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung</span></td></tr>
+
+<tr class="collapsed" data-id="ace7eaba88f741abb0fb56c4c18db2d2" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>extension</b></td></tr><tr class="collapsed" data-id="4401bc2de7c54956a4fe3704fb48e489" data-parentId="ace7eaba88f741abb0fb56c4c18db2d2"><td class="instance"><span class="baseIcon primitive"></span><b>url : </b><span>https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedicationRequestReplaces</span></td></tr>
+<tr class="collapsed" data-id="0867a52a9af14e4c95b5b8fdabb23d4b" data-parentId="ace7eaba88f741abb0fb56c4c18db2d2"><td class="instance"><span class="baseIcon primitive"></span><b>value</b></td></tr><tr class="collapsed" data-id="b114ad3280424d9eaf319767a04d8ae9" data-parentId="0867a52a9af14e4c95b5b8fdabb23d4b"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>MedicationRequest/77777</span></td></tr>
+
+
+<tr class="collapsed" data-id="c6d9103eb14243cc957fe11eaee7cb46" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>status : </b><span>active</span></td></tr>
+<tr class="collapsed" data-id="9bb2f8c4832744f1a0c01756eccfb4e6" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>intent : </b><span>order</span></td></tr>
+<tr class="collapsed" data-id="7ac0e1f411f64874904534b0cf41553e" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>medication</b></td></tr><tr class="collapsed" data-id="30bebb6be1924401945ba61f7904d9e9" data-parentId="7ac0e1f411f64874904534b0cf41553e"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Medication/ExampleISiKMedikament8</span></td></tr>
+
+<tr class="collapsed" data-id="049ed1604e5b45d3aea993ab3773bc9b" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>subject</b></td></tr><tr class="collapsed" data-id="d819c8eeb1cb4da485b4198a200549f9" data-parentId="049ed1604e5b45d3aea993ab3773bc9b"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Patient/PatientinMusterfrau</span></td></tr>
+
+<tr class="collapsed" data-id="044d11c58bc946c99c91ba44a18a5075" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>encounter</b></td></tr><tr class="collapsed" data-id="266d8437d7e146c6bafb2b6a0c41beb8" data-parentId="044d11c58bc946c99c91ba44a18a5075"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Encounter/Fachabteilungskontakt</span></td></tr>
+
+<tr class="collapsed" data-id="d76fc35e328d4ebdb75ee660ee1ef97d" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>authoredOn : </b><span>2024-01-17</span></td></tr>
+<tr class="collapsed" data-id="5767f00de87e49cf89c73ba9679efd6e" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>requester</b></td></tr><tr class="collapsed" data-id="1da584ba2f7646e8acfd9cda79b8f5d9" data-parentId="5767f00de87e49cf89c73ba9679efd6e"><td class="instance"><span class="baseIcon primitive"></span><b>reference : </b><span>Practitioner/PractitionerWalterArzt</span></td></tr>
+
+<tr class="collapsed" data-id="b473369f2ee34051bef6c012e13c93ef" data-parentId="07581d0b3ca04855bf44bf224a737bd4"><td class="instance"><span class="baseIcon primitive"></span><b>dosageInstruction</b></td></tr><tr class="collapsed" data-id="b7d5b0a176b44bca83bee4bc1f8f1078" data-parentId="b473369f2ee34051bef6c012e13c93ef"><td class="instance"><span class="baseIcon primitive"></span><b>timing</b></td></tr><tr class="collapsed" data-id="972e4e47e5554a1097287967a08982bc" data-parentId="b7d5b0a176b44bca83bee4bc1f8f1078"><td class="instance"><span class="baseIcon primitive"></span><b>repeat</b></td></tr><tr class="collapsed" data-id="822c4bb43f584a69896ed190ca14823b" data-parentId="972e4e47e5554a1097287967a08982bc"><td class="instance"><span class="baseIcon primitive"></span><b>count : </b><span>6</span></td></tr>
+<tr class="collapsed" data-id="e8864b54a9044bcfb0946c9ab98e0ba4" data-parentId="972e4e47e5554a1097287967a08982bc"><td class="instance"><span class="baseIcon primitive"></span><b>duration : </b><span>6</span></td></tr>
+<tr class="collapsed" data-id="c2529697589941608d97deb50fd9539e" data-parentId="972e4e47e5554a1097287967a08982bc"><td class="instance"><span class="baseIcon primitive"></span><b>durationUnit : </b><span>wk</span></td></tr>
+<tr class="collapsed" data-id="5a80e081681e47f2bfd48869d2f592dd" data-parentId="972e4e47e5554a1097287967a08982bc"><td class="instance"><span class="baseIcon primitive"></span><b>frequency : </b><span>1</span></td></tr>
+<tr class="collapsed" data-id="21e8b5bd944742358b812615b36500b9" data-parentId="972e4e47e5554a1097287967a08982bc"><td class="instance"><span class="baseIcon primitive"></span><b>period : </b><span>1</span></td></tr>
+<tr class="collapsed" data-id="264ff23e6bbb4358ac3ec5b3f39196b0" data-parentId="972e4e47e5554a1097287967a08982bc"><td class="instance"><span class="baseIcon primitive"></span><b>periodUnit : </b><span>wk</span></td></tr>
+
+
+<tr class="collapsed" data-id="df2fe571a4a848ee908ef80b1d7a3edf" data-parentId="b473369f2ee34051bef6c012e13c93ef"><td class="instance"><span class="baseIcon primitive"></span><b>doseAndRate</b></td></tr><tr class="collapsed" data-id="3fd309c51c994495bb3fe49ef7c51b85" data-parentId="df2fe571a4a848ee908ef80b1d7a3edf"><td class="instance"><span class="baseIcon primitive"></span><b>dose</b></td></tr><tr class="collapsed" data-id="c3824adba47b49348b52773568e14f76" data-parentId="3fd309c51c994495bb3fe49ef7c51b85"><td class="instance"><span class="baseIcon primitive"></span><b>value : </b><span>500</span></td></tr>
+<tr class="collapsed" data-id="bf1caecdc6b24829b2d13c613517af40" data-parentId="3fd309c51c994495bb3fe49ef7c51b85"><td class="instance"><span class="baseIcon primitive"></span><b>unit : </b><span>ml Infusionsl&#246;sung</span></td></tr>
+<tr class="collapsed" data-id="caa0a427b75c4146ab5494fa6f817d94" data-parentId="3fd309c51c994495bb3fe49ef7c51b85"><td class="instance"><span class="baseIcon primitive"></span><b>system : </b><span>http://unitsofmeasure.org</span></td></tr>
+<tr class="collapsed" data-id="e3f2e92908314f01b60a2a875858534e" data-parentId="3fd309c51c994495bb3fe49ef7c51b85"><td class="instance"><span class="baseIcon primitive"></span><b>code : </b><span>mL</span></td></tr>
+
+
+
+
+</table></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable92ca5b2616304741a7a8db5583900fa5 = new InstanceTree();
+resourceTreeTable92ca5b2616304741a7a8db5583900fa5.init("92ca5b2616304741a7a8db5583900fa5");
+}
+})();
+</script>
+</div><div role="tabpanel" class="tab-pane " id="cc88cd09-5872-402b-8c41-1b3c15125c0a">
+    <pre class="resource-validation-xml"><span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest" >MedicationRequest</a></span> <span class="attr">xmlns</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://hl7.org/fhir</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.id" >id</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">ExampleISiKMedikationsVerordnung2</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.meta" >meta</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.meta.profile" >profile</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">meta</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension" >extension</a></span> <span class="attr">url</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedicationRequestReplaces</span><span class="symbol">&quot;</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension.value" >valueReference</a></span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.extension.value.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">MedicationRequest/77777</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">valueReference</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">extension</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.status" >status</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">active</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.intent" >intent</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">order</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.medication" >medicationReference</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.medication.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Medication/ExampleISiKMedikament8</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">medicationReference</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.subject" >subject</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.subject.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Patient/PatientinMusterfrau</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">subject</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.encounter" >encounter</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.encounter.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Encounter/Fachabteilungskontakt</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">encounter</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.authoredOn" >authoredOn</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">2024-01-17</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.requester" >requester</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.requester.reference" >reference</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">Practitioner/PractitionerWalterArzt</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">requester</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction" >dosageInstruction</a></span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing" >timing</a></span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat" >repeat</a></span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.count" >count</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">6</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.duration" >duration</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">6</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.durationUnit" >durationUnit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">wk</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.frequency" >frequency</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.period" >period</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">1</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.timing.repeat.periodUnit" >periodUnit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">wk</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">repeat</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">timing</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate" >doseAndRate</a></span><span class="brace">&gt;</span>
+            <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose" >doseQuantity</a></span><span class="brace">&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose.value" >value</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">500</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose.unit" >unit</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">ml Infusionsl&amp;#246;sung</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose.system" >system</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+                <span class="brace">&lt;</span><span class="element"><a title="Dieses Profil erm&#246;glicht die Abbildung von Medikationsverordnungen eines Patienten in ISiK Szenarien." href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKMedikationsVerordnung.json#MedicationRequest.dosageInstruction.doseAndRate.dose.code" >code</a></span> <span class="attr">value</span><span class="symbol">=</span><span class="symbol">&quot;</span><span class="string">mL</span><span class="symbol">&quot;</span><span class="brace"> /&gt;</span>
+            <span class="brace">&lt;/</span><span class="element">doseQuantity</span><span class="brace">&gt;</span>
+        <span class="brace">&lt;/</span><span class="element">doseAndRate</span><span class="brace">&gt;</span>
+    <span class="brace">&lt;/</span><span class="element">dosageInstruction</span><span class="brace">&gt;</span>
+<span class="brace">&lt;/</span><span class="element">MedicationRequest</span><span class="brace">&gt;</span>
+</pre>
+</div><div role="tabpanel" class="tab-pane " id="1ff32f5e-3a9a-4d87-b93b-2de9eab105f5">
+    <pre class="resource-validation-xml"><pre><span class="brace">{</span>
+    <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">MedicationRequest</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ExampleISiKMedikationsVerordnung2</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+            <span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ISiKMedikationsVerordnung</span><span class="string">&quot;</span>
+        <span class="brace">]</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">extension</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://gematik.de/fhir/isik/StructureDefinition/ExtensionISiKMedicationRequestReplaces</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">valueReference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">MedicationRequest/77777</span><span class="string">&quot;</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span>
+    <span class="brace">]</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">dosageInstruction</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">doseAndRate</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                <span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">doseQuantity</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">value</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">500</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">unit</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">ml Infusionsl&#246;sung</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">mL</span><span class="string">&quot;</span>
+                    <span class="brace">}</span>
+                <span class="brace">}</span>
+            <span class="brace">]</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">timing</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">repeat</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">count</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">6</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">frequency</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">1</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">duration</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">6</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">durationUnit</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">wk</span><span class="string">&quot;</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">period</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">1</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">periodUnit</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">wk</span><span class="string">&quot;</span>
+                <span class="brace">}</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span>
+    <span class="brace">]</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">status</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">active</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">intent</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">order</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">medicationReference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Medication/ExampleISiKMedikament8</span><span class="string">&quot;</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">subject</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/PatientinMusterfrau</span><span class="string">&quot;</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">encounter</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Encounter/Fachabteilungskontakt</span><span class="string">&quot;</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">authoredOn</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2024-01-17</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">requester</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Practitioner/PractitionerWalterArzt</span><span class="string">&quot;</span>
+    <span class="brace">}</span>
+<span class="brace">}</span></pre></pre>
+</div><div role="tabpanel" class="tab-pane " id="30fdacde-3dbe-4751-901e-dd0a952af5df">
+    <a  href='artifacts/Resources/fsh-generated/resources/MedicationRequest-ExampleISiKMedikationsVerordnung2.json'>Medication order for Patient/PatientinMusterfrau</a>
+</div>
+  </div>
+</div>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+            
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
