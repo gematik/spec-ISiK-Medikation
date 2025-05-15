@@ -9,6 +9,9 @@ Version: 3.0.6
 
 Datum: tbd.
 
+* ´improve´  Klärung zur Nutzung der Zeit-Elemente in ISiKMedikationsInformation -und ISiKMedikationsVerabreichung - Rollback aus Stufe 4- https://github.com/gematik/spec-ISiK-Medikation/pull/154
+  * Zum Hintergrund der Entscheidungsfindung beachte [öffentliche Fragestellung und Diskussion](https://chat.fhir.org/#narrow/channel/287581-german.2Fisik/topic/.5BMED.5D.20Administration.2FVerabreichung.20-.20Date.20or.20Timestamp). 
+
 ----
 
 Version: 3.0.5
