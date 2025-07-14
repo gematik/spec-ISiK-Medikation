@@ -4,11 +4,11 @@
   "url": "https://gematik.de/fhir/isik/v3/Medikation/CapabilityStatement/medikation-server/verordnung",
   "status": "active",
   "experimental": false,
-  "version": "3.0.5",
+  "version": "3.0.6",
   "publisher": "gematik GmbH",
-  "date": "2025-02-24",
+  "date": "2025-05-21",
   "implementationGuide": [
-    "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.5"
+    "https://gematik.de/fhir/isik/v3/Medikation/ImplementationGuide|3.0.6"
   ],
   "name": "ISiKCapabilityStatementMedikationVerordnung",
   "title": "ISiK CapabilityStatement Medikation Server - Medikationsverordnung",
