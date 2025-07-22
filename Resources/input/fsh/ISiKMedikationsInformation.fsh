@@ -22,13 +22,13 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     * system 1..1 MS
     * code 1..1 MS
     * display MS
-    * ^comment = "Merfachcodierung ist zulässig, da für ein abstraktes Medikament auch mehrere PZN-Codes existieren können, bspw. existieren für Aspirin 3 verschiedene Packungsgrößen."
+    * insert ISiKMedikament-CodingPZNComment
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
     * display MS
-    * ^comment = "Merfachcodierung ist zulässig, da für ein abstraktes Medikament auch mehrere ATC-Codes existieren können, bspw. existieren für Aspirin 4 verschiedene Codes, je nachdem wofür das Medikament angewendet wird."
+    * insert ISiKMedikament-CodingATCComment
   * coding[WG14]
     * ^patternCoding.system = $cs-wg14
     * system 1..1 MS
