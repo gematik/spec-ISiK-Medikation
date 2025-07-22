@@ -81,20 +81,6 @@ Description: "Dieses Profil ermöglicht die Abbildung von Medikationsverordnunge
         * unit MS
         * system 1..1 MS
         * code 1..1 MS
-      * boundsRange MS
-        * ^short = "Bereich für die Begrenzung"
-        * low MS
-          * ^patternQuantity.system = $cs-ucum
-          * value 1..1 MS
-          * unit MS
-          * system 1..1 MS
-          * code 1..1 MS
-        * high MS
-          * ^patternQuantity.system = $cs-ucum
-          * value 1..1 MS
-          * unit MS
-          * system 1..1 MS
-          * code 1..1 MS
       * boundsPeriod MS
         * ^short = "begrenzender Zeitraum"
         * start MS
