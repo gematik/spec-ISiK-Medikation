@@ -11,10 +11,7 @@ Datum: tbd.
 
 * `improve`  Klärung zur Nutzung der Zeit-Elemente in ISiKMedikationsInformation -und ISiKMedikationsVerabreichung - Rollback aus Stufe 4- https://github.com/gematik/spec-ISiK-Medikation/pull/154
   * Zum Hintergrund der Entscheidungsfindung beachte [öffentliche Fragestellung und Diskussion](https://chat.fhir.org/#narrow/channel/287581-german.2Fisik/topic/.5BMED.5D.20Administration.2FVerabreichung.20-.20Date.20or.20Timestamp).
-* `improve` MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange - Der Datentyp
-  boundsRange wurde als Must Support entfernt, da er in der praktischen Verordnung medizinischer
-  Therapien nur in sehr seltenen Spezialfällen Anwendung
-  findet. https://github.com/gematik/spec-ISiK-Medikation/pull/179
+* `improve` MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange - Der Datentyp boundsRange wurde als Must Support entfernt, da er in der praktischen Verordnung medizinischer Therapien nur in sehr seltenen Spezialfällen Anwendung findet. https://github.com/gematik/spec-ISiK-Medikation/pull/179
 
 ----
 
