@@ -14,7 +14,7 @@ Datum: tbd.
 * `improve` MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange - Der Datentyp
   boundsRange wurde als Must Support entfernt, da er in der praktischen Verordnung medizinischer
   Therapien nur in sehr seltenen Spezialfällen Anwendung
-  findet. 
+  findet. https://github.com/gematik/spec-ISiK-Medikation/pull/179
 
 ----
 
