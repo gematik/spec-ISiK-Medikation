@@ -19,19 +19,21 @@ Handelt es sich bei Erfassung um eine medizinische Verabreichungsdokumentation, 
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains
-      PZN 0..1 MS and
-      ATC-DE 0..1 MS and
+      PZN 0..* MS and
+      ATC-DE 0..* MS and
       WG14 0..1 MS
   * coding[PZN]
     * ^patternCoding.system = $cs-pzn
     * system 1..1 MS
     * code 1..1 MS
     * display MS
+    * insert ISiKMedikament-CodingPZNComment
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
     * display MS
+    * insert ISiKMedikament-CodingATCComment
   * coding[WG14]
     * ^patternCoding.system = $cs-wg14
     * system 1..1 MS
