@@ -4,7 +4,17 @@ Im Rahmen der ISiK-Veröffentlichungen wird das [Semantic Versioning](https://se
 
 Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von Releases. Die dritte Ziffer Y (Release x.0.y) bezeichnet eine technische Korrektur und versioniert kleinere Änderungen (Packages) während eines Jahres, z. B. 1.0.1.
 
-TC 3.0.5
+
+Version: 3.0.6
+
+Datum: tbd.
+
+* ´improve´  Klärung zur Nutzung der Zeit-Elemente in ISiKMedikationsInformation -und ISiKMedikationsVerabreichung - Rollback aus Stufe 4- https://github.com/gematik/spec-ISiK-Medikation/pull/154
+  * Zum Hintergrund der Entscheidungsfindung beachte [öffentliche Fragestellung und Diskussion](https://chat.fhir.org/#narrow/channel/287581-german.2Fisik/topic/.5BMED.5D.20Administration.2FVerabreichung.20-.20Date.20or.20Timestamp). 
+
+----
+
+Version: 3.0.5
 
 Datum: 24.02.2025
 
