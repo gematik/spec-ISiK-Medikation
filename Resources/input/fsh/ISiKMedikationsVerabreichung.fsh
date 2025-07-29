@@ -1,7 +1,13 @@
 Profile: ISiKMedikationsVerabreichung
 Parent: MedicationAdministration
 Id: ISiKMedikationsVerabreichung
-Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien."
+Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medikamenten für einen Patienten in ISiK Szenarien. 
+
+Hinweis zur Auswahl des Profils: In Abgrenzung zu ISiKMedikationsInformation (MedicationStatement) wird mittels des vorliegenden Profils die Verabreichung eines Medikaments an einen Patienten mit einer Zeitpunkt-genauen Angabe abgebildet (.effectiveDateTime oder .effectivePeriod auf Sekundenebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)). D. h. die lediglich Datums-genaue Angabe  ist im vorliegenden Profil nicht erlaubt. 
+Das Profil ISiKMedikationsInformation (MedicationStatement) kann ebenfalls für  die Abbildung der Verabreichung von Medikamenten für einen Patienten verwendet werden, wenn keine Zeitpunkt-genauen Angaben zur Verabreichung vorliegen, sondern lediglich Datums-genaue Angaben (einschließlich Granularität Jahr, Monat oder Tag).
+
+Begründung zur Profil- und Nutzungsdifferenzierung:
+Handelt es sich bei Erfassung um eine medizinische Verabreichungsdokumentation, dann ist ein genauer Zeitstempel zwingend. Die medizinische Verabreichungsdokumentation muss durch medizinisches Personal erfolgen. Angaben von Patienten und Angehörigen sind grundsätzlich keine medizinische Verabreichungsdokumentation und daher als MedicationStatement zu erfassen(['report that such a sequence (or at least a part of it) did take place'](https://hl7.org/fhir/R4/medicationstatement.html)). "
 * insert Meta
 * status MS
   * ^short = "Status der Verabreichungsinformation"
@@ -13,19 +19,21 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains
-      PZN 0..1 MS and
-      ATC-DE 0..1 MS and
+      PZN 0..* MS and
+      ATC-DE 0..* MS and
       WG14 0..1 MS
   * coding[PZN]
     * ^patternCoding.system = $cs-pzn
     * system 1..1 MS
     * code 1..1 MS
     * display MS
+    * insert ISiKMedikament-CodingPZNComment
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
     * display MS
+    * insert ISiKMedikament-CodingATCComment
   * coding[WG14]
     * ^patternCoding.system = $cs-wg14
     * system 1..1 MS
@@ -45,8 +53,18 @@ Description: "Dieses Profil ermöglicht die Abbildung der Verabreichung von Medi
   * reference 1..1 MS
 * effectiveDateTime MS
   * ^short = "Zeitpunkt der Verabreichung"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Festlegung zur Nutzung: eine Zeitpunkt-genaue Angabe (.effectiveDateTime oder .effectivePeriod auf Sekundenebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)) MUSS hier seitens eines bestätigungsrelevanten Systems unterstützt werden.
+
+  Für grobgranularere Angaben (z.B. nur Jahr, Monat oder Tag) SOLL das Profil ISiKMedikationsInformation (MedicationStatement) verwendet werden.
+  "
 * effectivePeriod MS
   * ^short = "Zeitraum der Verabreichung"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Festlegung zur Nutzung: eine Zeitpunkt-genaue Angabe (.effectiveDateTime oder .effectivePeriod auf Sekundenebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)) MUSS hier seitens eines bestätigungsrelevanten Systems unterstützt werden.
+  Für grobgranularere Angaben (z.B. nur Jahr, Monat oder Tag) SOLL das Profil ISiKMedikationsInformation (MedicationStatement) verwendet werden."
   * start MS
   * end MS
 * performer MS

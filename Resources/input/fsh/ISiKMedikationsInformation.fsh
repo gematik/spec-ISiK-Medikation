@@ -1,7 +1,12 @@
 Profile: ISiKMedikationsInformation
 Parent: MedicationStatement
 Id: ISiKMedikationsInformation
-Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien."
+Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medikation eines Patienten in ISiK Szenarien.
+
+Hinweis zur Auswahl des Profils: 
+In Abgrenzung zu ISiKMedikationsVerabreichung (MedicationAdministration) wird mittels des vorliegenden Profils die Verabreichung eines Medikaments an einen Patienten mit einer lediglich Datums-genauen Angabe abgebildet (einschließlich Granularität Jahr, Monat oder Tag für .effectiveDateTime oder .effectivePeriod auf Datums-Ebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime)).
+
+Zur sekunden-genauen Angabe der Verabreichung eines Medikaments (im Sinne einer medizinischen Verabreichungsdokumentation durch medizinisches Personal) an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. Siehe entsprechende Profilseite für weitere Begründung."
 * insert Meta
 * status MS
   * ^short = "Status der Medikationsinformation"
@@ -14,19 +19,21 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains
-      PZN 0..1 MS and
-      ATC-DE 0..1 MS and
+      PZN 0..* MS and
+      ATC-DE 0..* MS and
       WG14 0..1 MS
   * coding[PZN]
     * ^patternCoding.system = $cs-pzn
     * system 1..1 MS
     * code 1..1 MS
     * display MS
+    * insert ISiKMedikament-CodingPZNComment
   * coding[ATC-DE]
     * ^patternCoding.system = $cs-atc-de
     * system 1..1 MS
     * code 1..1 MS
     * display MS
+    * insert ISiKMedikament-CodingATCComment
   * coding[WG14]
     * ^patternCoding.system = $cs-wg14
     * system 1..1 MS
@@ -47,9 +54,20 @@ Description: "Dieses Profil ermöglicht die Abbildung von Informationen zur Medi
 * effective[x] 1..1 MS
   * ^short = "Zeitpunkt oder Zeitraum, für den die MedikationsInformation gilt"
 * effectiveDateTime MS
-  * ^short = "Zeitpunkt"
+  * ^short = "Zeitpunkt (Datum oder Datum + Uhrzeit)"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Festlegung zur Nutzung: 
+  An dieser Stelle KANN eine lediglich Datums-genaue Angabe (einschließlich Granularität Jahr, Monat oder Tag für .effectiveDateTime oder .effectivePeriod auf Datums-Ebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime) seitens eines bestätigungsrelevanten Systems unterstützt werden. Es KANN auch eine Uhrzeit angegeben werden.
+  Für sekunden-genaue Angaben zur Verabreichung eines Medikaments an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. 
+  "  
 * effectivePeriod MS
-  * ^short = "Zeitraum"
+  * ^comment = "Begründung des Must-Support: Basisinformation
+
+  Festlegung zur Nutzung: 
+  An dieser Stelle KANN eine lediglich Datums-genaue Angabe (einschließlich Granularität Jahr, Monat oder Tag für .effectiveDateTime oder .effectivePeriod auf Datums-Ebene gemäß der [FHIR-Core Vorgabe](https://hl7.org/fhir/R4/datatypes.html#dateTime) seitens eines bestätigungsrelevanten Systems unterstützt werden. Es KANN auch eine Uhrzeit angegeben werden.
+  Für sekunden-genaue Angaben zur Verabreichung eines Medikaments an einen Patienten SOLL das Profil ISiKMedikationsVerabreichung (MedicationAdministration) verwendet werden. 
+  "  
   * start MS
   * end MS
 * dateAsserted MS

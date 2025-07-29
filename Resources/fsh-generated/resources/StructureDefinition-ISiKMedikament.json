@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKMedikament",
   "url": "https://gematik.de/fhir/isik/v3/Medikation/StructureDefinition/ISiKMedikament",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "name": "ISiKMedikament",
   "status": "active",
   "experimental": false,
-  "date": "2025-02-24",
+  "date": "2025-07-29",
   "publisher": "gematik GmbH",
   "description": "Dieses Profil ermöglicht die Abbildung von patientenunabhängigen Informationen zu Medikamenten in ISiK Szenarien.",
   "fhirVersion": "4.0.1",
@@ -54,8 +54,9 @@
         "id": "Medication.code.coding:PZN",
         "path": "Medication.code.coding",
         "sliceName": "PZN",
+        "comment": "Mehrfachcodierung ist zulässig, da für ein abstraktes Medikament auch mehrere PZN-Codes existieren können, z. B. existieren für Aspirin 3 verschiedene Packungsgrößen.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/ifa/pzn"
         },
@@ -82,8 +83,9 @@
         "id": "Medication.code.coding:ATC-DE",
         "path": "Medication.code.coding",
         "sliceName": "ATC-DE",
+        "comment": "Mehrfachcodierung ist zulässig, da für ein abstraktes Medikament auch mehrere ATC-Codes existieren können, z. B. existieren für Aspirin 4 verschiedene Codes, je nachdem wofür das Medikament angewendet wird.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "patternCoding": {
           "system": "http://fhir.de/CodeSystem/bfarm/atc"
         },
