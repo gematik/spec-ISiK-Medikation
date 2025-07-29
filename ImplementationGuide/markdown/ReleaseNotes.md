@@ -9,8 +9,9 @@ Version: 3.0.6
 
 Datum: 29.07.2025
 
-* ´improve´  Klärung zur Nutzung der Zeit-Elemente in ISiKMedikationsInformation -und ISiKMedikationsVerabreichung - Rollback aus Stufe 4- https://github.com/gematik/spec-ISiK-Medikation/pull/154
-  * Zum Hintergrund der Entscheidungsfindung beachte [öffentliche Fragestellung und Diskussion](https://chat.fhir.org/#narrow/channel/287581-german.2Fisik/topic/.5BMED.5D.20Administration.2FVerabreichung.20-.20Date.20or.20Timestamp). 
+* `improve`  Klärung zur Nutzung der Zeit-Elemente in ISiKMedikationsInformation -und ISiKMedikationsVerabreichung - Rollback aus Stufe 4- https://github.com/gematik/spec-ISiK-Medikation/pull/154
+  * Zum Hintergrund der Entscheidungsfindung beachte [öffentliche Fragestellung und Diskussion](https://chat.fhir.org/#narrow/channel/287581-german.2Fisik/topic/.5BMED.5D.20Administration.2FVerabreichung.20-.20Date.20or.20Timestamp).
+* `improve` MedicationRequest.dosageInstruction.timing.repeat.bounds[x]:boundsRange - Der Datentyp boundsRange wurde als Must Support entfernt, da er in der praktischen Verordnung medizinischer Therapien nur in sehr seltenen Spezialfällen Anwendung findet. https://github.com/gematik/spec-ISiK-Medikation/pull/179
 
 ----
 
@@ -21,6 +22,7 @@ Datum: 24.02.2025
 * `change` Die Verbindlichkeit des Suchparameters `subject` wurde von SHALL auf MAY reduziert, da der Suchparameter `patient` für ISiK-Zwecke ausreichend ist. Die Verbindlichkeit von Include und RevInclude wurde von SHALL auf MAY reduziert, außer bei den Parameter `patient` und `encounter`, da diese für ISiK-Zwecke ausreichend sind. https://github.com/gematik/spec-ISiK-Medikation/pull/157
 * `improve` Klarstellung zum Umgang mit Freitext-Dosierungsinformationen für empfangende Systeme https://github.com/gematik/spec-ISiK-Medikation/pull/164
 * `improve` Möglicher Breaking Change für Clients: Änderung (Schwächung) der MS-Definition für reasonReference für MedicationAdministration und MedicationStatement https://github.com/gematik/spec-ISiK-Medikation/pull/166
+* `improve` Öffnung der Kardinalität für ATC und PZN Kodierung, sodass nun eine Mehrfachkordierung möglich ist. 
 
 ---
 

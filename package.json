@@ -9,5 +9,9 @@
     "de.medizininformatikinitiative.kerndatensatz.medikation": "1.0.11",
     "hl7.fhir.uv.ips": "1.0.0",
     "de.gematik.isik-basismodul": "3.0.x"
+  },
+  "devDependencies": {
+    "bfarm.terminologien.icd10gm": "2024.0.0",
+    "bfarm.terminologien.ops": "2024.0.0"
   }
 }
